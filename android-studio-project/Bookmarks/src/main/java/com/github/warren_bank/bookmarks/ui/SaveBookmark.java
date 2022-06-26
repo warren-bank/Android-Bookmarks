@@ -575,7 +575,8 @@ public class SaveBookmark extends Activity {
     // ---------------------------------
     IntentExtraValueTokenSeparatorOnClickListener dialog_update_intent_attribute_extra_value_separator_onclicklistener = new IntentExtraValueTokenSeparatorOnClickListener(
       /* context  */ SaveBookmark.this,
-      /* editText */ dialog_update_intent_attribute_extra_value
+      /* editText */ dialog_update_intent_attribute_extra_value,
+      /* token    */ DbIntent.EXTRA_ARRAY_SEPARATOR_TOKEN
     );
 
     if (oldExtra != null) {
