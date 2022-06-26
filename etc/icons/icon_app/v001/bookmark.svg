@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="600" height="600">
+  <defs>
+    <linearGradient id="d">
+      <stop offset="0" stop-color="#00f"/>
+      <stop offset="1" stop-color="#000087"/>
+    </linearGradient>
+    <linearGradient id="c">
+      <stop offset="0" stop-color="#ff0101"/>
+      <stop offset="1" stop-color="#ff9191"/>
+    </linearGradient>
+    <linearGradient id="b">
+      <stop offset="0" stop-color="#ff0"/>
+      <stop offset="1" stop-color="#ffff91"/>
+    </linearGradient>
+    <linearGradient id="a">
+      <stop offset="0" stop-color="#e3e3e3"/>
+      <stop offset="1" stop-color="#9f9f9f"/>
+    </linearGradient>
+    <linearGradient id="i" x1="344.2" x2="262" y1="248.8" y2="536.6" gradientTransform="translate(-6.3 14.5)" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
+    <radialGradient id="h" cx="411.7" cy="120.9" r="147.6" fx="411.7" fy="120.9" gradientTransform="matrix(1 0 0 .96156 0 4.6)" gradientUnits="userSpaceOnUse" xlink:href="#b"/>
+    <radialGradient id="g" cx="193.6" cy="179.2" r="136.4" fx="193.6" fy="179.2" gradientTransform="matrix(.96424 -.19414 .18886 .93798 -33.2 63.2)" gradientUnits="userSpaceOnUse" xlink:href="#c"/>
+    <linearGradient id="e" x1="38.2" x2="509.5" y1="159.7" y2="529" gradientTransform="translate(-6.3 14.5)" gradientUnits="userSpaceOnUse" xlink:href="#d"/>
+    <filter id="f" color-interpolation-filters="sRGB">
+      <feFlood flood-color="#000" flood-opacity=".5" result="flood"/>
+      <feComposite in="flood" in2="SourceGraphic" operator="in" result="composite1"/>
+      <feGaussianBlur in="composite1" result="blur" stdDeviation="3"/>
+      <feOffset dx="1" dy="1" result="offset"/>
+      <feComposite in="SourceGraphic" in2="offset" result="composite2"/>
+    </filter>
+    <filter id="j" color-interpolation-filters="sRGB">
+      <feFlood flood-color="#000" flood-opacity=".5" result="flood"/>
+      <feComposite in="flood" in2="SourceGraphic" operator="in" result="composite1"/>
+      <feGaussianBlur in="composite1" result="blur" stdDeviation="3"/>
+      <feOffset dx="1" dy="1" result="offset"/>
+      <feComposite in="SourceGraphic" in2="offset" result="composite2"/>
+    </filter>
+  </defs>
+  <path fill="url(#e)" stroke="#000" stroke-linecap="square" stroke-width="10" d="M48.1 168.7h132.2l49.5 49.3h261.5a30 30 0 0 1 30 30v276.6a30 30 0 0 1-30 30H48a30 30 0 0 1-30-30V198.7a30 30 0 0 1 30-30z" filter="url(#f)"/>
+  <path fill="url(#g)" stroke="#000" stroke-width="10" d="M101.2 87C19.4 95.6 45 261.5 208 318.7c182.4-117 114.7-350.7-23.7-203.1-34.3-22.7-62.1-30.8-83-28.6z"/>
+  <path fill="url(#h)" stroke="#000" stroke-linecap="square" stroke-width="10" d="M495.2 257.5c-8.8 6-75.8-61.7-86.4-62-10.7-.2-81.3 63.7-89.8 57.2-8.4-6.5 35.3-91.2 32.3-101.4-3-10.2-85.7-57.7-82.1-67.7 3.6-10 97.6 5.3 106.4-.7 8.8-6 28.4-99.2 39-99 10.6.4 25 94.5 33.5 101 8.4 6.5 103.2-3.6 106.2 6.6s-82.1 53-85.7 63c-3.5 10 35.4 97 26.6 103z" transform="rotate(8.7 31.3 277.8)"/>
+  <path fill="url(#i)" stroke="#000" stroke-linecap="square" stroke-width="10" d="M108.7 261.9H552c16.6 0 34.2 13.9 30 30l-60.6 232.7c-4.2 16-13.4 30-30 30H48c-16.6 0-34.2-14-30-30l60.6-232.7c4.2-16.1 13.4-30 30-30z" filter="url(#j)"/>
+  <path d="M328.1 303.2c-57.9 0-117.6 47-133.1 105s19 105 76.9 105c57.9 0 117.6-47 133.1-105s-19-105-76.9-105zm1.9 10.6c8.9 2.2 15.8 11.2 19.2 26 1.2 5 1.8 10.8 2 17-9.6-2-20.3-3.2-31.7-3.5zm-10 .1l-10.5 39.4c-11.4.3-22.6 1.5-33.2 3.5 3.6-6.2 7.3-12 11.2-17 11-14.5 22.5-23.4 32.4-25.9zm-23.6 3.5c-5.8 5-11.4 11-16.7 17.9a179.4 179.4 0 0 0-15.5 24c-9.4 2.5-18.4 5.5-26.5 9.1a115 115 0 0 0-21 12c17.2-30.1 47.2-53.8 79.7-63zm55.8 0a66.5 66.5 0 0 1 46.1 63 55 55 0 0 0-14.7-12 99 99 0 0 0-21.7-9c0-8.8-.9-17-2.5-24.1a58 58 0 0 0-7.2-17.9zM317 363.3c12.6.3 24.2 2 34.4 4.5-.4 10.8-2 22.7-5 35.3l-40 .1zm-10 0l-10.6 40h-40c3.8-12.6 8.6-24.6 14-35.5 11.6-2.5 23.9-4.2 36.6-4.5zm-48.3 7.4a232 232 0 0 0-12.3 32.7l-39.5.2c4.8-9.6 16.2-18.9 33-26.3a151 151 0 0 1 18.8-6.6zm102.9 0c5.6 2 10.9 4.1 15.2 6.6 12.6 7.3 19 16.3 19 25.6l-39.4.1c2.8-11.3 4.5-22.1 5.2-32.3zm31.7 42.2c-4.8 9.5-16.2 18.8-33 26.2a151 151 0 0 1-18.8 6.6 232 232 0 0 0 12.3-32.7zm-49.6.2a218.9 218.9 0 0 1-14 35.6 199.2 199.2 0 0 1-36.5 4.4l10.6-39.9zm-50 .1l-10.5 40c-12.6-.4-24.2-2-34.4-4.5.4-10.8 2-22.7 5-35.3zm-50 .2a197.4 197.4 0 0 0-5 32.3c-5.7-2-11-4-15.4-6.6-12.5-7.2-19-16.3-19-25.5zm-42 22.7a55 55 0 0 0 14.8 12 99 99 0 0 0 21.7 9c0 8.8.9 17 2.5 24a58 58 0 0 0 7.2 18 66.5 66.5 0 0 1-46.1-63zm181.7 0a138.1 138.1 0 0 1-79.7 63c5.8-5 11.4-11 16.7-18 5.5-7 10.7-15.2 15.5-24 9.4-2.4 18.4-5.5 26.5-9a115 115 0 0 0 21-12zm-134.6 23.6c9.7 2 20.4 3.2 31.8 3.5L270 502.7c-8.9-2.3-15.8-11.2-19.2-26-1.2-5-1.8-10.9-2-17zm75 0c-3.6 6.1-7.3 12-11.2 17-11 14.4-22.5 23.3-32.4 25.8l10.4-39.3c11.4-.3 22.6-1.6 33.2-3.5z"/>
+</svg>

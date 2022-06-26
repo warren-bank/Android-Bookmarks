@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  package="com.github.warren_bank.bookmarks">
+
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+  <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+
+  <application
+    android:icon="@drawable/icon_app"
+    android:label="@string/app_name_long"
+    android:theme="@style/app_theme"
+    android:allowBackup="false">
+
+    <activity
+      android:label="@string/app_name_short"
+      android:name=".ui.Bookmarks"
+      android:configChanges="colorMode|density|fontScale|keyboard|keyboardHidden|layoutDirection|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode"
+      android:exported="true"
+      android:launchMode="standard">
+
+      <intent-filter>
+        <action   android:name="android.intent.action.MAIN"/>
+        <category android:name="android.intent.category.LAUNCHER"/>
+      </intent-filter>
+    </activity>
+
+    <activity
+      android:label="@string/intent_add_title"
+      android:name=".ui.SaveBookmark"
+      android:configChanges="colorMode|density|fontScale|keyboard|keyboardHidden|layoutDirection|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode"
+      android:exported="true"
+      android:launchMode="singleTop">
+
+      <!-- ============================================================================================= -->
+      <!-- https://github.com/k3b/intent-intercept/blob/v4.0.3/app/src/main/AndroidManifest.xml#L24-L225 -->
+      <!-- ============================================================================================= -->
+
+      <!-- matching any given mime type -->
+      <intent-filter android:label="@string/intent_filter_label">
+        <action android:name="android.intent.action.VIEW" />
+        <action android:name="android.intent.action.EDIT" />
+        <action android:name="android.intent.action.PICK" />
+        <action android:name="android.intent.action.GET_CONTENT" />
+        <action android:name="android.intent.action.INSERT" />
+        <action android:name="com.android.camera.action.REVIEW" /><!-- Used by camera to view photo taken -->
+        <action android:name="android.media.action.VIDEO_CAPTURE" />
+        <action android:name="android.media.action.IMAGE_CAPTURE" />
+        <action android:name="android.media.action.IMAGE_CAPTURE_SECURE" />
+
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.OPENABLE" />
+        <category android:name="android.intent.category.BROWSABLE" />
+
+        <data android:mimeType="*/*" />
+      </intent-filter>
+
+      <!-- same as above matching when no mime type is available (null) fixing https://github.com/intrications/intent-intercept/issues/42 -->
+      <intent-filter android:label="@string/intent_filter_label">
+        <action android:name="android.intent.action.VIEW" />
+        <action android:name="android.intent.action.EDIT" />
+        <action android:name="android.intent.action.PICK" />
+        <action android:name="android.intent.action.GET_CONTENT" />
+        <action android:name="android.intent.action.INSERT" />
+
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.OPENABLE" />
+        <category android:name="android.intent.category.BROWSABLE" />
+      </intent-filter>
+
+      <!-- scheme-intents without mime (mime==null) -->
+      <intent-filter android:label="@string/intent_filter_label">
+        <action android:name="android.intent.action.VIEW" />
+        <action android:name="android.intent.action.EDIT" />
+        <action android:name="android.intent.action.PICK" />
+        <action android:name="android.intent.action.GET_CONTENT" />
+        <action android:name="android.intent.action.INSERT" />
+
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.OPENABLE" />
+        <category android:name="android.intent.category.BROWSABLE" />
+
+        <data android:scheme="http" />
+        <data android:scheme="https" />
+        <data android:scheme="about" />
+        <data android:scheme="javascript" />
+        <data android:scheme="mailto" />
+        <data android:scheme="geo" />
+        <data android:scheme="file" />
+
+        <data android:scheme="rtsp" />
+        <data android:scheme="rtmp" />
+        <data android:scheme="ftp" />
+        <data android:scheme="sftp" />
+
+        <data android:scheme="skype" />
+        <data android:scheme="sms" />
+        <data android:scheme="smsto" />
+        <data android:scheme="mms" />
+        <data android:scheme="mmsto" />
+        <data android:scheme="zxing" />
+        <data android:scheme="spotify" />
+        <data android:scheme="tel" />
+        <data android:scheme="voicemail" />
+        <data android:scheme="view-source" />
+        <data android:scheme="sqlite" />
+
+        <!-- Intercept Google play links -->
+        <data android:scheme="market" />
+        <data android:scheme="store" />
+        <data android:scheme="android" />
+      </intent-filter>
+
+      <!-- same scheme-intents but with mime (mime!=null) -->
+      <intent-filter android:label="@string/intent_filter_label">
+        <action android:name="android.intent.action.VIEW" />
+        <action android:name="android.intent.action.EDIT" />
+        <action android:name="android.intent.action.PICK" />
+        <action android:name="android.intent.action.GET_CONTENT" />
+        <action android:name="android.intent.action.INSERT" />
+
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.OPENABLE" />
+        <category android:name="android.intent.category.BROWSABLE" />
+
+        <data android:scheme="http" />
+        <data android:scheme="https" />
+        <data android:scheme="about" />
+        <data android:scheme="javascript" />
+        <data android:scheme="mailto" />
+        <data android:scheme="geo" />
+        <data android:scheme="file" />
+
+        <data android:scheme="rtsp" />
+        <data android:scheme="rtmp" />
+        <data android:scheme="ftp" />
+        <data android:scheme="sftp" />
+
+        <data android:scheme="skype" />
+        <data android:scheme="sms" />
+        <data android:scheme="smsto" />
+        <data android:scheme="mms" />
+        <data android:scheme="mmsto" />
+        <data android:scheme="zxing" />
+        <data android:scheme="spotify" />
+        <data android:scheme="tel" />
+        <data android:scheme="voicemail" />
+        <data android:scheme="view-source" />
+        <data android:scheme="sqlite" />
+
+        <!-- Intercept Google play links -->
+        <data android:scheme="market" />
+        <data android:scheme="store" />
+        <data android:scheme="android" />
+
+        <data android:mimeType="*/*" />
+      </intent-filter>
+
+      <intent-filter android:label="@string/intent_filter_label">
+        <action android:name="android.intent.action.PICK" />
+        <action android:name="android.media.action.VIDEO_CAPTURE" />
+        <action android:name="android.media.action.IMAGE_CAPTURE" />
+        <action android:name="android.media.action.IMAGE_CAPTURE_SECURE" />
+
+        <category android:name="android.intent.category.DEFAULT" />
+      </intent-filter>
+
+      <intent-filter android:label="@string/intent_filter_label">
+        <action android:name="android.intent.action.SEND" />
+
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+
+        <data android:mimeType="*/*" />
+      </intent-filter>
+
+      <intent-filter android:label="@string/intent_filter_label">
+        <action android:name="android.intent.action.SENDTO" >
+        </action>
+
+        <category android:name="android.intent.category.DEFAULT" />
+
+        <data android:mimeType="*/*" />
+      </intent-filter>
+
+      <intent-filter android:label="@string/intent_filter_label">
+        <action android:name="android.intent.action.SENDTO" >
+        </action>
+
+        <category android:name="android.intent.category.DEFAULT" />
+
+        <data android:scheme="mailto" />
+        <data android:scheme="sms" />
+        <data android:scheme="smsto" />
+      </intent-filter>
+
+      <intent-filter android:label="@string/intent_filter_label">
+        <action android:name="android.intent.action.SEND_MULTIPLE" >
+        </action>
+
+        <category android:name="android.intent.category.DEFAULT" />
+
+        <data android:mimeType="*/*" />
+      </intent-filter>
+
+      <intent-filter android:label="@string/intent_filter_label">
+        <action android:name="android.intent.action.SEARCH" />
+      </intent-filter>
+
+      <intent-filter android:label="@string/intent_filter_label">
+        <action android:name="android.intent.action.WEB_SEARCH" />
+      </intent-filter>
+
+      <intent-filter android:label="@string/intent_filter_label">
+        <action android:name="android.intent.action.ASSIST" />
+
+        <category android:name="android.intent.category.DEFAULT" >
+        </category>
+      </intent-filter>
+
+      <!-- Google Now -->
+      <intent-filter android:label="@string/intent_filter_label" >
+        <action android:name="com.google.android.gm.action.AUTO_SEND"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+        <data android:mimeType="*/*"/>
+      </intent-filter>
+
+      <!-- ZXing SCAN - There may be more on https://github.com/zxing/zxing/blob/master/android/AndroidManifest.xml -->
+      <intent-filter android:label="@string/intent_filter_label">
+        <action android:name="com.google.zxing.client.android.SCAN"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+      </intent-filter>
+
+      <intent-filter android:label="@string/intent_filter_label">
+        <action android:name="android.intent.action.VIEW"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+        <category android:name="android.intent.category.BROWSABLE"/>
+        <data android:scheme="zxing" android:host="scan" android:path="/"/>
+      </intent-filter>
+
+      <!-- from SimpleMobileTools/Simple-Gallery/app/src/main/AndroidManifest.xml -->
+      <intent-filter>
+        <action android:name="com.android.camera.action.CROP"/>
+
+        <data android:scheme="content"/>
+        <data android:scheme="file"/>
+        <data android:mimeType="image/*"/>
+
+        <category android:name="android.intent.category.DEFAULT"/>
+        <category android:name="android.intent.category.ALTERNATIVE"/>
+        <category android:name="android.intent.category.SELECTED_ALTERNATIVE"/>
+      </intent-filter>
+
+      <!-- ============================================================================================= -->
+
+    </activity>
+
+  </application>
+</manifest>

@@ -1,0 +1,81 @@
+CREATE TABLE IF NOT EXISTS application (
+    version INTEGER NOT NULL PRIMARY KEY
+);
+
+INSERT INTO application (version) VALUES (1);
+
+CREATE TABLE IF NOT EXISTS folders (
+    id                   INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    parent_id            INTEGER NOT NULL,
+    hidden               INTEGER NOT NULL DEFAULT 0,
+    name                 VARCHAR NOT NULL,
+
+    UNIQUE (parent_id, name)
+);
+
+INSERT INTO folders (id, parent_id, name) VALUES (0, -1, 'Bookmarks');
+
+CREATE TABLE IF NOT EXISTS intents (
+    id                   INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    folder_id            INTEGER NOT NULL DEFAULT 0,
+    name                 VARCHAR NOT NULL,
+
+    flags                INTEGER NOT NULL DEFAULT 0,
+    action               VARCHAR,
+    package_name         VARCHAR,
+    class_name           VARCHAR,
+    data_uri             VARCHAR,
+    data_type            VARCHAR,
+
+    FOREIGN KEY (folder_id) REFERENCES folders (id)
+);
+
+CREATE INDEX idx_intents_folder_id ON intents (folder_id);
+
+CREATE TABLE IF NOT EXISTS intent_extra_value_types (
+    id                   INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    name                 VARCHAR NOT NULL
+);
+
+INSERT INTO intent_extra_value_types (name) VALUES
+    ('boolean'),
+    ('boolean[]'),
+    ('byte'),
+    ('byte[]'),
+    ('char'),
+    ('char[]'),
+    ('double'),
+    ('double[]'),
+    ('float'),
+    ('float[]'),
+    ('int'),
+    ('int[]'),
+    ('ArrayList<Integer>'),
+    ('long'),
+    ('long[]'),
+    ('short'),
+    ('short[]'),
+    ('String'),
+    ('String[]'),
+    ('ArrayList<String>');
+
+CREATE TABLE IF NOT EXISTS intent_extras (
+    intent_id            INTEGER NOT NULL,
+    value_type_id        INTEGER NOT NULL,
+    name                 VARCHAR NOT NULL,
+    value                VARCHAR NOT NULL,
+
+    FOREIGN KEY (intent_id)     REFERENCES intents (id),
+    FOREIGN KEY (value_type_id) REFERENCES intent_extra_value_types (id)
+);
+
+CREATE INDEX idx_intent_extras_intent_id ON intent_extras (intent_id);
+
+CREATE TABLE IF NOT EXISTS intent_categories (
+    intent_id            INTEGER NOT NULL,
+    category             VARCHAR NOT NULL,
+
+    FOREIGN KEY (intent_id) REFERENCES intents (id)
+);
+
+CREATE INDEX idx_intent_categories_intent_id ON intent_categories (intent_id);

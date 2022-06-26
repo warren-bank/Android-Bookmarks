@@ -1,0 +1,20 @@
+package com.github.warren_bank.bookmarks.common;
+
+public class Constants {
+  public static final String PACKAGE_NAME = "com.github.warren_bank.bookmarks";
+  public static final String LOG_TAG      = "Bookmarks";
+
+  /* Runtime Permissions */
+  public static final int PERMISSION_CHECK_REQUEST_CODE_CHANGE_DEFAULT_OUTPUT_DIRECTORY_FILEPICKER = 1;
+  public static final int PERMISSION_CHECK_REQUEST_CODE_RESTORE_DATABASE_FILEPICKER                = 2;
+  public static final int PERMISSION_CHECK_REQUEST_CODE_BACKUP_DATABASE_FILEPICKER                 = 3;
+  public static final int PERMISSION_CHECK_REQUEST_CODE_BACKUP_DATABASE_PREUPDATE                  = 4;
+  public static final int PERMISSION_CHECK_REQUEST_CODE_BACKUP_DATABASE                            = 5;
+  public static final int PERMISSION_CHECK_REQUEST_CODE_IMPORT_HTML_FILEPICKER                     = 6;
+  public static final int PERMISSION_CHECK_REQUEST_CODE_EXPORT_HTML_FILEPICKER                     = 7;
+
+  /* Intent Extras */
+  public static final String EXTRA_INTENT_ID   = Constants.PACKAGE_NAME + ".BookmarkId";
+  public static final String EXTRA_FOLDER_ID   = Constants.PACKAGE_NAME + ".FolderId";
+  public static final String EXTRA_RELOAD_LIST = Constants.PACKAGE_NAME + ".ReloadList";
+}

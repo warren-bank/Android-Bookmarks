@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string name="app_name_short"                            translatable="false">@string/app_name_long</string>
+<string name="default_backups_directory_name"            translatable="false">Bookmarks</string>
+<string name="databases_directory_name"                  translatable="false">databases</string>
+<string name="database_file_name"                        translatable="false">@string/default_backups_directory_name</string>
+<string name="netscape_html_file_name"                   translatable="false">@string/default_backups_directory_name</string>
+<string name="folder_breadcrumbs_separator"              translatable="false">/</string>
+
+<!--
+  ======================
+  Intent flag constants:
+  ======================
+  https://android.googlesource.com/platform/frameworks/base/+/master/core/java/android/content/Intent.java
+-->
+<string name="flag_grant_read_uri_permission"            translatable="false">FLAG_GRANT_READ_URI_PERMISSION</string>
+<string name="flag_grant_write_uri_permission"           translatable="false">FLAG_GRANT_WRITE_URI_PERMISSION</string>
+<string name="flag_from_background"                      translatable="false">FLAG_FROM_BACKGROUND</string>
+<string name="flag_debug_log_resolution"                 translatable="false">FLAG_DEBUG_LOG_RESOLUTION</string>
+<string name="flag_exclude_stopped_packages"             translatable="false">FLAG_EXCLUDE_STOPPED_PACKAGES</string>
+<string name="flag_include_stopped_packages"             translatable="false">FLAG_INCLUDE_STOPPED_PACKAGES</string>
+<string name="flag_grant_persistable_uri_permission"     translatable="false">FLAG_GRANT_PERSISTABLE_URI_PERMISSION</string>
+<string name="flag_grant_prefix_uri_permission"          translatable="false">FLAG_GRANT_PREFIX_URI_PERMISSION</string>
+<string name="flag_direct_boot_auto"                     translatable="false">FLAG_DIRECT_BOOT_AUTO</string>
+<string name="flag_debug_triaged_missing"                translatable="false">FLAG_DEBUG_TRIAGED_MISSING</string>
+<string name="flag_ignore_ephemeral"                     translatable="false">FLAG_IGNORE_EPHEMERAL</string>
+
+<string name="flag_activity_require_default"             translatable="false">FLAG_ACTIVITY_REQUIRE_DEFAULT</string>
+<string name="flag_activity_require_non_browser"         translatable="false">FLAG_ACTIVITY_REQUIRE_NON_BROWSER</string>
+<string name="flag_activity_match_external"              translatable="false">FLAG_ACTIVITY_MATCH_EXTERNAL</string>
+<string name="flag_activity_launch_adjacent"             translatable="false">FLAG_ACTIVITY_LAUNCH_ADJACENT</string>
+<string name="flag_activity_retain_in_recents"           translatable="false">FLAG_ACTIVITY_RETAIN_IN_RECENTS</string>
+<string name="flag_activity_task_on_home"                translatable="false">FLAG_ACTIVITY_TASK_ON_HOME</string>
+<string name="flag_activity_clear_task"                  translatable="false">FLAG_ACTIVITY_CLEAR_TASK</string>
+<string name="flag_activity_no_animation"                translatable="false">FLAG_ACTIVITY_NO_ANIMATION</string>
+<string name="flag_activity_reorder_to_front"            translatable="false">FLAG_ACTIVITY_REORDER_TO_FRONT</string>
+<string name="flag_activity_no_user_action"              translatable="false">FLAG_ACTIVITY_NO_USER_ACTION</string>
+<string name="flag_activity_clear_when_task_reset"       translatable="false">FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET</string>
+<string name="flag_activity_new_document"                translatable="false">FLAG_ACTIVITY_NEW_DOCUMENT</string>
+<string name="flag_activity_launched_from_history"       translatable="false">FLAG_ACTIVITY_LAUNCHED_FROM_HISTORY</string>
+<string name="flag_activity_reset_task_if_needed"        translatable="false">FLAG_ACTIVITY_RESET_TASK_IF_NEEDED</string>
+<string name="flag_activity_brought_to_front"            translatable="false">FLAG_ACTIVITY_BROUGHT_TO_FRONT</string>
+<string name="flag_activity_exclude_from_recents"        translatable="false">FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS</string>
+<string name="flag_activity_previous_is_top"             translatable="false">FLAG_ACTIVITY_PREVIOUS_IS_TOP</string>
+<string name="flag_activity_forward_result"              translatable="false">FLAG_ACTIVITY_FORWARD_RESULT</string>
+<string name="flag_activity_clear_top"                   translatable="false">FLAG_ACTIVITY_CLEAR_TOP</string>
+<string name="flag_activity_multiple_task"               translatable="false">FLAG_ACTIVITY_MULTIPLE_TASK</string>
+<string name="flag_activity_new_task"                    translatable="false">FLAG_ACTIVITY_NEW_TASK</string>
+<string name="flag_activity_single_top"                  translatable="false">FLAG_ACTIVITY_SINGLE_TOP</string>
+<string name="flag_activity_no_history"                  translatable="false">FLAG_ACTIVITY_NO_HISTORY</string>
+
+<string name="flag_receiver_visible_to_instant_apps"     translatable="false">FLAG_RECEIVER_VISIBLE_TO_INSTANT_APPS</string>
+<string name="flag_receiver_boot_upgrade"                translatable="false">FLAG_RECEIVER_BOOT_UPGRADE</string>
+<string name="flag_receiver_from_shell"                  translatable="false">FLAG_RECEIVER_FROM_SHELL</string>
+<string name="flag_receiver_exclude_background"          translatable="false">FLAG_RECEIVER_EXCLUDE_BACKGROUND</string>
+<string name="flag_receiver_include_background"          translatable="false">FLAG_RECEIVER_INCLUDE_BACKGROUND</string>
+<string name="flag_receiver_registered_only_before_boot" translatable="false">FLAG_RECEIVER_REGISTERED_ONLY_BEFORE_BOOT</string>
+<string name="flag_receiver_no_abort"                    translatable="false">FLAG_RECEIVER_NO_ABORT</string>
+<string name="flag_receiver_foreground"                  translatable="false">FLAG_RECEIVER_FOREGROUND</string>
+<string name="flag_receiver_replace_pending"             translatable="false">FLAG_RECEIVER_REPLACE_PENDING</string>
+<string name="flag_receiver_registered_only"             translatable="false">FLAG_RECEIVER_REGISTERED_ONLY</string>
+<string name="flag_receiver_offload"                     translatable="false">FLAG_RECEIVER_OFFLOAD</string>
+
+<!--
+  ========================
+  Intent action constants:
+  ========================
+  https://android.googlesource.com/platform/frameworks/base/+/master/core/java/android/content/Intent.java
+  https://android.googlesource.com/platform/frameworks/base/+/master/media/java/android/media/AudioManager.java
+-->
+<string-array name="intent_actions" translatable="false">
+  <item>@string/default_intent_action</item>
+  <item>android.intent.action.ACTION_IDLE_MAINTENANCE_END</item>
+  <item>android.intent.action.ACTION_IDLE_MAINTENANCE_START</item>
+  <item>android.intent.action.ACTION_POWER_CONNECTED</item>
+  <item>android.intent.action.ACTION_POWER_DISCONNECTED</item>
+  <item>android.intent.action.ACTION_PREFERRED_ACTIVITY_CHANGED</item>
+  <item>android.intent.action.ACTION_SHUTDOWN</item>
+  <item>android.intent.action.ACTIVITY_RECOGNIZER</item>
+  <item>android.intent.action.ADVANCED_SETTINGS</item>
+  <item>android.intent.action.AIRPLANE_MODE</item>
+  <item>android.intent.action.ALARM_CHANGED</item>
+  <item>android.intent.action.ALL_APPS</item>
+  <item>android.intent.action.ANSWER</item>
+  <item>android.intent.action.APPLICATION_PREFERENCES</item>
+  <item>android.intent.action.APPLICATION_RESTRICTIONS_CHANGED</item>
+  <item>android.intent.action.APP_ERROR</item>
+  <item>android.intent.action.ASSIST</item>
+  <item>android.intent.action.ATTACH_DATA</item>
+  <item>android.intent.action.AUTO_REVOKE_PERMISSIONS</item>
+  <item>android.intent.action.BATTERY_CHANGED</item>
+  <item>android.intent.action.BATTERY_LEVEL_CHANGED</item>
+  <item>android.intent.action.BATTERY_LOW</item>
+  <item>android.intent.action.BATTERY_OKAY</item>
+  <item>android.intent.action.BOOT_COMPLETED</item>
+  <item>android.intent.action.BUG_REPORT</item>
+  <item>android.intent.action.CALL</item>
+  <item>android.intent.action.CALL_BUTTON</item>
+  <item>android.intent.action.CALL_EMERGENCY</item>
+  <item>android.intent.action.CALL_PRIVILEGED</item>
+  <item>android.intent.action.CAMERA_BUTTON</item>
+  <item>android.intent.action.CANCEL_ENABLE_ROLLBACK</item>
+  <item>android.intent.action.CARRIER_SETUP</item>
+  <item>android.intent.action.CHOOSER</item>
+  <item>android.intent.action.CLOSE_SYSTEM_DIALOGS</item>
+  <item>android.intent.action.CONFIGURATION_CHANGED</item>
+  <item>android.intent.action.CREATE_DOCUMENT</item>
+  <item>android.intent.action.CREATE_REMINDER</item>
+  <item>android.intent.action.CREATE_SHORTCUT</item>
+  <item>android.intent.action.DATE_CHANGED</item>
+  <item>android.intent.action.DEFINE</item>
+  <item>android.intent.action.DELETE</item>
+  <item>android.intent.action.DEVICE_CUSTOMIZATION_READY</item>
+  <item>android.intent.action.DEVICE_INITIALIZATION_WIZARD</item>
+  <item>android.intent.action.DEVICE_LOCKED_CHANGED</item>
+  <item>android.intent.action.DEVICE_STORAGE_FULL</item>
+  <item>android.intent.action.DEVICE_STORAGE_LOW</item>
+  <item>android.intent.action.DEVICE_STORAGE_NOT_FULL</item>
+  <item>android.intent.action.DEVICE_STORAGE_OK</item>
+  <item>android.intent.action.DIAL</item>
+  <item>android.intent.action.DIAL_EMERGENCY</item>
+  <item>android.intent.action.DISTRACTING_PACKAGES_CHANGED</item>
+  <item>android.intent.action.DOCK_ACTIVE</item>
+  <item>android.intent.action.DOCK_EVENT</item>
+  <item>android.intent.action.DOCK_IDLE</item>
+  <item>android.intent.action.DOMAINS_NEED_VERIFICATION</item>
+  <item>android.intent.action.DREAMING_STARTED</item>
+  <item>android.intent.action.DREAMING_STOPPED</item>
+  <item>android.intent.action.EDIT</item>
+  <item>android.intent.action.EXTERNAL_APPLICATIONS_AVAILABLE</item>
+  <item>android.intent.action.EXTERNAL_APPLICATIONS_UNAVAILABLE</item>
+  <item>android.intent.action.FACTORY_RESET</item>
+  <item>android.intent.action.FACTORY_TEST</item>
+  <item>android.intent.action.GET_CONTENT</item>
+  <item>android.intent.action.GET_RESTRICTION_ENTRIES</item>
+  <item>android.intent.action.GLOBAL_BUTTON</item>
+  <item>android.intent.action.GTALK_CONNECTED</item>
+  <item>android.intent.action.GTALK_DISCONNECTED</item>
+  <item>android.intent.action.HEADSET_PLUG</item>
+  <item>android.intent.action.INCIDENT_REPORT_READY</item>
+  <item>android.intent.action.INPUT_METHOD_CHANGED</item>
+  <item>android.intent.action.INSERT</item>
+  <item>android.intent.action.INSERT_OR_EDIT</item>
+  <item>android.intent.action.INSTALL_FAILURE</item>
+  <item>android.intent.action.INSTALL_INSTANT_APP_PACKAGE</item>
+  <item>android.intent.action.INSTALL_PACKAGE</item>
+  <item>android.intent.action.INSTANT_APP_RESOLVER_SETTINGS</item>
+  <item>android.intent.action.INTENT_FILTER_NEEDS_VERIFICATION</item>
+  <item>android.intent.action.LOAD_DATA</item>
+  <item>android.intent.action.LOCALE_CHANGED</item>
+  <item>android.intent.action.LOCKED_BOOT_COMPLETED</item>
+  <item>android.intent.action.MAIN</item>
+  <item>android.intent.action.MANAGED_PROFILE_ADDED</item>
+  <item>android.intent.action.MANAGED_PROFILE_AVAILABLE</item>
+  <item>android.intent.action.MANAGED_PROFILE_REMOVED</item>
+  <item>android.intent.action.MANAGED_PROFILE_UNAVAILABLE</item>
+  <item>android.intent.action.MANAGED_PROFILE_UNLOCKED</item>
+  <item>android.intent.action.MANAGE_APP_PERMISSION</item>
+  <item>android.intent.action.MANAGE_APP_PERMISSIONS</item>
+  <item>android.intent.action.MANAGE_DEFAULT_APP</item>
+  <item>android.intent.action.MANAGE_NETWORK_USAGE</item>
+  <item>android.intent.action.MANAGE_PACKAGE_STORAGE</item>
+  <item>android.intent.action.MANAGE_PERMISSIONS</item>
+  <item>android.intent.action.MANAGE_PERMISSION_APPS</item>
+  <item>android.intent.action.MANAGE_SPECIAL_APP_ACCESSES</item>
+  <item>android.intent.action.MANAGE_UNUSED_APPS</item>
+  <item>android.intent.action.MASTER_CLEAR</item>
+  <item>android.intent.action.MASTER_CLEAR_NOTIFICATION</item>
+  <item>android.intent.action.MEDIA_BAD_REMOVAL</item>
+  <item>android.intent.action.MEDIA_BUTTON</item>
+  <item>android.intent.action.MEDIA_CHECKING</item>
+  <item>android.intent.action.MEDIA_EJECT</item>
+  <item>android.intent.action.MEDIA_MOUNTED</item>
+  <item>android.intent.action.MEDIA_NOFS</item>
+  <item>android.intent.action.MEDIA_REMOVED</item>
+  <item>android.intent.action.MEDIA_RESOURCE_GRANTED</item>
+  <item>android.intent.action.MEDIA_SCANNER_FINISHED</item>
+  <item>android.intent.action.MEDIA_SCANNER_SCAN_FILE</item>
+  <item>android.intent.action.MEDIA_SCANNER_STARTED</item>
+  <item>android.intent.action.MEDIA_SHARED</item>
+  <item>android.intent.action.MEDIA_UNMOUNTABLE</item>
+  <item>android.intent.action.MEDIA_UNMOUNTED</item>
+  <item>android.intent.action.MEDIA_UNSHARED</item>
+  <item>android.intent.action.MY_PACKAGE_REPLACED</item>
+  <item>android.intent.action.MY_PACKAGE_SUSPENDED</item>
+  <item>android.intent.action.MY_PACKAGE_UNSUSPENDED</item>
+  <item>android.intent.action.NEW_OUTGOING_CALL</item>
+  <item>android.intent.action.OPEN_DOCUMENT</item>
+  <item>android.intent.action.OVERLAY_CHANGED</item>
+  <item>android.intent.action.PACKAGES_SUSPENDED</item>
+  <item>android.intent.action.PACKAGES_SUSPENSION_CHANGED</item>
+  <item>android.intent.action.PACKAGES_UNSUSPENDED</item>
+  <item>android.intent.action.PACKAGE_ADDED</item>
+  <item>android.intent.action.PACKAGE_CHANGED</item>
+  <item>android.intent.action.PACKAGE_DATA_CLEARED</item>
+  <item>android.intent.action.PACKAGE_ENABLE_ROLLBACK</item>
+  <item>android.intent.action.PACKAGE_FIRST_LAUNCH</item>
+  <item>android.intent.action.PACKAGE_FULLY_REMOVED</item>
+  <item>android.intent.action.PACKAGE_INSTALL</item>
+  <item>android.intent.action.PACKAGE_NEEDS_INTEGRITY_VERIFICATION</item>
+  <item>android.intent.action.PACKAGE_NEEDS_VERIFICATION</item>
+  <item>android.intent.action.PACKAGE_REMOVED</item>
+  <item>android.intent.action.PACKAGE_REMOVED_INTERNAL</item>
+  <item>android.intent.action.PACKAGE_REPLACED</item>
+  <item>android.intent.action.PACKAGE_RESTARTED</item>
+  <item>android.intent.action.PACKAGE_UNSUSPENDED_MANUALLY</item>
+  <item>android.intent.action.PACKAGE_VERIFIED</item>
+  <item>android.intent.action.PASTE</item>
+  <item>android.intent.action.PENDING_INCIDENT_REPORTS_CHANGED</item>
+  <item>android.intent.action.PICK</item>
+  <item>android.intent.action.PICK_ACTIVITY</item>
+  <item>android.intent.action.POWER_USAGE_SUMMARY</item>
+  <item>android.intent.action.PRE_BOOT_COMPLETED</item>
+  <item>android.intent.action.PROCESS_TEXT</item>
+  <item>android.intent.action.PROFILE_ACCESSIBLE</item>
+  <item>android.intent.action.PROFILE_INACCESSIBLE</item>
+  <item>android.intent.action.PROVIDER_CHANGED</item>
+  <item>android.intent.action.QUERY_PACKAGE_RESTART</item>
+  <item>android.intent.action.QUICK_CLOCK</item>
+  <item>android.intent.action.QUICK_VIEW</item>
+  <item>android.intent.action.REBOOT</item>
+  <item>android.intent.action.RESOLVE_INSTANT_APP_PACKAGE</item>
+  <item>android.intent.action.REVIEW_ACCESSIBILITY_SERVICES</item>
+  <item>android.intent.action.REVIEW_ONGOING_PERMISSION_USAGE</item>
+  <item>android.intent.action.REVIEW_PERMISSIONS</item>
+  <item>android.intent.action.REVIEW_PERMISSION_HISTORY</item>
+  <item>android.intent.action.REVIEW_PERMISSION_USAGE</item>
+  <item>android.intent.action.ROLLBACK_COMMITTED</item>
+  <item>android.intent.action.RUN</item>
+  <item>android.intent.action.SCREEN_OFF</item>
+  <item>android.intent.action.SCREEN_ON</item>
+  <item>android.intent.action.SEARCH</item>
+  <item>android.intent.action.SEARCH_LONG_PRESS</item>
+  <item>android.intent.action.SEND</item>
+  <item>android.intent.action.SENDTO</item>
+  <item>android.intent.action.SEND_MULTIPLE</item>
+  <item>android.intent.action.SERVICE_STATE</item>
+  <item>android.intent.action.SET_WALLPAPER</item>
+  <item>android.intent.action.SHOW_APP_INFO</item>
+  <item>android.intent.action.SHOW_SUSPENDED_APP_DETAILS</item>
+  <item>android.intent.action.SIM_STATE_CHANGED</item>
+  <item>android.intent.action.SPLIT_CONFIGURATION_CHANGED</item>
+  <item>android.intent.action.SYNC</item>
+  <item>android.intent.action.SYSTEM_TUTORIAL</item>
+  <item>android.intent.action.THERMAL_EVENT</item>
+  <item>android.intent.action.TIMEZONE_CHANGED</item>
+  <item>android.intent.action.TIME_SET</item>
+  <item>android.intent.action.TIME_TICK</item>
+  <item>android.intent.action.TRANSLATE</item>
+  <item>android.intent.action.UID_REMOVED</item>
+  <item>android.intent.action.UMS_CONNECTED</item>
+  <item>android.intent.action.UMS_DISCONNECTED</item>
+  <item>android.intent.action.UNINSTALL_PACKAGE</item>
+  <item>android.intent.action.UPGRADE_SETUP</item>
+  <item>android.intent.action.USER_ADDED</item>
+  <item>android.intent.action.USER_BACKGROUND</item>
+  <item>android.intent.action.USER_FOREGROUND</item>
+  <item>android.intent.action.USER_INFO_CHANGED</item>
+  <item>android.intent.action.USER_INITIALIZE</item>
+  <item>android.intent.action.USER_PRESENT</item>
+  <item>android.intent.action.USER_REMOVED</item>
+  <item>android.intent.action.USER_STARTED</item>
+  <item>android.intent.action.USER_STARTING</item>
+  <item>android.intent.action.USER_STOPPED</item>
+  <item>android.intent.action.USER_STOPPING</item>
+  <item>android.intent.action.USER_SWITCHED</item>
+  <item>android.intent.action.USER_UNLOCKED</item>
+  <item>android.intent.action.VIEW</item>
+  <item>android.intent.action.VIEW_LOCUS</item>
+  <item>android.intent.action.VIEW_PERMISSION_USAGE</item>
+  <item>android.intent.action.VIEW_PERMISSION_USAGE_FOR_PERIOD</item>
+  <item>android.intent.action.VOICE_ASSIST</item>
+  <item>android.intent.action.VOICE_COMMAND</item>
+  <item>android.intent.action.WALLPAPER_CHANGED</item>
+  <item>android.intent.action.WEB_SEARCH</item>
+  <item>android.media.ACTION_SCO_AUDIO_STATE_UPDATED</item>
+  <item>android.media.AUDIO_BECOMING_NOISY</item>
+  <item>android.media.SCO_AUDIO_STATE_CHANGED</item>
+  <item>android.media.action.HDMI_AUDIO_PLUG</item>
+  <item>android.media.action.MICROPHONE_MUTE_CHANGED</item>
+  <item>android.media.action.SPEAKERPHONE_STATE_CHANGED</item>
+  <item>android.os.action.SETTING_RESTORED</item>
+  <item>com.android.intent.action.DISMISS_KEYBOARD_SHORTCUTS</item>
+  <item>com.android.intent.action.SHOW_BRIGHTNESS_DIALOG</item>
+  <item>com.android.intent.action.SHOW_KEYBOARD_SHORTCUTS</item>
+  <item>com.android.internal.intent.action.REQUEST_SHUTDOWN</item>
+  <item>com.google.android.c2dm.intent.RECEIVE</item>
+</string-array>
+
+<!--
+  ==========================
+  Intent category constants:
+  ==========================
+  https://android.googlesource.com/platform/frameworks/base/+/master/core/java/android/content/Intent.java
+-->
+<string-array name="intent_categories" translatable="false">
+  <item>@string/default_intent_category</item>
+  <item>android.intent.category.ACCESSIBILITY_SHORTCUT_TARGET</item>
+  <item>android.intent.category.ALTERNATIVE</item>
+  <item>android.intent.category.APP_BROWSER</item>
+  <item>android.intent.category.APP_CALCULATOR</item>
+  <item>android.intent.category.APP_CALENDAR</item>
+  <item>android.intent.category.APP_CONTACTS</item>
+  <item>android.intent.category.APP_EMAIL</item>
+  <item>android.intent.category.APP_FILES</item>
+  <item>android.intent.category.APP_GALLERY</item>
+  <item>android.intent.category.APP_MAPS</item>
+  <item>android.intent.category.APP_MARKET</item>
+  <item>android.intent.category.APP_MESSAGING</item>
+  <item>android.intent.category.APP_MUSIC</item>
+  <item>android.intent.category.BROWSABLE</item>
+  <item>android.intent.category.CAR_DOCK</item>
+  <item>android.intent.category.CAR_LAUNCHER</item>
+  <item>android.intent.category.CAR_MODE</item>
+  <item>android.intent.category.DEFAULT</item>
+  <item>android.intent.category.DESK_DOCK</item>
+  <item>android.intent.category.DEVELOPMENT_PREFERENCE</item>
+  <item>android.intent.category.EMBED</item>
+  <item>android.intent.category.FRAMEWORK_INSTRUMENTATION_TEST</item>
+  <item>android.intent.category.HE_DESK_DOCK</item>
+  <item>android.intent.category.HOME</item>
+  <item>android.intent.category.HOME_MAIN</item>
+  <item>android.intent.category.INFO</item>
+  <item>android.intent.category.LAUNCHER</item>
+  <item>android.intent.category.LAUNCHER_APP</item>
+  <item>android.intent.category.LEANBACK_LAUNCHER</item>
+  <item>android.intent.category.LEANBACK_SETTINGS</item>
+  <item>android.intent.category.LE_DESK_DOCK</item>
+  <item>android.intent.category.MONKEY</item>
+  <item>android.intent.category.OPENABLE</item>
+  <item>android.intent.category.PREFERENCE</item>
+  <item>android.intent.category.SAMPLE_CODE</item>
+  <item>android.intent.category.SECONDARY_HOME</item>
+  <item>android.intent.category.SELECTED_ALTERNATIVE</item>
+  <item>android.intent.category.SETUP_WIZARD</item>
+  <item>android.intent.category.TAB</item>
+  <item>android.intent.category.TEST</item>
+  <item>android.intent.category.TYPED_OPENABLE</item>
+  <item>android.intent.category.UNIT_TEST</item>
+  <item>android.intent.category.VOICE</item>
+  <item>android.intent.category.VR_HOME</item>
+</string-array>
+
+<!--
+  ==========================
+  Common MIME types:
+  ==========================
+  https://www.iana.org/assignments/media-types/media-types.xhtml
+
+  https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
+    console.log(  [...document.querySelectorAll('div.table-scroll > table > tbody > tr > td:nth-child(3) > code')].map(code => code.innerText.toLowerCase()).filter(type => (type.indexOf('/') > 0)).sort().join("\n")  )
+-->
+<string-array name="intent_data_types" translatable="false">
+  <item>@string/default_intent_data_type</item>
+  <item>application/atom+xml</item>
+  <item>application/epub+zip</item>
+  <item>application/gzip</item>
+  <item>application/java-archive</item>
+  <item>application/json</item>
+  <item>application/ld+json</item>
+  <item>application/msword</item>
+  <item>application/octet-stream</item>
+  <item>application/ogg</item>
+  <item>application/pdf</item>
+  <item>application/rtf</item>
+<!--
+  <item>application/vnd.amazon.ebook</item>
+  <item>application/vnd.apple.installer+xml</item>
+  <item>application/vnd.mozilla.xul+xml</item>
+  <item>application/vnd.ms-excel</item>
+  <item>application/vnd.ms-fontobject</item>
+  <item>application/vnd.ms-powerpoint</item>
+  <item>application/vnd.oasis.opendocument.presentation</item>
+  <item>application/vnd.oasis.opendocument.spreadsheet</item>
+  <item>application/vnd.oasis.opendocument.text</item>
+  <item>application/vnd.openxmlformats-officedocument.presentationml.presentation</item>
+  <item>application/vnd.openxmlformats-officedocument.spreadsheetml.sheet</item>
+  <item>application/vnd.openxmlformats-officedocument.wordprocessingml.document</item>
+  <item>application/vnd.rar</item>
+  <item>application/vnd.visio</item>
+  <item>application/x-7z-compressed</item>
+  <item>application/x-abiword</item>
+  <item>application/x-bzip</item>
+  <item>application/x-bzip2</item>
+  <item>application/x-cdf</item>
+  <item>application/x-csh</item>
+  <item>application/x-freearc</item>
+  <item>application/x-httpd-php</item>
+  <item>application/x-sh</item>
+  <item>application/x-shockwave-flash</item>
+  <item>application/x-tar</item>
+-->
+  <item>application/xhtml+xml</item>
+  <item>application/xml</item>
+  <item>application/zip</item>
+  <item>audio/3gpp</item>
+  <item>audio/3gpp2</item>
+  <item>audio/aac</item>
+  <item>audio/midi</item>
+  <item>audio/mpeg</item>
+  <item>audio/ogg</item>
+  <item>audio/opus</item>
+  <item>audio/wav</item>
+  <item>audio/webm</item>
+  <item>audio/x-midi</item>
+<!--
+  <item>font/otf</item>
+  <item>font/ttf</item>
+  <item>font/woff</item>
+  <item>font/woff2</item>
+-->
+  <item>image/avif</item>
+  <item>image/bmp</item>
+  <item>image/gif</item>
+  <item>image/jpeg</item>
+  <item>image/png</item>
+  <item>image/svg+xml</item>
+  <item>image/tiff</item>
+  <item>image/vnd.microsoft.icon</item>
+  <item>image/webp</item>
+  <item>text/calendar</item>
+  <item>text/css</item>
+  <item>text/csv</item>
+  <item>text/html</item>
+  <item>text/javascript</item>
+  <item>text/plain</item>
+  <item>text/xml</item>
+  <item>video/3gpp</item>
+  <item>video/3gpp2</item>
+  <item>video/mp2t</item>
+  <item>video/mp4</item>
+  <item>video/mpeg</item>
+  <item>video/ogg</item>
+  <item>video/webm</item>
+  <item>video/x-msvideo</item>
+</string-array>
+
+</resources>

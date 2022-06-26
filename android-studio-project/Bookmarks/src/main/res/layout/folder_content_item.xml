@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="horizontal"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:paddingHorizontal="6dp"
+  android:paddingVertical="3dp">
+
+  <ImageView
+    android:id="@+id/folder_content_item_icon"
+    android:src="@drawable/icon_bookmark"
+    android:layout_width="50dp"
+    android:layout_height="50dp"
+    android:gravity="start"
+    android:layout_gravity="center_vertical"
+    android:scaleType="fitXY"
+    android:padding="0dp"
+    android:adjustViewBounds="false"
+    android:cropToPadding="false"
+    android:focusable="false"
+    android:focusableInTouchMode="false" />
+
+  <TextView
+    android:id="@+id/folder_content_item_name"
+    android:text=""
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="start"
+    android:layout_gravity="center_vertical"
+    android:textStyle="bold"
+    android:textSize="18sp"
+    android:paddingStart="6dp"
+    android:scrollHorizontally="false"
+    android:maxLines="3"
+    android:ellipsize="end" />
+
+</LinearLayout>

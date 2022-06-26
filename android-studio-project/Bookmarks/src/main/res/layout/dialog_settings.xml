@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent">
+
+  <LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="6dp">
+
+    <!-- =================================================================== -->
+
+    <CheckBox
+      android:id="@+id/show_hidden"
+      android:text="@string/settings_option_show_hidden"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:focusable="false"
+      android:focusableInTouchMode="false"
+      android:clickable="true"
+      android:onClick="updateSettings"/>
+
+    <CheckBox
+      android:id="@+id/auto_backup"
+      android:text="@string/settings_option_auto_backup"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:focusable="false"
+      android:focusableInTouchMode="false"
+      android:clickable="true"
+      android:onClick="updateSettings"/>
+
+    <CheckBox
+      android:id="@+id/backup_versioning"
+      android:text="@string/settings_option_backup_versioning"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:focusable="false"
+      android:focusableInTouchMode="false"
+      android:clickable="true"
+      android:onClick="updateSettings"/>
+
+    <!-- =================================================================== -->
+
+    <View
+      android:layout_width="fill_parent"
+      android:layout_height="1px"
+      android:paddingVertical="3dp"
+      android:background="@drawable/div"/>
+
+    <TextView
+      android:text="@string/settings_option_startup_folder"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:lineSpacingExtra="0.5dp"/>
+
+    <EditText
+      android:id="@+id/startup_folder"
+      android:text=""
+      android:enabled="false"
+      android:editable="false"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:lineSpacingExtra="0.5dp"/>
+
+    <Button
+      android:id="@+id/change_startup_folder"
+      android:text="@string/dialog_change"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center_horizontal"
+      android:clickable="true"
+      android:onClick="updateSettings"/>
+
+    <!-- =================================================================== -->
+
+    <View
+      android:layout_width="fill_parent"
+      android:layout_height="1px"
+      android:paddingVertical="3dp"
+      android:background="@drawable/div"/>
+
+    <TextView
+      android:text="@string/settings_option_output_directory"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:lineSpacingExtra="0.5dp"/>
+
+    <EditText
+      android:id="@+id/output_directory"
+      android:text=""
+      android:enabled="false"
+      android:editable="false"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:lineSpacingExtra="0.5dp"/>
+
+    <Button
+      android:id="@+id/change_output_directory"
+      android:text="@string/dialog_change"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center_horizontal"
+      android:clickable="true"
+      android:onClick="updateSettings"/>
+
+    <!-- =================================================================== -->
+
+  </LinearLayout>
+</ScrollView>

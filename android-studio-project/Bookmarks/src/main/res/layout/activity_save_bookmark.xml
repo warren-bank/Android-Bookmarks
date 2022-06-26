@@ -1,0 +1,681 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:custom="http://schemas.android.com/apk/res-auto"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:fillViewport="true">
+
+  <LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="6dp">
+
+    <!-- =================================================================== -->
+
+    <TextView
+      android:text="@string/intent_attribute_name"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content" />
+
+    <EditText
+      android:id="@+id/intent_attribute_name"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:inputType="text" />
+
+    <!-- =================================================================== -->
+
+    <View
+      android:layout_width="fill_parent"
+      android:layout_height="1px"
+      android:paddingVertical="3dp"
+      android:background="@drawable/div" />
+
+    <!-- =================================================================== -->
+
+    <TextView
+      android:text="@string/intent_attribute_folder"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content" />
+
+    <EditText
+      android:id="@+id/intent_attribute_folder"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:editable="false"
+      android:enabled="false" />
+
+    <Button
+      android:text="@string/dialog_change"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center_horizontal"
+      android:clickable="true"
+      android:onClick="changeFolder" />
+
+    <!-- =================================================================== -->
+
+    <View
+      android:layout_width="fill_parent"
+      android:layout_height="1px"
+      android:paddingVertical="3dp"
+      android:background="@drawable/div" />
+
+    <!-- =================================================================== -->
+
+    <com.github.warren_bank.bookmarks.ui.widgets.ExpandablePanel
+      android:id="@+id/intent_attribute_flags_expandable_panel"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      custom:handle="@+id/intent_attribute_flags_expandable_panel_handle"
+      custom:content="@+id/intent_attribute_flags_expandable_panel_content"
+      custom:collapsedHeight="0dp"
+      custom:animationDuration="250">
+
+      <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+          android:text="@string/intent_attribute_flags"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="start" />
+
+        <!--
+          collapsed: @android:drawable/ic_menu_add
+          expanded:  @android:drawable/ic_menu_close_clear_cancel
+        -->
+        <ImageView
+          android:id="@+id/intent_attribute_flags_expandable_panel_handle"
+          android:src="@android:drawable/ic_menu_add"
+          android:layout_width="fill_parent"
+          android:layout_height="24dp"
+          android:scaleType="fitEnd"
+          android:layout_gravity="end"
+          android:gravity="center_vertical"
+          android:padding="3dp" />
+
+      </LinearLayout>
+
+      <LinearLayout
+        android:id="@+id/intent_attribute_flags_expandable_panel_content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <CheckBox
+          android:id="@+id/flag_grant_read_uri_permission"
+          android:text="@string/flag_grant_read_uri_permission"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:focusable="false"
+          android:focusableInTouchMode="false" />
+
+        <CheckBox
+          android:id="@+id/flag_grant_write_uri_permission"
+          android:text="@string/flag_grant_write_uri_permission"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:focusable="false"
+          android:focusableInTouchMode="false" />
+
+        <CheckBox
+          android:id="@+id/flag_from_background"
+          android:text="@string/flag_from_background"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:focusable="false"
+          android:focusableInTouchMode="false" />
+
+        <CheckBox
+          android:id="@+id/flag_debug_log_resolution"
+          android:text="@string/flag_debug_log_resolution"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:focusable="false"
+          android:focusableInTouchMode="false" />
+
+        <CheckBox
+          android:id="@+id/flag_exclude_stopped_packages"
+          android:text="@string/flag_exclude_stopped_packages"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:focusable="false"
+          android:focusableInTouchMode="false" />
+
+        <CheckBox
+          android:id="@+id/flag_include_stopped_packages"
+          android:text="@string/flag_include_stopped_packages"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:focusable="false"
+          android:focusableInTouchMode="false" />
+
+        <CheckBox
+          android:id="@+id/flag_grant_persistable_uri_permission"
+          android:text="@string/flag_grant_persistable_uri_permission"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:focusable="false"
+          android:focusableInTouchMode="false" />
+
+        <CheckBox
+          android:id="@+id/flag_grant_prefix_uri_permission"
+          android:text="@string/flag_grant_prefix_uri_permission"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:focusable="false"
+          android:focusableInTouchMode="false" />
+
+        <CheckBox
+          android:id="@+id/flag_direct_boot_auto"
+          android:text="@string/flag_direct_boot_auto"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:focusable="false"
+          android:focusableInTouchMode="false" />
+
+        <CheckBox
+          android:id="@+id/flag_debug_triaged_missing"
+          android:text="@string/flag_debug_triaged_missing"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:focusable="false"
+          android:focusableInTouchMode="false" />
+
+        <CheckBox
+          android:id="@+id/flag_ignore_ephemeral"
+          android:text="@string/flag_ignore_ephemeral"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:focusable="false"
+          android:focusableInTouchMode="false" />
+
+        <CheckBox
+          android:id="@+id/flag_activity_require_default"
+          android:text="@string/flag_activity_require_default"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:focusable="false"
+          android:focusableInTouchMode="false" />
+
+        <CheckBox
+          android:id="@+id/flag_activity_require_non_browser"
+          android:text="@string/flag_activity_require_non_browser"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:focusable="false"
+          android:focusableInTouchMode="false" />
+
+        <CheckBox
+          android:id="@+id/flag_activity_match_external"
+          android:text="@string/flag_activity_match_external"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:focusable="false"
+          android:focusableInTouchMode="false" />
+
+        <CheckBox
+          android:id="@+id/flag_activity_launch_adjacent"
+          android:text="@string/flag_activity_launch_adjacent"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:focusable="false"
+          android:focusableInTouchMode="false" />
+
+        <CheckBox
+          android:id="@+id/flag_activity_retain_in_recents"
+          android:text="@string/flag_activity_retain_in_recents"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:focusable="false"
+          android:focusableInTouchMode="false" />
+
+        <CheckBox
+          android:id="@+id/flag_activity_task_on_home"
+          android:text="@string/flag_activity_task_on_home"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:focusable="false"
+          android:focusableInTouchMode="false" />
+
+        <CheckBox
+          android:id="@+id/flag_activity_clear_task"
+          android:text="@string/flag_activity_clear_task"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:focusable="false"
+          android:focusableInTouchMode="false" />
+
+        <CheckBox
+          android:id="@+id/flag_activity_no_animation"
+          android:text="@string/flag_activity_no_animation"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:focusable="false"
+          android:focusableInTouchMode="false" />
+
+        <CheckBox
+          android:id="@+id/flag_activity_reorder_to_front"
+          android:text="@string/flag_activity_reorder_to_front"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:focusable="false"
+          android:focusableInTouchMode="false" />
+
+        <CheckBox
+          android:id="@+id/flag_activity_no_user_action"
+          android:text="@string/flag_activity_no_user_action"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:focusable="false"
+          android:focusableInTouchMode="false" />
+
+        <CheckBox
+          android:id="@+id/flag_activity_clear_when_task_reset"
+          android:text="@string/flag_activity_clear_when_task_reset"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:focusable="false"
+          android:focusableInTouchMode="false" />
+
+        <CheckBox
+          android:id="@+id/flag_activity_new_document"
+          android:text="@string/flag_activity_new_document"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:focusable="false"
+          android:focusableInTouchMode="false" />
+
+        <CheckBox
+          android:id="@+id/flag_activity_launched_from_history"
+          android:text="@string/flag_activity_launched_from_history"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:focusable="false"
+          android:focusableInTouchMode="false" />
+
+        <CheckBox
+          android:id="@+id/flag_activity_reset_task_if_needed"
+          android:text="@string/flag_activity_reset_task_if_needed"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:focusable="false"
+          android:focusableInTouchMode="false" />
+
+        <CheckBox
+          android:id="@+id/flag_activity_brought_to_front"
+          android:text="@string/flag_activity_brought_to_front"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:focusable="false"
+          android:focusableInTouchMode="false" />
+
+        <CheckBox
+          android:id="@+id/flag_activity_exclude_from_recents"
+          android:text="@string/flag_activity_exclude_from_recents"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:focusable="false"
+          android:focusableInTouchMode="false" />
+
+        <CheckBox
+          android:id="@+id/flag_activity_previous_is_top"
+          android:text="@string/flag_activity_previous_is_top"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:focusable="false"
+          android:focusableInTouchMode="false" />
+
+        <CheckBox
+          android:id="@+id/flag_activity_forward_result"
+          android:text="@string/flag_activity_forward_result"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:focusable="false"
+          android:focusableInTouchMode="false" />
+
+        <CheckBox
+          android:id="@+id/flag_activity_clear_top"
+          android:text="@string/flag_activity_clear_top"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:focusable="false"
+          android:focusableInTouchMode="false" />
+
+        <CheckBox
+          android:id="@+id/flag_activity_multiple_task"
+          android:text="@string/flag_activity_multiple_task"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:focusable="false"
+          android:focusableInTouchMode="false" />
+
+        <CheckBox
+          android:id="@+id/flag_activity_new_task"
+          android:text="@string/flag_activity_new_task"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:focusable="false"
+          android:focusableInTouchMode="false" />
+
+        <CheckBox
+          android:id="@+id/flag_activity_single_top"
+          android:text="@string/flag_activity_single_top"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:focusable="false"
+          android:focusableInTouchMode="false" />
+
+        <CheckBox
+          android:id="@+id/flag_activity_no_history"
+          android:text="@string/flag_activity_no_history"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:focusable="false"
+          android:focusableInTouchMode="false" />
+
+        <CheckBox
+          android:id="@+id/flag_receiver_visible_to_instant_apps"
+          android:text="@string/flag_receiver_visible_to_instant_apps"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:focusable="false"
+          android:focusableInTouchMode="false" />
+
+        <CheckBox
+          android:id="@+id/flag_receiver_boot_upgrade"
+          android:text="@string/flag_receiver_boot_upgrade"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:focusable="false"
+          android:focusableInTouchMode="false" />
+
+        <CheckBox
+          android:id="@+id/flag_receiver_from_shell"
+          android:text="@string/flag_receiver_from_shell"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:focusable="false"
+          android:focusableInTouchMode="false" />
+
+        <CheckBox
+          android:id="@+id/flag_receiver_exclude_background"
+          android:text="@string/flag_receiver_exclude_background"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:focusable="false"
+          android:focusableInTouchMode="false" />
+
+        <CheckBox
+          android:id="@+id/flag_receiver_include_background"
+          android:text="@string/flag_receiver_include_background"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:focusable="false"
+          android:focusableInTouchMode="false" />
+
+        <CheckBox
+          android:id="@+id/flag_receiver_registered_only_before_boot"
+          android:text="@string/flag_receiver_registered_only_before_boot"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:focusable="false"
+          android:focusableInTouchMode="false" />
+
+        <CheckBox
+          android:id="@+id/flag_receiver_no_abort"
+          android:text="@string/flag_receiver_no_abort"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:focusable="false"
+          android:focusableInTouchMode="false" />
+
+        <CheckBox
+          android:id="@+id/flag_receiver_foreground"
+          android:text="@string/flag_receiver_foreground"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:focusable="false"
+          android:focusableInTouchMode="false" />
+
+        <CheckBox
+          android:id="@+id/flag_receiver_replace_pending"
+          android:text="@string/flag_receiver_replace_pending"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:focusable="false"
+          android:focusableInTouchMode="false" />
+
+        <CheckBox
+          android:id="@+id/flag_receiver_registered_only"
+          android:text="@string/flag_receiver_registered_only"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:focusable="false"
+          android:focusableInTouchMode="false" />
+
+      </LinearLayout>
+    </com.github.warren_bank.bookmarks.ui.widgets.ExpandablePanel>
+
+    <!-- =================================================================== -->
+
+    <View
+      android:layout_width="fill_parent"
+      android:layout_height="1px"
+      android:paddingVertical="3dp"
+      android:background="@drawable/div" />
+
+    <!-- =================================================================== -->
+
+    <TextView
+      android:text="@string/intent_attribute_action"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content" />
+
+    <Spinner
+      android:id="@+id/intent_attribute_action_spinner"
+      android:entries="@array/intent_actions"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content" />
+
+    <EditText
+      android:id="@+id/intent_attribute_action"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:inputType="text" />
+
+    <!-- =================================================================== -->
+
+    <View
+      android:layout_width="fill_parent"
+      android:layout_height="1px"
+      android:paddingVertical="3dp"
+      android:background="@drawable/div" />
+
+    <!-- =================================================================== -->
+
+    <TextView
+      android:text="@string/intent_attribute_package_name"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content" />
+
+    <EditText
+      android:id="@+id/intent_attribute_package_name"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:inputType="text" />
+
+    <!-- =================================================================== -->
+
+    <View
+      android:layout_width="fill_parent"
+      android:layout_height="1px"
+      android:paddingVertical="3dp"
+      android:background="@drawable/div" />
+
+    <!-- =================================================================== -->
+
+    <TextView
+      android:text="@string/intent_attribute_class_name"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content" />
+
+    <EditText
+      android:id="@+id/intent_attribute_class_name"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:inputType="text" />
+
+    <!-- =================================================================== -->
+
+    <View
+      android:layout_width="fill_parent"
+      android:layout_height="1px"
+      android:paddingVertical="3dp"
+      android:background="@drawable/div" />
+
+    <!-- =================================================================== -->
+
+    <TextView
+      android:text="@string/intent_attribute_data_uri"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content" />
+
+    <EditText
+      android:id="@+id/intent_attribute_data_uri"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:inputType="textUri" />
+
+    <!-- =================================================================== -->
+
+    <View
+      android:layout_width="fill_parent"
+      android:layout_height="1px"
+      android:paddingVertical="3dp"
+      android:background="@drawable/div" />
+
+    <!-- =================================================================== -->
+
+    <TextView
+      android:text="@string/intent_attribute_data_type"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content" />
+
+    <Spinner
+      android:id="@+id/intent_attribute_data_type_spinner"
+      android:entries="@array/intent_data_types"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content" />
+
+    <EditText
+      android:id="@+id/intent_attribute_data_type"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:inputType="text" />
+
+    <!-- =================================================================== -->
+
+    <View
+      android:layout_width="fill_parent"
+      android:layout_height="1px"
+      android:paddingVertical="3dp"
+      android:background="@drawable/div" />
+
+    <!-- =================================================================== -->
+
+    <TextView
+      android:text="@string/intent_attribute_categories"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content" />
+
+    <Spinner
+      android:id="@+id/intent_attribute_categories_spinner"
+      android:entries="@array/intent_categories"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content" />
+
+    <LinearLayout
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+      <EditText
+        android:id="@+id/intent_attribute_categories_text"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:layout_gravity="start" />
+
+      <Button
+        android:text="@string/dialog_add"
+        android:layout_weight="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:gravity="center_vertical"
+        android:clickable="true"
+        android:onClick="addCategory" />
+
+    </LinearLayout>
+
+    <com.github.warren_bank.bookmarks.ui.widgets.ListViewInScrollView
+      android:id="@+id/intent_attribute_categories_list"
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent" />
+
+    <!-- =================================================================== -->
+
+    <View
+      android:layout_width="fill_parent"
+      android:layout_height="1px"
+      android:paddingVertical="3dp"
+      android:background="@drawable/div" />
+
+    <!-- =================================================================== -->
+
+    <TextView
+      android:text="@string/intent_attribute_extras"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content" />
+
+    <com.github.warren_bank.bookmarks.ui.widgets.ListViewInScrollView
+      android:id="@+id/intent_attribute_extras_list"
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent" />
+
+    <Button
+      android:text="@string/dialog_add_more"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center_horizontal"
+      android:clickable="true"
+      android:onClick="addExtra" />
+
+    <!-- =================================================================== -->
+
+    <View
+      android:layout_width="fill_parent"
+      android:layout_height="1px"
+      android:paddingVertical="3dp"
+      android:background="@drawable/div" />
+
+    <!-- =================================================================== -->
+
+    <Button
+      android:text="@string/dialog_save"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:padding="3dp"
+      android:clickable="true"
+      android:onClick="saveIntent" />
+
+  </LinearLayout>
+</ScrollView>

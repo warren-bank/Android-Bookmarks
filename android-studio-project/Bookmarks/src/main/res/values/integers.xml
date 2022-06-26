@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<integer name="icon_intent_extra_value_separator_width" >24</integer>
+<integer name="icon_intent_extra_value_separator_height">24</integer>
+
+<!--
+  ======================
+  Intent flag constants:
+  ======================
+  https://android.googlesource.com/platform/frameworks/base/+/master/core/java/android/content/Intent.java
+-->
+<integer name="flag_grant_read_uri_permission"            >1</integer>
+<integer name="flag_grant_write_uri_permission"           >2</integer>
+<integer name="flag_from_background"                      >4</integer>
+<integer name="flag_debug_log_resolution"                 >8</integer>
+<integer name="flag_exclude_stopped_packages"             >16</integer>
+<integer name="flag_include_stopped_packages"             >32</integer>
+<integer name="flag_grant_persistable_uri_permission"     >64</integer>
+<integer name="flag_grant_prefix_uri_permission"          >128</integer>
+<integer name="flag_direct_boot_auto"                     >256</integer>
+<integer name="flag_debug_triaged_missing"                >@integer/flag_direct_boot_auto</integer>
+<integer name="flag_ignore_ephemeral"                     >512</integer>
+
+<integer name="flag_activity_require_default"             >512</integer>
+<integer name="flag_activity_require_non_browser"         >1024</integer>
+<integer name="flag_activity_match_external"              >2048</integer>
+<integer name="flag_activity_launch_adjacent"             >4096</integer>
+<integer name="flag_activity_retain_in_recents"           >8192</integer>
+<integer name="flag_activity_task_on_home"                >16384</integer>
+<integer name="flag_activity_clear_task"                  >32768</integer>
+<integer name="flag_activity_no_animation"                >65536</integer>
+<integer name="flag_activity_reorder_to_front"            >131072</integer>
+<integer name="flag_activity_no_user_action"              >262144</integer>
+<integer name="flag_activity_clear_when_task_reset"       >524288</integer>
+<integer name="flag_activity_new_document"                >524288</integer>
+<integer name="flag_activity_launched_from_history"       >1048576</integer>
+<integer name="flag_activity_reset_task_if_needed"        >2097152</integer>
+<integer name="flag_activity_brought_to_front"            >4194304</integer>
+<integer name="flag_activity_exclude_from_recents"        >8388608</integer>
+<integer name="flag_activity_previous_is_top"             >16777216</integer>
+<integer name="flag_activity_forward_result"              >33554432</integer>
+<integer name="flag_activity_clear_top"                   >67108864</integer>
+<integer name="flag_activity_multiple_task"               >134217728</integer>
+<integer name="flag_activity_new_task"                    >268435456</integer>
+<integer name="flag_activity_single_top"                  >536870912</integer>
+<integer name="flag_activity_no_history"                  >1073741824</integer>
+
+<integer name="flag_receiver_visible_to_instant_apps"     >2097152</integer>
+<integer name="flag_receiver_boot_upgrade"                >33554432</integer>
+<integer name="flag_receiver_from_shell"                  >4194304</integer>
+<integer name="flag_receiver_exclude_background"          >8388608</integer>
+<integer name="flag_receiver_include_background"          >16777216</integer>
+<integer name="flag_receiver_registered_only_before_boot" >67108864</integer>
+<integer name="flag_receiver_no_abort"                    >134217728</integer>
+<integer name="flag_receiver_foreground"                  >268435456</integer>
+<integer name="flag_receiver_replace_pending"             >536870912</integer>
+<integer name="flag_receiver_registered_only"             >1073741824</integer>
+<!--
+  ==============================
+  AAPT: error: invalid integer
+  Integer.MAX_VALUE = 2147483647
+  ==============================
+<integer name="flag_receiver_offload"                     >2147483648</integer>
+-->
+</resources>

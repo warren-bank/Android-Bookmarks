@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+<color name="holo_green_light">#ff99cc00</color>
+<color name="light_gray">#fff1f3f4</color>
+<color name="textview_in_listview_in_scrollview">@color/holo_green_light</color>
+<color name="folder_breadcrumbs_link">@color/holo_green_light</color>
+<color name="folder_breadcrumbs_separator">@color/holo_green_light</color>
+<color name="folder_breadcrumbs_background">@color/light_gray</color>
+</resources>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent">
+
+  <LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="6dp">
+
+    <CheckBox
+      android:id="@+id/allow_existing_folders"
+      android:text="@string/dialog_html_import_option_allow_existing_folders"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:focusable="false"
+      android:focusableInTouchMode="false"/>
+
+    <CheckBox
+      android:id="@+id/allow_duplicate_urls_global"
+      android:text="@string/dialog_html_import_option_allow_duplicate_urls_global"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:focusable="false"
+      android:focusableInTouchMode="false"/>
+
+    <CheckBox
+      android:id="@+id/allow_duplicate_urls_folder"
+      android:text="@string/dialog_html_import_option_allow_duplicate_urls_folder"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:focusable="false"
+      android:focusableInTouchMode="false"/>
+
+  </LinearLayout>
+</ScrollView>

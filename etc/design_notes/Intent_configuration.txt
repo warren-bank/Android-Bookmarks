@@ -1,0 +1,20 @@
+--------------------------------------------------------------------------------
+
+API 1:
+======
+addCategory (String category)
+addFlags (int flags)
+putExtra (String name, <T> value)
+  where <T>:
+    long[], byte, double[], boolean[], int, char[], byte[], float[], double, int[], String[], short[], boolean, String, long, char, float, short, ArrayList<Integer>, ArrayList<String>
+setAction (String action)
+setClassName (String packageName, String className)
+setData (Uri data)
+setDataAndType (Uri data, String type)
+setType (String type)
+
+API 4:
+======
+setPackage (String packageName)
+
+--------------------------------------------------------------------------------

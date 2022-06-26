@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent">
+
+  <LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="6dp">
+
+    <!-- =================================================================== -->
+
+    <TextView
+      android:text="@string/dialog_update_intent_attribute_extra_name"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content" />
+
+    <EditText
+      android:id="@+id/dialog_update_intent_attribute_extra_name"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:inputType="text" />
+
+    <!-- =================================================================== -->
+
+    <TextView
+      android:text="@string/dialog_update_intent_attribute_extra_value_type"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content" />
+
+    <Spinner
+      android:id="@+id/dialog_update_intent_attribute_extra_value_type_spinner"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content" />
+
+    <!-- =================================================================== -->
+
+    <TextView
+      android:text="@string/dialog_update_intent_attribute_extra_value"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content" />
+
+    <EditText
+      android:id="@+id/dialog_update_intent_attribute_extra_value"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:inputType="textMultiLine"
+      android:bufferType="spannable" />
+
+    <Button
+      android:id="@+id/dialog_update_intent_attribute_extra_value_separator"
+      android:text="@string/dialog_update_intent_attribute_extra_value_separator"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center_horizontal" />
+
+    <!-- =================================================================== -->
+
+  </LinearLayout>
+</ScrollView>
