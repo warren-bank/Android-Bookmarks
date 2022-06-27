@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE resources [
+    <!ENTITY folder        "फोल्डर">
+    <!ENTITY folders       "फोल्डरहरू">
+    <!ENTITY lc_folder     "फोल्डर">
+    <!ENTITY lc_folders    "फोल्डरहरू">
+    <!ENTITY bookmark      "पुस्तकचिनो">
+    <!ENTITY bookmarks     "पुस्तकचिनो">
+    <!ENTITY lc_bookmark   "पुस्तकचिनो">
+    <!ENTITY lc_bookmarks  "पुस्तकचिनो">
+]>
+<resources>
+<string name="app_name_long">&bookmarks;</string>
+<string name="layout_main_no_intents_in_folder">छैन &bookmarks; फेला पर्यो.</string>
+<string name="layout_main_no_results_for_search">खोजी नतिजा फेला परेन.</string>
+<string name="layout_main_results_for_search_label">यसका लागि परिणाम:</string>
+<string name="menu_actionbar_intent_search">खोजी गर्नुहोस्</string>
+<string name="menu_actionbar_folder_add">थप्नुहोस् &folder;</string>
+<string name="menu_actionbar_intent_add">थप्नुहोस् &bookmark;</string>
+<string name="menu_actionbar_move_complete">हालको लागि सार्नुहोस् &folder;</string>
+<string name="menu_actionbar_move_cancel">सार्नुहोस्</string>
+<string name="menu_actionbar_settings">सेटिङ</string>
+<string name="menu_actionbar_db_backup">जगेडा डाटाबेस</string>
+<string name="menu_actionbar_db_restore">डाटाबेस पूर्वावस्थामा ल्याउनुहोस्</string>
+<string name="menu_actionbar_db_html_export">यसमा निर्यात गर्नुहोस् HTML</string>
+<string name="menu_actionbar_db_html_import">यसबाट आयात गर्नुहोस् HTML</string>
+<string name="menu_actionbar_exit">निस्कदा</string>
+<string name="menu_context_folder_hide">लुकाउनुहोस्</string>
+<string name="menu_context_folder_unhide">नलुकाउनुहोस्</string>
+<string name="menu_context_folder_rename">पुन: नामकरण गर्नुहोस्</string>
+<string name="menu_context_folder_move">सार्नुहोस्</string>
+<string name="menu_context_folder_delete">मेट्नुहोस्</string>
+<string name="menu_context_intent_broadcast">प्रसारण पठाउनुहोस्</string>
+<string name="menu_context_intent_edit">सम्पादन गर्नुहोस्</string>
+<string name="menu_context_intent_copy">प्रतिलिपि बनाउनुहोस्</string>
+<string name="menu_context_intent_add_shortcut">सर्टकट</string>
+<string name="settings_option_show_hidden">लुकाइएको देखाउनुहोस् &lc_folders;</string>
+<string name="settings_option_auto_backup">स्वचालित दैनिक जगेडा सम्पादन गर्नुहोस्</string>
+<string name="settings_option_backup_versioning">३ सबैभन्दा पछिल्लो स्वचालित दैनिक ब्याकअप राख्नुहोस्</string>
+<string name="settings_option_startup_folder">सुरुआत &lc_folder; सुरुआतमा प्रदर्शन गर्न:</string>
+<string name="settings_option_output_directory">ब्याकअप र निर्यातका लागि पूर्वनिर्धारित निर्गत डाइरेक्टरी:</string>
+<string name="dialog_ok">OK</string>
+<string name="dialog_cancel">रद्द गर्नुहोस्</string>
+<string name="dialog_add">थप्नुहोस्</string>
+<string name="dialog_add_more">थप्नुहोस् ...</string>
+<string name="dialog_change">परिवर्तन गर्नुहोस् ...</string>
+<string name="dialog_save">बचत गर्नुहोस्</string>
+<string name="dialog_delete">मेट्नुहोस्</string>
+<string name="dialog_backup_preupdate_title">डाटाबेस अद्यावधिक आवश्यक छ</string>
+<string name="dialog_backup_preupdate_message">तपाईँले यो अनुप्रयोगको नयाँ संस्करण स्थापना गर्नुभएको छ. डाटाबेसको संस्करण पनि अद्यावधिक गर्न आवश्यक छ. यो सञ्चालन भन्दा पहिले जगेडा बचत गर्न सिफारिस गरिएको छ; कुनै पनि त्रुटिले डाटाबेस नष्ट गर्नेछ. गर्न, तपाईँले बाह्य भण्डारण गर्न जगेडा फाइल बचत गर्न पहिले अनुमति दिनु पर्दछ. आवश्यक अद्यावधिक अगाडि जगेडा बचत गर्न चाहनुहुन्छ भने?</string>
+<string name="dialog_intent_search_option_query">क्वेरी:</string>
+<string name="dialog_intent_search_option_only_current_folder">हालको मात्र &lc_folder;</string>
+<string name="dialog_backup_done">डाटाबेस जगेडा पूरा भयो</string>
+<string name="dialog_backup_failed">जगेडा प्रदर्शन गर्न असक्षम!</string>
+<string name="dialog_backup_usefolder">पूर्वनिर्धारित निर्गत डाइरेक्टरी परिवर्तन गर्नुहोस्</string>
+<string name="dialog_restore_now">जगेडा पूर्वावस्थामा ल्याउनका लागि हालै डाटाबेसमा सबै सूचनाहरू पूर्णरूपमा प्रतिस्थापन गर्नेछ. जारी राख्नुहोस्?</string>
+<string name="dialog_restore_done">डाटाबेस सफलतापूर्वक बहाल</string>
+<string name="dialog_restore_failed">डाटाबेस पूर्वावस्थामा ल्याउन असक्षम!</string>
+<string name="dialog_restore_notfound">बाह्य भण्डारणमा जगेडा फेला पार्न सकेन!</string>
+<string name="dialog_html_export_option_only_current_folder">हालको मात्र निर्यात गर्नुहोस् &lc_folder; र यसको वंशज</string>
+<string name="dialog_html_export_option_include_hidden">लुकाइएको समावेश गर्नुहोस् &lc_folders;</string>
+<string name="dialog_html_export_done">HTML निर्यात पूरा भयो</string>
+<string name="dialog_html_export_failed">निर्यात सम्पादन गर्न असक्षम!</string>
+<string name="dialog_html_import_option_allow_existing_folders">थप्न अनुमति दिनुहोस् &lc_bookmarks; अवस्थित छ &lc_folders;</string>
+<string name="dialog_html_import_option_allow_duplicate_urls_global">नक्कल गर्न अनुमति दिनुहोस् URLs विश्वव्यापी रूपमा</string>
+<string name="dialog_html_import_option_allow_duplicate_urls_folder">नक्कल गर्न अनुमति दिनुहोस् URLs प्रति फोल्डर</string>
+<string name="dialog_html_import_done">HTML सफलतापूर्वक आयात गरियो</string>
+<string name="dialog_html_import_failed">आयात गर्न अक्षम HTML!</string>
+<string name="dialog_html_import_notfound">फेला पार्न सकेन HTML बाह्य भण्डारणमा फाइल!</string>
+<string name="dialog_delete_folder_title">मेट्नुहोस् &folder;?</string>
+<string name="dialog_delete_intent_title">मेट्नुहोस् &bookmark;?</string>
+<string name="dialog_delete_confirm">तपाईँ मेट्न निश्चित हुनुहुन्छ "%s"?</string>
+<string name="folder_rename_title">पुन: नामकरण गर्नुहोस् &folder;</string>
+<string name="folder_attribute_name">नाम:</string>
+<string name="intent_edit_title">सम्पादन गर्नुहोस् &bookmark;</string>
+<string name="intent_attribute_folder">&folder;</string>
+<string name="intent_attribute_flags">झण्डाहरू</string>
+<string name="intent_attribute_action">कार्य</string>
+<string name="intent_attribute_package_name">प्याकेज नाम</string>
+<string name="intent_attribute_class_name">वर्ग नाम</string>
+<string name="intent_attribute_data_uri">डेटा URI</string>
+<string name="intent_attribute_data_type">डेटा (MIME) प्रकार</string>
+<string name="intent_attribute_categories">श्रेणियाँ</string>
+<string name="intent_attribute_extras">Extras</string>
+<string name="dialog_update_intent_attribute_category_title">श्रेणी अद्यावधिक गर्नुहोस्</string>
+<string name="dialog_update_intent_attribute_extra_title_add">अतिरिक्त थप्नुहोस्</string>
+<string name="dialog_update_intent_attribute_extra_title_edit">अतिरिक्त एक्स्ट्रा</string>
+<string name="dialog_update_intent_attribute_extra_value_type">मान प्रकार</string>
+<string name="dialog_update_intent_attribute_extra_value">मान</string>
+<string name="dialog_update_intent_attribute_extra_value_separator">मान सूची विभाजक थप्नुहोस्</string>
+<string name="messages_db_error_update">अद्यावधिक गर्दा डाटाबेस त्रुटि</string>
+<string name="messages_no_permission">अनुरोध गरिएको सञ्चालन सम्पादन गर्न अपर्याप्त अनुमति</string>
+<string name="messages_activity_not_found">कुनै क्रियाकलाप मिल्दछ Intent</string>
+<string name="default_intent_action">-- सामान्य मानहरू --</string>
+</resources>

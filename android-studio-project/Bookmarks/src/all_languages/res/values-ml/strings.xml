@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE resources [
+    <!ENTITY folder        "ഫോള്ഡര്">
+    <!ENTITY folders       "ഫോള്ഡര്മാര്">
+    <!ENTITY lc_folder     "ഫോള്ഡര്">
+    <!ENTITY lc_folders    "ഫോള്ഡറുകള്">
+    <!ENTITY bookmark      "ഓര്മ്മക്കുറിപ്പു്">
+    <!ENTITY bookmarks     "ഓര്മ്മക്കുറിപ്പുകള്">
+    <!ENTITY lc_bookmark   "പുസ്തക അടയാളം">
+    <!ENTITY lc_bookmarks  "ഓര്മ്മക്കുറിപ്പുകള്">
+]>
+<resources>
+<string name="app_name_long">&bookmarks;</string>
+<string name="layout_main_no_intents_in_folder">ഇല്ല &bookmarks; കണ്ടെത്തിയിരിക്കുന്നു.</string>
+<string name="layout_main_no_results_for_search">തെരച്ചില് ഫലങ്ങള് ലഭ്യമല്ല.</string>
+<string name="layout_main_results_for_search_label">ഫലങ്ങള്:</string>
+<string name="menu_actionbar_intent_search">തെരയുക</string>
+<string name="menu_actionbar_folder_add">ചേര്ക്കുക &folder;</string>
+<string name="menu_actionbar_intent_add">ചേര്ക്കുക &bookmark;</string>
+<string name="menu_actionbar_move_complete">നിലവിലേക്ക് നീക്കുക &folder;</string>
+<string name="menu_actionbar_move_cancel">നീക്കുക റദ്ദാക്കുക</string>
+<string name="menu_actionbar_settings">സജ്ജീകരണങ്ങള്</string>
+<string name="menu_actionbar_db_backup">ബാക്കപ്പ് ഡാറ്റാബേസ്</string>
+<string name="menu_actionbar_db_restore">ഡാറ്റാബേസ് വീണ്ടെടുക്കുക</string>
+<string name="menu_actionbar_db_html_export">എയര്പോരി ചെയ്യുക HTML</string>
+<string name="menu_actionbar_db_html_import">यसबाट ഇറക്കുമതി ചെയ്യുക HTML</string>
+<string name="menu_actionbar_exit">പ്രദര്ശിപ്പിക്കുക</string>
+<string name="menu_context_folder_hide">അദൃശ്യമാക്കുക</string>
+<string name="menu_context_folder_unhide">മറയ്ക്കുക</string>
+<string name="menu_context_folder_rename">പേരു് മാറ്റുക</string>
+<string name="menu_context_folder_move">നീക്കുക</string>
+<string name="menu_context_folder_delete">നീക്കം ചെയ്യുക</string>
+<string name="menu_context_intent_broadcast">ബ്രോഡ്കാസ്റ്റ് അയയ്ക്കുക</string>
+<string name="menu_context_intent_edit">ചിട്ടപ്പെടുത്തുക</string>
+<string name="menu_context_intent_copy">പകര്ത്തുക</string>
+<string name="menu_context_intent_add_shortcut">കുറുക്കുവഴി ചേര്ക്കുക</string>
+<string name="settings_option_show_hidden">ഒളിപ്പിച്ച കാണിയ്ക്കുക &lc_folders;</string>
+<string name="settings_option_auto_backup">ഓട്ടോമാറ്റിക് ദിനപത്രം പിന്തുണയ്ക്കുക</string>
+<string name="settings_option_backup_versioning">3 ഏറ്റവും അടുത്തുള്ള ഓട്ടോമാറ്റിക് ദിനപത്രം സൂക്ഷിക്കുക</string>
+<string name="settings_option_startup_folder">തുടക്കംComment &lc_folder; തുടക്കത്തില് പ്രദര്ശിപ്പിക്കാന്:</string>
+<string name="settings_option_output_directory">ബാക്ക്പ്, എക്സ്പോര്ട്ടിനുള്ള സഹജമായ ഔട്ട്പുട്ട് തട്ട്:</string>
+<string name="dialog_ok">OK</string>
+<string name="dialog_cancel">റദ്ദാക്കുക</string>
+<string name="dialog_add">ചേര്ക്കുക</string>
+<string name="dialog_add_more">ചേര്ക്കുക ...</string>
+<string name="dialog_change">മാറ്റം ...</string>
+<string name="dialog_save">സൂക്ഷിക്കുക</string>
+<string name="dialog_delete">നീക്കം ചെയ്യുക</string>
+<string name="dialog_backup_preupdate_title">ഡാറ്റാബേസ് പരിഷ്കരണം ആവശ്യമാണ്</string>
+<string name="dialog_backup_preupdate_message">നിങ്ങള് ഈ പ്രയോഗത്തിന്റെ ഒരു പുതിയ പതിപ്പ് ഇന്സ്റ്റോള് ചെയ്തിരിക്കുന്നു. ഡാറ്റാബേസിന്റെ പതിപ്പും പരിഷ്കരിക്കേണ്ടതുണ്ട്. ഈ ഓപ്പറേഷന് ശുപാർശ ചെയ്യുന്നതിനുമുമ്പ് ഒരു ബാക്കപ്പ് സൂക്ഷിക്കുക; ഏതെങ്കിലും പിശകു് ഡാറ്റാബേസ് ദുഷിപ്പിക്കും. അങ്ങനെ ചെയ്യാന്, ബാക്കപ്പ് ഫയല് സൂക്ഷിക്കുന്നതിനായി ആദ്യം അനുമതി നല്കേണ്ടതുണ്ട്. ആവശ്യമായ പുതുക്കുന്നതിന് മുന്പ് ഒരു ബാക്കപ്പ് സൂക്ഷിക്കണമോ\??</string>
+<string name="dialog_intent_search_option_query">ചോദ്യം:</string>
+<string name="dialog_intent_search_option_only_current_folder">ഇപ്പോഴത്തെ മാത്രം &lc_folder;</string>
+<string name="dialog_backup_done">ഡാറ്റാബേസ് പിന്തുണയുള്ള</string>
+<string name="dialog_backup_failed">ബാക്കപ്പ് ചെയ്യാന് കഴിഞ്ഞില്ല!</string>
+<string name="dialog_backup_usefolder">സഹജമായ ഔട്ട്പുട്ട് ഡയറക്ടറി മാറ്റുക</string>
+<string name="dialog_restore_now">ഒരു ബാക്കപ്പ് വീണ്ടെടുക്കുവാന് ഈ ഡാറ്റാബേസില് ഇപ്പോള് എല്ലാ വിവരങ്ങളും പൂര്ണ്ണമായി മാറ്റും. തുടരുക?</string>
+<string name="dialog_restore_done">ഡാറ്റാബേസ് വിജയകരമായി വീണ്ടെടുത്ത</string>
+<string name="dialog_restore_failed">ഡാറ്റാബേസ് വീണ്ടെടുക്കുവാന് സാധ്യമായില്ല!</string>
+<string name="dialog_restore_notfound">ബാഹ്യ സംഭരണിയില് ബാക്കപ്പ് കണ്ടെത്തുവാന് സാധ്യമായില്ല!</string>
+<string name="dialog_html_export_option_only_current_folder">നിലവിലുളളവ മാത്രം കയറ്റുക &lc_folder; അതിന്റെ പിന്മുറക്കാരും</string>
+<string name="dialog_html_export_option_include_hidden">ഒളിപ്പിച്ചു് ഉള്പ്പെടുത്തുക &lc_folders;</string>
+<string name="dialog_html_export_done">HTML കയറ്റുമതി പൂര്ത്തിയായി</string>
+<string name="dialog_html_export_failed">കയറ്റുമതി ചെയ്യുവാന് സാധ്യമായില്ല!</string>
+<string name="dialog_html_import_option_allow_existing_folders">ചേര്ത്തു് ചേര്ക്കുക &lc_bookmarks; നിലവിലുള്ള &lc_folders;</string>
+<string name="dialog_html_import_option_allow_duplicate_urls_global">ഡ്യൂപ്ലിക്കേറ്റ് അനുവദിക്കുന്നു URLs പരസ്പരം</string>
+<string name="dialog_html_import_option_allow_duplicate_urls_folder">ഡ്യൂപ്ലിക്കേറ്റ് അനുവദിക്കുന്നു URLs ഫോള്ഡര്</string>
+<string name="dialog_html_import_done">HTML വിജയകരമായി ഇറക്കുമതി</string>
+<string name="dialog_html_import_failed">ഇംപോര്ട്ട് ചെയ്യാന് കഴിഞ്ഞില്ല HTML!</string>
+<string name="dialog_html_import_notfound">കണ്ടെത്താനായില്ല HTML ബാഹ്യമായ സംഭരണിയില് ഫയല്!</string>
+<string name="dialog_delete_folder_title">നീക്കം ചെയ്യുക &folder;?</string>
+<string name="dialog_delete_intent_title">നീക്കം ചെയ്യുക &bookmark;?</string>
+<string name="dialog_delete_confirm">നിങ്ങള്ക്ക് നീക്കം ചെയ്യണമെന്ന് ഉറപ്പാണോ\? "%s"?</string>
+<string name="folder_rename_title">പേരു് മാറ്റുക &folder;</string>
+<string name="folder_attribute_name">പേരു്</string>
+<string name="intent_edit_title">ചിട്ടപ്പെടുത്തുക &bookmark;</string>
+<string name="intent_attribute_folder">&folder;</string>
+<string name="intent_attribute_flags">ഫ്ലാഗുകള്</string>
+<string name="intent_attribute_action">നടപടി</string>
+<string name="intent_attribute_package_name">പാക്കേജ് പേരു്</string>
+<string name="intent_attribute_class_name">ക്ലാസ് നാമം</string>
+<string name="intent_attribute_data_uri">ഡേറ്റാ URI</string>
+<string name="intent_attribute_data_type">ഡേറ്റാ (MIME) തരം</string>
+<string name="intent_attribute_categories">വിഭാഗങ്ങള്</string>
+<string name="intent_attribute_extras">എക്സ്ട്രസ്</string>
+<string name="dialog_update_intent_attribute_category_title">വിഭാഗം പുതുക്കുക</string>
+<string name="dialog_update_intent_attribute_extra_title_add">എക്സ്ട്രാ ചേര്ക്കുക</string>
+<string name="dialog_update_intent_attribute_extra_title_edit">എക്സ്ട്രാ പുതുക്കുക</string>
+<string name="dialog_update_intent_attribute_extra_value_type">മൂല്യത്തിന്റെ തരം</string>
+<string name="dialog_update_intent_attribute_extra_value">മൂല്യം</string>
+<string name="dialog_update_intent_attribute_extra_value_separator">മൂല്യങ്ങളുടെ പട്ടിക വേര്തിരിക്കുക</string>
+<string name="messages_db_error_update">ഡാറ്റാബേസ് പിശക്</string>
+<string name="messages_no_permission">ആവശ്യപ്പെട്ട പ്രക്രിയ പ്രവര്ത്തിപ്പിക്കാന് ആവശ്യമായ അനുവാദം</string>
+<string name="messages_activity_not_found">പ്രവൃത്തികള് ലഭ്യമല്ല Intent</string>
+<string name="default_intent_action">-- സാധാരണ മൂല്യങ്ങള് --</string>
+</resources>

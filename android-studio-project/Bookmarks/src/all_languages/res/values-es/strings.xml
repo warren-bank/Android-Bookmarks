@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE resources [
+    <!ENTITY folder        "Carpeta">
+    <!ENTITY folders       "Carpetas">
+    <!ENTITY lc_folder     "carpeta">
+    <!ENTITY lc_folders    "carpetas">
+    <!ENTITY bookmark      "Marcador">
+    <!ENTITY bookmarks     "Marcadores">
+    <!ENTITY lc_bookmark   "marcador">
+    <!ENTITY lc_bookmarks  "Marcadores">
+]>
+<resources>
+<string name="app_name_long">&bookmarks;</string>
+<string name="layout_main_no_intents_in_folder">No &bookmarks; encontrado.</string>
+<string name="layout_main_no_results_for_search">No se encontraron resultados de búsqueda.</string>
+<string name="layout_main_results_for_search_label">Resultados para:</string>
+<string name="menu_actionbar_intent_search">Búsqueda</string>
+<string name="menu_actionbar_folder_add">Añadir &folder;</string>
+<string name="menu_actionbar_intent_add">Añadir &bookmark;</string>
+<string name="menu_actionbar_move_complete">Mover a la corriente &folder;</string>
+<string name="menu_actionbar_move_cancel">Cancelar traslado</string>
+<string name="menu_actionbar_settings">Configuración</string>
+<string name="menu_actionbar_db_backup">Base de datos</string>
+<string name="menu_actionbar_db_restore">Base de datos</string>
+<string name="menu_actionbar_db_html_export">Exportación a HTML</string>
+<string name="menu_actionbar_db_html_import">Importación desde HTML</string>
+<string name="menu_actionbar_exit">Salida</string>
+<string name="menu_context_folder_hide">Ocultar</string>
+<string name="menu_context_folder_unhide">Deshilar</string>
+<string name="menu_context_folder_rename">Rename</string>
+<string name="menu_context_folder_move">Mover</string>
+<string name="menu_context_folder_delete">Suprimir</string>
+<string name="menu_context_intent_broadcast">Enviar difusión</string>
+<string name="menu_context_intent_edit">Editar</string>
+<string name="menu_context_intent_copy">Copia</string>
+<string name="menu_context_intent_add_shortcut">Cómo agregar un acceso directo</string>
+<string name="settings_option_show_hidden">Mostrar oculto &lc_folders;</string>
+<string name="settings_option_auto_backup">Realizar copia de seguridad diaria automática</string>
+<string name="settings_option_backup_versioning">Mantenga las 3 copias de seguridad diarias automáticas más recientes</string>
+<string name="settings_option_startup_folder">Inicial &lc_folder; para mostrar al inicio:</string>
+<string name="settings_option_output_directory">Directorio de salida predeterminado para copias de seguridad y exportaciones:</string>
+<string name="dialog_ok">OK</string>
+<string name="dialog_cancel">Cancelar</string>
+<string name="dialog_add">Añadir</string>
+<string name="dialog_add_more">Añadir ...</string>
+<string name="dialog_change">Cambiar ...</string>
+<string name="dialog_save">Guardar</string>
+<string name="dialog_delete">Suprimir</string>
+<string name="dialog_backup_preupdate_title">La Actualización De Base De Datos</string>
+<string name="dialog_backup_preupdate_message">Ha instalado una versión más reciente de esta aplicación. También es necesario actualizar la versión de la base de datos. Se recomienda guardar una copia de seguridad antes de que se recomiende esta operación; cualquier error dañará la base de datos. Para ello, primero debe otorgar permiso para guardar el archivo de copia de seguridad en el almacenamiento externo. ¿Desea guardar una copia de seguridad antes de la actualización necesaria\??</string>
+<string name="dialog_intent_search_option_query">Consulta:</string>
+<string name="dialog_intent_search_option_only_current_folder">Sólo actual &lc_folder;</string>
+<string name="dialog_backup_done">Copia de seguridad completada</string>
+<string name="dialog_backup_failed">No se puede realizar la copia!</string>
+<string name="dialog_backup_usefolder">Cambiar directorio de salida predeterminado</string>
+<string name="dialog_restore_now">La restauración de una copia de seguridad sustituirá completamente toda la información actualmente en la base de datos. Continuar?</string>
+<string name="dialog_restore_done">Base de datos restaurada satisfactoriamente</string>
+<string name="dialog_restore_failed">Imposible restaurar la base de datos!</string>
+<string name="dialog_restore_notfound">No se ha podido encontrar la copia de seguridad en almacenamiento!</string>
+<string name="dialog_html_export_option_only_current_folder">Sólo exportar corriente &lc_folder; y sus descendientes</string>
+<string name="dialog_html_export_option_include_hidden">Incluir oculto &lc_folders;</string>
+<string name="dialog_html_export_done">HTML exportación completada</string>
+<string name="dialog_html_export_failed">No se puede realizar la exportación!</string>
+<string name="dialog_html_import_option_allow_existing_folders">Permitir añadir &lc_bookmarks; a existente &lc_folders;</string>
+<string name="dialog_html_import_option_allow_duplicate_urls_global">Permitir duplicados URLs globalmente</string>
+<string name="dialog_html_import_option_allow_duplicate_urls_folder">Permitir duplicados URLs por carpeta</string>
+<string name="dialog_html_import_done">HTML importado satisfactoriamente</string>
+<string name="dialog_html_import_failed">No se puede importar HTML!</string>
+<string name="dialog_html_import_notfound">No se ha podido encontrar HTML archivo en almacenamiento externo!</string>
+<string name="dialog_delete_folder_title">Suprimir &folder;?</string>
+<string name="dialog_delete_intent_title">Suprimir &bookmark;?</string>
+<string name="dialog_delete_confirm">¿Está seguro de que desea suprimir\? "%s"?</string>
+<string name="folder_rename_title">Rename &folder;</string>
+<string name="folder_attribute_name">Nombre</string>
+<string name="intent_edit_title">Editar &bookmark;</string>
+<string name="intent_attribute_folder">&folder;</string>
+<string name="intent_attribute_flags">Banderas</string>
+<string name="intent_attribute_action">Acción</string>
+<string name="intent_attribute_package_name">Nombre del paquete</string>
+<string name="intent_attribute_class_name">Nombre de clase</string>
+<string name="intent_attribute_data_uri">Datos URI</string>
+<string name="intent_attribute_data_type">Datos (MIME) Tipo</string>
+<string name="intent_attribute_categories">Categorías</string>
+<string name="intent_attribute_extras">Extras</string>
+<string name="dialog_update_intent_attribute_category_title">Categoría de actualización</string>
+<string name="dialog_update_intent_attribute_extra_title_add">Añadir Extra</string>
+<string name="dialog_update_intent_attribute_extra_title_edit">Actualizar Extra</string>
+<string name="dialog_update_intent_attribute_extra_value_type">Tipo de valor</string>
+<string name="dialog_update_intent_attribute_extra_value">Valor</string>
+<string name="dialog_update_intent_attribute_extra_value_separator">Añadir separador de lista de valores</string>
+<string name="messages_db_error_update">Error de la base de datos</string>
+<string name="messages_no_permission">Permiso insuficiente para realizar la operación solicitada</string>
+<string name="messages_activity_not_found">Ninguna actividad coincide con la Intent</string>
+<string name="default_intent_action">-- valores comunes --</string>
+</resources>

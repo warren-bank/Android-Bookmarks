@@ -36,6 +36,16 @@ android {
     }
   }
 
+  flavorDimensions 'language_resources'
+  productFlavors {
+    all_languages {
+      dimension 'language_resources'
+    }
+    english {
+      dimension 'language_resources'
+    }
+  }
+
   lintOptions {
     disable 'MissingTranslation'
     abortOnError true

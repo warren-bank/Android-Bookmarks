@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE resources [
+    <!ENTITY folder        "فولڈر">
+    <!ENTITY folders       "فولڈرز">
+    <!ENTITY lc_folder     "فولڈر">
+    <!ENTITY lc_folders    "فولڈرز">
+    <!ENTITY bookmark      "بک مارک">
+    <!ENTITY bookmarks     "بک مارکس">
+    <!ENTITY lc_bookmark   "بک مارک">
+    <!ENTITY lc_bookmarks  "کتابيں">
+]>
+<resources>
+<string name="app_name_long">&bookmarks;</string>
+<string name="layout_main_no_intents_in_folder">نہیں &bookmarks; پایا.</string>
+<string name="layout_main_no_results_for_search">کوئی سرچ نتائج نہیں ملا.</string>
+<string name="layout_main_results_for_search_label">نتائج کي نمائش:</string>
+<string name="menu_actionbar_intent_search">تلاش</string>
+<string name="menu_actionbar_folder_add">شامل ہیں &folder;</string>
+<string name="menu_actionbar_intent_add">شامل ہیں &bookmark;</string>
+<string name="menu_actionbar_move_complete">کرنٹ کو منتقل &folder;</string>
+<string name="menu_actionbar_move_cancel">منسوخ کر دیں</string>
+<string name="menu_actionbar_settings">سیٹنگز</string>
+<string name="menu_actionbar_db_backup">بیک اپ ڈیٹا بیس</string>
+<string name="menu_actionbar_db_restore">بے چین ڈاٹا بیس</string>
+<string name="menu_actionbar_db_html_export">کو ایکسپورٹ HTML</string>
+<string name="menu_actionbar_db_html_import">سے امپورٹ HTML</string>
+<string name="menu_actionbar_exit">باہر نکلیں</string>
+<string name="menu_context_folder_hide">Hide)</string>
+<string name="menu_context_folder_unhide">بے پردہ</string>
+<string name="menu_context_folder_rename">نام تبدیل</string>
+<string name="menu_context_folder_move">هیں</string>
+<string name="menu_context_folder_delete">حذف</string>
+<string name="menu_context_intent_broadcast">براڈ بھیجیں</string>
+<string name="menu_context_intent_edit">تصیح</string>
+<string name="menu_context_intent_copy">کاپی</string>
+<string name="menu_context_intent_add_shortcut">شارٹ کٹ شامل کریں</string>
+<string name="settings_option_show_hidden">چھپا چھپا کر &lc_folders;</string>
+<string name="settings_option_auto_backup">خود کار طریقے سے روزانہ بیک اپ</string>
+<string name="settings_option_backup_versioning">3 سب سے حالیہ خودکار روزانہ بیک اپ رکھیں</string>
+<string name="settings_option_startup_folder">ابتدائی &lc_folder; ابتدائیہ میں نمائش کے لیے:</string>
+<string name="settings_option_output_directory">الٹا آؤٹ پٹ ڈائرکٹری برائے بیک اپ اور برآمدات:</string>
+<string name="dialog_ok">OK</string>
+<string name="dialog_cancel">منسوخ</string>
+<string name="dialog_add">شامل ہیں</string>
+<string name="dialog_add_more">شامل کریں ...</string>
+<string name="dialog_change">تبدیلی ...</string>
+<string name="dialog_save">بچائیں</string>
+<string name="dialog_delete">حذف</string>
+<string name="dialog_backup_preupdate_title">ڈیٹا بیس اپ ڈیٹ کیا جاتا ہے</string>
+<string name="dialog_backup_preupdate_message">آپ نے اس درخواست کا ایک نیا ورژن انسٹال کیا ہے. ڈیٹا بیس کا ورژن بھی اپ ڈیٹ کرنے کی ضرورت ہے. اس آپریشن سے پہلے ایک بیک اپ کو بچانے کی سفارش کی ہے. کسی بھی خرابی کو ڈیٹا بیس کرپٹ کرے گا. ایسا کرنے کے لئے, آپ کو سب سے پہلے بیرونی ذخیرہ کرنے کے لئے بیک اپ فائل کو بچانے کے لئے اجازت دینے ضروری ہے. مطلوبہ اپ ڈیٹ سے پہلے اپ ایک بیک اپ بچانا پسند کریں گے?</string>
+<string name="dialog_intent_search_option_query">کویری:</string>
+<string name="dialog_intent_search_option_only_current_folder">کیول ورتمان &lc_folder;</string>
+<string name="dialog_backup_done">ڈیٹا بیس بیک اپ مکمل</string>
+<string name="dialog_backup_failed">بیک اپ انجام دینے کے قابل!</string>
+<string name="dialog_backup_usefolder">تبدیل شدہ Default Output ڈائریکٹری</string>
+<string name="dialog_restore_now">ایک بیک اپ کی بحالی مکمل طور پر ڈیٹا بیس میں فی الحال تمام معلومات کی جگہ لے لے گا. Continue reading →?</string>
+<string name="dialog_restore_done">ڈیٹا بیس کامیابی سے بحال</string>
+<string name="dialog_restore_failed">ڈیٹا بیس بحال کرنے کا امکان!</string>
+<string name="dialog_restore_notfound">بیرونی سٹوریج پر بیک اپ نہیں مل سکا!</string>
+<string name="dialog_html_export_option_only_current_folder">صرف برآمد موجودہ &lc_folder; اور اس کی اولاد</string>
+<string name="dialog_html_export_option_include_hidden">مخفی طور پر &lc_folders;</string>
+<string name="dialog_html_export_done">HTML برآمد مکمل</string>
+<string name="dialog_html_export_failed">برآمد کرنے کے قابل نہیں!</string>
+<string name="dialog_html_import_option_allow_existing_folders">شامل کیا. &lc_bookmarks; موجودہ تک &lc_folders;</string>
+<string name="dialog_html_import_option_allow_duplicate_urls_global">الکم نقل URLs عالمی سطح پر</string>
+<string name="dialog_html_import_option_allow_duplicate_urls_folder">الکم نقل URLs فولڈر کے فی</string>
+<string name="dialog_html_import_done">HTML کامیابی سے درآمد</string>
+<string name="dialog_html_import_failed">درآمد کرنے کے قابل HTML!</string>
+<string name="dialog_html_import_notfound">نہیں مل سکا HTML بیرونی ذخیرہ پر فائل!</string>
+<string name="dialog_delete_folder_title">حذف &folder;?</string>
+<string name="dialog_delete_intent_title">حذف &bookmark;?</string>
+<string name="dialog_delete_confirm">آپ کو خارج کرنا چاہتے ہیں یقین ہے "%s"?</string>
+<string name="folder_rename_title">نام تبدیل &folder;</string>
+<string name="folder_attribute_name">نام</string>
+<string name="intent_edit_title">تصیح &bookmark;</string>
+<string name="intent_attribute_folder">&folder;</string>
+<string name="intent_attribute_flags">شعلوں</string>
+<string name="intent_attribute_action">ایکشن</string>
+<string name="intent_attribute_package_name">پیکیج کا نام</string>
+<string name="intent_attribute_class_name">شرینی: نام</string>
+<string name="intent_attribute_data_uri">ڈیٹا URI</string>
+<string name="intent_attribute_data_type">ڈیٹا (MIME) قسم</string>
+<string name="intent_attribute_categories">زمرہ جات</string>
+<string name="intent_attribute_extras">ایکسٹراز</string>
+<string name="dialog_update_intent_attribute_category_title">اپ ڈیٹ زمرہ</string>
+<string name="dialog_update_intent_attribute_extra_title_add">اضافی اضافی</string>
+<string name="dialog_update_intent_attribute_extra_title_edit">اپ ڈیٹ اضافی</string>
+<string name="dialog_update_intent_attribute_extra_value_type">ویلیو ایڈڈ</string>
+<string name="dialog_update_intent_attribute_extra_value">والو</string>
+<string name="dialog_update_intent_attribute_extra_value_separator">شامل کردہ ویلیو لسٹ علیحدگی</string>
+<string name="messages_db_error_update">ڈیٹا بیس کی خرابی کو جبکہ اپ ڈیٹ</string>
+<string name="messages_no_permission">مطلوبہ کارروائی انجام دینے کی اجازت</string>
+<string name="messages_activity_not_found">کوئی سرگرمی میچ نہیں Intent</string>
+<string name="default_intent_action">-- عام اقدار --</string>
+</resources>

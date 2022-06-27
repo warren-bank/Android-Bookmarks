@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE resources [
+    <!ENTITY folder        "Mapp">
+    <!ENTITY folders       "Mappar">
+    <!ENTITY lc_folder     "mapp">
+    <!ENTITY lc_folders    "mappar">
+    <!ENTITY bookmark      "Bokmärke">
+    <!ENTITY bookmarks     "Bokmärken">
+    <!ENTITY lc_bookmark   "bokmärke">
+    <!ENTITY lc_bookmarks  "bokmärken">
+]>
+<resources>
+<string name="app_name_long">&bookmarks;</string>
+<string name="layout_main_no_intents_in_folder">Nej. &bookmarks; hittades.</string>
+<string name="layout_main_no_results_for_search">Inga sökresultat hittades.</string>
+<string name="layout_main_results_for_search_label">Resultat för:</string>
+<string name="menu_actionbar_intent_search">Sök</string>
+<string name="menu_actionbar_folder_add">Lägg till &folder;</string>
+<string name="menu_actionbar_intent_add">Lägg till &bookmark;</string>
+<string name="menu_actionbar_move_complete">Flytta till aktuell &folder;</string>
+<string name="menu_actionbar_move_cancel">Avbryt flyttning</string>
+<string name="menu_actionbar_settings">Inställningar</string>
+<string name="menu_actionbar_db_backup">Backup-databas</string>
+<string name="menu_actionbar_db_restore">Återställ databas</string>
+<string name="menu_actionbar_db_html_export">Exportera till HTML</string>
+<string name="menu_actionbar_db_html_import">Importera från HTML</string>
+<string name="menu_actionbar_exit">Avsluta</string>
+<string name="menu_context_folder_hide">Dölj</string>
+<string name="menu_context_folder_unhide">Ta bort</string>
+<string name="menu_context_folder_rename">Byt namn</string>
+<string name="menu_context_folder_move">Flytta</string>
+<string name="menu_context_folder_delete">Radera</string>
+<string name="menu_context_intent_broadcast">Sänd utsändning</string>
+<string name="menu_context_intent_edit">Redigera</string>
+<string name="menu_context_intent_copy">Kopiera</string>
+<string name="menu_context_intent_add_shortcut">Lägg till genväg</string>
+<string name="settings_option_show_hidden">Visa dolda &lc_folders;</string>
+<string name="settings_option_auto_backup">Utför automatisk daglig säkerhetskopiering</string>
+<string name="settings_option_backup_versioning">Behåll de 3 senaste automatiska säkerhetskopiorna</string>
+<string name="settings_option_startup_folder">Initial &lc_folder; för att visa vid start:</string>
+<string name="settings_option_output_directory">Standardutdatakatalog för säkerhetskopior och export:</string>
+<string name="dialog_ok">OK</string>
+<string name="dialog_cancel">Avbryt</string>
+<string name="dialog_add">Lägg till</string>
+<string name="dialog_add_more">Lägg till ...</string>
+<string name="dialog_change">Ändra ...</string>
+<string name="dialog_save">Spara</string>
+<string name="dialog_delete">Radera</string>
+<string name="dialog_backup_preupdate_title">Databasuppdatering krävs</string>
+<string name="dialog_backup_preupdate_message">Du har installerat en nyare version av det här programmet. Versionen av databasen behöver också uppdateras. Spara en säkerhetskopia innan den här åtgärden rekommenderas. Alla fel kommer att korrumpera databasen. För att kunna göra det måste du först ge behörighet att spara säkerhetskopian till extern lagring. Vill du spara en säkerhetskopia innan den nödvändiga uppdateringen?</string>
+<string name="dialog_intent_search_option_query">Fråga:</string>
+<string name="dialog_intent_search_option_only_current_folder">Bara aktuell &lc_folder;</string>
+<string name="dialog_backup_done">säkerhetskopiering av databas</string>
+<string name="dialog_backup_failed">Kan inte utföra säkerhetskopiering!</string>
+<string name="dialog_backup_usefolder">Ändra standardutdatakatalog</string>
+<string name="dialog_restore_now">Om du återställer en säkerhetskopia ersätts all information som finns i databasen helt och hållet. Fortsätt?</string>
+<string name="dialog_restore_done">Databasen återställdes</string>
+<string name="dialog_restore_failed">Det går inte att återställa databasen!</string>
+<string name="dialog_restore_notfound">Det gick inte att hitta säkerhetskopian för extern lagring!</string>
+<string name="dialog_html_export_option_only_current_folder">Exportera endast aktuell &lc_folder; och dess ättlingar</string>
+<string name="dialog_html_export_option_include_hidden">Inkludera dolda &lc_folders;</string>
+<string name="dialog_html_export_done">HTML export klar</string>
+<string name="dialog_html_export_failed">Det går inte att utföra export!</string>
+<string name="dialog_html_import_option_allow_existing_folders">Tillåt tillägg &lc_bookmarks; till befintlig &lc_folders;</string>
+<string name="dialog_html_import_option_allow_duplicate_urls_global">Tillåt duplicering URLs globalt</string>
+<string name="dialog_html_import_option_allow_duplicate_urls_folder">Tillåt duplicering URLs per mapp</string>
+<string name="dialog_html_import_done">HTML importerades</string>
+<string name="dialog_html_import_failed">Kan inte importera HTML!</string>
+<string name="dialog_html_import_notfound">Kunde inte hitta HTML fil på extern lagring!</string>
+<string name="dialog_delete_folder_title">Radera &folder;?</string>
+<string name="dialog_delete_intent_title">Radera &bookmark;?</string>
+<string name="dialog_delete_confirm">Är du säker på att du vill ta bort "%s"?</string>
+<string name="folder_rename_title">Byt namn &folder;</string>
+<string name="folder_attribute_name">NamnName</string>
+<string name="intent_edit_title">Redigera &bookmark;</string>
+<string name="intent_attribute_folder">&folder;</string>
+<string name="intent_attribute_flags">Flaggor</string>
+<string name="intent_attribute_action">Åtgärd</string>
+<string name="intent_attribute_package_name">Paketnamn</string>
+<string name="intent_attribute_class_name">Klassnamn</string>
+<string name="intent_attribute_data_uri">Data URI</string>
+<string name="intent_attribute_data_type">Data (MIME) Typ</string>
+<string name="intent_attribute_categories">Kategorier</string>
+<string name="intent_attribute_extras">Extras</string>
+<string name="dialog_update_intent_attribute_category_title">Uppdatera kategori</string>
+<string name="dialog_update_intent_attribute_extra_title_add">Lägg till extra</string>
+<string name="dialog_update_intent_attribute_extra_title_edit">Uppdatera extra</string>
+<string name="dialog_update_intent_attribute_extra_value_type">Typ av värde</string>
+<string name="dialog_update_intent_attribute_extra_value">Värde</string>
+<string name="dialog_update_intent_attribute_extra_value_separator">Lägg till värdelista avgränsare</string>
+<string name="messages_db_error_update">Databasfel vid uppdatering</string>
+<string name="messages_no_permission">Otillräcklig behörighet för att utföra den begärda åtgärden</string>
+<string name="messages_activity_not_found">Ingen aktivitet matchar Intent</string>
+<string name="default_intent_action">-- vanliga värden --</string>
+</resources>

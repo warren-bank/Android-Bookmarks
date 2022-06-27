@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE resources [
+    <!ENTITY folder        "Aplankas">
+    <!ENTITY folders       "Aplankų">
+    <!ENTITY lc_folder     "aplankas">
+    <!ENTITY lc_folders    "aplankai">
+    <!ENTITY bookmark      "Tag">
+    <!ENTITY bookmarks     "Žymelių">
+    <!ENTITY lc_bookmark   "žymelių">
+    <!ENTITY lc_bookmarks  "žymelių">
+]>
+<resources>
+<string name="app_name_long">&bookmarks;</string>
+<string name="layout_main_no_intents_in_folder">Nr. &bookmarks; Rasta.</string>
+<string name="layout_main_no_results_for_search">Nerasta paieškos rezultatų.</string>
+<string name="layout_main_results_for_search_label">Rezultatai:</string>
+<string name="menu_actionbar_intent_search">Ieškoti</string>
+<string name="menu_actionbar_folder_add">Pridėti &folder;</string>
+<string name="menu_actionbar_intent_add">Pridėti &bookmark;</string>
+<string name="menu_actionbar_move_complete">Perkelti į dabartinį &folder;</string>
+<string name="menu_actionbar_move_cancel">Nutraukti ėjimą</string>
+<string name="menu_actionbar_settings">Nustatymai</string>
+<string name="menu_actionbar_db_backup">Atsarginės duomenų bazės</string>
+<string name="menu_actionbar_db_restore">Atstatyti duomenų bazę</string>
+<string name="menu_actionbar_db_html_export">Eksportuoti į HTML</string>
+<string name="menu_actionbar_db_html_import">Importuoti iš HTML</string>
+<string name="menu_actionbar_exit">Išvykimas</string>
+<string name="menu_context_folder_hide">Slėpti</string>
+<string name="menu_context_folder_unhide">Neslėpti</string>
+<string name="menu_context_folder_rename">Pervadinti</string>
+<string name="menu_context_folder_move">Perkelti</string>
+<string name="menu_context_folder_delete">Ištrinti</string>
+<string name="menu_context_intent_broadcast">Siųsti transliaciją</string>
+<string name="menu_context_intent_edit">Redaguoti</string>
+<string name="menu_context_intent_copy">Kopijuoti</string>
+<string name="menu_context_intent_add_shortcut">Pridėti sparčiųjų klavišų</string>
+<string name="settings_option_show_hidden">Rodyti paslėptą &lc_folders;</string>
+<string name="settings_option_auto_backup">Atlikti automatinį kasdienį pastiprinimą</string>
+<string name="settings_option_backup_versioning">Išlaikyti 3 labiausiai neseniai automatiškai kasdien atsargines kopijas</string>
+<string name="settings_option_startup_folder">Pradinis &lc_folder; rodyti paleidimo metu:</string>
+<string name="settings_option_output_directory">Numatytasis išvesties aplankas, skirtas atsargines kopijas ir eksportą:</string>
+<string name="dialog_ok">OK</string>
+<string name="dialog_cancel">Atšaukti</string>
+<string name="dialog_add">Pridėti</string>
+<string name="dialog_add_more">Pridėti ...</string>
+<string name="dialog_change">Keisti ...</string>
+<string name="dialog_save">Įrašyti</string>
+<string name="dialog_delete">Ištrinti</string>
+<string name="dialog_backup_preupdate_title">Būtina Atnaujinti Duomenų Bazę</string>
+<string name="dialog_backup_preupdate_message">Jūs esate įdiegę naujesnę versiją šios programos. Duomenų bazės versija taip pat turi būti atnaujinta. Išsaugoti atsarginę kopiją prieš šią operaciją rekomenduojama; bet kokia klaida sugadins duomenų bazę. Norėdami tai padaryti, pirmiausia turite duoti leidimą išsaugoti atsarginės kopijos išorės saugojimui. Ar norėtumėte išsaugoti atsarginę kopiją prieš reikiamą atnaujinimą?</string>
+<string name="dialog_intent_search_option_query">Užklausa:</string>
+<string name="dialog_intent_search_option_only_current_folder">Tik dabartinis &lc_folder;</string>
+<string name="dialog_backup_done">Duomenų bazės atsarginės kopijos</string>
+<string name="dialog_backup_failed">Nepavyko atlikti pastiprinimo!</string>
+<string name="dialog_backup_usefolder">Pakeisti numatytąjį išvedimo aplanką</string>
+<string name="dialog_restore_now">Atsarginės kopijos atkūrimas visiškai pakeis visą informaciją, kuri šiuo metu yra duomenų bazėje. Tęsti?</string>
+<string name="dialog_restore_done">Sėkmingai atkurta duomenų bazė</string>
+<string name="dialog_restore_failed">Nepavyksta atstatyti duomenų bazės!</string>
+<string name="dialog_restore_notfound">Nepavyko rasti atsarginės kopijos išorės saugojimui!</string>
+<string name="dialog_html_export_option_only_current_folder">Tik eksporto srovė &lc_folder; ir jo palikuonys</string>
+<string name="dialog_html_export_option_include_hidden">Įtraukti paslėptas &lc_folders;</string>
+<string name="dialog_html_export_done">HTML Eksportas baigtas</string>
+<string name="dialog_html_export_failed">Nepavyko atlikti eksporto!</string>
+<string name="dialog_html_import_option_allow_existing_folders">Leisti pridėti &lc_bookmarks; Esamoms &lc_folders;</string>
+<string name="dialog_html_import_option_allow_duplicate_urls_global">Leisti dublikatą URLs globaliai</string>
+<string name="dialog_html_import_option_allow_duplicate_urls_folder">Leisti dublikatą URLs už aplanką</string>
+<string name="dialog_html_import_done">HTML Importuoti sėkmingai</string>
+<string name="dialog_html_import_failed">Nepavyko importuoti HTML!</string>
+<string name="dialog_html_import_notfound">Nepavyko rasti HTML išorės sandėliavimo byla!</string>
+<string name="dialog_delete_folder_title">Ištrinti &folder;?</string>
+<string name="dialog_delete_intent_title">Ištrinti &bookmark;?</string>
+<string name="dialog_delete_confirm">Ar tikrai norite ištrinti "%s"?</string>
+<string name="folder_rename_title">Pervadinti &folder;</string>
+<string name="folder_attribute_name">Pavadinimas</string>
+<string name="intent_edit_title">Redaguoti &bookmark;</string>
+<string name="intent_attribute_folder">&folder;</string>
+<string name="intent_attribute_flags">Vėliavos</string>
+<string name="intent_attribute_action">Veiksmai</string>
+<string name="intent_attribute_package_name">Pakuotės pavadinimas</string>
+<string name="intent_attribute_class_name">Klasės pavadinimas</string>
+<string name="intent_attribute_data_uri">Duomenys URI</string>
+<string name="intent_attribute_data_type">Duomenys (MIME) Tipas:</string>
+<string name="intent_attribute_categories">Kategorijos</string>
+<string name="intent_attribute_extras">4.</string>
+<string name="dialog_update_intent_attribute_category_title">Atnaujinti kategoriją</string>
+<string name="dialog_update_intent_attribute_extra_title_add">Pridėti ekstra</string>
+<string name="dialog_update_intent_attribute_extra_title_edit">Atnaujinti ekstra</string>
+<string name="dialog_update_intent_attribute_extra_value_type">Vertės tipas</string>
+<string name="dialog_update_intent_attribute_extra_value">Vertė</string>
+<string name="dialog_update_intent_attribute_extra_value_separator">Pridėti vertės sąrašo skirtuką</string>
+<string name="messages_db_error_update">Duomenų bazės klaida atnaujinant</string>
+<string name="messages_no_permission">Nepakankamas leidimas atlikti prašomą operaciją</string>
+<string name="messages_activity_not_found">Nėra veiklos atitikčių Intent</string>
+<string name="default_intent_action">-- Bendrosios reikšmės --</string>
+</resources>

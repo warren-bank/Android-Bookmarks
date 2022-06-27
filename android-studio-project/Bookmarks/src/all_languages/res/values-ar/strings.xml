@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE resources [
+    <!ENTITY folder        "حافظة">
+    <!ENTITY folders       "الحافظات">
+    <!ENTITY lc_folder     "حافظة">
+    <!ENTITY lc_folders    "حافظات">
+    <!ENTITY bookmark      "علامة توقف">
+    <!ENTITY bookmarks     "علامات التوقف">
+    <!ENTITY lc_bookmark   "علامة توقف">
+    <!ENTITY lc_bookmarks  "علامات التوقف">
+]>
+<resources>
+<string name="app_name_long">&bookmarks;</string>
+<string name="layout_main_no_intents_in_folder">لا &bookmarks; تم ايجاده.</string>
+<string name="layout_main_no_results_for_search">لم يتم ايجاد نتائج بحث.</string>
+<string name="layout_main_results_for_search_label">النتائج الى:</string>
+<string name="menu_actionbar_intent_search">بحث</string>
+<string name="menu_actionbar_folder_add">اضافة &folder;</string>
+<string name="menu_actionbar_intent_add">اضافة &bookmark;</string>
+<string name="menu_actionbar_move_complete">نقل الى الحالي &folder;</string>
+<string name="menu_actionbar_move_cancel">الغاء النقل</string>
+<string name="menu_actionbar_settings">المحددات</string>
+<string name="menu_actionbar_db_backup">قاعدة بيانات النسخة الاحتياطية</string>
+<string name="menu_actionbar_db_restore">استعادة قاعدة البيانات</string>
+<string name="menu_actionbar_db_html_export">ارسال الى HTML</string>
+<string name="menu_actionbar_db_html_import">استقبال من HTML</string>
+<string name="menu_actionbar_exit">خروج</string>
+<string name="menu_context_folder_hide">اخفاء</string>
+<string name="menu_context_folder_unhide">الغاء اخفاء</string>
+<string name="menu_context_folder_rename">اعادة تسمية</string>
+<string name="menu_context_folder_move">تحرك</string>
+<string name="menu_context_folder_delete">حذف</string>
+<string name="menu_context_intent_broadcast">ارسال نشر</string>
+<string name="menu_context_intent_edit">تحرير</string>
+<string name="menu_context_intent_copy">نسخ</string>
+<string name="menu_context_intent_add_shortcut">اضافة مسار مختصر</string>
+<string name="settings_option_show_hidden">عرض المخفي &lc_folders;</string>
+<string name="settings_option_auto_backup">تنفيذ نسخة احتياطية يومية آليا</string>
+<string name="settings_option_backup_versioning">الاحتفاظ بأحدث 3 نسخ احتياطية يومية آلية</string>
+<string name="settings_option_startup_folder">الأولي &lc_folder; لعرضه عند بدء التشغيل:</string>
+<string name="settings_option_output_directory">دليل المخرجات المفترض للنسخ الاحتياطية والتصدير:</string>
+<string name="dialog_ok">OK</string>
+<string name="dialog_cancel">الغاء</string>
+<string name="dialog_add">اضافة</string>
+<string name="dialog_add_more">اضافة ...</string>
+<string name="dialog_change">تغيير ...</string>
+<string name="dialog_save">حفظ</string>
+<string name="dialog_delete">حذف</string>
+<string name="dialog_backup_preupdate_title">تعديل قاعدة البيانات مطلوب</string>
+<string name="dialog_backup_preupdate_message">لقد قمت بتركيب نسخة أحدث من هذا التطبيق. ومن الضروري أيضا تحديث نسخة قاعدة البيانات هذه. حفظ نسخة احتياطية قبل أن يتم التوصية بهذه العملية ؛ أي خطأ سيؤدي الى تلف قاعدة البيانات. للقيام بذلك ، يجب أن تقوم أولا بمنح تصريح لحفظ ملف النسخة الاحتياطية في وحدة تخزين خارجية. هل ترغب في حفظ نسخة احتياطية قبل التعديل المطلوب?</string>
+<string name="dialog_intent_search_option_query">استعلام:</string>
+<string name="dialog_intent_search_option_only_current_folder">تيار فقط &lc_folder;</string>
+<string name="dialog_backup_done">النسخة الاحتياطية لقاعدة البيانات</string>
+<string name="dialog_backup_failed">لا يمكن تنفيذ النسخة الاحتياطية!</string>
+<string name="dialog_backup_usefolder">تغيير دليل المخرجات المفترض</string>
+<string name="dialog_restore_now">ستقوم عملية استعادة نسخة احتياطية باستبدال كل المعلومات الموجودة حاليا في قاعدة البيانات. استمرار?</string>
+<string name="dialog_restore_done">استعادة قاعدة البيانات بنجاح</string>
+<string name="dialog_restore_failed">لا يمكن استعادة قاعدة البيانات!</string>
+<string name="dialog_restore_notfound">لا يمكن ايجاد نسخة احتياطية على مساحة تخزين خارجية!</string>
+<string name="dialog_html_export_option_only_current_folder">ارسال حالي فقط &lc_folder; وفروعه</string>
+<string name="dialog_html_export_option_include_hidden">تضمين تم اخفائه &lc_folders;</string>
+<string name="dialog_html_export_done">HTML تم الانتهاء من التصدير</string>
+<string name="dialog_html_export_failed">لا يمكن تنفيذ عملية التصدير!</string>
+<string name="dialog_html_import_option_allow_existing_folders">السماح بالاضافة &lc_bookmarks; الى ما هو موجود &lc_folders;</string>
+<string name="dialog_html_import_option_allow_duplicate_urls_global">السماح بالتكرار URLs عالميا</string>
+<string name="dialog_html_import_option_allow_duplicate_urls_folder">السماح بالتكرار URLs لكل حافظة</string>
+<string name="dialog_html_import_done">HTML تم الاستقبال بنجاح</string>
+<string name="dialog_html_import_failed">لا يمكن الاستقبال HTML!</string>
+<string name="dialog_html_import_notfound">لا يمكن ايجاد HTML ملف بوحدة تخزين خارجية!</string>
+<string name="dialog_delete_folder_title">حذف &folder;?</string>
+<string name="dialog_delete_intent_title">حذف &bookmark;?</string>
+<string name="dialog_delete_confirm">هل أنت متأكد من أنك ترغب في الحذف "%s"?</string>
+<string name="folder_rename_title">اعادة تسمية &folder;</string>
+<string name="folder_attribute_name">الاسم</string>
+<string name="intent_edit_title">تحرير &bookmark;</string>
+<string name="intent_attribute_folder">&folder;</string>
+<string name="intent_attribute_flags">الشارات</string>
+<string name="intent_attribute_action">الإجراء</string>
+<string name="intent_attribute_package_name">اسم مجموعة البرامج</string>
+<string name="intent_attribute_class_name">اسم الفئة</string>
+<string name="intent_attribute_data_uri">البيانات URI</string>
+<string name="intent_attribute_data_type">البيانات (MIME) النوع</string>
+<string name="intent_attribute_categories">الفئات</string>
+<string name="intent_attribute_extras">منتهي</string>
+<string name="dialog_update_intent_attribute_category_title">تعديل الفئة</string>
+<string name="dialog_update_intent_attribute_extra_title_add">اضافة اضافية</string>
+<string name="dialog_update_intent_attribute_extra_title_edit">تعديل اضافي</string>
+<string name="dialog_update_intent_attribute_extra_value_type">نوع القيمة</string>
+<string name="dialog_update_intent_attribute_extra_value">القيمة</string>
+<string name="dialog_update_intent_attribute_extra_value_separator">اضافة فاصل كشف القيم</string>
+<string name="messages_db_error_update">حدث خطأ في قاعدة البيانات أثناء التعديل</string>
+<string name="messages_no_permission">تصريح غير كافي لتنفيذ العملية المطلوبة</string>
+<string name="messages_activity_not_found">لا يوجد نشاط مطابق للنشاط Intent</string>
+<string name="default_intent_action">-- قيم عامة --</string>
+</resources>

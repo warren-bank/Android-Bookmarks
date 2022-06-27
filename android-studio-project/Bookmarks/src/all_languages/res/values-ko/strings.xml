@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE resources [
+    <!ENTITY folder        "폴더">
+    <!ENTITY folders       "폴더">
+    <!ENTITY lc_folder     "폴더">
+    <!ENTITY lc_folders    "폴더">
+    <!ENTITY bookmark      "책갈피">
+    <!ENTITY bookmarks     "책갈피">
+    <!ENTITY lc_bookmark   "책갈피">
+    <!ENTITY lc_bookmarks  "책갈피">
+]>
+<resources>
+<string name="app_name_long">&bookmarks;</string>
+<string name="layout_main_no_intents_in_folder">아니오 &bookmarks; 발견된.</string>
+<string name="layout_main_no_results_for_search">검색 결과를 찾을 수 없음.</string>
+<string name="layout_main_results_for_search_label">결과:</string>
+<string name="menu_actionbar_intent_search">검색</string>
+<string name="menu_actionbar_folder_add">추가 &folder;</string>
+<string name="menu_actionbar_intent_add">추가 &bookmark;</string>
+<string name="menu_actionbar_move_complete">현재로 이동 &folder;</string>
+<string name="menu_actionbar_move_cancel">이동 취소</string>
+<string name="menu_actionbar_settings">설정</string>
+<string name="menu_actionbar_db_backup">백업 데이터베이스</string>
+<string name="menu_actionbar_db_restore">데이터베이스 복원</string>
+<string name="menu_actionbar_db_html_export">내보내기 HTML</string>
+<string name="menu_actionbar_db_html_import">가져오기 HTML</string>
+<string name="menu_actionbar_exit">종료</string>
+<string name="menu_context_folder_hide">숨기기</string>
+<string name="menu_context_folder_unhide">숨기기</string>
+<string name="menu_context_folder_rename">이름 바꾸기</string>
+<string name="menu_context_folder_move">이동</string>
+<string name="menu_context_folder_delete">삭제</string>
+<string name="menu_context_intent_broadcast">브로드캐스트 보내기</string>
+<string name="menu_context_intent_edit">편집</string>
+<string name="menu_context_intent_copy">복사</string>
+<string name="menu_context_intent_add_shortcut">바로 가기 추가</string>
+<string name="settings_option_show_hidden">숨겨진 항목 표시 &lc_folders;</string>
+<string name="settings_option_auto_backup">자동 일일 백업 수행</string>
+<string name="settings_option_backup_versioning">가장 최근의 자동 일일 백업 3개 유지</string>
+<string name="settings_option_startup_folder">초기 &lc_folder; 시작 시 표시하기:</string>
+<string name="settings_option_output_directory">백업 및 내보내기에 대한 기본 출력 디렉토리:</string>
+<string name="dialog_ok">OK</string>
+<string name="dialog_cancel">취소</string>
+<string name="dialog_add">추가</string>
+<string name="dialog_add_more">추가 ...</string>
+<string name="dialog_change">변화 ...</string>
+<string name="dialog_save">저장</string>
+<string name="dialog_delete">삭제</string>
+<string name="dialog_backup_preupdate_title">데이터베이스 업데이트 필요</string>
+<string name="dialog_backup_preupdate_message">이 애플리케이션의 새 버전을 설치했습니다. 데이터베이스 버전도 업데이트해야 합니다. 이 조작을 수행하기 전에 백업을 저장하는 것이 좋습니다. 오류가 발생하면 데이터베이스가 손상됩니다. 이를 수행하려면 먼저 백업 파일을 외부 스토리지에 저장할 수 있는 권한을 부여해야 합니다. 필요한 업데이트 전에 백업을 저장하시겠습니까\??</string>
+<string name="dialog_intent_search_option_query">쿼리:</string>
+<string name="dialog_intent_search_option_only_current_folder">현재의 &lc_folder;</string>
+<string name="dialog_backup_done">데이터베이스 백업 완료</string>
+<string name="dialog_backup_failed">백업을 수행할 수 없음!</string>
+<string name="dialog_backup_usefolder">기본 출력 디렉토리 변경</string>
+<string name="dialog_restore_now">백업을 복원하면 현재 데이터베이스에 있는 모든 정보가 완전히 바뀝니다. 계속?</string>
+<string name="dialog_restore_done">데이터베이스 복원 성공</string>
+<string name="dialog_restore_failed">데이터베이스를 복원할 수 없음!</string>
+<string name="dialog_restore_notfound">외부 스토리지에서 백업을 찾을 수 없음!</string>
+<string name="dialog_html_export_option_only_current_folder">현재 내보내기만 &lc_folder; 그리고 그 후손들</string>
+<string name="dialog_html_export_option_include_hidden">숨겨진 포함 &lc_folders;</string>
+<string name="dialog_html_export_done">HTML 내보내기 완료</string>
+<string name="dialog_html_export_failed">내보내기를 수행할 수 없음!</string>
+<string name="dialog_html_import_option_allow_existing_folders">추가 허용 &lc_bookmarks; 기존의 &lc_folders;</string>
+<string name="dialog_html_import_option_allow_duplicate_urls_global">복제 허용 URLs 전세계적으로</string>
+<string name="dialog_html_import_option_allow_duplicate_urls_folder">복제 허용 URLs 폴더당</string>
+<string name="dialog_html_import_done">HTML 가져오기 성공</string>
+<string name="dialog_html_import_failed">가져올 수 없음 HTML!</string>
+<string name="dialog_html_import_notfound">찾을 수 없음 HTML 파일을 외부 스토리지에 저장하기!</string>
+<string name="dialog_delete_folder_title">삭제 &folder;?</string>
+<string name="dialog_delete_intent_title">삭제 &bookmark;?</string>
+<string name="dialog_delete_confirm">삭제하시겠습니까\? "%s"?</string>
+<string name="folder_rename_title">이름 바꾸기 &folder;</string>
+<string name="folder_attribute_name">이름</string>
+<string name="intent_edit_title">편집 &bookmark;</string>
+<string name="intent_attribute_folder">&folder;</string>
+<string name="intent_attribute_flags">플래그</string>
+<string name="intent_attribute_action">행동</string>
+<string name="intent_attribute_package_name">패키지 이름</string>
+<string name="intent_attribute_class_name">클래스 이름</string>
+<string name="intent_attribute_data_uri">데이터 URI</string>
+<string name="intent_attribute_data_type">데이터 (MIME) 유형</string>
+<string name="intent_attribute_categories">카테고리</string>
+<string name="intent_attribute_extras">엑스트라</string>
+<string name="dialog_update_intent_attribute_category_title">업데이트 카테고리</string>
+<string name="dialog_update_intent_attribute_extra_title_add">Extra 추가</string>
+<string name="dialog_update_intent_attribute_extra_title_edit">업데이트 추가</string>
+<string name="dialog_update_intent_attribute_extra_value_type">값의 유형</string>
+<string name="dialog_update_intent_attribute_extra_value">가치</string>
+<string name="dialog_update_intent_attribute_extra_value_separator">값 목록 구분 기호 추가</string>
+<string name="messages_db_error_update">업데이트 중에 데이터베이스 오류 발생</string>
+<string name="messages_no_permission">요청된 조작을 수행할 수 있는 권한이 충분하지 않습니다.</string>
+<string name="messages_activity_not_found">활동이 없음 Intent</string>
+<string name="default_intent_action">-- 공통 값 --</string>
+</resources>

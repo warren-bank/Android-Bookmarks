@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE resources [
+    <!ENTITY folder        "Фасцикла">
+    <!ENTITY folders       "Фасцикле">
+    <!ENTITY lc_folder     "фасцикла">
+    <!ENTITY lc_folders    "фасцикле">
+    <!ENTITY bookmark      "Обележивач">
+    <!ENTITY bookmarks     "Обележивачи">
+    <!ENTITY lc_bookmark   "обележивач">
+    <!ENTITY lc_bookmarks  "обележивачи">
+]>
+<resources>
+<string name="app_name_long">&bookmarks;</string>
+<string name="layout_main_no_intents_in_folder">Не &bookmarks; пронађено.</string>
+<string name="layout_main_no_results_for_search">Нема пронађених резултата претраге.</string>
+<string name="layout_main_results_for_search_label">Резултати за:</string>
+<string name="menu_actionbar_intent_search">Претражи</string>
+<string name="menu_actionbar_folder_add">Додај &folder;</string>
+<string name="menu_actionbar_intent_add">Додај &bookmark;</string>
+<string name="menu_actionbar_move_complete">Премести на актуелну &folder;</string>
+<string name="menu_actionbar_move_cancel">Откажи покрет</string>
+<string name="menu_actionbar_settings">Поставке</string>
+<string name="menu_actionbar_db_backup">База резервне копије</string>
+<string name="menu_actionbar_db_restore">Врати базу података</string>
+<string name="menu_actionbar_db_html_export">Извези до HTML</string>
+<string name="menu_actionbar_db_html_import">Увези из HTML</string>
+<string name="menu_actionbar_exit">Изађи</string>
+<string name="menu_context_folder_hide">Сакриј</string>
+<string name="menu_context_folder_unhide">Ункриј</string>
+<string name="menu_context_folder_rename">Преименовање</string>
+<string name="menu_context_folder_move">Премести</string>
+<string name="menu_context_folder_delete">Избриши</string>
+<string name="menu_context_intent_broadcast">Пошаљи емитовање</string>
+<string name="menu_context_intent_edit">Уреди</string>
+<string name="menu_context_intent_copy">Копирај</string>
+<string name="menu_context_intent_add_shortcut">Додај пречицу</string>
+<string name="settings_option_show_hidden">Прикажи сакривено &lc_folders;</string>
+<string name="settings_option_auto_backup">Изврши аутоматску дневну резерву</string>
+<string name="settings_option_backup_versioning">Задржи 3 најновија аутоматска повратна резерва</string>
+<string name="settings_option_startup_folder">Иницијално &lc_folder; за приказ при покретању:</string>
+<string name="settings_option_output_directory">Подразумевани излазни директоријум за резервне копије и извоз:</string>
+<string name="dialog_ok">OK</string>
+<string name="dialog_cancel">Откажи</string>
+<string name="dialog_add">Додај</string>
+<string name="dialog_add_more">Додај ...</string>
+<string name="dialog_change">Промена ...</string>
+<string name="dialog_save">Сачувај</string>
+<string name="dialog_delete">Избриши</string>
+<string name="dialog_backup_preupdate_title">Потребно је ажурирање базе података</string>
+<string name="dialog_backup_preupdate_message">Инсталирали сте новију верзију ове апликације. Верзија базе података такође треба да се ажурира. Чување резервне копије пре ове операције је препоручено; свака грешка ће оштетити базу података. Да бисте то урадили, морате прво да одобрите дозволу да бисте сачували резервну датотеку у спољни складишни простор. Желите ли да сачувате резервну копију пре него што је потребно ажурирање?</string>
+<string name="dialog_intent_search_option_query">Упит:</string>
+<string name="dialog_intent_search_option_only_current_folder">Само актуелно &lc_folder;</string>
+<string name="dialog_backup_done">Резервна копија базе података</string>
+<string name="dialog_backup_failed">Не могу да извршим подршку!</string>
+<string name="dialog_backup_usefolder">Промени подразумевани излазни директоријум</string>
+<string name="dialog_restore_now">Враћање резервне копије потпуно ће заменити све информације које су тренутно у бази података. Настави?</string>
+<string name="dialog_restore_done">База података је успешно обновљена</string>
+<string name="dialog_restore_failed">Не могу да вратим базу података!</string>
+<string name="dialog_restore_notfound">Не могу да нађем подршку на спољном складишту!</string>
+<string name="dialog_html_export_option_only_current_folder">Само извозни струју &lc_folder; и његови потомци</string>
+<string name="dialog_html_export_option_include_hidden">Укључи и &lc_folders;</string>
+<string name="dialog_html_export_done">HTML довршени извоз</string>
+<string name="dialog_html_export_failed">Не могу да изводим извоз!</string>
+<string name="dialog_html_import_option_allow_existing_folders">Дозволи додавање &lc_bookmarks; Постојећи &lc_folders;</string>
+<string name="dialog_html_import_option_allow_duplicate_urls_global">Дозволи дупликат URLs глобално</string>
+<string name="dialog_html_import_option_allow_duplicate_urls_folder">Дозволи дупликат URLs по фасцикли</string>
+<string name="dialog_html_import_done">HTML успешно увезене</string>
+<string name="dialog_html_import_failed">Не могу да увозим HTML!</string>
+<string name="dialog_html_import_notfound">Није могуће пронаћи HTML датотека на спољном складишту!</string>
+<string name="dialog_delete_folder_title">Избриши &folder;?</string>
+<string name="dialog_delete_intent_title">Избриши &bookmark;?</string>
+<string name="dialog_delete_confirm">Да ли сте сигурни да желите да избришете "%s"?</string>
+<string name="folder_rename_title">Преименовање &folder;</string>
+<string name="folder_attribute_name">Име</string>
+<string name="intent_edit_title">Уреди &bookmark;</string>
+<string name="intent_attribute_folder">&folder;</string>
+<string name="intent_attribute_flags">Заставице</string>
+<string name="intent_attribute_action">Радња</string>
+<string name="intent_attribute_package_name">Име пакета</string>
+<string name="intent_attribute_class_name">Име класе</string>
+<string name="intent_attribute_data_uri">Подаци URI</string>
+<string name="intent_attribute_data_type">Подаци (MIME) Тип</string>
+<string name="intent_attribute_categories">Категорије</string>
+<string name="intent_attribute_extras">Статисти</string>
+<string name="dialog_update_intent_attribute_category_title">Ажурирај категорију</string>
+<string name="dialog_update_intent_attribute_extra_title_add">Додај додатно</string>
+<string name="dialog_update_intent_attribute_extra_title_edit">Ажурирај додатно</string>
+<string name="dialog_update_intent_attribute_extra_value_type">Тип вредности</string>
+<string name="dialog_update_intent_attribute_extra_value">Вредност</string>
+<string name="dialog_update_intent_attribute_extra_value_separator">Раздвоји сепаратор листе вредности</string>
+<string name="messages_db_error_update">Грешка базе података при ажурирању</string>
+<string name="messages_no_permission">Недовољна дозвола за обављање тражене операције</string>
+<string name="messages_activity_not_found">Активност није иста Intent</string>
+<string name="default_intent_action">-- Заједничке вредности --</string>
+</resources>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE resources [
+    <!ENTITY folder        "Folder">
+    <!ENTITY folders       "Foldery">
+    <!ENTITY lc_folder     "folder">
+    <!ENTITY lc_folders    "foldery">
+    <!ENTITY bookmark      "Zakładka">
+    <!ENTITY bookmarks     "Zakładki">
+    <!ENTITY lc_bookmark   "zakładka">
+    <!ENTITY lc_bookmarks  "zakładki">
+]>
+<resources>
+<string name="app_name_long">&bookmarks;</string>
+<string name="layout_main_no_intents_in_folder">Nie &bookmarks; znaleziono.</string>
+<string name="layout_main_no_results_for_search">Nie znaleziono wyników wyszukiwania.</string>
+<string name="layout_main_results_for_search_label">Wyniki dla:</string>
+<string name="menu_actionbar_intent_search">Szukaj</string>
+<string name="menu_actionbar_folder_add">Dodaj &folder;</string>
+<string name="menu_actionbar_intent_add">Dodaj &bookmark;</string>
+<string name="menu_actionbar_move_complete">Przenieś do bieżącego &folder;</string>
+<string name="menu_actionbar_move_cancel">Anuluj przeniesienie</string>
+<string name="menu_actionbar_settings">Ustawienia</string>
+<string name="menu_actionbar_db_backup">Baza danych składowania</string>
+<string name="menu_actionbar_db_restore">Odtwórz bazę danych</string>
+<string name="menu_actionbar_db_html_export">Eksportuj do HTML</string>
+<string name="menu_actionbar_db_html_import">Importuj z HTML</string>
+<string name="menu_actionbar_exit">Wyjdź</string>
+<string name="menu_context_folder_hide">Ukryj</string>
+<string name="menu_context_folder_unhide">Anuluj ukrycie</string>
+<string name="menu_context_folder_rename">Zmień nazwę</string>
+<string name="menu_context_folder_move">Przenieś</string>
+<string name="menu_context_folder_delete">Usuń</string>
+<string name="menu_context_intent_broadcast">Wyślij rozgłaszanie</string>
+<string name="menu_context_intent_edit">Edytuj</string>
+<string name="menu_context_intent_copy">Kopiuj</string>
+<string name="menu_context_intent_add_shortcut">Dodaj skrót</string>
+<string name="settings_option_show_hidden">Pokaż ukryte &lc_folders;</string>
+<string name="settings_option_auto_backup">Wykonaj automatyczne codzienne tworzenie kopii zapasowych</string>
+<string name="settings_option_backup_versioning">Zachowaj 3 najświeższą automatyczną codzienną kopię zapasową</string>
+<string name="settings_option_startup_folder">Początkowy &lc_folder; wyświetlanie podczas uruchamiania:</string>
+<string name="settings_option_output_directory">Domyślny katalog wyjściowy dla kopii zapasowych i eksportów:</string>
+<string name="dialog_ok">OK</string>
+<string name="dialog_cancel">Anuluj</string>
+<string name="dialog_add">Dodaj</string>
+<string name="dialog_add_more">Dodaj ...</string>
+<string name="dialog_change">Zmień ...</string>
+<string name="dialog_save">Zapisz</string>
+<string name="dialog_delete">Usuń</string>
+<string name="dialog_backup_preupdate_title">Wymagana Jest Aktualizacja Bazy Danych</string>
+<string name="dialog_backup_preupdate_message">Zainstalowano nowszą wersję tej aplikacji. Wersja bazy danych również musi zostać zaktualizowana. Zapisywanie kopii zapasowej przed wykonaniem tej operacji jest zalecane; dowolny błąd spowoduje uszkodzenie bazy danych. W tym celu należy najpierw nadać uprawnienia do zapisania pliku kopii zapasowej w zewnętrznej pamięci masowej. Czy chcesz zapisać kopię zapasową przed wymaganą aktualizacją?</string>
+<string name="dialog_intent_search_option_query">Zapytanie:</string>
+<string name="dialog_intent_search_option_only_current_folder">Tylko bieżące &lc_folder;</string>
+<string name="dialog_backup_done">Składowanie bazy danych zostało zakończone</string>
+<string name="dialog_backup_failed">Nie można wykonać kopii zapasowej!</string>
+<string name="dialog_backup_usefolder">Zmień domyślny katalog wyjściowy</string>
+<string name="dialog_restore_now">Odtwarzanie kopii zapasowej całkowicie zastąpi wszystkie informacje znajdujące się obecnie w bazie danych. Kontynuuj?</string>
+<string name="dialog_restore_done">Pomyślnie odtworzono bazę danych</string>
+<string name="dialog_restore_failed">Nie można odtworzyć bazy danych!</string>
+<string name="dialog_restore_notfound">Nie można znaleźć kopii zapasowej na zewnętrznej pamięci masowej!</string>
+<string name="dialog_html_export_option_only_current_folder">Tylko eksportuj bieżące &lc_folder; i jego potomkowie</string>
+<string name="dialog_html_export_option_include_hidden">Uwzględnij ukryte &lc_folders;</string>
+<string name="dialog_html_export_done">HTML eksport zakończony</string>
+<string name="dialog_html_export_failed">Nie można wykonać eksportu!</string>
+<string name="dialog_html_import_option_allow_existing_folders">Zezwalaj na dodawanie &lc_bookmarks; do istniejącej &lc_folders;</string>
+<string name="dialog_html_import_option_allow_duplicate_urls_global">Zezw. URLs globalnie</string>
+<string name="dialog_html_import_option_allow_duplicate_urls_folder">Zezw. URLs na folder</string>
+<string name="dialog_html_import_done">HTML zaimportowano pomyślnie</string>
+<string name="dialog_html_import_failed">Nie można zaimportować HTML!</string>
+<string name="dialog_html_import_notfound">Nie można znaleźć HTML plik w zewnętrznej pamięci masowej!</string>
+<string name="dialog_delete_folder_title">Usuń &folder;?</string>
+<string name="dialog_delete_intent_title">Usuń &bookmark;?</string>
+<string name="dialog_delete_confirm">Czy na pewno usunąć "%s"?</string>
+<string name="folder_rename_title">Zmień nazwę &folder;</string>
+<string name="folder_attribute_name">Nazwa</string>
+<string name="intent_edit_title">Edytuj &bookmark;</string>
+<string name="intent_attribute_folder">&folder;</string>
+<string name="intent_attribute_flags">Flagi</string>
+<string name="intent_attribute_action">Działanie</string>
+<string name="intent_attribute_package_name">Nazwa pakietu</string>
+<string name="intent_attribute_class_name">Nazwa klasy</string>
+<string name="intent_attribute_data_uri">Dane URI</string>
+<string name="intent_attribute_data_type">Dane (MIME) Typ</string>
+<string name="intent_attribute_categories">Kategorie</string>
+<string name="intent_attribute_extras">Dodatki</string>
+<string name="dialog_update_intent_attribute_category_title">Aktualizuj kategorię</string>
+<string name="dialog_update_intent_attribute_extra_title_add">Dodaj dodatkowe</string>
+<string name="dialog_update_intent_attribute_extra_title_edit">Aktualizuj dodatkowe</string>
+<string name="dialog_update_intent_attribute_extra_value_type">Typ wartości</string>
+<string name="dialog_update_intent_attribute_extra_value">Wartość</string>
+<string name="dialog_update_intent_attribute_extra_value_separator">Dodaj separator listy wartości</string>
+<string name="messages_db_error_update">Błąd bazy danych podczas aktualizowania</string>
+<string name="messages_no_permission">Niewystarczające uprawnienia do wykonania żądanej operacji</string>
+<string name="messages_activity_not_found">Żadne działanie nie jest zgodne z Intent</string>
+<string name="default_intent_action">-- wartości wspólne --</string>
+</resources>

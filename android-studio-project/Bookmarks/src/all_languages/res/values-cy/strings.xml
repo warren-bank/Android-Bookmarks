@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE resources [
+    <!ENTITY folder        "Plygell">
+    <!ENTITY folders       "Ffolderi">
+    <!ENTITY lc_folder     "plygell">
+    <!ENTITY lc_folders    "plygelli">
+    <!ENTITY bookmark      "Nod Tudalen">
+    <!ENTITY bookmarks     "Nodau Tudalen">
+    <!ENTITY lc_bookmark   "nod tudalen">
+    <!ENTITY lc_bookmarks  "nôdau tudalen">
+]>
+<resources>
+<string name="app_name_long">&bookmarks;</string>
+<string name="layout_main_no_intents_in_folder">Dim &bookmarks; canfod.</string>
+<string name="layout_main_no_results_for_search">Heb ganfod canlyniadau chwilio.</string>
+<string name="layout_main_results_for_search_label">Canlyniadau ar gyfer:</string>
+<string name="menu_actionbar_intent_search">Chwilio</string>
+<string name="menu_actionbar_folder_add">Ychwanegu &folder;</string>
+<string name="menu_actionbar_intent_add">Ychwanegu &bookmark;</string>
+<string name="menu_actionbar_move_complete">Symud i \' r Cyfredol &folder;</string>
+<string name="menu_actionbar_move_cancel">Diddymu Symudiad</string>
+<string name="menu_actionbar_settings">Gosodiadau</string>
+<string name="menu_actionbar_db_backup">Cronfa Ddata</string>
+<string name="menu_actionbar_db_restore">Adfer Cronfa Ddata</string>
+<string name="menu_actionbar_db_html_export">Allforio i HTML</string>
+<string name="menu_actionbar_db_html_import">Mewnforio o HTML</string>
+<string name="menu_actionbar_exit">Gadael</string>
+<string name="menu_context_folder_hide">Cuddio</string>
+<string name="menu_context_folder_unhide">Dad-guddio</string>
+<string name="menu_context_folder_rename">Ailenwi</string>
+<string name="menu_context_folder_move">Symud</string>
+<string name="menu_context_folder_delete">Dileu</string>
+<string name="menu_context_intent_broadcast">Anfon Darlledu</string>
+<string name="menu_context_intent_edit">Golygu</string>
+<string name="menu_context_intent_copy">Copïo</string>
+<string name="menu_context_intent_add_shortcut">Ychwanegu Byrlwybr</string>
+<string name="settings_option_show_hidden">Dangos cudd &lc_folders;</string>
+<string name="settings_option_auto_backup">Cyflawni wrth gefn dyddiol awtomatig</string>
+<string name="settings_option_backup_versioning">Cadwch y 3 ôl-gefn awtomatig mwyaf diweddar</string>
+<string name="settings_option_startup_folder">Cychwynnol &lc_folder; i\'w ddangos wrth gychwyn:</string>
+<string name="settings_option_output_directory">Cyfeiriadur allbwn rhagosodedig ar gyfer atal ac allforio:</string>
+<string name="dialog_ok">OK</string>
+<string name="dialog_cancel">Diddymu</string>
+<string name="dialog_add">Ychwanegu</string>
+<string name="dialog_add_more">Ychwanegu ...</string>
+<string name="dialog_change">Newid ...</string>
+<string name="dialog_save">Cadw</string>
+<string name="dialog_delete">Dileu</string>
+<string name="dialog_backup_preupdate_title">Mae Angen Diweddaru Cronfa Ddata</string>
+<string name="dialog_backup_preupdate_message">Rydych wedi gosod fersiwn mwy newydd o\'r rhaglen hon. Mae angen diweddaru\'r fersiwn o\'r gronfa ddata hefyd. Arbed copi wrth gefn cyn i\'r weithred hon gael ei argymell; bydd unrhyw wall yn llygru \' r gronfa ddata. I wneud hynny, rhaid i chi roi caniatâd grant cyntaf i gadw\'r ffeil wrth gefn i storio allanol. Hoffech chi gadw copi wrth gefn cyn y diweddariad gofynnol?</string>
+<string name="dialog_intent_search_option_query">Ymholiad:</string>
+<string name="dialog_intent_search_option_only_current_folder">Cyfredol &lc_folder;</string>
+<string name="dialog_backup_done">Cwblhawyd cronfa ddata wrth gefn</string>
+<string name="dialog_backup_failed">Methu cyflawni copi wrth gefn!</string>
+<string name="dialog_backup_usefolder">Newid Cyfeiriadur Allbwn Rhagosodedig</string>
+<string name="dialog_restore_now">Bydd adfer copi wrth gefn yn disodli\'r holl wybodaeth sydd yn y gronfa ddata ar hyn o bryd. Parhau?</string>
+<string name="dialog_restore_done">Name</string>
+<string name="dialog_restore_failed">Methu adfer y gronfa ddata!</string>
+<string name="dialog_restore_notfound">Methu canfod copi wrth gefn ar storfa allanol!</string>
+<string name="dialog_html_export_option_only_current_folder">Allforio cyfredol &lc_folder; a\'i ddisgynyddion</string>
+<string name="dialog_html_export_option_include_hidden">Cynnwys cudd &lc_folders;</string>
+<string name="dialog_html_export_done">HTML allforio wedi\'i gwblhau</string>
+<string name="dialog_html_export_failed">Methu cyflawni allforio!</string>
+<string name="dialog_html_import_option_allow_existing_folders">Caniatáu ychwanegu &lc_bookmarks; i\'r presennol &lc_folders;</string>
+<string name="dialog_html_import_option_allow_duplicate_urls_global">Caniatáu dyblyg URLs yn fyd-eang</string>
+<string name="dialog_html_import_option_allow_duplicate_urls_folder">Caniatáu dyblyg URLs fesul plygell</string>
+<string name="dialog_html_import_done">HTML wedi ei fewnforio</string>
+<string name="dialog_html_import_failed">Methu mewnforio HTML!</string>
+<string name="dialog_html_import_notfound">Methu canfod HTML ffeil ar storfa allanol!</string>
+<string name="dialog_delete_folder_title">Dileu &folder;?</string>
+<string name="dialog_delete_intent_title">Dileu &bookmark;?</string>
+<string name="dialog_delete_confirm">Ydych chi\'n siŵr eich bod am ddileu "%s"?</string>
+<string name="folder_rename_title">Ailenwi &folder;</string>
+<string name="folder_attribute_name">Enw</string>
+<string name="intent_edit_title">Golygu &bookmark;</string>
+<string name="intent_attribute_folder">&folder;</string>
+<string name="intent_attribute_flags">Baneri</string>
+<string name="intent_attribute_action">Gweithred</string>
+<string name="intent_attribute_package_name">Enw Pecyn</string>
+<string name="intent_attribute_class_name">Enw Dosbarth</string>
+<string name="intent_attribute_data_uri">Data URI</string>
+<string name="intent_attribute_data_type">Data (MIME) Math</string>
+<string name="intent_attribute_categories">Categorïau</string>
+<string name="intent_attribute_extras">&amp; #</string>
+<string name="dialog_update_intent_attribute_category_title">Diweddaru\'r Categori</string>
+<string name="dialog_update_intent_attribute_extra_title_add">Ychwanegu Ychwanegol</string>
+<string name="dialog_update_intent_attribute_extra_title_edit">Diweddaru Ychwanegol</string>
+<string name="dialog_update_intent_attribute_extra_value_type">Math o Werth</string>
+<string name="dialog_update_intent_attribute_extra_value">Gwerth</string>
+<string name="dialog_update_intent_attribute_extra_value_separator">Ychwanegu Gwahanydd Rhestr Gwerth</string>
+<string name="messages_db_error_update">Gwall cronfa ddata wrth ddiweddaru</string>
+<string name="messages_no_permission">Caniatâd annigonol i gyflawni\'r gweithrediad a ofynwyd amdano</string>
+<string name="messages_activity_not_found">Dim gweithgaredd yn cydweddu Intent</string>
+<string name="default_intent_action">-- gwerthoedd cyffredin --</string>
+</resources>

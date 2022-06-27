@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE resources [
+    <!ENTITY folder        "Mappe">
+    <!ENTITY folders       "Foldere">
+    <!ENTITY lc_folder     "mappe">
+    <!ENTITY lc_folders    "mapper">
+    <!ENTITY bookmark      "Bogmærke">
+    <!ENTITY bookmarks     "Bogmærker">
+    <!ENTITY lc_bookmark   "bogmærke">
+    <!ENTITY lc_bookmarks  "bogmærker">
+]>
+<resources>
+<string name="app_name_long">&bookmarks;</string>
+<string name="layout_main_no_intents_in_folder">Nej. &bookmarks; fundet.</string>
+<string name="layout_main_no_results_for_search">Ingen søgeresultater fundet.</string>
+<string name="layout_main_results_for_search_label">Resultater for:</string>
+<string name="menu_actionbar_intent_search">Søg</string>
+<string name="menu_actionbar_folder_add">Tilføj &folder;</string>
+<string name="menu_actionbar_intent_add">Tilføj &bookmark;</string>
+<string name="menu_actionbar_move_complete">Flyt til aktuel &folder;</string>
+<string name="menu_actionbar_move_cancel">Annullér flytning</string>
+<string name="menu_actionbar_settings">Indstillinger</string>
+<string name="menu_actionbar_db_backup">Reservedatabase</string>
+<string name="menu_actionbar_db_restore">Gendan database</string>
+<string name="menu_actionbar_db_html_export">Eksportér til HTML</string>
+<string name="menu_actionbar_db_html_import">Importér fra HTML</string>
+<string name="menu_actionbar_exit">Afslut</string>
+<string name="menu_context_folder_hide">Skjul</string>
+<string name="menu_context_folder_unhide">Vis</string>
+<string name="menu_context_folder_rename">Omdøb</string>
+<string name="menu_context_folder_move">Flyt</string>
+<string name="menu_context_folder_delete">Slet</string>
+<string name="menu_context_intent_broadcast">Send rundsendelse</string>
+<string name="menu_context_intent_edit">Redigér</string>
+<string name="menu_context_intent_copy">Kopiér</string>
+<string name="menu_context_intent_add_shortcut">Tilføj genvej</string>
+<string name="settings_option_show_hidden">Vis skjult &lc_folders;</string>
+<string name="settings_option_auto_backup">Udfør automatisk daglig sikkerhedskopiering</string>
+<string name="settings_option_backup_versioning">Behold de 3 seneste automatiske daglige backups</string>
+<string name="settings_option_startup_folder">Indledende &lc_folder; for at vise ved start:</string>
+<string name="settings_option_output_directory">Standardoutputbibliotek for backups og eksport:</string>
+<string name="dialog_ok">OK</string>
+<string name="dialog_cancel">Annullér</string>
+<string name="dialog_add">Tilføj</string>
+<string name="dialog_add_more">Tilføj ...</string>
+<string name="dialog_change">Ændre ...</string>
+<string name="dialog_save">Gem</string>
+<string name="dialog_delete">Slet</string>
+<string name="dialog_backup_preupdate_title">Databaseopdatering er påkrævet</string>
+<string name="dialog_backup_preupdate_message">Du har installeret en nyere version af denne applikation. Versionen af databasen skal også opdateres. Hvis du gemmer en sikkerhedskopi, før denne funktion anbefales, vil en fejl blive ødelagt af databasen. For at gøre det skal du først give tilladelse til at gemme sikkerhedskopifilen til eksternt lager. Vil du gemme en sikkerhedskopi før den nødvendige opdatering?</string>
+<string name="dialog_intent_search_option_query">Forespørgsel:</string>
+<string name="dialog_intent_search_option_only_current_folder">Kun strøm &lc_folder;</string>
+<string name="dialog_backup_done">Databasesikkerhedskopiering er udført</string>
+<string name="dialog_backup_failed">Kan ikke udføre sikkerhedskopiering!</string>
+<string name="dialog_backup_usefolder">Skift standardoutputbibliotek</string>
+<string name="dialog_restore_now">Genindlæsning af en sikkerhedskopi vil helt erstatte alle de oplysninger, der i øjeblikket findes i databasen. Fortsæt?</string>
+<string name="dialog_restore_done">Database er gendannet</string>
+<string name="dialog_restore_failed">Kan ikke gendanne databasen!</string>
+<string name="dialog_restore_notfound">Kan ikke finde sikkerhedskopi på eksternt lager!</string>
+<string name="dialog_html_export_option_only_current_folder">Kun eksport-strøm &lc_folder; og dens efterkommere</string>
+<string name="dialog_html_export_option_include_hidden">Inkludér skjult &lc_folders;</string>
+<string name="dialog_html_export_done">HTML udførsel afsluttet</string>
+<string name="dialog_html_export_failed">Kan ikke udføre eksport!</string>
+<string name="dialog_html_import_option_allow_existing_folders">Tillad tilføjelse &lc_bookmarks; til eksisterende &lc_folders;</string>
+<string name="dialog_html_import_option_allow_duplicate_urls_global">Tillad dublet URLs globalt</string>
+<string name="dialog_html_import_option_allow_duplicate_urls_folder">Tillad dublet URLs pr. folder</string>
+<string name="dialog_html_import_done">HTML importeret</string>
+<string name="dialog_html_import_failed">Kan ikke importere HTML!</string>
+<string name="dialog_html_import_notfound">Kan ikke finde HTML fil på eksternt lager!</string>
+<string name="dialog_delete_folder_title">Slet &folder;?</string>
+<string name="dialog_delete_intent_title">Slet &bookmark;?</string>
+<string name="dialog_delete_confirm">Er du sikker på, at du vil slette "%s"?</string>
+<string name="folder_rename_title">Omdøb &folder;</string>
+<string name="folder_attribute_name">Navn</string>
+<string name="intent_edit_title">Redigér &bookmark;</string>
+<string name="intent_attribute_folder">&folder;</string>
+<string name="intent_attribute_flags">Flag</string>
+<string name="intent_attribute_action">Handling</string>
+<string name="intent_attribute_package_name">Pakkenavn</string>
+<string name="intent_attribute_class_name">Klassenavn</string>
+<string name="intent_attribute_data_uri">Data URI</string>
+<string name="intent_attribute_data_type">Data (MIME) Type</string>
+<string name="intent_attribute_categories">Kategorier</string>
+<string name="intent_attribute_extras">Ekstras</string>
+<string name="dialog_update_intent_attribute_category_title">Opdatér kategori</string>
+<string name="dialog_update_intent_attribute_extra_title_add">Tilføj ekstra</string>
+<string name="dialog_update_intent_attribute_extra_title_edit">Opdatér ekstra</string>
+<string name="dialog_update_intent_attribute_extra_value_type">Værdi af værdi</string>
+<string name="dialog_update_intent_attribute_extra_value">Værdi</string>
+<string name="dialog_update_intent_attribute_extra_value_separator">Tilføj værdilisteskilletegn</string>
+<string name="messages_db_error_update">Databasefejl under opdatering</string>
+<string name="messages_no_permission">Utilstrækkelig tilladelse til at udføre den ønskede funktion</string>
+<string name="messages_activity_not_found">Ingen aktivitet svarer til Intent</string>
+<string name="default_intent_action">-- fælles værdier --</string>
+</resources>

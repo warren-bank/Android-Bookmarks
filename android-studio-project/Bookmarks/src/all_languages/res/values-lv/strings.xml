@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE resources [
+    <!ENTITY folder        "Mape">
+    <!ENTITY folders       "Mapes">
+    <!ENTITY lc_folder     "Mape">
+    <!ENTITY lc_folders    "Mapes">
+    <!ENTITY bookmark      "Grāmatzīme">
+    <!ENTITY bookmarks     "Grāmatzīmes">
+    <!ENTITY lc_bookmark   "grāmatzīme">
+    <!ENTITY lc_bookmarks  "grāmatzīmes">
+]>
+<resources>
+<string name="app_name_long">&bookmarks;</string>
+<string name="layout_main_no_intents_in_folder">Nav &bookmarks; Atrasti.</string>
+<string name="layout_main_no_results_for_search">Nav atrasts meklēšanas rezultāti.</string>
+<string name="layout_main_results_for_search_label">Rezultāti attiecībā uz:</string>
+<string name="menu_actionbar_intent_search">Meklēt</string>
+<string name="menu_actionbar_folder_add">Pievienot &folder;</string>
+<string name="menu_actionbar_intent_add">Pievienot &bookmark;</string>
+<string name="menu_actionbar_move_complete">Pārvietot uz pašreizējo &folder;</string>
+<string name="menu_actionbar_move_cancel">Atcelt gājienu</string>
+<string name="menu_actionbar_settings">Iestatījumi</string>
+<string name="menu_actionbar_db_backup">Rezerves datu bāze</string>
+<string name="menu_actionbar_db_restore">Atjaunot datubāzi</string>
+<string name="menu_actionbar_db_html_export">Eksportēt uz HTML</string>
+<string name="menu_actionbar_db_html_import">Imports no HTML</string>
+<string name="menu_actionbar_exit">Iziešana</string>
+<string name="menu_context_folder_hide">Slēpt</string>
+<string name="menu_context_folder_unhide">Neslēpt</string>
+<string name="menu_context_folder_rename">Pārdēvēt</string>
+<string name="menu_context_folder_move">Pārvietot</string>
+<string name="menu_context_folder_delete">Dzēst</string>
+<string name="menu_context_intent_broadcast">Sūtīt pārraidi</string>
+<string name="menu_context_intent_edit">Rediģēt</string>
+<string name="menu_context_intent_copy">Kopēt</string>
+<string name="menu_context_intent_add_shortcut">Pievienot īsceļu</string>
+<string name="settings_option_show_hidden">Rādīt slēpto &lc_folders;</string>
+<string name="settings_option_auto_backup">Veikt automātisko ikdienas rezerves kopēšanu</string>
+<string name="settings_option_backup_versioning">Saglabāt 3 jaunākās automātiskās ikdienas backups</string>
+<string name="settings_option_startup_folder">Sākotnējais &lc_folder; , lai attēlotu palaišanas:</string>
+<string name="settings_option_output_directory">Noklusētais izvades katalogs dublējumiem un eksportam:</string>
+<string name="dialog_ok">OK</string>
+<string name="dialog_cancel">Atcelt</string>
+<string name="dialog_add">Pievienot</string>
+<string name="dialog_add_more">Pievienot ...</string>
+<string name="dialog_change">Mainīt ...</string>
+<string name="dialog_save">Saglabāt</string>
+<string name="dialog_delete">Dzēst</string>
+<string name="dialog_backup_preupdate_title">Datu Bāzes Atjaunināšana Ir Nepieciešama</string>
+<string name="dialog_backup_preupdate_message">Jums ir instalēta jaunāka versija šo pieteikumu. Datu bāzes versija arī ir jāatjaunina. Saglabā rezerves kopiju, pirms šī operācija ir ieteicama; jebkura kļūda būs korumpēts datu bāzi. Lai to izdarītu, jums ir vispirms piešķirt atļauju, lai saglabātu rezerves failu uz ārējo uzglabāšanu. Vai vēlaties saglabāt rezerves kopiju pirms nepieciešamās atjaunināšanas?</string>
+<string name="dialog_intent_search_option_query">Vaicājums:</string>
+<string name="dialog_intent_search_option_only_current_folder">Tikai pašreizējais &lc_folder;</string>
+<string name="dialog_backup_done">Datu bāzes dublēšana pabeigta</string>
+<string name="dialog_backup_failed">Neizdevās veikt rezerves kopēšanu!</string>
+<string name="dialog_backup_usefolder">Mainīt noklusēto izvades mapi</string>
+<string name="dialog_restore_now">Atjaunot backup pilnībā aizstāt visu informāciju, kas pašlaik datu bāzē. Turpināt?</string>
+<string name="dialog_restore_done">Datubāze veiksmīgi atjaunota</string>
+<string name="dialog_restore_failed">Neizdevās atjaunot datubāzi!</string>
+<string name="dialog_restore_notfound">Neizdevās atrast rezerves kopiju ārējai uzglabāšanai!</string>
+<string name="dialog_html_export_option_only_current_folder">Tikai eksporta strāva &lc_folder; un tā pēcnācējiem</string>
+<string name="dialog_html_export_option_include_hidden">Iekļaut slēpto &lc_folders;</string>
+<string name="dialog_html_export_done">HTML eksportēšana pabeigta</string>
+<string name="dialog_html_export_failed">Neizdevās veikt eksportu!</string>
+<string name="dialog_html_import_option_allow_existing_folders">Atļaut pievienot &lc_bookmarks; , lai &lc_folders;</string>
+<string name="dialog_html_import_option_allow_duplicate_urls_global">Atļaut dublēt URLs globāli</string>
+<string name="dialog_html_import_option_allow_duplicate_urls_folder">Atļaut dublēt URLs vienā mapē</string>
+<string name="dialog_html_import_done">HTML importēts veiksmīgi</string>
+<string name="dialog_html_import_failed">Nevar importēt HTML!</string>
+<string name="dialog_html_import_notfound">Neizdevās atrast HTML datne par ārējo uzglabāšanu!</string>
+<string name="dialog_delete_folder_title">Dzēst &folder;?</string>
+<string name="dialog_delete_intent_title">Dzēst &bookmark;?</string>
+<string name="dialog_delete_confirm">Vai esat pārliecināts, ka vēlaties dzēst "%s"?</string>
+<string name="folder_rename_title">Pārdēvēt &folder;</string>
+<string name="folder_attribute_name">Nosaukums</string>
+<string name="intent_edit_title">Rediģēt &bookmark;</string>
+<string name="intent_attribute_folder">&folder;</string>
+<string name="intent_attribute_flags">Karogi</string>
+<string name="intent_attribute_action">Rīcība</string>
+<string name="intent_attribute_package_name">Iepakojuma nosaukums</string>
+<string name="intent_attribute_class_name">Klases nosaukums</string>
+<string name="intent_attribute_data_uri">Dati URI</string>
+<string name="intent_attribute_data_type">Dati (MIME) Tips:</string>
+<string name="intent_attribute_categories">Kategorijas</string>
+<string name="intent_attribute_extras">Ekstras</string>
+<string name="dialog_update_intent_attribute_category_title">Atjaunināt kategoriju</string>
+<string name="dialog_update_intent_attribute_extra_title_add">Pievienot papildus</string>
+<string name="dialog_update_intent_attribute_extra_title_edit">Atjaunināt Extra</string>
+<string name="dialog_update_intent_attribute_extra_value_type">Vērtības veids</string>
+<string name="dialog_update_intent_attribute_extra_value">Vērtība</string>
+<string name="dialog_update_intent_attribute_extra_value_separator">Pievienot vērtību saraksta atdalītāju</string>
+<string name="messages_db_error_update">Datu bāzes kļūda atjauninot</string>
+<string name="messages_no_permission">Nepietiekama atļauja, lai veiktu pieprasīto darbību</string>
+<string name="messages_activity_not_found">Darbība neatbilst Intent</string>
+<string name="default_intent_action">-- kopējās vērtības --</string>
+</resources>

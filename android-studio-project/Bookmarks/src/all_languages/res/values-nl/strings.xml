@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE resources [
+    <!ENTITY folder        "Map">
+    <!ENTITY folders       "Mappen">
+    <!ENTITY lc_folder     "Map">
+    <!ENTITY lc_folders    "mappen">
+    <!ENTITY bookmark      "Bladwijzer">
+    <!ENTITY bookmarks     "Bladwijzers">
+    <!ENTITY lc_bookmark   "bladwijzer">
+    <!ENTITY lc_bookmarks  "bladwijzers">
+]>
+<resources>
+<string name="app_name_long">&bookmarks;</string>
+<string name="layout_main_no_intents_in_folder">Nee &bookmarks; gevonden.</string>
+<string name="layout_main_no_results_for_search">Geen zoekresultaten gevonden.</string>
+<string name="layout_main_results_for_search_label">Resultaten voor:</string>
+<string name="menu_actionbar_intent_search">Zoeken</string>
+<string name="menu_actionbar_folder_add">Toevoegen &folder;</string>
+<string name="menu_actionbar_intent_add">Toevoegen &bookmark;</string>
+<string name="menu_actionbar_move_complete">Verplaatsen naar huidige &folder;</string>
+<string name="menu_actionbar_move_cancel">Verplaatsing annuleren</string>
+<string name="menu_actionbar_settings">Instellingen</string>
+<string name="menu_actionbar_db_backup">Backupdatabase</string>
+<string name="menu_actionbar_db_restore">Database herstellen</string>
+<string name="menu_actionbar_db_html_export">Exporteren naar HTML</string>
+<string name="menu_actionbar_db_html_import">Importeren uit HTML</string>
+<string name="menu_actionbar_exit">Afsluiten</string>
+<string name="menu_context_folder_hide">Verbergen</string>
+<string name="menu_context_folder_unhide">Verbergen</string>
+<string name="menu_context_folder_rename">Naam wijzigen</string>
+<string name="menu_context_folder_move">Verplaatsen</string>
+<string name="menu_context_folder_delete">Wissen</string>
+<string name="menu_context_intent_broadcast">Broadcast verzenden</string>
+<string name="menu_context_intent_edit">Bewerken</string>
+<string name="menu_context_intent_copy">Kopiëren</string>
+<string name="menu_context_intent_add_shortcut">Snelkoppeling toevoegen</string>
+<string name="settings_option_show_hidden">Verborgen tonen &lc_folders;</string>
+<string name="settings_option_auto_backup">Automatische dagelijkse backup uitvoeren</string>
+<string name="settings_option_backup_versioning">Houd de 3 meest recente automatische dagelijkse backups</string>
+<string name="settings_option_startup_folder">Initieel &lc_folder; te tonen bij opstarten:</string>
+<string name="settings_option_output_directory">Standaard uitvoerdirectory voor backups en exports:</string>
+<string name="dialog_ok">OK</string>
+<string name="dialog_cancel">Annuleren</string>
+<string name="dialog_add">Toevoegen</string>
+<string name="dialog_add_more">Toevoegen ...</string>
+<string name="dialog_change">Wijzigen ...</string>
+<string name="dialog_save">Opslaan</string>
+<string name="dialog_delete">Wissen</string>
+<string name="dialog_backup_preupdate_title">Database-update Is Vereist</string>
+<string name="dialog_backup_preupdate_message">U hebt een nieuwere versie van deze toepassing geïnstalleerd. De versie van de database moet ook worden bijgewerkt. Als u een backup opslaat voordat deze bewerking wordt uitgevoerd, wordt de database beschadigd. Om dit te doen, moet u eerst toestemming verlenen om het backupbestand op te slaan in externe opslag. Wilt u een backup opslaan voordat de vereiste update wordt uitgevoerd?</string>
+<string name="dialog_intent_search_option_query">Query:</string>
+<string name="dialog_intent_search_option_only_current_folder">Alleen actueel &lc_folder;</string>
+<string name="dialog_backup_done">Backup van database is voltooid</string>
+<string name="dialog_backup_failed">Backup kan niet worden uitgevoerd!</string>
+<string name="dialog_backup_usefolder">Standaard uitvoerdirectory wijzigen</string>
+<string name="dialog_restore_now">Als u een backup herstelt, wordt alle informatie in de database volledig vervangen. Doorgaan?</string>
+<string name="dialog_restore_done">Database is hersteld</string>
+<string name="dialog_restore_failed">Database kan niet worden hersteld!</string>
+<string name="dialog_restore_notfound">Kon geen reservekopie vinden bij externe opslag!</string>
+<string name="dialog_html_export_option_only_current_folder">Alleen huidige exportstroom &lc_folder; en zijn onderliggende items</string>
+<string name="dialog_html_export_option_include_hidden">Verborgen opnemen &lc_folders;</string>
+<string name="dialog_html_export_done">HTML export voltooid</string>
+<string name="dialog_html_export_failed">Exporteren kan niet worden uitgevoerd!</string>
+<string name="dialog_html_import_option_allow_existing_folders">Toevoegen toestaan &lc_bookmarks; aan bestaande &lc_folders;</string>
+<string name="dialog_html_import_option_allow_duplicate_urls_global">Duplicaat toestaan URLs globaal</string>
+<string name="dialog_html_import_option_allow_duplicate_urls_folder">Duplicaat toestaan URLs per map</string>
+<string name="dialog_html_import_done">HTML Geïmporteerd</string>
+<string name="dialog_html_import_failed">Kan niet importeren HTML!</string>
+<string name="dialog_html_import_notfound">Kon niet vinden HTML bestand in externe opslag!</string>
+<string name="dialog_delete_folder_title">Wissen &folder;?</string>
+<string name="dialog_delete_intent_title">Wissen &bookmark;?</string>
+<string name="dialog_delete_confirm">Weet u zeker dat u wilt wissen "%s"?</string>
+<string name="folder_rename_title">Naam wijzigen &folder;</string>
+<string name="folder_attribute_name">Naam</string>
+<string name="intent_edit_title">Bewerken &bookmark;</string>
+<string name="intent_attribute_folder">&folder;</string>
+<string name="intent_attribute_flags">Vlaggen</string>
+<string name="intent_attribute_action">Actie</string>
+<string name="intent_attribute_package_name">Pakketnaam</string>
+<string name="intent_attribute_class_name">Klassennaam</string>
+<string name="intent_attribute_data_uri">Gegevens URI</string>
+<string name="intent_attribute_data_type">Gegevens (MIME) Type invoer</string>
+<string name="intent_attribute_categories">Categorieën</string>
+<string name="intent_attribute_extras">Extra\'s</string>
+<string name="dialog_update_intent_attribute_category_title">Updatecategorie</string>
+<string name="dialog_update_intent_attribute_extra_title_add">Extra toevoegen</string>
+<string name="dialog_update_intent_attribute_extra_title_edit">Extra bijwerken</string>
+<string name="dialog_update_intent_attribute_extra_value_type">Type waarde</string>
+<string name="dialog_update_intent_attribute_extra_value">Waarde</string>
+<string name="dialog_update_intent_attribute_extra_value_separator">Scheidingsteken voor waarde toevoegen</string>
+<string name="messages_db_error_update">Databasefout tijdens bijwerken</string>
+<string name="messages_no_permission">Onvoldoende machtiging om de gevraagde bewerking uit te voeren</string>
+<string name="messages_activity_not_found">Geen activiteit komt overeen met de Intent</string>
+<string name="default_intent_action">-- gemeenschappelijke waarden --</string>
+</resources>

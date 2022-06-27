@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE resources [
+    <!ENTITY folder        "Φάκελος">
+    <!ENTITY folders       "Φάκελοι">
+    <!ENTITY lc_folder     "\' φάκελος">
+    <!ENTITY lc_folders    "φακέλων:">
+    <!ENTITY bookmark      "Ορισμός σελιδοδείκτη.">
+    <!ENTITY bookmarks     "Οι σελιδοδείκτες">
+    <!ENTITY lc_bookmark   "\' σελιδοδείκτης">
+    <!ENTITY lc_bookmarks  "σελιδοδείκτες,">
+]>
+<resources>
+<string name="app_name_long">&bookmarks;</string>
+<string name="layout_main_no_intents_in_folder">Όχι. &bookmarks; \'..</string>
+<string name="layout_main_no_results_for_search">Δεν βρέθηκαν αποτελέσματα αναζήτησης.</string>
+<string name="layout_main_results_for_search_label">Αποτελέσματα για::</string>
+<string name="menu_actionbar_intent_search">Αναζήτηση.</string>
+<string name="menu_actionbar_folder_add">Προσθήκη &folder;</string>
+<string name="menu_actionbar_intent_add">Προσθήκη &bookmark;</string>
+<string name="menu_actionbar_move_complete">Μετακίνηση στο τρέχον &folder;</string>
+<string name="menu_actionbar_move_cancel">Ακύρωση μετακίνησης.</string>
+<string name="menu_actionbar_settings">Ρυθμίσεις:</string>
+<string name="menu_actionbar_db_backup">Βάση δεδομένων εφεδρικής αποθήκευσης</string>
+<string name="menu_actionbar_db_restore">Επαναφορά βάσης δεδομένων</string>
+<string name="menu_actionbar_db_html_export">Εξαγωγή σε: HTML</string>
+<string name="menu_actionbar_db_html_import">Εισαγωγή από: HTML</string>
+<string name="menu_actionbar_exit">Έξοδος:</string>
+<string name="menu_context_folder_hide">Κρύψου</string>
+<string name="menu_context_folder_unhide">-Όχι.</string>
+<string name="menu_context_folder_rename">Μετονομασία:</string>
+<string name="menu_context_folder_move">Κίνηση!</string>
+<string name="menu_context_folder_delete">Διαγραφή:</string>
+<string name="menu_context_intent_broadcast">Αποστολή μετάδοσης:</string>
+<string name="menu_context_intent_edit">Τροποποίηση:</string>
+<string name="menu_context_intent_copy">\' Αντιγραφή</string>
+<string name="menu_context_intent_add_shortcut">Προσθήκη συντόμχας</string>
+<string name="settings_option_show_hidden">Εμφάνιση κρυφού &lc_folders;</string>
+<string name="settings_option_auto_backup">Εκτέλεση αυτόματης ημερήσιας εφεδρικής αποθήκευσης</string>
+<string name="settings_option_backup_versioning">Κρατήστε τα 3 πιο πρόσφατα αυτόματα ημερήσια αντίγραφα ασφαλείας</string>
+<string name="settings_option_startup_folder">Αρχική \" &lc_folder; για εμφάνιση κατά την εκκίνηση:</string>
+<string name="settings_option_output_directory">Προεπιλεγόταν κατάλογος εξόδου για εφεδρικά αντίγραφα και εξαγωγές:</string>
+<string name="dialog_ok">OK</string>
+<string name="dialog_cancel">Ακύρωση.</string>
+<string name="dialog_add">Προσθήκη</string>
+<string name="dialog_add_more">Προσθήκη ...</string>
+<string name="dialog_change">Αλλαγή ...</string>
+<string name="dialog_save">Αποθήκευση:</string>
+<string name="dialog_delete">Διαγραφή:</string>
+<string name="dialog_backup_preupdate_title">Απαιτείται Ενημέρωση Βάσης Δεδομένων</string>
+<string name="dialog_backup_preupdate_message">Έχετε εγκαταστήσει μια νεότερη έκδοση της εφαρμογής. Η έκδοση της βάσης δεδομένων πρέπει επίσης να ενημερωθεί. Η αποθήκευση ενός εφεδρικού αντιγράφου πριν από αυτή τη λειτουργία συνιστάται. Κάθε σφάλμα θα αλλοιώσει τη βάση δεδομένων. Για να το κάνετε αυτό, πρέπει πρώτα να εκχωρήσετε το δικαίωμα αποθήκευσης του εφεδρικού αντιγράφου σε εξωτερική αποθήκευση. Θέλετε να αποθηκεύσετε ένα εφεδρικό αντίγραφο πριν από την απαιτούμενη ενημέρωση?</string>
+<string name="dialog_intent_search_option_query">Ερώτημα::</string>
+<string name="dialog_intent_search_option_only_current_folder">Μόνο ρεύμα. &lc_folder;</string>
+<string name="dialog_backup_done">Ολοκλήρωση εφεδρικής βάσης δεδομένων</string>
+<string name="dialog_backup_failed">Δεν είναι δυνατή η εκτέλεση.!</string>
+<string name="dialog_backup_usefolder">Αλλαγή προεπιλεγικού καταλόγου εξόδου</string>
+<string name="dialog_restore_now">Η επαναφορά ενός εφεδρικού αντιγράφου θα αντικαταστήσει πλήρως όλες τις πληροφορίες στη βάση δεδομένων. Συνέχεια:?</string>
+<string name="dialog_restore_done">Η βάση δεδομένων επέστρεψε</string>
+<string name="dialog_restore_failed">Αδυναμία επαναφοράς βάσης δεδομένων!</string>
+<string name="dialog_restore_notfound">Δεν βρέθηκε εφεδρική αποθήκευση στο εξωτερικό χώρο αποθήκευσης.!</string>
+<string name="dialog_html_export_option_only_current_folder">Μόνο τρέχον εξαγωγή: &lc_folder; και τους απογόνους του.</string>
+<string name="dialog_html_export_option_include_hidden">Εμφάνιση κρυφής &lc_folders;</string>
+<string name="dialog_html_export_done">HTML \' Εξαγωγές</string>
+<string name="dialog_html_export_failed">Δεν είναι δυνατή η εξαγωγή.!</string>
+<string name="dialog_html_import_option_allow_existing_folders">Δυνατότητα προσθήκης. &lc_bookmarks; To υπάρχον &lc_folders;</string>
+<string name="dialog_html_import_option_allow_duplicate_urls_global">Δυνατότητα διπλότυπου URLs καθολικά</string>
+<string name="dialog_html_import_option_allow_duplicate_urls_folder">Δυνατότητα διπλότυπου URLs ανά φάκελο:</string>
+<string name="dialog_html_import_done">HTML επιτυχημένη εισαγωγή.</string>
+<string name="dialog_html_import_failed">Αδυναμία εισαγωγής HTML!</string>
+<string name="dialog_html_import_notfound">Δεν βρέθηκε. HTML αρχείο σε εξωτερική αποθήκευση.!</string>
+<string name="dialog_delete_folder_title">Διαγραφή: &folder;?</string>
+<string name="dialog_delete_intent_title">Διαγραφή: &bookmark;?</string>
+<string name="dialog_delete_confirm">Είστε βέβαιοι ότι θέλετε να διαγράψετε "%s"?</string>
+<string name="folder_rename_title">Μετονομασία: &folder;</string>
+<string name="folder_attribute_name">\' Ονομα</string>
+<string name="intent_edit_title">Τροποποίηση: &bookmark;</string>
+<string name="intent_attribute_folder">&folder;</string>
+<string name="intent_attribute_flags">Σημαίες:</string>
+<string name="intent_attribute_action">\' Ενέργεια</string>
+<string name="intent_attribute_package_name">Όνομα πακέτου:</string>
+<string name="intent_attribute_class_name">Όνομα κλάσης</string>
+<string name="intent_attribute_data_uri">Δεδομένα: URI</string>
+<string name="intent_attribute_data_type">Δεδομένα: (MIME) Είδος:</string>
+<string name="intent_attribute_categories">Κατηγορίες:</string>
+<string name="intent_attribute_extras">Extras</string>
+<string name="dialog_update_intent_attribute_category_title">Ενημέρωση κατηγορίας.</string>
+<string name="dialog_update_intent_attribute_extra_title_add">Προσθήκη επιπλέον</string>
+<string name="dialog_update_intent_attribute_extra_title_edit">Ενημέρωση επιπλέον</string>
+<string name="dialog_update_intent_attribute_extra_value_type">Είδος τιμής:</string>
+<string name="dialog_update_intent_attribute_extra_value">\' Τιμή</string>
+<string name="dialog_update_intent_attribute_extra_value_separator">Προσθήκη διαχωριστικού λίστας τιμών</string>
+<string name="messages_db_error_update">Σφάλμα βάσης δεδομένων κατά την ενημέρωση</string>
+<string name="messages_no_permission">Ανεπαρκής άδεια εκτέλεσης της ζητούμενης λειτουργίας.</string>
+<string name="messages_activity_not_found">Καμία δραστηριότητα δεν συμφωνεί με Intent</string>
+<string name="default_intent_action">-- κοινές τιμές: --</string>
+</resources>

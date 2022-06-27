@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE resources [
+    <!ENTITY folder        "Složka">
+    <!ENTITY folders       "Složky">
+    <!ENTITY lc_folder     "složka">
+    <!ENTITY lc_folders    "složkách">
+    <!ENTITY bookmark      "Záložka">
+    <!ENTITY bookmarks     "Záložky">
+    <!ENTITY lc_bookmark   "záložka">
+    <!ENTITY lc_bookmarks  "záložky">
+]>
+<resources>
+<string name="app_name_long">&bookmarks;</string>
+<string name="layout_main_no_intents_in_folder">Ne. &bookmarks; nalezen.</string>
+<string name="layout_main_no_results_for_search">Nebyly nalezeny žádné výsledky hledání.</string>
+<string name="layout_main_results_for_search_label">Výsledky pro:</string>
+<string name="menu_actionbar_intent_search">Prohledat</string>
+<string name="menu_actionbar_folder_add">Přidat &folder;</string>
+<string name="menu_actionbar_intent_add">Přidat &bookmark;</string>
+<string name="menu_actionbar_move_complete">Přesunout na aktuální &folder;</string>
+<string name="menu_actionbar_move_cancel">Zrušit přesun</string>
+<string name="menu_actionbar_settings">NastaveníComment</string>
+<string name="menu_actionbar_db_backup">Zálohovat databázi</string>
+<string name="menu_actionbar_db_restore">Obnovit databázi</string>
+<string name="menu_actionbar_db_html_export">Exportovat do HTML</string>
+<string name="menu_actionbar_db_html_import">Importovat z HTML</string>
+<string name="menu_actionbar_exit">Ukončit</string>
+<string name="menu_context_folder_hide">Skrýt</string>
+<string name="menu_context_folder_unhide">Neskrývat</string>
+<string name="menu_context_folder_rename">Přejmenovat</string>
+<string name="menu_context_folder_move">Přemístit</string>
+<string name="menu_context_folder_delete">Odstranit</string>
+<string name="menu_context_intent_broadcast">Odeslat vysílání</string>
+<string name="menu_context_intent_edit">Upravit</string>
+<string name="menu_context_intent_copy">Kopírování</string>
+<string name="menu_context_intent_add_shortcut">Přidat zástupce</string>
+<string name="settings_option_show_hidden">Zobrazit skryté &lc_folders;</string>
+<string name="settings_option_auto_backup">Provést automatickou denní zálohu</string>
+<string name="settings_option_backup_versioning">Uchovat 3 nejnovější automatické denní zálohování</string>
+<string name="settings_option_startup_folder">Začátek &lc_folder; pro zobrazení při spuštění:</string>
+<string name="settings_option_output_directory">Výchozí výstupní adresář pro zálohy a exporty:</string>
+<string name="dialog_ok">OK</string>
+<string name="dialog_cancel">Storno</string>
+<string name="dialog_add">Přidat</string>
+<string name="dialog_add_more">Přidat ...</string>
+<string name="dialog_change">Změnit ...</string>
+<string name="dialog_save">Uložit</string>
+<string name="dialog_delete">Odstranit</string>
+<string name="dialog_backup_preupdate_title">Aktualizace databáze je povinná</string>
+<string name="dialog_backup_preupdate_message">Nainstalovali jste novější verzi této aplikace. Je třeba aktualizovat také verzi databáze. Uložení zálohy před touto operací se doporučuje; jakákoli chyba poškodí databázi. Chcete-li to provést, musíte nejprve udělit oprávnění k uložení záložního souboru do externího úložiště. Chtěli byste uložit zálohu před požadovanou aktualizací?</string>
+<string name="dialog_intent_search_option_query">dotázat se:</string>
+<string name="dialog_intent_search_option_only_current_folder">Pouze aktuální &lc_folder;</string>
+<string name="dialog_backup_done">Zálohování databáze bylo dokončeno</string>
+<string name="dialog_backup_failed">Nelze provést zálohování!</string>
+<string name="dialog_backup_usefolder">Změnit výchozí výstupní adresář</string>
+<string name="dialog_restore_now">Obnova zálohy zcela nahradí všechny informace, které jsou momentálně v databázi. Pokračovat?</string>
+<string name="dialog_restore_done">Databáze byla úspěšně obnovena</string>
+<string name="dialog_restore_failed">Nelze obnovit databázi!</string>
+<string name="dialog_restore_notfound">Nelze najít zálohu na externím úložišti!</string>
+<string name="dialog_html_export_option_only_current_folder">Pouze exportovat aktuální &lc_folder; a jeho následníci</string>
+<string name="dialog_html_export_option_include_hidden">Zahrnout skryté &lc_folders;</string>
+<string name="dialog_html_export_done">HTML export dokončen</string>
+<string name="dialog_html_export_failed">Nelze provést export!</string>
+<string name="dialog_html_import_option_allow_existing_folders">Povolit přidávání &lc_bookmarks; na existující &lc_folders;</string>
+<string name="dialog_html_import_option_allow_duplicate_urls_global">Povolit duplicitní URLs globálně</string>
+<string name="dialog_html_import_option_allow_duplicate_urls_folder">Povolit duplicitní URLs na složku</string>
+<string name="dialog_html_import_done">HTML importováno úspěšně</string>
+<string name="dialog_html_import_failed">Nelze importovat HTML!</string>
+<string name="dialog_html_import_notfound">Nelze nalézt HTML soubor na externím úložišti!</string>
+<string name="dialog_delete_folder_title">Odstranit &folder;?</string>
+<string name="dialog_delete_intent_title">Odstranit &bookmark;?</string>
+<string name="dialog_delete_confirm">Jste si jisti, že chcete odstranit "%s"?</string>
+<string name="folder_rename_title">Přejmenovat &folder;</string>
+<string name="folder_attribute_name">Název</string>
+<string name="intent_edit_title">Upravit &bookmark;</string>
+<string name="intent_attribute_folder">&folder;</string>
+<string name="intent_attribute_flags">Příznaky</string>
+<string name="intent_attribute_action">Akce</string>
+<string name="intent_attribute_package_name">Název balíku</string>
+<string name="intent_attribute_class_name">Název třídy</string>
+<string name="intent_attribute_data_uri">data URI</string>
+<string name="intent_attribute_data_type">data (MIME) Typ</string>
+<string name="intent_attribute_categories">Kategorie</string>
+<string name="intent_attribute_extras">Doplňky</string>
+<string name="dialog_update_intent_attribute_category_title">Aktualizovat kategorii</string>
+<string name="dialog_update_intent_attribute_extra_title_add">Přidat další</string>
+<string name="dialog_update_intent_attribute_extra_title_edit">Aktualizovat extra</string>
+<string name="dialog_update_intent_attribute_extra_value_type">Typ hodnoty</string>
+<string name="dialog_update_intent_attribute_extra_value">Hodnota</string>
+<string name="dialog_update_intent_attribute_extra_value_separator">Přidat oddělovač seznamu hodnot</string>
+<string name="messages_db_error_update">Chyba databáze při aktualizaci</string>
+<string name="messages_no_permission">Nedostatečné oprávnění k provedení požadované operace.</string>
+<string name="messages_activity_not_found">Žádná aktivita neodpovídá Intent</string>
+<string name="default_intent_action">-- společné hodnoty --</string>
+</resources>

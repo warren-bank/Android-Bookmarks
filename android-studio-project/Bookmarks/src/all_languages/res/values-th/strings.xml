@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE resources [
+    <!ENTITY folder        "โฟลเดอร์">
+    <!ENTITY folders       "โฟลเดอร์">
+    <!ENTITY lc_folder     "โฟลเดอร์">
+    <!ENTITY lc_folders    "โฟลเดอร์">
+    <!ENTITY bookmark      "บุ๊คมาร์ก">
+    <!ENTITY bookmarks     "บุ๊กมาร์ก">
+    <!ENTITY lc_bookmark   "บุ๊กมาร์ก">
+    <!ENTITY lc_bookmarks  "บุ๊กมาร์ก">
+]>
+<resources>
+<string name="app_name_long">&bookmarks;</string>
+<string name="layout_main_no_intents_in_folder">ไม่ &bookmarks; ที่พบ.</string>
+<string name="layout_main_no_results_for_search">ไม่พบผลลัพธ์ของการค้นหา.</string>
+<string name="layout_main_results_for_search_label">ผลลัพธ์สำหรับ:</string>
+<string name="menu_actionbar_intent_search">การค้นหา</string>
+<string name="menu_actionbar_folder_add">เพิ่ม &folder;</string>
+<string name="menu_actionbar_intent_add">เพิ่ม &bookmark;</string>
+<string name="menu_actionbar_move_complete">เลื่อนไปยังปัจจุบัน &folder;</string>
+<string name="menu_actionbar_move_cancel">ยกเลิกการย้าย</string>
+<string name="menu_actionbar_settings">การตั้งค่า</string>
+<string name="menu_actionbar_db_backup">สำรองฐานข้อมูล</string>
+<string name="menu_actionbar_db_restore">เรียกคืนฐานข้อมูล</string>
+<string name="menu_actionbar_db_html_export">เอ็กซ์พอร์ตไปยัง HTML</string>
+<string name="menu_actionbar_db_html_import">อิมพอร์ตจาก HTML</string>
+<string name="menu_actionbar_exit">ออก</string>
+<string name="menu_context_folder_hide">ซ่อน</string>
+<string name="menu_context_folder_unhide">ยกเลิกการซ่อน</string>
+<string name="menu_context_folder_rename">เปลี่ยนชื่อ</string>
+<string name="menu_context_folder_move">ย้าย</string>
+<string name="menu_context_folder_delete">ลบ</string>
+<string name="menu_context_intent_broadcast">ส่งการกระจาย</string>
+<string name="menu_context_intent_edit">แก้ไข</string>
+<string name="menu_context_intent_copy">คัดลอก</string>
+<string name="menu_context_intent_add_shortcut">เพิ่มทางลัด</string>
+<string name="settings_option_show_hidden">แสดงที่ถูกซ่อน &lc_folders;</string>
+<string name="settings_option_auto_backup">ดำเนินการสำรองข้อมูลรายวันแบบอัตโนมัติ</string>
+<string name="settings_option_backup_versioning">รักษาสำเนาสำรองรายวันแบบอัตโนมัติ 3 รายการล่าสุด</string>
+<string name="settings_option_startup_folder">เริ่มต้น &lc_folder; เพื่อแสดงเมื่อเริ่มทำงาน:</string>
+<string name="settings_option_output_directory">ดีฟอลต์เอาต์พุตไดเร็กทอรีสำหรับข้อมูลสำรองและ:</string>
+<string name="dialog_ok">OK</string>
+<string name="dialog_cancel">ยกเลิก</string>
+<string name="dialog_add">เพิ่ม</string>
+<string name="dialog_add_more">เพิ่ม...</string>
+<string name="dialog_change">เปลี่ยน ...</string>
+<string name="dialog_save">บันทึก</string>
+<string name="dialog_delete">ลบ</string>
+<string name="dialog_backup_preupdate_title">จำเป็นต้องอัพเดตฐานข้อมูล</string>
+<string name="dialog_backup_preupdate_message">คุณได้ติดตั้งเวอร์ชันใหม่กว่าของแอ็พพลิเคชันนี้ เวอร์ชันของฐานข้อมูลยังต้องถูกอัพเดตด้วย ขอแนะนำให้บันทึกข้อมูลสำรองก่อนปฏิบัติการนี้ข้อผิดพลาดใดๆจะทำให้ฐานข้อมูลเสียหาย เมื่อต้องการทำสิ่งนี้, คุณต้องกำหนดสิทธิ์เพื่อบันทึกไฟล์สำรองข้อมูลไปยังหน่วยเก็บข้อมูลภายนอกก่อน คุณต้องการบันทึกการสำรองข้อมูลก่อนอัพเดตที่จำเป็น?</string>
+<string name="dialog_intent_search_option_query">เคียวรี:</string>
+<string name="dialog_intent_search_option_only_current_folder">ปัจจุบันเท่านั้น &lc_folder;</string>
+<string name="dialog_backup_done">การสำรองข้อมูลฐานข้อมูลเสร็จสมบูรณ์</string>
+<string name="dialog_backup_failed">ไม่สามารถทำการสำรองข้อมูลได้!</string>
+<string name="dialog_backup_usefolder">เปลี่ยนไดเร็กทอรีเอาต์พุต</string>
+<string name="dialog_restore_now">การเรียกคืนข้อมูลสำรองจะแทนที่ข้อมูลทั้งหมดที่อยู่ในฐานข้อมูลในปัจจุบัน ดำเนินการต่อ?</string>
+<string name="dialog_restore_done">เรียกคืนฐานข้อมูลได้สำเร็จ</string>
+<string name="dialog_restore_failed">ไม่สามารถเรียกคืนฐานข้อมูลได้!</string>
+<string name="dialog_restore_notfound">ไม่พบการสำรองข้อมูลบนหน่วยเก็บข้อมูลภายนอก!</string>
+<string name="dialog_html_export_option_only_current_folder">เอ็กซ์พอร์ตปัจจุบันเท่านั้น &lc_folder; และที่สืบทอด</string>
+<string name="dialog_html_export_option_include_hidden">สอดแทรกการซ่อน &lc_folders;</string>
+<string name="dialog_html_export_done">HTML การเอ็กซ์พอร์ตสมบูรณ์</string>
+<string name="dialog_html_export_failed">ไม่สามารถทำการเอ็กซ์พอร์ตได้!</string>
+<string name="dialog_html_import_option_allow_existing_folders">อนุญาตให้เพิ่ม &lc_bookmarks; ถึงที่มีอยู่ &lc_folders;</string>
+<string name="dialog_html_import_option_allow_duplicate_urls_global">อนุญาตซ้ำ URLs แบบโกลบอล</string>
+<string name="dialog_html_import_option_allow_duplicate_urls_folder">อนุญาตซ้ำ URLs ต่อโฟลเดอร์</string>
+<string name="dialog_html_import_done">HTML อิมพอร์ตเรียบร้อยแล้ว</string>
+<string name="dialog_html_import_failed">ไม่สามารถอิมพอร์ต HTML!</string>
+<string name="dialog_html_import_notfound">ไม่พบ HTML ไฟล์บนหน่วยเก็บข้อมูลภายนอก!</string>
+<string name="dialog_delete_folder_title">ลบ &folder;?</string>
+<string name="dialog_delete_intent_title">ลบ &bookmark;?</string>
+<string name="dialog_delete_confirm">คุณแน่ใจว่าต้องการลบ "%s"?</string>
+<string name="folder_rename_title">เปลี่ยนชื่อ &folder;</string>
+<string name="folder_attribute_name">ชื่อ</string>
+<string name="intent_edit_title">แก้ไข &bookmark;</string>
+<string name="intent_attribute_folder">&folder;</string>
+<string name="intent_attribute_flags">แฟล็ก</string>
+<string name="intent_attribute_action">การดำเนินการ</string>
+<string name="intent_attribute_package_name">ชื่อแพ็คเกจ</string>
+<string name="intent_attribute_class_name">ชื่อคลาส</string>
+<string name="intent_attribute_data_uri">ข้อมูล URI</string>
+<string name="intent_attribute_data_type">ข้อมูล (MIME) ชนิด</string>
+<string name="intent_attribute_categories">ประเภท</string>
+<string name="intent_attribute_extras">เอ็กซ์ตร้า</string>
+<string name="dialog_update_intent_attribute_category_title">อัพเดตหมวดหมู่</string>
+<string name="dialog_update_intent_attribute_extra_title_add">เพิ่มพิเศษ</string>
+<string name="dialog_update_intent_attribute_extra_title_edit">อัพเดตพิเศษ</string>
+<string name="dialog_update_intent_attribute_extra_value_type">ชนิดของค่า</string>
+<string name="dialog_update_intent_attribute_extra_value">ค่า</string>
+<string name="dialog_update_intent_attribute_extra_value_separator">เพิ่มตัวคั่นรายการค่า</string>
+<string name="messages_db_error_update">ฐานข้อมูลมีข้อผิดพลาดขณะอัพเดต</string>
+<string name="messages_no_permission">สิทธิไม่เพียงพอในการดำเนินการที่ร้องขอ</string>
+<string name="messages_activity_not_found">ไม่มีกิจกรรมที่ตรงกับ Intent</string>
+<string name="default_intent_action">-- ค่าทั่วไป --</string>
+</resources>

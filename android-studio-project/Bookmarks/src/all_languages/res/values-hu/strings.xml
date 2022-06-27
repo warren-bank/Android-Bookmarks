@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE resources [
+    <!ENTITY folder        "Mappa">
+    <!ENTITY folders       "Mappák">
+    <!ENTITY lc_folder     "Mappa">
+    <!ENTITY lc_folders    "Mappák">
+    <!ENTITY bookmark      "Könyvjelző">
+    <!ENTITY bookmarks     "Könyvjelzők">
+    <!ENTITY lc_bookmark   "Könyvjelző">
+    <!ENTITY lc_bookmarks  "Könyvjelzők">
+]>
+<resources>
+<string name="app_name_long">&bookmarks;</string>
+<string name="layout_main_no_intents_in_folder">Nem &bookmarks; Talált.</string>
+<string name="layout_main_no_results_for_search">Nem találhatók keresési eredmények.</string>
+<string name="layout_main_results_for_search_label">Eredmények:</string>
+<string name="menu_actionbar_intent_search">Keresés</string>
+<string name="menu_actionbar_folder_add">Hozzáadás &folder;</string>
+<string name="menu_actionbar_intent_add">Hozzáadás &bookmark;</string>
+<string name="menu_actionbar_move_complete">Ugrás az aktuális &folder;</string>
+<string name="menu_actionbar_move_cancel">Mozgatás visszavonása</string>
+<string name="menu_actionbar_settings">Beállítások</string>
+<string name="menu_actionbar_db_backup">Biztonsági mentés adatbázis</string>
+<string name="menu_actionbar_db_restore">Adatbázis visszaállítása</string>
+<string name="menu_actionbar_db_html_export">Exportálás ide HTML</string>
+<string name="menu_actionbar_db_html_import">Importálás innen HTML</string>
+<string name="menu_actionbar_exit">Kilép</string>
+<string name="menu_context_folder_hide">Elrejtés</string>
+<string name="menu_context_folder_unhide">Elbújás</string>
+<string name="menu_context_folder_rename">Átnevezés</string>
+<string name="menu_context_folder_move">Áthelyezés</string>
+<string name="menu_context_folder_delete">Törlés</string>
+<string name="menu_context_intent_broadcast">Broadcast küldése</string>
+<string name="menu_context_intent_edit">Szerkesztés</string>
+<string name="menu_context_intent_copy">Másolás</string>
+<string name="menu_context_intent_add_shortcut">Parancsikon hozzáadása</string>
+<string name="settings_option_show_hidden">Megjelenítés elrejtve &lc_folders;</string>
+<string name="settings_option_auto_backup">Automatikus napi mentés végrehajtása</string>
+<string name="settings_option_backup_versioning">A 3 legfrissebb automatikus napi mentések megtartása</string>
+<string name="settings_option_startup_folder">Kezdeti &lc_folder; Megjelenítés indításkor:</string>
+<string name="settings_option_output_directory">A mentések és exportálások alapértelmezett kimeneti könyvtára:</string>
+<string name="dialog_ok">OK</string>
+<string name="dialog_cancel">Mégse</string>
+<string name="dialog_add">Hozzáadás</string>
+<string name="dialog_add_more">Hozzáadás ...</string>
+<string name="dialog_change">Változás ...</string>
+<string name="dialog_save">Mentés</string>
+<string name="dialog_delete">Törlés</string>
+<string name="dialog_backup_preupdate_title">Az adatbázis-frissítés szükséges</string>
+<string name="dialog_backup_preupdate_message">Telepítette az alkalmazás újabb változatát. Az adatbázis verziószámát is frissíteni kell. Biztonsági mentés mentése a művelet előtt; minden hiba megrontja az adatbázist. Ehhez először engedélyt kell adnia a mentési fájl külső tárolóba mentésére. Mentést szeretne menteni a szükséges frissítés előtt?</string>
+<string name="dialog_intent_search_option_query">Lekérdezés:</string>
+<string name="dialog_intent_search_option_only_current_folder">Csak aktuális &lc_folder;</string>
+<string name="dialog_backup_done">Adatbázis mentése befejeződött</string>
+<string name="dialog_backup_failed">A mentés nem hajtható végre!</string>
+<string name="dialog_backup_usefolder">Alapértelmezett kimeneti könyvtár módosítása</string>
+<string name="dialog_restore_now">A biztonsági mentés visszaállítása teljesen lecseréli az adatbázisban lévő összes információt. Folytatás?</string>
+<string name="dialog_restore_done">Adatbázis sikeresen visszaállítva</string>
+<string name="dialog_restore_failed">Az adatbázis nem állítható vissza!</string>
+<string name="dialog_restore_notfound">Nem található biztonsági mentés külső tárolón!</string>
+<string name="dialog_html_export_option_only_current_folder">Csak az export aktuális &lc_folder; és leszármazottai</string>
+<string name="dialog_html_export_option_include_hidden">Tartalmazás rejtett &lc_folders;</string>
+<string name="dialog_html_export_done">HTML Exportálás befejeződött</string>
+<string name="dialog_html_export_failed">Az exportálás nem hajtható végre!</string>
+<string name="dialog_html_import_option_allow_existing_folders">Engedélyezés engedélyezése &lc_bookmarks; Meglévő &lc_folders;</string>
+<string name="dialog_html_import_option_allow_duplicate_urls_global">Többször szereplő engedélyezése URLs Globálisan</string>
+<string name="dialog_html_import_option_allow_duplicate_urls_folder">Többször szereplő engedélyezése URLs Mappánként</string>
+<string name="dialog_html_import_done">HTML Sikeresen importált</string>
+<string name="dialog_html_import_failed">Nem lehet importálni HTML!</string>
+<string name="dialog_html_import_notfound">Nem található HTML Fájl külső tárolóra!</string>
+<string name="dialog_delete_folder_title">Törlés &folder;?</string>
+<string name="dialog_delete_intent_title">Törlés &bookmark;?</string>
+<string name="dialog_delete_confirm">Biztosan törölni kívánja "%s"?</string>
+<string name="folder_rename_title">Átnevezés &folder;</string>
+<string name="folder_attribute_name">Név</string>
+<string name="intent_edit_title">Szerkesztés &bookmark;</string>
+<string name="intent_attribute_folder">&folder;</string>
+<string name="intent_attribute_flags">Flagok</string>
+<string name="intent_attribute_action">Művelet</string>
+<string name="intent_attribute_package_name">Csomag neve</string>
+<string name="intent_attribute_class_name">Osztály neve</string>
+<string name="intent_attribute_data_uri">Adatok URI</string>
+<string name="intent_attribute_data_type">Adatok (MIME) Típus</string>
+<string name="intent_attribute_categories">Kategóriák</string>
+<string name="intent_attribute_extras">Extras</string>
+<string name="dialog_update_intent_attribute_category_title">A kategória frissítése</string>
+<string name="dialog_update_intent_attribute_extra_title_add">Extra hozzáadása</string>
+<string name="dialog_update_intent_attribute_extra_title_edit">Extra frissítése</string>
+<string name="dialog_update_intent_attribute_extra_value_type">Érték típusa</string>
+<string name="dialog_update_intent_attribute_extra_value">Érték</string>
+<string name="dialog_update_intent_attribute_extra_value_separator">Értéklista elválasztó hozzáadása</string>
+<string name="messages_db_error_update">Adatbázis hiba a frissítés során</string>
+<string name="messages_no_permission">Nem elegendő engedély a kért művelet végrehajtásához</string>
+<string name="messages_activity_not_found">Nincs tevékenység Intent</string>
+<string name="default_intent_action">-- Közös értékek --</string>
+</resources>

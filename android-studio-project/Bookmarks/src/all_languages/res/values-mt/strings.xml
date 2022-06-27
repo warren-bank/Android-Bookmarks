@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE resources [
+    <!ENTITY folder        "Folder">
+    <!ENTITY folders       "Folders">
+    <!ENTITY lc_folder     "folder">
+    <!ENTITY lc_folders    "folders">
+    <!ENTITY bookmark      "Bookmark">
+    <!ENTITY bookmarks     "Bookmarks">
+    <!ENTITY lc_bookmark   "Marka">
+    <!ENTITY lc_bookmarks  "Marki tal-kotba">
+]>
+<resources>
+<string name="app_name_long">&bookmarks;</string>
+<string name="layout_main_no_intents_in_folder">Le &bookmarks; misjuba.</string>
+<string name="layout_main_no_results_for_search">Ebda riżultati ta \' tfittxija misjuba.</string>
+<string name="layout_main_results_for_search_label">Riżultati għall:</string>
+<string name="menu_actionbar_intent_search">Fittex</string>
+<string name="menu_actionbar_folder_add">Żid &folder;</string>
+<string name="menu_actionbar_intent_add">Żid &bookmark;</string>
+<string name="menu_actionbar_move_complete">Nimxu lejn Kurrenti &folder;</string>
+<string name="menu_actionbar_move_cancel">Ikkanċella Nimxu</string>
+<string name="menu_actionbar_settings">Settings</string>
+<string name="menu_actionbar_db_backup">Backup Database</string>
+<string name="menu_actionbar_db_restore">Restawrata Database</string>
+<string name="menu_actionbar_db_html_export">Esportazzjoni lejn HTML</string>
+<string name="menu_actionbar_db_html_import">Importazzjoni minn HTML</string>
+<string name="menu_actionbar_exit">Ħruġ</string>
+<string name="menu_context_folder_hide">Jaħbu</string>
+<string name="menu_context_folder_unhide">Mhux jinħbew</string>
+<string name="menu_context_folder_rename">Rename</string>
+<string name="menu_context_folder_move">Nimxu</string>
+<string name="menu_context_folder_delete">Ħassar</string>
+<string name="menu_context_intent_broadcast">Ibgħat Broadcast</string>
+<string name="menu_context_intent_edit">Editja</string>
+<string name="menu_context_intent_copy">Kopja</string>
+<string name="menu_context_intent_add_shortcut">Żid Shortcut</string>
+<string name="settings_option_show_hidden">Uri moħbija &lc_folders;</string>
+<string name="settings_option_auto_backup">Twettiq backup awtomatiku kuljum</string>
+<string name="settings_option_backup_versioning">Żomm it-3 backups ta \' kuljum awtomatiċi l-aktar riċenti</string>
+<string name="settings_option_startup_folder">Inizjali &lc_folder; biex jintwerew fuq l-istartjar:</string>
+<string name="settings_option_output_directory">Direttorju output default għall backups u l-esportazzjonijiet:</string>
+<string name="dialog_ok">OK</string>
+<string name="dialog_cancel">Tħassir</string>
+<string name="dialog_add">Żid</string>
+<string name="dialog_add_more">Żid ...</string>
+<string name="dialog_change">Bidla ...</string>
+<string name="dialog_save">Save</string>
+<string name="dialog_delete">Ħassar</string>
+<string name="dialog_backup_preupdate_title">Aġġornament Database Hija Meħtieġa</string>
+<string name="dialog_backup_preupdate_message">Inti installat verżjoni aktar ġdida ta \' din l-applikazzjoni. Il-verżjoni tad-database teħtieġ ukoll li tiġi aġġornata. Iffrankar ta \' backup qabel din l-operazzjoni huwa rakkomandat; kwalunkwe żball se korrotti l-bażi tad-data. Biex tagħmel dan, inti trid l-ewwel għotja permess biex isalva l-fajl backup għall-ħażna esterna. Tixtieq tiffranka backup qabel l-aġġornament meħtieġ?</string>
+<string name="dialog_intent_search_option_query">Mistoqsija:</string>
+<string name="dialog_intent_search_option_only_current_folder">Kurrenti biss &lc_folder;</string>
+<string name="dialog_backup_done">Bażi tad-dejta kompluta</string>
+<string name="dialog_backup_failed">Ma jistgħux iwettqu backup!</string>
+<string name="dialog_backup_usefolder">Bidla Default Output Direttorju</string>
+<string name="dialog_restore_now">Restawr ta \' backup se tissostitwixxi kompletament l-informazzjoni kollha attwalment fil-bażi tad-dejta. Kompli?</string>
+<string name="dialog_restore_done">Database restawrata b \'suċċess</string>
+<string name="dialog_restore_failed">Ma jistgħux jirrestawraw database!</string>
+<string name="dialog_restore_notfound">Ma setgħux isibu backup fuq ħażna esterna!</string>
+<string name="dialog_html_export_option_only_current_folder">Kurrenti tal-esportazzjoni biss &lc_folder; u dixxendenti tagħha</string>
+<string name="dialog_html_export_option_include_hidden">Inkludi moħbija &lc_folders;</string>
+<string name="dialog_html_export_done">HTML esportazzjoni kompluta</string>
+<string name="dialog_html_export_failed">Ma jistgħux iwettqu l-esportazzjoni!</string>
+<string name="dialog_html_import_option_allow_existing_folders">Jippermettu żieda &lc_bookmarks; għal eżistenti &lc_folders;</string>
+<string name="dialog_html_import_option_allow_duplicate_urls_global">Permess duplikat URLs globalment</string>
+<string name="dialog_html_import_option_allow_duplicate_urls_folder">Permess duplikat URLs kull folder</string>
+<string name="dialog_html_import_done">HTML importati b \'suċċess</string>
+<string name="dialog_html_import_failed">Nuqqas ta \' importazzjoni HTML!</string>
+<string name="dialog_html_import_notfound">Ma setax isib HTML fajl dwar il-ħżin estern!</string>
+<string name="dialog_delete_folder_title">Ħassar &folder;?</string>
+<string name="dialog_delete_intent_title">Ħassar &bookmark;?</string>
+<string name="dialog_delete_confirm">Inti żgur li inti tixtieq li tħassar "%s"?</string>
+<string name="folder_rename_title">Rename &folder;</string>
+<string name="folder_attribute_name">Isem</string>
+<string name="intent_edit_title">Editja &bookmark;</string>
+<string name="intent_attribute_folder">&folder;</string>
+<string name="intent_attribute_flags">Bnadar</string>
+<string name="intent_attribute_action">Azzjoni</string>
+<string name="intent_attribute_package_name">Isem tal-pakkett</string>
+<string name="intent_attribute_class_name">Isem tal-klassi</string>
+<string name="intent_attribute_data_uri">Data URI</string>
+<string name="intent_attribute_data_type">Data (MIME) Tip</string>
+<string name="intent_attribute_categories">Kategoriji</string>
+<string name="intent_attribute_extras">Estras</string>
+<string name="dialog_update_intent_attribute_category_title">Aġġornament Kategorija</string>
+<string name="dialog_update_intent_attribute_extra_title_add">Żid Extra</string>
+<string name="dialog_update_intent_attribute_extra_title_edit">Aġġornament Extra</string>
+<string name="dialog_update_intent_attribute_extra_value_type">Tip ta \' Valur</string>
+<string name="dialog_update_intent_attribute_extra_value">Valur</string>
+<string name="dialog_update_intent_attribute_extra_value_separator">Żid is-separatur tal-lista tal-valur</string>
+<string name="messages_db_error_update">Żball database waqt l-aġġornament</string>
+<string name="messages_no_permission">Permess insuffiċjenti biex titwettaq l-operazzjoni mitluba</string>
+<string name="messages_activity_not_found">L-ebda Attività taqbel mal- Intent</string>
+<string name="default_intent_action">-- valuri komuni --</string>
+</resources>

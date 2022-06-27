@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE resources [
+    <!ENTITY folder        "Folder">
+    <!ENTITY folders       "Folder">
+    <!ENTITY lc_folder     "Folder">
+    <!ENTITY lc_folders    "folder">
+    <!ENTITY bookmark      "Tanda Buku">
+    <!ENTITY bookmarks     "Tanda Buku">
+    <!ENTITY lc_bookmark   "tanda buku">
+    <!ENTITY lc_bookmarks  "tanda buku">
+]>
+<resources>
+<string name="app_name_long">&bookmarks;</string>
+<string name="layout_main_no_intents_in_folder">Tidak &bookmarks; ditemui.</string>
+<string name="layout_main_no_results_for_search">Tiada keputusan gelintar ditemui.</string>
+<string name="layout_main_results_for_search_label">Keputusan untuk:</string>
+<string name="menu_actionbar_intent_search">Gelintar</string>
+<string name="menu_actionbar_folder_add">Tambah &folder;</string>
+<string name="menu_actionbar_intent_add">Tambah &bookmark;</string>
+<string name="menu_actionbar_move_complete">Alih ke Semasa &folder;</string>
+<string name="menu_actionbar_move_cancel">Batal Alih</string>
+<string name="menu_actionbar_settings">Tetapan</string>
+<string name="menu_actionbar_db_backup">Pangkalan Data Bantuan</string>
+<string name="menu_actionbar_db_restore">Pulih Pengkalan Data</string>
+<string name="menu_actionbar_db_html_export">Eksport ke HTML</string>
+<string name="menu_actionbar_db_html_import">Import dari HTML</string>
+<string name="menu_actionbar_exit">Keluar</string>
+<string name="menu_context_folder_hide">Sembunyi</string>
+<string name="menu_context_folder_unhide">Nyahsembunyi</string>
+<string name="menu_context_folder_rename">Namakan semula</string>
+<string name="menu_context_folder_move">Gerak</string>
+<string name="menu_context_folder_delete">&amp; Hapuskan</string>
+<string name="menu_context_intent_broadcast">Hantar Siaran</string>
+<string name="menu_context_intent_edit">Edit</string>
+<string name="menu_context_intent_copy">&amp; Salin</string>
+<string name="menu_context_intent_add_shortcut">Tambah Pintasan</string>
+<string name="settings_option_show_hidden">Papar tersembunyi &lc_folders;</string>
+<string name="settings_option_auto_backup">Buat sandar harian automatik</string>
+<string name="settings_option_backup_versioning">Kekalkan 3 yang paling terkini sandar harian automatik</string>
+<string name="settings_option_startup_folder">Awalan &lc_folder; untuk paparkan semasa permulaan:</string>
+<string name="settings_option_output_directory">Direktori output lalai untuk sandar dan eksport:</string>
+<string name="dialog_ok">OK</string>
+<string name="dialog_cancel">Batal</string>
+<string name="dialog_add">Tambah</string>
+<string name="dialog_add_more">Tambah ...</string>
+<string name="dialog_change">Ubah ...</string>
+<string name="dialog_save">&amp; Simpan</string>
+<string name="dialog_delete">&amp; Hapuskan</string>
+<string name="dialog_backup_preupdate_title">Kemaskini Pangkalan Data Diperlukan</string>
+<string name="dialog_backup_preupdate_message">Anda telah memasang versi baru aplikasi ini. Versi pangkalan data juga perlu dikemas kini. Menyimpan sandaran sebelum operasi ini disarankan; sebarang ralat akan merosakkan pangkalan data. Untuk berbuat demikian, anda mesti diberi keizinan pertama untuk menyimpan fail sandar ke storan luaran. Adakah anda ingin menyimpan sandaran sebelum kemaskini yang diperlukan?</string>
+<string name="dialog_intent_search_option_query">Pertanyaan:</string>
+<string name="dialog_intent_search_option_only_current_folder">Hanya semasa &lc_folder;</string>
+<string name="dialog_backup_done">Sandar pangkalan data selesai</string>
+<string name="dialog_backup_failed">Tidak boleh buat sandar!</string>
+<string name="dialog_backup_usefolder">Ubah Direktori Output Lalai</string>
+<string name="dialog_restore_now">Memulihkan sandar sepenuhnya akan menggantikan semua maklumat yang sedang dalam pangkalan data. Teruskan?</string>
+<string name="dialog_restore_done">Pangkalan data berjaya dipulihkan</string>
+<string name="dialog_restore_failed">Tidak dapat memulihkan pangkalan data!</string>
+<string name="dialog_restore_notfound">Tidak dapat cari sandar pada storan luaran!</string>
+<string name="dialog_html_export_option_only_current_folder">Hanya eksport semasa &lc_folder; dan keturunannya.</string>
+<string name="dialog_html_export_option_include_hidden">Sertakan tersembunyi &lc_folders;</string>
+<string name="dialog_html_export_done">HTML eksport selesai</string>
+<string name="dialog_html_export_failed">Tidak boleh buat eksport!</string>
+<string name="dialog_html_import_option_allow_existing_folders">Benarkan menambah &lc_bookmarks; untuk sedia ada &lc_folders;</string>
+<string name="dialog_html_import_option_allow_duplicate_urls_global">Benarkan pendua URLs globaacolor</string>
+<string name="dialog_html_import_option_allow_duplicate_urls_folder">Benarkan pendua URLs per folder</string>
+<string name="dialog_html_import_done">HTML Berjaya diimport</string>
+<string name="dialog_html_import_failed">Tidak boleh mengimport HTML!</string>
+<string name="dialog_html_import_notfound">Tidak dapat cari HTML fail pada storan luaran!</string>
+<string name="dialog_delete_folder_title">&amp; Hapuskan &folder;?</string>
+<string name="dialog_delete_intent_title">&amp; Hapuskan &bookmark;?</string>
+<string name="dialog_delete_confirm">Anda pasti ingin memadam "%s"?</string>
+<string name="folder_rename_title">Namakan semula &folder;</string>
+<string name="folder_attribute_name">Nama</string>
+<string name="intent_edit_title">Edit &bookmark;</string>
+<string name="intent_attribute_folder">&folder;</string>
+<string name="intent_attribute_flags">Bendera</string>
+<string name="intent_attribute_action">Tindakan</string>
+<string name="intent_attribute_package_name">Nama Pakej</string>
+<string name="intent_attribute_class_name">Nama Kelas</string>
+<string name="intent_attribute_data_uri">Data URI</string>
+<string name="intent_attribute_data_type">Data (MIME) Jenis</string>
+<string name="intent_attribute_categories">Kategori</string>
+<string name="intent_attribute_extras">Ekstrakan</string>
+<string name="dialog_update_intent_attribute_category_title">Kemaskini Kategori</string>
+<string name="dialog_update_intent_attribute_extra_title_add">Tambah Tambahan</string>
+<string name="dialog_update_intent_attribute_extra_title_edit">Kemaskini Tambahan</string>
+<string name="dialog_update_intent_attribute_extra_value_type">Jenis Nilai</string>
+<string name="dialog_update_intent_attribute_extra_value">Nilai</string>
+<string name="dialog_update_intent_attribute_extra_value_separator">Tambah Pemisah Senarai Nilai</string>
+<string name="messages_db_error_update">Ralat pangkalan data semasa mengemaskini</string>
+<string name="messages_no_permission">Keizinan tidak mencukupi untuk melaksanakan operasi yang diminta</string>
+<string name="messages_activity_not_found">Tiada Aktiviti Sepadan Intent</string>
+<string name="default_intent_action">-- nilai umum --</string>
+</resources>

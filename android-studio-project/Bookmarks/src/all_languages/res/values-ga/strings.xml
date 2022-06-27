@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE resources [
+    <!ENTITY folder        "Fillteán:">
+    <!ENTITY folders       "Fillteáin">
+    <!ENTITY lc_folder     "fillteán">
+    <!ENTITY lc_folders    "fillteáin">
+    <!ENTITY bookmark      "Leabharmharc">
+    <!ENTITY bookmarks     "Leabharmharcanna">
+    <!ENTITY lc_bookmark   "Leabharmharc">
+    <!ENTITY lc_bookmarks  "leabharmharcanna">
+]>
+<resources>
+<string name="app_name_long">&bookmarks;</string>
+<string name="layout_main_no_intents_in_folder">Gan &bookmarks; \@ info.</string>
+<string name="layout_main_no_results_for_search">Níor aimsíodh aon torthaí cuardaigh.</string>
+<string name="layout_main_results_for_search_label">Torthaí do:</string>
+<string name="menu_actionbar_intent_search">Cuardaigh</string>
+<string name="menu_actionbar_folder_add">Cuir Leis &folder;</string>
+<string name="menu_actionbar_intent_add">Cuir Leis &bookmark;</string>
+<string name="menu_actionbar_move_complete">Bog go dtí an &folder;</string>
+<string name="menu_actionbar_move_cancel">Cealaigh Bog</string>
+<string name="menu_actionbar_settings">Socruithe</string>
+<string name="menu_actionbar_db_backup">Bunachar Sonraí Cúltaca</string>
+<string name="menu_actionbar_db_restore">Athchóirigh Bunachar Sonraí</string>
+<string name="menu_actionbar_db_html_export">Easpórtáil go HTML</string>
+<string name="menu_actionbar_db_html_import">Iompórtáil ó HTML</string>
+<string name="menu_actionbar_exit">Scoir</string>
+<string name="menu_context_folder_hide">Folaigh</string>
+<string name="menu_context_folder_unhide">Unhide</string>
+<string name="menu_context_folder_rename">Athainmnigh</string>
+<string name="menu_context_folder_move">Bog</string>
+<string name="menu_context_folder_delete">&amp; Scrios</string>
+<string name="menu_context_intent_broadcast">Seol Craoladh</string>
+<string name="menu_context_intent_edit">Eagar</string>
+<string name="menu_context_intent_copy">Cóipeáil</string>
+<string name="menu_context_intent_add_shortcut">Cuir Aicearra Leis</string>
+<string name="settings_option_show_hidden">Taispeáin folaigh &lc_folders;</string>
+<string name="settings_option_auto_backup">Déan cúltaca go laethúil cúltaca</string>
+<string name="settings_option_backup_versioning">Coinnigh an 3 an chuid is déanaí uathoibríoch backups laethúil</string>
+<string name="settings_option_startup_folder">Tosaigh &lc_folder; a thaispeáint ag am tosaithe:</string>
+<string name="settings_option_output_directory">Comhadlann aschurtha aschur le haghaidh backups agus onnmhairí:</string>
+<string name="dialog_ok">OK</string>
+<string name="dialog_cancel">Cealaigh</string>
+<string name="dialog_add">Cuir Leis</string>
+<string name="dialog_add_more">Cuir Leis ...</string>
+<string name="dialog_change">&amp; Athraigh ...</string>
+<string name="dialog_save">Sábháil</string>
+<string name="dialog_delete">&amp; Scrios</string>
+<string name="dialog_backup_preupdate_title">Tá Nuashonrú Bunachar Sonraí Ag Teastáil</string>
+<string name="dialog_backup_preupdate_message">Tá leagan agat as leagan amach ar an iarratas seo. Ní mór an leagan an bhunachar sonraí freisin a thabhairt cothrom le dáta. Sábháil cúltaca sula moltar an oibríocht seo; beidh aon earráid truaillithe ar an mbunachar sonraí. Chun é sin a dhéanamh, ní mór duit cead a thabhairt ar dtús cead a shábháil ar an comhad cúltaca a stóráil seachtrach. Ar mhaith leat cúltaca a shábháil roimh an nuashonrú is gá?</string>
+<string name="dialog_intent_search_option_query">Query:</string>
+<string name="dialog_intent_search_option_only_current_folder">\@ info: &lc_folder;</string>
+<string name="dialog_backup_done">Bunachar sonraí cúltaca críochnaithe</string>
+<string name="dialog_backup_failed">Ní féidir cúltaca a dhéanamh!</string>
+<string name="dialog_backup_usefolder">Athraigh Comhadlann Réamhshocraithe Aschurtha</string>
+<string name="dialog_restore_now">Beidh cúltaca cúltaca a chur in ionad gach eolas faoi láthair sa bhunachar sonraí. Lean?</string>
+<string name="dialog_restore_done">\@ info: inbox</string>
+<string name="dialog_restore_failed">Ní féidir bunachar sonraí a athchóiriú!</string>
+<string name="dialog_restore_notfound">Níorbh fhéidir cúltaca ar stóráil seachtrach a aimsiú!</string>
+<string name="dialog_html_export_option_only_current_folder">Easpórtáil amháin reatha &lc_folder; agus a descitants</string>
+<string name="dialog_html_export_option_include_hidden">Cuir i bhfolach &lc_folders;</string>
+<string name="dialog_html_export_done">HTML onnmhairiú críochnaithe</string>
+<string name="dialog_html_export_failed">Ní féidir easpórtáil a dhéanamh!</string>
+<string name="dialog_html_import_option_allow_existing_folders">Ceadaigh &lc_bookmarks; go dtí seo &lc_folders;</string>
+<string name="dialog_html_import_option_allow_duplicate_urls_global">Ceadaigh dúblach URLs gluais</string>
+<string name="dialog_html_import_option_allow_duplicate_urls_folder">Ceadaigh dúblach URLs san fhillteán</string>
+<string name="dialog_html_import_done">HTML % 1</string>
+<string name="dialog_html_import_failed">Ní féidir allmhairiú HTML!</string>
+<string name="dialog_html_import_notfound">Níorbh fhéidir a aimsiú HTML comhad ar stóráil seachtrach!</string>
+<string name="dialog_delete_folder_title">&amp; Scrios &folder;?</string>
+<string name="dialog_delete_intent_title">&amp; Scrios &bookmark;?</string>
+<string name="dialog_delete_confirm">An bhfuil tú cinnte gur mian leat a scriosadh "%s"?</string>
+<string name="folder_rename_title">Athainmnigh &folder;</string>
+<string name="folder_attribute_name">Ainm</string>
+<string name="intent_edit_title">Eagar &bookmark;</string>
+<string name="intent_attribute_folder">&folder;</string>
+<string name="intent_attribute_flags">Bratach</string>
+<string name="intent_attribute_action">Gníomh</string>
+<string name="intent_attribute_package_name">Ainm an phacáiste</string>
+<string name="intent_attribute_class_name">Ainm Aicme</string>
+<string name="intent_attribute_data_uri">Sonraí URI</string>
+<string name="intent_attribute_data_type">Sonraí (MIME) Cineál</string>
+<string name="intent_attribute_categories">Catagóirí</string>
+<string name="intent_attribute_extras">Extras</string>
+<string name="dialog_update_intent_attribute_category_title">Nuashonraigh catagóir</string>
+<string name="dialog_update_intent_attribute_extra_title_add">Cuir Breise Leis</string>
+<string name="dialog_update_intent_attribute_extra_title_edit">Nuashonraigh Breise</string>
+<string name="dialog_update_intent_attribute_extra_value_type">Cineál Luach</string>
+<string name="dialog_update_intent_attribute_extra_value">Luach</string>
+<string name="dialog_update_intent_attribute_extra_value_separator">Cuir Deighilteoir Seinmliosta Leis</string>
+<string name="messages_db_error_update">Earráid bunachar sonraí agus nuashonrú á nuashonrú</string>
+<string name="messages_no_permission">Ní leor cead chun an oibríocht iarrtha a chomhlíonadh</string>
+<string name="messages_activity_not_found">Níl aon aon ghníomhaíocht ar an Intent</string>
+<string name="default_intent_action">-- comhluachanna --</string>
+</resources>

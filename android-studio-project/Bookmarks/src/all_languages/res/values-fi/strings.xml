@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE resources [
+    <!ENTITY folder        "Kansio">
+    <!ENTITY folders       "Kansiot">
+    <!ENTITY lc_folder     "Kansio">
+    <!ENTITY lc_folders    "Kansiot">
+    <!ENTITY bookmark      "Kirjanmerkki">
+    <!ENTITY bookmarks     "Kirjanmerkit">
+    <!ENTITY lc_bookmark   "Kirjanmerkki">
+    <!ENTITY lc_bookmarks  "Kirjanmerkit">
+]>
+<resources>
+<string name="app_name_long">&bookmarks;</string>
+<string name="layout_main_no_intents_in_folder">Ei &bookmarks; Löydetty.</string>
+<string name="layout_main_no_results_for_search">Hakutuloksia ei löytynyt.</string>
+<string name="layout_main_results_for_search_label">Tulokset:</string>
+<string name="menu_actionbar_intent_search">Hae</string>
+<string name="menu_actionbar_folder_add">Lisää &folder;</string>
+<string name="menu_actionbar_intent_add">Lisää &bookmark;</string>
+<string name="menu_actionbar_move_complete">Siirry nykyiseen &folder;</string>
+<string name="menu_actionbar_move_cancel">Peruuta siirto</string>
+<string name="menu_actionbar_settings">Asetukset</string>
+<string name="menu_actionbar_db_backup">Taustatietokanta</string>
+<string name="menu_actionbar_db_restore">Palautustietokanta</string>
+<string name="menu_actionbar_db_html_export">Vie - HTML</string>
+<string name="menu_actionbar_db_html_import">Tuonti HTML</string>
+<string name="menu_actionbar_exit">Poistuminen</string>
+<string name="menu_context_folder_hide">Piilota</string>
+<string name="menu_context_folder_unhide">Unhide</string>
+<string name="menu_context_folder_rename">Nimeä</string>
+<string name="menu_context_folder_move">Siirrä</string>
+<string name="menu_context_folder_delete">Poista</string>
+<string name="menu_context_intent_broadcast">Lähetä Broadcast</string>
+<string name="menu_context_intent_edit">Muokkaa</string>
+<string name="menu_context_intent_copy">Kopioi</string>
+<string name="menu_context_intent_add_shortcut">Lisää Shortcut</string>
+<string name="settings_option_show_hidden">Näytä piilo &lc_folders;</string>
+<string name="settings_option_auto_backup">Muodosta automaattinen päivittäinen varmistuskopio</string>
+<string name="settings_option_backup_versioning">Säilytä 3 tuoreinta automaattista varmuuskopioita</string>
+<string name="settings_option_startup_folder">Alkuperäinen &lc_folder; Näyttö aloituksen yhteydessä:</string>
+<string name="settings_option_output_directory">Taustatietojen ja viennin oletustulostushakemisto:</string>
+<string name="dialog_ok">OK</string>
+<string name="dialog_cancel">Peruuta</string>
+<string name="dialog_add">Lisää</string>
+<string name="dialog_add_more">Lisää ...</string>
+<string name="dialog_change">Muutos ...</string>
+<string name="dialog_save">Tallenna</string>
+<string name="dialog_delete">Poista</string>
+<string name="dialog_backup_preupdate_title">Tietokannan päivitys on pakollinen</string>
+<string name="dialog_backup_preupdate_message">Olet asentanut tämän sovelluksen uudemman version. Myös tietokannan versio on päivitettävä. Varmistuskopiointi on suositeltavaa, ennen kuin tämä toiminto on käytössä. Jos haluat tehdä niin, sinun on ensin myönnettävä käyttöoikeudet varmistuskopion tallentamiseen ulkoiseen varastoon. Haluatko tallentaa varmistuskopion ennen päivitystä\??</string>
+<string name="dialog_intent_search_option_query">Kysely:</string>
+<string name="dialog_intent_search_option_only_current_folder">Vain nykyinen &lc_folder;</string>
+<string name="dialog_backup_done">Tietokannan varmistuskopiointi</string>
+<string name="dialog_backup_failed">Varmistuskopiointi ei onnistu!</string>
+<string name="dialog_backup_usefolder">Vaihda oletustulostushakemisto</string>
+<string name="dialog_restore_now">Varmistusvarmistuskopioinnin palautus korvaa kaikki tietokannassa olevat tiedot. Jatka?</string>
+<string name="dialog_restore_done">Tietokannan palautus on onnistunut</string>
+<string name="dialog_restore_failed">Tietokannan palautus ei onnistu!</string>
+<string name="dialog_restore_notfound">Ulkoista tallennustilaa ei löytynyt!</string>
+<string name="dialog_html_export_option_only_current_folder">Vain vientivirta &lc_folder; Ja sen jälkeläisille</string>
+<string name="dialog_html_export_option_include_hidden">Lisää piilotettu &lc_folders;</string>
+<string name="dialog_html_export_done">HTML Vienti suoritettu</string>
+<string name="dialog_html_export_failed">Viennin toteutus ei onnistu!</string>
+<string name="dialog_html_import_option_allow_existing_folders">Salli lisätä &lc_bookmarks; Nykyiselle &lc_folders;</string>
+<string name="dialog_html_import_option_allow_duplicate_urls_global">Salli kopion URLs Maailmanlaajuisesti</string>
+<string name="dialog_html_import_option_allow_duplicate_urls_folder">Salli kopion URLs Kansiosta</string>
+<string name="dialog_html_import_done">HTML On tuotu onnistuneesti</string>
+<string name="dialog_html_import_failed">Kohteen tuonti ei onnistu HTML!</string>
+<string name="dialog_html_import_notfound">Ei löytynyt HTML Ulkoinen tallennustiedosto!</string>
+<string name="dialog_delete_folder_title">Poista &folder;?</string>
+<string name="dialog_delete_intent_title">Poista &bookmark;?</string>
+<string name="dialog_delete_confirm">Haluatko varmasti poistaa "%s"?</string>
+<string name="folder_rename_title">Nimeä &folder;</string>
+<string name="folder_attribute_name">Nimi</string>
+<string name="intent_edit_title">Muokkaa &bookmark;</string>
+<string name="intent_attribute_folder">&folder;</string>
+<string name="intent_attribute_flags">Lippuja</string>
+<string name="intent_attribute_action">Toimi</string>
+<string name="intent_attribute_package_name">Paketin nimi</string>
+<string name="intent_attribute_class_name">Luokan nimi</string>
+<string name="intent_attribute_data_uri">Data URI</string>
+<string name="intent_attribute_data_type">Data (MIME) Tyyppi</string>
+<string name="intent_attribute_categories">Luokat</string>
+<string name="intent_attribute_extras">Ekstras</string>
+<string name="dialog_update_intent_attribute_category_title">Päivitä luokka</string>
+<string name="dialog_update_intent_attribute_extra_title_add">Lisää ylimääräisiä</string>
+<string name="dialog_update_intent_attribute_extra_title_edit">Päivitä Extra</string>
+<string name="dialog_update_intent_attribute_extra_value_type">Arvon tyyppi</string>
+<string name="dialog_update_intent_attribute_extra_value">Arvo</string>
+<string name="dialog_update_intent_attribute_extra_value_separator">Lisää arvoluettelon erotin</string>
+<string name="messages_db_error_update">Tietokantavirhe päivitettäessä</string>
+<string name="messages_no_permission">Pyydetyn toiminnon toteutus ei riitä</string>
+<string name="messages_activity_not_found">Aktiviteetti ei vastaa Intent</string>
+<string name="default_intent_action">-- Yhteiset arvot --</string>
+</resources>

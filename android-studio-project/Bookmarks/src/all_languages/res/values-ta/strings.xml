@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE resources [
+    <!ENTITY folder        "அடைவு">
+    <!ENTITY folders       "கோடுகள்">
+    <!ENTITY lc_folder     "அடைவு">
+    <!ENTITY lc_folders    "அடைவுகள்">
+    <!ENTITY bookmark      "புத்தகக்குறி">
+    <!ENTITY bookmarks     "புத்தகக்குறிகள்">
+    <!ENTITY lc_bookmark   "புத்தகக்குறி">
+    <!ENTITY lc_bookmarks  "புத்தகக்குறிகள்">
+]>
+<resources>
+<string name="app_name_long">&bookmarks;</string>
+<string name="layout_main_no_intents_in_folder">இல்லை &bookmarks; கண்டுபிடி.</string>
+<string name="layout_main_no_results_for_search">தேடல் முடிவுகள் இல்லை.</string>
+<string name="layout_main_results_for_search_label">முடிவுகள்:</string>
+<string name="menu_actionbar_intent_search">தேடு</string>
+<string name="menu_actionbar_folder_add">சேர் &folder;</string>
+<string name="menu_actionbar_intent_add">சேர் &bookmark;</string>
+<string name="menu_actionbar_move_complete">நடப்பில் நகர்த்து &folder;</string>
+<string name="menu_actionbar_move_cancel">நகர்த்தலை ரத்து செய்</string>
+<string name="menu_actionbar_settings">அமைப்புகள்</string>
+<string name="menu_actionbar_db_backup">பின்காப்பு தரவுத்தளம்</string>
+<string name="menu_actionbar_db_restore">தரவுத்தளத்தை மீட்கவும்</string>
+<string name="menu_actionbar_db_html_export">ஏற்றுமதி HTML</string>
+<string name="menu_actionbar_db_html_import">இறக்குமதி HTML</string>
+<string name="menu_actionbar_exit">வெளியேறு</string>
+<string name="menu_context_folder_hide">மறை</string>
+<string name="menu_context_folder_unhide">மறை</string>
+<string name="menu_context_folder_rename">மறுபெயரிடு</string>
+<string name="menu_context_folder_move">நகர்த்து</string>
+<string name="menu_context_folder_delete">நீக்கு</string>
+<string name="menu_context_intent_broadcast">ஒளிபரப்பை அனுப்பு</string>
+<string name="menu_context_intent_edit">திருத்து</string>
+<string name="menu_context_intent_copy">நகல்</string>
+<string name="menu_context_intent_add_shortcut">குறுக்குவழியை சேர்</string>
+<string name="settings_option_show_hidden">மறைக்கப்பட்ட காட்சி &lc_folders;</string>
+<string name="settings_option_auto_backup">தானியங்கி தன்னியக்கமாக காப்பு</string>
+<string name="settings_option_backup_versioning">3 மிக சமீபத்திய தானியங்கி பின்புலத்தை வைத்திரு</string>
+<string name="settings_option_startup_folder">ஆரம்ப &lc_folder; துவக்கத்தில் காட்ட:</string>
+<string name="settings_option_output_directory">பின்னணிகளுக்கான முன்னிருப்பு வெளியீடு அடைவு:</string>
+<string name="dialog_ok">OK</string>
+<string name="dialog_cancel">ரத்து செய்</string>
+<string name="dialog_add">சேர்</string>
+<string name="dialog_add_more">சேர் ...</string>
+<string name="dialog_change">மாற்று ...</string>
+<string name="dialog_save">சேமி</string>
+<string name="dialog_delete">நீக்கு</string>
+<string name="dialog_backup_preupdate_title">தரவுத்தள புதுப்பித்தல் தேவைப்படுகிறது</string>
+<string name="dialog_backup_preupdate_message">நீங்கள் இந்த பயன்பாட்டின் புதிய பதிப்பை நிறுவியுள்ளீர்கள். தரவுத்தளத்தின் பதிப்பு புதுப்பிக்கப்பட வேண்டும். இந்த செயல் பரிந்துரைக்கப்படுவதற்கு முன் ஒரு காப்பகத்தை சேமிக்கிறது; எந்த பிழை தரவுத்தளத்தை தூண்டும். அதனை செய்ய, நீங்கள் முதலில் காப்பு கோப்பை வெளி சேமிப்பை சேமிக்க அனுமதி செய்ய வேண்டும். தேவையான புதுப்பித்துக்கு முன் ஒரு காப்பு சேமிக்க விரும்புகிறீர்களா?</string>
+<string name="dialog_intent_search_option_query">கேள்வி:</string>
+<string name="dialog_intent_search_option_only_current_folder">தற்போதைய மட்டும் &lc_folder;</string>
+<string name="dialog_backup_done">தரவுத்தளம் காப்பு முடிந்தது</string>
+<string name="dialog_backup_failed">காப்பு செய்ய இயலவில்லை!</string>
+<string name="dialog_backup_usefolder">முன்னிருப்பு வெளியீட்டு அடைவை மாற்று</string>
+<string name="dialog_restore_now">ஒரு காப்பகத்தை மீட்கவும் தற்போது தரவுத்தளத்தில் அனைத்து தகவல்களையும் முழுமையாக மாற்றும். தொடர்ந்து?</string>
+<string name="dialog_restore_done">தரவுத்தளத்தை வெற்றிகரமாக மீ</string>
+<string name="dialog_restore_failed">தரவுத்தளத்தை மீட்டமைக்க முடியவில்லை!</string>
+<string name="dialog_restore_notfound">வெளி சேமிப்பில் காப்பு காணவில்லை!</string>
+<string name="dialog_html_export_option_only_current_folder">தற்போதைய ஏற்றுமதி மட்டும் &lc_folder; மற்றும் அதன் உரிமைகள்</string>
+<string name="dialog_html_export_option_include_hidden">மறைந்திருக்கும் &lc_folders;</string>
+<string name="dialog_html_export_done">HTML ஏற்றுமதி முடிந்தது</string>
+<string name="dialog_html_export_failed">ஏற்றுமதி செய்ய இயலவில்லை!</string>
+<string name="dialog_html_import_option_allow_existing_folders">அனுமதி சேர் &lc_bookmarks; ஏற்கனவே உள்ள &lc_folders;</string>
+<string name="dialog_html_import_option_allow_duplicate_urls_global">\@ action: Allow duplicate URLs உலகளாவிய</string>
+<string name="dialog_html_import_option_allow_duplicate_urls_folder">\@ action: Allow duplicate URLs அடைவு</string>
+<string name="dialog_html_import_done">HTML வெற்றிகரமாக இறக்கப்பட்டது</string>
+<string name="dialog_html_import_failed">இறக்குமதி செய்யமுடியவில்லை HTML!</string>
+<string name="dialog_html_import_notfound">காணவில்லை HTML வெளி சேமிப்பில் கோப்பு!</string>
+<string name="dialog_delete_folder_title">நீக்கு &folder;?</string>
+<string name="dialog_delete_intent_title">நீக்கு &bookmark;?</string>
+<string name="dialog_delete_confirm">நீங்கள் நீக்க விரும்புகிறீர்களா "%s"?</string>
+<string name="folder_rename_title">மறுபெயரிடு &folder;</string>
+<string name="folder_attribute_name">பெயர்</string>
+<string name="intent_edit_title">திருத்து &bookmark;</string>
+<string name="intent_attribute_folder">&folder;</string>
+<string name="intent_attribute_flags">ஃப்ளிக்ஸ்</string>
+<string name="intent_attribute_action">செயல்</string>
+<string name="intent_attribute_package_name">தொகுப்பு பெயர்</string>
+<string name="intent_attribute_class_name">வகுப்பு பெயர்</string>
+<string name="intent_attribute_data_uri">தரவு URI</string>
+<string name="intent_attribute_data_type">தரவு (MIME) வகை</string>
+<string name="intent_attribute_categories">வகைகள்</string>
+<string name="intent_attribute_extras">விரிவாக்கம்</string>
+<string name="dialog_update_intent_attribute_category_title">பட்டியலை புதுப்பி</string>
+<string name="dialog_update_intent_attribute_extra_title_add">கூடுதலாக சேர்</string>
+<string name="dialog_update_intent_attribute_extra_title_edit">விரிவாக்கத்தை புதுப்பி</string>
+<string name="dialog_update_intent_attribute_extra_value_type">மதிப்பின் வகை</string>
+<string name="dialog_update_intent_attribute_extra_value">மதிப்பு</string>
+<string name="dialog_update_intent_attribute_extra_value_separator">மதிப்பு பட்டியலை பிரிப்பான் சேர்</string>
+<string name="messages_db_error_update">தரவுத்தளத்தின் பிழை</string>
+<string name="messages_no_permission">கோரப்பட்ட செயல்பாட்டை செயல்படுத்துவதற்கு தவறான அனுமதி</string>
+<string name="messages_activity_not_found">செயற்பாடு இல்லை Intent</string>
+<string name="default_intent_action">-- பொதுவான மதிப்புகள் --</string>
+</resources>

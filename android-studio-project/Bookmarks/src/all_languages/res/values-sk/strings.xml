@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE resources [
+    <!ENTITY folder        "Zložka">
+    <!ENTITY folders       "Priečinky">
+    <!ENTITY lc_folder     "zložka">
+    <!ENTITY lc_folders    "zložky">
+    <!ENTITY bookmark      "Záložka">
+    <!ENTITY bookmarks     "Záložky">
+    <!ENTITY lc_bookmark   "záložka">
+    <!ENTITY lc_bookmarks  "záložky">
+]>
+<resources>
+<string name="app_name_long">&bookmarks;</string>
+<string name="layout_main_no_intents_in_folder">Nie &bookmarks; nájdené.</string>
+<string name="layout_main_no_results_for_search">Nenašli sa žiadne výsledky vyhľadávania.</string>
+<string name="layout_main_results_for_search_label">Výsledky pre:</string>
+<string name="menu_actionbar_intent_search">Hľadať</string>
+<string name="menu_actionbar_folder_add">Pridať &folder;</string>
+<string name="menu_actionbar_intent_add">Pridať &bookmark;</string>
+<string name="menu_actionbar_move_complete">Presunúť do aktuálneho &folder;</string>
+<string name="menu_actionbar_move_cancel">Zrušiť presun</string>
+<string name="menu_actionbar_settings">Nastavenia</string>
+<string name="menu_actionbar_db_backup">Zálohovať databázu</string>
+<string name="menu_actionbar_db_restore">Obnoviť databázu</string>
+<string name="menu_actionbar_db_html_export">Exportovať do HTML</string>
+<string name="menu_actionbar_db_html_import">Importovať z HTML</string>
+<string name="menu_actionbar_exit">Ukončiť</string>
+<string name="menu_context_folder_hide">Skryť</string>
+<string name="menu_context_folder_unhide">Odkryť</string>
+<string name="menu_context_folder_rename">Premenovať</string>
+<string name="menu_context_folder_move">Presunúť</string>
+<string name="menu_context_folder_delete">Vymazať</string>
+<string name="menu_context_intent_broadcast">Poslať broadcastom</string>
+<string name="menu_context_intent_edit">Upraviť</string>
+<string name="menu_context_intent_copy">Kopírovať</string>
+<string name="menu_context_intent_add_shortcut">Pridať zástupcu</string>
+<string name="settings_option_show_hidden">Zobraziť skryté &lc_folders;</string>
+<string name="settings_option_auto_backup">Vykonať automatické denné zálohovanie</string>
+<string name="settings_option_backup_versioning">Ponechať 3 najaktuálné automatické denné zálohy</string>
+<string name="settings_option_startup_folder">Úvodný &lc_folder; na zobrazenie pri spustení:</string>
+<string name="settings_option_output_directory">Štandardný výstupný adresár pre zálohy a exporty:</string>
+<string name="dialog_ok">OK</string>
+<string name="dialog_cancel">Zrušiť</string>
+<string name="dialog_add">Pridať</string>
+<string name="dialog_add_more">Pridať ...</string>
+<string name="dialog_change">Zmeniť ...</string>
+<string name="dialog_save">Uložiť</string>
+<string name="dialog_delete">Vymazať</string>
+<string name="dialog_backup_preupdate_title">Vyžaduje sa aktualizácia databázy</string>
+<string name="dialog_backup_preupdate_message">Nainštalovali ste novšiu verziu tejto aplikácie. Je tiež potrebné aktualizovať verziu databázy. Uloženie zálohy pred odporúčaním tejto operácie; každá chyba poškodí databázu. Ak to chcete spraviť, najprv musíte udeliť oprávnenie na uloženie záložného súboru do externého úložného priestoru. Chceli by ste uložiť zálohu pred vyžadovanej aktualizácie?</string>
+<string name="dialog_intent_search_option_query">Dotaz:</string>
+<string name="dialog_intent_search_option_only_current_folder">Iba aktuálny &lc_folder;</string>
+<string name="dialog_backup_done">Zálohovanie databázy bolo dokončené</string>
+<string name="dialog_backup_failed">Nie je možné vykonať zálohovanie!</string>
+<string name="dialog_backup_usefolder">Zmeniť predvolený výstupný adresár</string>
+<string name="dialog_restore_now">Obnovenie zálohy úplne nahradí všetky informácie, ktoré sa aktuálne nachádzajú v databáze. Pokračovať?</string>
+<string name="dialog_restore_done">Databáza bola úspešne obnovená</string>
+<string name="dialog_restore_failed">Nie je možné obnoviť databázu!</string>
+<string name="dialog_restore_notfound">Nebolo možné nájsť zálohu na externom úložnom priestore!</string>
+<string name="dialog_html_export_option_only_current_folder">Iba exportovať aktuálne &lc_folder; a jeho potomkovia</string>
+<string name="dialog_html_export_option_include_hidden">Zahrnúť skryté &lc_folders;</string>
+<string name="dialog_html_export_done">HTML export bol dokončený</string>
+<string name="dialog_html_export_failed">Nie je možné vykonať export!</string>
+<string name="dialog_html_import_option_allow_existing_folders">Povoliť pridávanie &lc_bookmarks; na existujúce &lc_folders;</string>
+<string name="dialog_html_import_option_allow_duplicate_urls_global">Povoliť duplikát URLs globálne</string>
+<string name="dialog_html_import_option_allow_duplicate_urls_folder">Povoliť duplikát URLs v zložke</string>
+<string name="dialog_html_import_done">HTML úspešne importované</string>
+<string name="dialog_html_import_failed">Nie je možné importovať HTML!</string>
+<string name="dialog_html_import_notfound">Nepodarilo sa nájsť HTML súbor na externej pamäti!</string>
+<string name="dialog_delete_folder_title">Vymazať &folder;?</string>
+<string name="dialog_delete_intent_title">Vymazať &bookmark;?</string>
+<string name="dialog_delete_confirm">Ste si istý, že chcete vymazať "%s"?</string>
+<string name="folder_rename_title">Premenovať &folder;</string>
+<string name="folder_attribute_name">Názov</string>
+<string name="intent_edit_title">Upraviť &bookmark;</string>
+<string name="intent_attribute_folder">&folder;</string>
+<string name="intent_attribute_flags">Príznaky</string>
+<string name="intent_attribute_action">Akcia</string>
+<string name="intent_attribute_package_name">Názov balíka</string>
+<string name="intent_attribute_class_name">Názov triedy</string>
+<string name="intent_attribute_data_uri">Údaje URI</string>
+<string name="intent_attribute_data_type">Údaje (MIME) Typ</string>
+<string name="intent_attribute_categories">Kategórie</string>
+<string name="intent_attribute_extras">Extras</string>
+<string name="dialog_update_intent_attribute_category_title">Aktualizovať kategóriu</string>
+<string name="dialog_update_intent_attribute_extra_title_add">Pridať extra</string>
+<string name="dialog_update_intent_attribute_extra_title_edit">Aktualizovať extra</string>
+<string name="dialog_update_intent_attribute_extra_value_type">Typ hodnoty</string>
+<string name="dialog_update_intent_attribute_extra_value">Hodnota</string>
+<string name="dialog_update_intent_attribute_extra_value_separator">Pridať oddeľovač zoznamu hodnôt</string>
+<string name="messages_db_error_update">Nastala databázová chyba počas aktualizácie</string>
+<string name="messages_no_permission">Nedostatočné oprávnenie na vykonanie požadovanej operácie</string>
+<string name="messages_activity_not_found">Žiadna aktivita sa nezhoduje s Intent</string>
+<string name="default_intent_action">-- spoločné hodnoty --</string>
+</resources>

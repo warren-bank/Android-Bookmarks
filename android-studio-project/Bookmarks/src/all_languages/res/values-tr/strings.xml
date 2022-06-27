@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE resources [
+    <!ENTITY folder        "Klasör">
+    <!ENTITY folders       "Klasörler">
+    <!ENTITY lc_folder     "klasör">
+    <!ENTITY lc_folders    "klasörler">
+    <!ENTITY bookmark      "Yer İşareti">
+    <!ENTITY bookmarks     "Yer İşaretleri">
+    <!ENTITY lc_bookmark   "yer imi">
+    <!ENTITY lc_bookmarks  "yer işaretleri">
+]>
+<resources>
+<string name="app_name_long">&bookmarks;</string>
+<string name="layout_main_no_intents_in_folder">Hayır &bookmarks; bulunan.</string>
+<string name="layout_main_no_results_for_search">Arama sonucu bulunamadı.</string>
+<string name="layout_main_results_for_search_label">Sonuçlar::</string>
+<string name="menu_actionbar_intent_search">Ara</string>
+<string name="menu_actionbar_folder_add">Ekle &folder;</string>
+<string name="menu_actionbar_intent_add">Ekle &bookmark;</string>
+<string name="menu_actionbar_move_complete">Yürürlüktekine Taşı &folder;</string>
+<string name="menu_actionbar_move_cancel">Taşı İptal Et</string>
+<string name="menu_actionbar_settings">Ayarlar</string>
+<string name="menu_actionbar_db_backup">Yedek Veritabanı</string>
+<string name="menu_actionbar_db_restore">Veritabanını Geri Yükle</string>
+<string name="menu_actionbar_db_html_export">Dışa Aktar HTML</string>
+<string name="menu_actionbar_db_html_import">İçe aktarma kaynağı HTML</string>
+<string name="menu_actionbar_exit">Çıkış</string>
+<string name="menu_context_folder_hide">Gizle</string>
+<string name="menu_context_folder_unhide">Saklamayı Kaldır</string>
+<string name="menu_context_folder_rename">Yeniden Adlandır</string>
+<string name="menu_context_folder_move">Taşı</string>
+<string name="menu_context_folder_delete">Sil</string>
+<string name="menu_context_intent_broadcast">Yayın Gönder</string>
+<string name="menu_context_intent_edit">Düzenle</string>
+<string name="menu_context_intent_copy">Kopyala</string>
+<string name="menu_context_intent_add_shortcut">Kısayol Ekle</string>
+<string name="settings_option_show_hidden">Gizlenmeyi göster &lc_folders;</string>
+<string name="settings_option_auto_backup">Otomatik günlük yedeklemeyi gerçekleştir</string>
+<string name="settings_option_backup_versioning">3 en son otomatik günlük yedeklemeleri alıkoy</string>
+<string name="settings_option_startup_folder">İlk &lc_folder; başlatma sırasında görüntülemek için:</string>
+<string name="settings_option_output_directory">Yedeklemeler ve dışa aktarmaya ilişkin varsayılan çıkış dizini:</string>
+<string name="dialog_ok">OK</string>
+<string name="dialog_cancel">İptal</string>
+<string name="dialog_add">Ekle</string>
+<string name="dialog_add_more">Ekle ...</string>
+<string name="dialog_change">Değiştir ...</string>
+<string name="dialog_save">Kaydet</string>
+<string name="dialog_delete">Sil</string>
+<string name="dialog_backup_preupdate_title">Veritabanı Güncellemesi Gerekiyor</string>
+<string name="dialog_backup_preupdate_message">Bu uygulamanın daha yeni bir sürümünü kurdun. Veritabanının sürümü de güncelleştirilmesi gerekiyor. Bu işlem önerilmeden önce bir yedeğin kaydedilmesi önerilir; herhangi bir hata veri tabanını bozacaktır. Bunu yapmak için, önce yedek dosyasını dış depolamaya kaydetmeniz için izin vermeniz gerekir. Gerekli güncelleştirmeden önce bir yedek kaydetmek istiyor musunuz\??</string>
+<string name="dialog_intent_search_option_query">Sorgu:</string>
+<string name="dialog_intent_search_option_only_current_folder">Yalnızca geçerli &lc_folder;</string>
+<string name="dialog_backup_done">Veritabanı yedekleme işlemi tamamlandı</string>
+<string name="dialog_backup_failed">Yedekleme gerçekleştirilemedi!</string>
+<string name="dialog_backup_usefolder">Varsayılan Çıkış Dizinini Değiştir</string>
+<string name="dialog_restore_now">Bir yedeği geri yükleme işlemi, veritabanında bulunan tüm bilgileri tamamen değiştirir. Devam?</string>
+<string name="dialog_restore_done">Veritabanı başarıyla geri yüklendi</string>
+<string name="dialog_restore_failed">Veritabanı geri yüklenemiyor!</string>
+<string name="dialog_restore_notfound">Dış depolamadaki yedekleme bulunamadı!</string>
+<string name="dialog_html_export_option_only_current_folder">Yalnızca geçerli dışa aktarma akımı &lc_folder; ve alt öğeleri</string>
+<string name="dialog_html_export_option_include_hidden">Gizlenmeyi içer &lc_folders;</string>
+<string name="dialog_html_export_done">HTML dışa aktarma tamamlandı</string>
+<string name="dialog_html_export_failed">Dışa aktarma gerçekleştirilemedi!</string>
+<string name="dialog_html_import_option_allow_existing_folders">Eklemeye izin ver &lc_bookmarks; var olan &lc_folders;</string>
+<string name="dialog_html_import_option_allow_duplicate_urls_global">Yinelenen izin ver URLs genel olarak</string>
+<string name="dialog_html_import_option_allow_duplicate_urls_folder">Yinelenen izin ver URLs klasör başına</string>
+<string name="dialog_html_import_done">HTML başarıyla içe aktarıldı</string>
+<string name="dialog_html_import_failed">İçe aktarılamıyor HTML!</string>
+<string name="dialog_html_import_notfound">Bulunamadı HTML dış depolamadaki dosya!</string>
+<string name="dialog_delete_folder_title">Sil &folder;?</string>
+<string name="dialog_delete_intent_title">Sil &bookmark;?</string>
+<string name="dialog_delete_confirm">Silmek istediğinizden emin misiniz\? "%s"?</string>
+<string name="folder_rename_title">Yeniden Adlandır &folder;</string>
+<string name="folder_attribute_name">Ad</string>
+<string name="intent_edit_title">Düzenle &bookmark;</string>
+<string name="intent_attribute_folder">&folder;</string>
+<string name="intent_attribute_flags">İşaretler</string>
+<string name="intent_attribute_action">Eylem</string>
+<string name="intent_attribute_package_name">Paket Adı</string>
+<string name="intent_attribute_class_name">Sınıf Adı</string>
+<string name="intent_attribute_data_uri">Veri URI</string>
+<string name="intent_attribute_data_type">Veri (MIME) Tip</string>
+<string name="intent_attribute_categories">Kategoriler</string>
+<string name="intent_attribute_extras">Ekstralar</string>
+<string name="dialog_update_intent_attribute_category_title">Kategoriyi Güncelleştir</string>
+<string name="dialog_update_intent_attribute_extra_title_add">Fazladan Ekle</string>
+<string name="dialog_update_intent_attribute_extra_title_edit">Ek Güncelleme</string>
+<string name="dialog_update_intent_attribute_extra_value_type">Değer Tipi</string>
+<string name="dialog_update_intent_attribute_extra_value">Değer</string>
+<string name="dialog_update_intent_attribute_extra_value_separator">Değer Listesi Ayırıcısı Ekle</string>
+<string name="messages_db_error_update">Güncelleme sırasında veritabanı hatası oluştu</string>
+<string name="messages_no_permission">İstenen işlemi gerçekleştirmek için izin yetersiz</string>
+<string name="messages_activity_not_found">Etkinlik hiçbir etkinlik ile eşleşmedi Intent</string>
+<string name="default_intent_action">-- ortak değerler --</string>
+</resources>

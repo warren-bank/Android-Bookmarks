@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE resources [
+    <!ENTITY folder        "Dosar">
+    <!ENTITY folders       "Dosare">
+    <!ENTITY lc_folder     "dosar">
+    <!ENTITY lc_folders    "foldere">
+    <!ENTITY bookmark      "Marcaj">
+    <!ENTITY bookmarks     "Marcaje">
+    <!ENTITY lc_bookmark   "Marcaj">
+    <!ENTITY lc_bookmarks  "marcaje">
+]>
+<resources>
+<string name="app_name_long">&bookmarks;</string>
+<string name="layout_main_no_intents_in_folder">Nr. &bookmarks; găsit.</string>
+<string name="layout_main_no_results_for_search">Nu există rezultate de căutare.</string>
+<string name="layout_main_results_for_search_label">Rezultate pentru:</string>
+<string name="menu_actionbar_intent_search">Căutare</string>
+<string name="menu_actionbar_folder_add">Adaugă &folder;</string>
+<string name="menu_actionbar_intent_add">Adaugă &bookmark;</string>
+<string name="menu_actionbar_move_complete">Mută la curent &folder;</string>
+<string name="menu_actionbar_move_cancel">Anulează Mutare</string>
+<string name="menu_actionbar_settings">Setări</string>
+<string name="menu_actionbar_db_backup">Baza de date de rezervă</string>
+<string name="menu_actionbar_db_restore">Restabilește baza de date</string>
+<string name="menu_actionbar_db_html_export">Exportă în HTML</string>
+<string name="menu_actionbar_db_html_import">Importă din HTML</string>
+<string name="menu_actionbar_exit">Ieșire</string>
+<string name="menu_context_folder_hide">Ascunde</string>
+<string name="menu_context_folder_unhide">Unhide</string>
+<string name="menu_context_folder_rename">Redenumire</string>
+<string name="menu_context_folder_move">Mutare</string>
+<string name="menu_context_folder_delete">Șterge</string>
+<string name="menu_context_intent_broadcast">Trimite un mesaj</string>
+<string name="menu_context_intent_edit">Editează</string>
+<string name="menu_context_intent_copy">Copiere</string>
+<string name="menu_context_intent_add_shortcut">Adaugă scurtătură</string>
+<string name="settings_option_show_hidden">Arată ascuns &lc_folders;</string>
+<string name="settings_option_auto_backup">Efectuați backup zilnic automat</string>
+<string name="settings_option_backup_versioning">Păstrați cele mai recente 3 backup-uri zilnice automate</string>
+<string name="settings_option_startup_folder">Inițială &lc_folder; pentru a afișa la pornire:</string>
+<string name="settings_option_output_directory">Director de ieșire implicit pentru backup-uri și exporturi:</string>
+<string name="dialog_ok">OK</string>
+<string name="dialog_cancel">Anulează</string>
+<string name="dialog_add">Adaugă</string>
+<string name="dialog_add_more">Adaugă ...</string>
+<string name="dialog_change">Schimbare ...</string>
+<string name="dialog_save">Salvează</string>
+<string name="dialog_delete">Șterge</string>
+<string name="dialog_backup_preupdate_title">Actualizarea bazei de date este necesară</string>
+<string name="dialog_backup_preupdate_message">Ați instalat o versiune mai nouă a acestei aplicații. Versiunea bazei de date trebuie, de asemenea, să fie actualizată. Salvarea unui backup inainte de aceasta operatiune este recomandata; orice eroare va corupe baza de date. Pentru a face acest lucru, trebuie să acordați mai întâi permisiunea de a salva fișierul de rezervă la stocarea externă. Doriți să salvați o copie de rezervă înainte de actualizarea necesară?</string>
+<string name="dialog_intent_search_option_query">Query:</string>
+<string name="dialog_intent_search_option_only_current_folder">Numai curent &lc_folder;</string>
+<string name="dialog_backup_done">Backup baze de date completate</string>
+<string name="dialog_backup_failed">Imposibil de efectuat backup!</string>
+<string name="dialog_backup_usefolder">Schimbați directorul de ieșire implicit</string>
+<string name="dialog_restore_now">Restaurarea unui backup va înlocui complet toate informațiile aflate în prezent în baza de date. Continuă?</string>
+<string name="dialog_restore_done">Baza de date restaurată</string>
+<string name="dialog_restore_failed">Nu se poate restaura baza!</string>
+<string name="dialog_restore_notfound">Nu a putut găsi de rezervă pe stocare externă!</string>
+<string name="dialog_html_export_option_only_current_folder">Numai curent de export &lc_folder; și descendenții</string>
+<string name="dialog_html_export_option_include_hidden">Include ascunse &lc_folders;</string>
+<string name="dialog_html_export_done">HTML export completat</string>
+<string name="dialog_html_export_failed">Imposibil de efectuat exportul!</string>
+<string name="dialog_html_import_option_allow_existing_folders">Permite adăugarea &lc_bookmarks; la existent &lc_folders;</string>
+<string name="dialog_html_import_option_allow_duplicate_urls_global">Permite duplicarea URLs la nivel global</string>
+<string name="dialog_html_import_option_allow_duplicate_urls_folder">Permite duplicarea URLs per dosar</string>
+<string name="dialog_html_import_done">HTML importate cu succes</string>
+<string name="dialog_html_import_failed">Imposibil de importat HTML!</string>
+<string name="dialog_html_import_notfound">Nu a putut găsi HTML fișier de stocare externă!</string>
+<string name="dialog_delete_folder_title">Șterge &folder;?</string>
+<string name="dialog_delete_intent_title">Șterge &bookmark;?</string>
+<string name="dialog_delete_confirm">Eşti sigur că vrei să ştergi "%s"?</string>
+<string name="folder_rename_title">Redenumire &folder;</string>
+<string name="folder_attribute_name">Nume</string>
+<string name="intent_edit_title">Editează &bookmark;</string>
+<string name="intent_attribute_folder">&folder;</string>
+<string name="intent_attribute_flags">Steaguri</string>
+<string name="intent_attribute_action">Acțiune</string>
+<string name="intent_attribute_package_name">Nume pachet</string>
+<string name="intent_attribute_class_name">Nume de clasă</string>
+<string name="intent_attribute_data_uri">Date URI</string>
+<string name="intent_attribute_data_type">Date (MIME) Tip</string>
+<string name="intent_attribute_categories">Categorii</string>
+<string name="intent_attribute_extras">Extras</string>
+<string name="dialog_update_intent_attribute_category_title">Actualizare Categorie</string>
+<string name="dialog_update_intent_attribute_extra_title_add">Adaugă în plus</string>
+<string name="dialog_update_intent_attribute_extra_title_edit">Actualizare Extra</string>
+<string name="dialog_update_intent_attribute_extra_value_type">Tipul de valoare</string>
+<string name="dialog_update_intent_attribute_extra_value">Valoare</string>
+<string name="dialog_update_intent_attribute_extra_value_separator">Separator de liste de valori</string>
+<string name="messages_db_error_update">Eroare de baze de date</string>
+<string name="messages_no_permission">Permisiunea insuficientă de efectuare a operațiunii solicitate</string>
+<string name="messages_activity_not_found">Nicio activitate nu se potrivește cu Intent</string>
+<string name="default_intent_action">-- valori comune --</string>
+</resources>

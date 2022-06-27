@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE resources [
+    <!ENTITY folder        "ફોલ્ડર">
+    <!ENTITY folders       "ફોલ્ડરો">
+    <!ENTITY lc_folder     "ફોલ્ડર">
+    <!ENTITY lc_folders    "ફોલ્ડરો">
+    <!ENTITY bookmark      "બુકમાર્ક">
+    <!ENTITY bookmarks     "બુકમાર્કો">
+    <!ENTITY lc_bookmark   "બુકમાર્ક">
+    <!ENTITY lc_bookmarks  "બુકમાર્કો">
+]>
+<resources>
+<string name="app_name_long">&bookmarks;</string>
+<string name="layout_main_no_intents_in_folder">ના &bookmarks; મળ્યુ.</string>
+<string name="layout_main_no_results_for_search">શોધ પરિણામો શોધાયુ નથી.</string>
+<string name="layout_main_results_for_search_label">માટે પરિણામો:</string>
+<string name="menu_actionbar_intent_search">શોધો</string>
+<string name="menu_actionbar_folder_add">ઉમેરો &folder;</string>
+<string name="menu_actionbar_intent_add">ઉમેરો &bookmark;</string>
+<string name="menu_actionbar_move_complete">હાલમાં ખસેડો &folder;</string>
+<string name="menu_actionbar_move_cancel">ખસેડવાનું રદ કરો</string>
+<string name="menu_actionbar_settings">સુયોજનો</string>
+<string name="menu_actionbar_db_backup">બેકઅપ ડેટાબેઝ</string>
+<string name="menu_actionbar_db_restore">ડેટાબેઝ પુનઃસંગ્રહો</string>
+<string name="menu_actionbar_db_html_export">માં નિકાસ કરો HTML</string>
+<string name="menu_actionbar_db_html_import">માંથી આયાત કરો HTML</string>
+<string name="menu_actionbar_exit">બહાર નીકળવો</string>
+<string name="menu_context_folder_hide">છુપાવો</string>
+<string name="menu_context_folder_unhide">છુપાવો નહિં</string>
+<string name="menu_context_folder_rename">નામ બદલો</string>
+<string name="menu_context_folder_move">ખસેડો</string>
+<string name="menu_context_folder_delete">કાઢી નાંખો</string>
+<string name="menu_context_intent_broadcast">બ્રોડકાસ્ટ મોકલો</string>
+<string name="menu_context_intent_edit">ફેરફાર કરો</string>
+<string name="menu_context_intent_copy">નકલ કરો</string>
+<string name="menu_context_intent_add_shortcut">ટુંકાણ ઉમેરો</string>
+<string name="settings_option_show_hidden">છુપાયેલ બતાવો &lc_folders;</string>
+<string name="settings_option_auto_backup">આપોઆપ દરરોજ બેકઅપ કરો</string>
+<string name="settings_option_backup_versioning">3 તાજેતરનાં આપોઆપ આપોઆપ આપોઆપ બેકઅપ રાખો</string>
+<string name="settings_option_startup_folder">પ્રારંભિક &lc_folder; શરૂઆતમાં દર્શાવવા માટે:</string>
+<string name="settings_option_output_directory">બેકઅપ અને નિકાસ માટે મૂળભૂત આઉટપુટ ડિરેક્ટરી:</string>
+<string name="dialog_ok">OK</string>
+<string name="dialog_cancel">રદ કરો</string>
+<string name="dialog_add">ઉમેરો</string>
+<string name="dialog_add_more">ઉમેરો ...</string>
+<string name="dialog_change">બદલો ...</string>
+<string name="dialog_save">સંગ્રહ કરો</string>
+<string name="dialog_delete">કાઢી નાંખો</string>
+<string name="dialog_backup_preupdate_title">ડેટાબેઝ સુધારો જરૂરી છે</string>
+<string name="dialog_backup_preupdate_message">તમે આ કાર્યક્રમની નવી આવૃત્તિ સ્થાપિત કરી છે. ડેટાબેઝની આવૃત્તિ પણ સુધારવા જરૂરી છે. આ ક્રિયાને સૂચિત કરતાં પહેલાં બેકઅપ સંગ્રહ કરો; કોઇપણ ભૂલ ડેટાબેઝને બચાવશે. આમ કરવા માટે, તમે બેકઅપ ફાઈલને બાહ્ય સંગ્રહસ્થાન સંગ્રહવા માટે પહેલા પરવાનગી આપવી જ પડશે. શું તમે જરૂરી સુધારા પહેલાં બેકઅપ સંગ્રહવા માંગો છો?</string>
+<string name="dialog_intent_search_option_query">ક્વેરી:</string>
+<string name="dialog_intent_search_option_only_current_folder">ફક્ત હાલની &lc_folder;</string>
+<string name="dialog_backup_done">ડેટાબેઝ બેકઅપ સમાપ્ત</string>
+<string name="dialog_backup_failed">બેકઅપ ચલાવવાનું અસમર્થ!</string>
+<string name="dialog_backup_usefolder">મૂળભૂત આઉટપુટ ડિરેક્ટરી બદલો</string>
+<string name="dialog_restore_now">બેકઅપ પુનઃસંગ્રહવાનું વર્તમાનમાં ડેટાબેઝમાં બધી જાણકારી સંપૂર્ણપણે બદલશે. ચાલુ રાખો?</string>
+<string name="dialog_restore_done">ડેટાબેઝ સફળતાપૂર્વક</string>
+<string name="dialog_restore_failed">ડેટાબેઝ પુન: સંગ્રહ કરવામાં અસમર્થ!</string>
+<string name="dialog_restore_notfound">બાહ્ય સંગ્રહ પર બેકઅપ શોધી શક્યા નહિં!</string>
+<string name="dialog_html_export_option_only_current_folder">ફક્ત હાલની નિકાસ કરો &lc_folder; અને તેના વંશનો</string>
+<string name="dialog_html_export_option_include_hidden">છુપાયેલ સમાવો &lc_folders;</string>
+<string name="dialog_html_export_done">HTML નિકાસ સમાપ્ત થયેલ છે</string>
+<string name="dialog_html_export_failed">નિકાસ કરવાનું અસમર્થ!</string>
+<string name="dialog_html_import_option_allow_existing_folders">ઉમેરવાનું પરવાનગી આપો &lc_bookmarks; હાલની &lc_folders;</string>
+<string name="dialog_html_import_option_allow_duplicate_urls_global">નકલ ને પરવાનગી આપો URLs વૈશ્વિક રીતે</string>
+<string name="dialog_html_import_option_allow_duplicate_urls_folder">નકલ ને પરવાનગી આપો URLs પ્રતિ ફોલ્ડર</string>
+<string name="dialog_html_import_done">HTML આયાત થયેલ સફળ</string>
+<string name="dialog_html_import_failed">આયાત કરવાનું અસમર્થ HTML!</string>
+<string name="dialog_html_import_notfound">શોધી શક્યા નહિં HTML બાહ્ય સંગ્રહ પર ફાઇલ!</string>
+<string name="dialog_delete_folder_title">કાઢી નાંખો &folder;?</string>
+<string name="dialog_delete_intent_title">કાઢી નાંખો &bookmark;?</string>
+<string name="dialog_delete_confirm">શું તમે ખરેખર કાઢી નાંખવા માંગો છો "%s"?</string>
+<string name="folder_rename_title">નામ બદલો &folder;</string>
+<string name="folder_attribute_name">નામ</string>
+<string name="intent_edit_title">ફેરફાર કરો &bookmark;</string>
+<string name="intent_attribute_folder">&folder;</string>
+<string name="intent_attribute_flags">ફ્લેગો</string>
+<string name="intent_attribute_action">ક્રિયા</string>
+<string name="intent_attribute_package_name">પેકેજ નામ</string>
+<string name="intent_attribute_class_name">વર્ગ નામ</string>
+<string name="intent_attribute_data_uri">માહિતી URI</string>
+<string name="intent_attribute_data_type">માહિતી (MIME) પ્રકાર</string>
+<string name="intent_attribute_categories">વર્ગો</string>
+<string name="intent_attribute_extras">એક્સટ્રો</string>
+<string name="dialog_update_intent_attribute_category_title">વર્ગ સુધારો</string>
+<string name="dialog_update_intent_attribute_extra_title_add">વધારાને ઉમેરો</string>
+<string name="dialog_update_intent_attribute_extra_title_edit">વધારાને સુધારો</string>
+<string name="dialog_update_intent_attribute_extra_value_type">કિંમતનો પ્રકાર</string>
+<string name="dialog_update_intent_attribute_extra_value">કિંમત</string>
+<string name="dialog_update_intent_attribute_extra_value_separator">કિંમત યાદી વિભાજક ઉમેરો</string>
+<string name="messages_db_error_update">ડેટાબેઝ ભૂલ જ્યારે સુધારી રહ્યા હોય</string>
+<string name="messages_no_permission">સૂચિત પ્રક્રિયા કરવા માટે અપૂરતી પરવાનગી આપો</string>
+<string name="messages_activity_not_found">ક્રિયા બંધબેસતા નથી Intent</string>
+<string name="default_intent_action">-- સામાન્ય કિંમતો --</string>
+</resources>

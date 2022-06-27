@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE resources [
+    <!ENTITY folder        "Папка:">
+    <!ENTITY folders       "Папки:">
+    <!ENTITY lc_folder     "папка:">
+    <!ENTITY lc_folders    "папки,">
+    <!ENTITY bookmark      "Отметка">
+    <!ENTITY bookmarks     "Показалци">
+    <!ENTITY lc_bookmark   "Отметка:">
+    <!ENTITY lc_bookmarks  "Показалци">
+]>
+<resources>
+<string name="app_name_long">&bookmarks;</string>
+<string name="layout_main_no_intents_in_folder">Не! &bookmarks; -.</string>
+<string name="layout_main_no_results_for_search">Не са намерени резултати от търсене.</string>
+<string name="layout_main_results_for_search_label">Резултати за::</string>
+<string name="menu_actionbar_intent_search">Търсене!</string>
+<string name="menu_actionbar_folder_add">Добави: &folder;</string>
+<string name="menu_actionbar_intent_add">Добави: &bookmark;</string>
+<string name="menu_actionbar_move_complete">Преместване на ток &folder;</string>
+<string name="menu_actionbar_move_cancel">Отмяна на преместване</string>
+<string name="menu_actionbar_settings">Настройки:</string>
+<string name="menu_actionbar_db_backup">Резервна база данни</string>
+<string name="menu_actionbar_db_restore">Възстановена база данни</string>
+<string name="menu_actionbar_db_html_export">Износ за HTML</string>
+<string name="menu_actionbar_db_html_import">Импортиране от HTML</string>
+<string name="menu_actionbar_exit">Изход:</string>
+<string name="menu_context_folder_hide">Кожа!</string>
+<string name="menu_context_folder_unhide">Скрий се!</string>
+<string name="menu_context_folder_rename">Име:</string>
+<string name="menu_context_folder_move">Мърдай!</string>
+<string name="menu_context_folder_delete">Изтриване.</string>
+<string name="menu_context_intent_broadcast">Изпращане на излъчване</string>
+<string name="menu_context_intent_edit">Редакция:</string>
+<string name="menu_context_intent_copy">Копие:</string>
+<string name="menu_context_intent_add_shortcut">Добавяне на пряк път</string>
+<string name="settings_option_show_hidden">Показване на скрит &lc_folders;</string>
+<string name="settings_option_auto_backup">Извършване на автоматично ежедневно архивиране</string>
+<string name="settings_option_backup_versioning">Пазете 3-те най-скорошни автоматични ежедневни архивирания</string>
+<string name="settings_option_startup_folder">1. &lc_folder; да се показва при стартиране:</string>
+<string name="settings_option_output_directory">Изходна директория по подразбиране за архивирания и експорта:</string>
+<string name="dialog_ok">OK</string>
+<string name="dialog_cancel">Отмяна\?</string>
+<string name="dialog_add">Добави:</string>
+<string name="dialog_add_more">Добави ...</string>
+<string name="dialog_change">Промени се ...</string>
+<string name="dialog_save">Запис!</string>
+<string name="dialog_delete">Изтриване.</string>
+<string name="dialog_backup_preupdate_title">Изисква се обновяване на базата данни</string>
+<string name="dialog_backup_preupdate_message">Инсталирали сте по-нова версия на това приложение. Версията на базата данни също трябва да бъде актуализирана. Запазване на архив преди тази операция да бъде препоръчана; всяка грешка ще повреди базата данни. За да направите това, трябва първо да предостаните разрешение за запазване на архивния файл за външно съхранение. Желаете ли да запазите архивно копие, преди изискваната актуализация?</string>
+<string name="dialog_intent_search_option_query">Заявка::</string>
+<string name="dialog_intent_search_option_only_current_folder">Само ток. &lc_folder;</string>
+<string name="dialog_backup_done">Архивиране на база данни</string>
+<string name="dialog_backup_failed">Не може да се изпълни архивиране!</string>
+<string name="dialog_backup_usefolder">Промяна на изходяща директория по подразбиране</string>
+<string name="dialog_restore_now">Възстановяването на архивно копие напълно ще замени цялата информация, която понастоящем е в базата данни. Продължи:?</string>
+<string name="dialog_restore_done">Базата данни е възстановена успешно</string>
+<string name="dialog_restore_failed">Невъзможно възстановяване на база данни!</string>
+<string name="dialog_restore_notfound">Не можа да се намери архивиране на външното хранилище!</string>
+<string name="dialog_html_export_option_only_current_folder">Само за износ ток &lc_folder; и неговите потомци.</string>
+<string name="dialog_html_export_option_include_hidden">Включване на скрити &lc_folders;</string>
+<string name="dialog_html_export_done">HTML експортиране завърши</string>
+<string name="dialog_html_export_failed">Не може да се извърши износ!</string>
+<string name="dialog_html_import_option_allow_existing_folders">Разрешаване на добавяне &lc_bookmarks; към съществуващи &lc_folders;</string>
+<string name="dialog_html_import_option_allow_duplicate_urls_global">Позволява дубликат URLs в световен мащаб</string>
+<string name="dialog_html_import_option_allow_duplicate_urls_folder">Позволява дубликат URLs по папка</string>
+<string name="dialog_html_import_done">HTML импортирани успешно</string>
+<string name="dialog_html_import_failed">Не може да импортира HTML!</string>
+<string name="dialog_html_import_notfound">Не можах да намеря. HTML файл за външно съхранение!</string>
+<string name="dialog_delete_folder_title">Изтриване. &folder;?</string>
+<string name="dialog_delete_intent_title">Изтриване. &bookmark;?</string>
+<string name="dialog_delete_confirm">Сигурни ли сте, че искате да изтриете "%s"?</string>
+<string name="folder_rename_title">Име: &folder;</string>
+<string name="folder_attribute_name">Име:</string>
+<string name="intent_edit_title">Редакция: &bookmark;</string>
+<string name="intent_attribute_folder">&folder;</string>
+<string name="intent_attribute_flags">Флаг:</string>
+<string name="intent_attribute_action">1.</string>
+<string name="intent_attribute_package_name">Име на пакет</string>
+<string name="intent_attribute_class_name">Име на клас</string>
+<string name="intent_attribute_data_uri">Данни: URI</string>
+<string name="intent_attribute_data_type">Данни: (MIME) Тип:</string>
+<string name="intent_attribute_categories">Категории:</string>
+<string name="intent_attribute_extras">Екстри.</string>
+<string name="dialog_update_intent_attribute_category_title">Категория на актуализиране</string>
+<string name="dialog_update_intent_attribute_extra_title_add">Добавяне на допълнително</string>
+<string name="dialog_update_intent_attribute_extra_title_edit">Обновяване на допълнително</string>
+<string name="dialog_update_intent_attribute_extra_value_type">Тип на стойността:</string>
+<string name="dialog_update_intent_attribute_extra_value">Стойност:</string>
+<string name="dialog_update_intent_attribute_extra_value_separator">Добавяне на разделител за списък с стойности</string>
+<string name="messages_db_error_update">Грешка в базата данни при актуализиране</string>
+<string name="messages_no_permission">Недостатъчни права за изпълнение на заявената операция</string>
+<string name="messages_activity_not_found">Никоя дейност не отговаря на Intent</string>
+<string name="default_intent_action">-- общи стойности: --</string>
+</resources>

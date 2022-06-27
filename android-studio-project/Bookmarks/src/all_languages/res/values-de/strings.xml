@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE resources [
+    <!ENTITY folder        "Ordner">
+    <!ENTITY folders       "Ordner">
+    <!ENTITY lc_folder     "Ordner">
+    <!ENTITY lc_folders    "Ordner">
+    <!ENTITY bookmark      "Lesezeichen">
+    <!ENTITY bookmarks     "Lesezeichen">
+    <!ENTITY lc_bookmark   "Lesezeichen">
+    <!ENTITY lc_bookmarks  "Lesezeichen">
+]>
+<resources>
+<string name="app_name_long">&bookmarks;</string>
+<string name="layout_main_no_intents_in_folder">Nein &bookmarks; Gefunden.</string>
+<string name="layout_main_no_results_for_search">Keine Suchergebnisse gefunden.</string>
+<string name="layout_main_results_for_search_label">Ergebnisse für:</string>
+<string name="menu_actionbar_intent_search">Suchen</string>
+<string name="menu_actionbar_folder_add">Hinzufügen &folder;</string>
+<string name="menu_actionbar_intent_add">Hinzufügen &bookmark;</string>
+<string name="menu_actionbar_move_complete">Zu aktuell verschieben &folder;</string>
+<string name="menu_actionbar_move_cancel">Verschieben abbrechen</string>
+<string name="menu_actionbar_settings">Einstellungen</string>
+<string name="menu_actionbar_db_backup">Sicherungsdatenbank</string>
+<string name="menu_actionbar_db_restore">Datenbank wiederherstellen</string>
+<string name="menu_actionbar_db_html_export">Exportieren in HTML</string>
+<string name="menu_actionbar_db_html_import">Importieren aus HTML</string>
+<string name="menu_actionbar_exit">Beenden</string>
+<string name="menu_context_folder_hide">Ausblenden</string>
+<string name="menu_context_folder_unhide">Nicht ausblenden</string>
+<string name="menu_context_folder_rename">Umbenennen</string>
+<string name="menu_context_folder_move">Verschieben</string>
+<string name="menu_context_folder_delete">Löschen</string>
+<string name="menu_context_intent_broadcast">Broadcast senden</string>
+<string name="menu_context_intent_edit">Bearbeiten</string>
+<string name="menu_context_intent_copy">Kopieren</string>
+<string name="menu_context_intent_add_shortcut">Verknüpfung hinzufügen</string>
+<string name="settings_option_show_hidden">Verdeckt anzeigen &lc_folders;</string>
+<string name="settings_option_auto_backup">Automatische tägliche Sicherung durchführen</string>
+<string name="settings_option_backup_versioning">Die drei letzten automatischen täglichen Sicherungen beibehalten.</string>
+<string name="settings_option_startup_folder">Anfangszeit &lc_folder; um beim Start anzuzeigen:</string>
+<string name="settings_option_output_directory">Standardausgabeverzeichnis für Sicherungen und Exporte:</string>
+<string name="dialog_ok">OK</string>
+<string name="dialog_cancel">Abbrechen</string>
+<string name="dialog_add">Hinzufügen</string>
+<string name="dialog_add_more">Hinzufügen ...</string>
+<string name="dialog_change">Ändern ...</string>
+<string name="dialog_save">Speichern</string>
+<string name="dialog_delete">Löschen</string>
+<string name="dialog_backup_preupdate_title">Datenbankaktualisierung ist erforderlich</string>
+<string name="dialog_backup_preupdate_message">Sie haben eine neuere Version dieser Anwendung installiert. Die Version der Datenbank muss ebenfalls aktualisiert werden. Es wird empfohlen, eine Sicherung zu speichern, bevor diese Operation empfohlen wird. Bei Fehlern wird die Datenbank beschädigt. Dazu müssen Sie zunächst die Berechtigung zum Speichern der Sicherungsdatei in einem externen Speicher erteilen. Möchten Sie eine Sicherung vor der erforderlichen Aktualisierung speichern\??</string>
+<string name="dialog_intent_search_option_query">Abfrage:</string>
+<string name="dialog_intent_search_option_only_current_folder">Nur aktuell &lc_folder;</string>
+<string name="dialog_backup_done">Datenbanksicherung abgeschlossen</string>
+<string name="dialog_backup_failed">Sicherung kann nicht ausgeführt werden!</string>
+<string name="dialog_backup_usefolder">Standardausgabeverzeichnis ändern</string>
+<string name="dialog_restore_now">Durch das Wiederherstellen einer Sicherung werden alle derzeit in der Datenbank enthaltenen Informationen vollständig ersetzt. Weiter?</string>
+<string name="dialog_restore_done">Datenbank erfolgreich wiederhergestellt</string>
+<string name="dialog_restore_failed">Datenbank kann nicht wiederhergestellt werden!</string>
+<string name="dialog_restore_notfound">Sicherung für externen Speicher konnte nicht gefunden werden!</string>
+<string name="dialog_html_export_option_only_current_folder">Nur Exportstrom &lc_folder; und ihre Nachkommen</string>
+<string name="dialog_html_export_option_include_hidden">Verdeckte einschließen &lc_folders;</string>
+<string name="dialog_html_export_done">HTML Export abgeschlossen</string>
+<string name="dialog_html_export_failed">Export kann nicht ausgeführt werden!</string>
+<string name="dialog_html_import_option_allow_existing_folders">Hinzufügen zulassen &lc_bookmarks; auf vorhandene &lc_folders;</string>
+<string name="dialog_html_import_option_allow_duplicate_urls_global">Duplikat zulassen URLs Global</string>
+<string name="dialog_html_import_option_allow_duplicate_urls_folder">Duplikat zulassen URLs pro Ordner</string>
+<string name="dialog_html_import_done">HTML Erfolgreich importiert</string>
+<string name="dialog_html_import_failed">Import nicht möglich HTML!</string>
+<string name="dialog_html_import_notfound">Konnte nicht gefunden werden HTML Datei im externen Speicher!</string>
+<string name="dialog_delete_folder_title">Löschen &folder;?</string>
+<string name="dialog_delete_intent_title">Löschen &bookmark;?</string>
+<string name="dialog_delete_confirm">Sind Sie sicher, dass Sie löschen möchten "%s"?</string>
+<string name="folder_rename_title">Umbenennen &folder;</string>
+<string name="folder_attribute_name">Name</string>
+<string name="intent_edit_title">Bearbeiten &bookmark;</string>
+<string name="intent_attribute_folder">&folder;</string>
+<string name="intent_attribute_flags">Flags</string>
+<string name="intent_attribute_action">Aktion</string>
+<string name="intent_attribute_package_name">Paketname</string>
+<string name="intent_attribute_class_name">Klassenname</string>
+<string name="intent_attribute_data_uri">Daten URI</string>
+<string name="intent_attribute_data_type">Daten (MIME) Typ</string>
+<string name="intent_attribute_categories">Kategorien</string>
+<string name="intent_attribute_extras">Extras</string>
+<string name="dialog_update_intent_attribute_category_title">Kategorie aktualisieren</string>
+<string name="dialog_update_intent_attribute_extra_title_add">Extra hinzufügen</string>
+<string name="dialog_update_intent_attribute_extra_title_edit">Extra aktualisieren</string>
+<string name="dialog_update_intent_attribute_extra_value_type">Typ des Werts</string>
+<string name="dialog_update_intent_attribute_extra_value">Wert</string>
+<string name="dialog_update_intent_attribute_extra_value_separator">Trennzeichen für Werteliste hinzufügen</string>
+<string name="messages_db_error_update">Datenbankfehler beim Aktualisieren</string>
+<string name="messages_no_permission">Die Berechtigung zum Ausführen der angeforderten Operation ist nicht ausreichend.</string>
+<string name="messages_activity_not_found">Keine Aktivität stimmt mit der Intent</string>
+<string name="default_intent_action">-- Allgemeine Werte --</string>
+</resources>

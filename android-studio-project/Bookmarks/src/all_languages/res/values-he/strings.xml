@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE resources [
+    <!ENTITY folder        "תיקיה">
+    <!ENTITY folders       "תיקיות">
+    <!ENTITY lc_folder     "תיקיה">
+    <!ENTITY lc_folders    "תיקיות">
+    <!ENTITY bookmark      "סימניה">
+    <!ENTITY bookmarks     "סימניות">
+    <!ENTITY lc_bookmark   "סימנייה">
+    <!ENTITY lc_bookmarks  "סימניות">
+]>
+<resources>
+<string name="app_name_long">&bookmarks;</string>
+<string name="layout_main_no_intents_in_folder">לא &bookmarks; נמצא.</string>
+<string name="layout_main_no_results_for_search">לא נמצאו תוצאות חיפוש.</string>
+<string name="layout_main_results_for_search_label">תוצאות עבור:</string>
+<string name="menu_actionbar_intent_search">חיפוש</string>
+<string name="menu_actionbar_folder_add">הוספה &folder;</string>
+<string name="menu_actionbar_intent_add">הוספה &bookmark;</string>
+<string name="menu_actionbar_move_complete">העברה אל נוכחי &folder;</string>
+<string name="menu_actionbar_move_cancel">ביטול העברה</string>
+<string name="menu_actionbar_settings">הגדרות</string>
+<string name="menu_actionbar_db_backup">מסד נתונים לגיבוי</string>
+<string name="menu_actionbar_db_restore">שחזור בסיס הנתונים</string>
+<string name="menu_actionbar_db_html_export">יצוא אל HTML</string>
+<string name="menu_actionbar_db_html_import">יבוא מתוך HTML</string>
+<string name="menu_actionbar_exit">יציאה</string>
+<string name="menu_context_folder_hide">הסתרה</string>
+<string name="menu_context_folder_unhide">הסתר</string>
+<string name="menu_context_folder_rename">שינוי שם</string>
+<string name="menu_context_folder_move">העברה</string>
+<string name="menu_context_folder_delete">מחיקה</string>
+<string name="menu_context_intent_broadcast">משלוח שידור</string>
+<string name="menu_context_intent_edit">עריכה</string>
+<string name="menu_context_intent_copy">העתקה</string>
+<string name="menu_context_intent_add_shortcut">הוספת קיצור דרך</string>
+<string name="settings_option_show_hidden">הצגת מוסתר &lc_folders;</string>
+<string name="settings_option_auto_backup">ביצוע גיבוי יומי אוטומטי</string>
+<string name="settings_option_backup_versioning">להשאיר את 3 גיבויי היומיום האוטומטיים האחרונים</string>
+<string name="settings_option_startup_folder">ראשונית &lc_folder; להצגה באתחול:</string>
+<string name="settings_option_output_directory">מדריך פלט המוגדר כברירת מחדל עבור גיבויים ויצוא:</string>
+<string name="dialog_ok">OK</string>
+<string name="dialog_cancel">ביטול</string>
+<string name="dialog_add">הוספה</string>
+<string name="dialog_add_more">הוספה ...</string>
+<string name="dialog_change">שינוי ...</string>
+<string name="dialog_save">שמירה</string>
+<string name="dialog_delete">מחיקה</string>
+<string name="dialog_backup_preupdate_title">נדרש עדכון מסד נתונים</string>
+<string name="dialog_backup_preupdate_message">התקנתם גרסה חדשה יותר של יישום זה. יש לעדכן גם את מהדורת בסיס הנתונים. שמירת גיבוי לפני פעולה זו מומלצת, כל שגיאה תשחית את מסד הנתונים. לשם כך, עליכם להעניק הרשאה ראשונה כדי לשמור את קובץ הגיבוי לאחסון חיצוני. האם ברצונכם לשמור גיבוי לפני העדכון הנדרש?</string>
+<string name="dialog_intent_search_option_query">שאילתה:</string>
+<string name="dialog_intent_search_option_only_current_folder">עדכני בלבד &lc_folder;</string>
+<string name="dialog_backup_done">גיבוי מסד הנתונים הושלם</string>
+<string name="dialog_backup_failed">לא ניתן לבצע גיבוי!</string>
+<string name="dialog_backup_usefolder">שינוי מדריך פלט המוגדר כברירת מחדל</string>
+<string name="dialog_restore_now">שחזור גיבוי יחליף לחלוטין את כל המידע כעת במסד הנתונים. המשך?</string>
+<string name="dialog_restore_done">מסד הנתונים שוחזר בהצלחה</string>
+<string name="dialog_restore_failed">לא ניתן לשחזר את בסיס הנתונים!</string>
+<string name="dialog_restore_notfound">לא ניתן למצוא גיבוי באחסון חיצוני!</string>
+<string name="dialog_html_export_option_only_current_folder">יצוא נוכחי בלבד &lc_folder; וצאצאיו</string>
+<string name="dialog_html_export_option_include_hidden">הכללה מוסתרת &lc_folders;</string>
+<string name="dialog_html_export_done">HTML יצוא הושלם</string>
+<string name="dialog_html_export_failed">לא ניתן לבצע יצוא!</string>
+<string name="dialog_html_import_option_allow_existing_folders">לאפשר הוספה &lc_bookmarks; הקיים &lc_folders;</string>
+<string name="dialog_html_import_option_allow_duplicate_urls_global">לאפשר שכפול URLs גלובלי</string>
+<string name="dialog_html_import_option_allow_duplicate_urls_folder">לאפשר שכפול URLs לכל תיקיה</string>
+<string name="dialog_html_import_done">HTML יובא בהצלחה</string>
+<string name="dialog_html_import_failed">לא ניתן ליבא HTML!</string>
+<string name="dialog_html_import_notfound">לא ניתן למצוא HTML קובץ באחסון חיצוני!</string>
+<string name="dialog_delete_folder_title">מחיקה &folder;?</string>
+<string name="dialog_delete_intent_title">מחיקה &bookmark;?</string>
+<string name="dialog_delete_confirm">האם אתם בטוחים שברצונכם למחוק\? "%s"?</string>
+<string name="folder_rename_title">שינוי שם &folder;</string>
+<string name="folder_attribute_name">שם</string>
+<string name="intent_edit_title">עריכה &bookmark;</string>
+<string name="intent_attribute_folder">&folder;</string>
+<string name="intent_attribute_flags">דגלים</string>
+<string name="intent_attribute_action">פעולה</string>
+<string name="intent_attribute_package_name">שם חבילה</string>
+<string name="intent_attribute_class_name">שם מחלקה</string>
+<string name="intent_attribute_data_uri">נתונים URI</string>
+<string name="intent_attribute_data_type">נתונים (MIME) סוג</string>
+<string name="intent_attribute_categories">קטגוריות</string>
+<string name="intent_attribute_extras">הוצאות</string>
+<string name="dialog_update_intent_attribute_category_title">עדכון סיווג</string>
+<string name="dialog_update_intent_attribute_extra_title_add">הוספת אקסטרה</string>
+<string name="dialog_update_intent_attribute_extra_title_edit">עדכון נוסף</string>
+<string name="dialog_update_intent_attribute_extra_value_type">סוג ערך</string>
+<string name="dialog_update_intent_attribute_extra_value">ערך</string>
+<string name="dialog_update_intent_attribute_extra_value_separator">הוספת מפריד רשימת ערכים</string>
+<string name="messages_db_error_update">שגיאת מסד נתונים במהלך עדכון</string>
+<string name="messages_no_permission">אין הרשאות מספיקות לביצוע הפעולה המבוקשת</string>
+<string name="messages_activity_not_found">אין פעילות תואמת ל - Intent</string>
+<string name="default_intent_action">-- ערכים משותפים --</string>
+</resources>

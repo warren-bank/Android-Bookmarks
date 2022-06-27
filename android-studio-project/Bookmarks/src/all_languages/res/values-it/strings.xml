@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE resources [
+    <!ENTITY folder        "Cartella">
+    <!ENTITY folders       "Cartelle">
+    <!ENTITY lc_folder     "cartella">
+    <!ENTITY lc_folders    "cartelle">
+    <!ENTITY bookmark      "Segnalibro">
+    <!ENTITY bookmarks     "Segnalibri">
+    <!ENTITY lc_bookmark   "segnalibro">
+    <!ENTITY lc_bookmarks  "segnalibri">
+]>
+<resources>
+<string name="app_name_long">&bookmarks;</string>
+<string name="layout_main_no_intents_in_folder">No &bookmarks; trovato.</string>
+<string name="layout_main_no_results_for_search">Nessun risultato di ricerca trovato.</string>
+<string name="layout_main_results_for_search_label">Risultati per:</string>
+<string name="menu_actionbar_intent_search">Ricerca</string>
+<string name="menu_actionbar_folder_add">Aggiungi &folder;</string>
+<string name="menu_actionbar_intent_add">Aggiungi &bookmark;</string>
+<string name="menu_actionbar_move_complete">Passa a corrente &folder;</string>
+<string name="menu_actionbar_move_cancel">Annulla Move</string>
+<string name="menu_actionbar_settings">Impostazioni</string>
+<string name="menu_actionbar_db_backup">Database di backup</string>
+<string name="menu_actionbar_db_restore">Ripristinare database</string>
+<string name="menu_actionbar_db_html_export">Esporta a HTML</string>
+<string name="menu_actionbar_db_html_import">Importa da HTML</string>
+<string name="menu_actionbar_exit">Uscita</string>
+<string name="menu_context_folder_hide">Nascondi</string>
+<string name="menu_context_folder_unhide">Scopri</string>
+<string name="menu_context_folder_rename">Rinomina</string>
+<string name="menu_context_folder_move">Muovi</string>
+<string name="menu_context_folder_delete">Elimina</string>
+<string name="menu_context_intent_broadcast">Invia Broadcast</string>
+<string name="menu_context_intent_edit">Modifica</string>
+<string name="menu_context_intent_copy">Copia</string>
+<string name="menu_context_intent_add_shortcut">Aggiungi collegamento rapido</string>
+<string name="settings_option_show_hidden">Mostra nascosta &lc_folders;</string>
+<string name="settings_option_auto_backup">Eseguire backup giornaliero automatico</string>
+<string name="settings_option_backup_versioning">Tieni i 3 backup giornalieri automatici più recenti</string>
+<string name="settings_option_startup_folder">Iniziale &lc_folder; da visualizzare all\'avvio:</string>
+<string name="settings_option_output_directory">Directory di output predefinita per i backup e le esportazioni:</string>
+<string name="dialog_ok">OK</string>
+<string name="dialog_cancel">Annulla</string>
+<string name="dialog_add">Aggiungi</string>
+<string name="dialog_add_more">Aggiungi ...</string>
+<string name="dialog_change">Cambia ...</string>
+<string name="dialog_save">Salva</string>
+<string name="dialog_delete">Elimina</string>
+<string name="dialog_backup_preupdate_title">Aggiornamento database È obbligatorio</string>
+<string name="dialog_backup_preupdate_message">È stata installata una versione più recente di questa applicazione. Anche la versione del database deve essere aggiornata. Salvataggio di un backup prima che questa operazione sia consigliata; qualsiasi errore corromperà il database. Per farlo è necessario prima concedere l\'autorizzazione per salvare il file di backup in memoria esterna. Si desidera salvare un backup prima dell\'aggiornamento richiesto?</string>
+<string name="dialog_intent_search_option_query">Query:</string>
+<string name="dialog_intent_search_option_only_current_folder">Solo corrente &lc_folder;</string>
+<string name="dialog_backup_done">Backup del database completato</string>
+<string name="dialog_backup_failed">Impossibile eseguire il backup!</string>
+<string name="dialog_backup_usefolder">Modifica directory di output predefinita</string>
+<string name="dialog_restore_now">Il ripristino di un backup sostituirà completamente tutte le informazioni attualmente presenti nella banca dati. Continua?</string>
+<string name="dialog_restore_done">Database ripristinato correttamente</string>
+<string name="dialog_restore_failed">Impossibile ripristinare il database!</string>
+<string name="dialog_restore_notfound">Impossibile trovare il backup sulla memoria esterna!</string>
+<string name="dialog_html_export_option_only_current_folder">Solo corrente di esportazione &lc_folder; e i suoi discendenti</string>
+<string name="dialog_html_export_option_include_hidden">Includere nascosto &lc_folders;</string>
+<string name="dialog_html_export_done">HTML esportazione completata</string>
+<string name="dialog_html_export_failed">Impossibile eseguire l\'esportazione!</string>
+<string name="dialog_html_import_option_allow_existing_folders">Consentire l\'aggiunta &lc_bookmarks; all\'esistente &lc_folders;</string>
+<string name="dialog_html_import_option_allow_duplicate_urls_global">Consentire duplicato URLs globalmente</string>
+<string name="dialog_html_import_option_allow_duplicate_urls_folder">Consentire duplicato URLs per cartella</string>
+<string name="dialog_html_import_done">HTML importato correttamente</string>
+<string name="dialog_html_import_failed">Impossibile importare HTML!</string>
+<string name="dialog_html_import_notfound">Impossibile trovare HTML file su memoria esterna!</string>
+<string name="dialog_delete_folder_title">Elimina &folder;?</string>
+<string name="dialog_delete_intent_title">Elimina &bookmark;?</string>
+<string name="dialog_delete_confirm">Sei sicuro di voler eliminare "%s"?</string>
+<string name="folder_rename_title">Rinomina &folder;</string>
+<string name="folder_attribute_name">Nome</string>
+<string name="intent_edit_title">Modifica &bookmark;</string>
+<string name="intent_attribute_folder">&folder;</string>
+<string name="intent_attribute_flags">Bandiere</string>
+<string name="intent_attribute_action">Azione</string>
+<string name="intent_attribute_package_name">Nome del pacchetto</string>
+<string name="intent_attribute_class_name">Nome classe</string>
+<string name="intent_attribute_data_uri">Dati URI</string>
+<string name="intent_attribute_data_type">Dati (MIME) Tipo</string>
+<string name="intent_attribute_categories">Categorie</string>
+<string name="intent_attribute_extras">Extras</string>
+<string name="dialog_update_intent_attribute_category_title">Categoria aggiornamento</string>
+<string name="dialog_update_intent_attribute_extra_title_add">Aggiungi Extra</string>
+<string name="dialog_update_intent_attribute_extra_title_edit">Aggiornamento Extra</string>
+<string name="dialog_update_intent_attribute_extra_value_type">Tipo di valore</string>
+<string name="dialog_update_intent_attribute_extra_value">Valore</string>
+<string name="dialog_update_intent_attribute_extra_value_separator">Aggiungi separatore elenco valori</string>
+<string name="messages_db_error_update">Errore del database durante l\'aggiornamento</string>
+<string name="messages_no_permission">Autorizzazione insufficiente per eseguire l\'operazione richiesta</string>
+<string name="messages_activity_not_found">Nessuna attività corrisponde alla Intent</string>
+<string name="default_intent_action">-- valori comuni --</string>
+</resources>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE resources [
+    <!ENTITY folder        "文件夹">
+    <!ENTITY folders       "文件夹">
+    <!ENTITY lc_folder     "文件夹">
+    <!ENTITY lc_folders    "文件夹">
+    <!ENTITY bookmark      "书签">
+    <!ENTITY bookmarks     "书签">
+    <!ENTITY lc_bookmark   "书签">
+    <!ENTITY lc_bookmarks  "书签">
+]>
+<resources>
+<string name="app_name_long">&bookmarks;</string>
+<string name="layout_main_no_intents_in_folder">没有 &bookmarks; 发现.</string>
+<string name="layout_main_no_results_for_search">找不到搜索结果.</string>
+<string name="layout_main_results_for_search_label">结果:</string>
+<string name="menu_actionbar_intent_search">搜索</string>
+<string name="menu_actionbar_folder_add">加添 &folder;</string>
+<string name="menu_actionbar_intent_add">加添 &bookmark;</string>
+<string name="menu_actionbar_move_complete">移至当前 &folder;</string>
+<string name="menu_actionbar_move_cancel">取消移动</string>
+<string name="menu_actionbar_settings">设置</string>
+<string name="menu_actionbar_db_backup">备份数据库</string>
+<string name="menu_actionbar_db_restore">复原数据库</string>
+<string name="menu_actionbar_db_html_export">导出到 HTML</string>
+<string name="menu_actionbar_db_html_import">从 HTML</string>
+<string name="menu_actionbar_exit">退出</string>
+<string name="menu_context_folder_hide">英</string>
+<string name="menu_context_folder_unhide">温秀</string>
+<string name="menu_context_folder_rename">重命名</string>
+<string name="menu_context_folder_move">移动</string>
+<string name="menu_context_folder_delete">删除</string>
+<string name="menu_context_intent_broadcast">发送广播</string>
+<string name="menu_context_intent_edit">编辑</string>
+<string name="menu_context_intent_copy">复制</string>
+<string name="menu_context_intent_add_shortcut">添加快捷方式</string>
+<string name="settings_option_show_hidden">显示隐藏 &lc_folders;</string>
+<string name="settings_option_auto_backup">执行自动每日备份</string>
+<string name="settings_option_backup_versioning">保留 3 个最近的自动每日备份</string>
+<string name="settings_option_startup_folder">初始 &lc_folder; 在启动时显示:</string>
+<string name="settings_option_output_directory">备份和导出的缺省输出目录:</string>
+<string name="dialog_ok">OK</string>
+<string name="dialog_cancel">取消</string>
+<string name="dialog_add">加添</string>
+<string name="dialog_add_more">添加 ...</string>
+<string name="dialog_change">更改 ...</string>
+<string name="dialog_save">保存</string>
+<string name="dialog_delete">删除</string>
+<string name="dialog_backup_preupdate_title">需要数据库更新</string>
+<string name="dialog_backup_preupdate_message">您已安装此应用程序的较新版本。 数据库的版本也需要更新。 建议在此操作之前保存备份 ; 任何错误都会损坏数据库。 为此，必须先授予许可权以将备份文件保存到外部存储器。 是否要在必需的更新之前保存备份?</string>
+<string name="dialog_intent_search_option_query">查询:</string>
+<string name="dialog_intent_search_option_only_current_folder">仅当前 &lc_folder;</string>
+<string name="dialog_backup_done">数据库备份已完成</string>
+<string name="dialog_backup_failed">无法执行备份!</string>
+<string name="dialog_backup_usefolder">更改缺省输出目录</string>
+<string name="dialog_restore_now">复原备份将完全替换数据库中当前的所有信息。 继续?</string>
+<string name="dialog_restore_done">已成功复原数据库</string>
+<string name="dialog_restore_failed">无法复原数据库!</string>
+<string name="dialog_restore_notfound">在外部存储器上找不到备份!</string>
+<string name="dialog_html_export_option_only_current_folder">仅导出当前 &lc_folder; 及其后代</string>
+<string name="dialog_html_export_option_include_hidden">包含隐藏 &lc_folders;</string>
+<string name="dialog_html_export_done">HTML 导出已完成</string>
+<string name="dialog_html_export_failed">无法执行导出!</string>
+<string name="dialog_html_import_option_allow_existing_folders">允许添加 &lc_bookmarks; 到现有 &lc_folders;</string>
+<string name="dialog_html_import_option_allow_duplicate_urls_global">允许复制 URLs 全球</string>
+<string name="dialog_html_import_option_allow_duplicate_urls_folder">允许复制 URLs 每个文件夹</string>
+<string name="dialog_html_import_done">HTML 已成功导入</string>
+<string name="dialog_html_import_failed">无法导入 HTML!</string>
+<string name="dialog_html_import_notfound">找不到 HTML 外部存储器上的文件!</string>
+<string name="dialog_delete_folder_title">删除 &folder;?</string>
+<string name="dialog_delete_intent_title">删除 &bookmark;?</string>
+<string name="dialog_delete_confirm">确定要删除 "%s"?</string>
+<string name="folder_rename_title">重命名 &folder;</string>
+<string name="folder_attribute_name">名称</string>
+<string name="intent_edit_title">编辑 &bookmark;</string>
+<string name="intent_attribute_folder">&folder;</string>
+<string name="intent_attribute_flags">旗帜</string>
+<string name="intent_attribute_action">行动</string>
+<string name="intent_attribute_package_name">包名</string>
+<string name="intent_attribute_class_name">类名</string>
+<string name="intent_attribute_data_uri">数据 URI</string>
+<string name="intent_attribute_data_type">数据 (MIME) 类型</string>
+<string name="intent_attribute_categories">类别</string>
+<string name="intent_attribute_extras">Extras</string>
+<string name="dialog_update_intent_attribute_category_title">更新类别</string>
+<string name="dialog_update_intent_attribute_extra_title_add">添加额外</string>
+<string name="dialog_update_intent_attribute_extra_title_edit">更新额外</string>
+<string name="dialog_update_intent_attribute_extra_value_type">值类型</string>
+<string name="dialog_update_intent_attribute_extra_value">价值</string>
+<string name="dialog_update_intent_attribute_extra_value_separator">添加值列表分隔符</string>
+<string name="messages_db_error_update">更新时发生数据库错误</string>
+<string name="messages_no_permission">许可权不足，无法执行请求的操作</string>
+<string name="messages_activity_not_found">没有活动与 Intent</string>
+<string name="default_intent_action">-- 公共值 --</string>
+</resources>
