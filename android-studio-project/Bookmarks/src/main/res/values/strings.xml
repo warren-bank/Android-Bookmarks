@@ -13,8 +13,11 @@
 
 <resources>
 <string name="app_name_long">&bookmarks;</string>
-<string name="layout_main_no_items">No &bookmarks; found.</string>
+<string name="layout_main_no_intents_in_folder">No &bookmarks; found.</string>
+<string name="layout_main_no_results_for_search">No search results found.</string>
+<string name="layout_main_results_for_search_label">Results for:</string>
 
+<string name="menu_actionbar_intent_search">Search</string>
 <string name="menu_actionbar_folder_add">Add &folder;</string>
 <string name="menu_actionbar_intent_add">Add &bookmark;</string>
 <string name="menu_actionbar_move_complete">Move to Current &folder;</string>
@@ -56,6 +59,10 @@
 
 <string name="dialog_backup_preupdate_title">Database Update Is Required</string>
 <string name="dialog_backup_preupdate_message">You have installed a newer version of this application. The version of the database also needs to be updated. Saving a backup before this operation is recommended; any error will corrupt the database. To do so, you must first grant permission to save the backup file to external storage. Would you like to save a backup before the required update?</string>
+
+<string name="dialog_intent_search">@string/menu_actionbar_intent_search</string>
+<string name="dialog_intent_search_option_query">Query:</string>
+<string name="dialog_intent_search_option_only_current_folder">Only current &lc_folder;</string>
 
 <string name="dialog_backup">@string/menu_actionbar_db_backup</string>
 <string name="dialog_backup_done">Database backup completed</string>

@@ -329,6 +329,56 @@ public class DbGateway {
     return items;
   }
 
+  public List<FolderContentItem> searchIntents(String searchTerm, int folderId) {
+    boolean includeURL = false;
+    return searchIntents(searchTerm, folderId, includeURL);
+  }
+
+  public List<FolderContentItem> searchIntents(String searchTerm, int folderId, boolean includeURL) {
+    List<FolderContentItem> items = new ArrayList<FolderContentItem>();
+
+    if (TextUtils.isEmpty(searchTerm)) return items;
+
+    String query = "SELECT id, name"
+      + (includeURL
+          ? ", data_uri"
+          : ""
+        )
+      + " FROM intents"
+      + " WHERE"
+      + "   name LIKE " + sqlEscapeString("%" + searchTerm + "%")
+      + ((folderId >= 0)
+          ? " AND folder_id = " + folderId
+          : ""
+        );
+
+    int id;
+    String name, data_uri;
+
+    Cursor c = null;
+    try {
+      c = db.query(query);
+
+      if ((c != null) && c.moveToFirst() && c.isFirst()) {
+        do {
+          id       = getColumnInteger(c, "id", -1);
+          name     = getColumnString (c, "name");
+          data_uri = includeURL ? getColumnString(c, "data_uri") : null;
+
+          if ((id >= 0) && !TextUtils.isEmpty(name)) {
+            FolderContentItem item = new FolderContentItem(id, name, /* isFolder */ false, /* isHidden */ false, data_uri);
+            items.add(item);
+          }
+        } while (c.moveToNext());
+      }
+    }
+    catch (SQLiteException e) {
+      Log.e(Constants.LOG_TAG, e.getMessage());
+    }
+    if (c != null) c.close();
+    return items;
+  }
+
   public int getIntentCountByDataUri(String data_uri) {
     int folderId = -1;
     return getIntentCountByDataUri(data_uri, folderId);

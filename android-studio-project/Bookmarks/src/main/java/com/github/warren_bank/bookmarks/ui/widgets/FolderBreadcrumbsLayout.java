@@ -42,4 +42,15 @@ public class FolderBreadcrumbsLayout extends RowLayout {
       addView(textview);
     }
   }
+
+  public void setText(String text, int textViewResId) {
+    TextView textview;
+
+    // remove all previous breadcrumbs
+    removeAllViews();
+
+    textview = (TextView) View.inflate(getContext(), textViewResId, null);
+    textview.setText(text);
+    addView(textview);
+  }
 }

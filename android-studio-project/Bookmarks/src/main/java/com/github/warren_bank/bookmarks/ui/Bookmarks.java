@@ -56,7 +56,8 @@ import java.util.List;
 
 public class Bookmarks extends ListActivity implements RuntimePermissionUtils.RuntimePermissionListener, Update.DatabaseUpdateListener {
   /* ActionBar Menu Items */
-  private static final int MENU_ACTIONBAR_FOLDER_ADD        = Menu.FIRST;
+  private static final int MENU_ACTIONBAR_INTENT_SEARCH     = Menu.FIRST;
+  private static final int MENU_ACTIONBAR_FOLDER_ADD        = MENU_ACTIONBAR_INTENT_SEARCH     + 1;
   private static final int MENU_ACTIONBAR_INTENT_ADD        = MENU_ACTIONBAR_FOLDER_ADD        + 1;
   private static final int MENU_ACTIONBAR_MOVE_COMPLETE     = MENU_ACTIONBAR_INTENT_ADD        + 1;
   private static final int MENU_ACTIONBAR_MOVE_CANCEL       = MENU_ACTIONBAR_MOVE_COMPLETE     + 1;
@@ -109,6 +110,20 @@ public class Bookmarks extends ListActivity implements RuntimePermissionUtils.Ru
   private static final String OUTPUT_DIRECTORY_PREF_NAME = "output_directory";
   private static String outputDirectoryPath;
 
+  // ====================================
+  // Inner class: search query parameters
+  // ====================================
+
+  private static class SearchParameters {
+    public String  query;
+    public boolean currentFolderOnly;
+
+    public SearchParameters(String query, boolean currentFolderOnly) {
+      this.query             = query;
+      this.currentFolderOnly = currentFolderOnly;
+    }
+  }
+
   // ==================
   // Instance variables
   // ==================
@@ -117,6 +132,7 @@ public class Bookmarks extends ListActivity implements RuntimePermissionUtils.Ru
   private SharedPreferences sharedPrefs;
   private View mainView;
   private FolderBreadcrumbsLayout folder_breadcrumbs;
+  private SearchParameters searchParams;
 
   private ListView listView;
   private List<Integer> moveFolderIds;
@@ -126,6 +142,41 @@ public class Bookmarks extends ListActivity implements RuntimePermissionUtils.Ru
   private FolderContentsAdapter currentFolderContentsAdapter;
   private InputMethodManager keyboard;
   private AlertDialog alertDialog;
+
+  // ---------------------------------------------------------------------------
+  // State of instance variables
+  // ---------------------------------------------------------------------------
+
+  private boolean isSearchResult() {
+    return (searchParams != null);
+  }
+
+  private void updateSearchParams(SearchParameters newParams) {
+    if ((searchParams == null) && (newParams == null)) return;
+
+    boolean isDifferentMode = (
+      ((searchParams == null) && (newParams != null)) ||
+      ((searchParams != null) && (newParams == null))
+    );
+
+    searchParams = newParams;
+
+    if (isDifferentMode) {
+      updateViewForEmptyList();
+
+      if (Build.VERSION.SDK_INT >= 11)
+        invalidateOptionsMenu();
+    }
+  }
+
+  // ---------------------------------------------------------------------------
+  // Update layout based on the state of instance variables
+  // ---------------------------------------------------------------------------
+
+  private void updateViewForEmptyList() {
+    findViewById(R.id.no_intents_in_folder ).setVisibility(!isSearchResult() ? View.VISIBLE : View.GONE);
+    findViewById(R.id.no_results_for_search).setVisibility( isSearchResult() ? View.VISIBLE : View.GONE);
+  }
 
   // ======================
   // Lifecycle
@@ -150,6 +201,7 @@ public class Bookmarks extends ListActivity implements RuntimePermissionUtils.Ru
     sharedPrefs         = getSharedPreferences(PREF_NAME, 0);
     mainView            = findViewById(R.id.main);
     folder_breadcrumbs  = (FolderBreadcrumbsLayout) findViewById(R.id.folder_breadcrumbs);
+    searchParams        = null;
 
     showHidden          = sharedPrefs.getBoolean(SHOW_HIDDEN_PREF_NAME, true);
     autoBackup          = sharedPrefs.getBoolean(AUTO_BACKUP_PREF_NAME, false);
@@ -179,12 +231,20 @@ public class Bookmarks extends ListActivity implements RuntimePermissionUtils.Ru
   @Override
   protected void onNewIntent(Intent intent) {
     if ((intent != null) && intent.getBooleanExtra(Constants.EXTRA_RELOAD_LIST, false)) {
-      getFolderContentItems();
+      if (isSearchResult())
+        execSearchQuery();
+      else
+        getFolderContentItems();
     }
   }
 
   @Override
   public void onBackPressed() {
+    if (isSearchResult()) {
+      updateSearchParams(null);
+      getFolderContentItems();
+      return;
+    }
     if ((currentFolder != null) && (currentFolder.id > 0)) {
       FolderContentItem parentFolder = db.getParentFolderContentItem(currentFolder.id);
 
@@ -290,6 +350,8 @@ public class Bookmarks extends ListActivity implements RuntimePermissionUtils.Ru
   }
 
   private void getFolderContentItems() {
+    updateSearchParams(null);
+
     if (currentFolder == null)
       currentFolder = db.getFolderContentItem(startupFolderId);
 
@@ -314,28 +376,47 @@ public class Bookmarks extends ListActivity implements RuntimePermissionUtils.Ru
 
   @Override
   public boolean onCreateOptionsMenu(Menu menu) {
-    menu.add(Menu.NONE, MENU_ACTIONBAR_FOLDER_ADD,     MENU_ACTIONBAR_FOLDER_ADD,     R.string.menu_actionbar_folder_add);
-    menu.add(Menu.NONE, MENU_ACTIONBAR_INTENT_ADD,     MENU_ACTIONBAR_INTENT_ADD,     R.string.menu_actionbar_intent_add);
-    menu.add(Menu.NONE, MENU_ACTIONBAR_MOVE_COMPLETE,  MENU_ACTIONBAR_MOVE_COMPLETE,  R.string.menu_actionbar_move_complete);
-    menu.add(Menu.NONE, MENU_ACTIONBAR_MOVE_CANCEL,    MENU_ACTIONBAR_MOVE_CANCEL,    R.string.menu_actionbar_move_cancel);
-    menu.add(Menu.NONE, MENU_ACTIONBAR_SETTINGS,       MENU_ACTIONBAR_SETTINGS,       R.string.menu_actionbar_settings);
-    menu.add(Menu.NONE, MENU_ACTIONBAR_DB_BACKUP,      MENU_ACTIONBAR_DB_BACKUP,      R.string.menu_actionbar_db_backup);
-    menu.add(Menu.NONE, MENU_ACTIONBAR_DB_RESTORE,     MENU_ACTIONBAR_DB_RESTORE,     R.string.menu_actionbar_db_restore);
-    menu.add(Menu.NONE, MENU_ACTIONBAR_DB_HTML_EXPORT, MENU_ACTIONBAR_DB_HTML_EXPORT, R.string.menu_actionbar_db_html_export);
-    menu.add(Menu.NONE, MENU_ACTIONBAR_DB_HTML_IMPORT, MENU_ACTIONBAR_DB_HTML_IMPORT, R.string.menu_actionbar_db_html_import);
-    menu.add(Menu.NONE, MENU_ACTIONBAR_EXIT,           MENU_ACTIONBAR_EXIT,           R.string.menu_actionbar_exit);
+    MenuItem item;
+
+    if (!isSearchResult()) {
+      item = menu.add(Menu.NONE, MENU_ACTIONBAR_INTENT_SEARCH, MENU_ACTIONBAR_INTENT_SEARCH, R.string.menu_actionbar_intent_search);
+      item.setIcon(android.R.drawable.ic_menu_search);
+      if (Build.VERSION.SDK_INT >= 11)
+        item.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
+
+      menu.add(Menu.NONE, MENU_ACTIONBAR_FOLDER_ADD,     MENU_ACTIONBAR_FOLDER_ADD,     R.string.menu_actionbar_folder_add);
+      menu.add(Menu.NONE, MENU_ACTIONBAR_INTENT_ADD,     MENU_ACTIONBAR_INTENT_ADD,     R.string.menu_actionbar_intent_add);
+      menu.add(Menu.NONE, MENU_ACTIONBAR_MOVE_COMPLETE,  MENU_ACTIONBAR_MOVE_COMPLETE,  R.string.menu_actionbar_move_complete);
+      menu.add(Menu.NONE, MENU_ACTIONBAR_MOVE_CANCEL,    MENU_ACTIONBAR_MOVE_CANCEL,    R.string.menu_actionbar_move_cancel);
+      menu.add(Menu.NONE, MENU_ACTIONBAR_SETTINGS,       MENU_ACTIONBAR_SETTINGS,       R.string.menu_actionbar_settings);
+      menu.add(Menu.NONE, MENU_ACTIONBAR_DB_BACKUP,      MENU_ACTIONBAR_DB_BACKUP,      R.string.menu_actionbar_db_backup);
+      menu.add(Menu.NONE, MENU_ACTIONBAR_DB_RESTORE,     MENU_ACTIONBAR_DB_RESTORE,     R.string.menu_actionbar_db_restore);
+      menu.add(Menu.NONE, MENU_ACTIONBAR_DB_HTML_EXPORT, MENU_ACTIONBAR_DB_HTML_EXPORT, R.string.menu_actionbar_db_html_export);
+      menu.add(Menu.NONE, MENU_ACTIONBAR_DB_HTML_IMPORT, MENU_ACTIONBAR_DB_HTML_IMPORT, R.string.menu_actionbar_db_html_import);
+      menu.add(Menu.NONE, MENU_ACTIONBAR_EXIT,           MENU_ACTIONBAR_EXIT,           R.string.menu_actionbar_exit);
+    }
+    else {
+      item = menu.add(Menu.NONE, MENU_ACTIONBAR_INTENT_SEARCH, MENU_ACTIONBAR_INTENT_SEARCH, R.string.menu_actionbar_intent_search);
+      item.setIcon(android.R.drawable.ic_menu_close_clear_cancel);
+      if (Build.VERSION.SDK_INT >= 11)
+        item.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
+
+      menu.add(Menu.NONE, MENU_ACTIONBAR_EXIT,           MENU_ACTIONBAR_EXIT,           R.string.menu_actionbar_exit);
+    }
 
     return super.onCreateOptionsMenu(menu);
   }
 
   @Override
   public boolean onPrepareOptionsMenu(Menu menu) {
-    boolean hasItemsToMove = !moveFolderIds.isEmpty() || !moveIntentIds.isEmpty();
+    if (!isSearchResult()) {
+      boolean hasItemsToMove = !moveFolderIds.isEmpty() || !moveIntentIds.isEmpty();
 
-    menu.findItem(MENU_ACTIONBAR_MOVE_COMPLETE)
-      .setVisible(hasItemsToMove);
-    menu.findItem(MENU_ACTIONBAR_MOVE_CANCEL)
-      .setVisible(hasItemsToMove);
+      menu.findItem(MENU_ACTIONBAR_MOVE_COMPLETE)
+        .setVisible(hasItemsToMove);
+      menu.findItem(MENU_ACTIONBAR_MOVE_CANCEL)
+        .setVisible(hasItemsToMove);
+    }
 
     return super.onPrepareOptionsMenu(menu);
   }
@@ -347,6 +428,17 @@ public class Bookmarks extends ListActivity implements RuntimePermissionUtils.Ru
   @Override
   public boolean onOptionsItemSelected(MenuItem item) {
     switch (item.getItemId()) {
+      case MENU_ACTIONBAR_INTENT_SEARCH :
+        if (isSearchResult()) {
+          // clear the visible search results, and display the current folder
+          updateSearchParams(null);
+          getFolderContentItems();
+        }
+        else {
+          // display a dialog to execute a search query
+          searchBookmarks();
+        }
+        break;
       case MENU_ACTIONBAR_FOLDER_ADD :
         addFolder();
         break;
@@ -523,6 +615,34 @@ public class Bookmarks extends ListActivity implements RuntimePermissionUtils.Ru
   // implementation: ActionBar Menu
   // ---------------------------------------------------------------------------
 
+  private void searchBookmarks() {
+    View intent_search = View.inflate(Bookmarks.this, R.layout.dialog_intent_search, null);
+
+    new AlertDialog.Builder(Bookmarks.this)
+      .setView(intent_search)
+      .setTitle(R.string.dialog_intent_search)
+      .setPositiveButton(R.string.dialog_ok, new DialogInterface.OnClickListener() {
+        public void onClick(DialogInterface dialog, int id) {
+          boolean wasSearchResult     = isSearchResult();
+          String  query               = ((EditText) intent_search.findViewById(R.id.query)).getText().toString().trim();
+          boolean only_current_folder = ((CheckBox) intent_search.findViewById(R.id.only_current_folder)).isChecked();
+
+          SearchParameters newParams = (!TextUtils.isEmpty(query))
+            ? new SearchParameters(query, only_current_folder)
+            : null;
+
+          updateSearchParams(newParams);
+
+          if (isSearchResult())
+            execSearchQuery();
+          else if (wasSearchResult)
+            getFolderContentItems();
+        }
+      })
+      .setNegativeButton(R.string.dialog_cancel, null)
+      .show();
+  }
+
   private void addFolder() {
     updateFolder(null);
   }
@@ -622,7 +742,10 @@ public class Bookmarks extends ListActivity implements RuntimePermissionUtils.Ru
     if (!selectedItem.isFolder) {
       db.copyIntent(selectedItem.id);
 
-      getFolderContentItems();
+      if (isSearchResult())
+        execSearchQuery();
+      else
+        getFolderContentItems();
     }
   }
 
@@ -749,6 +872,36 @@ public class Bookmarks extends ListActivity implements RuntimePermissionUtils.Ru
       })
       .setNegativeButton(R.string.dialog_cancel, null)
       .show();
+  }
+
+  // ---------------------------------------------------------------------------
+  // implementation: execute a search query and display the results
+  // ---------------------------------------------------------------------------
+
+  private void execSearchQuery() {
+    // handle an inconsistent state that should never be able to occur
+    if (searchParams == null) {
+      updateSearchParams(null);
+      getFolderContentItems();
+      return;
+    }
+
+    // update breadcrumbs
+    folder_breadcrumbs.setText(
+      (getString(R.string.layout_main_results_for_search_label) + " " + searchParams.query),
+      R.layout.folder_breadcrumbs_separator
+    );
+
+    // update list of contents
+    currentFolderContentItems.clear();
+    currentFolderContentItems.addAll(
+      db.searchIntents(
+        /* searchTerm */ searchParams.query,
+        /* folderId   */ ((searchParams.currentFolderOnly && (currentFolder != null)) ? currentFolder.id : -1),
+        /* includeURL */ false
+      )
+    );
+    currentFolderContentsAdapter.notifyDataSetChanged();
   }
 
   // ---------------------------------------------------------------------------
