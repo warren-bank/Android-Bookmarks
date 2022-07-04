@@ -342,9 +342,9 @@
 </string-array>
 
 <!--
-  ==========================
+  ==================
   Common MIME types:
-  ==========================
+  ==================
   https://www.iana.org/assignments/media-types/media-types.xhtml
 
   https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
@@ -433,6 +433,165 @@
   <item>video/ogg</item>
   <item>video/webm</item>
   <item>video/x-msvideo</item>
+</string-array>
+
+<!--
+  =================================
+  Intent extra data name constants:
+  =================================
+  https://android.googlesource.com/platform/frameworks/base/+/master/core/java/android/content/Intent.java
+-->
+<string-array name="intent_extra_names" translatable="false">
+  <item>@string/default_intent_extra_name</item>
+  <item>android.intent.extra.ALARM_COUNT</item>
+  <item>android.intent.extra.ALLOW_MULTIPLE</item>
+  <item>android.intent.extra.ALLOW_REPLACE</item>
+  <item>android.intent.extra.ALTERNATE_INTENTS</item>
+  <item>android.intent.extra.ASSIST_CONTEXT</item>
+  <item>android.intent.extra.ASSIST_INPUT_DEVICE_ID</item>
+  <item>android.intent.extra.ASSIST_INPUT_HINT_KEYBOARD</item>
+  <item>android.intent.extra.ASSIST_PACKAGE</item>
+  <item>android.intent.extra.ASSIST_UID</item>
+  <item>android.intent.extra.ATTRIBUTION_TAGS</item>
+  <item>android.intent.extra.AUTO_LAUNCH_SINGLE_CHOICE</item>
+  <item>android.intent.extra.BCC</item>
+  <item>android.intent.extra.BUG_REPORT</item>
+  <item>android.intent.extra.CALLING_PACKAGE</item>
+  <item>android.intent.extra.CC</item>
+  <item>android.intent.extra.CHOOSER_REFINEMENT_INTENT_SENDER</item>
+  <item>android.intent.extra.CHOOSER_TARGETS</item>
+  <item>android.intent.extra.CHOSEN_COMPONENT</item>
+  <item>android.intent.extra.CHOSEN_COMPONENT_INTENT_SENDER</item>
+  <item>android.intent.extra.COMPONENT_NAME</item>
+  <item>android.intent.extra.CONTENT_ANNOTATIONS</item>
+  <item>android.intent.extra.CONTENT_QUERY</item>
+  <item>android.intent.extra.DATA_REMOVED</item>
+  <item>android.intent.extra.DOCK_STATE</item>
+  <item>android.intent.extra.DONT_KILL_APP</item>
+  <item>android.intent.extra.DURATION_MILLIS</item>
+  <item>android.intent.extra.EMAIL</item>
+  <item>android.intent.extra.END_TIME</item>
+  <item>android.intent.extra.EXCLUDE_COMPONENTS</item>
+  <item>android.intent.extra.FORCE_FACTORY_RESET</item>
+  <item>android.intent.extra.FORCE_MASTER_CLEAR</item>
+  <item>android.intent.extra.FROM_STORAGE</item>
+  <item>android.intent.extra.HTML_TEXT</item>
+  <item>android.intent.extra.INDEX</item>
+  <item>android.intent.extra.INITIAL_INTENTS</item>
+  <item>android.intent.extra.INSTALLER_PACKAGE_NAME</item>
+  <item>android.intent.extra.INSTALL_RESULT</item>
+  <item>android.intent.extra.INSTANT_APP_ACTION</item>
+  <item>android.intent.extra.INSTANT_APP_BUNDLES</item>
+  <item>android.intent.extra.INSTANT_APP_EXTRAS</item>
+  <item>android.intent.extra.INSTANT_APP_FAILURE</item>
+  <item>android.intent.extra.INSTANT_APP_HOSTNAME</item>
+  <item>android.intent.extra.INSTANT_APP_SUCCESS</item>
+  <item>android.intent.extra.INSTANT_APP_TOKEN</item>
+  <item>android.intent.extra.INTENT</item>
+  <item>android.intent.extra.KEY_CONFIRM</item>
+  <item>android.intent.extra.KEY_EVENT</item>
+  <item>android.intent.extra.LOCAL_ONLY</item>
+  <item>android.intent.extra.LOCUS_ID</item>
+  <item>android.intent.extra.LONG_VERSION_CODE</item>
+  <item>android.intent.extra.MEDIA_RESOURCE_TYPE</item>
+  <item>android.intent.extra.MIME_TYPES</item>
+  <item>android.intent.extra.NOT_UNKNOWN_SOURCE</item>
+  <item>android.intent.extra.ORIGINATING_UID</item>
+  <item>android.intent.extra.ORIGINATING_URI</item>
+  <item>android.intent.extra.PACKAGES</item>
+  <item>android.intent.extra.PACKAGE_NAME</item>
+  <item>android.intent.extra.PERMISSION_GROUP_NAME</item>
+  <item>android.intent.extra.PERMISSION_NAME</item>
+  <item>android.intent.extra.PHONE_NUMBER</item>
+  <item>android.intent.extra.PROCESS_TEXT</item>
+  <item>android.intent.extra.PROCESS_TEXT_READONLY</item>
+  <item>android.intent.extra.QUICK_VIEW_ADVANCED</item>
+  <item>android.intent.extra.QUICK_VIEW_FEATURES</item>
+  <item>android.intent.extra.QUIET_MODE</item>
+  <item>android.intent.extra.REASON</item>
+  <item>android.intent.extra.REFERRER</item>
+  <item>android.intent.extra.REFERRER_NAME</item>
+  <item>android.intent.extra.REMOTE_CALLBACK</item>
+  <item>android.intent.extra.REMOVED_FOR_ALL_USERS</item>
+  <item>android.intent.extra.REPLACEMENT_EXTRAS</item>
+  <item>android.intent.extra.REPLACING</item>
+  <item>android.intent.extra.RESULT_NEEDED</item>
+  <item>android.intent.extra.RESULT_RECEIVER</item>
+  <item>android.intent.extra.RETURN_RESULT</item>
+  <item>android.intent.extra.ROLE_NAME</item>
+  <item>android.intent.extra.SHUTDOWN_USERSPACE_ONLY</item>
+  <item>android.intent.extra.SIM_ACTIVATION_RESPONSE</item>
+  <item>android.intent.extra.SPLIT_NAME</item>
+  <item>android.intent.extra.START_TIME</item>
+  <item>android.intent.extra.STREAM</item>
+  <item>android.intent.extra.SUBJECT</item>
+  <item>android.intent.extra.SUSPENDED_PACKAGE_EXTRAS</item>
+  <item>android.intent.extra.TASK_ID</item>
+  <item>android.intent.extra.TEMPLATE</item>
+  <item>android.intent.extra.TEXT</item>
+  <item>android.intent.extra.THERMAL_STATE</item>
+  <item>android.intent.extra.TIME</item>
+  <item>android.intent.extra.TIME_PREF_24_HOUR_FORMAT</item>
+  <item>android.intent.extra.TITLE</item>
+  <item>android.intent.extra.UID</item>
+  <item>android.intent.extra.UNINSTALL_ALL_USERS</item>
+  <item>android.intent.extra.UNKNOWN_INSTANT_APP</item>
+  <item>android.intent.extra.USER</item>
+  <item>android.intent.extra.USER_ID</item>
+  <item>android.intent.extra.USER_INITIATED</item>
+  <item>android.intent.extra.USER_REQUESTED_SHUTDOWN</item>
+  <item>android.intent.extra.VERIFICATION_BUNDLE</item>
+  <item>android.intent.extra.VERSION_CODE</item>
+  <item>android.intent.extra.VISIBILITY_ALLOW_LIST</item>
+  <item>android.intent.extra.WIPE_EXTERNAL_STORAGE</item>
+  <item>android.intent.extra.changed_component_name</item>
+  <item>android.intent.extra.changed_component_name_list</item>
+  <item>android.intent.extra.changed_package_list</item>
+  <item>android.intent.extra.changed_uid_list</item>
+  <item>android.intent.extra.client_intent</item>
+  <item>android.intent.extra.client_label</item>
+  <item>android.intent.extra.distraction_restrictions</item>
+  <item>android.intent.extra.remote_intent_token</item>
+  <item>android.intent.extra.restrictions_bundle</item>
+  <item>android.intent.extra.restrictions_intent</item>
+  <item>android.intent.extra.restrictions_list</item>
+  <item>android.intent.extra.shortcut.ICON</item>
+  <item>android.intent.extra.shortcut.ICON_RESOURCE</item>
+  <item>android.intent.extra.shortcut.ID</item>
+  <item>android.intent.extra.shortcut.INTENT</item>
+  <item>android.intent.extra.shortcut.NAME</item>
+  <item>android.intent.extra.user_handle</item>
+  <item>cdmaDefaultRoamingIndicator</item>
+  <item>cdmaRoamingIndicator</item>
+  <item>com.android.internal.intent.extra.WIPE_ESIMS</item>
+  <item>cssIndicator</item>
+  <item>data-operator-alpha-long</item>
+  <item>data-operator-alpha-short</item>
+  <item>data-operator-numeric</item>
+  <item>dataRadioTechnology</item>
+  <item>dataRegState</item>
+  <item>dataRoamingType</item>
+  <item>emergencyOnly</item>
+  <item>isDataRoamingFromRegistration</item>
+  <item>isUsingCarrierAggregation</item>
+  <item>LteEarfcnRsrpBoost</item>
+  <item>manual</item>
+  <item>networkId</item>
+  <item>new_value</item>
+  <item>operator-alpha-long</item>
+  <item>operator-alpha-short</item>
+  <item>operator-numeric</item>
+  <item>previous_value</item>
+  <item>radioTechnology</item>
+  <item>reason</item>
+  <item>rebroadcastOnUnlock</item>
+  <item>restored_from_sdk_int</item>
+  <item>setting_name</item>
+  <item>ss</item>
+  <item>systemId</item>
+  <item>time-zone</item>
+  <item>voiceRegState</item>
+  <item>voiceRoamingType</item>
 </string-array>
 
 </resources>

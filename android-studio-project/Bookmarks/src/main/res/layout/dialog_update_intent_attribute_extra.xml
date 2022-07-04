@@ -17,6 +17,12 @@
       android:layout_width="fill_parent"
       android:layout_height="wrap_content" />
 
+    <Spinner
+      android:id="@+id/dialog_update_intent_attribute_extra_name_spinner"
+      android:entries="@array/intent_extra_names"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content" />
+
     <EditText
       android:id="@+id/dialog_update_intent_attribute_extra_name"
       android:layout_width="fill_parent"

@@ -526,11 +526,40 @@ public class SaveBookmark extends Activity {
     View     dialogView                                              = View.inflate(SaveBookmark.this, R.layout.dialog_update_intent_attribute_extra, null);
     EditText dialog_update_intent_attribute_extra_name               = (EditText) dialogView.findViewById(R.id.dialog_update_intent_attribute_extra_name);
     EditText dialog_update_intent_attribute_extra_value              = (EditText) dialogView.findViewById(R.id.dialog_update_intent_attribute_extra_value);
+    Spinner  dialog_update_intent_attribute_extra_name_spinner       = (Spinner)  dialogView.findViewById(R.id.dialog_update_intent_attribute_extra_name_spinner);
     Spinner  dialog_update_intent_attribute_extra_value_type_spinner = (Spinner)  dialogView.findViewById(R.id.dialog_update_intent_attribute_extra_value_type_spinner);
     Button   dialog_update_intent_attribute_extra_value_separator    = (Button)   dialogView.findViewById(R.id.dialog_update_intent_attribute_extra_value_separator);
 
     // ---------------------------------
-    // initialize Spinner
+    // initialize Spinner: extra name
+    // ---------------------------------
+    ArrayAdapter<CharSequence> dialog_update_intent_attribute_extra_name_adapter = ArrayAdapter.createFromResource(
+      SaveBookmark.this,
+      R.array.intent_extra_names,
+      android.R.layout.simple_spinner_item
+    );
+
+    dialog_update_intent_attribute_extra_name_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+    dialog_update_intent_attribute_extra_name_spinner.setAdapter(dialog_update_intent_attribute_extra_name_adapter);
+
+    dialog_update_intent_attribute_extra_name_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+      public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
+        // ignore first value in array
+        if (pos > 0) {
+          String extra_name = dialog_update_intent_attribute_extra_name_spinner.getSelectedItem().toString();
+          dialog_update_intent_attribute_extra_name.setText(extra_name, TextView.BufferType.EDITABLE);
+
+          // reset to first value
+          dialog_update_intent_attribute_extra_name_spinner.setSelection(0);
+        }
+      }
+      public void onNothingSelected(AdapterView<?> parent) {
+      }
+    });
+
+    // ---------------------------------
+    // initialize Spinner: extra type
     // ---------------------------------
     String[] valueTypeNames = db.getAllIntentExtraValueTypeNames();
     Arrays.sort(valueTypeNames);

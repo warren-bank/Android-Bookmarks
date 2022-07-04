@@ -128,4 +128,5 @@
 <string name="default_intent_action">-- common values --</string>
 <string name="default_intent_data_type">@string/default_intent_action</string>
 <string name="default_intent_category">@string/default_intent_action</string>
+<string name="default_intent_extra_name">@string/default_intent_action</string>
 </resources>
