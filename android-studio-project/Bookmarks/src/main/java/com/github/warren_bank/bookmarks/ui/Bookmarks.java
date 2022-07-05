@@ -74,12 +74,11 @@ public class Bookmarks extends ListActivity implements RuntimePermissionUtils.Ru
   private static final int MENU_CONTEXT_FOLDER_MOVE         = MENU_CONTEXT_FOLDER_RENAME       + 1;
   private static final int MENU_CONTEXT_FOLDER_DELETE       = MENU_CONTEXT_FOLDER_MOVE         + 1;
   /* Context Menu Items for Intents */
-  private static final int MENU_CONTEXT_INTENT_BROADCAST    = Menu.FIRST;
-  private static final int MENU_CONTEXT_INTENT_EDIT         = MENU_CONTEXT_INTENT_BROADCAST    + 1;
+  private static final int MENU_CONTEXT_INTENT_PERFORM      = Menu.FIRST;
+  private static final int MENU_CONTEXT_INTENT_EDIT         = MENU_CONTEXT_INTENT_PERFORM      + 1;
   private static final int MENU_CONTEXT_INTENT_MOVE         = MENU_CONTEXT_INTENT_EDIT         + 1;
   private static final int MENU_CONTEXT_INTENT_COPY         = MENU_CONTEXT_INTENT_MOVE         + 1;
-  private static final int MENU_CONTEXT_INTENT_ADD_SHORTCUT = MENU_CONTEXT_INTENT_COPY         + 1;
-  private static final int MENU_CONTEXT_INTENT_DELETE       = MENU_CONTEXT_INTENT_ADD_SHORTCUT + 1;
+  private static final int MENU_CONTEXT_INTENT_DELETE       = MENU_CONTEXT_INTENT_COPY         + 1;
 
   // Preferences
 
@@ -508,11 +507,10 @@ public class Bookmarks extends ListActivity implements RuntimePermissionUtils.Ru
       menu.add(Menu.NONE, MENU_CONTEXT_FOLDER_DELETE,       MENU_CONTEXT_FOLDER_DELETE,       R.string.menu_context_folder_delete);
     }
     else {
-      menu.add(Menu.NONE, MENU_CONTEXT_INTENT_BROADCAST,    MENU_CONTEXT_INTENT_BROADCAST,    R.string.menu_context_intent_broadcast);
+      menu.add(Menu.NONE, MENU_CONTEXT_INTENT_PERFORM,      MENU_CONTEXT_INTENT_PERFORM,      R.string.menu_context_intent_perform);
       menu.add(Menu.NONE, MENU_CONTEXT_INTENT_EDIT,         MENU_CONTEXT_INTENT_EDIT,         R.string.menu_context_intent_edit);
       menu.add(Menu.NONE, MENU_CONTEXT_INTENT_MOVE,         MENU_CONTEXT_INTENT_MOVE,         R.string.menu_context_intent_move);
       menu.add(Menu.NONE, MENU_CONTEXT_INTENT_COPY,         MENU_CONTEXT_INTENT_COPY,         R.string.menu_context_intent_copy);
-      menu.add(Menu.NONE, MENU_CONTEXT_INTENT_ADD_SHORTCUT, MENU_CONTEXT_INTENT_ADD_SHORTCUT, R.string.menu_context_intent_add_shortcut);
       menu.add(Menu.NONE, MENU_CONTEXT_INTENT_DELETE,       MENU_CONTEXT_INTENT_DELETE,       R.string.menu_context_intent_delete);
     }
   }
@@ -542,8 +540,8 @@ public class Bookmarks extends ListActivity implements RuntimePermissionUtils.Ru
     }
     else {
       switch(item.getItemId()) {
-        case MENU_CONTEXT_INTENT_BROADCAST :
-          broadcastBookmark(selectedItem);
+        case MENU_CONTEXT_INTENT_PERFORM :
+          performBookmark(selectedItem);
           return true;
         case MENU_CONTEXT_INTENT_EDIT :
           editBookmark(selectedItem);
@@ -553,9 +551,6 @@ public class Bookmarks extends ListActivity implements RuntimePermissionUtils.Ru
           return true;
         case MENU_CONTEXT_INTENT_COPY :
           copyBookmark(selectedItem);
-          return true;
-        case MENU_CONTEXT_INTENT_ADD_SHORTCUT :
-          addShortcutForBookmark(selectedItem);
           return true;
         case MENU_CONTEXT_INTENT_DELETE :
           deleteBookmark(selectedItem);
@@ -708,43 +703,47 @@ public class Bookmarks extends ListActivity implements RuntimePermissionUtils.Ru
   // implementation: ListView Context Menu (for Intent)
   // ---------------------------------------------------------------------------
 
-  private void broadcastBookmark(FolderContentItem selectedItem) {
-    if (!selectedItem.isFolder) {
-      intentPermissionCheck(selectedItem.id, Constants.PERMISSION_CHECK_REQUEST_CODE_INTENT_SEND_BROADCAST);
-    }
-  }
+  private void performBookmark(FolderContentItem selectedItem) {
+    if (selectedItem.isFolder) return;
 
-  private void editBookmark(FolderContentItem selectedItem) {
-    if (!selectedItem.isFolder) {
-      updateBookmark(selectedItem);
-    }
-  }
-
-  private void moveBookmark(FolderContentItem selectedItem) {
-    if (!selectedItem.isFolder) {
-      moveIntentIds.add(selectedItem.id);
-    }
-  }
-
-  private void copyBookmark(FolderContentItem selectedItem) {
-    if (!selectedItem.isFolder) {
-      db.copyIntent(selectedItem.id);
-
-      if (isSearchResult())
-        execSearchQuery();
-      else
-        getFolderContentItems();
-    }
+    new AlertDialog.Builder(Bookmarks.this)
+      .setTitle(R.string.perform_title)
+      .setItems(R.array.perform_options, new DialogInterface.OnClickListener() {
+        public void onClick(DialogInterface dialog, int which) {
+          switch(which) {
+            case 0: { // perform_send_broadcast
+                intentPermissionCheck(selectedItem.id, Constants.PERMISSION_CHECK_REQUEST_CODE_INTENT_SEND_BROADCAST);
+              }
+              break;
+            case 1: { // perform_start_activity
+                intentPermissionCheck(selectedItem.id, Constants.PERMISSION_CHECK_REQUEST_CODE_INTENT_START_ACTIVITY);
+              }
+              break;
+            case 2: { // perform_start_foreground_service
+                intentPermissionCheck(selectedItem.id, Constants.PERMISSION_CHECK_REQUEST_CODE_INTENT_START_FOREGROUND_SERVICE);
+              }
+              break;
+            case 3: { // perform_start_service
+                intentPermissionCheck(selectedItem.id, Constants.PERMISSION_CHECK_REQUEST_CODE_INTENT_START_SERVICE);
+              }
+              break;
+            case 4: { // perform_stop_service
+                intentPermissionCheck(selectedItem.id, Constants.PERMISSION_CHECK_REQUEST_CODE_INTENT_STOP_SERVICE);
+              }
+              break;
+            case 5: { // perform_add_shortcut
+                Object passthrough = (Object) selectedItem;
+                intentPermissionCheck(selectedItem.id, Constants.PERMISSION_CHECK_REQUEST_CODE_INTENT_ADD_SHORTCUT, passthrough);
+              }
+              break;
+          }
+        }
+      })
+      .show();
   }
 
   private void addShortcutForBookmark(FolderContentItem selectedItem) {
-    if (!selectedItem.isFolder) {
-      Object passthrough = (Object) selectedItem;
-      intentPermissionCheck(selectedItem.id, Constants.PERMISSION_CHECK_REQUEST_CODE_INTENT_ADD_SHORTCUT, passthrough);
-    }
-  }
-
-  private void addShortcutForBookmark(FolderContentItem selectedItem, Intent intent) {
+    Intent intent = db.getIntent(selectedItem.id);
     if (intent == null) return;
 
     try {
@@ -778,6 +777,29 @@ public class Bookmarks extends ListActivity implements RuntimePermissionUtils.Ru
       }
     }
     catch(Exception e) {}
+  }
+
+  private void editBookmark(FolderContentItem selectedItem) {
+    if (!selectedItem.isFolder) {
+      updateBookmark(selectedItem);
+    }
+  }
+
+  private void moveBookmark(FolderContentItem selectedItem) {
+    if (!selectedItem.isFolder) {
+      moveIntentIds.add(selectedItem.id);
+    }
+  }
+
+  private void copyBookmark(FolderContentItem selectedItem) {
+    if (!selectedItem.isFolder) {
+      db.copyIntent(selectedItem.id);
+
+      if (isSearchResult())
+        execSearchQuery();
+      else
+        getFolderContentItems();
+    }
   }
 
   private void deleteBookmark(FolderContentItem selectedItem) {
@@ -1190,8 +1212,7 @@ public class Bookmarks extends ListActivity implements RuntimePermissionUtils.Ru
         break;
       case Constants.PERMISSION_CHECK_REQUEST_CODE_INTENT_ADD_SHORTCUT: {
           FolderContentItem selectedItem = (FolderContentItem) passthrough;
-          Intent intent = db.getIntent(selectedItem.id);
-          addShortcutForBookmark(selectedItem, intent);
+          addShortcutForBookmark(selectedItem);
         }
         break;
     }

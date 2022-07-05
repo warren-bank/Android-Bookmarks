@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE resources [
     <!ENTITY folder        "حافظة">
     <!ENTITY folders       "الحافظات">
@@ -30,10 +30,15 @@
 <string name="menu_context_folder_rename">اعادة تسمية</string>
 <string name="menu_context_folder_move">تحرك</string>
 <string name="menu_context_folder_delete">حذف</string>
-<string name="menu_context_intent_broadcast">ارسال نشر</string>
+<string name="menu_context_intent_perform">تنفيذ…</string>
 <string name="menu_context_intent_edit">تحرير</string>
 <string name="menu_context_intent_copy">نسخ</string>
-<string name="menu_context_intent_add_shortcut">اضافة مسار مختصر</string>
+<string name="perform_send_broadcast">ارسال نشر</string>
+<string name="perform_start_activity">بدء نشاط</string>
+<string name="perform_start_foreground_service">بدء خدمة الواجهة الأمامية</string>
+<string name="perform_start_service">بدء الخدمة</string>
+<string name="perform_stop_service">ايقاف الخدمة</string>
+<string name="perform_add_shortcut">اضافة مسار مختصر</string>
 <string name="settings_option_show_hidden">عرض المخفي &lc_folders;</string>
 <string name="settings_option_auto_backup">تنفيذ نسخة احتياطية يومية آليا</string>
 <string name="settings_option_backup_versioning">الاحتفاظ بأحدث 3 نسخ احتياطية يومية آلية</string>
@@ -42,8 +47,8 @@
 <string name="dialog_ok">OK</string>
 <string name="dialog_cancel">الغاء</string>
 <string name="dialog_add">اضافة</string>
-<string name="dialog_add_more">اضافة ...</string>
-<string name="dialog_change">تغيير ...</string>
+<string name="dialog_add_more">اضافة…</string>
+<string name="dialog_change">تغيير…</string>
 <string name="dialog_save">حفظ</string>
 <string name="dialog_delete">حذف</string>
 <string name="dialog_backup_preupdate_title">تعديل قاعدة البيانات مطلوب</string>

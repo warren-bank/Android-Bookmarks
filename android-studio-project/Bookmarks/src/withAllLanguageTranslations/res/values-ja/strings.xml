@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE resources [
     <!ENTITY folder        "フォルダ ( )">
     <!ENTITY folders       "フォルダー">
@@ -30,10 +30,15 @@
 <string name="menu_context_folder_rename">名前変更</string>
 <string name="menu_context_folder_move">行け !</string>
 <string name="menu_context_folder_delete">削除</string>
-<string name="menu_context_intent_broadcast">ブロードキャストの送信</string>
+<string name="menu_context_intent_perform">実行…</string>
 <string name="menu_context_intent_edit">編集</string>
 <string name="menu_context_intent_copy">コピー</string>
-<string name="menu_context_intent_add_shortcut">ショートカットの追加</string>
+<string name="perform_send_broadcast">ブロードキャストの送信</string>
+<string name="perform_start_activity">アクティビティーの開始</string>
+<string name="perform_start_foreground_service">フォアグラウンド・サービスの開始</string>
+<string name="perform_start_service">サービスの開始</string>
+<string name="perform_stop_service">サービスの停止</string>
+<string name="perform_add_shortcut">ショートカットの追加</string>
 <string name="settings_option_show_hidden">非表示の &lc_folders;</string>
 <string name="settings_option_auto_backup">自動日次バックアップの実行</string>
 <string name="settings_option_backup_versioning">最新の 3 つの自動日次バックアップを保持</string>
@@ -42,8 +47,8 @@
 <string name="dialog_ok">OK</string>
 <string name="dialog_cancel">キャンセル</string>
 <string name="dialog_add">追加</string>
-<string name="dialog_add_more">追加...</string>
-<string name="dialog_change">変更...</string>
+<string name="dialog_add_more">追加…</string>
+<string name="dialog_change">変更…</string>
 <string name="dialog_save">セーブ</string>
 <string name="dialog_delete">削除</string>
 <string name="dialog_backup_preupdate_title">データベースの更新が必要です</string>

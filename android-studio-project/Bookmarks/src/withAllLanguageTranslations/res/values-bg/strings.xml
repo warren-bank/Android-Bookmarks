@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE resources [
     <!ENTITY folder        "Папка:">
     <!ENTITY folders       "Папки:">
@@ -30,10 +30,15 @@
 <string name="menu_context_folder_rename">Име:</string>
 <string name="menu_context_folder_move">Мърдай!</string>
 <string name="menu_context_folder_delete">Изтриване.</string>
-<string name="menu_context_intent_broadcast">Изпращане на излъчване</string>
+<string name="menu_context_intent_perform">-Да.</string>
 <string name="menu_context_intent_edit">Редакция:</string>
 <string name="menu_context_intent_copy">Копие:</string>
-<string name="menu_context_intent_add_shortcut">Добавяне на пряк път</string>
+<string name="perform_send_broadcast">Изпращане на излъчване</string>
+<string name="perform_start_activity">Начало на дейност</string>
+<string name="perform_start_foreground_service">Начало на услугата Foreназемни</string>
+<string name="perform_start_service">Начало на услугата</string>
+<string name="perform_stop_service">Спиране на услугата</string>
+<string name="perform_add_shortcut">Добавяне на пряк път</string>
 <string name="settings_option_show_hidden">Показване на скрит &lc_folders;</string>
 <string name="settings_option_auto_backup">Извършване на автоматично ежедневно архивиране</string>
 <string name="settings_option_backup_versioning">Пазете 3-те най-скорошни автоматични ежедневни архивирания</string>
@@ -42,8 +47,8 @@
 <string name="dialog_ok">OK</string>
 <string name="dialog_cancel">Отмяна\?</string>
 <string name="dialog_add">Добави:</string>
-<string name="dialog_add_more">Добави ...</string>
-<string name="dialog_change">Промени се ...</string>
+<string name="dialog_add_more">Добави…</string>
+<string name="dialog_change">Промени се…</string>
 <string name="dialog_save">Запис!</string>
 <string name="dialog_delete">Изтриване.</string>
 <string name="dialog_backup_preupdate_title">Изисква се обновяване на базата данни</string>

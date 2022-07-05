@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE resources [
     <!ENTITY folder        "Mappa">
     <!ENTITY folders       "Mappák">
@@ -30,10 +30,15 @@
 <string name="menu_context_folder_rename">Átnevezés</string>
 <string name="menu_context_folder_move">Áthelyezés</string>
 <string name="menu_context_folder_delete">Törlés</string>
-<string name="menu_context_intent_broadcast">Broadcast küldése</string>
+<string name="menu_context_intent_perform">Végezze…</string>
 <string name="menu_context_intent_edit">Szerkesztés</string>
 <string name="menu_context_intent_copy">Másolás</string>
-<string name="menu_context_intent_add_shortcut">Parancsikon hozzáadása</string>
+<string name="perform_send_broadcast">Broadcast küldése</string>
+<string name="perform_start_activity">Tevékenység indítása</string>
+<string name="perform_start_foreground_service">Foreground szolgáltatás indítása</string>
+<string name="perform_start_service">Szolgáltatás indítása</string>
+<string name="perform_stop_service">Szolgáltatás leállítása</string>
+<string name="perform_add_shortcut">Parancsikon hozzáadása</string>
 <string name="settings_option_show_hidden">Megjelenítés elrejtve &lc_folders;</string>
 <string name="settings_option_auto_backup">Automatikus napi mentés végrehajtása</string>
 <string name="settings_option_backup_versioning">A 3 legfrissebb automatikus napi mentések megtartása</string>
@@ -42,8 +47,8 @@
 <string name="dialog_ok">OK</string>
 <string name="dialog_cancel">Mégse</string>
 <string name="dialog_add">Hozzáadás</string>
-<string name="dialog_add_more">Hozzáadás ...</string>
-<string name="dialog_change">Változás ...</string>
+<string name="dialog_add_more">Hozzáadás…</string>
+<string name="dialog_change">Változás…</string>
 <string name="dialog_save">Mentés</string>
 <string name="dialog_delete">Törlés</string>
 <string name="dialog_backup_preupdate_title">Az adatbázis-frissítés szükséges</string>

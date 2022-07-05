@@ -35,12 +35,19 @@
 <string name="menu_context_folder_move">Move</string>
 <string name="menu_context_folder_delete">Delete</string>
 
-<string name="menu_context_intent_broadcast">Send Broadcast</string>
+<string name="menu_context_intent_perform">Perform…</string>
 <string name="menu_context_intent_edit">Edit</string>
 <string name="menu_context_intent_move">@string/menu_context_folder_move</string>
 <string name="menu_context_intent_copy">Copy</string>
-<string name="menu_context_intent_add_shortcut">Add Shortcut</string>
 <string name="menu_context_intent_delete">@string/menu_context_folder_delete</string>
+
+<string name="perform_title">@string/menu_context_intent_perform</string>
+<string name="perform_send_broadcast">Send Broadcast</string>
+<string name="perform_start_activity">Start Activity</string>
+<string name="perform_start_foreground_service">Start Foreground Service</string>
+<string name="perform_start_service">Start Service</string>
+<string name="perform_stop_service">Stop Service</string>
+<string name="perform_add_shortcut">Add Shortcut</string>
 
 <string name="settings_title">@string/menu_actionbar_settings</string>
 <string name="settings_option_show_hidden">Show hidden &lc_folders;</string>

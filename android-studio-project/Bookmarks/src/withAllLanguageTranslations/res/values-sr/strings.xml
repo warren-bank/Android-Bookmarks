@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE resources [
     <!ENTITY folder        "Фасцикла">
     <!ENTITY folders       "Фасцикле">
@@ -30,10 +30,15 @@
 <string name="menu_context_folder_rename">Преименовање</string>
 <string name="menu_context_folder_move">Премести</string>
 <string name="menu_context_folder_delete">Избриши</string>
-<string name="menu_context_intent_broadcast">Пошаљи емитовање</string>
+<string name="menu_context_intent_perform">Изврши…</string>
 <string name="menu_context_intent_edit">Уреди</string>
 <string name="menu_context_intent_copy">Копирај</string>
-<string name="menu_context_intent_add_shortcut">Додај пречицу</string>
+<string name="perform_send_broadcast">Пошаљи емитовање</string>
+<string name="perform_start_activity">Покрените активност</string>
+<string name="perform_start_foreground_service">Покрените Forest услугу</string>
+<string name="perform_start_service">Покрените услугу</string>
+<string name="perform_stop_service">Заустави услугу</string>
+<string name="perform_add_shortcut">Додај пречицу</string>
 <string name="settings_option_show_hidden">Прикажи сакривено &lc_folders;</string>
 <string name="settings_option_auto_backup">Изврши аутоматску дневну резерву</string>
 <string name="settings_option_backup_versioning">Задржи 3 најновија аутоматска повратна резерва</string>
@@ -42,8 +47,8 @@
 <string name="dialog_ok">OK</string>
 <string name="dialog_cancel">Откажи</string>
 <string name="dialog_add">Додај</string>
-<string name="dialog_add_more">Додај ...</string>
-<string name="dialog_change">Промена ...</string>
+<string name="dialog_add_more">Додај…</string>
+<string name="dialog_change">Промена…</string>
 <string name="dialog_save">Сачувај</string>
 <string name="dialog_delete">Избриши</string>
 <string name="dialog_backup_preupdate_title">Потребно је ажурирање базе података</string>

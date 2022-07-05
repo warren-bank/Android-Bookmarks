@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE resources [
     <!ENTITY folder        "Φάκελος">
     <!ENTITY folders       "Φάκελοι">
@@ -30,10 +30,15 @@
 <string name="menu_context_folder_rename">Μετονομασία:</string>
 <string name="menu_context_folder_move">Κίνηση!</string>
 <string name="menu_context_folder_delete">Διαγραφή:</string>
-<string name="menu_context_intent_broadcast">Αποστολή μετάδοσης:</string>
+<string name="menu_context_intent_perform">Εκτέλεση…</string>
 <string name="menu_context_intent_edit">Τροποποίηση:</string>
 <string name="menu_context_intent_copy">\' Αντιγραφή</string>
-<string name="menu_context_intent_add_shortcut">Προσθήκη συντόμχας</string>
+<string name="perform_send_broadcast">Αποστολή μετάδοσης:</string>
+<string name="perform_start_activity">Έναρξη δραστηριότητας:</string>
+<string name="perform_start_foreground_service">Έναρξη της υπηρεσίας Foreground</string>
+<string name="perform_start_service">Αρχική σελίδα:</string>
+<string name="perform_stop_service">Υπηρεσία διακοπής:</string>
+<string name="perform_add_shortcut">Προσθήκη συντόμχας</string>
 <string name="settings_option_show_hidden">Εμφάνιση κρυφού &lc_folders;</string>
 <string name="settings_option_auto_backup">Εκτέλεση αυτόματης ημερήσιας εφεδρικής αποθήκευσης</string>
 <string name="settings_option_backup_versioning">Κρατήστε τα 3 πιο πρόσφατα αυτόματα ημερήσια αντίγραφα ασφαλείας</string>
@@ -42,8 +47,8 @@
 <string name="dialog_ok">OK</string>
 <string name="dialog_cancel">Ακύρωση.</string>
 <string name="dialog_add">Προσθήκη</string>
-<string name="dialog_add_more">Προσθήκη ...</string>
-<string name="dialog_change">Αλλαγή ...</string>
+<string name="dialog_add_more">Προσθήκη…</string>
+<string name="dialog_change">Αλλαγή…</string>
 <string name="dialog_save">Αποθήκευση:</string>
 <string name="dialog_delete">Διαγραφή:</string>
 <string name="dialog_backup_preupdate_title">Απαιτείται Ενημέρωση Βάσης Δεδομένων</string>

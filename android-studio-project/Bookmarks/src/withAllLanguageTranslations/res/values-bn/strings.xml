@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE resources [
     <!ENTITY folder        "ফোল্ডার">
     <!ENTITY folders       "ফোল্ডার">
@@ -30,10 +30,15 @@
 <string name="menu_context_folder_rename">নাম পরিবর্তন করো</string>
 <string name="menu_context_folder_move">সরাও</string>
 <string name="menu_context_folder_delete">মুছে ফেলো</string>
-<string name="menu_context_intent_broadcast">ব্রডকাস্ট পাঠাও</string>
+<string name="menu_context_intent_perform">Perform…</string>
 <string name="menu_context_intent_edit">সম্পাদনা</string>
 <string name="menu_context_intent_copy">অনুলিপি করুন</string>
-<string name="menu_context_intent_add_shortcut">শর্টকাট যোগ করো</string>
+<string name="perform_send_broadcast">ব্রডকাস্ট পাঠাও</string>
+<string name="perform_start_activity">আরম্ভের কার্যকলাপ</string>
+<string name="perform_start_foreground_service">ফোরগ্রাউন্ড সার্ভিস আরম্ভ করুন</string>
+<string name="perform_start_service">সার্ভিস আরম্ভ করো</string>
+<string name="perform_stop_service">সার্ভিস বন্ধ করো</string>
+<string name="perform_add_shortcut">শর্টকাট যোগ করো</string>
 <string name="settings_option_show_hidden">লুকানো দেখাও &lc_folders;</string>
 <string name="settings_option_auto_backup">স্বয়ংক্রিয়ভাবে প্রতিদিনের ব্যাক-আপ</string>
 <string name="settings_option_backup_versioning">৩ টি সাম্প্রতিক স্বয়ংক্রিয় প্রতিদিনের ব্যাকআপ রাখুন</string>
@@ -42,8 +47,8 @@
 <string name="dialog_ok">OK</string>
 <string name="dialog_cancel">বাতিল করো</string>
 <string name="dialog_add">যোগ করো</string>
-<string name="dialog_add_more">যোগ করো ...</string>
-<string name="dialog_change">পরিবর্তন ...</string>
+<string name="dialog_add_more">যোগ করো…</string>
+<string name="dialog_change">পরিবর্তন…</string>
 <string name="dialog_save">সংরক্ষণ করো</string>
 <string name="dialog_delete">মুছে ফেলো</string>
 <string name="dialog_backup_preupdate_title">ডেটাবেস আপডেট প্রয়োজন</string>

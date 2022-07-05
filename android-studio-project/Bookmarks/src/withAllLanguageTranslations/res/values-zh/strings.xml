@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE resources [
     <!ENTITY folder        "文件夹">
     <!ENTITY folders       "文件夹">
@@ -30,10 +30,15 @@
 <string name="menu_context_folder_rename">重命名</string>
 <string name="menu_context_folder_move">移动</string>
 <string name="menu_context_folder_delete">删除</string>
-<string name="menu_context_intent_broadcast">发送广播</string>
+<string name="menu_context_intent_perform">执行…</string>
 <string name="menu_context_intent_edit">编辑</string>
 <string name="menu_context_intent_copy">复制</string>
-<string name="menu_context_intent_add_shortcut">添加快捷方式</string>
+<string name="perform_send_broadcast">发送广播</string>
+<string name="perform_start_activity">启动活动</string>
+<string name="perform_start_foreground_service">启动前台服务</string>
+<string name="perform_start_service">启动服务</string>
+<string name="perform_stop_service">停止服务</string>
+<string name="perform_add_shortcut">添加快捷方式</string>
 <string name="settings_option_show_hidden">显示隐藏 &lc_folders;</string>
 <string name="settings_option_auto_backup">执行自动每日备份</string>
 <string name="settings_option_backup_versioning">保留 3 个最近的自动每日备份</string>
@@ -42,8 +47,8 @@
 <string name="dialog_ok">OK</string>
 <string name="dialog_cancel">取消</string>
 <string name="dialog_add">加添</string>
-<string name="dialog_add_more">添加 ...</string>
-<string name="dialog_change">更改 ...</string>
+<string name="dialog_add_more">添加…</string>
+<string name="dialog_change">更改…</string>
 <string name="dialog_save">保存</string>
 <string name="dialog_delete">删除</string>
 <string name="dialog_backup_preupdate_title">需要数据库更新</string>

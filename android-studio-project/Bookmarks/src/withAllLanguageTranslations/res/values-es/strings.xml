@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE resources [
     <!ENTITY folder        "Carpeta">
     <!ENTITY folders       "Carpetas">
@@ -30,10 +30,15 @@
 <string name="menu_context_folder_rename">Rename</string>
 <string name="menu_context_folder_move">Mover</string>
 <string name="menu_context_folder_delete">Suprimir</string>
-<string name="menu_context_intent_broadcast">Enviar difusión</string>
+<string name="menu_context_intent_perform">Realizar…</string>
 <string name="menu_context_intent_edit">Editar</string>
 <string name="menu_context_intent_copy">Copia</string>
-<string name="menu_context_intent_add_shortcut">Cómo agregar un acceso directo</string>
+<string name="perform_send_broadcast">Enviar difusión</string>
+<string name="perform_start_activity">Iniciar actividad</string>
+<string name="perform_start_foreground_service">Iniciar el servicio en primer plano</string>
+<string name="perform_start_service">Servicio de inicio</string>
+<string name="perform_stop_service">Servicio de parada</string>
+<string name="perform_add_shortcut">Cómo agregar un acceso directo</string>
 <string name="settings_option_show_hidden">Mostrar oculto &lc_folders;</string>
 <string name="settings_option_auto_backup">Realizar copia de seguridad diaria automática</string>
 <string name="settings_option_backup_versioning">Mantenga las 3 copias de seguridad diarias automáticas más recientes</string>
@@ -42,8 +47,8 @@
 <string name="dialog_ok">OK</string>
 <string name="dialog_cancel">Cancelar</string>
 <string name="dialog_add">Añadir</string>
-<string name="dialog_add_more">Añadir ...</string>
-<string name="dialog_change">Cambiar ...</string>
+<string name="dialog_add_more">Añadir…</string>
+<string name="dialog_change">Cambiar…</string>
 <string name="dialog_save">Guardar</string>
 <string name="dialog_delete">Suprimir</string>
 <string name="dialog_backup_preupdate_title">La Actualización De Base De Datos</string>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE resources [
     <!ENTITY folder        "Dosar">
     <!ENTITY folders       "Dosare">
@@ -30,10 +30,15 @@
 <string name="menu_context_folder_rename">Redenumire</string>
 <string name="menu_context_folder_move">Mutare</string>
 <string name="menu_context_folder_delete">Șterge</string>
-<string name="menu_context_intent_broadcast">Trimite un mesaj</string>
+<string name="menu_context_intent_perform">Efectuați…</string>
 <string name="menu_context_intent_edit">Editează</string>
 <string name="menu_context_intent_copy">Copiere</string>
-<string name="menu_context_intent_add_shortcut">Adaugă scurtătură</string>
+<string name="perform_send_broadcast">Trimite un mesaj</string>
+<string name="perform_start_activity">Începe activitatea</string>
+<string name="perform_start_foreground_service">Începe serviciul de prim-plan</string>
+<string name="perform_start_service">Serviciu de pornire</string>
+<string name="perform_stop_service">Stop Service</string>
+<string name="perform_add_shortcut">Adaugă scurtătură</string>
 <string name="settings_option_show_hidden">Arată ascuns &lc_folders;</string>
 <string name="settings_option_auto_backup">Efectuați backup zilnic automat</string>
 <string name="settings_option_backup_versioning">Păstrați cele mai recente 3 backup-uri zilnice automate</string>
@@ -42,8 +47,8 @@
 <string name="dialog_ok">OK</string>
 <string name="dialog_cancel">Anulează</string>
 <string name="dialog_add">Adaugă</string>
-<string name="dialog_add_more">Adaugă ...</string>
-<string name="dialog_change">Schimbare ...</string>
+<string name="dialog_add_more">Adaugă…</string>
+<string name="dialog_change">Schimbare…</string>
 <string name="dialog_save">Salvează</string>
 <string name="dialog_delete">Șterge</string>
 <string name="dialog_backup_preupdate_title">Actualizarea bazei de date este necesară</string>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE resources [
     <!ENTITY folder        "Aplankas">
     <!ENTITY folders       "Aplankų">
@@ -30,10 +30,15 @@
 <string name="menu_context_folder_rename">Pervadinti</string>
 <string name="menu_context_folder_move">Perkelti</string>
 <string name="menu_context_folder_delete">Ištrinti</string>
-<string name="menu_context_intent_broadcast">Siųsti transliaciją</string>
+<string name="menu_context_intent_perform">Atlikti…</string>
 <string name="menu_context_intent_edit">Redaguoti</string>
 <string name="menu_context_intent_copy">Kopijuoti</string>
-<string name="menu_context_intent_add_shortcut">Pridėti sparčiųjų klavišų</string>
+<string name="perform_send_broadcast">Siųsti transliaciją</string>
+<string name="perform_start_activity">Pradėti veiklą</string>
+<string name="perform_start_foreground_service">Naujų žinių pradžia</string>
+<string name="perform_start_service">Pradėti tarnybą</string>
+<string name="perform_stop_service">Stabdyti tarnybą</string>
+<string name="perform_add_shortcut">Pridėti sparčiųjų klavišų</string>
 <string name="settings_option_show_hidden">Rodyti paslėptą &lc_folders;</string>
 <string name="settings_option_auto_backup">Atlikti automatinį kasdienį pastiprinimą</string>
 <string name="settings_option_backup_versioning">Išlaikyti 3 labiausiai neseniai automatiškai kasdien atsargines kopijas</string>
@@ -42,8 +47,8 @@
 <string name="dialog_ok">OK</string>
 <string name="dialog_cancel">Atšaukti</string>
 <string name="dialog_add">Pridėti</string>
-<string name="dialog_add_more">Pridėti ...</string>
-<string name="dialog_change">Keisti ...</string>
+<string name="dialog_add_more">Pridėti…</string>
+<string name="dialog_change">Keisti…</string>
 <string name="dialog_save">Įrašyti</string>
 <string name="dialog_delete">Ištrinti</string>
 <string name="dialog_backup_preupdate_title">Būtina Atnaujinti Duomenų Bazę</string>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE resources [
     <!ENTITY folder        "Složka">
     <!ENTITY folders       "Složky">
@@ -30,10 +30,15 @@
 <string name="menu_context_folder_rename">Přejmenovat</string>
 <string name="menu_context_folder_move">Přemístit</string>
 <string name="menu_context_folder_delete">Odstranit</string>
-<string name="menu_context_intent_broadcast">Odeslat vysílání</string>
+<string name="menu_context_intent_perform">Provést…</string>
 <string name="menu_context_intent_edit">Upravit</string>
 <string name="menu_context_intent_copy">Kopírování</string>
-<string name="menu_context_intent_add_shortcut">Přidat zástupce</string>
+<string name="perform_send_broadcast">Odeslat vysílání</string>
+<string name="perform_start_activity">Spustit aktivitu</string>
+<string name="perform_start_foreground_service">Spustit službu na popředí</string>
+<string name="perform_start_service">Spustit službu</string>
+<string name="perform_stop_service">Zastavit službu</string>
+<string name="perform_add_shortcut">Přidat zástupce</string>
 <string name="settings_option_show_hidden">Zobrazit skryté &lc_folders;</string>
 <string name="settings_option_auto_backup">Provést automatickou denní zálohu</string>
 <string name="settings_option_backup_versioning">Uchovat 3 nejnovější automatické denní zálohování</string>
@@ -42,8 +47,8 @@
 <string name="dialog_ok">OK</string>
 <string name="dialog_cancel">Storno</string>
 <string name="dialog_add">Přidat</string>
-<string name="dialog_add_more">Přidat ...</string>
-<string name="dialog_change">Změnit ...</string>
+<string name="dialog_add_more">Přidat…</string>
+<string name="dialog_change">Změnit…</string>
 <string name="dialog_save">Uložit</string>
 <string name="dialog_delete">Odstranit</string>
 <string name="dialog_backup_preupdate_title">Aktualizace databáze je povinná</string>

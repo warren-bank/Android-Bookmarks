@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE resources [
     <!ENTITY folder        "Kansio">
     <!ENTITY folders       "Kansiot">
@@ -30,10 +30,15 @@
 <string name="menu_context_folder_rename">Nimeä</string>
 <string name="menu_context_folder_move">Siirrä</string>
 <string name="menu_context_folder_delete">Poista</string>
-<string name="menu_context_intent_broadcast">Lähetä Broadcast</string>
+<string name="menu_context_intent_perform">Lomake…</string>
 <string name="menu_context_intent_edit">Muokkaa</string>
 <string name="menu_context_intent_copy">Kopioi</string>
-<string name="menu_context_intent_add_shortcut">Lisää Shortcut</string>
+<string name="perform_send_broadcast">Lähetä Broadcast</string>
+<string name="perform_start_activity">Aloita aktiviteetti</string>
+<string name="perform_start_foreground_service">Lopetuspalvelun aloitus</string>
+<string name="perform_start_service">Käynnistä palvelu</string>
+<string name="perform_stop_service">Lopeta palvelu</string>
+<string name="perform_add_shortcut">Lisää Shortcut</string>
 <string name="settings_option_show_hidden">Näytä piilo &lc_folders;</string>
 <string name="settings_option_auto_backup">Muodosta automaattinen päivittäinen varmistuskopio</string>
 <string name="settings_option_backup_versioning">Säilytä 3 tuoreinta automaattista varmuuskopioita</string>
@@ -42,8 +47,8 @@
 <string name="dialog_ok">OK</string>
 <string name="dialog_cancel">Peruuta</string>
 <string name="dialog_add">Lisää</string>
-<string name="dialog_add_more">Lisää ...</string>
-<string name="dialog_change">Muutos ...</string>
+<string name="dialog_add_more">Lisää…</string>
+<string name="dialog_change">Muutos…</string>
 <string name="dialog_save">Tallenna</string>
 <string name="dialog_delete">Poista</string>
 <string name="dialog_backup_preupdate_title">Tietokannan päivitys on pakollinen</string>

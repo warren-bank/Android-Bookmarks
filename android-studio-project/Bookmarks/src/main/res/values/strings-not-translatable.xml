@@ -7,6 +7,15 @@
 <string name="netscape_html_file_name"                   translatable="false">@string/default_backups_directory_name</string>
 <string name="folder_breadcrumbs_separator"              translatable="false">/</string>
 
+<string-array name="perform_options" translatable="false">
+  <item>@string/perform_send_broadcast</item>
+  <item>@string/perform_start_activity</item>
+  <item>@string/perform_start_foreground_service</item>
+  <item>@string/perform_start_service</item>
+  <item>@string/perform_stop_service</item>
+  <item>@string/perform_add_shortcut</item>
+</string-array>
+
 <!--
   ======================
   Intent flag constants:

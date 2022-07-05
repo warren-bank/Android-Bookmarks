@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE resources [
     <!ENTITY folder        "அடைவு">
     <!ENTITY folders       "கோடுகள்">
@@ -30,10 +30,15 @@
 <string name="menu_context_folder_rename">மறுபெயரிடு</string>
 <string name="menu_context_folder_move">நகர்த்து</string>
 <string name="menu_context_folder_delete">நீக்கு</string>
-<string name="menu_context_intent_broadcast">ஒளிபரப்பை அனுப்பு</string>
+<string name="menu_context_intent_perform">Perform…</string>
 <string name="menu_context_intent_edit">திருத்து</string>
 <string name="menu_context_intent_copy">நகல்</string>
-<string name="menu_context_intent_add_shortcut">குறுக்குவழியை சேர்</string>
+<string name="perform_send_broadcast">ஒளிபரப்பை அனுப்பு</string>
+<string name="perform_start_activity">செயற்பாட்டை துவக்கு</string>
+<string name="perform_start_foreground_service">முன்னணி சேவை துவக்கு</string>
+<string name="perform_start_service">சேவை துவக்கு</string>
+<string name="perform_stop_service">சேவை நிறுத்து</string>
+<string name="perform_add_shortcut">குறுக்குவழியை சேர்</string>
 <string name="settings_option_show_hidden">மறைக்கப்பட்ட காட்சி &lc_folders;</string>
 <string name="settings_option_auto_backup">தானியங்கி தன்னியக்கமாக காப்பு</string>
 <string name="settings_option_backup_versioning">3 மிக சமீபத்திய தானியங்கி பின்புலத்தை வைத்திரு</string>
@@ -42,8 +47,8 @@
 <string name="dialog_ok">OK</string>
 <string name="dialog_cancel">ரத்து செய்</string>
 <string name="dialog_add">சேர்</string>
-<string name="dialog_add_more">சேர் ...</string>
-<string name="dialog_change">மாற்று ...</string>
+<string name="dialog_add_more">சேர்…</string>
+<string name="dialog_change">மாற்று…</string>
 <string name="dialog_save">சேமி</string>
 <string name="dialog_delete">நீக்கு</string>
 <string name="dialog_backup_preupdate_title">தரவுத்தள புதுப்பித்தல் தேவைப்படுகிறது</string>

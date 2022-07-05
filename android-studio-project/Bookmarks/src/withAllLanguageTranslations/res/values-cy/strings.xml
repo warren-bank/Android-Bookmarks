@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE resources [
     <!ENTITY folder        "Plygell">
     <!ENTITY folders       "Ffolderi">
@@ -30,10 +30,15 @@
 <string name="menu_context_folder_rename">Ailenwi</string>
 <string name="menu_context_folder_move">Symud</string>
 <string name="menu_context_folder_delete">Dileu</string>
-<string name="menu_context_intent_broadcast">Anfon Darlledu</string>
+<string name="menu_context_intent_perform">Perfformio…</string>
 <string name="menu_context_intent_edit">Golygu</string>
 <string name="menu_context_intent_copy">Copïo</string>
-<string name="menu_context_intent_add_shortcut">Ychwanegu Byrlwybr</string>
+<string name="perform_send_broadcast">Anfon Darlledu</string>
+<string name="perform_start_activity">Gweithgarwch Dechrau</string>
+<string name="perform_start_foreground_service">Cychwyn y Gwasanaeth Blaendir</string>
+<string name="perform_start_service">Cychwyn y Gwasanaeth</string>
+<string name="perform_stop_service">Atal y Gwasanaeth</string>
+<string name="perform_add_shortcut">Ychwanegu Byrlwybr</string>
 <string name="settings_option_show_hidden">Dangos cudd &lc_folders;</string>
 <string name="settings_option_auto_backup">Cyflawni wrth gefn dyddiol awtomatig</string>
 <string name="settings_option_backup_versioning">Cadwch y 3 ôl-gefn awtomatig mwyaf diweddar</string>
@@ -42,8 +47,8 @@
 <string name="dialog_ok">OK</string>
 <string name="dialog_cancel">Diddymu</string>
 <string name="dialog_add">Ychwanegu</string>
-<string name="dialog_add_more">Ychwanegu ...</string>
-<string name="dialog_change">Newid ...</string>
+<string name="dialog_add_more">Ychwanegu…</string>
+<string name="dialog_change">Newid…</string>
 <string name="dialog_save">Cadw</string>
 <string name="dialog_delete">Dileu</string>
 <string name="dialog_backup_preupdate_title">Mae Angen Diweddaru Cronfa Ddata</string>

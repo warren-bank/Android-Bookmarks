@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE resources [
     <!ENTITY folder        "సంచయం">
     <!ENTITY folders       "ఫొల్డర్లు">
@@ -30,10 +30,15 @@
 <string name="menu_context_folder_rename">పునఃనామము</string>
 <string name="menu_context_folder_move">కదుపుము</string>
 <string name="menu_context_folder_delete">తొలగించు</string>
-<string name="menu_context_intent_broadcast">బ్రాడ్కాస్ట్ పంపించు</string>
+<string name="menu_context_intent_perform">Perform…</string>
 <string name="menu_context_intent_edit">సరికూర్చు</string>
 <string name="menu_context_intent_copy">నకలు</string>
-<string name="menu_context_intent_add_shortcut">శీఘ్రమార్గమును జతచేయుము</string>
+<string name="perform_send_broadcast">బ్రాడ్కాస్ట్ పంపించు</string>
+<string name="perform_start_activity">క్రియాశీలత ప్రారంభం</string>
+<string name="perform_start_foreground_service">ఫోర్గ్రౌండ్ సేవను ప్రారంభించుము</string>
+<string name="perform_start_service">సర్వీసు ప్రారంభించు</string>
+<string name="perform_stop_service">సేవను ఆపు</string>
+<string name="perform_add_shortcut">శీఘ్రమార్గమును జతచేయుము</string>
 <string name="settings_option_show_hidden">మరుగును చూపుము &lc_folders;</string>
 <string name="settings_option_auto_backup">స్వయంచాలక రోజువారీ బ్యాకప్</string>
 <string name="settings_option_backup_versioning">3 అత్యంత ఇటీవల స్వయంచాలక దినపత్రాలను ఉంచండి</string>
@@ -43,7 +48,7 @@
 <string name="dialog_cancel">రద్దు</string>
 <string name="dialog_add">\@ title: window</string>
 <string name="dialog_add_more">\@ title: window</string>
-<string name="dialog_change">మార్చు ...</string>
+<string name="dialog_change">మార్చు…</string>
 <string name="dialog_save">\@ action: button</string>
 <string name="dialog_delete">తొలగించు</string>
 <string name="dialog_backup_preupdate_title">డేటాబేసు నవీకరణ అభ్యర్ధన</string>

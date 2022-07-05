@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE resources [
     <!ENTITY folder        "Fillteán:">
     <!ENTITY folders       "Fillteáin">
@@ -30,10 +30,15 @@
 <string name="menu_context_folder_rename">Athainmnigh</string>
 <string name="menu_context_folder_move">Bog</string>
 <string name="menu_context_folder_delete">&amp; Scrios</string>
-<string name="menu_context_intent_broadcast">Seol Craoladh</string>
+<string name="menu_context_intent_perform">Á dhéanamh…</string>
 <string name="menu_context_intent_edit">Eagar</string>
 <string name="menu_context_intent_copy">Cóipeáil</string>
-<string name="menu_context_intent_add_shortcut">Cuir Aicearra Leis</string>
+<string name="perform_send_broadcast">Seol Craoladh</string>
+<string name="perform_start_activity">Tosaigh Gníomhaíocht</string>
+<string name="perform_start_foreground_service">Tosaigh Seirbhís Tabhta</string>
+<string name="perform_start_service">Tosaigh Seirbhís</string>
+<string name="perform_stop_service">Stop an tSeirbhís</string>
+<string name="perform_add_shortcut">Cuir Aicearra Leis</string>
 <string name="settings_option_show_hidden">Taispeáin folaigh &lc_folders;</string>
 <string name="settings_option_auto_backup">Déan cúltaca go laethúil cúltaca</string>
 <string name="settings_option_backup_versioning">Coinnigh an 3 an chuid is déanaí uathoibríoch backups laethúil</string>
@@ -42,8 +47,8 @@
 <string name="dialog_ok">OK</string>
 <string name="dialog_cancel">Cealaigh</string>
 <string name="dialog_add">Cuir Leis</string>
-<string name="dialog_add_more">Cuir Leis ...</string>
-<string name="dialog_change">&amp; Athraigh ...</string>
+<string name="dialog_add_more">Cuir Leis…</string>
+<string name="dialog_change">&amp; Athraigh…</string>
 <string name="dialog_save">Sábháil</string>
 <string name="dialog_delete">&amp; Scrios</string>
 <string name="dialog_backup_preupdate_title">Tá Nuashonrú Bunachar Sonraí Ag Teastáil</string>

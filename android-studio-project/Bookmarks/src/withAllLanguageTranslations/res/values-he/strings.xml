@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE resources [
     <!ENTITY folder        "תיקיה">
     <!ENTITY folders       "תיקיות">
@@ -30,10 +30,15 @@
 <string name="menu_context_folder_rename">שינוי שם</string>
 <string name="menu_context_folder_move">העברה</string>
 <string name="menu_context_folder_delete">מחיקה</string>
-<string name="menu_context_intent_broadcast">משלוח שידור</string>
+<string name="menu_context_intent_perform">ביצוע…</string>
 <string name="menu_context_intent_edit">עריכה</string>
 <string name="menu_context_intent_copy">העתקה</string>
-<string name="menu_context_intent_add_shortcut">הוספת קיצור דרך</string>
+<string name="perform_send_broadcast">משלוח שידור</string>
+<string name="perform_start_activity">יצירת פעילות</string>
+<string name="perform_start_foreground_service">הפעלת שירות חזית</string>
+<string name="perform_start_service">הפעלת שירות</string>
+<string name="perform_stop_service">עצירת שירות</string>
+<string name="perform_add_shortcut">הוספת קיצור דרך</string>
 <string name="settings_option_show_hidden">הצגת מוסתר &lc_folders;</string>
 <string name="settings_option_auto_backup">ביצוע גיבוי יומי אוטומטי</string>
 <string name="settings_option_backup_versioning">להשאיר את 3 גיבויי היומיום האוטומטיים האחרונים</string>
@@ -42,8 +47,8 @@
 <string name="dialog_ok">OK</string>
 <string name="dialog_cancel">ביטול</string>
 <string name="dialog_add">הוספה</string>
-<string name="dialog_add_more">הוספה ...</string>
-<string name="dialog_change">שינוי ...</string>
+<string name="dialog_add_more">הוספה…</string>
+<string name="dialog_change">שינוי…</string>
 <string name="dialog_save">שמירה</string>
 <string name="dialog_delete">מחיקה</string>
 <string name="dialog_backup_preupdate_title">נדרש עדכון מסד נתונים</string>

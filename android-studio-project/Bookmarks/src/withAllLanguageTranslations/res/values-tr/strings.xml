@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE resources [
     <!ENTITY folder        "Klasör">
     <!ENTITY folders       "Klasörler">
@@ -30,10 +30,15 @@
 <string name="menu_context_folder_rename">Yeniden Adlandır</string>
 <string name="menu_context_folder_move">Taşı</string>
 <string name="menu_context_folder_delete">Sil</string>
-<string name="menu_context_intent_broadcast">Yayın Gönder</string>
+<string name="menu_context_intent_perform">Gerçekleştir…</string>
 <string name="menu_context_intent_edit">Düzenle</string>
 <string name="menu_context_intent_copy">Kopyala</string>
-<string name="menu_context_intent_add_shortcut">Kısayol Ekle</string>
+<string name="perform_send_broadcast">Yayın Gönder</string>
+<string name="perform_start_activity">Etkinliği Başlat</string>
+<string name="perform_start_foreground_service">Ön Plan Hizmetini Başlat</string>
+<string name="perform_start_service">Hizmeti Başlat</string>
+<string name="perform_stop_service">Hizmeti Durdur</string>
+<string name="perform_add_shortcut">Kısayol Ekle</string>
 <string name="settings_option_show_hidden">Gizlenmeyi göster &lc_folders;</string>
 <string name="settings_option_auto_backup">Otomatik günlük yedeklemeyi gerçekleştir</string>
 <string name="settings_option_backup_versioning">3 en son otomatik günlük yedeklemeleri alıkoy</string>
@@ -42,8 +47,8 @@
 <string name="dialog_ok">OK</string>
 <string name="dialog_cancel">İptal</string>
 <string name="dialog_add">Ekle</string>
-<string name="dialog_add_more">Ekle ...</string>
-<string name="dialog_change">Değiştir ...</string>
+<string name="dialog_add_more">Ekle…</string>
+<string name="dialog_change">Değiştir…</string>
 <string name="dialog_save">Kaydet</string>
 <string name="dialog_delete">Sil</string>
 <string name="dialog_backup_preupdate_title">Veritabanı Güncellemesi Gerekiyor</string>

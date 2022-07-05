@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE resources [
     <!ENTITY folder        "फोल्डर">
     <!ENTITY folders       "फोल्डरहरू">
@@ -30,10 +30,15 @@
 <string name="menu_context_folder_rename">पुन: नामकरण गर्नुहोस्</string>
 <string name="menu_context_folder_move">सार्नुहोस्</string>
 <string name="menu_context_folder_delete">मेट्नुहोस्</string>
-<string name="menu_context_intent_broadcast">प्रसारण पठाउनुहोस्</string>
+<string name="menu_context_intent_perform">सम्पादन गर्नुहोस्…</string>
 <string name="menu_context_intent_edit">सम्पादन गर्नुहोस्</string>
 <string name="menu_context_intent_copy">प्रतिलिपि बनाउनुहोस्</string>
-<string name="menu_context_intent_add_shortcut">सर्टकट</string>
+<string name="perform_send_broadcast">प्रसारण पठाउनुहोस्</string>
+<string name="perform_start_activity">क्रियाकलाप सुरु गर्नुहोस्</string>
+<string name="perform_start_foreground_service">अग्रभूमि सेवा सुरु गर्नुहोस्</string>
+<string name="perform_start_service">सेवा सुरु गर्नुहोस्</string>
+<string name="perform_stop_service">सेवा रोक्नुहोस्</string>
+<string name="perform_add_shortcut">सर्टकट</string>
 <string name="settings_option_show_hidden">लुकाइएको देखाउनुहोस् &lc_folders;</string>
 <string name="settings_option_auto_backup">स्वचालित दैनिक जगेडा सम्पादन गर्नुहोस्</string>
 <string name="settings_option_backup_versioning">३ सबैभन्दा पछिल्लो स्वचालित दैनिक ब्याकअप राख्नुहोस्</string>
@@ -42,8 +47,8 @@
 <string name="dialog_ok">OK</string>
 <string name="dialog_cancel">रद्द गर्नुहोस्</string>
 <string name="dialog_add">थप्नुहोस्</string>
-<string name="dialog_add_more">थप्नुहोस् ...</string>
-<string name="dialog_change">परिवर्तन गर्नुहोस् ...</string>
+<string name="dialog_add_more">थप्नुहोस्…</string>
+<string name="dialog_change">परिवर्तन गर्नुहोस्…</string>
 <string name="dialog_save">बचत गर्नुहोस्</string>
 <string name="dialog_delete">मेट्नुहोस्</string>
 <string name="dialog_backup_preupdate_title">डाटाबेस अद्यावधिक आवश्यक छ</string>

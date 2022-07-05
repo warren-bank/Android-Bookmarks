@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE resources [
     <!ENTITY folder        "Map">
     <!ENTITY folders       "Mappen">
@@ -30,10 +30,15 @@
 <string name="menu_context_folder_rename">Naam wijzigen</string>
 <string name="menu_context_folder_move">Verplaatsen</string>
 <string name="menu_context_folder_delete">Wissen</string>
-<string name="menu_context_intent_broadcast">Broadcast verzenden</string>
+<string name="menu_context_intent_perform">Uitvoeren…</string>
 <string name="menu_context_intent_edit">Bewerken</string>
 <string name="menu_context_intent_copy">Kopiëren</string>
-<string name="menu_context_intent_add_shortcut">Snelkoppeling toevoegen</string>
+<string name="perform_send_broadcast">Broadcast verzenden</string>
+<string name="perform_start_activity">Activiteit starten</string>
+<string name="perform_start_foreground_service">Voorgrondservice starten</string>
+<string name="perform_start_service">Service starten</string>
+<string name="perform_stop_service">Service stoppen</string>
+<string name="perform_add_shortcut">Snelkoppeling toevoegen</string>
 <string name="settings_option_show_hidden">Verborgen tonen &lc_folders;</string>
 <string name="settings_option_auto_backup">Automatische dagelijkse backup uitvoeren</string>
 <string name="settings_option_backup_versioning">Houd de 3 meest recente automatische dagelijkse backups</string>
@@ -42,8 +47,8 @@
 <string name="dialog_ok">OK</string>
 <string name="dialog_cancel">Annuleren</string>
 <string name="dialog_add">Toevoegen</string>
-<string name="dialog_add_more">Toevoegen ...</string>
-<string name="dialog_change">Wijzigen ...</string>
+<string name="dialog_add_more">Toevoegen…</string>
+<string name="dialog_change">Wijzigen…</string>
 <string name="dialog_save">Opslaan</string>
 <string name="dialog_delete">Wissen</string>
 <string name="dialog_backup_preupdate_title">Database-update Is Vereist</string>

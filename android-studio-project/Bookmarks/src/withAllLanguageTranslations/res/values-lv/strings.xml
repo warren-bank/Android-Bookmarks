@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE resources [
     <!ENTITY folder        "Mape">
     <!ENTITY folders       "Mapes">
@@ -30,10 +30,15 @@
 <string name="menu_context_folder_rename">Pārdēvēt</string>
 <string name="menu_context_folder_move">Pārvietot</string>
 <string name="menu_context_folder_delete">Dzēst</string>
-<string name="menu_context_intent_broadcast">Sūtīt pārraidi</string>
+<string name="menu_context_intent_perform">Veikt…</string>
 <string name="menu_context_intent_edit">Rediģēt</string>
 <string name="menu_context_intent_copy">Kopēt</string>
-<string name="menu_context_intent_add_shortcut">Pievienot īsceļu</string>
+<string name="perform_send_broadcast">Sūtīt pārraidi</string>
+<string name="perform_start_activity">Sākt darbību</string>
+<string name="perform_start_foreground_service">Sākuma priekšplāna pakalpojums</string>
+<string name="perform_start_service">Sākuma pakalpojums</string>
+<string name="perform_stop_service">Apturēt servisu</string>
+<string name="perform_add_shortcut">Pievienot īsceļu</string>
 <string name="settings_option_show_hidden">Rādīt slēpto &lc_folders;</string>
 <string name="settings_option_auto_backup">Veikt automātisko ikdienas rezerves kopēšanu</string>
 <string name="settings_option_backup_versioning">Saglabāt 3 jaunākās automātiskās ikdienas backups</string>
@@ -42,8 +47,8 @@
 <string name="dialog_ok">OK</string>
 <string name="dialog_cancel">Atcelt</string>
 <string name="dialog_add">Pievienot</string>
-<string name="dialog_add_more">Pievienot ...</string>
-<string name="dialog_change">Mainīt ...</string>
+<string name="dialog_add_more">Pievienot…</string>
+<string name="dialog_change">Mainīt…</string>
 <string name="dialog_save">Saglabāt</string>
 <string name="dialog_delete">Dzēst</string>
 <string name="dialog_backup_preupdate_title">Datu Bāzes Atjaunināšana Ir Nepieciešama</string>

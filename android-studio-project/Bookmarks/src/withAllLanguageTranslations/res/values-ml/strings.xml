@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE resources [
     <!ENTITY folder        "ഫോള്ഡര്">
     <!ENTITY folders       "ഫോള്ഡര്മാര്">
@@ -30,10 +30,15 @@
 <string name="menu_context_folder_rename">പേരു് മാറ്റുക</string>
 <string name="menu_context_folder_move">നീക്കുക</string>
 <string name="menu_context_folder_delete">നീക്കം ചെയ്യുക</string>
-<string name="menu_context_intent_broadcast">ബ്രോഡ്കാസ്റ്റ് അയയ്ക്കുക</string>
+<string name="menu_context_intent_perform">പെര്ഫോം…</string>
 <string name="menu_context_intent_edit">ചിട്ടപ്പെടുത്തുക</string>
 <string name="menu_context_intent_copy">പകര്ത്തുക</string>
-<string name="menu_context_intent_add_shortcut">കുറുക്കുവഴി ചേര്ക്കുക</string>
+<string name="perform_send_broadcast">ബ്രോഡ്കാസ്റ്റ് അയയ്ക്കുക</string>
+<string name="perform_start_activity">പ്രവൃത്തി തുടങ്ങുക</string>
+<string name="perform_start_foreground_service">ഫോര്ഗ്രൗണ്ട് സര്വീസ് ആരംഭിക്കുക</string>
+<string name="perform_start_service">സേവനം ആരംഭിക്കുക</string>
+<string name="perform_stop_service">സേവനം നിര്ത്തുക</string>
+<string name="perform_add_shortcut">കുറുക്കുവഴി ചേര്ക്കുക</string>
 <string name="settings_option_show_hidden">ഒളിപ്പിച്ച കാണിയ്ക്കുക &lc_folders;</string>
 <string name="settings_option_auto_backup">ഓട്ടോമാറ്റിക് ദിനപത്രം പിന്തുണയ്ക്കുക</string>
 <string name="settings_option_backup_versioning">3 ഏറ്റവും അടുത്തുള്ള ഓട്ടോമാറ്റിക് ദിനപത്രം സൂക്ഷിക്കുക</string>
@@ -42,8 +47,8 @@
 <string name="dialog_ok">OK</string>
 <string name="dialog_cancel">റദ്ദാക്കുക</string>
 <string name="dialog_add">ചേര്ക്കുക</string>
-<string name="dialog_add_more">ചേര്ക്കുക ...</string>
-<string name="dialog_change">മാറ്റം ...</string>
+<string name="dialog_add_more">ചേര്ക്കുക…</string>
+<string name="dialog_change">മാറ്റം…</string>
 <string name="dialog_save">സൂക്ഷിക്കുക</string>
 <string name="dialog_delete">നീക്കം ചെയ്യുക</string>
 <string name="dialog_backup_preupdate_title">ഡാറ്റാബേസ് പരിഷ്കരണം ആവശ്യമാണ്</string>

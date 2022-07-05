@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE resources [
     <!ENTITY folder        "Folder">
     <!ENTITY folders       "Folderi">
@@ -30,10 +30,15 @@
 <string name="menu_context_folder_rename">Preimenovanje</string>
 <string name="menu_context_folder_move">Premješta</string>
 <string name="menu_context_folder_delete">Izbriši</string>
-<string name="menu_context_intent_broadcast">Pošalji Emitiranje</string>
+<string name="menu_context_intent_perform">Izvedi…</string>
 <string name="menu_context_intent_edit">Uredi</string>
 <string name="menu_context_intent_copy">Kopiraj</string>
-<string name="menu_context_intent_add_shortcut">Dodaj Prečicu</string>
+<string name="perform_send_broadcast">Pošalji Emitiranje</string>
+<string name="perform_start_activity">Pokreni Aktivnost</string>
+<string name="perform_start_foreground_service">Pokretanje usluge prednjeg plana</string>
+<string name="perform_start_service">Pokretanje usluge</string>
+<string name="perform_stop_service">Zaustavi uslugu</string>
+<string name="perform_add_shortcut">Dodaj Prečicu</string>
 <string name="settings_option_show_hidden">Pokaži sakriveno &lc_folders;</string>
 <string name="settings_option_auto_backup">Izvođenje automatskog dnevnog sigurnosnog kopiranja</string>
 <string name="settings_option_backup_versioning">Zadrži 3 najnovija automatska sigurnosna kopiranja</string>
@@ -42,8 +47,8 @@
 <string name="dialog_ok">OK</string>
 <string name="dialog_cancel">Otkaži</string>
 <string name="dialog_add">Dodaj</string>
-<string name="dialog_add_more">Dodaj ...</string>
-<string name="dialog_change">Promijeni ...</string>
+<string name="dialog_add_more">Dodaj…</string>
+<string name="dialog_change">Promijeni…</string>
 <string name="dialog_save">Spremi</string>
 <string name="dialog_delete">Izbriši</string>
 <string name="dialog_backup_preupdate_title">Potrebno Je Ažuriranje Baze Podataka</string>

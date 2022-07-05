@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE resources [
     <!ENTITY folder        "Folder">
     <!ENTITY folders       "Folders">
@@ -30,10 +30,15 @@
 <string name="menu_context_folder_rename">Rename</string>
 <string name="menu_context_folder_move">Nimxu</string>
 <string name="menu_context_folder_delete">Ħassar</string>
-<string name="menu_context_intent_broadcast">Ibgħat Broadcast</string>
+<string name="menu_context_intent_perform">Wettaq…</string>
 <string name="menu_context_intent_edit">Editja</string>
 <string name="menu_context_intent_copy">Kopja</string>
-<string name="menu_context_intent_add_shortcut">Żid Shortcut</string>
+<string name="perform_send_broadcast">Ibgħat Broadcast</string>
+<string name="perform_start_activity">Bidu Attività</string>
+<string name="perform_start_foreground_service">Startjar Servizz Miksub</string>
+<string name="perform_start_service">Servizz tal-bidu</string>
+<string name="perform_stop_service">Servizz ta \'</string>
+<string name="perform_add_shortcut">Żid Shortcut</string>
 <string name="settings_option_show_hidden">Uri moħbija &lc_folders;</string>
 <string name="settings_option_auto_backup">Twettiq backup awtomatiku kuljum</string>
 <string name="settings_option_backup_versioning">Żomm it-3 backups ta \' kuljum awtomatiċi l-aktar riċenti</string>
@@ -42,8 +47,8 @@
 <string name="dialog_ok">OK</string>
 <string name="dialog_cancel">Tħassir</string>
 <string name="dialog_add">Żid</string>
-<string name="dialog_add_more">Żid ...</string>
-<string name="dialog_change">Bidla ...</string>
+<string name="dialog_add_more">Żid…</string>
+<string name="dialog_change">Bidla…</string>
 <string name="dialog_save">Save</string>
 <string name="dialog_delete">Ħassar</string>
 <string name="dialog_backup_preupdate_title">Aġġornament Database Hija Meħtieġa</string>

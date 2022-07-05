@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE resources [
     <!ENTITY folder        "폴더">
     <!ENTITY folders       "폴더">
@@ -30,10 +30,15 @@
 <string name="menu_context_folder_rename">이름 바꾸기</string>
 <string name="menu_context_folder_move">이동</string>
 <string name="menu_context_folder_delete">삭제</string>
-<string name="menu_context_intent_broadcast">브로드캐스트 보내기</string>
+<string name="menu_context_intent_perform">수행…</string>
 <string name="menu_context_intent_edit">편집</string>
 <string name="menu_context_intent_copy">복사</string>
-<string name="menu_context_intent_add_shortcut">바로 가기 추가</string>
+<string name="perform_send_broadcast">브로드캐스트 보내기</string>
+<string name="perform_start_activity">활동 시작</string>
+<string name="perform_start_foreground_service">포그라운드 서비스 시작</string>
+<string name="perform_start_service">서비스 시작</string>
+<string name="perform_stop_service">서비스 중지</string>
+<string name="perform_add_shortcut">바로 가기 추가</string>
 <string name="settings_option_show_hidden">숨겨진 항목 표시 &lc_folders;</string>
 <string name="settings_option_auto_backup">자동 일일 백업 수행</string>
 <string name="settings_option_backup_versioning">가장 최근의 자동 일일 백업 3개 유지</string>
@@ -42,8 +47,8 @@
 <string name="dialog_ok">OK</string>
 <string name="dialog_cancel">취소</string>
 <string name="dialog_add">추가</string>
-<string name="dialog_add_more">추가 ...</string>
-<string name="dialog_change">변화 ...</string>
+<string name="dialog_add_more">추가…</string>
+<string name="dialog_change">변화…</string>
 <string name="dialog_save">저장</string>
 <string name="dialog_delete">삭제</string>
 <string name="dialog_backup_preupdate_title">데이터베이스 업데이트 필요</string>
