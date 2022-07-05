@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  package="com.github.warren_bank.bookmarks">
+
+  <!-- =============================================================================================== -->
+  <!-- runtime permissions:                                                                            -->
+  <!-- ====================                                                                            -->
+  <!-- https://android.googlesource.com/platform/frameworks/base/+/master/core/res/AndroidManifest.xml -->
+  <!-- =============================================================================================== -->
+
+  <!-- android:protectionLevel="normal" -->
+  <uses-permission android:name="com.android.alarm.permission.SET_ALARM"/>
+
+  <!-- android:protectionLevel="dangerous" -->
+  <uses-permission android:name="android.permission.CALL_PHONE"/>
+
+  <!-- android:protectionLevel="signature|privileged" -->
+  <uses-permission android:name="android.permission.CALL_PRIVILEGED"/>
+  <uses-permission android:name="android.permission.REBOOT"/>
+  <uses-permission android:name="android.permission.SHUTDOWN"/>
+
+  <!-- android:protectionLevel="signature" -->
+  <uses-permission android:name="android.permission.BROADCAST_PACKAGE_REMOVED"/>
+  <uses-permission android:name="android.permission.BROADCAST_SMS"/>
+  <uses-permission android:name="android.permission.BROADCAST_WAP_PUSH"/>
+
+</manifest>

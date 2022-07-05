@@ -1,8 +1,13 @@
 package com.github.warren_bank.bookmarks.utils;
 
+import com.github.warren_bank.bookmarks.BuildConfig;
+
 import android.app.Activity;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
+import android.text.TextUtils;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -16,10 +21,28 @@ public final class RuntimePermissionUtils {
 
   private static HashMap<Integer,Object> passthroughCache = new HashMap<Integer,Object>();
 
+  public static boolean hasAllPermissions(Activity activity, Intent intent) {
+    String[] missingPermissions = RuntimePermissionUtils.getMissingPermissions(activity, intent);
+
+    return (missingPermissions == null);
+  }
+
   public static boolean hasAllPermissions(Activity activity, String[] allRequestedPermissions) {
     String[] missingPermissions = RuntimePermissionUtils.getMissingPermissions(activity, allRequestedPermissions);
 
     return (missingPermissions == null);
+  }
+
+  public static void requestPermissions(Activity activity, RuntimePermissionListener listener, Intent intent, int requestCode) {
+    Object passthrough = (Object) intent;
+    RuntimePermissionUtils.requestPermissions(activity, listener, intent, requestCode, passthrough);
+  }
+
+  public static void requestPermissions(Activity activity, RuntimePermissionListener listener, Intent intent, int requestCode, Object passthrough) {
+    if (intent == null) return;
+
+    String[] allRequestedPermissions = RuntimePermissionUtils.getAllRequestedPermissions(activity, intent);
+    RuntimePermissionUtils.requestPermissions(activity, listener, allRequestedPermissions, requestCode, passthrough);
   }
 
   public static void requestPermissions(Activity activity, RuntimePermissionListener listener, String[] allRequestedPermissions, int requestCode) {
@@ -50,6 +73,38 @@ public final class RuntimePermissionUtils {
     else {
       listener.onRequestPermissionsDenied(requestCode, passthrough, missingPermissions);
     }
+  }
+
+  private static String[] getMissingPermissions(Activity activity, Intent intent) {
+    String[] allRequestedPermissions = RuntimePermissionUtils.getAllRequestedPermissions(activity, intent);
+    return RuntimePermissionUtils.getMissingPermissions(activity, allRequestedPermissions);
+  }
+
+  private static String[] getAllRequestedPermissions(Activity activity, Intent intent) {
+    if (Build.VERSION.SDK_INT < 23)
+      return null;
+
+    if (intent == null)
+      return null;
+
+    String action = intent.getAction();
+    if (TextUtils.isEmpty(action))
+      return null;
+
+    List<String> allRequestedPermissions = new ArrayList<String>();
+
+    switch(action) {
+      case "android.intent.action.CALL" : {
+          if (BuildConfig.ALLOW_RUNTIME_PERMISSIONS_USER)
+            allRequestedPermissions.add("android.permission.CALL_PHONE");
+        }
+        break;
+    }
+
+    if (allRequestedPermissions.isEmpty())
+      return null;
+
+    return allRequestedPermissions.toArray(new String[allRequestedPermissions.size()]);
   }
 
   private static String[] getMissingPermissions(Activity activity, String[] allRequestedPermissions) {

@@ -12,6 +12,12 @@ public class Constants {
   public static final int PERMISSION_CHECK_REQUEST_CODE_BACKUP_DATABASE                            = 5;
   public static final int PERMISSION_CHECK_REQUEST_CODE_IMPORT_HTML_FILEPICKER                     = 6;
   public static final int PERMISSION_CHECK_REQUEST_CODE_EXPORT_HTML_FILEPICKER                     = 7;
+  public static final int PERMISSION_CHECK_REQUEST_CODE_INTENT_SEND_BROADCAST                      = 8;
+  public static final int PERMISSION_CHECK_REQUEST_CODE_INTENT_START_ACTIVITY                      = 9;
+  public static final int PERMISSION_CHECK_REQUEST_CODE_INTENT_START_FOREGROUND_SERVICE            = 10;
+  public static final int PERMISSION_CHECK_REQUEST_CODE_INTENT_START_SERVICE                       = 11;
+  public static final int PERMISSION_CHECK_REQUEST_CODE_INTENT_STOP_SERVICE                        = 12;
+  public static final int PERMISSION_CHECK_REQUEST_CODE_INTENT_ADD_SHORTCUT                        = 13;
 
   /* Intent Extras */
   public static final String EXTRA_INTENT_ID   = Constants.PACKAGE_NAME + ".BookmarkId";

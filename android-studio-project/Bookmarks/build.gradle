@@ -36,13 +36,29 @@ android {
     }
   }
 
-  flavorDimensions 'language_resources'
+  flavorDimensions "languageResources", "runtimePermissions"
+
   productFlavors {
-    all_languages {
-      dimension 'language_resources'
+    withAllLanguageTranslations {
+      dimension "languageResources"
     }
     english {
-      dimension 'language_resources'
+      dimension "languageResources"
+    }
+    noRuntimePermissions {
+      dimension "runtimePermissions"
+      buildConfigField "boolean", "ALLOW_RUNTIME_PERMISSIONS_USER",   "false"
+      buildConfigField "boolean", "ALLOW_RUNTIME_PERMISSIONS_SYSTEM", "false"
+    }
+    withUserRuntimePermissions {
+      dimension "runtimePermissions"
+      buildConfigField "boolean", "ALLOW_RUNTIME_PERMISSIONS_USER",   "true"
+      buildConfigField "boolean", "ALLOW_RUNTIME_PERMISSIONS_SYSTEM", "false"
+    }
+    withSystemRuntimePermissions {
+      dimension "runtimePermissions"
+      buildConfigField "boolean", "ALLOW_RUNTIME_PERMISSIONS_USER",   "true"
+      buildConfigField "boolean", "ALLOW_RUNTIME_PERMISSIONS_SYSTEM", "true"
     }
   }
 

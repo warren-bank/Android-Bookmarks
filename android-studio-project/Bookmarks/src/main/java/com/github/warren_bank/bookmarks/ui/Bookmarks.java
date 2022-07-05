@@ -579,16 +579,7 @@ public class Bookmarks extends ListActivity implements RuntimePermissionUtils.Ru
       getFolderContentItems();
     }
     else {
-      Intent intent = db.getIntent(selectedItem.id);
-
-      if (intent != null) {
-        try {
-          startActivity(intent);
-        }
-        catch(Exception e) { // ActivityNotFoundException
-          Toast.makeText(getApplicationContext(), R.string.messages_activity_not_found, Toast.LENGTH_LONG).show();
-        }
-      }
+      intentPermissionCheck(selectedItem.id, Constants.PERMISSION_CHECK_REQUEST_CODE_INTENT_START_ACTIVITY);
     }
   }
 
@@ -719,10 +710,7 @@ public class Bookmarks extends ListActivity implements RuntimePermissionUtils.Ru
 
   private void broadcastBookmark(FolderContentItem selectedItem) {
     if (!selectedItem.isFolder) {
-      Intent intent = db.getIntent(selectedItem.id);
-
-      if (intent != null)
-        sendBroadcast(intent);
+      intentPermissionCheck(selectedItem.id, Constants.PERMISSION_CHECK_REQUEST_CODE_INTENT_SEND_BROADCAST);
     }
   }
 
@@ -751,42 +739,45 @@ public class Bookmarks extends ListActivity implements RuntimePermissionUtils.Ru
 
   private void addShortcutForBookmark(FolderContentItem selectedItem) {
     if (!selectedItem.isFolder) {
-      Intent intent = db.getIntent(selectedItem.id);
+      Object passthrough = (Object) selectedItem;
+      intentPermissionCheck(selectedItem.id, Constants.PERMISSION_CHECK_REQUEST_CODE_INTENT_ADD_SHORTCUT, passthrough);
+    }
+  }
 
-      if (intent != null) {
-        try {
-          if (Build.VERSION.SDK_INT >= 25) {
-            ShortcutInfo shortcutInfo = new ShortcutInfo.Builder(getApplicationContext(), Integer.toString(selectedItem.id))
-              .setShortLabel(selectedItem.name)
-              .setIcon(Icon.createWithResource(getApplicationContext(), R.drawable.icon_shortcut))
-              .setIntent(intent)
-              .build();
+  private void addShortcutForBookmark(FolderContentItem selectedItem, Intent intent) {
+    if (intent == null) return;
 
-            ShortcutManager shortcutManager = (ShortcutManager) getSystemService(Context.SHORTCUT_SERVICE);
-            shortcutManager.requestPinShortcut(shortcutInfo, null);
-          }
-          else {
-            Intent addIntent = new Intent();
-            addIntent.putExtra(
-              Intent.EXTRA_SHORTCUT_INTENT,
-              intent
-            );
-            addIntent.putExtra(
-              Intent.EXTRA_SHORTCUT_NAME,
-              selectedItem.name
-            );
-            addIntent.putExtra(
-              Intent.EXTRA_SHORTCUT_ICON_RESOURCE,
-              Intent.ShortcutIconResource.fromContext(getApplicationContext(), R.drawable.icon_shortcut)
-            );
-            addIntent.setAction("com.android.launcher.action.INSTALL_SHORTCUT");
-            addIntent.putExtra("duplicate", false);
-            getApplicationContext().sendBroadcast(addIntent);
-          }
-        }
-        catch(Exception e) {}
+    try {
+      if (Build.VERSION.SDK_INT >= 25) {
+        ShortcutInfo shortcutInfo = new ShortcutInfo.Builder(getApplicationContext(), Integer.toString(selectedItem.id))
+          .setShortLabel(selectedItem.name)
+          .setIcon(Icon.createWithResource(getApplicationContext(), R.drawable.icon_shortcut))
+          .setIntent(intent)
+          .build();
+
+        ShortcutManager shortcutManager = (ShortcutManager) getSystemService(Context.SHORTCUT_SERVICE);
+        shortcutManager.requestPinShortcut(shortcutInfo, null);
+      }
+      else {
+        Intent addIntent = new Intent();
+        addIntent.putExtra(
+          Intent.EXTRA_SHORTCUT_INTENT,
+          intent
+        );
+        addIntent.putExtra(
+          Intent.EXTRA_SHORTCUT_NAME,
+          selectedItem.name
+        );
+        addIntent.putExtra(
+          Intent.EXTRA_SHORTCUT_ICON_RESOURCE,
+          Intent.ShortcutIconResource.fromContext(getApplicationContext(), R.drawable.icon_shortcut)
+        );
+        addIntent.setAction("com.android.launcher.action.INSTALL_SHORTCUT");
+        addIntent.putExtra("duplicate", false);
+        getApplicationContext().sendBroadcast(addIntent);
       }
     }
+    catch(Exception e) {}
   }
 
   private void deleteBookmark(FolderContentItem selectedItem) {
@@ -1013,6 +1004,24 @@ public class Bookmarks extends ListActivity implements RuntimePermissionUtils.Ru
   }
 
   // ---------------------------------------------------------------------------
+  // implementation: start Intent w/ runtime Permissions check
+  // ---------------------------------------------------------------------------
+
+  private void intentPermissionCheck(final int intentId, final int requestCode) {
+    Intent intent = db.getIntent(intentId);
+    if (intent == null) return;
+
+    RuntimePermissionUtils.requestPermissions(Bookmarks.this, Bookmarks.this, intent, requestCode);
+  }
+
+  private void intentPermissionCheck(final int intentId, final int requestCode, final Object passthrough) {
+    Intent intent = db.getIntent(intentId);
+    if (intent == null) return;
+
+    RuntimePermissionUtils.requestPermissions(Bookmarks.this, Bookmarks.this, intent, requestCode, passthrough);
+  }
+
+  // ---------------------------------------------------------------------------
   // implementation: backup/restore/export/import Database w/ runtime Permissions check
   // ---------------------------------------------------------------------------
 
@@ -1130,6 +1139,59 @@ public class Bookmarks extends ListActivity implements RuntimePermissionUtils.Ru
       case Constants.PERMISSION_CHECK_REQUEST_CODE_BACKUP_DATABASE: {
           PassthroughBackup pb = (PassthroughBackup) passthrough;
           backup(pb.auto, pb.outputDirectoryPath, pb.backupFileName);
+        }
+        break;
+      case Constants.PERMISSION_CHECK_REQUEST_CODE_INTENT_SEND_BROADCAST: {
+          Intent intent = (Intent) passthrough;
+          sendBroadcast(intent);
+        }
+        break;
+      case Constants.PERMISSION_CHECK_REQUEST_CODE_INTENT_START_ACTIVITY: {
+          Intent intent = (Intent) passthrough;
+          try {
+            startActivity(intent);
+          }
+          catch(Exception e) { // ActivityNotFoundException
+            Toast.makeText(getApplicationContext(), R.string.messages_activity_not_found, Toast.LENGTH_LONG).show();
+          }
+        }
+        break;
+      case Constants.PERMISSION_CHECK_REQUEST_CODE_INTENT_START_FOREGROUND_SERVICE: {
+          if (Build.VERSION.SDK_INT >= 26) {
+            Intent intent = (Intent) passthrough;
+            try {
+              startForegroundService(intent);
+            }
+            catch(Exception e) { // SecurityException, ForegroundServiceStartNotAllowedException
+              Toast.makeText(getApplicationContext(), R.string.messages_no_permission, Toast.LENGTH_LONG).show();
+            }
+          }
+        }
+        break;
+      case Constants.PERMISSION_CHECK_REQUEST_CODE_INTENT_START_SERVICE: {
+          Intent intent = (Intent) passthrough;
+          try {
+            startService(intent);
+          }
+          catch(Exception e) { // SecurityException, IllegalStateException, BackgroundServiceStartNotAllowedException
+            Toast.makeText(getApplicationContext(), R.string.messages_no_permission, Toast.LENGTH_LONG).show();
+          }
+        }
+        break;
+      case Constants.PERMISSION_CHECK_REQUEST_CODE_INTENT_STOP_SERVICE: {
+          Intent intent = (Intent) passthrough;
+          try {
+            stopService(intent);
+          }
+          catch(Exception e) { // SecurityException, IllegalStateException
+            Toast.makeText(getApplicationContext(), R.string.messages_no_permission, Toast.LENGTH_LONG).show();
+          }
+        }
+        break;
+      case Constants.PERMISSION_CHECK_REQUEST_CODE_INTENT_ADD_SHORTCUT: {
+          FolderContentItem selectedItem = (FolderContentItem) passthrough;
+          Intent intent = db.getIntent(selectedItem.id);
+          addShortcutForBookmark(selectedItem, intent);
         }
         break;
     }

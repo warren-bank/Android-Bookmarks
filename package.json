@@ -6,7 +6,7 @@
     "@warren-bank/translate-android-strings": "^1.9.1"
   },
   "scripts": {
-    "translate":       "translate-android-strings -i \"en\" -f \"android-studio-project/Bookmarks/src/main/res/values/strings.xml\" -d \"android-studio-project/Bookmarks/src/all_languages/res\" -m --na --nc --nw -b \"(?:Intent|HTML|URI|URLs?|MIME|OK)\"",
+    "translate":       "translate-android-strings -i \"en\" -f \"android-studio-project/Bookmarks/src/main/res/values/strings.xml\" -d \"android-studio-project/Bookmarks/src/withAllLanguageTranslations/res\" -m --na --nc --nw -b \"(?:Intent|HTML|URI|URLs?|MIME|OK)\"",
     "translate:debug": "npm run translate -- -o \"en\" --debug"
   }
 }
