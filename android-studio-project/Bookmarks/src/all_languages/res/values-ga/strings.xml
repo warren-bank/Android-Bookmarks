@@ -91,5 +91,6 @@
 <string name="messages_db_error_update">Earráid bunachar sonraí agus nuashonrú á nuashonrú</string>
 <string name="messages_no_permission">Ní leor cead chun an oibríocht iarrtha a chomhlíonadh</string>
 <string name="messages_activity_not_found">Níl aon aon ghníomhaíocht ar an Intent</string>
-<string name="default_intent_action">-- comhluachanna --</string>
+<string name="spinner_items_category_label_common_values">-- comhluachanna --</string>
+<string name="spinner_items_category_label_more_values">-- níos mó luachanna --</string>
 </resources>

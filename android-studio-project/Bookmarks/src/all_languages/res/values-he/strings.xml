@@ -91,5 +91,6 @@
 <string name="messages_db_error_update">שגיאת מסד נתונים במהלך עדכון</string>
 <string name="messages_no_permission">אין הרשאות מספיקות לביצוע הפעולה המבוקשת</string>
 <string name="messages_activity_not_found">אין פעילות תואמת ל - Intent</string>
-<string name="default_intent_action">-- ערכים משותפים --</string>
+<string name="spinner_items_category_label_common_values">-- ערכים משותפים --</string>
+<string name="spinner_items_category_label_more_values">-- יותר ערכים --</string>
 </resources>

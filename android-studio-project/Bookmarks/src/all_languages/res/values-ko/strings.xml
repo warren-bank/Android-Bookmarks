@@ -91,5 +91,6 @@
 <string name="messages_db_error_update">업데이트 중에 데이터베이스 오류 발생</string>
 <string name="messages_no_permission">요청된 조작을 수행할 수 있는 권한이 충분하지 않습니다.</string>
 <string name="messages_activity_not_found">활동이 없음 Intent</string>
-<string name="default_intent_action">-- 공통 값 --</string>
+<string name="spinner_items_category_label_common_values">-- 공통 값 --</string>
+<string name="spinner_items_category_label_more_values">-- 더 많은 값 --</string>
 </resources>

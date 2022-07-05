@@ -91,5 +91,6 @@
 <string name="messages_db_error_update">Gwall cronfa ddata wrth ddiweddaru</string>
 <string name="messages_no_permission">Caniatâd annigonol i gyflawni\'r gweithrediad a ofynwyd amdano</string>
 <string name="messages_activity_not_found">Dim gweithgaredd yn cydweddu Intent</string>
-<string name="default_intent_action">-- gwerthoedd cyffredin --</string>
+<string name="spinner_items_category_label_common_values">-- gwerthoedd cyffredin --</string>
+<string name="spinner_items_category_label_more_values">-- mwy o werthoedd --</string>
 </resources>

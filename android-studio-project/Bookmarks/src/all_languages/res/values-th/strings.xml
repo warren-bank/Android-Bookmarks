@@ -91,5 +91,6 @@
 <string name="messages_db_error_update">ฐานข้อมูลมีข้อผิดพลาดขณะอัพเดต</string>
 <string name="messages_no_permission">สิทธิไม่เพียงพอในการดำเนินการที่ร้องขอ</string>
 <string name="messages_activity_not_found">ไม่มีกิจกรรมที่ตรงกับ Intent</string>
-<string name="default_intent_action">-- ค่าทั่วไป --</string>
+<string name="spinner_items_category_label_common_values">-- ค่าทั่วไป --</string>
+<string name="spinner_items_category_label_more_values">-- ค่าอื่นๆ --</string>
 </resources>

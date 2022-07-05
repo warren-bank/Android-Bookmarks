@@ -91,5 +91,6 @@
 <string name="messages_db_error_update">Güncelleme sırasında veritabanı hatası oluştu</string>
 <string name="messages_no_permission">İstenen işlemi gerçekleştirmek için izin yetersiz</string>
 <string name="messages_activity_not_found">Etkinlik hiçbir etkinlik ile eşleşmedi Intent</string>
-<string name="default_intent_action">-- ortak değerler --</string>
+<string name="spinner_items_category_label_common_values">-- ortak değerler --</string>
+<string name="spinner_items_category_label_more_values">-- daha fazla değer --</string>
 </resources>

@@ -85,7 +85,7 @@
   https://developers.google.com/android/reference/com/google/android/gms/actions/SearchIntents
 -->
 <string-array name="intent_actions" translatable="false">
-  <item>@string/default_intent_action</item>
+  <item>@string/spinner_items_category_label_common_values</item>
   <item>android.intent.action.VIEW</item>
   <item>android.intent.action.CALL</item>
   <item>android.intent.action.DIAL</item>
@@ -100,7 +100,8 @@
   <item>android.intent.action.SET_TIMER</item>
   <item>android.intent.action.ACTION_REQUEST_SHUTDOWN</item>
   <item>android.intent.action.REBOOT</item>
-  <item></item>
+
+  <item>@string/spinner_items_category_label_more_values</item>
   <item>android.appwidget.action.APPWIDGET_CONFIGURE</item>
   <item>android.appwidget.action.APPWIDGET_UPDATE</item>
   <item>android.intent.action.ACTION_IDLE_MAINTENANCE_END</item>
@@ -550,9 +551,10 @@
   https://android.googlesource.com/platform/frameworks/base/+/master/core/java/android/content/Intent.java
 -->
 <string-array name="intent_categories" translatable="false">
-  <item>@string/default_intent_category</item>
+  <item>@string/spinner_items_category_label_common_values</item>
   <item>android.intent.category.DEFAULT</item>
-  <item></item>
+
+  <item>@string/spinner_items_category_label_more_values</item>
   <item>android.intent.category.ACCESSIBILITY_SHORTCUT_TARGET</item>
   <item>android.intent.category.ALTERNATIVE</item>
   <item>android.intent.category.APP_BROWSER</item>
@@ -619,10 +621,11 @@
   https://android.googlesource.com/platform/packages/providers/MediaProvider/+/master/apex/framework/java/android/provider/MediaStore.java
 -->
 <string-array name="intent_data_types" translatable="false">
-  <item>@string/default_intent_data_type</item>
+  <item>@string/spinner_items_category_label_common_values</item>
   <item>text/plain</item>
   <item>text/html</item>
-  <item></item>
+
+  <item>@string/spinner_items_category_label_more_values</item>
   <item>application/atom+xml</item>
   <item>application/dash+xml</item>
   <item>application/epub+zip</item>
@@ -908,7 +911,7 @@
   https://developers.google.com/android/reference/com/google/android/gms/actions/NoteIntents
 -->
 <string-array name="intent_extra_names" translatable="false">
-  <item>@string/default_intent_extra_name</item>
+  <item>@string/spinner_items_category_label_common_values</item>
   <item>android.intent.extra.EMAIL</item>
   <item>android.intent.extra.SUBJECT</item>
   <item>android.intent.extra.TEXT</item>
@@ -918,9 +921,11 @@
   <item>android.intent.extra.TITLE</item>
   <item>id</item>
   <item>query</item>
+  <item>address</item>
   <item>subject</item>
   <item>uri</item>
-  <item></item>
+
+  <item>@string/spinner_items_category_label_more_values</item>
   <item>access_callback</item>
   <item>account_types</item>
   <item>action_key</item>

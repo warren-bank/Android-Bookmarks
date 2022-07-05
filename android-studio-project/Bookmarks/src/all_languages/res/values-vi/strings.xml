@@ -91,5 +91,6 @@
 <string name="messages_db_error_update">Lỗi cơ sở dư ̃ liệu</string>
 <string name="messages_no_permission">Không đủ quyền để thực hiện thao tác yêu cầu</string>
 <string name="messages_activity_not_found">Không có hoạt động khớp với Intent</string>
-<string name="default_intent_action">-- giá trị chung --</string>
+<string name="spinner_items_category_label_common_values">-- giá trị chung --</string>
+<string name="spinner_items_category_label_more_values">-- thêm giá trị --</string>
 </resources>

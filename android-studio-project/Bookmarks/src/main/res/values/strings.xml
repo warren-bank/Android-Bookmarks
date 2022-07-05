@@ -125,8 +125,6 @@
 <string name="messages_no_permission">Insufficient permission to perform the requested operation</string>
 <string name="messages_activity_not_found">No Activity matches the Intent</string>
 
-<string name="default_intent_action">-- common values --</string>
-<string name="default_intent_data_type">@string/default_intent_action</string>
-<string name="default_intent_category">@string/default_intent_action</string>
-<string name="default_intent_extra_name">@string/default_intent_action</string>
+<string name="spinner_items_category_label_common_values">-- common values --</string>
+<string name="spinner_items_category_label_more_values">-- more values --</string>
 </resources>

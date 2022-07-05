@@ -91,5 +91,6 @@
 <string name="messages_db_error_update">Datenbankfehler beim Aktualisieren</string>
 <string name="messages_no_permission">Die Berechtigung zum Ausführen der angeforderten Operation ist nicht ausreichend.</string>
 <string name="messages_activity_not_found">Keine Aktivität stimmt mit der Intent</string>
-<string name="default_intent_action">-- Allgemeine Werte --</string>
+<string name="spinner_items_category_label_common_values">-- Allgemeine Werte --</string>
+<string name="spinner_items_category_label_more_values">-- Weitere Werte --</string>
 </resources>

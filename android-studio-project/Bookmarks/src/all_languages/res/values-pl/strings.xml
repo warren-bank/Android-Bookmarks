@@ -91,5 +91,6 @@
 <string name="messages_db_error_update">Błąd bazy danych podczas aktualizowania</string>
 <string name="messages_no_permission">Niewystarczające uprawnienia do wykonania żądanej operacji</string>
 <string name="messages_activity_not_found">Żadne działanie nie jest zgodne z Intent</string>
-<string name="default_intent_action">-- wartości wspólne --</string>
+<string name="spinner_items_category_label_common_values">-- wartości wspólne --</string>
+<string name="spinner_items_category_label_more_values">-- więcej wartości --</string>
 </resources>

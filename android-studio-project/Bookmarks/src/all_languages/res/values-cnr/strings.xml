@@ -91,5 +91,6 @@
 <string name="messages_db_error_update">Greška u bazi podataka kod ažuriranja</string>
 <string name="messages_no_permission">Nema dovoljno dozvole za obavljanje tražene operacije.</string>
 <string name="messages_activity_not_found">Nijedna aktivnost ne odgovara Intent</string>
-<string name="default_intent_action">-- Zajedničke vrijednosti. --</string>
+<string name="spinner_items_category_label_common_values">-- Zajedničke vrijednosti. --</string>
+<string name="spinner_items_category_label_more_values">-- Više vrijednosti. --</string>
 </resources>

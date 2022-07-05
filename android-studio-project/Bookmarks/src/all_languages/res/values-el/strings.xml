@@ -91,5 +91,6 @@
 <string name="messages_db_error_update">Σφάλμα βάσης δεδομένων κατά την ενημέρωση</string>
 <string name="messages_no_permission">Ανεπαρκής άδεια εκτέλεσης της ζητούμενης λειτουργίας.</string>
 <string name="messages_activity_not_found">Καμία δραστηριότητα δεν συμφωνεί με Intent</string>
-<string name="default_intent_action">-- κοινές τιμές: --</string>
+<string name="spinner_items_category_label_common_values">-- κοινές τιμές: --</string>
+<string name="spinner_items_category_label_more_values">-- περισσότερες τιμές: --</string>
 </resources>

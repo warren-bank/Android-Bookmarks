@@ -91,5 +91,6 @@
 <string name="messages_db_error_update">अद्यावधिक गर्दा डाटाबेस त्रुटि</string>
 <string name="messages_no_permission">अनुरोध गरिएको सञ्चालन सम्पादन गर्न अपर्याप्त अनुमति</string>
 <string name="messages_activity_not_found">कुनै क्रियाकलाप मिल्दछ Intent</string>
-<string name="default_intent_action">-- सामान्य मानहरू --</string>
+<string name="spinner_items_category_label_common_values">-- सामान्य मानहरू --</string>
+<string name="spinner_items_category_label_more_values">-- अधिक मान --</string>
 </resources>

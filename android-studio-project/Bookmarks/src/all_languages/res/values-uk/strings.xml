@@ -91,5 +91,6 @@
 <string name="messages_db_error_update">Помилка під час оновлення бази даних</string>
 <string name="messages_no_permission">Недостатньо прав для виконання запиту на запитану</string>
 <string name="messages_activity_not_found">Дії не відповідають жодному з дій Intent</string>
-<string name="default_intent_action">-- спільні значення --</string>
+<string name="spinner_items_category_label_common_values">-- спільні значення --</string>
+<string name="spinner_items_category_label_more_values">-- більше значень --</string>
 </resources>

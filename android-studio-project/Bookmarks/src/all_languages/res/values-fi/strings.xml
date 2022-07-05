@@ -91,5 +91,6 @@
 <string name="messages_db_error_update">Tietokantavirhe päivitettäessä</string>
 <string name="messages_no_permission">Pyydetyn toiminnon toteutus ei riitä</string>
 <string name="messages_activity_not_found">Aktiviteetti ei vastaa Intent</string>
-<string name="default_intent_action">-- Yhteiset arvot --</string>
+<string name="spinner_items_category_label_common_values">-- Yhteiset arvot --</string>
+<string name="spinner_items_category_label_more_values">-- Lisää arvoja --</string>
 </resources>

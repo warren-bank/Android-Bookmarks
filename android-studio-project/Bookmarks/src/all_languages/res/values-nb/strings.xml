@@ -91,5 +91,6 @@
 <string name="messages_db_error_update">Databasefeil ved oppdatering av</string>
 <string name="messages_no_permission">Ikke tilstrekkelig tillatelse til å utføre den forespurte operasjonen</string>
 <string name="messages_activity_not_found">Ingen aktivitet samsvarer med Intent</string>
-<string name="default_intent_action">-- vanlige verdier --</string>
+<string name="spinner_items_category_label_common_values">-- vanlige verdier --</string>
+<string name="spinner_items_category_label_more_values">-- flere verdier --</string>
 </resources>

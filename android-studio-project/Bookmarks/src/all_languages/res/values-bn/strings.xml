@@ -91,5 +91,6 @@
 <string name="messages_db_error_update">ডেটাবেজ সংক্রান্ত ত্রুটি</string>
 <string name="messages_no_permission">অনুরোধ করা অপারেশন সম্পাদন করার জন্য অপর্যাপ্ত অনুমতি</string>
 <string name="messages_activity_not_found">কোন অ্যাক্টিভিটি ম্যাচটি নয় Intent</string>
-<string name="default_intent_action">-- সাধারণ মান --</string>
+<string name="spinner_items_category_label_common_values">-- সাধারণ মান --</string>
+<string name="spinner_items_category_label_more_values">-- আরো মানসমূহ --</string>
 </resources>

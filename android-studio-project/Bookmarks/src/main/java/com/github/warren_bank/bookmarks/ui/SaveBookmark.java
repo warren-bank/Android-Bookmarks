@@ -297,6 +297,10 @@ public class SaveBookmark extends Activity {
         // ignore first value in array
         if (pos > 0) {
           String action = intent_attribute_action_spinner.getSelectedItem().toString();
+
+          if (TextUtils.isEmpty(action) || (action.startsWith("--") && action.endsWith("--")))
+            action = "";
+
           intent_attribute_action.setText(action, TextView.BufferType.EDITABLE);
 
           // reset to first value
@@ -325,6 +329,10 @@ public class SaveBookmark extends Activity {
         // ignore first value in array
         if (pos > 0) {
           String data_type = intent_attribute_data_type_spinner.getSelectedItem().toString();
+
+          if (TextUtils.isEmpty(data_type) || (data_type.startsWith("--") && data_type.endsWith("--")))
+            data_type = "";
+
           intent_attribute_data_type.setText(data_type, TextView.BufferType.EDITABLE);
 
           // reset to first value
@@ -353,6 +361,9 @@ public class SaveBookmark extends Activity {
         // ignore first value in array
         if (pos > 0) {
           String category = intent_attribute_categories_spinner.getSelectedItem().toString();
+
+          if (TextUtils.isEmpty(category) || (category.startsWith("--") && category.endsWith("--")))
+            category = "";
 
           if (!TextUtils.isEmpty(category)) {
             categoriesList.add(category);
@@ -551,6 +562,10 @@ public class SaveBookmark extends Activity {
         // ignore first value in array
         if (pos > 0) {
           String extra_name = dialog_update_intent_attribute_extra_name_spinner.getSelectedItem().toString();
+
+          if (TextUtils.isEmpty(extra_name) || (extra_name.startsWith("--") && extra_name.endsWith("--")))
+            extra_name = "";
+
           dialog_update_intent_attribute_extra_name.setText(extra_name, TextView.BufferType.EDITABLE);
 
           // reset to first value

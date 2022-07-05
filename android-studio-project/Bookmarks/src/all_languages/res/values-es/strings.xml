@@ -91,5 +91,6 @@
 <string name="messages_db_error_update">Error de la base de datos</string>
 <string name="messages_no_permission">Permiso insuficiente para realizar la operación solicitada</string>
 <string name="messages_activity_not_found">Ninguna actividad coincide con la Intent</string>
-<string name="default_intent_action">-- valores comunes --</string>
+<string name="spinner_items_category_label_common_values">-- valores comunes --</string>
+<string name="spinner_items_category_label_more_values">-- más valores --</string>
 </resources>

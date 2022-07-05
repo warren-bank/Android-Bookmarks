@@ -91,5 +91,6 @@
 <string name="messages_db_error_update">Duomenų bazės klaida atnaujinant</string>
 <string name="messages_no_permission">Nepakankamas leidimas atlikti prašomą operaciją</string>
 <string name="messages_activity_not_found">Nėra veiklos atitikčių Intent</string>
-<string name="default_intent_action">-- Bendrosios reikšmės --</string>
+<string name="spinner_items_category_label_common_values">-- Bendrosios reikšmės --</string>
+<string name="spinner_items_category_label_more_values">-- daugiau vertės --</string>
 </resources>

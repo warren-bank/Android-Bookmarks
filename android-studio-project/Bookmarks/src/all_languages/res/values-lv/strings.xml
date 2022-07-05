@@ -91,5 +91,6 @@
 <string name="messages_db_error_update">Datu bāzes kļūda atjauninot</string>
 <string name="messages_no_permission">Nepietiekama atļauja, lai veiktu pieprasīto darbību</string>
 <string name="messages_activity_not_found">Darbība neatbilst Intent</string>
-<string name="default_intent_action">-- kopējās vērtības --</string>
+<string name="spinner_items_category_label_common_values">-- kopējās vērtības --</string>
+<string name="spinner_items_category_label_more_values">-- vairāk vērtības --</string>
 </resources>
