@@ -706,10 +706,31 @@ public class Bookmarks extends ListActivity implements RuntimePermissionUtils.Ru
   private void performBookmark(FolderContentItem selectedItem) {
     if (selectedItem.isFolder) return;
 
-    new AlertDialog.Builder(Bookmarks.this)
+    String[] perform_options = getResources().getStringArray(R.array.perform_options);
+
+    if (Build.VERSION.SDK_INT < 26) {
+      // remove: perform_start_foreground_service
+
+      String[] all_options = perform_options;
+      perform_options = new String[all_options.length - 1];
+
+      for (int i=0; i < all_options.length; i++) {
+        if (i < 2) {
+          perform_options[i] = all_options[i];
+        }
+        else if (i > 2) {
+          perform_options[i-1] = all_options[i];
+        }
+      }
+    }
+
+    AlertDialog dialog = new AlertDialog.Builder(Bookmarks.this)
       .setTitle(R.string.perform_title)
-      .setItems(R.array.perform_options, new DialogInterface.OnClickListener() {
+      .setItems(perform_options, new DialogInterface.OnClickListener() {
         public void onClick(DialogInterface dialog, int which) {
+          if ((Build.VERSION.SDK_INT < 26) && (which >= 2))
+            which++;
+
           switch(which) {
             case 0: { // perform_send_broadcast
                 intentPermissionCheck(selectedItem.id, Constants.PERMISSION_CHECK_REQUEST_CODE_INTENT_SEND_BROADCAST);
