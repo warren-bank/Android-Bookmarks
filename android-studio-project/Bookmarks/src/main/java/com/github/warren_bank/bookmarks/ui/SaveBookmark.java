@@ -353,8 +353,11 @@ public class SaveBookmark extends Activity {
         // ignore first value in array
         if (pos > 0) {
           String category = intent_attribute_categories_spinner.getSelectedItem().toString();
-          categoriesList.add(category);
-          categoriesListAdapter.notifyDataSetChanged();
+
+          if (!TextUtils.isEmpty(category)) {
+            categoriesList.add(category);
+            categoriesListAdapter.notifyDataSetChanged();
+          }
 
           // reset to first value
           intent_attribute_categories_spinner.setSelection(0);

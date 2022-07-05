@@ -65,16 +65,50 @@
   ========================
   Intent action constants:
   ========================
+  https://android.googlesource.com/platform/frameworks/base/+/master/core/java/android/app/SearchManager.java
   https://android.googlesource.com/platform/frameworks/base/+/master/core/java/android/content/Intent.java
+  https://android.googlesource.com/platform/frameworks/base/+/master/core/java/android/provider/AlarmClock.java
+  https://android.googlesource.com/platform/frameworks/base/+/master/core/java/android/provider/CalendarContract.java
+  https://android.googlesource.com/platform/frameworks/base/+/master/core/java/android/provider/Contacts.java
+  https://android.googlesource.com/platform/frameworks/base/+/master/core/java/android/provider/ContactsContract.java
+  https://android.googlesource.com/platform/frameworks/base/+/master/core/java/android/provider/Settings.java
   https://android.googlesource.com/platform/frameworks/base/+/master/media/java/android/media/AudioManager.java
+  https://android.googlesource.com/platform/packages/apps/Messaging/+/master/AndroidManifest.xml
+  https://android.googlesource.com/platform/packages/apps/Mms/+/master/AndroidManifest.xml
+  https://android.googlesource.com/platform/packages/providers/MediaProvider/+/master/apex/framework/java/android/provider/MediaStore.java
+
+  https://android.googlesource.com/platform/frameworks/base/+/refs/heads/gingerbread-release/core/java/android/content/Intent.java
+
+  https://developers.google.com/android/reference/com/google/android/gms/actions/ItemListIntents
+  https://developers.google.com/android/reference/com/google/android/gms/actions/NoteIntents
+  https://developers.google.com/android/reference/com/google/android/gms/actions/ReserveIntents
+  https://developers.google.com/android/reference/com/google/android/gms/actions/SearchIntents
 -->
 <string-array name="intent_actions" translatable="false">
   <item>@string/default_intent_action</item>
+  <item>android.intent.action.VIEW</item>
+  <item>android.intent.action.CALL</item>
+  <item>android.intent.action.DIAL</item>
+  <item>android.intent.action.SEND</item>
+  <item>android.intent.action.SENDTO</item>
+  <item>android.intent.action.SEARCH</item>
+  <item>android.intent.action.WEB_SEARCH</item>
+  <item>android.intent.action.INSERT</item>
+  <item>android.intent.action.EDIT</item>
+  <item>android.intent.action.INSERT_OR_EDIT</item>
+  <item>android.intent.action.SET_ALARM</item>
+  <item>android.intent.action.SET_TIMER</item>
+  <item>android.intent.action.ACTION_REQUEST_SHUTDOWN</item>
+  <item>android.intent.action.REBOOT</item>
+  <item></item>
+  <item>android.appwidget.action.APPWIDGET_CONFIGURE</item>
+  <item>android.appwidget.action.APPWIDGET_UPDATE</item>
   <item>android.intent.action.ACTION_IDLE_MAINTENANCE_END</item>
   <item>android.intent.action.ACTION_IDLE_MAINTENANCE_START</item>
   <item>android.intent.action.ACTION_POWER_CONNECTED</item>
   <item>android.intent.action.ACTION_POWER_DISCONNECTED</item>
   <item>android.intent.action.ACTION_PREFERRED_ACTIVITY_CHANGED</item>
+  <item>android.intent.action.ACTION_REQUEST_SHUTDOWN</item>
   <item>android.intent.action.ACTION_SHUTDOWN</item>
   <item>android.intent.action.ACTIVITY_RECOGNIZER</item>
   <item>android.intent.action.ADVANCED_SETTINGS</item>
@@ -104,6 +138,7 @@
   <item>android.intent.action.CHOOSER</item>
   <item>android.intent.action.CLOSE_SYSTEM_DIALOGS</item>
   <item>android.intent.action.CONFIGURATION_CHANGED</item>
+  <item>android.intent.action.CONTENT_CHANGED</item>
   <item>android.intent.action.CREATE_DOCUMENT</item>
   <item>android.intent.action.CREATE_REMINDER</item>
   <item>android.intent.action.CREATE_SHORTCUT</item>
@@ -119,6 +154,8 @@
   <item>android.intent.action.DEVICE_STORAGE_OK</item>
   <item>android.intent.action.DIAL</item>
   <item>android.intent.action.DIAL_EMERGENCY</item>
+  <item>android.intent.action.DISMISS_ALARM</item>
+  <item>android.intent.action.DISMISS_TIMER</item>
   <item>android.intent.action.DISTRACTING_PACKAGES_CHANGED</item>
   <item>android.intent.action.DOCK_ACTIVE</item>
   <item>android.intent.action.DOCK_EVENT</item>
@@ -127,6 +164,7 @@
   <item>android.intent.action.DREAMING_STARTED</item>
   <item>android.intent.action.DREAMING_STOPPED</item>
   <item>android.intent.action.EDIT</item>
+  <item>android.intent.action.EVENT_REMINDER</item>
   <item>android.intent.action.EXTERNAL_APPLICATIONS_AVAILABLE</item>
   <item>android.intent.action.EXTERNAL_APPLICATIONS_UNAVAILABLE</item>
   <item>android.intent.action.FACTORY_RESET</item>
@@ -177,10 +215,13 @@
   <item>android.intent.action.MEDIA_SCANNER_FINISHED</item>
   <item>android.intent.action.MEDIA_SCANNER_SCAN_FILE</item>
   <item>android.intent.action.MEDIA_SCANNER_STARTED</item>
+  <item>android.intent.action.MEDIA_SEARCH</item>
   <item>android.intent.action.MEDIA_SHARED</item>
   <item>android.intent.action.MEDIA_UNMOUNTABLE</item>
   <item>android.intent.action.MEDIA_UNMOUNTED</item>
   <item>android.intent.action.MEDIA_UNSHARED</item>
+  <item>android.intent.action.MMS_SEND_OUTBOX_MSG</item>
+  <item>android.intent.action.MUSIC_PLAYER</item>
   <item>android.intent.action.MY_PACKAGE_REPLACED</item>
   <item>android.intent.action.MY_PACKAGE_SUSPENDED</item>
   <item>android.intent.action.MY_PACKAGE_UNSUSPENDED</item>
@@ -220,6 +261,7 @@
   <item>android.intent.action.QUICK_VIEW</item>
   <item>android.intent.action.REBOOT</item>
   <item>android.intent.action.RESOLVE_INSTANT_APP_PACKAGE</item>
+  <item>android.intent.action.RESPOND_VIA_MESSAGE</item>
   <item>android.intent.action.REVIEW_ACCESSIBILITY_SERVICES</item>
   <item>android.intent.action.REVIEW_ONGOING_PERMISSION_USAGE</item>
   <item>android.intent.action.REVIEW_PERMISSIONS</item>
@@ -233,12 +275,18 @@
   <item>android.intent.action.SEARCH_LONG_PRESS</item>
   <item>android.intent.action.SEND</item>
   <item>android.intent.action.SENDTO</item>
+  <item>android.intent.action.SEND_MESSAGE</item>
   <item>android.intent.action.SEND_MULTIPLE</item>
   <item>android.intent.action.SERVICE_STATE</item>
+  <item>android.intent.action.SET_ALARM</item>
+  <item>android.intent.action.SET_TIMER</item>
   <item>android.intent.action.SET_WALLPAPER</item>
+  <item>android.intent.action.SHOW_ALARMS</item>
   <item>android.intent.action.SHOW_APP_INFO</item>
   <item>android.intent.action.SHOW_SUSPENDED_APP_DETAILS</item>
+  <item>android.intent.action.SHOW_TIMERS</item>
   <item>android.intent.action.SIM_STATE_CHANGED</item>
+  <item>android.intent.action.SNOOZE_ALARM</item>
   <item>android.intent.action.SPLIT_CONFIGURATION_CHANGED</item>
   <item>android.intent.action.SYNC</item>
   <item>android.intent.action.SYSTEM_TUTORIAL</item>
@@ -277,14 +325,222 @@
   <item>android.media.AUDIO_BECOMING_NOISY</item>
   <item>android.media.SCO_AUDIO_STATE_CHANGED</item>
   <item>android.media.action.HDMI_AUDIO_PLUG</item>
+  <item>android.media.action.IMAGE_CAPTURE</item>
+  <item>android.media.action.IMAGE_CAPTURE_SECURE</item>
+  <item>android.media.action.MEDIA_PLAY_FROM_SEARCH</item>
   <item>android.media.action.MICROPHONE_MUTE_CHANGED</item>
   <item>android.media.action.SPEAKERPHONE_STATE_CHANGED</item>
+  <item>android.media.action.STILL_IMAGE_CAMERA</item>
+  <item>android.media.action.STILL_IMAGE_CAMERA_SECURE</item>
+  <item>android.media.action.TEXT_OPEN_FROM_SEARCH</item>
+  <item>android.media.action.VIDEO_CAMERA</item>
+  <item>android.media.action.VIDEO_CAPTURE</item>
+  <item>android.media.action.VIDEO_PLAY_FROM_SEARCH</item>
+  <item>android.net.conn.CONNECTIVITY_CHANGE</item>
   <item>android.os.action.SETTING_RESTORED</item>
+  <item>android.provider.Telephony.MMS_DOWNLOADED</item>
+  <item>android.provider.Telephony.SIM_FULL</item>
+  <item>android.provider.Telephony.SMS_DELIVER</item>
+  <item>android.provider.Telephony.SMS_RECEIVED</item>
+  <item>android.provider.Telephony.SMS_REJECTED</item>
+  <item>android.provider.Telephony.WAP_PUSH_DELIVER</item>
+  <item>android.provider.Telephony.WAP_PUSH_RECEIVED</item>
+  <item>android.provider.action.QUICK_CONTACT</item>
+  <item>android.provider.action.REVIEW</item>
+  <item>android.provider.action.REVIEW_SECURE</item>
+  <item>android.provider.action.SIM_ACCOUNTS_CHANGED</item>
+  <item>android.provider.action.VOICE_SEND_MESSAGE_TO_CONTACTS</item>
+  <item>android.provider.calendar.action.HANDLE_CUSTOM_EVENT</item>
+  <item>android.provider.calendar.action.VIEW_MANAGED_PROFILE_CALENDAR_EVENT</item>
+  <item>android.search.action.GLOBAL_SEARCH</item>
+  <item>android.search.action.GLOBAL_SEARCH_ACTIVITY_CHANGED</item>
+  <item>android.search.action.SEARCHABLES_CHANGED</item>
+  <item>android.search.action.SEARCH_SETTINGS</item>
+  <item>android.search.action.SEARCH_SETTINGS</item>
+  <item>android.search.action.SETTINGS_CHANGED</item>
+  <item>android.search.action.WEB_SEARCH_SETTINGS</item>
+  <item>android.settings.ACCESSIBILITY_DETAILS_SETTINGS</item>
+  <item>android.settings.ACCESSIBILITY_SETTINGS</item>
+  <item>android.settings.ACTION_APP_NOTIFICATION_REDACTION</item>
+  <item>android.settings.ACTION_CONDITION_PROVIDER_SETTINGS</item>
+  <item>android.settings.ACTION_DEVICE_CONTROLS_SETTINGS</item>
+  <item>android.settings.ACTION_MEDIA_CONTROLS_SETTINGS</item>
+  <item>android.settings.ACTION_NOTIFICATION_LISTENER_SETTINGS</item>
+  <item>android.settings.ACTION_POWER_MENU_SETTINGS</item>
+  <item>android.settings.ACTION_PRINT_SETTINGS</item>
+  <item>android.settings.ADD_ACCOUNT_SETTINGS</item>
+  <item>android.settings.AIRPLANE_MODE_SETTINGS</item>
+  <item>android.settings.ALL_APPS_NOTIFICATION_SETTINGS</item>
+  <item>android.settings.APN_SETTINGS</item>
+  <item>android.settings.APPLICATION_DETAILS_SETTINGS</item>
+  <item>android.settings.APPLICATION_DEVELOPMENT_SETTINGS</item>
+  <item>android.settings.APPLICATION_SETTINGS</item>
+  <item>android.settings.APP_NOTIFICATION_BUBBLE_SETTINGS</item>
+  <item>android.settings.APP_NOTIFICATION_SETTINGS</item>
+  <item>android.settings.APP_OPEN_BY_DEFAULT_SETTINGS</item>
+  <item>android.settings.APP_OPS_SETTINGS</item>
+  <item>android.settings.APP_SEARCH_SETTINGS</item>
+  <item>android.settings.ASSIST_GESTURE_SETTINGS</item>
+  <item>android.settings.AUTO_ROTATE_SETTINGS</item>
+  <item>android.settings.BATTERY_SAVER_SETTINGS</item>
+  <item>android.settings.BIOMETRIC_ENROLL</item>
+  <item>android.settings.BLUETOOTH_PAIRING_SETTINGS</item>
+  <item>android.settings.BLUETOOTH_SETTINGS</item>
+  <item>android.settings.BUGREPORT_HANDLER_SETTINGS</item>
+  <item>android.settings.CAPTIONING_SETTINGS</item>
+  <item>android.settings.CAST_SETTINGS</item>
+  <item>android.settings.CHANNEL_NOTIFICATION_SETTINGS</item>
+  <item>android.settings.COLOR_INVERSION_SETTINGS</item>
+  <item>android.settings.CONVERSATION_SETTINGS</item>
+  <item>android.settings.DARK_THEME_SETTINGS</item>
+  <item>android.settings.DATA_ROAMING_SETTINGS</item>
+  <item>android.settings.DATA_SAVER_SETTINGS</item>
+  <item>android.settings.DATA_USAGE_SETTINGS</item>
+  <item>android.settings.DATE_SETTINGS</item>
+  <item>android.settings.DEVICE_INFO_SETTINGS</item>
+  <item>android.settings.DISPLAY_SETTINGS</item>
+  <item>android.settings.DREAM_SETTINGS</item>
+  <item>android.settings.ENABLE_MMS_DATA_REQUEST</item>
+  <item>android.settings.ENTERPRISE_PRIVACY_SETTINGS</item>
+  <item>android.settings.FINGERPRINT_ENROLL</item>
+  <item>android.settings.FOREGROUND_SERVICES_SETTINGS</item>
+  <item>android.settings.HARD_KEYBOARD_SETTINGS</item>
+  <item>android.settings.HOME_SETTINGS</item>
+  <item>android.settings.IGNORE_BACKGROUND_DATA_RESTRICTIONS_SETTINGS</item>
+  <item>android.settings.IGNORE_BATTERY_OPTIMIZATION_SETTINGS</item>
+  <item>android.settings.INPUT_METHOD_SETTINGS</item>
+  <item>android.settings.INPUT_METHOD_SUBTYPE_SETTINGS</item>
+  <item>android.settings.INTERNAL_STORAGE_SETTINGS</item>
+  <item>android.settings.LOCALE_SETTINGS</item>
+  <item>android.settings.LOCATION_CONTROLLER_EXTRA_PACKAGE_SETTINGS</item>
+  <item>android.settings.LOCATION_SCANNING_SETTINGS</item>
+  <item>android.settings.LOCATION_SOURCE_SETTINGS</item>
+  <item>android.settings.LOCK_SCREEN_SETTINGS</item>
+  <item>android.settings.MANAGED_PROFILE_SETTINGS</item>
+  <item>android.settings.MANAGE_ALL_APPLICATIONS_SETTINGS</item>
+  <item>android.settings.MANAGE_ALL_FILES_ACCESS_PERMISSION</item>
+  <item>android.settings.MANAGE_ALL_SIM_PROFILES_SETTINGS</item>
+  <item>android.settings.MANAGE_APPLICATIONS_SETTINGS</item>
+  <item>android.settings.MANAGE_APP_ALL_FILES_ACCESS_PERMISSION</item>
+  <item>android.settings.MANAGE_APP_OVERLAY_PERMISSION</item>
+  <item>android.settings.MANAGE_CROSS_PROFILE_ACCESS</item>
+  <item>android.settings.MANAGE_DEFAULT_APPS_SETTINGS</item>
+  <item>android.settings.MANAGE_DOMAIN_URLS</item>
+  <item>android.settings.MANAGE_MORE_DEFAULT_APPS_SETTINGS</item>
+  <item>android.settings.MANAGE_UNKNOWN_APP_SOURCES</item>
+  <item>android.settings.MEMORY_CARD_SETTINGS</item>
+  <item>android.settings.MMS_MESSAGE_SETTING</item>
+  <item>android.settings.MOBILE_DATA_USAGE</item>
+  <item>android.settings.NETWORK_OPERATOR_SETTINGS</item>
+  <item>android.settings.NFCSHARING_SETTINGS</item>
+  <item>android.settings.NFC_PAYMENT_SETTINGS</item>
+  <item>android.settings.NFC_SETTINGS</item>
+  <item>android.settings.NIGHT_DISPLAY_SETTINGS</item>
+  <item>android.settings.NOTIFICATION_ASSISTANT_SETTINGS</item>
+  <item>android.settings.NOTIFICATION_HISTORY</item>
+  <item>android.settings.NOTIFICATION_LISTENER_DETAIL_SETTINGS</item>
+  <item>android.settings.NOTIFICATION_POLICY_ACCESS_DETAIL_SETTINGS</item>
+  <item>android.settings.NOTIFICATION_POLICY_ACCESS_SETTINGS</item>
+  <item>android.settings.NOTIFICATION_SETTINGS</item>
+  <item>android.settings.PAIRING_SETTINGS</item>
+  <item>android.settings.PICTURE_IN_PICTURE_SETTINGS</item>
+  <item>android.settings.PRIVACY_SETTINGS</item>
+  <item>android.settings.PROCESS_WIFI_EASY_CONNECT_URI</item>
+  <item>android.settings.QUICK_ACCESS_WALLET_SETTINGS</item>
+  <item>android.settings.QUICK_LAUNCH_SETTINGS</item>
+  <item>android.settings.REDUCE_BRIGHT_COLORS_SETTINGS</item>
+  <item>android.settings.REQUEST_ENABLE_CONTENT_CAPTURE</item>
+  <item>android.settings.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS</item>
+  <item>android.settings.REQUEST_MANAGE_MEDIA</item>
+  <item>android.settings.REQUEST_SCHEDULE_EXACT_ALARM</item>
+  <item>android.settings.REQUEST_SET_AUTOFILL_SERVICE</item>
+  <item>android.settings.SECURITY_SETTINGS</item>
+  <item>android.settings.SETTINGS</item>
+  <item>android.settings.SETTINGS_EMBED_DEEP_LINK_ACTIVITY</item>
+  <item>android.settings.SHOW_ADMIN_SUPPORT_DETAILS</item>
+  <item>android.settings.SHOW_REMOTE_BUGREPORT_DIALOG</item>
+  <item>android.settings.SHOW_WORK_POLICY_INFO</item>
+  <item>android.settings.SOUND_SETTINGS</item>
+  <item>android.settings.STORAGE_MANAGER_SETTINGS</item>
+  <item>android.settings.STORAGE_VOLUME_ACCESS_SETTINGS</item>
+  <item>android.settings.SYNC_SETTINGS</item>
+  <item>android.settings.SYSTEM_UPDATE_SETTINGS</item>
+  <item>android.settings.TETHER_PROVISIONING_UI</item>
+  <item>android.settings.TETHER_SETTINGS</item>
+  <item>android.settings.TETHER_UNSUPPORTED_CARRIER_UI</item>
+  <item>android.settings.USAGE_ACCESS_SETTINGS</item>
+  <item>android.settings.USER_DICTIONARY_SETTINGS</item>
+  <item>android.settings.USER_SETTINGS</item>
+  <item>android.settings.VIEW_ADVANCED_POWER_USAGE_DETAIL</item>
+  <item>android.settings.VOICE_CONTROL_AIRPLANE_MODE</item>
+  <item>android.settings.VOICE_CONTROL_BATTERY_SAVER_MODE</item>
+  <item>android.settings.VOICE_CONTROL_DO_NOT_DISTURB_MODE</item>
+  <item>android.settings.VOICE_INPUT_SETTINGS</item>
+  <item>android.settings.VPN_SETTINGS</item>
+  <item>android.settings.VR_LISTENER_SETTINGS</item>
+  <item>android.settings.WEBVIEW_SETTINGS</item>
+  <item>android.settings.WIFI_ADD_NETWORKS</item>
+  <item>android.settings.WIFI_IP_SETTINGS</item>
+  <item>android.settings.WIFI_SETTINGS</item>
+  <item>android.settings.WIRELESS_SETTINGS</item>
+  <item>android.settings.ZEN_MODE_AUTOMATION_SETTINGS</item>
+  <item>android.settings.ZEN_MODE_EVENT_RULE_SETTINGS</item>
+  <item>android.settings.ZEN_MODE_EXTERNAL_RULE_SETTINGS</item>
+  <item>android.settings.ZEN_MODE_PRIORITY_SETTINGS</item>
+  <item>android.settings.ZEN_MODE_SCHEDULE_RULE_SETTINGS</item>
+  <item>android.settings.ZEN_MODE_SETTINGS</item>
+  <item>android.settings.action.APP_USAGE_SETTINGS</item>
+  <item>android.settings.action.MANAGE_OVERLAY_PERMISSION</item>
+  <item>android.settings.action.MANAGE_WRITE_SETTINGS</item>
+  <item>android.settings.panel.action.INTERNET_CONNECTIVITY</item>
+  <item>android.settings.panel.action.NFC</item>
+  <item>android.settings.panel.action.VOLUME</item>
+  <item>android.settings.panel.action.WIFI</item>
+  <item>android.telephony.action.DEFAULT_SMS_SUBSCRIPTION_CHANGED</item>
+  <item>com.android.contacts.action.ATTACH_IMAGE</item>
+  <item>com.android.contacts.action.CREATE_DESCRIPTION</item>
+  <item>com.android.contacts.action.FILTER_CONTACTS</item>
+  <item>com.android.contacts.action.FORCE_CREATE</item>
+  <item>com.android.contacts.action.GET_MULTIPLE_PHONES</item>
+  <item>com.android.contacts.action.INVITE_CONTACT</item>
+  <item>com.android.contacts.action.LIST_ALL_CONTACTS</item>
+  <item>com.android.contacts.action.LIST_CONTACTS_WITH_PHONES</item>
+  <item>com.android.contacts.action.LIST_DEFAULT</item>
+  <item>com.android.contacts.action.LIST_FREQUENT</item>
+  <item>com.android.contacts.action.LIST_GROUP</item>
+  <item>com.android.contacts.action.LIST_STARRED</item>
+  <item>com.android.contacts.action.LIST_STREQUENT</item>
+  <item>com.android.contacts.action.SHOW_OR_CREATE_CONTACT</item>
   <item>com.android.intent.action.DISMISS_KEYBOARD_SHORTCUTS</item>
   <item>com.android.intent.action.SHOW_BRIGHTNESS_DIALOG</item>
   <item>com.android.intent.action.SHOW_KEYBOARD_SHORTCUTS</item>
   <item>com.android.internal.intent.action.REQUEST_SHUTDOWN</item>
+  <item>com.android.messaging.datamodel.PENDING_ACTION</item>
+  <item>com.android.messaging.receiver.SendStatusReceiver.MESSAGE_DELIVERED</item>
+  <item>com.android.messaging.receiver.SendStatusReceiver.MESSAGE_SENT</item>
+  <item>com.android.messaging.receiver.SendStatusReceiver.MMS_DOWNLOADED</item>
+  <item>com.android.messaging.receiver.SendStatusReceiver.MMS_SENT</item>
+  <item>com.android.mms.RATE_LIMIT_SURPASSED</item>
+  <item>com.android.mms.intent.action.ACTION_NOTIFY_DATASET_CHANGED</item>
+  <item>com.android.mms.intent.action.MESSAGING_APP_NOTIFICATIONS</item>
+  <item>com.android.mms.transaction.MESSAGE_SENT</item>
+  <item>com.android.mms.transaction.MessageStatusReceiver.MESSAGE_STATUS_RECEIVED</item>
+  <item>com.android.settings.MONITORING_CERT_INFO</item>
+  <item>com.android.settings.TRUSTED_CREDENTIALS_USER</item>
+  <item>com.android.settings.USER_DICTIONARY_INSERT</item>
+  <item>com.android.settings.WIFI_TETHER_SETTINGS</item>
   <item>com.google.android.c2dm.intent.RECEIVE</item>
+  <item>com.google.android.gms.actions.ACCEPT_ITEM</item>
+  <item>com.google.android.gms.actions.APPEND_ITEM_LIST</item>
+  <item>com.google.android.gms.actions.APPEND_NOTE</item>
+  <item>com.google.android.gms.actions.CREATE_ITEM_LIST</item>
+  <item>com.google.android.gms.actions.CREATE_NOTE</item>
+  <item>com.google.android.gms.actions.DELETE_ITEM</item>
+  <item>com.google.android.gms.actions.DELETE_ITEM_LIST</item>
+  <item>com.google.android.gms.actions.DELETE_NOTE</item>
+  <item>com.google.android.gms.actions.REJECT_ITEM</item>
+  <item>com.google.android.gms.actions.RESERVE_TAXI_RESERVATION</item>
+  <item>com.google.android.gms.actions.SEARCH_ACTION</item>
 </string-array>
 
 <!--
@@ -295,6 +551,8 @@
 -->
 <string-array name="intent_categories" translatable="false">
   <item>@string/default_intent_category</item>
+  <item>android.intent.category.DEFAULT</item>
+  <item></item>
   <item>android.intent.category.ACCESSIBILITY_SHORTCUT_TARGET</item>
   <item>android.intent.category.ALTERNATIVE</item>
   <item>android.intent.category.APP_BROWSER</item>
@@ -349,20 +607,45 @@
 
   https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
     console.log(  [...document.querySelectorAll('div.table-scroll > table > tbody > tr > td:nth-child(3) > code')].map(code => code.innerText.toLowerCase()).filter(type => (type.indexOf('/') > 0)).sort().join("\n")  )
+
+  https://android.googlesource.com/platform/frameworks/base/+/master/core/java/android/provider/CallLog.java
+  https://android.googlesource.com/platform/frameworks/base/+/master/core/java/android/provider/Contacts.java
+  https://android.googlesource.com/platform/frameworks/base/+/master/core/java/android/provider/ContactsContract.java
+  https://android.googlesource.com/platform/frameworks/base/+/master/core/java/android/provider/Telephony.java
+  https://android.googlesource.com/platform/frameworks/base/+/master/core/java/android/provider/VoicemailContract.java
+  https://android.googlesource.com/platform/frameworks/base/+/master/telephony/common/com/google/android/mms/pdu/PduContentTypes.java
+  https://android.googlesource.com/platform/packages/apps/Calendar/+/master/AndroidManifest.xml
+  https://android.googlesource.com/platform/packages/apps/Mms/+/master/AndroidManifest.xml
+  https://android.googlesource.com/platform/packages/providers/MediaProvider/+/master/apex/framework/java/android/provider/MediaStore.java
 -->
 <string-array name="intent_data_types" translatable="false">
   <item>@string/default_intent_data_type</item>
+  <item>text/plain</item>
+  <item>text/html</item>
+  <item></item>
   <item>application/atom+xml</item>
+  <item>application/dash+xml</item>
   <item>application/epub+zip</item>
   <item>application/gzip</item>
   <item>application/java-archive</item>
+<!--
+  <item>application/java-vm</item>
+-->
   <item>application/json</item>
   <item>application/ld+json</item>
+<!--
+  <item>application/mikey</item>
+-->
+  <item>application/mp4</item>
   <item>application/msword</item>
   <item>application/octet-stream</item>
   <item>application/ogg</item>
   <item>application/pdf</item>
+<!--
+  <item>application/pkcs7-mime</item>
+-->
   <item>application/rtf</item>
+  <item>application/ttml+xml</item>
 <!--
   <item>application/vnd.amazon.ebook</item>
   <item>application/vnd.apple.installer+xml</item>
@@ -373,22 +656,82 @@
   <item>application/vnd.oasis.opendocument.presentation</item>
   <item>application/vnd.oasis.opendocument.spreadsheet</item>
   <item>application/vnd.oasis.opendocument.text</item>
+  <item>application/vnd.oma.dd+xml</item>
+  <item>application/vnd.oma.dd2+xml</item>
+  <item>application/vnd.oma.drm.content</item>
+  <item>application/vnd.oma.drm.message</item>
+  <item>application/vnd.oma.drm.rights+wbxml</item>
+  <item>application/vnd.oma.drm.rights+xml</item>
   <item>application/vnd.openxmlformats-officedocument.presentationml.presentation</item>
   <item>application/vnd.openxmlformats-officedocument.spreadsheetml.sheet</item>
   <item>application/vnd.openxmlformats-officedocument.wordprocessingml.document</item>
   <item>application/vnd.rar</item>
+  <item>application/vnd.syncml.dm+wbxml</item>
+  <item>application/vnd.syncml.dm+xml</item>
+  <item>application/vnd.syncml.ds.notification</item>
+  <item>application/vnd.syncml.notification</item>
   <item>application/vnd.visio</item>
+  <item>application/vnd.wap.cert-response</item>
+  <item>application/vnd.wap.coc</item>
+  <item>application/vnd.wap.connectivity-wbxml</item>
+  <item>application/vnd.wap.hashed-certificate</item>
+  <item>application/vnd.wap.loc+xml</item>
+  <item>application/vnd.wap.locc+wbxml</item>
+-->
+  <item>application/vnd.wap.mms-message</item>
+<!--
+  <item>application/vnd.wap.multipart.alternative</item>
+  <item>application/vnd.wap.multipart.byteranges</item>
+  <item>application/vnd.wap.multipart.form-data</item>
+  <item>application/vnd.wap.multipart.mixed</item>
+  <item>application/vnd.wap.multipart.related</item>
+  <item>application/vnd.wap.rollover-certificate</item>
+  <item>application/vnd.wap.sia</item>
+  <item>application/vnd.wap.sic</item>
+  <item>application/vnd.wap.signed-certificate</item>
+  <item>application/vnd.wap.slc</item>
+  <item>application/vnd.wap.uaprof</item>
+  <item>application/vnd.wap.wbxml</item>
+  <item>application/vnd.wap.wmlc</item>
+  <item>application/vnd.wap.wmlscriptc</item>
+  <item>application/vnd.wap.wta-eventc</item>
+  <item>application/vnd.wap.wtls-ca-certificate</item>
+  <item>application/vnd.wap.wtls-user-certificate</item>
+  <item>application/vnd.wap.xhtml+xml</item>
+  <item>application/vnd.wv.csp+wbxml</item>
+  <item>application/vnd.wv.csp+xml</item>
+  <item>application/vnd.wv.csp.cir</item>
+  <item>application/wml+xml</item>
   <item>application/x-7z-compressed</item>
   <item>application/x-abiword</item>
   <item>application/x-bzip</item>
   <item>application/x-bzip2</item>
   <item>application/x-cdf</item>
   <item>application/x-csh</item>
+-->
+  <item>application/x-flac</item>
+<!--
   <item>application/x-freearc</item>
+  <item>application/x-hdmlc</item>
   <item>application/x-httpd-php</item>
+-->
+  <item>application/x-matroska</item>
+  <item>application/x-mpegurl</item>
+  <item>application/x-rtmp</item>
+  <item>application/x-rtsp</item>
+<!--
   <item>application/x-sh</item>
   <item>application/x-shockwave-flash</item>
+-->
+  <item>application/x-subrip</item>
+<!--
   <item>application/x-tar</item>
+  <item>application/x-www-form-urlencoded</item>
+  <item>application/x-x509-ca-cert</item>
+  <item>application/x-x509-user-cert</item>
+  <item>application/x-x968-ca-cert</item>
+  <item>application/x-x968-cross-cert</item>
+  <item>application/x-x968-user-cert</item>
 -->
   <item>application/xhtml+xml</item>
   <item>application/xml</item>
@@ -396,6 +739,7 @@
   <item>audio/3gpp</item>
   <item>audio/3gpp2</item>
   <item>audio/aac</item>
+  <item>audio/flac</item>
   <item>audio/midi</item>
   <item>audio/mpeg</item>
   <item>audio/ogg</item>
@@ -417,14 +761,38 @@
   <item>image/svg+xml</item>
   <item>image/tiff</item>
   <item>image/vnd.microsoft.icon</item>
+  <item>image/vnd.wap.wbmp</item>
   <item>image/webp</item>
+<!--
+  <item>multipart/alternative</item>
+  <item>multipart/byterantes</item>
+  <item>multipart/form-data</item>
+  <item>multipart/mixed</item>
+-->
   <item>text/calendar</item>
   <item>text/css</item>
   <item>text/csv</item>
   <item>text/html</item>
   <item>text/javascript</item>
   <item>text/plain</item>
+<!--
+  <item>text/vnd.wap.co</item>
+  <item>text/vnd.wap.connectivity-xml</item>
+  <item>text/vnd.wap.si</item>
+  <item>text/vnd.wap.sl</item>
+  <item>text/vnd.wap.wml</item>
+  <item>text/vnd.wap.wmlscript</item>
+  <item>text/vnd.wap.wta-event</item>
+-->
+  <item>text/vtt</item>
+<!--
+  <item>text/x-hdml</item>
+  <item>text/x-ttml</item>
+  <item>text/x-vCalendar</item>
+  <item>text/x-vCard</item>
+-->
   <item>text/xml</item>
+  <item>time/epoch</item>
   <item>video/3gpp</item>
   <item>video/3gpp2</item>
   <item>video/mp2t</item>
@@ -433,16 +801,133 @@
   <item>video/ogg</item>
   <item>video/webm</item>
   <item>video/x-msvideo</item>
+  <item>vnd.android-dir/mms-sms</item>
+  <item>vnd.android.cursor.dir/aggregation_exception</item>
+  <item>vnd.android.cursor.dir/albums</item>
+  <item>vnd.android.cursor.dir/artists</item>
+  <item>vnd.android.cursor.dir/audio</item>
+  <item>vnd.android.cursor.dir/call_composer_location</item>
+  <item>vnd.android.cursor.dir/calls</item>
+  <item>vnd.android.cursor.dir/contact-methods</item>
+  <item>vnd.android.cursor.dir/contact</item>
+  <item>vnd.android.cursor.dir/contact_directories</item>
+  <item>vnd.android.cursor.dir/contact_extensions</item>
+  <item>vnd.android.cursor.dir/contact_metadata</item>
+  <item>vnd.android.cursor.dir/contact_metadata_sync_state</item>
+  <item>vnd.android.cursor.dir/contactsgroup</item>
+  <item>vnd.android.cursor.dir/contactsgroupmembership</item>
+  <item>vnd.android.cursor.dir/data</item>
+  <item>vnd.android.cursor.dir/download</item>
+  <item>vnd.android.cursor.dir/email</item>
+  <item>vnd.android.cursor.dir/email_v2</item>
+  <item>vnd.android.cursor.dir/event</item>
+  <item>vnd.android.cursor.dir/genre</item>
+  <item>vnd.android.cursor.dir/group</item>
+  <item>vnd.android.cursor.dir/image</item>
+  <item>vnd.android.cursor.dir/mms</item>
+  <item>vnd.android.cursor.dir/person</item>
+  <item>vnd.android.cursor.dir/phone</item>
+  <item>vnd.android.cursor.dir/phone_lookup</item>
+  <item>vnd.android.cursor.dir/phone_v2</item>
+  <item>vnd.android.cursor.dir/playlist</item>
+  <item>vnd.android.cursor.dir/postal-address</item>
+  <item>vnd.android.cursor.dir/postal-address_v2</item>
+  <item>vnd.android.cursor.dir/provider_status</item>
+  <item>vnd.android.cursor.dir/raw_contact</item>
+  <item>vnd.android.cursor.dir/raw_contact_entity</item>
+  <item>vnd.android.cursor.dir/setting</item>
+  <item>vnd.android.cursor.dir/status-update</item>
+  <item>vnd.android.cursor.dir/stream_item</item>
+  <item>vnd.android.cursor.dir/stream_item_photo</item>
+  <item>vnd.android.cursor.dir/video</item>
+  <item>vnd.android.cursor.dir/voicemail.source.status</item>
+  <item>vnd.android.cursor.dir/voicemails</item>
+  <item>vnd.android.cursor.item/aggregation_exception</item>
+  <item>vnd.android.cursor.item/album</item>
+  <item>vnd.android.cursor.item/artist</item>
+  <item>vnd.android.cursor.item/audio</item>
+  <item>vnd.android.cursor.item/call_composer_location</item>
+  <item>vnd.android.cursor.item/calls</item>
+  <item>vnd.android.cursor.item/contact</item>
+  <item>vnd.android.cursor.item/contact_directory</item>
+  <item>vnd.android.cursor.item/contact_event</item>
+  <item>vnd.android.cursor.item/contact_extensions</item>
+  <item>vnd.android.cursor.item/contact_metadata</item>
+  <item>vnd.android.cursor.item/contact_metadata_sync_state</item>
+  <item>vnd.android.cursor.item/contactsgroup</item>
+  <item>vnd.android.cursor.item/contactsgroupmembership</item>
+  <item>vnd.android.cursor.item/email</item>
+  <item>vnd.android.cursor.item/email_v2</item>
+  <item>vnd.android.cursor.item/event</item>
+  <item>vnd.android.cursor.item/genre</item>
+  <item>vnd.android.cursor.item/group</item>
+  <item>vnd.android.cursor.item/group_membership</item>
+  <item>vnd.android.cursor.item/identity</item>
+  <item>vnd.android.cursor.item/im</item>
+  <item>vnd.android.cursor.item/jabber-im</item>
+  <item>vnd.android.cursor.item/name</item>
+  <item>vnd.android.cursor.item/nickname</item>
+  <item>vnd.android.cursor.item/note</item>
+  <item>vnd.android.cursor.item/organization</item>
+  <item>vnd.android.cursor.item/person</item>
+  <item>vnd.android.cursor.item/phone</item>
+  <item>vnd.android.cursor.item/phone_v2</item>
+  <item>vnd.android.cursor.item/photo</item>
+  <item>vnd.android.cursor.item/playlist</item>
+  <item>vnd.android.cursor.item/postal-address</item>
+  <item>vnd.android.cursor.item/postal-address_v2</item>
+  <item>vnd.android.cursor.item/radio</item>
+  <item>vnd.android.cursor.item/raw_contact</item>
+  <item>vnd.android.cursor.item/relation</item>
+  <item>vnd.android.cursor.item/setting</item>
+  <item>vnd.android.cursor.item/sip_address</item>
+  <item>vnd.android.cursor.item/status-update</item>
+  <item>vnd.android.cursor.item/stream_item</item>
+  <item>vnd.android.cursor.item/stream_item_photo</item>
+  <item>vnd.android.cursor.item/voicemail.source.status</item>
+  <item>vnd.android.cursor.item/voicemail</item>
+  <item>vnd.android.cursor.item/website</item>
+  <item>vnd.android.data/update</item>
 </string-array>
 
 <!--
   =================================
   Intent extra data name constants:
   =================================
+  https://android.googlesource.com/platform/frameworks/base/+/master/core/java/android/app/SearchManager.java
   https://android.googlesource.com/platform/frameworks/base/+/master/core/java/android/content/Intent.java
+  https://android.googlesource.com/platform/frameworks/base/+/master/core/java/android/provider/AlarmClock.java
+  https://android.googlesource.com/platform/frameworks/base/+/master/core/java/android/provider/CalendarContract.java
+  https://android.googlesource.com/platform/frameworks/base/+/master/core/java/android/provider/ContactsContract.java
+  https://android.googlesource.com/platform/frameworks/base/+/master/core/java/android/provider/Settings.java
+  https://android.googlesource.com/platform/packages/apps/Messaging/+/master/src/com/android/messaging/ui/conversation/LaunchConversationActivity.java
+  https://android.googlesource.com/platform/packages/apps/Mms/+/master/src/com/android/mms/ui/ComposeMessageActivity.java
+  https://android.googlesource.com/platform/packages/providers/MediaProvider/+/master/apex/framework/java/android/provider/MediaStore.java
+
+  https://developers.google.com/android/reference/com/google/android/gms/actions/ItemListIntents
+  https://developers.google.com/android/reference/com/google/android/gms/actions/NoteIntents
 -->
 <string-array name="intent_extra_names" translatable="false">
   <item>@string/default_intent_extra_name</item>
+  <item>android.intent.extra.EMAIL</item>
+  <item>android.intent.extra.SUBJECT</item>
+  <item>android.intent.extra.TEXT</item>
+  <item>sms_body</item>
+  <item>android.intent.extra.PHONE_NUMBER</item>
+  <item>android.intent.extra.REFERRER</item>
+  <item>android.intent.extra.TITLE</item>
+  <item>id</item>
+  <item>query</item>
+  <item>subject</item>
+  <item>uri</item>
+  <item></item>
+  <item>access_callback</item>
+  <item>account_types</item>
+  <item>action_key</item>
+  <item>action_msg</item>
+  <item>address</item>
+  <item>airplane_mode_enabled</item>
+  <item>allDay</item>
   <item>android.intent.extra.ALARM_COUNT</item>
   <item>android.intent.extra.ALLOW_MULTIPLE</item>
   <item>android.intent.extra.ALLOW_REPLACE</item>
@@ -544,6 +1029,19 @@
   <item>android.intent.extra.VERSION_CODE</item>
   <item>android.intent.extra.VISIBILITY_ALLOW_LIST</item>
   <item>android.intent.extra.WIPE_EXTERNAL_STORAGE</item>
+  <item>android.intent.extra.alarm.DAYS</item>
+  <item>android.intent.extra.alarm.HOUR</item>
+  <item>android.intent.extra.alarm.IS_PM</item>
+  <item>android.intent.extra.alarm.LENGTH</item>
+  <item>android.intent.extra.alarm.MESSAGE</item>
+  <item>android.intent.extra.alarm.MINUTES</item>
+  <item>android.intent.extra.alarm.RINGTONE</item>
+  <item>android.intent.extra.alarm.SEARCH_MODE</item>
+  <item>android.intent.extra.alarm.SKIP_UI</item>
+  <item>android.intent.extra.alarm.SNOOZE_DURATION</item>
+  <item>android.intent.extra.alarm.VIBRATE</item>
+  <item>android.intent.extra.album</item>
+  <item>android.intent.extra.artist</item>
   <item>android.intent.extra.changed_component_name</item>
   <item>android.intent.extra.changed_component_name_list</item>
   <item>android.intent.extra.changed_package_list</item>
@@ -551,20 +1049,88 @@
   <item>android.intent.extra.client_intent</item>
   <item>android.intent.extra.client_label</item>
   <item>android.intent.extra.distraction_restrictions</item>
+  <item>android.intent.extra.durationLimit</item>
+  <item>android.intent.extra.finishOnCompletion</item>
+  <item>android.intent.extra.focus</item>
+  <item>android.intent.extra.fullScreen</item>
+  <item>android.intent.extra.genre</item>
+  <item>android.intent.extra.playlist</item>
+  <item>android.intent.extra.radio_channel</item>
   <item>android.intent.extra.remote_intent_token</item>
   <item>android.intent.extra.restrictions_bundle</item>
   <item>android.intent.extra.restrictions_intent</item>
   <item>android.intent.extra.restrictions_list</item>
+  <item>android.intent.extra.screenOrientation</item>
   <item>android.intent.extra.shortcut.ICON</item>
   <item>android.intent.extra.shortcut.ICON_RESOURCE</item>
   <item>android.intent.extra.shortcut.ID</item>
   <item>android.intent.extra.shortcut.INTENT</item>
   <item>android.intent.extra.shortcut.NAME</item>
+  <item>android.intent.extra.showActionIcons</item>
+  <item>android.intent.extra.sizeLimit</item>
+  <item>android.intent.extra.title</item>
   <item>android.intent.extra.user_handle</item>
+  <item>android.intent.extra.videoQuality</item>
+  <item>android.provider.MediaStore.extra.MAX_BYTES</item>
+  <item>android.provider.extra.ACCEPT_ORIGINAL_MEDIA_FORMAT</item>
+  <item>android.provider.extra.ACCOUNT</item>
+  <item>android.provider.extra.ADDRESS_BOOK_INDEX</item>
+  <item>android.provider.extra.ADDRESS_BOOK_INDEX_COUNTS</item>
+  <item>android.provider.extra.ADDRESS_BOOK_INDEX_TITLES</item>
+  <item>android.provider.extra.APP_PACKAGE</item>
+  <item>android.provider.extra.BIOMETRIC_AUTHENTICATORS_ALLOWED</item>
+  <item>android.provider.extra.BRIGHTNESS</item>
+  <item>android.provider.extra.CHANNEL_FILTER_LIST</item>
+  <item>android.provider.extra.CHANNEL_ID</item>
+  <item>android.provider.extra.CONVERSATION_ID</item>
+  <item>android.provider.extra.DATA_SET</item>
+  <item>android.provider.extra.EASY_CONNECT_ATTEMPTED_SSID</item>
+  <item>android.provider.extra.EASY_CONNECT_BAND_LIST</item>
+  <item>android.provider.extra.EASY_CONNECT_CHANNEL_LIST</item>
+  <item>android.provider.extra.EASY_CONNECT_ERROR_CODE</item>
+  <item>android.provider.extra.EXCLUDE_MIMES</item>
+  <item>android.provider.extra.MEDIA_CAPABILITIES</item>
+  <item>android.provider.extra.MEDIA_CAPABILITIES_UID</item>
+  <item>android.provider.extra.MODE</item>
+  <item>android.provider.extra.NOTIFICATION_LISTENER_COMPONENT_NAME</item>
+  <item>android.provider.extra.PRIORITIZED_MIMETYPE</item>
+  <item>android.provider.extra.RECIPIENT_CONTACT_CHAT_ID</item>
+  <item>android.provider.extra.RECIPIENT_CONTACT_NAME</item>
+  <item>android.provider.extra.RECIPIENT_CONTACT_URI</item>
+  <item>android.provider.extra.SETTINGS_EMBEDDED_DEEP_LINK_HIGHLIGHT_MENU_KEY</item>
+  <item>android.provider.extra.SETTINGS_EMBEDDED_DEEP_LINK_INTENT_URI</item>
+  <item>android.provider.extra.SUB_ID</item>
+  <item>android.provider.extra.TARGET_RECT</item>
+  <item>android.provider.extra.WIFI_NETWORK_LIST</item>
+  <item>android.provider.extra.WIFI_NETWORK_RESULT_LIST</item>
+  <item>android.settings.extra.ENABLE_MMS_DATA_REQUEST_REASON</item>
+  <item>android.settings.extra.battery_saver_mode_enabled</item>
+  <item>android.settings.extra.do_not_disturb_mode_enabled</item>
+  <item>android.settings.extra.do_not_disturb_mode_minutes</item>
+  <item>android.settings.extra.number_of_certificates</item>
+  <item>app_data</item>
+  <item>app_uid</item>
+  <item>authorities</item>
+  <item>beginTime</item>
+  <item>calling_package</item>
   <item>cdmaDefaultRoamingIndicator</item>
   <item>cdmaRoamingIndicator</item>
+  <item>clip_data</item>
+  <item>com.android.contacts.action.CREATE_DESCRIPTION</item>
+  <item>com.android.contacts.action.FORCE_CREATE</item>
+  <item>com.android.contacts.extra.PHONE_URIS</item>
   <item>com.android.internal.intent.extra.WIPE_ESIMS</item>
+  <item>com.google.android.gms.actions.extra.ITEM_NAME</item>
+  <item>com.google.android.gms.actions.extra.ITEM_NAMES</item>
+  <item>com.google.android.gms.actions.extra.ITEM_QUERY</item>
+  <item>com.google.android.gms.actions.extra.LIST_NAME</item>
+  <item>com.google.android.gms.actions.extra.LIST_QUERY</item>
+  <item>com.google.android.gms.actions.extra.NAME</item>
+  <item>com.google.android.gms.actions.extra.NOTE_QUERY</item>
+  <item>com.google.android.gms.actions.extra.TEXT</item>
+  <item>content_values</item>
   <item>cssIndicator</item>
+  <item>customAppUri</item>
   <item>data-operator-alpha-long</item>
   <item>data-operator-alpha-short</item>
   <item>data-operator-numeric</item>
@@ -572,26 +1138,56 @@
   <item>dataRegState</item>
   <item>dataRoamingType</item>
   <item>emergencyOnly</item>
+  <item>endTime</item>
+  <item>exclude_mimes</item>
+  <item>file_descriptor</item>
+  <item>highlight</item>
+  <item>id</item>
+  <item>in_progress</item>
+  <item>input_device_identifier</item>
+  <item>input_method_id</item>
+  <item>intent_extra_data_key</item>
   <item>isDataRoamingFromRegistration</item>
   <item>isUsingCarrierAggregation</item>
+  <item>is_system_gallery_response</item>
+  <item>is_system_gallery_uid</item>
   <item>LteEarfcnRsrpBoost</item>
   <item>manual</item>
+  <item>mode</item>
+  <item>monitor_callback_type</item>
+  <item>namespace</item>
+  <item>namespace_updated_callback</item>
   <item>networkId</item>
+  <item>network_template</item>
+  <item>new_search</item>
   <item>new_value</item>
   <item>operator-alpha-long</item>
   <item>operator-alpha-short</item>
   <item>operator-numeric</item>
+  <item>output</item>
   <item>previous_value</item>
+  <item>query</item>
   <item>radioTechnology</item>
   <item>reason</item>
   <item>rebroadcastOnUnlock</item>
   <item>restored_from_sdk_int</item>
+  <item>result</item>
+  <item>search_mode</item>
+  <item>select_query</item>
   <item>setting_name</item>
+  <item>sms_body</item>
   <item>ss</item>
+  <item>subject</item>
   <item>systemId</item>
+  <item>target_rect</item>
   <item>time-zone</item>
+  <item>uri</item>
+  <item>uriPermissions</item>
+  <item>uri_list</item>
+  <item>user_query</item>
   <item>voiceRegState</item>
   <item>voiceRoamingType</item>
+  <item>web_search_pendingintent</item>
 </string-array>
 
 </resources>
