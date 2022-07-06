@@ -694,7 +694,7 @@ public class SaveBookmark extends Activity {
     if (!ok) return;
 
     String name   = intent_attribute_name.getText().toString().trim();
-    Intent intent = dbIntent.getIntent();
+    Intent intent = db.getIntent(dbIntent);
 
     ok &= !TextUtils.isEmpty(name);
     ok &= (intent != null);

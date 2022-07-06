@@ -67,3 +67,7 @@ android {
     abortOnError true
   }
 }
+
+dependencies {
+  implementation project(':PublicFileProvider')
+}

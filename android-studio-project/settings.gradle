@@ -1,1 +1,4 @@
 include ':Bookmarks'
+
+include ':PublicFileProvider'
+project(':PublicFileProvider').projectDir = new File(rootDir, 'libs/PublicFileProvider')

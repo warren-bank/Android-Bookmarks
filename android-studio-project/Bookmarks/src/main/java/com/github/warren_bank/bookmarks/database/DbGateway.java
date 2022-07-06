@@ -411,9 +411,12 @@ public class DbGateway {
 
   public Intent getIntent(int intentId) {
     DbIntent dbIntent = getDbIntent(intentId);
+    return getIntent(dbIntent);
+  }
 
+  public Intent getIntent(DbIntent dbIntent) {
     return (dbIntent != null)
-      ? dbIntent.getIntent()
+      ? dbIntent.getIntent(context)
       : null;
   }
 

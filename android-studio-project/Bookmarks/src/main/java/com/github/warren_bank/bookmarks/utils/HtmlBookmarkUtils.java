@@ -112,7 +112,7 @@ public class HtmlBookmarkUtils {
                 /* extras       */ new DbIntent.Extra[0]
               );
 
-              Intent intent = dbIntent.getIntent();
+              Intent intent = db.getIntent(dbIntent);
 
               db.addIntent(
                 /* folderId     */ folderIds.peek(),

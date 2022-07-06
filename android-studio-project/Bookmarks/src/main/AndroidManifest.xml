@@ -264,5 +264,16 @@
 
     </activity>
 
+    <provider
+      android:name="de.cketti.fileprovider.PublicFileProvider"
+      android:authorities="com.github.warren_bank.bookmarks.publicfileprovider"
+      android:exported="true">
+
+      <meta-data
+        android:name="de.cketti.fileprovider.PUBLIC_FILE_PROVIDER_PATHS"
+        android:resource="@xml/publicfileprovider_paths" />
+
+    </provider>
+
   </application>
 </manifest>

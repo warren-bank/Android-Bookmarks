@@ -1,8 +1,9 @@
 package com.github.warren_bank.bookmarks.common;
 
 public class Constants {
-  public static final String PACKAGE_NAME = "com.github.warren_bank.bookmarks";
-  public static final String LOG_TAG      = "Bookmarks";
+  public static final String PUBLIC_FILE_PROVIDER_AUTHORITY = "com.github.warren_bank.bookmarks.publicfileprovider";
+  public static final String PACKAGE_NAME                   = "com.github.warren_bank.bookmarks";
+  public static final String LOG_TAG                        = "Bookmarks";
 
   /* Runtime Permissions */
   public static final int PERMISSION_CHECK_REQUEST_CODE_CHANGE_DEFAULT_OUTPUT_DIRECTORY_FILEPICKER = 1;

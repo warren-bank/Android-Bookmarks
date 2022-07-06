@@ -1,12 +1,18 @@
 package com.github.warren_bank.bookmarks.database.model;
 
+import com.github.warren_bank.bookmarks.common.Constants;
+
+import de.cketti.fileprovider.PublicFileProvider;
+
 import android.content.ComponentName;
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -57,6 +63,18 @@ public class DbIntent {
     this.data_type    = data_type;
     this.categories   = categories;
     this.extras       = extras;
+
+    normalizeDataUri();
+  }
+
+  private void normalizeDataUri() {
+    if (TextUtils.isEmpty(data_uri)) return;
+
+    if (data_uri.charAt(0) == '/') {
+      // file path
+      Uri uri = Uri.fromFile(new File(data_uri));
+      data_uri = uri.toString();
+    }
   }
 
   public static DbIntent getInstance(int id, int folder_id, String name, int flags, String action, String package_name, String class_name, String data_uri, String data_type, String[] categories, Extra[] extras) {
@@ -411,7 +429,7 @@ public class DbIntent {
   // model -to- Intent
   // -----------------------------------
 
-  public Intent getIntent() {
+  public Intent getIntent(Context context) {
     Intent intent = new Intent();
 
     if (flags >= 0) {
@@ -437,6 +455,12 @@ public class DbIntent {
 
         if (Build.VERSION.SDK_INT >= 16) {
           formatted_data_uri.normalizeScheme();
+        }
+
+        if ((Build.VERSION.SDK_INT >= 24) && ("file").equals(formatted_data_uri.getScheme())) {
+          // file path
+          File file = new File(formatted_data_uri.getPath());
+          formatted_data_uri = PublicFileProvider.getUriForFile(context, Constants.PUBLIC_FILE_PROVIDER_AUTHORITY, file);
         }
 
         if (!TextUtils.isEmpty(data_type)) {
