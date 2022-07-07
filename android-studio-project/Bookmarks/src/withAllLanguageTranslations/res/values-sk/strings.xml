@@ -49,6 +49,7 @@
 <string name="dialog_add">Pridať</string>
 <string name="dialog_add_more">Pridať…</string>
 <string name="dialog_change">Zmeniť…</string>
+<string name="dialog_choose">Vybrať…</string>
 <string name="dialog_save">Uložiť</string>
 <string name="dialog_delete">Vymazať</string>
 <string name="dialog_backup_preupdate_title">Vyžaduje sa aktualizácia databázy</string>

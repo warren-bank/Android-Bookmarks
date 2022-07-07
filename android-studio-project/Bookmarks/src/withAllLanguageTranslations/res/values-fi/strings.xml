@@ -49,6 +49,7 @@
 <string name="dialog_add">Lisää</string>
 <string name="dialog_add_more">Lisää…</string>
 <string name="dialog_change">Muutos…</string>
+<string name="dialog_choose">Valitse…</string>
 <string name="dialog_save">Tallenna</string>
 <string name="dialog_delete">Poista</string>
 <string name="dialog_backup_preupdate_title">Tietokannan päivitys on pakollinen</string>

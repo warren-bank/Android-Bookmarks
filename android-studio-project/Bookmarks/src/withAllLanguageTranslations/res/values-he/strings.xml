@@ -49,6 +49,7 @@
 <string name="dialog_add">הוספה</string>
 <string name="dialog_add_more">הוספה…</string>
 <string name="dialog_change">שינוי…</string>
+<string name="dialog_choose">בחירת…</string>
 <string name="dialog_save">שמירה</string>
 <string name="dialog_delete">מחיקה</string>
 <string name="dialog_backup_preupdate_title">נדרש עדכון מסד נתונים</string>

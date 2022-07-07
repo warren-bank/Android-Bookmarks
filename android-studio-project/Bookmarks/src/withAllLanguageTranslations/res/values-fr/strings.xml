@@ -49,6 +49,7 @@
 <string name="dialog_add">Ajouter</string>
 <string name="dialog_add_more">Ajouter…</string>
 <string name="dialog_change">Modifier…</string>
+<string name="dialog_choose">Choisir…</string>
 <string name="dialog_save">Sauvegarder</string>
 <string name="dialog_delete">Supprimer</string>
 <string name="dialog_backup_preupdate_title">Mise à jour de base de données requise</string>

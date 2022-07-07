@@ -49,6 +49,7 @@
 <string name="dialog_add">Tambahkan</string>
 <string name="dialog_add_more">Tambahkan…</string>
 <string name="dialog_change">Ganti…</string>
+<string name="dialog_choose">Pilih…</string>
 <string name="dialog_save">Simpan</string>
 <string name="dialog_delete">Hapus</string>
 <string name="dialog_backup_preupdate_title">Pembaruan Basis Data Diperlukan</string>

@@ -49,6 +49,7 @@
 <string name="dialog_add">Додати</string>
 <string name="dialog_add_more">Додати…</string>
 <string name="dialog_change">Змінити…</string>
+<string name="dialog_choose">Вибрати…</string>
 <string name="dialog_save">Зберегти</string>
 <string name="dialog_delete">Вилучити</string>
 <string name="dialog_backup_preupdate_title">Потрібна оновлення бази даних</string>

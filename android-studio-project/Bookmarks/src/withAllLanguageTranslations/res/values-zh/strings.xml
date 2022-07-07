@@ -49,6 +49,7 @@
 <string name="dialog_add">加添</string>
 <string name="dialog_add_more">添加…</string>
 <string name="dialog_change">更改…</string>
+<string name="dialog_choose">选择…</string>
 <string name="dialog_save">保存</string>
 <string name="dialog_delete">删除</string>
 <string name="dialog_backup_preupdate_title">需要数据库更新</string>

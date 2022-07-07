@@ -49,6 +49,7 @@
 <string name="dialog_add">ചേര്ക്കുക</string>
 <string name="dialog_add_more">ചേര്ക്കുക…</string>
 <string name="dialog_change">മാറ്റം…</string>
+<string name="dialog_choose">തെരഞ്ഞെടുക്കുക…</string>
 <string name="dialog_save">സൂക്ഷിക്കുക</string>
 <string name="dialog_delete">നീക്കം ചെയ്യുക</string>
 <string name="dialog_backup_preupdate_title">ഡാറ്റാബേസ് പരിഷ്കരണം ആവശ്യമാണ്</string>

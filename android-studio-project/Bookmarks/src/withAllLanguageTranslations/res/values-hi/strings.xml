@@ -49,6 +49,7 @@
 <string name="dialog_add">जोड़ें</string>
 <string name="dialog_add_more">जोड़ें…</string>
 <string name="dialog_change">बदलें…</string>
+<string name="dialog_choose">चुनें…</string>
 <string name="dialog_save">सहेजें</string>
 <string name="dialog_delete">मिटाएँ</string>
 <string name="dialog_backup_preupdate_title">डेटाबेस अद्यतन आवश्यक है</string>

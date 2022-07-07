@@ -49,6 +49,7 @@
 <string name="dialog_add">थप्नुहोस्</string>
 <string name="dialog_add_more">थप्नुहोस्…</string>
 <string name="dialog_change">परिवर्तन गर्नुहोस्…</string>
+<string name="dialog_choose">चयन गर्नुहोस्…</string>
 <string name="dialog_save">बचत गर्नुहोस्</string>
 <string name="dialog_delete">मेट्नुहोस्</string>
 <string name="dialog_backup_preupdate_title">डाटाबेस अद्यावधिक आवश्यक छ</string>

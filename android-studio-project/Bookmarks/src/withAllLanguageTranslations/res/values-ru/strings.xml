@@ -49,6 +49,7 @@
 <string name="dialog_add">Добавить</string>
 <string name="dialog_add_more">Добавить…</string>
 <string name="dialog_change">Изменить…</string>
+<string name="dialog_choose">Выбрать…</string>
 <string name="dialog_save">Сохранить</string>
 <string name="dialog_delete">Удалить</string>
 <string name="dialog_backup_preupdate_title">Требуется Обновление Базы Данных</string>

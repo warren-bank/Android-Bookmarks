@@ -49,6 +49,7 @@
 <string name="dialog_add">Додај</string>
 <string name="dialog_add_more">Додај…</string>
 <string name="dialog_change">Промена…</string>
+<string name="dialog_choose">Изаберите…</string>
 <string name="dialog_save">Сачувај</string>
 <string name="dialog_delete">Избриши</string>
 <string name="dialog_backup_preupdate_title">Потребно је ажурирање базе података</string>

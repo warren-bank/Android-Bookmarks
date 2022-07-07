@@ -49,6 +49,7 @@
 <string name="dialog_add">එක් කරන්න</string>
 <string name="dialog_add_more">එක් කරන්න…</string>
 <string name="dialog_change">වෙනස් කරන්න…</string>
+<string name="dialog_choose">තෝරන්න…</string>
 <string name="dialog_save">සුරකින්න</string>
 <string name="dialog_delete">මකන්න</string>
 <string name="dialog_backup_preupdate_title">දත්ත ගබඩාව යාවත්කාලීන කිරීම</string>

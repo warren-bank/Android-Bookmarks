@@ -49,6 +49,7 @@
 <string name="dialog_add">Добави:</string>
 <string name="dialog_add_more">Добави…</string>
 <string name="dialog_change">Промени се…</string>
+<string name="dialog_choose">Избери…</string>
 <string name="dialog_save">Запис!</string>
 <string name="dialog_delete">Изтриване.</string>
 <string name="dialog_backup_preupdate_title">Изисква се обновяване на базата данни</string>

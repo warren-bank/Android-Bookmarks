@@ -49,6 +49,7 @@
 <string name="dialog_add">Tillegg</string>
 <string name="dialog_add_more">Legg til…</string>
 <string name="dialog_change">Endre…</string>
+<string name="dialog_choose">Velg…</string>
 <string name="dialog_save">Lagring</string>
 <string name="dialog_delete">Slett</string>
 <string name="dialog_backup_preupdate_title">Databaseoppdatering er nødvendig</string>

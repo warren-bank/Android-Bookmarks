@@ -49,6 +49,7 @@
 <string name="dialog_add">Tilføj</string>
 <string name="dialog_add_more">Tilføj…</string>
 <string name="dialog_change">Ændre…</string>
+<string name="dialog_choose">Vælg…</string>
 <string name="dialog_save">Gem</string>
 <string name="dialog_delete">Slet</string>
 <string name="dialog_backup_preupdate_title">Databaseopdatering er påkrævet</string>

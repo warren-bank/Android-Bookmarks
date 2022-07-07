@@ -49,6 +49,7 @@
 <string name="dialog_add">Lisa</string>
 <string name="dialog_add_more">Lisa…</string>
 <string name="dialog_change">Muuda…</string>
+<string name="dialog_choose">Vali…</string>
 <string name="dialog_save">Salvesta</string>
 <string name="dialog_delete">Kustuta</string>
 <string name="dialog_backup_preupdate_title">Andmebaasi Uuendamine On Nõutav</string>

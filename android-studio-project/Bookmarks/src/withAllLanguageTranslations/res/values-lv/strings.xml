@@ -49,6 +49,7 @@
 <string name="dialog_add">Pievienot</string>
 <string name="dialog_add_more">Pievienot…</string>
 <string name="dialog_change">Mainīt…</string>
+<string name="dialog_choose">Izvēlēties…</string>
 <string name="dialog_save">Saglabāt</string>
 <string name="dialog_delete">Dzēst</string>
 <string name="dialog_backup_preupdate_title">Datu Bāzes Atjaunināšana Ir Nepieciešama</string>

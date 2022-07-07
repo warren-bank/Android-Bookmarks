@@ -49,6 +49,7 @@
 <string name="dialog_add">Hozzáadás</string>
 <string name="dialog_add_more">Hozzáadás…</string>
 <string name="dialog_change">Változás…</string>
+<string name="dialog_choose">Válassz…</string>
 <string name="dialog_save">Mentés</string>
 <string name="dialog_delete">Törlés</string>
 <string name="dialog_backup_preupdate_title">Az adatbázis-frissítés szükséges</string>

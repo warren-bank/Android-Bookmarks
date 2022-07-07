@@ -49,6 +49,7 @@
 <string name="dialog_add">Żid</string>
 <string name="dialog_add_more">Żid…</string>
 <string name="dialog_change">Bidla…</string>
+<string name="dialog_choose">Agħżel…</string>
 <string name="dialog_save">Save</string>
 <string name="dialog_delete">Ħassar</string>
 <string name="dialog_backup_preupdate_title">Aġġornament Database Hija Meħtieġa</string>

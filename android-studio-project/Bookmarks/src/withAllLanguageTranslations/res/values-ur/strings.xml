@@ -49,6 +49,7 @@
 <string name="dialog_add">شامل ہیں</string>
 <string name="dialog_add_more">شامل کریں…</string>
 <string name="dialog_change">تبدیلی…</string>
+<string name="dialog_choose">انتخاب کریں…</string>
 <string name="dialog_save">بچائیں</string>
 <string name="dialog_delete">حذف</string>
 <string name="dialog_backup_preupdate_title">ڈیٹا بیس اپ ڈیٹ کیا جاتا ہے</string>

@@ -49,6 +49,7 @@
 <string name="dialog_add">Προσθήκη</string>
 <string name="dialog_add_more">Προσθήκη…</string>
 <string name="dialog_change">Αλλαγή…</string>
+<string name="dialog_choose">Επιλέξτε…</string>
 <string name="dialog_save">Αποθήκευση:</string>
 <string name="dialog_delete">Διαγραφή:</string>
 <string name="dialog_backup_preupdate_title">Απαιτείται Ενημέρωση Βάσης Δεδομένων</string>

@@ -49,6 +49,7 @@
 <string name="dialog_add">Dodaj</string>
 <string name="dialog_add_more">Dodaj…</string>
 <string name="dialog_change">Zmień…</string>
+<string name="dialog_choose">Wybierz…</string>
 <string name="dialog_save">Zapisz</string>
 <string name="dialog_delete">Usuń</string>
 <string name="dialog_backup_preupdate_title">Wymagana Jest Aktualizacja Bazy Danych</string>

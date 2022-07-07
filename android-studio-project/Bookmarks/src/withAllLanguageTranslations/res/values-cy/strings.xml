@@ -49,6 +49,7 @@
 <string name="dialog_add">Ychwanegu</string>
 <string name="dialog_add_more">Ychwanegu…</string>
 <string name="dialog_change">Newid…</string>
+<string name="dialog_choose">Dewis…</string>
 <string name="dialog_save">Cadw</string>
 <string name="dialog_delete">Dileu</string>
 <string name="dialog_backup_preupdate_title">Mae Angen Diweddaru Cronfa Ddata</string>

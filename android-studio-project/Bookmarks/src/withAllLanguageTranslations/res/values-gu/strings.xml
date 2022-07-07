@@ -49,6 +49,7 @@
 <string name="dialog_add">ઉમેરો</string>
 <string name="dialog_add_more">ઉમેરો…</string>
 <string name="dialog_change">બદલો…</string>
+<string name="dialog_choose">પસંદ કરો…</string>
 <string name="dialog_save">સંગ્રહ કરો</string>
 <string name="dialog_delete">કાઢી નાંખો</string>
 <string name="dialog_backup_preupdate_title">ડેટાબેઝ સુધારો જરૂરી છે</string>

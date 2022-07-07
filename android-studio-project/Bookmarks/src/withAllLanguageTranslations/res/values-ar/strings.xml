@@ -49,6 +49,7 @@
 <string name="dialog_add">اضافة</string>
 <string name="dialog_add_more">اضافة…</string>
 <string name="dialog_change">تغيير…</string>
+<string name="dialog_choose">…إختاري</string>
 <string name="dialog_save">حفظ</string>
 <string name="dialog_delete">حذف</string>
 <string name="dialog_backup_preupdate_title">تعديل قاعدة البيانات مطلوب</string>

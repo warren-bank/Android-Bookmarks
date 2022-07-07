@@ -49,6 +49,7 @@
 <string name="dialog_add">Lägg till</string>
 <string name="dialog_add_more">Lägg till…</string>
 <string name="dialog_change">Ändra…</string>
+<string name="dialog_choose">Välj…</string>
 <string name="dialog_save">Spara</string>
 <string name="dialog_delete">Radera</string>
 <string name="dialog_backup_preupdate_title">Databasuppdatering krävs</string>

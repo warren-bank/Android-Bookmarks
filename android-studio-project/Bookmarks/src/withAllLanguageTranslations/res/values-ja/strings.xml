@@ -49,6 +49,7 @@
 <string name="dialog_add">追加</string>
 <string name="dialog_add_more">追加…</string>
 <string name="dialog_change">変更…</string>
+<string name="dialog_choose">選択…</string>
 <string name="dialog_save">セーブ</string>
 <string name="dialog_delete">削除</string>
 <string name="dialog_backup_preupdate_title">データベースの更新が必要です</string>

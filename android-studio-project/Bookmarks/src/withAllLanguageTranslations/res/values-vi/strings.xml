@@ -49,6 +49,7 @@
 <string name="dialog_add">Thêm</string>
 <string name="dialog_add_more">Thêm…</string>
 <string name="dialog_change">Thay đổi…</string>
+<string name="dialog_choose">Chọn…</string>
 <string name="dialog_save">Lưu</string>
 <string name="dialog_delete">&amp;amp; Xoá</string>
 <string name="dialog_backup_preupdate_title">Yêu Cầu Cập Nhật Cơ Sở</string>

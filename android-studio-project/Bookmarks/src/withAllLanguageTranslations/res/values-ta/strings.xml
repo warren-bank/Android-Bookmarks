@@ -49,6 +49,7 @@
 <string name="dialog_add">சேர்</string>
 <string name="dialog_add_more">சேர்…</string>
 <string name="dialog_change">மாற்று…</string>
+<string name="dialog_choose">தேர்ந்தெடு…</string>
 <string name="dialog_save">சேமி</string>
 <string name="dialog_delete">நீக்கு</string>
 <string name="dialog_backup_preupdate_title">தரவுத்தள புதுப்பித்தல் தேவைப்படுகிறது</string>

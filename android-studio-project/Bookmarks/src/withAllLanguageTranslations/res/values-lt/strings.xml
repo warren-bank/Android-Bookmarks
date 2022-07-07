@@ -49,6 +49,7 @@
 <string name="dialog_add">Pridėti</string>
 <string name="dialog_add_more">Pridėti…</string>
 <string name="dialog_change">Keisti…</string>
+<string name="dialog_choose">Pasirinkti…</string>
 <string name="dialog_save">Įrašyti</string>
 <string name="dialog_delete">Ištrinti</string>
 <string name="dialog_backup_preupdate_title">Būtina Atnaujinti Duomenų Bazę</string>

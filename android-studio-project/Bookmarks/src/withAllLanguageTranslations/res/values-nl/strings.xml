@@ -49,6 +49,7 @@
 <string name="dialog_add">Toevoegen</string>
 <string name="dialog_add_more">Toevoegen…</string>
 <string name="dialog_change">Wijzigen…</string>
+<string name="dialog_choose">Kiezen…</string>
 <string name="dialog_save">Opslaan</string>
 <string name="dialog_delete">Wissen</string>
 <string name="dialog_backup_preupdate_title">Database-update Is Vereist</string>

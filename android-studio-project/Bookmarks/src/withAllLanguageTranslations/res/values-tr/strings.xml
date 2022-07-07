@@ -49,6 +49,7 @@
 <string name="dialog_add">Ekle</string>
 <string name="dialog_add_more">Ekle…</string>
 <string name="dialog_change">Değiştir…</string>
+<string name="dialog_choose">Seç…</string>
 <string name="dialog_save">Kaydet</string>
 <string name="dialog_delete">Sil</string>
 <string name="dialog_backup_preupdate_title">Veritabanı Güncellemesi Gerekiyor</string>

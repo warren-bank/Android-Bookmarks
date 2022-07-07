@@ -49,6 +49,7 @@
 <string name="dialog_add">เพิ่ม</string>
 <string name="dialog_add_more">เพิ่ม…</string>
 <string name="dialog_change">เปลี่ยน…</string>
+<string name="dialog_choose">เลือก…</string>
 <string name="dialog_save">บันทึก</string>
 <string name="dialog_delete">ลบ</string>
 <string name="dialog_backup_preupdate_title">จำเป็นต้องอัพเดตฐานข้อมูล</string>

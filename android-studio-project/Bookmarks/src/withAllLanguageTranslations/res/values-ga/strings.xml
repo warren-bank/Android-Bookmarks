@@ -49,6 +49,7 @@
 <string name="dialog_add">Cuir Leis</string>
 <string name="dialog_add_more">Cuir Leis…</string>
 <string name="dialog_change">&amp; Athraigh…</string>
+<string name="dialog_choose">Roghnaigh…</string>
 <string name="dialog_save">Sábháil</string>
 <string name="dialog_delete">&amp; Scrios</string>
 <string name="dialog_backup_preupdate_title">Tá Nuashonrú Bunachar Sonraí Ag Teastáil</string>

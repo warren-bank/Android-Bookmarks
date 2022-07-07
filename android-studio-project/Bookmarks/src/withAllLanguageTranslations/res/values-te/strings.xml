@@ -49,6 +49,7 @@
 <string name="dialog_add">\@ title: window</string>
 <string name="dialog_add_more">\@ title: window</string>
 <string name="dialog_change">మార్చు…</string>
+<string name="dialog_choose">ఎంచుకోండి…</string>
 <string name="dialog_save">\@ action: button</string>
 <string name="dialog_delete">తొలగించు</string>
 <string name="dialog_backup_preupdate_title">డేటాబేసు నవీకరణ అభ్యర్ధన</string>

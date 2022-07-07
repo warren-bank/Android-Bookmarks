@@ -49,6 +49,7 @@
 <string name="dialog_add">Adaugă</string>
 <string name="dialog_add_more">Adaugă…</string>
 <string name="dialog_change">Schimbare…</string>
+<string name="dialog_choose">Alege…</string>
 <string name="dialog_save">Salvează</string>
 <string name="dialog_delete">Șterge</string>
 <string name="dialog_backup_preupdate_title">Actualizarea bazei de date este necesară</string>
