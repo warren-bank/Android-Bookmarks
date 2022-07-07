@@ -1132,7 +1132,7 @@ public class Bookmarks extends ListActivity implements RuntimePermissionUtils.Ru
   }
 
   @Override
-  public void onRequestPermissionsResult (int requestCode, String[] permissions, int[] grantResults) {
+  public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
     RuntimePermissionUtils.onRequestPermissionsResult(Bookmarks.this, Bookmarks.this, requestCode, permissions, grantResults);
   }
 

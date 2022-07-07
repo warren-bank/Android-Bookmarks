@@ -656,7 +656,7 @@ public class DbIntent {
         }
         break;
       case "boolean[]" : {
-          String[] parts = getExtraValueArray(extra);
+          String[] parts = DbIntent.getExtraValueArray(extra);
 
           if (parts.length > 0) {
             boolean[] values = new boolean[parts.length];
@@ -678,7 +678,7 @@ public class DbIntent {
         }
         break;
       case "byte[]" : {
-          String[] parts = getExtraValueArray(extra);
+          String[] parts = DbIntent.getExtraValueArray(extra);
 
           if (parts.length > 0) {
             byte[] values = new byte[parts.length];
@@ -712,7 +712,7 @@ public class DbIntent {
         }
         break;
       case "double[]" : {
-          String[] parts = getExtraValueArray(extra);
+          String[] parts = DbIntent.getExtraValueArray(extra);
 
           if (parts.length > 0) {
             double[] values = new double[parts.length];
@@ -734,7 +734,7 @@ public class DbIntent {
         }
         break;
       case "float[]" : {
-          String[] parts = getExtraValueArray(extra);
+          String[] parts = DbIntent.getExtraValueArray(extra);
 
           if (parts.length > 0) {
             float[] values = new float[parts.length];
@@ -756,7 +756,7 @@ public class DbIntent {
         }
         break;
       case "int[]" : {
-          String[] parts = getExtraValueArray(extra);
+          String[] parts = DbIntent.getExtraValueArray(extra);
 
           if (parts.length > 0) {
             int[] values = new int[parts.length];
@@ -772,7 +772,7 @@ public class DbIntent {
         }
         break;
       case "ArrayList<Integer>" : {
-          String[] parts = getExtraValueArray(extra);
+          String[] parts = DbIntent.getExtraValueArray(extra);
 
           if (parts.length > 0) {
             ArrayList<Integer> values = new ArrayList<Integer>(parts.length);
@@ -794,7 +794,7 @@ public class DbIntent {
         }
         break;
       case "long[]" : {
-          String[] parts = getExtraValueArray(extra);
+          String[] parts = DbIntent.getExtraValueArray(extra);
 
           if (parts.length > 0) {
             long[] values = new long[parts.length];
@@ -816,7 +816,7 @@ public class DbIntent {
         }
         break;
       case "short[]" : {
-          String[] parts = getExtraValueArray(extra);
+          String[] parts = DbIntent.getExtraValueArray(extra);
 
           if (parts.length > 0) {
             short[] values = new short[parts.length];
@@ -836,13 +836,13 @@ public class DbIntent {
         }
         break;
       case "String[]" : {
-          String[] values = getExtraValueArray(extra);
+          String[] values = DbIntent.getExtraValueArray(extra);
 
           intent.putExtra(extra.name, values);
         }
         break;
       case "ArrayList<String>" : {
-          String[] parts = getExtraValueArray(extra);
+          String[] parts = DbIntent.getExtraValueArray(extra);
 
           if (parts.length > 0) {
             ArrayList<String> values = new ArrayList<String>(
@@ -861,7 +861,7 @@ public class DbIntent {
         }
         break;
       case "Bitmap[]" : {
-          String[] parts = getExtraValueArray(extra);
+          String[] parts = DbIntent.getExtraValueArray(extra);
 
           if (parts.length > 0) {
             ArrayList<Parcelable> values = new ArrayList<Parcelable>(parts.length);
@@ -880,7 +880,7 @@ public class DbIntent {
         }
         break;
       case "ArrayList<Bitmap>" : {
-          String[] parts = getExtraValueArray(extra);
+          String[] parts = DbIntent.getExtraValueArray(extra);
 
           if (parts.length > 0) {
             ArrayList<Parcelable> values = new ArrayList<Parcelable>(parts.length);
@@ -906,7 +906,7 @@ public class DbIntent {
         }
         break;
       case "Uri[]" : {
-          String[] parts = getExtraValueArray(extra);
+          String[] parts = DbIntent.getExtraValueArray(extra);
 
           if (parts.length > 0) {
             Uri[] values = new Uri[parts.length];
@@ -922,7 +922,7 @@ public class DbIntent {
         }
         break;
       case "ArrayList<Uri>" : {
-          String[] parts = getExtraValueArray(extra);
+          String[] parts = DbIntent.getExtraValueArray(extra);
 
           if (parts.length > 0) {
             ArrayList<Uri> values = new ArrayList<Uri>(parts.length);
@@ -940,7 +940,7 @@ public class DbIntent {
     }
   }
 
-  public String[] getExtraValueArray(Extra extra) {
+  public static String[] getExtraValueArray(Extra extra) {
     try {
       return DbIntent.EXTRA_ARRAY_SEPARATOR_TOKEN_PATTERN.split(extra.value);
     }

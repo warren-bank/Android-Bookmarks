@@ -18,6 +18,7 @@ public class Constants {
   public static final int PERMISSION_CHECK_REQUEST_CODE_INTENT_START_SERVICE                       = 11;
   public static final int PERMISSION_CHECK_REQUEST_CODE_INTENT_STOP_SERVICE                        = 12;
   public static final int PERMISSION_CHECK_REQUEST_CODE_INTENT_ADD_SHORTCUT                        = 13;
+  public static final int PERMISSION_CHECK_REQUEST_CODE_INTENT_EXTRA_WITH_FILE_SCHEME_URI          = 14;
 
   /* ContentProvider Authorities */
   public static final String PUBLIC_FILE_PROVIDER_AUTHORITY = Constants.PACKAGE_NAME + ".publicfileprovider";

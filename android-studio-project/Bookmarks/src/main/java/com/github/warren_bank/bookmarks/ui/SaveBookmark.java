@@ -11,6 +11,7 @@ import com.github.warren_bank.bookmarks.ui.model.FolderContentItem;
 import com.github.warren_bank.bookmarks.ui.widgets.ExpandablePanel;
 import com.github.warren_bank.bookmarks.ui.widgets.ListViewInScrollView;
 import com.github.warren_bank.bookmarks.ui.widgets.TextViewArrayAdapter;
+import com.github.warren_bank.bookmarks.utils.RuntimePermissionUtils;
 
 import android.app.ActionBar;
 import android.app.Activity;
@@ -35,12 +36,13 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class SaveBookmark extends Activity {
+public class SaveBookmark extends Activity implements RuntimePermissionUtils.RuntimePermissionListener {
 
   private DbGateway db;
   private DbIntent dbIntent;
@@ -688,7 +690,16 @@ public class SaveBookmark extends Activity {
   }
 
   public void saveIntent(View v) {
+    saveIntent(/* skipPermissionCheck */ false);
+  }
+
+  private void saveIntent(boolean skipPermissionCheck) {
     boolean ok = true;
+
+    if (!skipPermissionCheck) {
+      ok &= runPermissionCheck();
+      if (!ok) return;
+    }
 
     ok &= getInputFields();
     if (!ok) return;
@@ -1045,6 +1056,82 @@ public class SaveBookmark extends Activity {
     catch(Exception e) {
       return false;
     }
+  }
+
+  // ---------------------------------------------------------------------------
+  // perform runtime Permissions check
+  // ---------------------------------------------------------------------------
+
+  private boolean runPermissionCheck() {
+    boolean usesFilePath = false;
+    List<String> uriStrings = new ArrayList<String>();
+
+    uriStrings.add(
+      intent_attribute_data_uri.getText().toString().trim()
+    );
+
+    for (DbIntent.Extra extra : extrasList) {
+      switch(extra.value_type) {
+        case "Bitmap" :
+        case "Uri" : {
+            uriStrings.add(extra.value);
+          }
+          break;
+        case "Bitmap[]" :
+        case "ArrayList<Bitmap>" :
+        case "Uri[]" :
+        case "ArrayList<Uri>" : {
+            uriStrings.addAll(
+              Arrays.asList(
+                DbIntent.getExtraValueArray(extra)
+              )
+            );
+          }
+          break;
+      }
+    }
+
+    for (String uriString : uriStrings) {
+      if (!TextUtils.isEmpty(uriString) && ((uriString.charAt(0) == '/') || uriString.toLowerCase().startsWith("file:"))) {
+        usesFilePath = true;
+        break;
+      }
+    }
+    uriStrings = null;
+
+    if (usesFilePath) {
+      // check whether permission has already been granted
+      String[] allRequestedPermissions = new String[]{"android.permission.WRITE_EXTERNAL_STORAGE"};
+
+      if (!RuntimePermissionUtils.hasAllPermissions(SaveBookmark.this, allRequestedPermissions)) {
+        // not yet granted; need to request permission
+        int requestCode = Constants.PERMISSION_CHECK_REQUEST_CODE_INTENT_EXTRA_WITH_FILE_SCHEME_URI;
+        RuntimePermissionUtils.requestPermissions(SaveBookmark.this, SaveBookmark.this, allRequestedPermissions, requestCode);
+        return false;
+      }
+    }
+
+    return true;
+  }
+
+  @Override
+  public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+    RuntimePermissionUtils.onRequestPermissionsResult(SaveBookmark.this, SaveBookmark.this, requestCode, permissions, grantResults);
+  }
+
+  @Override // RuntimePermissionUtils.RuntimePermissionListener
+  public void onRequestPermissionsGranted(int requestCode, Object passthrough) {
+    switch(requestCode) {
+      case Constants.PERMISSION_CHECK_REQUEST_CODE_INTENT_EXTRA_WITH_FILE_SCHEME_URI: {
+          saveIntent(/* skipPermissionCheck */ true);
+        }
+        break;
+    }
+  }
+
+  @Override // RuntimePermissionUtils.RuntimePermissionListener
+  public void onRequestPermissionsDenied(int requestCode, Object passthrough, String[] missingPermissions) {
+    Toast.makeText(getApplicationContext(), R.string.messages_no_permission, Toast.LENGTH_LONG).show();
   }
 
 }
