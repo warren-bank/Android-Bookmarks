@@ -1,9 +1,8 @@
 package com.github.warren_bank.bookmarks.common;
 
 public class Constants {
-  public static final String PUBLIC_FILE_PROVIDER_AUTHORITY = "com.github.warren_bank.bookmarks.publicfileprovider";
-  public static final String PACKAGE_NAME                   = "com.github.warren_bank.bookmarks";
-  public static final String LOG_TAG                        = "Bookmarks";
+  public static final String PACKAGE_NAME = "com.github.warren_bank.bookmarks";
+  public static final String LOG_TAG      = "Bookmarks";
 
   /* Runtime Permissions */
   public static final int PERMISSION_CHECK_REQUEST_CODE_CHANGE_DEFAULT_OUTPUT_DIRECTORY_FILEPICKER = 1;
@@ -20,8 +19,11 @@ public class Constants {
   public static final int PERMISSION_CHECK_REQUEST_CODE_INTENT_STOP_SERVICE                        = 12;
   public static final int PERMISSION_CHECK_REQUEST_CODE_INTENT_ADD_SHORTCUT                        = 13;
 
+  /* ContentProvider Authorities */
+  public static final String PUBLIC_FILE_PROVIDER_AUTHORITY = Constants.PACKAGE_NAME + ".publicfileprovider";
+
   /* Intent Extras */
-  public static final String EXTRA_INTENT_ID   = Constants.PACKAGE_NAME + ".BookmarkId";
-  public static final String EXTRA_FOLDER_ID   = Constants.PACKAGE_NAME + ".FolderId";
-  public static final String EXTRA_RELOAD_LIST = Constants.PACKAGE_NAME + ".ReloadList";
+  public static final String EXTRA_INTENT_ID                = Constants.PACKAGE_NAME + ".BookmarkId";
+  public static final String EXTRA_FOLDER_ID                = Constants.PACKAGE_NAME + ".FolderId";
+  public static final String EXTRA_RELOAD_LIST              = Constants.PACKAGE_NAME + ".ReloadList";
 }

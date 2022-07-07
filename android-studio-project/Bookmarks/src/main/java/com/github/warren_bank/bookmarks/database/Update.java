@@ -11,6 +11,7 @@ import android.os.Looper;
 import android.util.Log;
 import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Update {
@@ -22,7 +23,7 @@ public class Update {
   public static final int MODE_INSTALL = 1;
   public static final int MODE_RESTORE = 2;
 
-  public static final int VERSION_CURRENT = 1;
+  public static final int VERSION_CURRENT = 2;
   public static       int VERSION_ACTUAL  = -1;
 
   // ---------------------------------------------------------------------------
@@ -192,31 +193,37 @@ public class Update {
     version                               = getVersionNumber();
 
     if (!databaseUpdateResult.didUpdateFail && (version == 1)) {
-      /*
       didUpdate                                = true;
       result                                   = update_version_001();
       databaseUpdateResult.didUpdateSucceed   &= result;
       databaseUpdateResult.didUpdateFail      |= !result;
       version                                  = getVersionNumber();
-      */
     }
 
     databaseUpdateResult.didUpdateSucceed &= didUpdate;
   }
 
-  /*
   private boolean update_version_001() {
     Log.d(Constants.LOG_TAG, "UPDATING TO VERSION 2");
     try {
-      execQuery("UPDATE application SET version=2");
-      return true;
+      List<String> queries = new ArrayList<String>();
+      queries.add("UPDATE application SET version=2");
+      queries.add(
+          "INSERT INTO intent_extra_value_types (name) VALUES"
+        + "  ('Bitmap'),"
+        + "  ('Bitmap[]'),"
+        + "  ('ArrayList<Bitmap>'),"
+        + "  ('Uri'),"
+        + "  ('Uri[]'),"
+        + "  ('ArrayList<Uri>');"
+      );
+      return execTransaction(queries);
     } catch (Exception e) {
       Log.e(Constants.LOG_TAG, "Error updating database");
       e.printStackTrace();
       return false;
     }
   }
-  */
 
   // ---------------------------------------------------------------------------
 

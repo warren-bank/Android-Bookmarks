@@ -349,10 +349,13 @@ public class Bookmarks extends ListActivity implements RuntimePermissionUtils.Ru
   }
 
   private void getFolderContentItems() {
-    updateSearchParams(null);
-
     if (currentFolder == null)
       currentFolder = db.getFolderContentItem(startupFolderId);
+
+    if (currentFolder == null)
+      return;
+
+    updateSearchParams(null);
 
     // update breadcrumbs
     folder_breadcrumbs.populate(

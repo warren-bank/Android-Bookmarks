@@ -237,7 +237,14 @@ public class SQLiteStore extends SQLiteOpenHelper {
         + "  ('short[]'),"
         + "  ('String'),"
         + "  ('String[]'),"
-        + "  ('ArrayList<String>');"
+        + "  ('ArrayList<String>'),"
+        + "  ('Bitmap'),"
+        + "  ('Bitmap[]'),"
+        + "  ('ArrayList<Bitmap>'),"
+        + "  ('Uri'),"
+        + "  ('Uri[]'),"
+        + "  ('ArrayList<Uri>');"
+
       );
       dbase.execSQL(
           "CREATE TABLE IF NOT EXISTS intent_extras ("
