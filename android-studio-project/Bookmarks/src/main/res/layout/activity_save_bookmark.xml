@@ -547,11 +547,30 @@
       android:layout_width="fill_parent"
       android:layout_height="wrap_content" />
 
-    <EditText
-      android:id="@+id/intent_attribute_data_uri"
+    <LinearLayout
       android:layout_width="fill_parent"
       android:layout_height="wrap_content"
-      android:inputType="textUri" />
+      android:orientation="horizontal">
+
+      <EditText
+        android:id="@+id/intent_attribute_data_uri"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="textUri"
+        android:layout_gravity="start" />
+
+      <Button
+        android:text="@string/dialog_choose"
+        android:layout_weight="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:gravity="center_vertical"
+        android:clickable="true"
+        android:onClick="openFilePickerForDataUri" />
+
+    </LinearLayout>
 
     <!-- =================================================================== -->
 

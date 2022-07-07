@@ -207,7 +207,7 @@ public class Bookmarks extends ListActivity implements RuntimePermissionUtils.Ru
     backupVersioning    = sharedPrefs.getBoolean(BACKUP_VERSIONING_PREF_NAME, true);
     startupFolderId     = sharedPrefs.getInt(STARTUP_FOLDER_PREF_NAME, 0);
     startupFolderPath   = db.getFolderPath(startupFolderId);
-    outputDirectoryPath = sharedPrefs.getString(OUTPUT_DIRECTORY_PREF_NAME, (Environment.getExternalStorageDirectory() + "/" + getString(R.string.default_backups_directory_name)));
+    outputDirectoryPath = sharedPrefs.getString(OUTPUT_DIRECTORY_PREF_NAME, (Environment.getExternalStorageDirectory().getAbsolutePath() + "/" + getString(R.string.default_backups_directory_name)));
 
     listView = getListView();
     listView.setDivider(null);

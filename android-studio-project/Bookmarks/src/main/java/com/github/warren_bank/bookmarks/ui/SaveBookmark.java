@@ -6,6 +6,7 @@ import com.github.warren_bank.bookmarks.database.DbGateway;
 import com.github.warren_bank.bookmarks.database.model.DbIntent;
 import com.github.warren_bank.bookmarks.ui.Bookmarks;
 import com.github.warren_bank.bookmarks.ui.dialogs.DbFolderPicker;
+import com.github.warren_bank.bookmarks.ui.dialogs.FilesystemDirectoryPicker;
 import com.github.warren_bank.bookmarks.ui.listeners.IntentExtraValueTokenSeparatorOnClickListener;
 import com.github.warren_bank.bookmarks.ui.model.FolderContentItem;
 import com.github.warren_bank.bookmarks.ui.widgets.ExpandablePanel;
@@ -22,6 +23,7 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
 import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -38,6 +40,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -697,7 +700,7 @@ public class SaveBookmark extends Activity implements RuntimePermissionUtils.Run
     boolean ok = true;
 
     if (!skipPermissionCheck) {
-      ok &= runPermissionCheck();
+      ok &= fileUriPermissionCheck();
       if (!ok) return;
     }
 
@@ -1059,10 +1062,10 @@ public class SaveBookmark extends Activity implements RuntimePermissionUtils.Run
   }
 
   // ---------------------------------------------------------------------------
-  // perform runtime Permissions check
+  // initiate runtime Permissions check: for file Uri in Intent
   // ---------------------------------------------------------------------------
 
-  private boolean runPermissionCheck() {
+  private boolean fileUriPermissionCheck() {
     boolean usesFilePath = false;
     List<String> uriStrings = new ArrayList<String>();
 
@@ -1114,6 +1117,53 @@ public class SaveBookmark extends Activity implements RuntimePermissionUtils.Run
     return true;
   }
 
+  // ---------------------------------------------------------------------------
+  // initiate runtime Permissions check: for file picker
+  // ---------------------------------------------------------------------------
+
+  public void openFilePickerForDataUri(View v) {
+    String[] allRequestedPermissions = new String[]{"android.permission.WRITE_EXTERNAL_STORAGE"};
+    int requestCode = Constants.PERMISSION_CHECK_REQUEST_CODE_INTENT_OPEN_DATA_URI_FILEPICKER;
+
+    RuntimePermissionUtils.requestPermissions(SaveBookmark.this, SaveBookmark.this, allRequestedPermissions, requestCode);
+  }
+
+  private void openFilePickerForDataUri() {
+
+    FilesystemDirectoryPicker.Listener listener = new FilesystemDirectoryPicker.Listener() {
+      @Override
+      public boolean isValidDirectoryToPick(File dir) {
+        return true;
+      }
+
+      @Override
+      public boolean isValidFileToPick(File file) {
+        return true;
+      }
+
+      @Override
+      public void onDirectoryPick(File dir) {
+      }
+
+      @Override
+      public void onFilePick(File file) {
+        intent_attribute_data_uri.setText("file://" + file.getAbsolutePath(), TextView.BufferType.EDITABLE);
+      }
+    };
+
+    String dirPath = Environment.getExternalStorageDirectory().getAbsolutePath();
+
+    FilesystemDirectoryPicker.pickFile(
+      /* context */ SaveBookmark.this,
+      listener,
+      dirPath
+    );
+  }
+
+  // ---------------------------------------------------------------------------
+  // perform runtime Permissions check
+  // ---------------------------------------------------------------------------
+
   @Override
   public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
     RuntimePermissionUtils.onRequestPermissionsResult(SaveBookmark.this, SaveBookmark.this, requestCode, permissions, grantResults);
@@ -1124,6 +1174,10 @@ public class SaveBookmark extends Activity implements RuntimePermissionUtils.Run
     switch(requestCode) {
       case Constants.PERMISSION_CHECK_REQUEST_CODE_INTENT_EXTRA_WITH_FILE_SCHEME_URI: {
           saveIntent(/* skipPermissionCheck */ true);
+        }
+        break;
+      case Constants.PERMISSION_CHECK_REQUEST_CODE_INTENT_OPEN_DATA_URI_FILEPICKER: {
+          openFilePickerForDataUri();
         }
         break;
     }
