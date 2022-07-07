@@ -69,5 +69,6 @@ android {
 }
 
 dependencies {
+  implementation project(':HiddenApiBypass')
   implementation project(':PublicFileProvider')
 }

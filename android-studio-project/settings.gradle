@@ -1,4 +1,7 @@
 include ':Bookmarks'
 
+include ':HiddenApiBypass'
 include ':PublicFileProvider'
+
+project(':HiddenApiBypass'   ).projectDir = new File(rootDir, 'libs/HiddenApiBypass'   )
 project(':PublicFileProvider').projectDir = new File(rootDir, 'libs/PublicFileProvider')

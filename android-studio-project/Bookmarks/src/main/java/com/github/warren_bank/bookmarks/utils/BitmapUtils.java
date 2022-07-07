@@ -5,6 +5,8 @@ package com.github.warren_bank.bookmarks.utils;
 //   https://android.googlesource.com/platform/frameworks/base.git/+/master/graphics/java/android/graphics/Bitmap.java
 // -----------------------------------------------------------------------------
 
+import org.lsposed.hiddenapibypass.HiddenApiBypass;
+
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
@@ -45,12 +47,24 @@ public class BitmapUtils {
   }
 
   private static void setNinePatchChunk(Bitmap value, byte[] chunk) throws Exception {
-    Method method = Bitmap.class.getDeclaredMethod("setNinePatchChunk", byte[].class);
     try {
-      method.setAccessible(true);
+      Method method = Bitmap.class.getDeclaredMethod("setNinePatchChunk", byte[].class);
+      try {
+        method.setAccessible(true);
+      }
+      catch(Exception e) {}
+      method.invoke(value, chunk);
+      return;
     }
     catch(Exception e) {}
-    method.invoke(value, chunk);
+
+    try {
+      HiddenApiBypass.invoke(Bitmap.class, value, "setNinePatchChunk", chunk);
+      return;
+    }
+    catch(Exception e) {}
+
+    throw new Exception("unable to setNinePatchChunk");
   }
 
   public static String extractFilePath(Object valueObj) {
