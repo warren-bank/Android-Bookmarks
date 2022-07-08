@@ -36,7 +36,7 @@ android {
     }
   }
 
-  flavorDimensions "languageResources", "runtimePermissions"
+  flavorDimensions "runtimePermissions", "languageResources"
 
   productFlavors {
     withAllLanguageTranslations {
