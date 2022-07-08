@@ -4,7 +4,8 @@
 <string name="default_backups_directory_name"            translatable="false">Bookmarks</string>
 <string name="databases_directory_name"                  translatable="false">databases</string>
 <string name="database_file_name"                        translatable="false">@string/default_backups_directory_name</string>
-<string name="netscape_html_file_name"                   translatable="false">@string/default_backups_directory_name</string>
+<string name="netscape_html_export_file_name"            translatable="false">@string/default_backups_directory_name</string>
+<string name="json_export_file_name"                     translatable="false">@string/default_backups_directory_name</string>
 <string name="folder_breadcrumbs_separator"              translatable="false">/</string>
 
 <string-array name="perform_options" translatable="false">
@@ -14,6 +15,11 @@
   <item>@string/perform_start_service</item>
   <item>@string/perform_stop_service</item>
   <item>@string/perform_add_shortcut</item>
+</string-array>
+
+<string-array name="import_export_formats" translatable="false">
+  <item>HTML</item>
+  <item>JSON</item>
 </string-array>
 
 <!--

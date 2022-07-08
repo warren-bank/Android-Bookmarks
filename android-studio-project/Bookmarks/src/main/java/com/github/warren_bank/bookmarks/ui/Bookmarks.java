@@ -12,6 +12,7 @@ import com.github.warren_bank.bookmarks.ui.model.FolderContentItem;
 import com.github.warren_bank.bookmarks.ui.widgets.FolderBreadcrumbsLayout;
 import com.github.warren_bank.bookmarks.utils.FileUtils;
 import com.github.warren_bank.bookmarks.utils.HtmlBookmarkUtils;
+import com.github.warren_bank.bookmarks.utils.JsonBookmarkUtils;
 import com.github.warren_bank.bookmarks.utils.RuntimePermissionUtils;
 
 import android.app.AlertDialog;
@@ -55,6 +56,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Bookmarks extends ListActivity implements RuntimePermissionUtils.RuntimePermissionListener, Update.DatabaseUpdateListener {
+  /* Formats for Export and Import */
+  private static final int FORMAT_DB                        = 1;
+  private static final int FORMAT_HTML                      = 2;
+  private static final int FORMAT_JSON                      = 3;
   /* ActionBar Menu Items */
   private static final int MENU_ACTIONBAR_INTENT_SEARCH     = Menu.FIRST;
   private static final int MENU_ACTIONBAR_FOLDER_ADD        = MENU_ACTIONBAR_INTENT_SEARCH     + 1;
@@ -64,9 +69,9 @@ public class Bookmarks extends ListActivity implements RuntimePermissionUtils.Ru
   private static final int MENU_ACTIONBAR_SETTINGS          = MENU_ACTIONBAR_MOVE_CANCEL       + 1;
   private static final int MENU_ACTIONBAR_DB_BACKUP         = MENU_ACTIONBAR_SETTINGS          + 1;
   private static final int MENU_ACTIONBAR_DB_RESTORE        = MENU_ACTIONBAR_DB_BACKUP         + 1;
-  private static final int MENU_ACTIONBAR_DB_HTML_EXPORT    = MENU_ACTIONBAR_DB_RESTORE        + 1;
-  private static final int MENU_ACTIONBAR_DB_HTML_IMPORT    = MENU_ACTIONBAR_DB_HTML_EXPORT    + 1;
-  private static final int MENU_ACTIONBAR_EXIT              = MENU_ACTIONBAR_DB_HTML_IMPORT    + 1;
+  private static final int MENU_ACTIONBAR_DB_EXPORT         = MENU_ACTIONBAR_DB_RESTORE        + 1;
+  private static final int MENU_ACTIONBAR_DB_IMPORT         = MENU_ACTIONBAR_DB_EXPORT         + 1;
+  private static final int MENU_ACTIONBAR_EXIT              = MENU_ACTIONBAR_DB_IMPORT         + 1;
   /* Context Menu Items for Folders */
   private static final int MENU_CONTEXT_FOLDER_HIDE         = Menu.FIRST;
   private static final int MENU_CONTEXT_FOLDER_UNHIDE       = MENU_CONTEXT_FOLDER_HIDE         + 1;
@@ -393,8 +398,8 @@ public class Bookmarks extends ListActivity implements RuntimePermissionUtils.Ru
       menu.add(Menu.NONE, MENU_ACTIONBAR_SETTINGS,       MENU_ACTIONBAR_SETTINGS,       R.string.menu_actionbar_settings);
       menu.add(Menu.NONE, MENU_ACTIONBAR_DB_BACKUP,      MENU_ACTIONBAR_DB_BACKUP,      R.string.menu_actionbar_db_backup);
       menu.add(Menu.NONE, MENU_ACTIONBAR_DB_RESTORE,     MENU_ACTIONBAR_DB_RESTORE,     R.string.menu_actionbar_db_restore);
-      menu.add(Menu.NONE, MENU_ACTIONBAR_DB_HTML_EXPORT, MENU_ACTIONBAR_DB_HTML_EXPORT, R.string.menu_actionbar_db_html_export);
-      menu.add(Menu.NONE, MENU_ACTIONBAR_DB_HTML_IMPORT, MENU_ACTIONBAR_DB_HTML_IMPORT, R.string.menu_actionbar_db_html_import);
+      menu.add(Menu.NONE, MENU_ACTIONBAR_DB_EXPORT,      MENU_ACTIONBAR_DB_EXPORT,      R.string.menu_actionbar_db_export);
+      menu.add(Menu.NONE, MENU_ACTIONBAR_DB_IMPORT,      MENU_ACTIONBAR_DB_IMPORT,      R.string.menu_actionbar_db_import);
       menu.add(Menu.NONE, MENU_ACTIONBAR_EXIT,           MENU_ACTIONBAR_EXIT,           R.string.menu_actionbar_exit);
     }
     else {
@@ -463,11 +468,11 @@ public class Bookmarks extends ListActivity implements RuntimePermissionUtils.Ru
       case MENU_ACTIONBAR_DB_RESTORE :
         restore();
         break;
-      case MENU_ACTIONBAR_DB_HTML_EXPORT :
-        exportHTML();
+      case MENU_ACTIONBAR_DB_EXPORT :
+        exportBookmarks();
         break;
-      case MENU_ACTIONBAR_DB_HTML_IMPORT :
-        importHTML();
+      case MENU_ACTIONBAR_DB_IMPORT :
+        importBookmarks();
         break;
       case MENU_ACTIONBAR_EXIT :
         onPause();  // save options
@@ -658,6 +663,45 @@ public class Bookmarks extends ListActivity implements RuntimePermissionUtils.Ru
     getFolderContentItems();
   }
 
+  private void exportBookmarks() {
+    chooseImportExportFormat(/* restoring */ false);
+  }
+
+  private void importBookmarks() {
+    chooseImportExportFormat(/* restoring */ true);
+  }
+
+  private void chooseImportExportFormat(final boolean restoring) {
+    String[] import_export_formats = getResources().getStringArray(R.array.import_export_formats);
+
+    new AlertDialog.Builder(Bookmarks.this)
+      .setTitle(R.string.dialog_import_export_format)
+      .setItems(import_export_formats, new DialogInterface.OnClickListener() {
+        public void onClick(DialogInterface dialog, int which) {
+          int format = -1;
+
+          if ((which >= 0) && (which < import_export_formats.length)) {
+            switch(import_export_formats[which]) {
+              case "HTML":
+                format = FORMAT_HTML;
+                break;
+              case "JSON":
+                format = FORMAT_JSON;
+                break;
+            }
+          }
+
+          if (format >= 0) {
+            if (restoring)
+              importBookmarks(format);
+            else
+              exportBookmarks(format);
+          }
+        }
+      })
+      .show();
+  }
+
   // ---------------------------------------------------------------------------
   // implementation: ListView Context Menu (for Folder)
   // ---------------------------------------------------------------------------
@@ -727,7 +771,7 @@ public class Bookmarks extends ListActivity implements RuntimePermissionUtils.Ru
       }
     }
 
-    AlertDialog dialog = new AlertDialog.Builder(Bookmarks.this)
+    new AlertDialog.Builder(Bookmarks.this)
       .setTitle(R.string.perform_title)
       .setItems(perform_options, new DialogInterface.OnClickListener() {
         public void onClick(DialogInterface dialog, int which) {
@@ -1084,12 +1128,36 @@ public class Bookmarks extends ListActivity implements RuntimePermissionUtils.Ru
     filePickerPermissionCheck(outputDirectoryPath, Constants.PERMISSION_CHECK_REQUEST_CODE_RESTORE_DATABASE_FILEPICKER);
   }
 
-  private void exportHTML() {
-    filePickerPermissionCheck(outputDirectoryPath, Constants.PERMISSION_CHECK_REQUEST_CODE_EXPORT_HTML_FILEPICKER);
+  private void exportBookmarks(final int format) {
+    int requestCode = -1;
+
+    switch(format) {
+      case FORMAT_HTML:
+        requestCode = Constants.PERMISSION_CHECK_REQUEST_CODE_EXPORT_HTML_FILEPICKER;
+        break;
+      case FORMAT_JSON:
+        requestCode = Constants.PERMISSION_CHECK_REQUEST_CODE_EXPORT_JSON_FILEPICKER;
+        break;
+    }
+
+    if (requestCode >= 0)
+      filePickerPermissionCheck(outputDirectoryPath, requestCode);
   }
 
-  private void importHTML() {
-    filePickerPermissionCheck(outputDirectoryPath, Constants.PERMISSION_CHECK_REQUEST_CODE_IMPORT_HTML_FILEPICKER);
+  private void importBookmarks(final int format) {
+    int requestCode = -1;
+
+    switch(format) {
+      case FORMAT_HTML:
+        requestCode = Constants.PERMISSION_CHECK_REQUEST_CODE_IMPORT_HTML_FILEPICKER;
+        break;
+      case FORMAT_JSON:
+        requestCode = Constants.PERMISSION_CHECK_REQUEST_CODE_IMPORT_JSON_FILEPICKER;
+        break;
+    }
+
+    if (requestCode >= 0)
+      filePickerPermissionCheck(outputDirectoryPath, requestCode);
   }
 
   private void filePickerPermissionCheck(final String dirPath, final int requestCode) {
@@ -1148,29 +1216,43 @@ public class Bookmarks extends ListActivity implements RuntimePermissionUtils.Ru
       case Constants.PERMISSION_CHECK_REQUEST_CODE_RESTORE_DATABASE_FILEPICKER: {
           String  dirPath   = (String) passthrough;
           boolean restoring = true;
-          boolean html      = false;
-          filePicker(dirPath, restoring, html);
+          int format        = FORMAT_DB;
+          filePicker(dirPath, restoring, format);
         }
         break;
       case Constants.PERMISSION_CHECK_REQUEST_CODE_IMPORT_HTML_FILEPICKER: {
           String  dirPath   = (String) passthrough;
           boolean restoring = true;
-          boolean html      = true;
-          filePicker(dirPath, restoring, html);
+          int format        = FORMAT_HTML;
+          filePicker(dirPath, restoring, format);
+        }
+        break;
+      case Constants.PERMISSION_CHECK_REQUEST_CODE_IMPORT_JSON_FILEPICKER: {
+          String  dirPath   = (String) passthrough;
+          boolean restoring = true;
+          int format        = FORMAT_JSON;
+          filePicker(dirPath, restoring, format);
         }
         break;
       case Constants.PERMISSION_CHECK_REQUEST_CODE_BACKUP_DATABASE_FILEPICKER: {
           String  dirPath   = (String) passthrough;
           boolean restoring = false;
-          boolean html      = false;
-          filePicker(dirPath, restoring, html);
+          int format        = FORMAT_DB;
+          filePicker(dirPath, restoring, format);
         }
         break;
       case Constants.PERMISSION_CHECK_REQUEST_CODE_EXPORT_HTML_FILEPICKER: {
           String  dirPath   = (String) passthrough;
           boolean restoring = false;
-          boolean html      = true;
-          filePicker(dirPath, restoring, html);
+          int format        = FORMAT_HTML;
+          filePicker(dirPath, restoring, format);
+        }
+        break;
+      case Constants.PERMISSION_CHECK_REQUEST_CODE_EXPORT_JSON_FILEPICKER: {
+          String  dirPath   = (String) passthrough;
+          boolean restoring = false;
+          int format        = FORMAT_JSON;
+          filePicker(dirPath, restoring, format);
         }
         break;
       case Constants.PERMISSION_CHECK_REQUEST_CODE_BACKUP_DATABASE_PREUPDATE: {
@@ -1277,7 +1359,7 @@ public class Bookmarks extends ListActivity implements RuntimePermissionUtils.Ru
     }
   }
 
-  private void filePicker(final String dirPath, final boolean restoring, final boolean html) {
+  private void filePicker(final String dirPath, final boolean restoring, final int format) {
     File dir = new File(dirPath);
     if (!dir.isDirectory())
       dir.mkdir();
@@ -1285,16 +1367,32 @@ public class Bookmarks extends ListActivity implements RuntimePermissionUtils.Ru
     FilesystemDirectoryPicker.Listener listener = new FilesystemDirectoryPicker.Listener() {
       @Override
       public boolean isValidFileToPick(File file) {
-        return restoring && (html ? FileUtils.isHtmlBookmarksFile(file) : FileUtils.isDatabaseFile(file));
+        if (!restoring) return false;
+
+        switch(format) {
+          case FORMAT_DB:
+            return FileUtils.isDatabaseFile(file);
+          case FORMAT_HTML:
+            return FileUtils.isHtmlBookmarksFile(file);
+          case FORMAT_JSON:
+            return FileUtils.isJsonBookmarksFile(file);
+        }
+
+        return false;
       }
 
       @Override
       public void onFilePick(File file) {
-        if (restoring) {
-          if (html)
-            importHTML(file.getPath());
-          else
+        if (!restoring) return;
+
+        switch(format) {
+          case FORMAT_DB:
             confirmRestore(file.getPath());
+            break;
+          case FORMAT_HTML:
+          case FORMAT_JSON:
+            importBookmarks(format, file.getPath());
+            break;
         }
       }
 
@@ -1305,21 +1403,41 @@ public class Bookmarks extends ListActivity implements RuntimePermissionUtils.Ru
 
       @Override
       public void onDirectoryPick(File dir) {
-        if (!restoring) {
-          if (html)
-            exportHTML(dir.getPath());
-          else
+        if (restoring) return;
+
+        switch(format) {
+          case FORMAT_DB:
             backup(false, dir.getPath());
+            break;
+          case FORMAT_HTML:
+          case FORMAT_JSON:
+            exportBookmarks(format, dir.getPath());
+            break;
         }
       }
     };
+
+    int resId_pickDirectoryPositiveButton = R.string.dialog_ok;
+    if (!restoring) {
+      switch(format) {
+        case FORMAT_DB:
+          resId_pickDirectoryPositiveButton = R.string.dialog_backup;
+          break;
+        case FORMAT_HTML:
+          resId_pickDirectoryPositiveButton = R.string.dialog_export_html;
+          break;
+        case FORMAT_JSON:
+          resId_pickDirectoryPositiveButton = R.string.dialog_export_json;
+          break;
+      }
+    }
 
     FilesystemDirectoryPicker.showFilePicker(
       /* context */ Bookmarks.this,
       listener,
       dirPath,
       /* showFiles */ restoring,
-      /* resId_pickDirectoryPositiveButton */ (html ? R.string.dialog_html_export : R.string.dialog_backup)
+      resId_pickDirectoryPositiveButton
     );
   }
 
@@ -1417,74 +1535,138 @@ public class Bookmarks extends ListActivity implements RuntimePermissionUtils.Ru
     }
   }
 
-  private void importHTML(String filePath) {
-    View import_html = View.inflate(Bookmarks.this, R.layout.dialog_import_html, null);
+  private void importBookmarks(final int format, final String filePath) {
+    View import_bookmarks = View.inflate(Bookmarks.this, R.layout.dialog_import_bookmarks, null);
+
+    if (format != FORMAT_HTML) {
+      import_bookmarks.findViewById(R.id.allow_duplicate_urls_global).setVisibility(View.GONE);
+      import_bookmarks.findViewById(R.id.allow_duplicate_urls_folder).setVisibility(View.GONE);
+    }
+
+    int resId_title = R.string.menu_actionbar_db_import;
+    switch(format) {
+      case FORMAT_HTML:
+        resId_title = R.string.dialog_import_html;
+        break;
+      case FORMAT_JSON:
+        resId_title = R.string.dialog_import_json;
+        break;
+    }
 
     new AlertDialog.Builder(Bookmarks.this)
-      .setView(import_html)
-      .setTitle(R.string.dialog_html_import)
+      .setView(import_bookmarks)
+      .setTitle(resId_title)
       .setPositiveButton(R.string.dialog_ok, new DialogInterface.OnClickListener() {
         public void onClick(DialogInterface dialog, int id) {
-          boolean allow_existing_folders      = ((CheckBox) import_html.findViewById(R.id.allow_existing_folders)     ).isChecked();
-          boolean allow_duplicate_urls_global = ((CheckBox) import_html.findViewById(R.id.allow_duplicate_urls_global)).isChecked();
-          boolean allow_duplicate_urls_folder = ((CheckBox) import_html.findViewById(R.id.allow_duplicate_urls_folder)).isChecked();
+          boolean allow_existing_folders      = ((CheckBox) import_bookmarks.findViewById(R.id.allow_existing_folders)     ).isChecked();
+          boolean allow_duplicate_urls_global = ((CheckBox) import_bookmarks.findViewById(R.id.allow_duplicate_urls_global)).isChecked();
+          boolean allow_duplicate_urls_folder = ((CheckBox) import_bookmarks.findViewById(R.id.allow_duplicate_urls_folder)).isChecked();
 
-          importHTML(filePath, allow_existing_folders, allow_duplicate_urls_global, allow_duplicate_urls_folder);
+          importBookmarks(format, filePath, allow_existing_folders, allow_duplicate_urls_global, allow_duplicate_urls_folder);
         }
       })
       .setNegativeButton(R.string.dialog_cancel, null)
       .show();
   }
 
-  private void importHTML(String filePath, boolean allow_existing_folders, boolean allow_duplicate_urls_global, boolean allow_duplicate_urls_folder) {
-    File inputFile = FileUtils.getFile(filePath);
-    int  folderId  = currentFolder.id;
-    int  toastId;
+  private void importBookmarks(final int format, final String filePath, final boolean allow_existing_folders, final boolean allow_duplicate_urls_global, final boolean allow_duplicate_urls_folder) {
+    File    inputFile = FileUtils.getFile(filePath);
+    int     folderId  = currentFolder.id;
+    int     toastId   = -1;
+    boolean didImport = false;
 
-    if (!FileUtils.isHtmlBookmarksFile(inputFile)) {
-      toastId = R.string.dialog_html_import_notfound;
-    }
-    else {
-      toastId = HtmlBookmarkUtils.importHTML(db, inputFile, folderId, allow_existing_folders, allow_duplicate_urls_global, allow_duplicate_urls_folder)
-        ? R.string.dialog_html_import_done
-        : R.string.dialog_html_import_failed;
+    switch(format) {
+      case FORMAT_HTML: {
+          if (!FileUtils.isHtmlBookmarksFile(inputFile))
+            toastId = R.string.dialog_import_notfound;
+          else
+            didImport = HtmlBookmarkUtils.importHTML(db, inputFile, folderId, allow_existing_folders, allow_duplicate_urls_global, allow_duplicate_urls_folder);
+        }
+        break;
+      case FORMAT_JSON: {
+          if (!FileUtils.isJsonBookmarksFile(inputFile))
+            toastId = R.string.dialog_import_notfound;
+          else
+            didImport = JsonBookmarkUtils.importJSON(db, inputFile, folderId, allow_existing_folders);
+        }
+        break;
     }
 
-    if (toastId == R.string.dialog_html_import_done)
+    if (toastId == -1) {
+      toastId = didImport
+        ? R.string.dialog_import_done
+        : R.string.dialog_import_failed;
+    }
+
+    if (toastId == R.string.dialog_import_done)
       getFolderContentItems();
 
     Toast.makeText(getApplicationContext(), toastId, Toast.LENGTH_LONG).show();
   }
 
-  private void exportHTML(String outputDirectoryPath) {
-    View export_html = View.inflate(Bookmarks.this, R.layout.dialog_export_html, null);
+  private void exportBookmarks(final int format, final String outputDirectoryPath) {
+    View export_bookmarks = View.inflate(Bookmarks.this, R.layout.dialog_export_bookmarks, null);
+
+    int resId_title = R.string.menu_actionbar_db_export;
+    switch(format) {
+      case FORMAT_HTML:
+        resId_title = R.string.dialog_export_html;
+        break;
+      case FORMAT_JSON:
+        resId_title = R.string.dialog_export_json;
+        break;
+    }
 
     new AlertDialog.Builder(Bookmarks.this)
-      .setView(export_html)
-      .setTitle(R.string.dialog_html_export)
+      .setView(export_bookmarks)
+      .setTitle(resId_title)
       .setPositiveButton(R.string.dialog_ok, new DialogInterface.OnClickListener() {
         public void onClick(DialogInterface dialog, int id) {
-          boolean only_current_folder = ((CheckBox) export_html.findViewById(R.id.only_current_folder)).isChecked();
-          boolean include_hidden      = ((CheckBox) export_html.findViewById(R.id.include_hidden)     ).isChecked();
+          boolean only_current_folder = ((CheckBox) export_bookmarks.findViewById(R.id.only_current_folder)).isChecked();
+          boolean include_hidden      = ((CheckBox) export_bookmarks.findViewById(R.id.include_hidden)     ).isChecked();
 
-          exportHTML(outputDirectoryPath, only_current_folder, include_hidden);
+          exportBookmarks(format, outputDirectoryPath, only_current_folder, include_hidden);
         }
       })
       .setNegativeButton(R.string.dialog_cancel, null)
       .show();
   }
 
-  private void exportHTML(String outputDirectoryPath, boolean only_current_folder, boolean include_hidden) {
-    String outputFileName = FileUtils.getHtmlBookmarksFileName(Bookmarks.this);
-    File   outputFile     = new File(outputDirectoryPath, outputFileName);
-    int    folderId       = only_current_folder ? currentFolder.id : 0;
+  private void exportBookmarks(final int format, final String outputDirectoryPath, final boolean only_current_folder, final boolean include_hidden) {
+    String outputFileName = null;
+    switch(format) {
+      case FORMAT_HTML: {
+          outputFileName = FileUtils.getHtmlBookmarksFileName(Bookmarks.this);
+        }
+        break;
+      case FORMAT_JSON: {
+          outputFileName = FileUtils.getJsonBookmarksFileName(Bookmarks.this);
+        }
+        break;
+    }
+    if (outputFileName == null) return;
 
-    if (HtmlBookmarkUtils.exportHTML(db, outputFile, folderId, include_hidden)) {
-      Toast.makeText(getApplicationContext(), getString(R.string.dialog_html_export_done) + "\n("+ outputDirectoryPath +")", Toast.LENGTH_LONG).show();
-      askToChangeDefaultOutputDirectoryPath(outputDirectoryPath, R.string.dialog_html_export_done);
+    File outputFile   = new File(outputDirectoryPath, outputFileName);
+    int  folderId     = only_current_folder ? currentFolder.id : 0;
+    boolean didExport = false;
+
+    switch(format) {
+      case FORMAT_HTML: {
+          didExport = HtmlBookmarkUtils.exportHTML(db, outputFile, folderId, include_hidden);
+        }
+        break;
+      case FORMAT_JSON: {
+          didExport = JsonBookmarkUtils.exportJSON(db, outputFile, folderId, include_hidden);
+        }
+        break;
+    }
+
+    if (didExport) {
+      Toast.makeText(getApplicationContext(), getString(R.string.dialog_export_done) + "\n("+ outputDirectoryPath +")", Toast.LENGTH_LONG).show();
+      askToChangeDefaultOutputDirectoryPath(outputDirectoryPath, R.string.dialog_export_done);
     }
     else {
-      Toast.makeText(getApplicationContext(), R.string.dialog_html_export_failed, Toast.LENGTH_LONG).show();
+      Toast.makeText(getApplicationContext(), R.string.dialog_export_failed, Toast.LENGTH_LONG).show();
     }
   }
 

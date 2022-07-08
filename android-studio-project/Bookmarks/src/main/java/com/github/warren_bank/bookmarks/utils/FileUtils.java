@@ -86,6 +86,23 @@ public class FileUtils {
     return result;
   }
 
+  // --------------------------------------------------------------------------- test paths: for JSON Bookmarks
+
+  private static Pattern jsonFileNameRegex = null;
+
+  public static boolean isJsonBookmarksFile(File file) {
+    boolean result = false;
+    try {
+      if (FileUtils.jsonFileNameRegex == null) {
+        FileUtils.jsonFileNameRegex = Pattern.compile("^.*\\.json(?:[\\.\\-].*)?$", Pattern.CASE_INSENSITIVE);
+      }
+
+      result = (file != null) && file.exists() && file.isFile() && FileUtils.jsonFileNameRegex.matcher(file.getName()).matches();
+    }
+    catch(Exception e) {}
+    return result;
+  }
+
   // --------------------------------------------------------------------------- test paths: for DB
 
   private static Pattern dbFileNameRegex = null;
@@ -103,12 +120,20 @@ public class FileUtils {
     return result;
   }
 
-  // --------------------------------------------------------------------------- get paths: for HTML Bookmarks
+  // --------------------------------------------------------------------------- get paths: for export of HTML Bookmarks
 
   public static String getHtmlBookmarksFileName(Context context) {
     context = context.getApplicationContext();
-    String fileName = context.getString(R.string.netscape_html_file_name);
+    String fileName = context.getString(R.string.netscape_html_export_file_name);
     return FileUtils.getFileName(fileName, /* fileExtension */ "html", /* auto */ false, /* isPreUpdate */ false, /* isPostUpdate */ false, /* oldVersion */ -1);
+  }
+
+  // --------------------------------------------------------------------------- get paths: for export of JSON
+
+  public static String getJsonBookmarksFileName(Context context) {
+    context = context.getApplicationContext();
+    String fileName = context.getString(R.string.json_export_file_name);
+    return FileUtils.getFileName(fileName, /* fileExtension */ "json", /* auto */ false, /* isPreUpdate */ false, /* isPostUpdate */ false, /* oldVersion */ -1);
   }
 
   // --------------------------------------------------------------------------- get paths: for DB

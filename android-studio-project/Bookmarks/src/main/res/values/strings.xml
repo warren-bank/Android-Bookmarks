@@ -25,8 +25,8 @@
 <string name="menu_actionbar_settings">Settings</string>
 <string name="menu_actionbar_db_backup">Backup Database</string>
 <string name="menu_actionbar_db_restore">Restore Database</string>
-<string name="menu_actionbar_db_html_export">Export to HTML</string>
-<string name="menu_actionbar_db_html_import">Import from HTML</string>
+<string name="menu_actionbar_db_export">Export &bookmarks;</string>
+<string name="menu_actionbar_db_import">Import &bookmarks;</string>
 <string name="menu_actionbar_exit">Exit</string>
 
 <string name="menu_context_folder_hide">Hide</string>
@@ -83,19 +83,23 @@
 <string name="dialog_restore_failed">Unable to restore database!</string>
 <string name="dialog_restore_notfound">Could not find backup on external storage!</string>
 
-<string name="dialog_html_export">@string/menu_actionbar_db_html_export</string>
-<string name="dialog_html_export_option_only_current_folder">Only export current &lc_folder; and its descendants</string>
-<string name="dialog_html_export_option_include_hidden">Include hidden &lc_folders;</string>
-<string name="dialog_html_export_done">HTML export completed</string>
-<string name="dialog_html_export_failed">Unable to perform export!</string>
+<string name="dialog_import_export_format">Format</string>
 
-<string name="dialog_html_import">@string/menu_actionbar_db_html_import</string>
-<string name="dialog_html_import_option_allow_existing_folders">Allow adding &lc_bookmarks; to existing &lc_folders;</string>
-<string name="dialog_html_import_option_allow_duplicate_urls_global">Allow duplicate URLs globally</string>
-<string name="dialog_html_import_option_allow_duplicate_urls_folder">Allow duplicate URLs per folder</string>
-<string name="dialog_html_import_done">HTML imported successfully</string>
-<string name="dialog_html_import_failed">Unable to import HTML!</string>
-<string name="dialog_html_import_notfound">Could not find HTML file on external storage!</string>
+<string name="dialog_export_html">Export to HTML</string>
+<string name="dialog_export_json">Export to JSON</string>
+<string name="dialog_export_option_only_current_folder">Only export current &lc_folder; and its descendants</string>
+<string name="dialog_export_option_include_hidden">Include hidden &lc_folders;</string>
+<string name="dialog_export_done">Export success</string>
+<string name="dialog_export_failed">Export failure</string>
+
+<string name="dialog_import_html">Import from HTML</string>
+<string name="dialog_import_json">Import from JSON</string>
+<string name="dialog_import_option_allow_existing_folders">Allow adding &lc_bookmarks; to existing &lc_folders;</string>
+<string name="dialog_import_option_allow_duplicate_urls_global">Allow duplicate URLs globally</string>
+<string name="dialog_import_option_allow_duplicate_urls_folder">Allow duplicate URLs per folder</string>
+<string name="dialog_import_done">Import success</string>
+<string name="dialog_import_failed">Import failure</string>
+<string name="dialog_import_notfound">Import file could not be read</string>
 
 <string name="dialog_delete_folder_title">Delete &folder;?</string>
 <string name="dialog_delete_intent_title">Delete &bookmark;?</string>

@@ -3,7 +3,6 @@ package com.github.warren_bank.bookmarks.utils;
 import com.github.warren_bank.bookmarks.database.DbGateway;
 import com.github.warren_bank.bookmarks.database.model.DbIntent;
 import com.github.warren_bank.bookmarks.ui.model.FolderContentItem;
-import com.github.warren_bank.bookmarks.utils.FileUtils;
 
 import android.content.Intent;
 import android.text.Html;

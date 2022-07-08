@@ -12,14 +12,16 @@ public class Constants {
   public static final int PERMISSION_CHECK_REQUEST_CODE_BACKUP_DATABASE                            = 5;
   public static final int PERMISSION_CHECK_REQUEST_CODE_IMPORT_HTML_FILEPICKER                     = 6;
   public static final int PERMISSION_CHECK_REQUEST_CODE_EXPORT_HTML_FILEPICKER                     = 7;
-  public static final int PERMISSION_CHECK_REQUEST_CODE_INTENT_SEND_BROADCAST                      = 8;
-  public static final int PERMISSION_CHECK_REQUEST_CODE_INTENT_START_ACTIVITY                      = 9;
-  public static final int PERMISSION_CHECK_REQUEST_CODE_INTENT_START_FOREGROUND_SERVICE            = 10;
-  public static final int PERMISSION_CHECK_REQUEST_CODE_INTENT_START_SERVICE                       = 11;
-  public static final int PERMISSION_CHECK_REQUEST_CODE_INTENT_STOP_SERVICE                        = 12;
-  public static final int PERMISSION_CHECK_REQUEST_CODE_INTENT_ADD_SHORTCUT                        = 13;
-  public static final int PERMISSION_CHECK_REQUEST_CODE_INTENT_EXTRA_WITH_FILE_SCHEME_URI          = 14;
-  public static final int PERMISSION_CHECK_REQUEST_CODE_INTENT_OPEN_DATA_URI_FILEPICKER            = 15;
+  public static final int PERMISSION_CHECK_REQUEST_CODE_IMPORT_JSON_FILEPICKER                     = 8;
+  public static final int PERMISSION_CHECK_REQUEST_CODE_EXPORT_JSON_FILEPICKER                     = 9;
+  public static final int PERMISSION_CHECK_REQUEST_CODE_INTENT_SEND_BROADCAST                      = 10;
+  public static final int PERMISSION_CHECK_REQUEST_CODE_INTENT_START_ACTIVITY                      = 11;
+  public static final int PERMISSION_CHECK_REQUEST_CODE_INTENT_START_FOREGROUND_SERVICE            = 12;
+  public static final int PERMISSION_CHECK_REQUEST_CODE_INTENT_START_SERVICE                       = 13;
+  public static final int PERMISSION_CHECK_REQUEST_CODE_INTENT_STOP_SERVICE                        = 14;
+  public static final int PERMISSION_CHECK_REQUEST_CODE_INTENT_ADD_SHORTCUT                        = 15;
+  public static final int PERMISSION_CHECK_REQUEST_CODE_INTENT_EXTRA_WITH_FILE_SCHEME_URI          = 16;
+  public static final int PERMISSION_CHECK_REQUEST_CODE_INTENT_OPEN_DATA_URI_FILEPICKER            = 17;
 
   /* ContentProvider Authorities */
   public static final String PUBLIC_FILE_PROVIDER_AUTHORITY = Constants.PACKAGE_NAME + ".publicfileprovider";

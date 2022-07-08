@@ -38,8 +38,9 @@ public class DbIntent {
     }
   }
 
-  public int    id;
-  public int    folder_id;
+  public transient int id;
+  public transient int folder_id;
+
   public String name;
   public int    flags;
   public String action;

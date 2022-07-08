@@ -11,24 +11,16 @@
     android:layout_marginTop="6dp">
 
     <CheckBox
-      android:id="@+id/allow_existing_folders"
-      android:text="@string/dialog_html_import_option_allow_existing_folders"
+      android:id="@+id/only_current_folder"
+      android:text="@string/dialog_export_option_only_current_folder"
       android:layout_width="fill_parent"
       android:layout_height="wrap_content"
       android:focusable="false"
       android:focusableInTouchMode="false"/>
 
     <CheckBox
-      android:id="@+id/allow_duplicate_urls_global"
-      android:text="@string/dialog_html_import_option_allow_duplicate_urls_global"
-      android:layout_width="fill_parent"
-      android:layout_height="wrap_content"
-      android:focusable="false"
-      android:focusableInTouchMode="false"/>
-
-    <CheckBox
-      android:id="@+id/allow_duplicate_urls_folder"
-      android:text="@string/dialog_html_import_option_allow_duplicate_urls_folder"
+      android:id="@+id/include_hidden"
+      android:text="@string/dialog_export_option_include_hidden"
       android:layout_width="fill_parent"
       android:layout_height="wrap_content"
       android:focusable="false"
