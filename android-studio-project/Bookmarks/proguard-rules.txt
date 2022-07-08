@@ -1,5 +1,6 @@
 -ignorewarnings
 
 # prevent the obfuscation of model classes that are serialized by Gson for export in JSON
--keep class com.github.warren_bank.bookmarks.gson.model.GsonFolder   { *; }
--keep class com.github.warren_bank.bookmarks.database.model.DbIntent { *; }
+-keep class com.github.warren_bank.bookmarks.gson.model.GsonFolder         { *; }
+-keep class com.github.warren_bank.bookmarks.database.model.DbIntent       { *; }
+-keep class com.github.warren_bank.bookmarks.database.model.DbIntent$Extra { *; }
