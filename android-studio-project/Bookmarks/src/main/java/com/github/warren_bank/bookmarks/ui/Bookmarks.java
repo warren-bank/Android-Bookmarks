@@ -8,8 +8,11 @@ import com.github.warren_bank.bookmarks.database.Update.DatabaseUpdateResult;
 import com.github.warren_bank.bookmarks.ui.SaveBookmark;
 import com.github.warren_bank.bookmarks.ui.dialogs.DbFolderPicker;
 import com.github.warren_bank.bookmarks.ui.dialogs.FilesystemDirectoryPicker;
+import com.github.warren_bank.bookmarks.ui.dialogs.FilesystemDirectoryPickerSimpleListener;
+import com.github.warren_bank.bookmarks.ui.dialogs.FolderContentsPickerSimpleListener;
 import com.github.warren_bank.bookmarks.ui.model.FolderContentItem;
 import com.github.warren_bank.bookmarks.ui.widgets.FolderBreadcrumbsLayout;
+import com.github.warren_bank.bookmarks.ui.widgets.FolderContentsAdapter;
 import com.github.warren_bank.bookmarks.utils.FileUtils;
 import com.github.warren_bank.bookmarks.utils.HtmlBookmarkUtils;
 import com.github.warren_bank.bookmarks.utils.JsonBookmarkUtils;
@@ -31,21 +34,13 @@ import android.text.InputType;
 import android.text.TextUtils;
 import android.view.ContextMenu;
 import android.view.ContextMenu.ContextMenuInfo;
-import android.view.GestureDetector;
-import android.view.GestureDetector.SimpleOnGestureListener;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.MotionEvent;
 import android.view.View;
-import android.view.View.OnTouchListener;
-import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView.AdapterContextMenuInfo;
-import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -222,7 +217,7 @@ public class Bookmarks extends ListActivity implements RuntimePermissionUtils.Ru
     moveIntentIds = new ArrayList<Integer>();
     currentFolder = null;
     currentFolderContentItems    = new ArrayList<FolderContentItem>();
-    currentFolderContentsAdapter = new FolderContentsAdapter(Bookmarks.this, R.layout.folder_content_item, currentFolderContentItems);
+    currentFolderContentsAdapter = new FolderContentsAdapter(Bookmarks.this, currentFolderContentItems, showHidden);
     setListAdapter(currentFolderContentsAdapter);
 
     updateDatabase(Update.MODE_INSTALL);
@@ -1019,6 +1014,7 @@ public class Bookmarks extends ListActivity implements RuntimePermissionUtils.Ru
     switch(v.getId()) {
       case R.id.show_hidden:
         showHidden ^= true;
+        currentFolderContentsAdapter.setShowHidden(showHidden);
         currentFolderContentsAdapter.notifyDataSetChanged();
         break;
       case R.id.auto_backup:
@@ -1030,10 +1026,10 @@ public class Bookmarks extends ListActivity implements RuntimePermissionUtils.Ru
       case R.id.change_startup_folder:
         DbFolderPicker.pickFolder(
           /* context  */ Bookmarks.this,
-          /* listener */ new DbFolderPicker.Listener() {
+          /* listener */ new FolderContentsPickerSimpleListener() {
             @Override
-            public boolean isValidFolderToPick(FolderContentItem folder) {
-              return true;
+            public boolean isValidFileToPick(FolderContentItem file) {
+              return false;
             }
 
             @Override
@@ -1062,19 +1058,10 @@ public class Bookmarks extends ListActivity implements RuntimePermissionUtils.Ru
 
         FilesystemDirectoryPicker.pickDirectory(
           /* context  */ Bookmarks.this,
-          /* listener */ new FilesystemDirectoryPicker.Listener() {
+          /* listener */ new FilesystemDirectoryPickerSimpleListener() {
             @Override
             public boolean isValidFileToPick(File file) {
               return false;
-            }
-
-            @Override
-            public void onFilePick(File file) {
-            }
-
-            @Override
-            public boolean isValidDirectoryToPick(File dir) {
-              return true;
             }
 
             @Override
@@ -1683,81 +1670,5 @@ public class Bookmarks extends ListActivity implements RuntimePermissionUtils.Ru
         .setPositiveButton(R.string.dialog_backup_usefolder, null)
         .show();
     }
-  }
-
-  // ---------------------------------------------------------------------------
-  // custom ArrayAdapter for ListView
-  // ---------------------------------------------------------------------------
-
-  private class FolderContentsAdapter extends ArrayAdapter<FolderContentItem> {
-    private List<FolderContentItem> items;
-    private LayoutInflater inflater;
-
-    public FolderContentsAdapter(Context context, int resource, List<FolderContentItem> items) {
-      super(context, resource, items);
-      this.items = items;
-      this.inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-    }
-
-    @Override
-    public int getCount() {
-      return items.size();
-    }
-
-    @Override
-    public FolderContentItem getItem(int position) {
-      return ((position < 0) || (position >= items.size()))
-        ? null
-        : items.get(position);
-    }
-
-    public void setItem(int position, FolderContentItem item) {
-      items.set(position, item);
-      notifyDataSetChanged();
-    }
-
-    public View getView(final int position, View convertView, ViewGroup parent) {
-      FolderContentItem item = items.get(position);
-      ViewHolder holder = null;
-
-      if (item.isFolder && item.isHidden && !showHidden) {
-        if ((convertView == null) || convertView.isEnabled()) {
-          convertView = inflater.inflate(R.layout.folder_content_item_hidden, parent, false);
-          convertView.setEnabled(false);
-        }
-        return convertView;
-      }
-
-      if ((convertView == null) || !convertView.isEnabled()) {
-        convertView = inflater.inflate(R.layout.folder_content_item, parent, false);
-        holder      = new ViewHolder();
-        holder.icon = (ImageView) convertView.findViewById(R.id.folder_content_item_icon);
-        holder.name = (TextView)  convertView.findViewById(R.id.folder_content_item_name);
-
-        convertView.setEnabled(true);
-        convertView.setTag(holder);
-      }
-      else {
-        holder = (ViewHolder) convertView.getTag();
-      }
-
-      if (holder != null) {
-        if (holder.icon != null) {
-          holder.icon.setImageResource(item.isFolder ? R.drawable.icon_folder : R.drawable.icon_bookmark);
-          holder.icon.setVisibility(View.VISIBLE);
-        }
-        if (holder.name != null) {
-          holder.name.setText(item.name);
-          holder.name.setVisibility(View.VISIBLE);
-        }
-      }
-
-      return convertView;
-    }
-  }
-
-  private class ViewHolder {
-    ImageView icon;
-    TextView  name;
   }
 }

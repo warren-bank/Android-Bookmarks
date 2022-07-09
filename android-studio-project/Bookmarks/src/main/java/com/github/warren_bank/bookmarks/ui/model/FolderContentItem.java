@@ -6,17 +6,23 @@ public class FolderContentItem implements Comparable {
   public boolean isFolder;
   public boolean isHidden;
   public String  data_uri;
+  public long    lastModified;
 
   public FolderContentItem(int id, String name, boolean isFolder, boolean isHidden) {
     this(id, name, isFolder, isHidden, /* data_uri */ null);
   }
 
   public FolderContentItem(int id, String name, boolean isFolder, boolean isHidden, String data_uri) {
-    this.id       = id;
-    this.name     = name;
-    this.isFolder = isFolder;
-    this.isHidden = isHidden;
-    this.data_uri = data_uri;
+    this(id, name, isFolder, isHidden, data_uri, /* lastModified */ 0);
+  }
+
+  public FolderContentItem(int id, String name, boolean isFolder, boolean isHidden, String data_uri, long lastModified) {
+    this.id           = id;
+    this.name         = name;
+    this.isFolder     = isFolder;
+    this.isHidden     = isHidden;
+    this.data_uri     = data_uri;
+    this.lastModified = lastModified;
   }
 
   public boolean equals (Object obj) {

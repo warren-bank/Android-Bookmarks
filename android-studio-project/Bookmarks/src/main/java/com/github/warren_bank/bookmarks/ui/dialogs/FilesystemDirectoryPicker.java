@@ -1,17 +1,18 @@
 package com.github.warren_bank.bookmarks.ui.dialogs;
 
 import com.github.warren_bank.bookmarks.R;
-import com.github.warren_bank.bookmarks.common.DateFormats;
+import com.github.warren_bank.bookmarks.ui.dialogs.FolderContentsPicker;
+import com.github.warren_bank.bookmarks.ui.model.FolderContentItem;
+import com.github.warren_bank.bookmarks.utils.HashUtils;
 
-import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
-import android.os.Environment;
 
 import java.io.File;
 import java.io.FilenameFilter;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.List;
 
 public class FilesystemDirectoryPicker {
 
@@ -40,59 +41,104 @@ public class FilesystemDirectoryPicker {
   }
 
   public static void showFilePicker(Context context, FilesystemDirectoryPicker.Listener listener, String dirPath, boolean showFiles, int resId_pickDirectoryPositiveButton) {
-    File dir = new File(dirPath);
+    FolderContentItem currentFolder = FilesystemDirectoryPicker.getFolderContentItem(dirPath);
+    if ((currentFolder == null) || !currentFolder.isFolder) return;
 
-    File[] tempDirList = FilesystemDirectoryPicker.dirContents(listener, dir, showFiles);
-    int showParent = (dirPath.equals(Environment.getExternalStorageDirectory().getPath()) ? 0 : 1);
-    File[] dirList = new File[tempDirList.length + showParent];
-    String[] dirNamesList = new String[tempDirList.length + showParent];
-    if (showParent == 1) {
-      dirList[0] = dir.getParentFile();
-      dirNamesList[0] = "..";
-    }
-    for(int i = 0; i < tempDirList.length; i++) {
-      dirList[i + showParent] = tempDirList[i];
-      dirNamesList[i + showParent] = tempDirList[i].getName();
-      if (showFiles && tempDirList[i].isFile())
-        dirNamesList[i + showParent] += " ("+ DateFormats.DISPLAY_FILE_PICKER.format(tempDirList[i].lastModified()) +")";
-    }
+    FolderContentsPicker.Implementation fcpImplementation = new FolderContentsPicker.Implementation() {
+      @Override
+      public FolderContentItem getParentFolderContentItem(FolderContentItem folder) {
+        if ((folder == null) || (folder.data_uri == null)) return null;
 
-    AlertDialog.Builder filePickerBuilder = new AlertDialog.Builder(context)
-      .setTitle(dir.toString())
-      .setItems(dirNamesList, new DialogInterface.OnClickListener() {
-        public void onClick(DialogInterface dialog, int which) {
-          File chosenFile = dirList[which];
-          if (chosenFile.isDirectory()) {
-            FilesystemDirectoryPicker.showFilePicker(context, listener, /* dirPath */ chosenFile.toString(), showFiles, resId_pickDirectoryPositiveButton);
-          }
-          else if (showFiles) {
-            listener.onFilePick(chosenFile);
-          }
+        return FilesystemDirectoryPicker.getFolderContentItem(folder.data_uri);
+      }
+
+      @Override
+      public List<FolderContentItem> getFolderContentItems(FolderContentItem folder, boolean showFiles) {
+        List<FolderContentItem> items = new ArrayList<FolderContentItem>();
+        if (folder == null) return items;
+
+        File dir = FilesystemDirectoryPicker.convertFolderContentItemToFile(folder);
+        File[] list = FilesystemDirectoryPicker.dirContents(listener, dir, showFiles);
+        for (File file : list) {
+          items.add(FilesystemDirectoryPicker.convertFileToFolderContentItem(file));
         }
-      })
-      .setNegativeButton(R.string.dialog_cancel, new DialogInterface.OnClickListener() {
-        public void onClick(DialogInterface dialog, int which) {
-          dialog.dismiss();
-        }
-      });
+        return items;
+      }
+    };
 
-    if (!showFiles) {
-      filePickerBuilder.setPositiveButton(resId_pickDirectoryPositiveButton, new DialogInterface.OnClickListener() {
-        public void onClick(DialogInterface dialog, int which) {
+    FolderContentsPicker.Listener fcpListener = new FolderContentsPicker.Listener() {
+      @Override
+      public boolean isValidFolderToPick(FolderContentItem item) {
+        File dir = FilesystemDirectoryPicker.convertFolderContentItemToFile(item);
+        return (dir != null)
+          ? listener.isValidDirectoryToPick(dir)
+          : false;
+      }
+
+      @Override
+      public boolean isValidFileToPick(FolderContentItem item) {
+        File file = FilesystemDirectoryPicker.convertFolderContentItemToFile(item);
+        return (file != null)
+          ? listener.isValidFileToPick(file)
+          : false;
+      }
+
+      @Override
+      public void onFolderChange(FolderContentItem item) {
+      }
+
+      @Override
+      public void onFolderPick(FolderContentItem item) {
+        File dir = FilesystemDirectoryPicker.convertFolderContentItemToFile(item);
+        if ((dir != null) && dir.exists() && dir.isDirectory())
           listener.onDirectoryPick(dir);
-        }
-      });
-    }
+      }
 
-    AlertDialog filePicker = filePickerBuilder.show();
+      @Override
+      public void onFilePick(FolderContentItem item) {
+        File file = FilesystemDirectoryPicker.convertFolderContentItemToFile(item);
+        if ((file != null) && file.exists() && !file.isDirectory())
+          listener.onFilePick(file);
+      }
+    };
 
-    if (!showFiles && !listener.isValidDirectoryToPick(dir)) {
-      filePicker.getButton(DialogInterface.BUTTON_POSITIVE).setEnabled(false);
+    FolderContentsPicker.showFilePicker(context, fcpImplementation, fcpListener, currentFolder, showFiles, resId_pickDirectoryPositiveButton);
+  }
+
+  private static FolderContentItem getFolderContentItem(String filePath) {
+    File file = new File(filePath);
+    return FilesystemDirectoryPicker.convertFileToFolderContentItem(file);
+  }
+
+  private static FolderContentItem convertFileToFolderContentItem(File file) {
+    if ((file == null) || !file.exists()) return null;
+
+    int id = -1;
+    try {
+      id = HashUtils.convertToInt(
+        HashUtils.SHA1(file.getAbsolutePath())
+      );
     }
+    catch(Exception e) {}
+
+    return new FolderContentItem(
+      /* id           */ id,
+      /* name         */ file.getName(),
+      /* isFolder     */ file.isDirectory(),
+      /* isHidden     */ false,
+      /* data_uri     */ file.getParent(),
+      /* lastModified */ (file.isFile() ? file.lastModified() : 0)
+    );
+  }
+
+  private static File convertFolderContentItemToFile(FolderContentItem item) {
+    return (item != null)
+      ? new File(item.data_uri, item.name)
+      : null;
   }
 
   private static File[] dirContents(FilesystemDirectoryPicker.Listener listener, File dir, final boolean showFiles)  {
-    if (dir.exists() && dir.isDirectory()) {
+    if ((dir != null) && dir.exists() && dir.isDirectory()) {
       FilenameFilter filter = new FilenameFilter() {
         public boolean accept(File dir, String filename) {
           File file = new File(dir.getAbsolutePath() + File.separator + filename);

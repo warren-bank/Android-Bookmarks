@@ -7,6 +7,8 @@ import com.github.warren_bank.bookmarks.database.model.DbIntent;
 import com.github.warren_bank.bookmarks.ui.Bookmarks;
 import com.github.warren_bank.bookmarks.ui.dialogs.DbFolderPicker;
 import com.github.warren_bank.bookmarks.ui.dialogs.FilesystemDirectoryPicker;
+import com.github.warren_bank.bookmarks.ui.dialogs.FilesystemDirectoryPickerSimpleListener;
+import com.github.warren_bank.bookmarks.ui.dialogs.FolderContentsPickerSimpleListener;
 import com.github.warren_bank.bookmarks.ui.listeners.IntentExtraValueTokenSeparatorOnClickListener;
 import com.github.warren_bank.bookmarks.ui.model.FolderContentItem;
 import com.github.warren_bank.bookmarks.ui.widgets.ExpandablePanel;
@@ -446,10 +448,10 @@ public class SaveBookmark extends Activity implements RuntimePermissionUtils.Run
 
     DbFolderPicker.pickFolder(
       /* context  */ SaveBookmark.this,
-      /* listener */ new DbFolderPicker.Listener() {
+      /* listener */ new FolderContentsPickerSimpleListener() {
         @Override
-        public boolean isValidFolderToPick(FolderContentItem folder) {
-          return true;
+        public boolean isValidFileToPick(FolderContentItem file) {
+          return false;
         }
 
         @Override
@@ -1130,21 +1132,7 @@ public class SaveBookmark extends Activity implements RuntimePermissionUtils.Run
 
   private void openFilePickerForDataUri() {
 
-    FilesystemDirectoryPicker.Listener listener = new FilesystemDirectoryPicker.Listener() {
-      @Override
-      public boolean isValidDirectoryToPick(File dir) {
-        return true;
-      }
-
-      @Override
-      public boolean isValidFileToPick(File file) {
-        return true;
-      }
-
-      @Override
-      public void onDirectoryPick(File dir) {
-      }
-
+    FilesystemDirectoryPicker.Listener listener = new FilesystemDirectoryPickerSimpleListener() {
       @Override
       public void onFilePick(File file) {
         intent_attribute_data_uri.setText("file://" + file.getAbsolutePath(), TextView.BufferType.EDITABLE);

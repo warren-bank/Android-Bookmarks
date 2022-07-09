@@ -2,76 +2,58 @@ package com.github.warren_bank.bookmarks.ui.dialogs;
 
 import com.github.warren_bank.bookmarks.R;
 import com.github.warren_bank.bookmarks.database.DbGateway;
+import com.github.warren_bank.bookmarks.ui.dialogs.FolderContentsPicker;
 import com.github.warren_bank.bookmarks.ui.model.FolderContentItem;
 
-import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 
 import java.util.List;
 
 public class DbFolderPicker {
 
-  public interface Listener {
-    public boolean isValidFolderToPick(FolderContentItem folder);
-    public void onFolderPick(FolderContentItem folder);
+  public interface Listener extends FolderContentsPicker.Listener {
   }
 
-  public static void pickFolder(Context context, DbFolderPicker.Listener listener, int initialFolderId) {
-    DbFolderPicker.showFilePicker(context, listener, initialFolderId);
+  public static void pickFolder(Context context, FolderContentsPicker.Listener listener, int initialFolderId) {
+    DbFolderPicker.showFilePicker(context, listener, initialFolderId, /* showFiles */ false);
   }
 
-  public static void pickFolder(Context context, DbFolderPicker.Listener listener, int initialFolderId, int resId_positiveButton) {
-    DbFolderPicker.showFilePicker(context, listener, initialFolderId, resId_positiveButton);
+  public static void pickFolder(Context context, FolderContentsPicker.Listener listener, int initialFolderId, int resId_positiveButton) {
+    DbFolderPicker.showFilePicker(context, listener, initialFolderId, /* showFiles */ false, resId_positiveButton);
   }
 
-  public static void showFilePicker(Context context, DbFolderPicker.Listener listener, int folderId) {
+  public static void pickFile(Context context, FolderContentsPicker.Listener listener, int initialFolderId) {
+    DbFolderPicker.showFilePicker(context, listener, initialFolderId, /* showFiles */ true);
+  }
+
+  public static void showFilePicker(Context context, FolderContentsPicker.Listener listener, int initialFolderId, boolean showFiles) {
     int resId_pickFolderPositiveButton = R.string.dialog_ok;
-    DbFolderPicker.showFilePicker(context, listener, folderId, resId_pickFolderPositiveButton);
+    DbFolderPicker.showFilePicker(context, listener, initialFolderId, showFiles, resId_pickFolderPositiveButton);
   }
 
-  public static void showFilePicker(Context context, DbFolderPicker.Listener listener, int folderId, int resId_pickFolderPositiveButton) {
+  public static void showFilePicker(Context context, FolderContentsPicker.Listener listener, int folderId, boolean showFiles, int resId_pickFolderPositiveButton) {
     DbGateway db = DbGateway.getInstance(context);
 
     FolderContentItem currentFolder = db.getFolderContentItem(folderId);
-    List<FolderContentItem> currentFolderContentItems = db.getFoldersInFolder(folderId);
+    if ((currentFolder == null) || !currentFolder.isFolder) return;
 
-    if (folderId > 0) {
-      FolderContentItem parentFolderContentItem = db.getParentFolderContentItem(folderId);
-      parentFolderContentItem.name = "..";
-      currentFolderContentItems.add(0, parentFolderContentItem);
-    }
+    FolderContentsPicker.Implementation fcpImplementation = new FolderContentsPicker.Implementation() {
+      @Override
+      public FolderContentItem getParentFolderContentItem(FolderContentItem folder) {
+        if ((folder == null) || (folder.id <= 0)) return null;
 
-    String[] folderNames = new String[currentFolderContentItems.size()];
-    for (int i=0; i < currentFolderContentItems.size(); i++) {
-      folderNames[i] = currentFolderContentItems.get(i).name;
-    }
-
-    AlertDialog.Builder filePickerBuilder = new AlertDialog.Builder(context)
-      .setTitle(currentFolder.name)
-      .setItems(folderNames, new DialogInterface.OnClickListener() {
-        public void onClick(DialogInterface dialog, int which) {
-          FolderContentItem chosenFolder = currentFolderContentItems.get(which);
-          DbFolderPicker.showFilePicker(context, listener, /* folderId */ chosenFolder.id, resId_pickFolderPositiveButton);
-        }
-      })
-      .setNegativeButton(R.string.dialog_cancel, new DialogInterface.OnClickListener() {
-        public void onClick(DialogInterface dialog, int which) {
-          dialog.dismiss();
-        }
-      });
-
-    filePickerBuilder.setPositiveButton(resId_pickFolderPositiveButton, new DialogInterface.OnClickListener() {
-      public void onClick(DialogInterface dialog, int which) {
-        listener.onFolderPick(currentFolder);
+        return db.getParentFolderContentItem(folder.id);
       }
-    });
 
-    AlertDialog filePicker = filePickerBuilder.show();
+      @Override
+      public List<FolderContentItem> getFolderContentItems(FolderContentItem folder, boolean showFiles) {
+        return showFiles
+          ? db.getFolderContentItems(folder.id)
+          : db.getFoldersInFolder(folder.id);
+      }
+    };
 
-    if (!listener.isValidFolderToPick(currentFolder)) {
-      filePicker.getButton(DialogInterface.BUTTON_POSITIVE).setEnabled(false);
-    }
+    FolderContentsPicker.showFilePicker(context, fcpImplementation, listener, currentFolder, showFiles, resId_pickFolderPositiveButton);
   }
 
 }
