@@ -628,6 +628,7 @@
   https://android.googlesource.com/platform/frameworks/base/+/master/core/java/android/provider/CallLog.java
   https://android.googlesource.com/platform/frameworks/base/+/master/core/java/android/provider/Contacts.java
   https://android.googlesource.com/platform/frameworks/base/+/master/core/java/android/provider/ContactsContract.java
+  https://android.googlesource.com/platform/frameworks/base/+/master/core/java/android/provider/DocumentsContract.java
   https://android.googlesource.com/platform/frameworks/base/+/master/core/java/android/provider/Telephony.java
   https://android.googlesource.com/platform/frameworks/base/+/master/core/java/android/provider/VoicemailContract.java
   https://android.googlesource.com/platform/frameworks/base/+/master/telephony/common/com/google/android/mms/pdu/PduContentTypes.java
@@ -787,6 +788,7 @@
   <item>multipart/form-data</item>
   <item>multipart/mixed</item>
 -->
+  <item>resource/folder</item>
   <item>text/calendar</item>
   <item>text/css</item>
   <item>text/csv</item>
@@ -906,6 +908,7 @@
   <item>vnd.android.cursor.item/voicemail</item>
   <item>vnd.android.cursor.item/website</item>
   <item>vnd.android.data/update</item>
+  <item>vnd.android.document/directory</item>
 </string-array>
 
 <!--
@@ -924,6 +927,8 @@
 
   https://developers.google.com/android/reference/com/google/android/gms/actions/ItemListIntents
   https://developers.google.com/android/reference/com/google/android/gms/actions/NoteIntents
+
+  https://github.com/openintents/openintents.github.io/blob/master/_intent_specs/view_directory.md
 -->
 <string-array name="intent_extra_names" translatable="false">
   <item>@string/spinner_items_category_label_common_values</item>
@@ -1184,6 +1189,7 @@
   <item>operator-alpha-long</item>
   <item>operator-alpha-short</item>
   <item>operator-numeric</item>
+  <item>org.openintents.extra.ABSOLUTE_PATH</item>
   <item>output</item>
   <item>previous_value</item>
   <item>query</item>
