@@ -810,7 +810,7 @@ public class Bookmarks extends ListActivity implements RuntimePermissionUtils.Ru
     if (intent == null) return;
 
     try {
-      if (Build.VERSION.SDK_INT >= 25) {
+      if (Build.VERSION.SDK_INT >= 26) {
         ShortcutInfo shortcutInfo = new ShortcutInfo.Builder(getApplicationContext(), Integer.toString(selectedItem.id))
           .setShortLabel(selectedItem.name)
           .setIcon(Icon.createWithResource(getApplicationContext(), R.drawable.icon_shortcut))
