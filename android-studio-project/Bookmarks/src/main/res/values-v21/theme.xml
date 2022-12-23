@@ -3,6 +3,8 @@
 
 <!--
 https://android.googlesource.com/platform/frameworks/base/+/refs/heads/lollipop-release/core/res/res/values/themes.xml
+https://android.googlesource.com/platform/frameworks/base/+/refs/heads/lollipop-release/core/res/res/values/styles.xml
+https://android.googlesource.com/platform/frameworks/base/+/refs/heads/lollipop-release/core/res/res/values/styles_device_defaults.xml
   Android 5.0 (API 21)
 -->
 
@@ -10,6 +12,10 @@ https://android.googlesource.com/platform/frameworks/base/+/refs/heads/lollipop-
   <item name="android:listViewStyle">@style/listview_style</item>
   <item name="android:popupMenuStyle">@style/popup_menu</item>
   <item name="android:actionOverflowButtonStyle">@style/overflow_button</item>
+
+  <!-- TimeDurationPicker -->
+  <item name="TimeDurationPickerBackgroundColor">?android:attr/colorControlActivated</item>
+  <item name="TimeDurationPickerButtonDrawable">?android:attr/selectableItemBackgroundBorderless</item>
 </style>
 
 <style name="listview_style" parent="@android:style/Widget.DeviceDefault.ListView">

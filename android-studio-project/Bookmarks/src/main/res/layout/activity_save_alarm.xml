@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Alarm Schedule
+==============
+
+Bookmark:
+[disabled text: FolderPath / IntentName]
+
+Perform:
+[disabled text: Start Activity] [button: Set]
+
+Date:
+[disabled text: 01/01/1970] [button: Set]
+
+Time:
+[disabled text: 1:00 pm] [button: Set]
+
+Repeat every:
+[disabled text: not set] [button: Set]
+
+Options:
+[checkbox] high precision (less efficient)
+[checkbox] execute alarm when idle
+[checkbox] wake device when idle
+[checkbox] execute alarm at reboot when missed
+
+[button: Save]
+-->
+<ScrollView
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:custom="http://schemas.android.com/apk/res-auto"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:fillViewport="true">
+
+  <LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="6dp">
+
+    <!-- =================================================================== -->
+
+    <TextView
+      android:text="@string/alarm_attribute_intent"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content" />
+
+    <EditText
+      android:id="@+id/alarm_attribute_intent"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:editable="false"
+      android:enabled="false" />
+
+    <!-- =================================================================== -->
+
+    <View
+      android:layout_width="fill_parent"
+      android:layout_height="1px"
+      android:paddingVertical="3dp"
+      android:background="@drawable/div" />
+
+    <!-- =================================================================== -->
+
+    <TextView
+      android:text="@string/alarm_attribute_perform"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content" />
+
+    <LinearLayout
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+      <EditText
+        android:id="@+id/alarm_attribute_perform"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:editable="false"
+        android:enabled="false" />
+
+      <Button
+        android:text="@string/dialog_set"
+        android:layout_weight="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:gravity="center_vertical"
+        android:clickable="true"
+        android:onClick="openPerformOptionPicker" />
+
+    </LinearLayout>
+
+    <!-- =================================================================== -->
+
+    <View
+      android:layout_width="fill_parent"
+      android:layout_height="1px"
+      android:paddingVertical="3dp"
+      android:background="@drawable/div" />
+
+    <!-- =================================================================== -->
+
+    <TextView
+      android:text="@string/alarm_attribute_date"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content" />
+
+    <LinearLayout
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+      <EditText
+        android:id="@+id/alarm_attribute_date"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:editable="false"
+        android:enabled="false" />
+
+      <Button
+        android:text="@string/dialog_set"
+        android:layout_weight="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:gravity="center_vertical"
+        android:clickable="true"
+        android:onClick="openDatePicker" />
+
+    </LinearLayout>
+
+    <!-- =================================================================== -->
+
+    <View
+      android:layout_width="fill_parent"
+      android:layout_height="1px"
+      android:paddingVertical="3dp"
+      android:background="@drawable/div" />
+
+    <!-- =================================================================== -->
+
+    <TextView
+      android:text="@string/alarm_attribute_time"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content" />
+
+    <LinearLayout
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+      <EditText
+        android:id="@+id/alarm_attribute_time"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:editable="false"
+        android:enabled="false" />
+
+      <Button
+        android:text="@string/dialog_set"
+        android:layout_weight="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:gravity="center_vertical"
+        android:clickable="true"
+        android:onClick="openTimePicker" />
+
+    </LinearLayout>
+
+    <!-- =================================================================== -->
+
+    <View
+      android:layout_width="fill_parent"
+      android:layout_height="1px"
+      android:paddingVertical="3dp"
+      android:background="@drawable/div" />
+
+    <!-- =================================================================== -->
+
+    <TextView
+      android:text="@string/alarm_attribute_interval"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content" />
+
+    <LinearLayout
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+      <EditText
+        android:id="@+id/alarm_attribute_interval"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:editable="false"
+        android:enabled="false" />
+
+      <Button
+        android:text="@string/dialog_set"
+        android:layout_weight="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:gravity="center_vertical"
+        android:clickable="true"
+        android:onClick="openIntervalPicker" />
+
+    </LinearLayout>
+
+    <!-- =================================================================== -->
+
+    <View
+      android:layout_width="fill_parent"
+      android:layout_height="1px"
+      android:paddingVertical="3dp"
+      android:background="@drawable/div" />
+
+    <!-- =================================================================== -->
+
+    <TextView
+      android:text="@string/alarm_attribute_flags"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content" />
+
+    <CheckBox
+      android:id="@+id/flag_alarm_is_exact"
+      android:text="@string/flag_alarm_is_exact"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:focusable="false"
+      android:focusableInTouchMode="false" />
+
+    <CheckBox
+      android:id="@+id/flag_alarm_run_when_idle"
+      android:text="@string/flag_alarm_run_when_idle"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:focusable="false"
+      android:focusableInTouchMode="false" />
+
+    <CheckBox
+      android:id="@+id/flag_alarm_wake_when_idle"
+      android:text="@string/flag_alarm_wake_when_idle"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:focusable="false"
+      android:focusableInTouchMode="false" />
+
+    <CheckBox
+      android:id="@+id/flag_alarm_run_when_missed"
+      android:text="@string/flag_alarm_run_when_missed"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:focusable="false"
+      android:focusableInTouchMode="false" />
+
+    <!-- =================================================================== -->
+
+    <View
+      android:layout_width="fill_parent"
+      android:layout_height="1px"
+      android:paddingVertical="3dp"
+      android:background="@drawable/div" />
+
+    <!-- =================================================================== -->
+
+    <Button
+      android:text="@string/dialog_save"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:padding="3dp"
+      android:clickable="true"
+      android:onClick="saveAlarm" />
+
+  </LinearLayout>
+</ScrollView>

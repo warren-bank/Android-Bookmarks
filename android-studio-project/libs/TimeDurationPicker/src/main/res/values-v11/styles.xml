@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+<!--
+https://android.googlesource.com/platform/frameworks/base/+/refs/heads/ics-mr1-release/core/res/res/values/themes.xml#L867
+https://android.googlesource.com/platform/frameworks/base/+/refs/heads/ics-mr1-release/core/res/res/values/styles.xml
+  Android 4.0 (API 14): closest available reference following the release of
+  Android 3.0 (API 11)
+-->
+
+  <style name="TextAppearance.BaseTimeDurationPicker" parent="@android:style/TextAppearance"/>
+
+  <style name="Widget"/>
+  <style name="Widget.BaseNumPadButton" parent="@android:style/Widget.Holo.Button.Borderless"/>
+
+</resources>

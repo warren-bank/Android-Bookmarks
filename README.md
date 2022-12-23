@@ -40,6 +40,13 @@ Android app to save Intents as an organized collection of bookmarks.
     * only available on Android 8.0 and higher
   - Start Service
   - Stop Service
+* Intents can be scheduled to perform any of the following operations at a chosen time or interval:
+  - Send Broadcast
+  - Start Activity
+  - Start Foreground Service
+    * only available on Android 8.0 and higher
+  - Start Service
+  - Stop Service
 * Intents can be assigned to "Home screen" widgets
   - one Intent per widget
   - each widget provides the ability to start an Activity with the chosen Intent from the "Home screen" without the need to open the _Bookmarks_ application and navigate through the folder hierarchy

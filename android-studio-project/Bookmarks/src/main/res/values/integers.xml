@@ -62,4 +62,15 @@
   ==============================
 <integer name="flag_receiver_offload"                     >2147483648</integer>
 -->
+
+<!--
+  ======================
+  Alarm flag constants:
+  ======================
+-->
+<integer name="flag_alarm_is_exact"                       >1</integer>  <!-- ON: uses more battery. OFF: uses a 10-minute window on Android API 19+.                                                 -->
+<integer name="flag_alarm_run_when_idle"                  >2</integer>  <!-- ON: cannot be disabled on Android API < 23. OFF: only available on Android API 23+.                                     -->
+<integer name="flag_alarm_wake_when_idle"                 >4</integer>  <!-- ON: RTC_WAKEUP. OFF: RTC.                                                                                               -->
+<integer name="flag_alarm_run_when_missed"                >8</integer>  <!-- ON: run missed alarm at reboot. OFF: delete missed one-time alarm. ON/OFF: reschedule next interval of repeating alarm. -->
+
 </resources>

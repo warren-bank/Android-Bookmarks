@@ -11,6 +11,8 @@
 
   <!-- android:protectionLevel="normal" -->
   <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+  <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+  <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM"/>
 
   <!-- android:protectionLevel="dangerous" -->
   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
@@ -22,7 +24,7 @@
     android:allowBackup="false">
 
     <activity
-      android:label="@string/app_name_short"
+      android:label="@string/activity_label_bookmarks"
       android:name=".ui.Bookmarks"
       android:configChanges="colorMode|density|fontScale|keyboard|keyboardHidden|layoutDirection|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode"
       android:exported="true"
@@ -35,7 +37,7 @@
     </activity>
 
     <activity
-      android:label="@string/intent_add_title"
+      android:label="@string/activity_label_save_bookmark"
       android:name=".ui.SaveBookmark"
       android:configChanges="colorMode|density|fontScale|keyboard|keyboardHidden|layoutDirection|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode"
       android:exported="true"
@@ -264,15 +266,38 @@
 
     </activity>
 
+    <activity
+      android:label="@string/activity_label_alarms"
+      android:name=".ui.Alarms"
+      android:configChanges="colorMode|density|fontScale|keyboard|keyboardHidden|layoutDirection|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode"
+      android:exported="false"
+      android:launchMode="standard" />
+
+    <activity
+      android:label="@string/activity_label_save_alarm"
+      android:name=".ui.SaveAlarm"
+      android:configChanges="colorMode|density|fontScale|keyboard|keyboardHidden|layoutDirection|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode"
+      android:exported="false"
+      android:launchMode="standard" />
+
+    <receiver
+      android:name=".receiver.AlarmReceiver"
+      android:enabled="true"
+      android:exported="false">
+      <intent-filter>
+        <action android:name="android.app.action.SCHEDULE_EXACT_ALARM_PERMISSION_STATE_CHANGED" />
+        <action android:name="android.intent.action.BOOT_COMPLETED" />
+        <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+      </intent-filter>
+    </receiver>
+
     <provider
       android:name="de.cketti.fileprovider.PublicFileProvider"
       android:authorities="com.github.warren_bank.bookmarks.publicfileprovider"
       android:exported="true">
-
       <meta-data
         android:name="de.cketti.fileprovider.PUBLIC_FILE_PROVIDER_PATHS"
         android:resource="@xml/publicfileprovider_paths" />
-
     </provider>
 
   </application>

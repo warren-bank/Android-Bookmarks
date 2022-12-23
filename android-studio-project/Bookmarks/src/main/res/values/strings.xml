@@ -9,20 +9,41 @@
     <!ENTITY bookmarks     "Bookmarks">
     <!ENTITY lc_bookmark   "bookmark">
     <!ENTITY lc_bookmarks  "bookmarks">
+
+    <!ENTITY alarm         "Alarm">
+    <!ENTITY alarms        "Alarms">
+    <!ENTITY lc_alarm      "alarm">
+    <!ENTITY lc_alarms     "alarms">
+
+    <!ENTITY add           "Add">
+    <!ENTITY cancel        "Cancel">
+    <!ENTITY delete        "Delete">
+    <!ENTITY edit          "Edit">
+    <!ENTITY move          "Move">
+    <!ENTITY name          "Name">
+    <!ENTITY update        "Update">
 ]>
 
 <resources>
+
+<!-- Boomarks and SaveBookmark ============================================= -->
+
 <string name="app_name_long">&bookmarks;</string>
+<string name="activity_label_bookmarks">@string/app_name_long</string>
+<string name="activity_label_save_bookmark">&add; &bookmark;</string>
+
 <string name="layout_main_no_intents_in_folder">No &bookmarks; found.</string>
+<string name="layout_main_no_alarms">No &alarms; found.</string>
 <string name="layout_main_no_results_for_search">No search results found.</string>
 <string name="layout_main_results_for_search_label">Results for:</string>
 
 <string name="menu_actionbar_intent_search">Search</string>
-<string name="menu_actionbar_folder_add">Add &folder;</string>
-<string name="menu_actionbar_intent_add">Add &bookmark;</string>
-<string name="menu_actionbar_move_complete">Move to Current &folder;</string>
-<string name="menu_actionbar_move_cancel">Cancel Move</string>
+<string name="menu_actionbar_folder_add">&add; &folder;</string>
+<string name="menu_actionbar_intent_add">&add; &bookmark;</string>
+<string name="menu_actionbar_move_complete">&move; to Current &folder;</string>
+<string name="menu_actionbar_move_cancel">&cancel; &move;</string>
 <string name="menu_actionbar_settings">Settings</string>
+<string name="menu_actionbar_scheduled">Scheduled</string>
 <string name="menu_actionbar_db_backup">Backup Database</string>
 <string name="menu_actionbar_db_restore">Restore Database</string>
 <string name="menu_actionbar_db_export">Export &bookmarks;</string>
@@ -32,14 +53,15 @@
 <string name="menu_context_folder_hide">Hide</string>
 <string name="menu_context_folder_unhide">Unhide</string>
 <string name="menu_context_folder_rename">Rename</string>
-<string name="menu_context_folder_move">Move</string>
-<string name="menu_context_folder_delete">Delete</string>
+<string name="menu_context_folder_move">&move;</string>
+<string name="menu_context_folder_delete">&delete;</string>
 
 <string name="menu_context_intent_perform">Perform…</string>
-<string name="menu_context_intent_edit">Edit</string>
-<string name="menu_context_intent_move">@string/menu_context_folder_move</string>
+<string name="menu_context_intent_schedule">Schedule…</string>
+<string name="menu_context_intent_edit">&edit;</string>
+<string name="menu_context_intent_move">&move;</string>
 <string name="menu_context_intent_copy">Copy</string>
-<string name="menu_context_intent_delete">@string/menu_context_folder_delete</string>
+<string name="menu_context_intent_delete">&delete;</string>
 
 <string name="perform_title">@string/menu_context_intent_perform</string>
 <string name="perform_send_broadcast">Send Broadcast</string>
@@ -47,7 +69,7 @@
 <string name="perform_start_foreground_service">Start Foreground Service</string>
 <string name="perform_start_service">Start Service</string>
 <string name="perform_stop_service">Stop Service</string>
-<string name="perform_add_shortcut">Add Shortcut</string>
+<string name="perform_add_shortcut">&add; Shortcut</string>
 
 <string name="settings_title">@string/menu_actionbar_settings</string>
 <string name="settings_option_show_hidden">Show hidden &lc_folders;</string>
@@ -57,13 +79,13 @@
 <string name="settings_option_output_directory">Default output directory for backups and exports:</string>
 
 <string name="dialog_ok">OK</string>
-<string name="dialog_cancel">Cancel</string>
-<string name="dialog_add">Add</string>
-<string name="dialog_add_more">Add…</string>
+<string name="dialog_cancel">&cancel;</string>
+<string name="dialog_add">&add;</string>
+<string name="dialog_add_more">&add;…</string>
 <string name="dialog_change">Change…</string>
 <string name="dialog_choose">Choose…</string>
 <string name="dialog_save">Save</string>
-<string name="dialog_delete">Delete</string>
+<string name="dialog_delete">&delete;</string>
 
 <string name="dialog_backup_preupdate_title">Database Update Is Required</string>
 <string name="dialog_backup_preupdate_message">You have installed a newer version of this application. The version of the database also needs to be updated. Saving a backup before this operation is recommended; any error will corrupt the database. To do so, you must first grant permission to save the backup file to external storage. Would you like to save a backup before the required update?</string>
@@ -101,37 +123,37 @@
 <string name="dialog_import_failed">Import failure</string>
 <string name="dialog_import_notfound">Import file could not be read</string>
 
-<string name="dialog_delete_folder_title">Delete &folder;?</string>
-<string name="dialog_delete_intent_title">Delete &bookmark;?</string>
+<string name="dialog_delete_folder_title">&delete; &folder;?</string>
+<string name="dialog_delete_intent_title">&delete; &bookmark;?</string>
 <string name="dialog_delete_confirm">Are you sure you want to delete "%s"?</string>
 
 <string name="folder_add_title">@string/menu_actionbar_folder_add</string>
 <string name="folder_rename_title">Rename &folder;</string>
-<string name="folder_attribute_name">Name</string>
+<string name="folder_attribute_name">&name;</string>
 
-<string name="intent_add_title">@string/menu_actionbar_intent_add</string>
+<string name="intent_add_title">&add; &bookmark;</string>
+<string name="intent_edit_title">&edit; &bookmark;</string>
 <string name="intent_filter_label">@string/intent_add_title</string>
-<string name="intent_edit_title">Edit &bookmark;</string>
-<string name="intent_attribute_name">@string/folder_attribute_name</string>
+<string name="intent_attribute_name">&name;</string>
 <string name="intent_attribute_folder">&folder;</string>
 <string name="intent_attribute_flags">Flags</string>
 <string name="intent_attribute_action">Action</string>
-<string name="intent_attribute_package_name">Package Name</string>
-<string name="intent_attribute_class_name">Class Name</string>
+<string name="intent_attribute_package_name">Package &name;</string>
+<string name="intent_attribute_class_name">Class &name;</string>
 <string name="intent_attribute_data_uri">Data URI</string>
 <string name="intent_attribute_data_type">Data (MIME) Type</string>
 <string name="intent_attribute_categories">Categories</string>
 <string name="intent_attribute_extras">Extras</string>
 
-<string name="dialog_update_intent_attribute_category_title">Update Category</string>
-<string name="dialog_update_intent_attribute_category_name">@string/folder_attribute_name</string>
+<string name="dialog_update_intent_attribute_category_title">&update; Category</string>
+<string name="dialog_update_intent_attribute_category_name">&name;</string>
 
-<string name="dialog_update_intent_attribute_extra_title_add">Add Extra</string>
-<string name="dialog_update_intent_attribute_extra_title_edit">Update Extra</string>
-<string name="dialog_update_intent_attribute_extra_name">@string/folder_attribute_name</string>
+<string name="dialog_update_intent_attribute_extra_title_add">&add; Extra</string>
+<string name="dialog_update_intent_attribute_extra_title_edit">&update; Extra</string>
+<string name="dialog_update_intent_attribute_extra_name">&name;</string>
 <string name="dialog_update_intent_attribute_extra_value_type">Type of Value</string>
 <string name="dialog_update_intent_attribute_extra_value">Value</string>
-<string name="dialog_update_intent_attribute_extra_value_separator">Add Value List Separator</string>
+<string name="dialog_update_intent_attribute_extra_value_separator">&add; Value List Separator</string>
 
 <string name="messages_db_error_update">Database error while updating</string>
 <string name="messages_no_permission">Insufficient permission to perform the requested operation</string>
@@ -139,4 +161,33 @@
 
 <string name="spinner_items_category_label_common_values">-- common values --</string>
 <string name="spinner_items_category_label_more_values">-- more values --</string>
+
+<!-- Alarms and SaveAlarm ================================================== -->
+
+<string name="activity_label_alarms">Scheduled &alarms;</string>
+<string name="activity_label_save_alarm">&alarm; Schedule</string>
+
+<string name="menu_actionbar_cancel_all">&cancel; All</string>
+
+<string name="menu_context_alarm_edit">&edit;</string>
+<string name="menu_context_alarm_cancel">&cancel;</string>
+
+<string name="dialog_cancel_alarm_title">&cancel; &alarm;?</string>
+<string name="dialog_cancel_alarms_title">&cancel; &alarms;?</string>
+<string name="dialog_delete_confirm_alarms">all &lc_alarms;</string>
+
+<string name="alarm_attribute_intent">&bookmark;:</string>
+<string name="alarm_attribute_perform">Perform:</string>
+<string name="alarm_attribute_date">Date:</string>
+<string name="alarm_attribute_time">Time:</string>
+<string name="alarm_attribute_interval">Repeat every:</string>
+<string name="alarm_attribute_flags">Options:</string>
+
+<string name="flag_alarm_is_exact">high precision (less efficient)</string>
+<string name="flag_alarm_run_when_idle">execute alarm when idle</string>
+<string name="flag_alarm_wake_when_idle">wake device when idle</string>
+<string name="flag_alarm_run_when_missed">execute alarm at reboot when missed</string>
+
+<string name="dialog_set">Set</string>
+
 </resources>

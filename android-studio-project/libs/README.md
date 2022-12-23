@@ -40,3 +40,16 @@
     * [maven repo](https://mvnrepository.com/artifact/org.lsposed.hiddenapibypass/hiddenapibypass)
   - more info pertaining to this topic:
     * [Stack Overflow](https://stackoverflow.com/questions/55970137/bypass-androids-hidden-api-restrictions)
+
+* [TimeDurationPicker](https://github.com/svenwiegand/time-duration-picker)
+  - tag: [v1.1.3](https://github.com/svenwiegand/time-duration-picker/releases/tag/1.1.3)
+  - commit: [d3fbbba6a613feaa170aaaa7bfc489e4245f20b1](https://github.com/svenwiegand/time-duration-picker/commit/d3fbbba6a613feaa170aaaa7bfc489e4245f20b1)
+  - date: 2017-10-22
+  - author: [Sven Wiegand](https://github.com/svenwiegand)
+  - license: [MIT](https://github.com/svenwiegand/time-duration-picker/blob/d3fbbba6a613feaa170aaaa7bfc489e4245f20b1/LICENSE.md)
+  - summary of library:
+    * UI widget: `TimeDurationPicker`
+    * UI dialog: `TimeDurationPickerDialog`
+  - features of library:
+    * minimal, and tiny
+    * implemented purely in Java

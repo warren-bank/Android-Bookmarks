@@ -3,12 +3,17 @@
 
 <!--
 https://android.googlesource.com/platform/frameworks/base/+/refs/heads/ics-mr1-release/core/res/res/values/themes.xml#L867
+https://android.googlesource.com/platform/frameworks/base/+/refs/heads/ics-mr1-release/core/res/res/values/styles.xml
   Android 4.0 (API 14): closest available reference following the release of
   Android 3.0 (API 11)
 -->
 
 <style name="app_theme" parent="@android:style/Theme.Holo">
   <item name="android:listViewStyle">@style/listview_style</item>
+
+  <!-- TimeDurationPicker -->
+  <item name="TimeDurationPickerBackgroundColor">#ff90df25</item>
+  <item name="TimeDurationPickerButtonDrawable">?android:attr/selectableItemBackground</item>
 </style>
 
 <style name="listview_style" parent="@android:style/Widget.Holo.ListView">

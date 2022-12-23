@@ -29,5 +29,6 @@ public class Constants {
   /* Intent Extras */
   public static final String EXTRA_INTENT_ID                = Constants.PACKAGE_NAME + ".BookmarkId";
   public static final String EXTRA_FOLDER_ID                = Constants.PACKAGE_NAME + ".FolderId";
+  public static final String EXTRA_ALARM_ID                 = Constants.PACKAGE_NAME + ".AlarmId";
   public static final String EXTRA_RELOAD_LIST              = Constants.PACKAGE_NAME + ".ReloadList";
 }

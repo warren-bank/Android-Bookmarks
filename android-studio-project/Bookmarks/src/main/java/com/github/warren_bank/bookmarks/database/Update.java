@@ -23,7 +23,7 @@ public class Update {
   public static final int MODE_INSTALL = 1;
   public static final int MODE_RESTORE = 2;
 
-  public static final int VERSION_CURRENT = 2;
+  public static final int VERSION_CURRENT = 3;
   public static       int VERSION_ACTUAL  = -1;
 
   // ---------------------------------------------------------------------------
@@ -199,6 +199,13 @@ public class Update {
       databaseUpdateResult.didUpdateFail      |= !result;
       version                                  = getVersionNumber();
     }
+    if (!databaseUpdateResult.didUpdateFail && (version == 2)) {
+      didUpdate                                = true;
+      result                                   = update_version_002();
+      databaseUpdateResult.didUpdateSucceed   &= result;
+      databaseUpdateResult.didUpdateFail      |= !result;
+      version                                  = getVersionNumber();
+    }
 
     databaseUpdateResult.didUpdateSucceed &= didUpdate;
   }
@@ -216,6 +223,34 @@ public class Update {
         + "  ('Uri'),"
         + "  ('Uri[]'),"
         + "  ('ArrayList<Uri>');"
+      );
+      return execTransaction(queries);
+    } catch (Exception e) {
+      Log.e(Constants.LOG_TAG, "Error updating database");
+      e.printStackTrace();
+      return false;
+    }
+  }
+
+  private boolean update_version_002() {
+    Log.d(Constants.LOG_TAG, "UPDATING TO VERSION 3");
+    try {
+      List<String> queries = new ArrayList<String>();
+      queries.add("UPDATE application SET version=3");
+      queries.add(
+          "CREATE TABLE IF NOT EXISTS intent_alarms ("
+        + "  id                   INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,"
+        + "  intent_id            INTEGER NOT NULL,"
+        + "  trigger_at           INTEGER NOT NULL,"           // milliseconds:    timestamp for next alarm
+        + "  interval             INTEGER NOT NULL,"           // milliseconds:    for an alarm that repeats indefinitely until cancelled by user
+        + "  perform              INTEGER NOT NULL,"           // array index:     R.array.perform_options
+        + "  flags                INTEGER NOT NULL DEFAULT 0," // bit field:       R.integer.flag_alarm_is_exact (1) | R.integer.flag_alarm_run_when_idle (2) | R.integer.flag_alarm_wake_when_idle (4) | R.integer.flag_alarm_run_when_missed (8)
+
+        + "  FOREIGN KEY (intent_id) REFERENCES intents (id)"
+        + ");"
+      );
+      queries.add(
+          "CREATE INDEX idx_intent_alarms_intent_id ON intent_alarms (intent_id);"
       );
       return execTransaction(queries);
     } catch (Exception e) {

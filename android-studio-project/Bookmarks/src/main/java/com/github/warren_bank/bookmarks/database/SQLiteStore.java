@@ -271,6 +271,21 @@ public class SQLiteStore extends SQLiteOpenHelper {
       dbase.execSQL(
           "CREATE INDEX idx_intent_categories_intent_id ON intent_categories (intent_id);"
       );
+      dbase.execSQL(
+          "CREATE TABLE IF NOT EXISTS intent_alarms ("
+        + "  id                   INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,"
+        + "  intent_id            INTEGER NOT NULL,"
+        + "  trigger_at           INTEGER NOT NULL,"           // milliseconds:    timestamp for next alarm
+        + "  interval             INTEGER NOT NULL,"           // milliseconds:    for an alarm that repeats indefinitely until cancelled by user
+        + "  perform              INTEGER NOT NULL,"           // array index:     R.array.perform_options
+        + "  flags                INTEGER NOT NULL DEFAULT 0," // bit field:       R.integer.flag_alarm_is_exact (1) | R.integer.flag_alarm_run_when_idle (2) | R.integer.flag_alarm_wake_when_idle (4) | R.integer.flag_alarm_run_when_missed (8)
+
+        + "  FOREIGN KEY (intent_id) REFERENCES intents (id)"
+        + ");"
+      );
+      dbase.execSQL(
+          "CREATE INDEX idx_intent_alarms_intent_id ON intent_alarms (intent_id);"
+      );
     }
     catch (SQLiteException e) {
       Log.e(Constants.LOG_TAG, e.getMessage());

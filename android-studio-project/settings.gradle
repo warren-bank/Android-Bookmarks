@@ -2,6 +2,8 @@ include ':Bookmarks'
 
 include ':HiddenApiBypass'
 include ':PublicFileProvider'
+include ':TimeDurationPicker'
 
 project(':HiddenApiBypass'   ).projectDir = new File(rootDir, 'libs/HiddenApiBypass'   )
 project(':PublicFileProvider').projectDir = new File(rootDir, 'libs/PublicFileProvider')
+project(':TimeDurationPicker').projectDir = new File(rootDir, 'libs/TimeDurationPicker')

@@ -71,6 +71,7 @@ android {
 dependencies {
   implementation project(':HiddenApiBypass')
   implementation project(':PublicFileProvider')
+  implementation project(':TimeDurationPicker')
 
   implementation 'com.google.code.gson:gson:'    + project.ext.libVersionGson    // (235 KB) https://mvnrepository.com/artifact/com.google.code.gson/gson
 }

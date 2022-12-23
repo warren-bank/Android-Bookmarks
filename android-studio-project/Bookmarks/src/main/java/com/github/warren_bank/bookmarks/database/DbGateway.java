@@ -1,7 +1,11 @@
 package com.github.warren_bank.bookmarks.database;
 
+import com.github.warren_bank.bookmarks.R;
 import com.github.warren_bank.bookmarks.common.Constants;
+import com.github.warren_bank.bookmarks.common.DateFormats;
+import com.github.warren_bank.bookmarks.database.model.DbAlarm;
 import com.github.warren_bank.bookmarks.database.model.DbIntent;
+import com.github.warren_bank.bookmarks.ui.model.AlarmContentItem;
 import com.github.warren_bank.bookmarks.ui.model.FolderContentItem;
 
 import android.content.Context;
@@ -107,6 +111,20 @@ public class DbGateway {
     return value;
   }
 
+  private long getColumnLong(Cursor c, String columnName) {
+    long defaultValue = -1l;
+    return getColumnLong(c, columnName, defaultValue);
+  }
+
+  private long getColumnLong(Cursor c, String columnName, long defaultValue) {
+    int columnIndex = c.getColumnIndex(columnName);
+
+    if (c.isNull(columnIndex)) return defaultValue;
+
+    long value = c.getLong(columnIndex);
+    return value;
+  }
+
   private float getColumnFloat(Cursor c, String columnName) {
     float defaultValue = -1.0f;
     return getColumnFloat(c, columnName, defaultValue);
@@ -138,6 +156,44 @@ public class DbGateway {
   // ---------------------------------------------------------------------------
   // read from DB:
   // ---------------------------------------------------------------------------
+
+  public String getIntentName(int intentId) {
+    String query = "SELECT name FROM intents WHERE id = " + intentId;
+    String name  = null;
+
+    Cursor c = null;
+    try {
+      c = db.query(query);
+
+      if ((c != null) && c.moveToFirst() && c.isFirst()) {
+        name = getColumnString(c, "name", name);
+      }
+    }
+    catch (SQLiteException e) {
+      Log.e(Constants.LOG_TAG, e.getMessage());
+    }
+    if (c != null) c.close();
+    return name;
+  }
+
+  public int getIntentFolderId(int intentId) {
+    String query = "SELECT folder_id FROM intents WHERE id = " + intentId;
+    int folderId = -1;
+
+    Cursor c = null;
+    try {
+      c = db.query(query);
+
+      if ((c != null) && c.moveToFirst() && c.isFirst()) {
+        folderId = getColumnInteger(c, "folder_id", folderId);
+      }
+    }
+    catch (SQLiteException e) {
+      Log.e(Constants.LOG_TAG, e.getMessage());
+    }
+    if (c != null) c.close();
+    return folderId;
+  }
 
   public int getFolderId(int parentId, String name) {
     String query  = "SELECT id FROM folders WHERE parent_id = " + parentId + " AND name = " + sqlEscapeString(name);
@@ -694,6 +750,8 @@ public class DbGateway {
   }
 
   public boolean deleteIntent(int intentId) {
+    if (intentId < 0) return false;
+
     List<String> queries = new ArrayList<String>();
 
     queries.add(
@@ -721,6 +779,56 @@ public class DbGateway {
     );
 
     return db.execTransaction(queries);
+  }
+
+  public boolean addAlarm(DbAlarm dbAlarm) {
+    dbAlarm.id = -1;
+    return updateAlarm(dbAlarm);
+  }
+
+  public boolean updateAlarm(DbAlarm dbAlarm) {
+    if ((dbAlarm.intent_id < 0) || (dbAlarm.perform < 0) || (dbAlarm.trigger_at < 0)) return false;
+
+    try {
+      if (dbAlarm.id >= 0) {
+        // delete the existing Alarm, then write fresh data
+        deleteAlarm(dbAlarm.id);
+      }
+
+      String query = "INSERT INTO intent_alarms"
+        + "   (intent_id, trigger_at, interval, perform, flags)"
+        + " VALUES"
+        + "   ("
+        +         dbAlarm.intent_id                                    + ", "
+        +         dbAlarm.trigger_at                                   + ", "
+        +         dbAlarm.interval                                     + ", "
+        +         dbAlarm.perform                                      + ", "
+        +         dbAlarm.flags
+        + "   )";
+
+      return db.execQuery(query);
+    }
+    catch(Exception e) {
+      return false;
+    }
+  }
+
+  public boolean deleteAlarm(int alarmId) {
+    if (alarmId < 0) return false;
+
+    String query = "DELETE"
+      + " FROM"
+      + "   intent_alarms"
+      + " WHERE"
+      + "   id = " + alarmId;
+
+    return db.execQuery(query);
+  }
+
+  public boolean deleteAllAlarms() {
+    String query = "DELETE FROM intent_alarms";
+
+    return db.execQuery(query);
   }
 
   // ---------------------------------------------------------------------------
@@ -818,6 +926,136 @@ public class DbGateway {
 
     DbIntent dbIntent = DbIntent.getInstance(intentId, folder_id, name, flags, action, package_name, class_name, data_uri, data_type, categories, extras);
     return dbIntent;
+  }
+
+  public DbAlarm getDbAlarm(int alarmId) {
+    List<DbAlarm> dbAlarms = getDbAlarms(alarmId);
+
+    return ((dbAlarms == null) || dbAlarms.isEmpty())
+      ? null
+      : dbAlarms.get(0);
+  }
+
+  public List<DbAlarm> getDbAlarms() {
+    return getDbAlarms(-1);
+  }
+
+  private List<DbAlarm> getDbAlarms(int alarmId) {
+    List<DbAlarm> dbAlarms = new ArrayList<DbAlarm>();
+
+    String query = "SELECT id, intent_id, trigger_at, interval, perform, flags FROM intent_alarms"
+      + ((alarmId >= 0) ? (" WHERE id = " + alarmId) : "");
+
+    Cursor c = null;
+    try {
+      c = db.query(query);
+
+      if ((c != null) && c.moveToFirst() && c.isFirst()) {
+        do {
+          DbAlarm dbAlarm = getDbAlarm(c);
+
+          if (dbAlarm != null) {
+            dbAlarms.add(dbAlarm);
+          }
+        } while (c.moveToNext());
+      }
+    }
+    catch (SQLiteException e) {
+      Log.e(Constants.LOG_TAG, e.getMessage());
+    }
+    if (c != null) c.close();
+    return dbAlarms;
+  }
+
+  private DbAlarm getDbAlarm(Cursor c) {
+    int     id = -1, intent_id = -1, perform = -1, flags = 0;
+    long    trigger_at = -1, interval = 0;
+
+    try {
+      id         = getColumnInteger(c, "id",         id);
+      intent_id  = getColumnInteger(c, "intent_id",  intent_id);
+      perform    = getColumnInteger(c, "perform",    perform);
+      flags      = getColumnInteger(c, "flags",      flags);
+      trigger_at = getColumnLong(   c, "trigger_at", trigger_at);
+      interval   = getColumnLong(   c, "interval",   interval);
+    }
+    catch (SQLiteException e) {
+      Log.e(Constants.LOG_TAG, e.getMessage());
+    }
+    if ((id < 0) || (intent_id < 0) || (perform < 0) || (trigger_at < 0)) return null;
+
+    DbAlarm dbAlarm = DbAlarm.getInstance(id, intent_id, trigger_at, interval, perform, flags);
+    return dbAlarm;
+  }
+
+  public AlarmContentItem getAlarmContentItem(DbAlarm dbAlarm) {
+    return convertDbAlarmToAlarmContentItem(dbAlarm);
+  }
+
+  public AlarmContentItem getAlarmContentItem(int alarmId) {
+    List<AlarmContentItem> items = getAlarmContentItems(alarmId);
+
+    return ((items == null) || items.isEmpty())
+      ? null
+      : items.get(0);
+  }
+
+  public List<AlarmContentItem> getAlarmContentItems() {
+    return getAlarmContentItems(-1);
+  }
+
+  private List<AlarmContentItem> getAlarmContentItems(int alarmId) {
+    List<AlarmContentItem> items = new ArrayList<AlarmContentItem>();
+    List<DbAlarm> dbAlarms = getDbAlarms(alarmId);
+
+    for (DbAlarm dbAlarm : dbAlarms) {
+      items.add(
+        convertDbAlarmToAlarmContentItem(dbAlarm)
+      );
+    }
+
+    Collections.sort(items);
+    return items;
+  }
+
+  private static String[] perform_options = null;
+
+  private AlarmContentItem convertDbAlarmToAlarmContentItem(DbAlarm dbAlarm) {
+    if (perform_options == null)
+      perform_options = context.getResources().getStringArray(R.array.perform_options);
+
+    int id = dbAlarm.id;
+
+    String perform = "", intent = "", time = "", freq = "";
+
+    if (dbAlarm.perform >= 0) {
+      // ex: "Start Activity"
+      perform = perform_options[dbAlarm.perform];
+    }
+
+    if (dbAlarm.intent_id >= 0) {
+      // ex: "/folder/path/to/Intent_name"
+      int    folderId   = getIntentFolderId(dbAlarm.intent_id);
+      String folderPath = getFolderPath(folderId, "/");
+      String intentName = getIntentName(dbAlarm.intent_id);
+
+      intent = folderPath + "/" + intentName;
+    }
+
+    if (dbAlarm.trigger_at >= 0l) {
+      // ex: "01/01/1970 1:00pm + 0-10 minutes"
+      int     flag     = context.getResources().getInteger(R.integer.flag_alarm_is_exact);
+      boolean is_exact = DbAlarm.isFlagOn(dbAlarm, flag);
+
+      time = DateFormats.getFileContentDateTime(dbAlarm.trigger_at) + (!is_exact ? " + 0-10 minutes" : "");
+    }
+
+    if (dbAlarm.interval > 0l) {
+      // ex: "30 minutes"
+      freq = DateFormats.getAlarmContentDuration(dbAlarm.interval);
+    }
+
+    return new AlarmContentItem(id, perform, intent, time, freq);
   }
 
 }

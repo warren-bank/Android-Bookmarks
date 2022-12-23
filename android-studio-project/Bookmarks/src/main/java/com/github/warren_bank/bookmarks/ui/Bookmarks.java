@@ -10,6 +10,7 @@ import com.github.warren_bank.bookmarks.ui.dialogs.DbFolderPicker;
 import com.github.warren_bank.bookmarks.ui.dialogs.FilesystemDirectoryPicker;
 import com.github.warren_bank.bookmarks.ui.dialogs.FilesystemDirectoryPickerSimpleListener;
 import com.github.warren_bank.bookmarks.ui.dialogs.FolderContentsPickerSimpleListener;
+import com.github.warren_bank.bookmarks.ui.dialogs.PerformOptionPicker;
 import com.github.warren_bank.bookmarks.ui.model.FolderContentItem;
 import com.github.warren_bank.bookmarks.ui.widgets.FolderBreadcrumbsLayout;
 import com.github.warren_bank.bookmarks.ui.widgets.FolderContentsAdapter;
@@ -62,7 +63,8 @@ public class Bookmarks extends ListActivity implements RuntimePermissionUtils.Ru
   private static final int MENU_ACTIONBAR_MOVE_COMPLETE     = MENU_ACTIONBAR_INTENT_ADD        + 1;
   private static final int MENU_ACTIONBAR_MOVE_CANCEL       = MENU_ACTIONBAR_MOVE_COMPLETE     + 1;
   private static final int MENU_ACTIONBAR_SETTINGS          = MENU_ACTIONBAR_MOVE_CANCEL       + 1;
-  private static final int MENU_ACTIONBAR_DB_BACKUP         = MENU_ACTIONBAR_SETTINGS          + 1;
+  private static final int MENU_ACTIONBAR_SCHEDULED         = MENU_ACTIONBAR_SETTINGS          + 1;
+  private static final int MENU_ACTIONBAR_DB_BACKUP         = MENU_ACTIONBAR_SCHEDULED         + 1;
   private static final int MENU_ACTIONBAR_DB_RESTORE        = MENU_ACTIONBAR_DB_BACKUP         + 1;
   private static final int MENU_ACTIONBAR_DB_EXPORT         = MENU_ACTIONBAR_DB_RESTORE        + 1;
   private static final int MENU_ACTIONBAR_DB_IMPORT         = MENU_ACTIONBAR_DB_EXPORT         + 1;
@@ -75,7 +77,8 @@ public class Bookmarks extends ListActivity implements RuntimePermissionUtils.Ru
   private static final int MENU_CONTEXT_FOLDER_DELETE       = MENU_CONTEXT_FOLDER_MOVE         + 1;
   /* Context Menu Items for Intents */
   private static final int MENU_CONTEXT_INTENT_PERFORM      = Menu.FIRST;
-  private static final int MENU_CONTEXT_INTENT_EDIT         = MENU_CONTEXT_INTENT_PERFORM      + 1;
+  private static final int MENU_CONTEXT_INTENT_SCHEDULE     = MENU_CONTEXT_INTENT_PERFORM      + 1;
+  private static final int MENU_CONTEXT_INTENT_EDIT         = MENU_CONTEXT_INTENT_SCHEDULE     + 1;
   private static final int MENU_CONTEXT_INTENT_MOVE         = MENU_CONTEXT_INTENT_EDIT         + 1;
   private static final int MENU_CONTEXT_INTENT_COPY         = MENU_CONTEXT_INTENT_MOVE         + 1;
   private static final int MENU_CONTEXT_INTENT_DELETE       = MENU_CONTEXT_INTENT_COPY         + 1;
@@ -391,6 +394,7 @@ public class Bookmarks extends ListActivity implements RuntimePermissionUtils.Ru
       menu.add(Menu.NONE, MENU_ACTIONBAR_MOVE_COMPLETE,  MENU_ACTIONBAR_MOVE_COMPLETE,  R.string.menu_actionbar_move_complete);
       menu.add(Menu.NONE, MENU_ACTIONBAR_MOVE_CANCEL,    MENU_ACTIONBAR_MOVE_CANCEL,    R.string.menu_actionbar_move_cancel);
       menu.add(Menu.NONE, MENU_ACTIONBAR_SETTINGS,       MENU_ACTIONBAR_SETTINGS,       R.string.menu_actionbar_settings);
+      menu.add(Menu.NONE, MENU_ACTIONBAR_SCHEDULED,      MENU_ACTIONBAR_SCHEDULED,      R.string.menu_actionbar_scheduled);
       menu.add(Menu.NONE, MENU_ACTIONBAR_DB_BACKUP,      MENU_ACTIONBAR_DB_BACKUP,      R.string.menu_actionbar_db_backup);
       menu.add(Menu.NONE, MENU_ACTIONBAR_DB_RESTORE,     MENU_ACTIONBAR_DB_RESTORE,     R.string.menu_actionbar_db_restore);
       menu.add(Menu.NONE, MENU_ACTIONBAR_DB_EXPORT,      MENU_ACTIONBAR_DB_EXPORT,      R.string.menu_actionbar_db_export);
@@ -457,6 +461,9 @@ public class Bookmarks extends ListActivity implements RuntimePermissionUtils.Ru
       case MENU_ACTIONBAR_SETTINGS :
         showSettings();
         break;
+      case MENU_ACTIONBAR_SCHEDULED :
+        showScheduled();
+        break;
       case MENU_ACTIONBAR_DB_BACKUP :
         backup(false);
         break;
@@ -511,6 +518,7 @@ public class Bookmarks extends ListActivity implements RuntimePermissionUtils.Ru
     }
     else {
       menu.add(Menu.NONE, MENU_CONTEXT_INTENT_PERFORM,      MENU_CONTEXT_INTENT_PERFORM,      R.string.menu_context_intent_perform);
+      menu.add(Menu.NONE, MENU_CONTEXT_INTENT_SCHEDULE,     MENU_CONTEXT_INTENT_SCHEDULE,     R.string.menu_context_intent_schedule);
       menu.add(Menu.NONE, MENU_CONTEXT_INTENT_EDIT,         MENU_CONTEXT_INTENT_EDIT,         R.string.menu_context_intent_edit);
       menu.add(Menu.NONE, MENU_CONTEXT_INTENT_MOVE,         MENU_CONTEXT_INTENT_MOVE,         R.string.menu_context_intent_move);
       menu.add(Menu.NONE, MENU_CONTEXT_INTENT_COPY,         MENU_CONTEXT_INTENT_COPY,         R.string.menu_context_intent_copy);
@@ -545,6 +553,9 @@ public class Bookmarks extends ListActivity implements RuntimePermissionUtils.Ru
       switch(item.getItemId()) {
         case MENU_CONTEXT_INTENT_PERFORM :
           performBookmark(selectedItem);
+          return true;
+        case MENU_CONTEXT_INTENT_SCHEDULE :
+          scheduleBookmark(selectedItem);
           return true;
         case MENU_CONTEXT_INTENT_EDIT :
           editBookmark(selectedItem);
@@ -748,61 +759,46 @@ public class Bookmarks extends ListActivity implements RuntimePermissionUtils.Ru
   private void performBookmark(FolderContentItem selectedItem) {
     if (selectedItem.isFolder) return;
 
-    String[] perform_options = getResources().getStringArray(R.array.perform_options);
-
-    if (Build.VERSION.SDK_INT < 26) {
-      // remove: perform_start_foreground_service
-
-      String[] all_options = perform_options;
-      perform_options = new String[all_options.length - 1];
-
-      for (int i=0; i < all_options.length; i++) {
-        if (i < 2) {
-          perform_options[i] = all_options[i];
-        }
-        else if (i > 2) {
-          perform_options[i-1] = all_options[i];
+    PerformOptionPicker.showPerformOptionPicker(Bookmarks.this, new PerformOptionPicker.Listener() {
+      @Override
+      public void onPerformOptionPick(int which) {
+        switch(which) {
+          case 0: { // perform_send_broadcast
+              intentPermissionCheck(selectedItem.id, Constants.PERMISSION_CHECK_REQUEST_CODE_INTENT_SEND_BROADCAST);
+            }
+            break;
+          case 1: { // perform_start_activity
+              intentPermissionCheck(selectedItem.id, Constants.PERMISSION_CHECK_REQUEST_CODE_INTENT_START_ACTIVITY);
+            }
+            break;
+          case 2: { // perform_start_foreground_service
+              intentPermissionCheck(selectedItem.id, Constants.PERMISSION_CHECK_REQUEST_CODE_INTENT_START_FOREGROUND_SERVICE);
+            }
+            break;
+          case 3: { // perform_start_service
+              intentPermissionCheck(selectedItem.id, Constants.PERMISSION_CHECK_REQUEST_CODE_INTENT_START_SERVICE);
+            }
+            break;
+          case 4: { // perform_stop_service
+              intentPermissionCheck(selectedItem.id, Constants.PERMISSION_CHECK_REQUEST_CODE_INTENT_STOP_SERVICE);
+            }
+            break;
+          case 5: { // perform_add_shortcut
+              Object passthrough = (Object) selectedItem;
+              intentPermissionCheck(selectedItem.id, Constants.PERMISSION_CHECK_REQUEST_CODE_INTENT_ADD_SHORTCUT, passthrough);
+            }
+            break;
         }
       }
-    }
+    });
+  }
 
-    new AlertDialog.Builder(Bookmarks.this)
-      .setTitle(R.string.perform_title)
-      .setItems(perform_options, new DialogInterface.OnClickListener() {
-        public void onClick(DialogInterface dialog, int which) {
-          if ((Build.VERSION.SDK_INT < 26) && (which >= 2))
-            which++;
+  private void scheduleBookmark(FolderContentItem selectedItem) {
+    if (selectedItem.isFolder) return;
 
-          switch(which) {
-            case 0: { // perform_send_broadcast
-                intentPermissionCheck(selectedItem.id, Constants.PERMISSION_CHECK_REQUEST_CODE_INTENT_SEND_BROADCAST);
-              }
-              break;
-            case 1: { // perform_start_activity
-                intentPermissionCheck(selectedItem.id, Constants.PERMISSION_CHECK_REQUEST_CODE_INTENT_START_ACTIVITY);
-              }
-              break;
-            case 2: { // perform_start_foreground_service
-                intentPermissionCheck(selectedItem.id, Constants.PERMISSION_CHECK_REQUEST_CODE_INTENT_START_FOREGROUND_SERVICE);
-              }
-              break;
-            case 3: { // perform_start_service
-                intentPermissionCheck(selectedItem.id, Constants.PERMISSION_CHECK_REQUEST_CODE_INTENT_START_SERVICE);
-              }
-              break;
-            case 4: { // perform_stop_service
-                intentPermissionCheck(selectedItem.id, Constants.PERMISSION_CHECK_REQUEST_CODE_INTENT_STOP_SERVICE);
-              }
-              break;
-            case 5: { // perform_add_shortcut
-                Object passthrough = (Object) selectedItem;
-                intentPermissionCheck(selectedItem.id, Constants.PERMISSION_CHECK_REQUEST_CODE_INTENT_ADD_SHORTCUT, passthrough);
-              }
-              break;
-          }
-        }
-      })
-      .show();
+    Intent intent = new Intent(Bookmarks.this, SaveAlarm.class);
+    intent.putExtra(Constants.EXTRA_INTENT_ID, selectedItem.id);
+    startActivity(intent);
   }
 
   private void addShortcutForBookmark(FolderContentItem selectedItem) {
@@ -1078,6 +1074,15 @@ public class Bookmarks extends ListActivity implements RuntimePermissionUtils.Ru
         );
         break;
     }
+  }
+
+  // ---------------------------------------------------------------------------
+  // implementation: Scheduled dialog
+  // ---------------------------------------------------------------------------
+
+  private void showScheduled() {
+    Intent intent = new Intent(Bookmarks.this, Alarms.class);
+    startActivity(intent);
   }
 
   // ---------------------------------------------------------------------------
