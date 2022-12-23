@@ -44,9 +44,9 @@ public class TimeDurationPickerDialog {
     int second    = (int) (TimeUnit.MILLISECONDS.toSeconds(duration) % 60);
     int millis    = (int) (TimeUnit.MILLISECONDS.toMillis(duration)  % 1000);
 
-    int min     = 0;
-    int max     = 0;     // use default value: 365 days
-    int step    = 60000; // 1 minute = (1000 ms/sec)(60 sec/min)
+    long min     = 0l;
+    long max     = 0l;     // use default value: 365 days
+    long step    = 60000l; // 1 minute = (1000 ms/sec)(60 sec/min)
 
     boolean is24hourFormat        = true;
     boolean isSigned              = false;
