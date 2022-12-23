@@ -3,6 +3,7 @@ package com.github.warren_bank.bookmarks.database;
 import com.github.warren_bank.bookmarks.common.Constants;
 import com.github.warren_bank.bookmarks.utils.FileUtils;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.SQLException;
@@ -85,6 +86,18 @@ public class SQLiteStore extends SQLiteOpenHelper {
     if (Build.VERSION.SDK_INT >= 16) {
       db.disableWriteAheadLogging();
     }
+  }
+
+  public long insert(String table, String nullColumnHack, ContentValues values) {
+    boolean skipVersionCheck = false;
+    return insert(table, nullColumnHack, values, skipVersionCheck);
+  }
+
+  public long insert(String table, String nullColumnHack, ContentValues values, boolean skipVersionCheck) {
+    // only run queries against the current DB schema
+    if (!skipVersionCheck && Update.needsUpdate(this)) return -1l;
+
+    return db.insert(table, nullColumnHack, values);
   }
 
   public Cursor query(String query) {

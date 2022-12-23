@@ -8,6 +8,7 @@ import com.github.warren_bank.bookmarks.database.model.DbIntent;
 import com.github.warren_bank.bookmarks.ui.model.AlarmContentItem;
 import com.github.warren_bank.bookmarks.ui.model.FolderContentItem;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
@@ -781,36 +782,34 @@ public class DbGateway {
     return db.execTransaction(queries);
   }
 
-  public boolean addAlarm(DbAlarm dbAlarm) {
-    dbAlarm.id = -1;
-    return updateAlarm(dbAlarm);
-  }
-
   public boolean updateAlarm(DbAlarm dbAlarm) {
     if ((dbAlarm.intent_id < 0) || (dbAlarm.perform < 0) || (dbAlarm.trigger_at < 0)) return false;
 
-    try {
-      if (dbAlarm.id >= 0) {
-        // delete the existing Alarm, then write fresh data
-        deleteAlarm(dbAlarm.id);
-      }
+    return (
+         ((dbAlarm.id < 0) || deleteAlarm(dbAlarm.id))
+      && (addAlarm(dbAlarm))
+    );
+  }
 
-      String query = "INSERT INTO intent_alarms"
-        + "   (intent_id, trigger_at, interval, perform, flags)"
-        + " VALUES"
-        + "   ("
-        +         dbAlarm.intent_id                                    + ", "
-        +         dbAlarm.trigger_at                                   + ", "
-        +         dbAlarm.interval                                     + ", "
-        +         dbAlarm.perform                                      + ", "
-        +         dbAlarm.flags
-        + "   )";
+  public boolean addAlarm(DbAlarm dbAlarm) {
+    if ((dbAlarm.intent_id < 0) || (dbAlarm.perform < 0) || (dbAlarm.trigger_at < 0)) return false;
 
-      return db.execQuery(query);
-    }
-    catch(Exception e) {
-      return false;
-    }
+    dbAlarm.id = -1;
+
+    ContentValues values = new ContentValues();
+    values.put("intent_id",  dbAlarm.intent_id);
+    values.put("trigger_at", dbAlarm.trigger_at);
+    values.put("interval",   dbAlarm.interval);
+    values.put("perform",    dbAlarm.perform);
+    values.put("flags",      dbAlarm.flags);
+
+    long id = db.insert("intent_alarms", null, values);
+    boolean ok = (id >= 0l);
+
+    if (ok)
+      dbAlarm.id = (int) id;
+
+    return ok;
   }
 
   public boolean deleteAlarm(int alarmId) {
