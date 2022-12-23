@@ -8,11 +8,10 @@ import com.github.warren_bank.bookmarks.database.model.DbAlarm;
 import com.github.warren_bank.bookmarks.ui.Alarms;
 import com.github.warren_bank.bookmarks.ui.Bookmarks;
 import com.github.warren_bank.bookmarks.ui.dialogs.PerformOptionPicker;
+import com.github.warren_bank.bookmarks.ui.dialogs.TimeDurationPicker;
+import com.github.warren_bank.bookmarks.ui.dialogs.TimeDurationPickerDialog;
 import com.github.warren_bank.bookmarks.ui.model.AlarmContentItem;
 import com.github.warren_bank.bookmarks.utils.AlarmUtils;
-
-import mobi.upod.timedurationpicker.TimeDurationPicker;
-import mobi.upod.timedurationpicker.TimeDurationPickerDialog;
 
 import android.app.Activity;
 import android.app.DatePickerDialog;

@@ -12,10 +12,6 @@ https://android.googlesource.com/platform/frameworks/base/+/refs/heads/lollipop-
   <item name="android:listViewStyle">@style/listview_style</item>
   <item name="android:popupMenuStyle">@style/popup_menu</item>
   <item name="android:actionOverflowButtonStyle">@style/overflow_button</item>
-
-  <!-- TimeDurationPicker -->
-  <item name="TimeDurationPickerBackgroundColor">?android:attr/colorControlActivated</item>
-  <item name="TimeDurationPickerButtonDrawable">?android:attr/selectableItemBackgroundBorderless</item>
 </style>
 
 <style name="listview_style" parent="@android:style/Widget.DeviceDefault.ListView">

@@ -9,10 +9,6 @@ https://android.googlesource.com/platform/frameworks/base/+/refs/heads/gingerbre
 
 <style name="app_theme" parent="@android:style/Theme">
   <item name="android:listViewStyle">@style/listview_style</item>
-
-  <!-- TimeDurationPicker -->
-  <item name="TimeDurationPickerBackgroundColor">#ff90df25</item>
-  <item name="TimeDurationPickerButtonDrawable">@android:drawable/btn_default</item>
 </style>
 
 <style name="listview_style" parent="@android:style/Widget.ListView">

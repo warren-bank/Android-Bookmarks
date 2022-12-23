@@ -10,10 +10,6 @@ https://android.googlesource.com/platform/frameworks/base/+/refs/heads/ics-mr1-r
 
 <style name="app_theme" parent="@android:style/Theme.Holo">
   <item name="android:listViewStyle">@style/listview_style</item>
-
-  <!-- TimeDurationPicker -->
-  <item name="TimeDurationPickerBackgroundColor">#ff90df25</item>
-  <item name="TimeDurationPickerButtonDrawable">?android:attr/selectableItemBackground</item>
 </style>
 
 <style name="listview_style" parent="@android:style/Widget.Holo.ListView">
