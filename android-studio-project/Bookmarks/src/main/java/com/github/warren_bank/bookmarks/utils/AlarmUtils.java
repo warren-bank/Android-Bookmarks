@@ -39,6 +39,8 @@ public class AlarmUtils {
     DbGateway db    = DbGateway.getInstance(context);
     DbAlarm dbAlarm = db.getDbAlarm(alarmId);
 
+    if (dbAlarm == null) return;
+
     /*
      * this method is only called by the broadcast receiver,
      * to trigger the execution of the Intent for an alarm that has already been executed.

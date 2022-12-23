@@ -13,22 +13,20 @@ public class AlarmReceiver extends BroadcastReceiver {
     if (intent == null) return;
 
     String action = intent.getAction();
-    if (action == null) return;
-
-    switch(action) {
-      case "android.app.action.SCHEDULE_EXACT_ALARM_PERMISSION_STATE_CHANGED" :
-      case "android.intent.action.BOOT_COMPLETED" :
-      case "android.intent.action.QUICKBOOT_POWERON" : {
-        AlarmUtils.rescheduleAll(context);
-        break;
-      }
-      default : {
-        int alarmId  = intent.getIntExtra(Constants.EXTRA_ALARM_ID, -1);
-        if (alarmId >= 0) {
-          AlarmUtils.execute(context, alarmId);
+    if (action != null) {
+      switch(action) {
+        case "android.app.action.SCHEDULE_EXACT_ALARM_PERMISSION_STATE_CHANGED" :
+        case "android.intent.action.BOOT_COMPLETED" :
+        case "android.intent.action.QUICKBOOT_POWERON" : {
+          AlarmUtils.rescheduleAll(context);
+          return;
         }
-        break;
       }
+    }
+
+    int alarmId  = intent.getIntExtra(Constants.EXTRA_ALARM_ID, -1);
+    if (alarmId >= 0) {
+      AlarmUtils.execute(context, alarmId);
     }
   }
 }
