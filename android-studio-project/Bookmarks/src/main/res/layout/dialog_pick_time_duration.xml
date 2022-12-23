@@ -52,11 +52,39 @@
         android:contentDescription="@string/accessibility_time_picker_sign"
         />
     <TextView
-        android:id="@+id/sign_hour_sep"
+        android:id="@+id/sign_day_sep"
         android:layout_width="wrap_content"
         android:textSize="12sp"
         android:layout_height="wrap_content"
-        android:text="@string/time_picker_dialog_sign_hour_separator"
+        android:text="@string/time_picker_dialog_sign_day_separator"
+        />
+    <NumberPicker
+        android:id="@+id/day"
+        android:layout_width="0dp"
+        android:layout_weight=".2"
+        android:textSize="12sp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:contentDescription="@string/accessibility_time_picker_day"
+        />
+    <TextView
+        android:id="@+id/day_label"
+        android:layout_width="wrap_content"
+        android:textSize="12sp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="4dp"
+        android:text="@string/time_picker_dialog_day_label_units"
+        />
+    <TextView
+        android:id="@+id/day_hour_sep"
+        android:layout_width="wrap_content"
+        android:textSize="12sp"
+        android:layout_height="wrap_content"
+        android:text="@string/time_picker_dialog_day_hour_separator"
         />
     <NumberPicker
         android:id="@+id/hour"

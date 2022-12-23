@@ -38,13 +38,14 @@ public class TimeDurationPickerDialog {
     if (duration < 0l)
       duration = 0l;
 
-    int hourOfDay = (int)  TimeUnit.MILLISECONDS.toHours(duration);
+    int day       = (int)  TimeUnit.MILLISECONDS.toDays(duration);
+    int hourOfDay = (int)  TimeUnit.MILLISECONDS.toHours(duration)   % 24;
     int minute    = (int) (TimeUnit.MILLISECONDS.toMinutes(duration) % 60);
     int second    = (int) (TimeUnit.MILLISECONDS.toSeconds(duration) % 60);
     int millis    = (int) (TimeUnit.MILLISECONDS.toMillis(duration)  % 1000);
 
     int min     = 0;
-    int max     = 0;     // use default value: 24 hours
+    int max     = 0;     // use default value: 365 days
     int step    = 60000; // 1 minute = (1000 ms/sec)(60 sec/min)
 
     boolean is24hourFormat        = true;
@@ -55,7 +56,7 @@ public class TimeDurationPickerDialog {
       context,
       /* theme= */ 0,
       /* isNegative= */ false,
-      hourOfDay, minute, second, millis,
+      day, hourOfDay, minute, second, millis,
       min, max, step, is24hourFormat, isSigned, isValueChangeListener,
       /* listener= */ null
     );
@@ -63,8 +64,8 @@ public class TimeDurationPickerDialog {
     picker.updateListener(
       new TimeDurationPicker.OnDurationSetListener() {
         @Override
-        public void onDurationSet(boolean isNegative, int hourOfDay, int minute, int second, int milli) {
-          long duration = (milli) + (second * 1000) + (minute * 60 * 1000) + (hourOfDay * 60 * 60 * 1000);
+        public void onDurationSet(boolean isNegative, int day, int hourOfDay, int minute, int second, int milli) {
+          long duration = ((long)milli) + ((long)second * 1000l) + ((long)minute * 60l * 1000l) + ((long)hourOfDay * 60l * 60l * 1000l) + ((long)day * 24l * 60l * 60l * 1000l);
 
           listener.onDurationSet(picker, duration);
         }

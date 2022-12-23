@@ -24,8 +24,8 @@ import java.util.ArrayList;
 import java.util.Locale;
 
 /**
- * A time picker dialog with upto 5 number pickers left to right:
- *  hour, minute, second, milli, AM/PM.
+ * A time picker dialog with upto 6 number pickers left to right:
+ *  day, hour, minute, second, milli, AM/PM.
  *
  * If is24hourFormat is true then AM/PM picker is not displayed and
  * hour range is 0..23. Otherwise hour range is 1..12.
@@ -35,6 +35,7 @@ import java.util.Locale;
 public class TimeDurationPicker extends AlertDialog implements DialogInterface.OnClickListener, NumberPicker.OnValueChangeListener {
 
   private final NumberPicker mSignSpinner;
+  private final NumberPicker mDaySpinner;
   private final NumberPicker mHourSpinner;
   private final NumberPicker mMinuteSpinner;
   private final NumberPicker mSecSpinner;
@@ -52,18 +53,19 @@ public class TimeDurationPicker extends AlertDialog implements DialogInterface.O
    * Adds an onDurationSet() method.
    */
   public interface OnDurationSetListener {
-    void onDurationSet(boolean isNegative, int hourOfDay, int minute, int second, int milli);
+    void onDurationSet(boolean isNegative, int day, int hourOfDay, int minute, int second, int milli);
   }
 
   private static final int SECOND_IN_MILLIS = 1000;
   private static final int MINUTE_IN_MILLIS = 60 * SECOND_IN_MILLIS;
   private static final int HOUR_IN_MILLIS = 60 * MINUTE_IN_MILLIS;
+  private static final int DAY_IN_MILLIS = 24 * HOUR_IN_MILLIS;
 
   public TimeDurationPicker(
       Context context,
       int theme,
       boolean isNegative,
-      int hour, int minute, int second, int milli,
+      int day, int hour, int minute, int second, int milli,
       int min, int max, int step, boolean is24hourFormat, boolean isSigned, boolean isValueChangeListener,
       OnDurationSetListener listener) {
     super(context, theme);
@@ -75,9 +77,9 @@ public class TimeDurationPicker extends AlertDialog implements DialogInterface.O
 
     if (min >= max) {
       min = 0;
-      max = 24 * HOUR_IN_MILLIS - 1;
+      max = 365 * DAY_IN_MILLIS - 1;
     }
-    if (step < 0 || step >= 24 * HOUR_IN_MILLIS) {
+    if (step < 0 || step >= 365 * DAY_IN_MILLIS) {
       step = MINUTE_IN_MILLIS;
     }
 
@@ -87,15 +89,17 @@ public class TimeDurationPicker extends AlertDialog implements DialogInterface.O
     View view = inflater.inflate(R.layout.dialog_pick_time_duration, null);
     setView(view);
 
-    mSignSpinner = (NumberPicker) view.findViewById(R.id.sign);
-    mHourSpinner = (NumberPicker) view.findViewById(R.id.hour);
+    mSignSpinner   = (NumberPicker) view.findViewById(R.id.sign);
+    mDaySpinner    = (NumberPicker) view.findViewById(R.id.day);
+    mHourSpinner   = (NumberPicker) view.findViewById(R.id.hour);
     mMinuteSpinner = (NumberPicker) view.findViewById(R.id.minute);
-    mSecSpinner = (NumberPicker) view.findViewById(R.id.second);
-    mMilliSpinner = (NumberPicker) view.findViewById(R.id.milli);
-    mAmPmSpinner = (NumberPicker) view.findViewById(R.id.ampm);
+    mSecSpinner    = (NumberPicker) view.findViewById(R.id.second);
+    mMilliSpinner  = (NumberPicker) view.findViewById(R.id.milli);
+    mAmPmSpinner   = (NumberPicker) view.findViewById(R.id.ampm);
 
     if (isValueChangeListener) {
       mSignSpinner.setOnValueChangedListener(this);
+      mDaySpinner.setOnValueChangedListener(this);
       mHourSpinner.setOnValueChangedListener(this);
       mMinuteSpinner.setOnValueChangedListener(this);
       mSecSpinner.setOnValueChangedListener(this);
@@ -103,19 +107,33 @@ public class TimeDurationPicker extends AlertDialog implements DialogInterface.O
       mAmPmSpinner.setOnValueChangedListener(this);
     }
 
+    int minDay = min / DAY_IN_MILLIS;
+    int maxDay = max / DAY_IN_MILLIS;
+    min -= minDay * DAY_IN_MILLIS;
+    max -= maxDay * DAY_IN_MILLIS;
+
+    if (minDay == maxDay) {
+      mDaySpinner.setEnabled(false);
+      day = minDay;
+    } else {
+      mDaySpinner.setMinValue(0);
+      mDaySpinner.setMaxValue(364);
+    }
+    mDaySpinner.setValue(day);
+
     int minHour = min / HOUR_IN_MILLIS;
     int maxHour = max / HOUR_IN_MILLIS;
     min -= minHour * HOUR_IN_MILLIS;
     max -= maxHour * HOUR_IN_MILLIS;
 
-    if (minHour == maxHour) {
+    if ((minDay == maxDay) && (minHour == maxHour)) {
       mHourSpinner.setEnabled(false);
       hour = minHour;
     }
 
     if (!isSigned) {
       mSignSpinner.setVisibility(View.GONE);
-      view.findViewById(R.id.sign_hour_sep).setVisibility(View.GONE);
+      view.findViewById(R.id.sign_day_sep).setVisibility(View.GONE);
     } else {
       int minSign = 0; // + positive
       int maxSign = 1; // - negative
@@ -166,12 +184,18 @@ public class TimeDurationPicker extends AlertDialog implements DialogInterface.O
       mAmPmSpinner.setValue(amPm);
     }
 
-    if (minHour == maxHour) {
+    if ((minDay == maxDay) && (minHour == maxHour)) {
       mHourSpinner.setEnabled(false);
     }
-    mHourSpinner.setMinValue(minHour);
-    mHourSpinner.setMaxValue(maxHour);
-    mHourSpinner.setValue(hour);
+    else {
+      if (minDay != maxDay) {
+        minHour = 0;
+        maxHour = is24hourFormat ? 23 : 11;
+      }
+      mHourSpinner.setMinValue(minHour);
+      mHourSpinner.setMaxValue(maxHour);
+      mHourSpinner.setValue(hour);
+    }
 
     NumberFormatter twoDigitPaddingFormatter = new NumberFormatter("%02d");
 
@@ -180,7 +204,7 @@ public class TimeDurationPicker extends AlertDialog implements DialogInterface.O
     min -= minMinute * MINUTE_IN_MILLIS;
     max -= maxMinute * MINUTE_IN_MILLIS;
 
-    if (minHour == maxHour) {
+    if ((minDay == maxDay) && (minHour == maxHour)) {
       mMinuteSpinner.setMinValue(minMinute);
       mMinuteSpinner.setMaxValue(maxMinute);
       if (minMinute == maxMinute) {
@@ -299,10 +323,11 @@ public class TimeDurationPicker extends AlertDialog implements DialogInterface.O
   }
 
   private void notifyDateSet() {
-    int hour = getPickerValue(mHourSpinner);
+    int day    = getPickerValue(mDaySpinner);
+    int hour   = getPickerValue(mHourSpinner);
     int minute = getPickerValue(mMinuteSpinner);
-    int sec = getPickerValue(mSecSpinner);
-    int milli = getPickerValue(mMilliSpinner) * mStep + mBaseMilli;
+    int sec    = getPickerValue(mSecSpinner);
+    int milli  = getPickerValue(mMilliSpinner) * mStep + mBaseMilli;
     if (!mIs24hourFormat) {
       int ampm = getPickerValue(mAmPmSpinner);
       if (hour == 12) {
@@ -316,7 +341,7 @@ public class TimeDurationPicker extends AlertDialog implements DialogInterface.O
       if (sign == 1)
       isNegative = true;
     }
-    mListener.onDurationSet(isNegative, hour, minute, sec, milli);
+    mListener.onDurationSet(isNegative, day, hour, minute, sec, milli);
   }
 
   /**

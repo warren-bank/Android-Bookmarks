@@ -1,11 +1,11 @@
 package com.github.warren_bank.bookmarks.common;
 
-import org.apache.commons.lang3.time.DurationFormatUtils;
-
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.concurrent.TimeUnit;
 
 public class DateFormats {
   public static final DateFormat NORMALIZE_DATE_TIME  = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss");
@@ -37,13 +37,20 @@ public class DateFormats {
     return DateFormats.DISPLAY_ALARM_TIME.format(date);
   }
 
-  public static String formatDuration(long durationMillis, String format, boolean padWithZeros) {
-    return DurationFormatUtils.formatDuration(durationMillis, format, padWithZeros);
-  }
-
   public static String getAlarmContentDuration(long durationMillis) {
-    String format = "MM' months, 'dd' days, 'HH' hrs, 'mm' mins, 'ss' secs'";
-    boolean padWithZeros = false;
-    return formatDuration(durationMillis, format, padWithZeros);
+    int day = (int)  TimeUnit.MILLISECONDS.toDays(durationMillis);
+    int hrs = (int)  TimeUnit.MILLISECONDS.toHours(durationMillis)   % 24;
+    int min = (int) (TimeUnit.MILLISECONDS.toMinutes(durationMillis) % 60);
+
+    ArrayList<String> parts = new ArrayList<String>();
+
+    if (day > 0)
+      parts.add(day + " day" + ((day == 1) ? "" : "s"));
+    if (hrs > 0)
+      parts.add(hrs + " hr"  + ((hrs == 1) ? "" : "s"));
+    if (min > 0)
+      parts.add(min + " min" + ((min == 1) ? "" : "s"));
+
+    return parts.isEmpty() ? "" : String.join(", ", parts);
   }
 }
