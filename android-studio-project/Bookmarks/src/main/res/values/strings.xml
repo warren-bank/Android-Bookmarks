@@ -33,7 +33,6 @@
 <string name="activity_label_save_bookmark">&add; &bookmark;</string>
 
 <string name="layout_main_no_intents_in_folder">No &bookmarks; found.</string>
-<string name="layout_main_no_alarms">No &alarms; found.</string>
 <string name="layout_main_no_results_for_search">No search results found.</string>
 <string name="layout_main_results_for_search_label">Results for:</string>
 
@@ -166,6 +165,8 @@
 
 <string name="activity_label_alarms">Scheduled &alarms;</string>
 <string name="activity_label_save_alarm">&alarm; Schedule</string>
+
+<string name="layout_main_no_alarms">No &alarms; found.</string>
 
 <string name="menu_actionbar_cancel_all">&cancel; All</string>
 

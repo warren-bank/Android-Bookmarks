@@ -55,8 +55,8 @@ public class Alarms extends ListActivity {
 
     setContentView(R.layout.activity_alarms);
 
-    db                  = DbGateway.getInstance(Alarms.this);
-    mainView            = findViewById(R.id.main);
+    db       = DbGateway.getInstance(Alarms.this);
+    mainView = findViewById(R.id.main);
 
     listView = getListView();
     registerForContextMenu(listView);

@@ -968,8 +968,8 @@ public class DbGateway {
   }
 
   private DbAlarm getDbAlarm(Cursor c) {
-    int     id = -1, intent_id = -1, perform = -1, flags = 0;
-    long    trigger_at = -1, interval = 0;
+    int  id = -1, intent_id = -1, perform = -1, flags = 0;
+    long trigger_at = -1, interval = 0;
 
     try {
       id         = getColumnInteger(c, "id",         id);

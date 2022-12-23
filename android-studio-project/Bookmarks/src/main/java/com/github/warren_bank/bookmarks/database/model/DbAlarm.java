@@ -2,12 +2,12 @@ package com.github.warren_bank.bookmarks.database.model;
 
 public class DbAlarm {
 
-  public int     id;
-  public int     intent_id;
-  public long    trigger_at;
-  public long    interval;
-  public int     perform;
-  public int     flags;
+  public int  id;
+  public int  intent_id;
+  public long trigger_at;
+  public long interval;
+  public int  perform;
+  public int  flags;
 
   private DbAlarm(int id, int intent_id, long trigger_at, long interval, int perform, int flags) {
     this.id         = id;
