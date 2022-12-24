@@ -782,15 +782,6 @@ public class DbGateway {
     return db.execTransaction(queries);
   }
 
-  public boolean updateAlarm(DbAlarm dbAlarm) {
-    if ((dbAlarm.intent_id < 0) || (dbAlarm.perform < 0) || (dbAlarm.trigger_at < 0)) return false;
-
-    return (
-         ((dbAlarm.id < 0) || deleteAlarm(dbAlarm.id))
-      && (addAlarm(dbAlarm))
-    );
-  }
-
   public boolean addAlarm(DbAlarm dbAlarm) {
     if ((dbAlarm.intent_id < 0) || (dbAlarm.perform < 0) || (dbAlarm.trigger_at < 0)) return false;
 
@@ -810,6 +801,35 @@ public class DbGateway {
       dbAlarm.id = (int) id;
 
     return ok;
+  }
+
+  public boolean updateAlarm(DbAlarm dbAlarm) {
+    if ((dbAlarm.intent_id < 0) || (dbAlarm.perform < 0) || (dbAlarm.trigger_at < 0)) return false;
+
+    if (dbAlarm.id < 0)
+      return addAlarm(dbAlarm);
+
+    if (!deleteAlarm(dbAlarm.id))
+      return false;
+
+    try {
+      String query = "INSERT INTO intent_alarms"
+        + "   (id, intent_id, trigger_at, interval, perform, flags)"
+        + " VALUES"
+        + "   ("
+        +         dbAlarm.id                                           + ", "
+        +         dbAlarm.intent_id                                    + ", "
+        +         dbAlarm.trigger_at                                   + ", "
+        +         dbAlarm.interval                                     + ", "
+        +         dbAlarm.perform                                      + ", "
+        +         dbAlarm.flags
+        + "   )";
+
+      return db.execQuery(query);
+    }
+    catch(Exception e) {
+      return false;
+    }
   }
 
   public boolean deleteAlarm(int alarmId) {
