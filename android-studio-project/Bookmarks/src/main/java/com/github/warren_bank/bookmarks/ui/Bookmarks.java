@@ -462,7 +462,7 @@ public class Bookmarks extends ListActivity implements RuntimePermissionUtils.Ru
         showSettings();
         break;
       case MENU_ACTIONBAR_SCHEDULED :
-        showScheduled();
+        alarmPermissionCheck(null);
         break;
       case MENU_ACTIONBAR_DB_BACKUP :
         backup(false);
@@ -555,7 +555,7 @@ public class Bookmarks extends ListActivity implements RuntimePermissionUtils.Ru
           performBookmark(selectedItem);
           return true;
         case MENU_CONTEXT_INTENT_SCHEDULE :
-          scheduleBookmark(selectedItem);
+          alarmPermissionCheck(selectedItem);
           return true;
         case MENU_CONTEXT_INTENT_EDIT :
           editBookmark(selectedItem);
@@ -1191,6 +1191,16 @@ public class Bookmarks extends ListActivity implements RuntimePermissionUtils.Ru
     RuntimePermissionUtils.requestPermissions(Bookmarks.this, Bookmarks.this, allRequestedPermissions, requestCode, passthrough);
   }
 
+  private void alarmPermissionCheck(FolderContentItem selectedItem) {
+    String[] allRequestedPermissions = new String[]{"android.permission.SCHEDULE_EXACT_ALARM"};
+
+    int requestCode = Constants.PERMISSION_CHECK_REQUEST_CODE_ALARM_SCHEDULE_EXACT;
+
+    Object passthrough = (Object) selectedItem;
+
+    RuntimePermissionUtils.requestPermissions(Bookmarks.this, Bookmarks.this, allRequestedPermissions, requestCode, passthrough);
+  }
+
   @Override
   public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
     RuntimePermissionUtils.onRequestPermissionsResult(Bookmarks.this, Bookmarks.this, requestCode, permissions, grantResults);
@@ -1313,6 +1323,15 @@ public class Bookmarks extends ListActivity implements RuntimePermissionUtils.Ru
           addShortcutForBookmark(selectedItem);
         }
         break;
+      case Constants.PERMISSION_CHECK_REQUEST_CODE_ALARM_SCHEDULE_EXACT: {
+          FolderContentItem selectedItem = (FolderContentItem) passthrough;
+
+          if (passthrough == null)
+            showScheduled();
+          else
+            scheduleBookmark(selectedItem);
+        }
+        break;
     }
   }
 
@@ -1342,6 +1361,11 @@ public class Bookmarks extends ListActivity implements RuntimePermissionUtils.Ru
               }
             })
             .show();
+        }
+        break;
+      case Constants.PERMISSION_CHECK_REQUEST_CODE_ALARM_SCHEDULE_EXACT: {
+          // allow the user to proceed; they were warned.
+          onRequestPermissionsGranted(requestCode, passthrough);
         }
         break;
       default: {

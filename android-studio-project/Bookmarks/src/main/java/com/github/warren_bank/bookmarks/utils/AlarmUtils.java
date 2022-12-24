@@ -17,6 +17,13 @@ import java.util.List;
 
 public class AlarmUtils {
 
+  public static boolean canScheduleExactAlarms(Context context) {
+    if (Build.VERSION.SDK_INT < 31) return true;
+
+    AlarmManager am = getAlarmManager(context);
+    return am.canScheduleExactAlarms();
+  }
+
   public static void schedule(Context context, DbAlarm dbAlarm) {
     AlarmManager am     = getAlarmManager(context);
     Resources resources = context.getResources();

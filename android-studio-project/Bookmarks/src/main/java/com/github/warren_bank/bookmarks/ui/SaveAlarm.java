@@ -18,7 +18,9 @@ import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.content.res.Resources;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -79,6 +81,7 @@ public class SaveAlarm extends Activity {
     flag_alarm_run_when_missed = (CheckBox) findViewById(R.id.flag_alarm_run_when_missed);
 
     onNewIntent(getIntent());
+    checkPermission();
   }
 
   @Override
@@ -373,6 +376,20 @@ public class SaveAlarm extends Activity {
     if (ok) {
       AlarmUtils.schedule(SaveAlarm.this, dbAlarm);
       showAlarms();
+    }
+  }
+
+  // ---------------------------------------------------------------------------
+  // runtime permission check
+  // ---------------------------------------------------------------------------
+
+  private void checkPermission() {
+    if (!AlarmUtils.canScheduleExactAlarms(SaveAlarm.this)) {
+      Intent intent = new Intent(
+        Settings.ACTION_REQUEST_SCHEDULE_EXACT_ALARM,
+        Uri.parse("package:" + getPackageName())
+      );
+      startActivity(intent);
     }
   }
 
