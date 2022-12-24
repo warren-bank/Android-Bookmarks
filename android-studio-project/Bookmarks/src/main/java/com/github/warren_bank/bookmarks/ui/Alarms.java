@@ -83,14 +83,14 @@ public class Alarms extends ListActivity {
   }
 
   @Override
-  protected void onResume() {
-    super.onResume();
+  protected void onStart() {
+    super.onStart();
     registerReceiver(refreshReceiver, refreshReceiverFilter, Constants.BROADCAST_PERMISSION_ALARM_EVENT, /* handler= */ null);
   }
 
   @Override
-  protected void onPause() {
-    super.onPause();
+  protected void onStop() {
+    super.onStop();
     unregisterReceiver(refreshReceiver);
   }
 
