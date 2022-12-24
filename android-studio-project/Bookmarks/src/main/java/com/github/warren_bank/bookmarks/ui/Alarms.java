@@ -8,10 +8,15 @@ import com.github.warren_bank.bookmarks.ui.model.AlarmContentItem;
 import com.github.warren_bank.bookmarks.ui.widgets.AlarmContentsAdapter;
 import com.github.warren_bank.bookmarks.utils.AlarmUtils;
 
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
+
 import android.app.AlertDialog;
 import android.app.ListActivity;
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.ContextMenu;
@@ -45,6 +50,9 @@ public class Alarms extends ListActivity {
   private List<AlarmContentItem> currentAlarmContentItems;
   private AlarmContentsAdapter currentAlarmContentsAdapter;
 
+  private BroadcastReceiver refreshReceiver;
+  private IntentFilter refreshReceiverFilter;
+
   // ======================
   // Lifecycle
   // ======================
@@ -66,6 +74,7 @@ public class Alarms extends ListActivity {
     setListAdapter(currentAlarmContentsAdapter);
 
     getAlarmContentItems();
+    initRefreshReceiver();
   }
 
   @Override
@@ -73,6 +82,18 @@ public class Alarms extends ListActivity {
     if ((intent != null) && intent.getBooleanExtra(Constants.EXTRA_RELOAD_LIST, false)) {
       getAlarmContentItems();
     }
+  }
+
+  @Override
+  protected void onResume() {
+    super.onResume();
+    LocalBroadcastManager.getInstance(Alarms.this).registerReceiver(refreshReceiver, refreshReceiverFilter);
+  }
+
+  @Override
+  protected void onPause() {
+    super.onPause();
+    LocalBroadcastManager.getInstance(Alarms.this).unregisterReceiver(refreshReceiver);
   }
 
   // ---------------------------------------------------------------------------
@@ -261,4 +282,27 @@ public class Alarms extends ListActivity {
     currentAlarmContentItems.clear();
     currentAlarmContentsAdapter.notifyDataSetChanged();
   }
+
+  // ---------------------------------------------------------------------------
+  // implementation: BroadcastReceiver to refresh the list when alarms execute
+  // ---------------------------------------------------------------------------
+
+  private void initRefreshReceiver() {
+    refreshReceiverFilter = new IntentFilter();
+    refreshReceiverFilter.addAction(Constants.EXTRA_RELOAD_LIST);
+
+    refreshReceiver = new BroadcastReceiver() {
+      @Override
+      public void onReceive(Context context, Intent intent) {
+        if (intent == null) return;
+
+        String action = intent.getAction();
+        if ((action == null) || (!action.equals(Constants.EXTRA_RELOAD_LIST))) return;
+
+        // refresh list of alarms
+        getAlarmContentItems();
+      }
+    };
+  }
+
 }

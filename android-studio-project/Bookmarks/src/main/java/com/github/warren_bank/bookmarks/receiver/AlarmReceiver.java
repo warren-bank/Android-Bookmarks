@@ -3,6 +3,8 @@ package com.github.warren_bank.bookmarks.receiver;
 import com.github.warren_bank.bookmarks.common.Constants;
 import com.github.warren_bank.bookmarks.utils.AlarmUtils;
 
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
+
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -19,6 +21,7 @@ public class AlarmReceiver extends BroadcastReceiver {
         case "android.intent.action.BOOT_COMPLETED" :
         case "android.intent.action.QUICKBOOT_POWERON" : {
           AlarmUtils.rescheduleAll(context);
+          notifyRefreshReceiver(context);
           return;
         }
       }
@@ -27,6 +30,11 @@ public class AlarmReceiver extends BroadcastReceiver {
     int alarmId  = intent.getIntExtra(Constants.EXTRA_ALARM_ID, -1);
     if (alarmId >= 0) {
       AlarmUtils.execute(context, alarmId);
+      notifyRefreshReceiver(context);
     }
+  }
+
+  private void notifyRefreshReceiver(Context context) {
+    LocalBroadcastManager.getInstance(context).sendBroadcast(new Intent(Constants.EXTRA_RELOAD_LIST));
   }
 }
