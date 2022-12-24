@@ -8,6 +8,8 @@ import com.github.warren_bank.bookmarks.ui.model.AlarmContentItem;
 import com.github.warren_bank.bookmarks.ui.widgets.AlarmContentsAdapter;
 import com.github.warren_bank.bookmarks.utils.AlarmUtils;
 
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
+
 import android.app.AlertDialog;
 import android.app.ListActivity;
 import android.content.BroadcastReceiver;
@@ -85,13 +87,13 @@ public class Alarms extends ListActivity {
   @Override
   protected void onStart() {
     super.onStart();
-    registerReceiver(refreshReceiver, refreshReceiverFilter, Constants.BROADCAST_PERMISSION_ALARM_EVENT, /* handler= */ null);
+    LocalBroadcastManager.getInstance(Alarms.this).registerReceiver(refreshReceiver, refreshReceiverFilter);
   }
 
   @Override
   protected void onStop() {
     super.onStop();
-    unregisterReceiver(refreshReceiver);
+    LocalBroadcastManager.getInstance(Alarms.this).unregisterReceiver(refreshReceiver);
   }
 
   // ---------------------------------------------------------------------------

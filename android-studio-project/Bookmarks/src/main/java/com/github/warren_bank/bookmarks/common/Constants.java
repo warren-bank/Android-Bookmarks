@@ -27,14 +27,11 @@ public class Constants {
   public static final String PUBLIC_FILE_PROVIDER_AUTHORITY = Constants.PACKAGE_NAME + ".publicfileprovider";
 
   /* Intent Extras */
-  public static final String EXTRA_INTENT_ID                  = Constants.PACKAGE_NAME + ".BookmarkId";
-  public static final String EXTRA_FOLDER_ID                  = Constants.PACKAGE_NAME + ".FolderId";
-  public static final String EXTRA_ALARM_ID                   = Constants.PACKAGE_NAME + ".AlarmId";
-  public static final String EXTRA_RELOAD_LIST                = Constants.PACKAGE_NAME + ".ReloadList";
-
-  /* Broadcast Receiver Permissions */
-  public static final String BROADCAST_PERMISSION_ALARM_EVENT = Constants.PACKAGE_NAME + ".permission.BROADCAST_ALARM_EVENT";
+  public static final String EXTRA_INTENT_ID                = Constants.PACKAGE_NAME + ".BookmarkId";
+  public static final String EXTRA_FOLDER_ID                = Constants.PACKAGE_NAME + ".FolderId";
+  public static final String EXTRA_ALARM_ID                 = Constants.PACKAGE_NAME + ".AlarmId";
+  public static final String EXTRA_RELOAD_LIST              = Constants.PACKAGE_NAME + ".ReloadList";
 
   /* Broadcast Receiver Actions */
-  public static final String BROADCAST_ACTION_RELOAD_LIST     = Constants.EXTRA_RELOAD_LIST;
+  public static final String BROADCAST_ACTION_RELOAD_LIST   = Constants.EXTRA_RELOAD_LIST;
 }
