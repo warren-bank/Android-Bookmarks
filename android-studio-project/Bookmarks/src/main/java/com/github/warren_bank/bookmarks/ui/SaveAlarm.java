@@ -12,6 +12,7 @@ import com.github.warren_bank.bookmarks.ui.dialogs.TimeDurationPicker;
 import com.github.warren_bank.bookmarks.ui.dialogs.TimeDurationPickerDialog;
 import com.github.warren_bank.bookmarks.ui.model.AlarmContentItem;
 import com.github.warren_bank.bookmarks.utils.AlarmUtils;
+import com.github.warren_bank.bookmarks.utils.RuntimePermissionUtils;
 
 import android.app.Activity;
 import android.app.DatePickerDialog;
@@ -79,7 +80,7 @@ public class SaveAlarm extends Activity {
     flag_alarm_run_when_missed = (CheckBox) findViewById(R.id.flag_alarm_run_when_missed);
 
     onNewIntent(getIntent());
-    AlarmUtils.checkPermissions(SaveAlarm.this);
+    RuntimePermissionUtils.checkAlarmPermissions(SaveAlarm.this);
   }
 
   @Override

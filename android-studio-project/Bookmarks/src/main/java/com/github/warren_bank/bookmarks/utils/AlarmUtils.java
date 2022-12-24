@@ -11,44 +11,11 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
-import android.net.Uri;
 import android.os.Build;
-import android.provider.Settings;
 
 import java.util.List;
 
 public class AlarmUtils {
-
-  public static void checkPermissions(Context context) {
-    Uri uri = Uri.parse("package:" + context.getPackageName());
-
-    if (!canScheduleExactAlarms(context)) {
-      Intent intent = new Intent(Settings.ACTION_REQUEST_SCHEDULE_EXACT_ALARM, uri);
-      context.startActivity(intent);
-    }
-
-    if (!canStartActivityFromBackground() && !canDrawOverlays(context)) {
-      Intent intent = new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION, uri);
-      context.startActivity(intent);
-    }
-  }
-
-  public static boolean canScheduleExactAlarms(Context context) {
-    if (Build.VERSION.SDK_INT < 31) return true;
-
-    AlarmManager am = getAlarmManager(context);
-    return am.canScheduleExactAlarms();
-  }
-
-  public static boolean canStartActivityFromBackground() {
-    return (Build.VERSION.SDK_INT < 29);
-  }
-
-  public static boolean canDrawOverlays(Context context) {
-    return (Build.VERSION.SDK_INT < 23)
-      ? true
-      : Settings.canDrawOverlays(context);
-  }
 
   public static void schedule(Context context, DbAlarm dbAlarm) {
     AlarmManager am     = getAlarmManager(context);
@@ -119,7 +86,7 @@ public class AlarmUtils {
     am.cancel(pendingIntent);
   }
 
-  private static AlarmManager getAlarmManager(Context context) {
+  protected static AlarmManager getAlarmManager(Context context) {
     AlarmManager am = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
     return am;
   }

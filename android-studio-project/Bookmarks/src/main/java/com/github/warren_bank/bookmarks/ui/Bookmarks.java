@@ -1049,6 +1049,7 @@ public class Bookmarks extends ListActivity implements RuntimePermissionUtils.Ru
         if (!hasAllPermissions) {
           int requestCode = Constants.PERMISSION_CHECK_REQUEST_CODE_CHANGE_DEFAULT_OUTPUT_DIRECTORY_FILEPICKER;
           RuntimePermissionUtils.requestPermissions(Bookmarks.this, Bookmarks.this, allRequestedPermissions, requestCode, /* passthrough */ null);
+          RuntimePermissionUtils.checkFilePermissions(Bookmarks.this);
           break;
         }
 
@@ -1157,6 +1158,7 @@ public class Bookmarks extends ListActivity implements RuntimePermissionUtils.Ru
     Object passthrough = (Object) dirPath;
 
     RuntimePermissionUtils.requestPermissions(Bookmarks.this, Bookmarks.this, allRequestedPermissions, requestCode, passthrough);
+    RuntimePermissionUtils.checkFilePermissions(Bookmarks.this);
   }
 
   private class PassthroughBackup {
@@ -1189,6 +1191,7 @@ public class Bookmarks extends ListActivity implements RuntimePermissionUtils.Ru
     Object passthrough = (Object) new PassthroughBackup(auto, outputDirectoryPath, backupFileName);
 
     RuntimePermissionUtils.requestPermissions(Bookmarks.this, Bookmarks.this, allRequestedPermissions, requestCode, passthrough);
+    RuntimePermissionUtils.checkFilePermissions(Bookmarks.this);
   }
 
   private void alarmPermissionCheck(FolderContentItem selectedItem) {

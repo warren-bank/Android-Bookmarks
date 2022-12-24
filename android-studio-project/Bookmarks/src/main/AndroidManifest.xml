@@ -21,6 +21,9 @@
          see: https://developer.android.com/guide/components/activities/background-starts -->
   <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
 
+  <!-- required by Android 11+ to use the file picker. -->
+  <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"/>
+
   <application
     android:icon="@drawable/icon_app"
     android:label="@string/app_name_long"

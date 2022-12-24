@@ -3,9 +3,13 @@ package com.github.warren_bank.bookmarks.utils;
 import com.github.warren_bank.bookmarks.BuildConfig;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Build;
+import android.os.Environment;
+import android.provider.Settings;
 import android.text.TextUtils;
 
 import java.util.ArrayList;
@@ -154,4 +158,57 @@ public final class RuntimePermissionUtils {
 
     return missingPermissions.toArray(new String[missingPermissions.size()]);
   }
+
+  // ---------------------------------------------------------------------------
+  // runtime permissions: specific to alarms
+
+  public static void checkAlarmPermissions(Context context) {
+    Uri uri = Uri.parse("package:" + context.getPackageName());
+
+    if (!canScheduleExactAlarms(context)) {
+      Intent intent = new Intent(Settings.ACTION_REQUEST_SCHEDULE_EXACT_ALARM, uri);
+      context.startActivity(intent);
+    }
+
+    if (!canStartActivityFromBackground() && !canDrawOverlays(context)) {
+      Intent intent = new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION, uri);
+      context.startActivity(intent);
+    }
+  }
+
+  public static boolean canScheduleExactAlarms(Context context) {
+    return (Build.VERSION.SDK_INT < 31)
+      ? true
+      : AlarmUtils.getAlarmManager(context).canScheduleExactAlarms();
+  }
+
+  public static boolean canStartActivityFromBackground() {
+    return (Build.VERSION.SDK_INT < 29);
+  }
+
+  public static boolean canDrawOverlays(Context context) {
+    return (Build.VERSION.SDK_INT < 23)
+      ? true
+      : Settings.canDrawOverlays(context);
+  }
+
+  // ---------------------------------------------------------------------------
+  // runtime permissions: specific to the file system
+
+  public static void checkFilePermissions(Context context) {
+    Uri uri = Uri.parse("package:" + context.getPackageName());
+
+    if (!canAccessAllFiles()) {
+      Intent intent = new Intent(Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION, uri);
+      context.startActivity(intent);
+    }
+  }
+
+  public static boolean canAccessAllFiles() {
+    return (Build.VERSION.SDK_INT < 30)
+      ? true
+      : Environment.isExternalStorageManager();
+  }
+
+  // ---------------------------------------------------------------------------
 }
