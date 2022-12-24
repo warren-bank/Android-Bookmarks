@@ -1283,6 +1283,7 @@ public class Bookmarks extends ListActivity implements RuntimePermissionUtils.Ru
       case Constants.PERMISSION_CHECK_REQUEST_CODE_INTENT_START_ACTIVITY: {
           Intent intent = (Intent) passthrough;
           try {
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent);
           }
           catch(Exception e) { // ActivityNotFoundException

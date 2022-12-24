@@ -206,6 +206,7 @@ public class AlarmUtils {
         }
         case 1 : {
           // perform_start_activity
+          intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
           context.startActivity(intent);
           break;
         }
