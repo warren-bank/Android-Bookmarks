@@ -17,6 +17,9 @@
   <!-- android:protectionLevel="dangerous" -->
   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
+  <!-- custom -->
+  <uses-permission android:name="com.github.warren_bank.bookmarks.permission.BROADCAST_ALARM_EVENT"/>
+
   <application
     android:icon="@drawable/icon_app"
     android:label="@string/app_name_long"

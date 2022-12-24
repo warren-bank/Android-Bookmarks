@@ -8,8 +8,6 @@ import com.github.warren_bank.bookmarks.ui.model.AlarmContentItem;
 import com.github.warren_bank.bookmarks.ui.widgets.AlarmContentsAdapter;
 import com.github.warren_bank.bookmarks.utils.AlarmUtils;
 
-import androidx.localbroadcastmanager.content.LocalBroadcastManager;
-
 import android.app.AlertDialog;
 import android.app.ListActivity;
 import android.content.BroadcastReceiver;
@@ -87,13 +85,13 @@ public class Alarms extends ListActivity {
   @Override
   protected void onResume() {
     super.onResume();
-    LocalBroadcastManager.getInstance(Alarms.this).registerReceiver(refreshReceiver, refreshReceiverFilter);
+    registerReceiver(refreshReceiver, refreshReceiverFilter, Constants.BROADCAST_PERMISSION_ALARM_EVENT, /* handler= */ null);
   }
 
   @Override
   protected void onPause() {
     super.onPause();
-    LocalBroadcastManager.getInstance(Alarms.this).unregisterReceiver(refreshReceiver);
+    unregisterReceiver(refreshReceiver);
   }
 
   // ---------------------------------------------------------------------------
@@ -289,7 +287,7 @@ public class Alarms extends ListActivity {
 
   private void initRefreshReceiver() {
     refreshReceiverFilter = new IntentFilter();
-    refreshReceiverFilter.addAction(Constants.EXTRA_RELOAD_LIST);
+    refreshReceiverFilter.addAction(Constants.BROADCAST_ACTION_RELOAD_LIST);
 
     refreshReceiver = new BroadcastReceiver() {
       @Override
@@ -297,7 +295,7 @@ public class Alarms extends ListActivity {
         if (intent == null) return;
 
         String action = intent.getAction();
-        if ((action == null) || (!action.equals(Constants.EXTRA_RELOAD_LIST))) return;
+        if ((action == null) || (!action.equals(Constants.BROADCAST_ACTION_RELOAD_LIST))) return;
 
         // refresh list of alarms
         getAlarmContentItems();

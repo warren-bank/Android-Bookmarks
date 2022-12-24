@@ -3,8 +3,6 @@ package com.github.warren_bank.bookmarks.receiver;
 import com.github.warren_bank.bookmarks.common.Constants;
 import com.github.warren_bank.bookmarks.utils.AlarmUtils;
 
-import androidx.localbroadcastmanager.content.LocalBroadcastManager;
-
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -35,6 +33,9 @@ public class AlarmReceiver extends BroadcastReceiver {
   }
 
   private void notifyRefreshReceiver(Context context) {
-    LocalBroadcastManager.getInstance(context).sendBroadcast(new Intent(Constants.EXTRA_RELOAD_LIST));
+    context.sendBroadcast(
+      new Intent(Constants.BROADCAST_ACTION_RELOAD_LIST),
+      Constants.BROADCAST_PERMISSION_ALARM_EVENT
+    );
   }
 }
