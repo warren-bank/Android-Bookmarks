@@ -1192,11 +1192,15 @@ public class Bookmarks extends ListActivity implements RuntimePermissionUtils.Ru
   }
 
   private void alarmPermissionCheck(FolderContentItem selectedItem) {
-    String[] allRequestedPermissions = new String[]{"android.permission.SCHEDULE_EXACT_ALARM"};
+    ArrayList<String> allRequestedPermissionsList = new ArrayList<String>();
+    if (Build.VERSION.SDK_INT >= 29)
+      allRequestedPermissionsList.add("android.permission.SYSTEM_ALERT_WINDOW");
+    if (Build.VERSION.SDK_INT >= 31)
+      allRequestedPermissionsList.add("android.permission.SCHEDULE_EXACT_ALARM");
 
-    int requestCode = Constants.PERMISSION_CHECK_REQUEST_CODE_ALARM_SCHEDULE_EXACT;
-
-    Object passthrough = (Object) selectedItem;
+    String[] allRequestedPermissions = allRequestedPermissionsList.toArray(new String[0]);
+    int requestCode                  = Constants.PERMISSION_CHECK_REQUEST_CODE_ALARM_SCHEDULE_EXACT;
+    Object passthrough               = (Object) selectedItem;
 
     RuntimePermissionUtils.requestPermissions(Bookmarks.this, Bookmarks.this, allRequestedPermissions, requestCode, passthrough);
   }
