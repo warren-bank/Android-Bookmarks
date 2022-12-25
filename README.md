@@ -89,7 +89,7 @@ Android app to save Intents as an organized collection of bookmarks.
 #### Notes
 
 * minimum supported version of Android:
-  * Android 1.0 (API 1)
+  * Android 2.3 Gingerbread (API 9)
 
 #### Additional Notes
 
