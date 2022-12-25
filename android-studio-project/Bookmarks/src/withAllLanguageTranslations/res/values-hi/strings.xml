@@ -8,18 +8,31 @@
     <!ENTITY bookmarks     "पसंद">
     <!ENTITY lc_bookmark   "पुस्तचिह्न">
     <!ENTITY lc_bookmarks  "पसंद">
+    <!ENTITY alarm         "सचेतक">
+    <!ENTITY alarms        "सचेतक">
+    <!ENTITY lc_alarm      "चेतावनी">
+    <!ENTITY lc_alarms     "एलार्म">
+    <!ENTITY add           "जोड़ें">
+    <!ENTITY cancel        "रद्द करें">
+    <!ENTITY delete        "मिटाएँ">
+    <!ENTITY edit          "संपादित करें">
+    <!ENTITY move          "खिसकाएँ">
+    <!ENTITY name          "नाम">
+    <!ENTITY update        "अद्यतन">
 ]>
 <resources>
 <string name="app_name_long">&bookmarks;</string>
+<string name="activity_label_save_bookmark">&add; &bookmark;</string>
 <string name="layout_main_no_intents_in_folder">नहीं &bookmarks; पाया.</string>
 <string name="layout_main_no_results_for_search">कोई खोज परिणाम नहीं मिला.</string>
 <string name="layout_main_results_for_search_label">के लिए परिणाम:</string>
 <string name="menu_actionbar_intent_search">ढूंढें</string>
-<string name="menu_actionbar_folder_add">जोड़ें &folder;</string>
-<string name="menu_actionbar_intent_add">जोड़ें &bookmark;</string>
-<string name="menu_actionbar_move_complete">वर्तमान में ले जाएँ &folder;</string>
-<string name="menu_actionbar_move_cancel">चाल रद्द करें</string>
+<string name="menu_actionbar_folder_add">&add; &folder;</string>
+<string name="menu_actionbar_intent_add">&add; &bookmark;</string>
+<string name="menu_actionbar_move_complete">&move; चालू &folder;</string>
+<string name="menu_actionbar_move_cancel">&cancel; &move;</string>
 <string name="menu_actionbar_settings">विन्यास</string>
+<string name="menu_actionbar_scheduled">अनुसूचित</string>
 <string name="menu_actionbar_db_backup">बैकअप डाटाबेस</string>
 <string name="menu_actionbar_db_restore">डाटाबेस बहाल करें</string>
 <string name="menu_actionbar_db_export">निर्यात &bookmarks;</string>
@@ -28,32 +41,35 @@
 <string name="menu_context_folder_hide">छुपाएं</string>
 <string name="menu_context_folder_unhide">अछुना</string>
 <string name="menu_context_folder_rename">नाम बदलें</string>
-<string name="menu_context_folder_move">खिसकाएँ</string>
-<string name="menu_context_folder_delete">मिटाएँ</string>
+<string name="menu_context_folder_move">&move;</string>
+<string name="menu_context_folder_delete">&delete;</string>
 <string name="menu_context_intent_perform">प्रदर्शन करें…</string>
-<string name="menu_context_intent_edit">संपादित करें</string>
+<string name="menu_context_intent_schedule">समयसारिणी…</string>
+<string name="menu_context_intent_edit">&edit;</string>
+<string name="menu_context_intent_move">&move;</string>
 <string name="menu_context_intent_copy">नक़ल</string>
+<string name="menu_context_intent_delete">&delete;</string>
 <string name="perform_send_broadcast">प्रसारण भेजें</string>
 <string name="perform_start_activity">क्रिया प्रारंभ करें</string>
 <string name="perform_start_foreground_service">अग्रभूमि सेवा प्रारंभ करें</string>
 <string name="perform_start_service">सेवा प्रारंभ करें</string>
 <string name="perform_stop_service">सेवा बंद करें</string>
-<string name="perform_add_shortcut">शॉर्टकट जोड़ें</string>
+<string name="perform_add_shortcut">&add; शॉर्टकट</string>
 <string name="settings_option_show_hidden">छुपे हुए दिखाएँ &lc_folders;</string>
 <string name="settings_option_auto_backup">स्वचालित दैनिक बैकअप करें</string>
 <string name="settings_option_backup_versioning">3 सबसे हाल के स्वचालित दैनिक बैकअप रखें</string>
 <string name="settings_option_startup_folder">आरंभिक &lc_folder; स्टार्टअप पर दिखाने के लिए:</string>
 <string name="settings_option_output_directory">बैकअप और निर्यात के लिए डिफ़ॉल्ट आउटपुट निर्देशिका:</string>
 <string name="dialog_ok">OK</string>
-<string name="dialog_cancel">रद्द करें</string>
-<string name="dialog_add">जोड़ें</string>
-<string name="dialog_add_more">जोड़ें…</string>
+<string name="dialog_cancel">&cancel;</string>
+<string name="dialog_add">&add;</string>
+<string name="dialog_add_more">&add;…</string>
 <string name="dialog_change">बदलें…</string>
 <string name="dialog_choose">चुनें…</string>
 <string name="dialog_save">सहेजें</string>
-<string name="dialog_delete">मिटाएँ</string>
+<string name="dialog_delete">&delete;</string>
 <string name="dialog_backup_preupdate_title">डेटाबेस अद्यतन आवश्यक है</string>
-<string name="dialog_backup_preupdate_message">आप इस अनुप्रयोग का एक नया संस्करण स्थापित किया है. डेटाबेस के संस्करण को भी अद्यतन किए जाने की आवश्यकता है. इस ऑपरेशन से पहले बैकअप सहेज लें; कोई भी त्रुटि डेटाबेस को भ्रष्ट कर देगा. ऐसा करने के लिए, आपको बैकअप फ़ाइल को बाहरी भंडारण के लिए सहेजने के लिए पहले अनुमति लेनी होगी. क्या आप आवश्यक अद्यतन से पहले किसी बैकअप को सहेजना चाहेंगे\??</string>
+<string name="dialog_backup_preupdate_message">आप इस अनुप्रयोग का एक नया संस्करण स्थापित किया है. डेटाबेस के संस्करण को भी अद्यतन किए जाने की आवश्यकता है. इस ऑपरेशन से पहले बैकअप सहेज लें; कोई भी त्रुटि डेटाबेस को भ्रष्ट कर देगा. ऐसा करने के लिए, आपको बैकअप फ़ाइल को बाहरी भंडारण के लिए सहेजने के लिए पहले अनुमति लेनी होगी. क्या आप आवश्यक अद्यतन से पहले किसी बैकअप को सहेजना चाहेंगे?</string>
 <string name="dialog_intent_search_option_query">प्रश्न:</string>
 <string name="dialog_intent_search_option_only_current_folder">केवल वर्तमान &lc_folder;</string>
 <string name="dialog_backup_done">डाटाबेस बैकअप पूरा किया गया</string>
@@ -78,30 +94,61 @@
 <string name="dialog_import_done">आयात सफलता</string>
 <string name="dialog_import_failed">आयात असफल</string>
 <string name="dialog_import_notfound">आयात फ़ाइल पढ़ा नहीं जा सका</string>
-<string name="dialog_delete_folder_title">मिटाएँ &folder;?</string>
-<string name="dialog_delete_intent_title">मिटाएँ &bookmark;?</string>
+<string name="dialog_delete_folder_title">&delete; &folder;?</string>
+<string name="dialog_delete_intent_title">&delete; &bookmark;?</string>
 <string name="dialog_delete_confirm">क्या आप सुनिश्चित हैं कि आप हटाना चाहते हैं "%s"?</string>
 <string name="folder_rename_title">नाम बदलें &folder;</string>
-<string name="folder_attribute_name">नाम</string>
-<string name="intent_edit_title">संपादित करें &bookmark;</string>
+<string name="folder_attribute_name">&name;</string>
+<string name="intent_add_title">&add; &bookmark;</string>
+<string name="intent_edit_title">&edit; &bookmark;</string>
+<string name="intent_attribute_name">&name;</string>
 <string name="intent_attribute_folder">&folder;</string>
 <string name="intent_attribute_flags">ध्वज</string>
 <string name="intent_attribute_action">क्रिया</string>
-<string name="intent_attribute_package_name">पैकेज नाम</string>
-<string name="intent_attribute_class_name">वर्ग नाम</string>
+<string name="intent_attribute_package_name">पैकेज &name;</string>
+<string name="intent_attribute_class_name">वर्ग &name;</string>
 <string name="intent_attribute_data_uri">डाटा URI</string>
 <string name="intent_attribute_data_type">डाटा (MIME) क़िस्म</string>
 <string name="intent_attribute_categories">श्रेणीः</string>
 <string name="intent_attribute_extras">एक्स्ट्रा</string>
-<string name="dialog_update_intent_attribute_category_title">अद्यतन श्रेणी</string>
-<string name="dialog_update_intent_attribute_extra_title_add">अतिरिक्त जोड़ें</string>
-<string name="dialog_update_intent_attribute_extra_title_edit">अतिरिक्त अद्यतन</string>
+<string name="dialog_update_intent_attribute_category_title">&update; श्रेणी</string>
+<string name="dialog_update_intent_attribute_category_name">&name;</string>
+<string name="dialog_update_intent_attribute_extra_title_add">&add; अतिरिक्त</string>
+<string name="dialog_update_intent_attribute_extra_title_edit">&update; अतिरिक्त</string>
+<string name="dialog_update_intent_attribute_extra_name">&name;</string>
 <string name="dialog_update_intent_attribute_extra_value_type">मूल्य के प्रकार</string>
 <string name="dialog_update_intent_attribute_extra_value">मान</string>
-<string name="dialog_update_intent_attribute_extra_value_separator">मान सूची सेपरेटर जोड़ें</string>
+<string name="dialog_update_intent_attribute_extra_value_separator">&add; मान सूची सेपरेटर</string>
 <string name="messages_db_error_update">अद्यतन करने के दौरान डाटाबेस त्रुटि</string>
 <string name="messages_no_permission">अनुरोधित ऑपरेशन करने के लिए अपर्याप्त अनुमति</string>
 <string name="messages_activity_not_found">कोई गतिविधि मैच नहीं है Intent</string>
 <string name="spinner_items_category_label_common_values">-- सामान्य मूल्य --</string>
 <string name="spinner_items_category_label_more_values">-- अधिक मूल्य --</string>
+<string name="activity_label_alarms">अनुसूचित &alarms;</string>
+<string name="activity_label_save_alarm">&alarm; समयसारिणी</string>
+<string name="layout_main_no_alarms">नहीं &alarms; पाया.</string>
+<string name="menu_actionbar_cancel_all">&cancel; सभी</string>
+<string name="menu_context_alarm_edit">&edit;</string>
+<string name="menu_context_alarm_cancel">&cancel;</string>
+<string name="dialog_cancel_alarm_title">&cancel; &alarm;?</string>
+<string name="dialog_cancel_alarms_title">&cancel; &alarms;?</string>
+<string name="dialog_delete_confirm_alarms">सभी &lc_alarms;</string>
+<string name="alarm_attribute_intent">&bookmark;:</string>
+<string name="alarm_attribute_perform">प्रदर्शन करना:</string>
+<string name="alarm_attribute_date">तिथि:</string>
+<string name="alarm_attribute_time">समय:</string>
+<string name="alarm_attribute_interval">दोहराएँ प्रत्येक:</string>
+<string name="alarm_attribute_flags">विकल्प:</string>
+<string name="flag_alarm_is_exact">उच्च परिशुद्धता (कम कुशल)</string>
+<string name="flag_alarm_run_when_idle">निष्क्रिय होने पर अलार्म चलाएँ</string>
+<string name="flag_alarm_wake_when_idle">युक्ति युक्त जब निष्क्रिय</string>
+<string name="flag_alarm_run_when_missed">जब चूक हो तो रीबूट पर अलार्म चलाएँ</string>
+<string name="dialog_set">सेट करें</string>
+<string name="time_picker_dialog_reset">शून्य पर रीसेट करें</string>
+<string name="accessibility_time_picker_sign">"धनात्मक/नकारात्मक हस्ताक्षर"</string>
+<string name="accessibility_time_picker_day">"दिन"</string>
+<string name="accessibility_time_picker_hour">"घंटा"</string>
+<string name="accessibility_time_picker_minute">"मिनिट"</string>
+<string name="accessibility_time_picker_second">"सेकण्ड"</string>
+<string name="accessibility_time_picker_milli">"मिलीसेंकेंड"</string>
 </resources>

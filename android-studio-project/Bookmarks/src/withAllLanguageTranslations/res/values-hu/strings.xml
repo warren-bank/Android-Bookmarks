@@ -8,18 +8,31 @@
     <!ENTITY bookmarks     "Könyvjelzők">
     <!ENTITY lc_bookmark   "Könyvjelző">
     <!ENTITY lc_bookmarks  "Könyvjelzők">
+    <!ENTITY alarm         "Riasztások">
+    <!ENTITY alarms        "Alfegyverek">
+    <!ENTITY lc_alarm      "Riasztó">
+    <!ENTITY lc_alarms     "Riasztók">
+    <!ENTITY add           "Hozzáadás">
+    <!ENTITY cancel        "Mégse">
+    <!ENTITY delete        "Törlés">
+    <!ENTITY edit          "Szerkesztés">
+    <!ENTITY move          "Áthelyezés">
+    <!ENTITY name          "Név">
+    <!ENTITY update        "Frissítés">
 ]>
 <resources>
 <string name="app_name_long">&bookmarks;</string>
+<string name="activity_label_save_bookmark">&add; &bookmark;</string>
 <string name="layout_main_no_intents_in_folder">Nem &bookmarks; Talált.</string>
 <string name="layout_main_no_results_for_search">Nem találhatók keresési eredmények.</string>
 <string name="layout_main_results_for_search_label">Eredmények:</string>
 <string name="menu_actionbar_intent_search">Keresés</string>
-<string name="menu_actionbar_folder_add">Hozzáadás &folder;</string>
-<string name="menu_actionbar_intent_add">Hozzáadás &bookmark;</string>
-<string name="menu_actionbar_move_complete">Ugrás az aktuális &folder;</string>
-<string name="menu_actionbar_move_cancel">Mozgatás visszavonása</string>
+<string name="menu_actionbar_folder_add">&add; &folder;</string>
+<string name="menu_actionbar_intent_add">&add; &bookmark;</string>
+<string name="menu_actionbar_move_complete">&move; To Aktuális &folder;</string>
+<string name="menu_actionbar_move_cancel">&cancel; &move;</string>
 <string name="menu_actionbar_settings">Beállítások</string>
+<string name="menu_actionbar_scheduled">Ütemezett</string>
 <string name="menu_actionbar_db_backup">Biztonsági mentés adatbázis</string>
 <string name="menu_actionbar_db_restore">Adatbázis visszaállítása</string>
 <string name="menu_actionbar_db_export">Exportálás &bookmarks;</string>
@@ -28,30 +41,33 @@
 <string name="menu_context_folder_hide">Elrejtés</string>
 <string name="menu_context_folder_unhide">Elbújás</string>
 <string name="menu_context_folder_rename">Átnevezés</string>
-<string name="menu_context_folder_move">Áthelyezés</string>
-<string name="menu_context_folder_delete">Törlés</string>
+<string name="menu_context_folder_move">&move;</string>
+<string name="menu_context_folder_delete">&delete;</string>
 <string name="menu_context_intent_perform">Végezze…</string>
-<string name="menu_context_intent_edit">Szerkesztés</string>
+<string name="menu_context_intent_schedule">Ütemezés…</string>
+<string name="menu_context_intent_edit">&edit;</string>
+<string name="menu_context_intent_move">&move;</string>
 <string name="menu_context_intent_copy">Másolás</string>
+<string name="menu_context_intent_delete">&delete;</string>
 <string name="perform_send_broadcast">Broadcast küldése</string>
 <string name="perform_start_activity">Tevékenység indítása</string>
 <string name="perform_start_foreground_service">Foreground szolgáltatás indítása</string>
 <string name="perform_start_service">Szolgáltatás indítása</string>
 <string name="perform_stop_service">Szolgáltatás leállítása</string>
-<string name="perform_add_shortcut">Parancsikon hozzáadása</string>
+<string name="perform_add_shortcut">&add; Rövidebb</string>
 <string name="settings_option_show_hidden">Megjelenítés elrejtve &lc_folders;</string>
 <string name="settings_option_auto_backup">Automatikus napi mentés végrehajtása</string>
 <string name="settings_option_backup_versioning">A 3 legfrissebb automatikus napi mentések megtartása</string>
 <string name="settings_option_startup_folder">Kezdeti &lc_folder; Megjelenítés indításkor:</string>
 <string name="settings_option_output_directory">A mentések és exportálások alapértelmezett kimeneti könyvtára:</string>
 <string name="dialog_ok">OK</string>
-<string name="dialog_cancel">Mégse</string>
-<string name="dialog_add">Hozzáadás</string>
-<string name="dialog_add_more">Hozzáadás…</string>
+<string name="dialog_cancel">&cancel;</string>
+<string name="dialog_add">&add;</string>
+<string name="dialog_add_more">&add;…</string>
 <string name="dialog_change">Változás…</string>
 <string name="dialog_choose">Válassz…</string>
 <string name="dialog_save">Mentés</string>
-<string name="dialog_delete">Törlés</string>
+<string name="dialog_delete">&delete;</string>
 <string name="dialog_backup_preupdate_title">Az adatbázis-frissítés szükséges</string>
 <string name="dialog_backup_preupdate_message">Telepítette az alkalmazás újabb változatát. Az adatbázis verziószámát is frissíteni kell. Biztonsági mentés mentése a művelet előtt; minden hiba megrontja az adatbázist. Ehhez először engedélyt kell adnia a mentési fájl külső tárolóba mentésére. Mentést szeretne menteni a szükséges frissítés előtt?</string>
 <string name="dialog_intent_search_option_query">Lekérdezés:</string>
@@ -78,30 +94,61 @@
 <string name="dialog_import_done">Behozatali siker</string>
 <string name="dialog_import_failed">Importálási hiba</string>
 <string name="dialog_import_notfound">A fájl importálása nem olvasható</string>
-<string name="dialog_delete_folder_title">Törlés &folder;?</string>
-<string name="dialog_delete_intent_title">Törlés &bookmark;?</string>
+<string name="dialog_delete_folder_title">&delete; &folder;?</string>
+<string name="dialog_delete_intent_title">&delete; &bookmark;?</string>
 <string name="dialog_delete_confirm">Biztosan törölni kívánja "%s"?</string>
 <string name="folder_rename_title">Átnevezés &folder;</string>
-<string name="folder_attribute_name">Név</string>
-<string name="intent_edit_title">Szerkesztés &bookmark;</string>
+<string name="folder_attribute_name">&name;</string>
+<string name="intent_add_title">&add; &bookmark;</string>
+<string name="intent_edit_title">&edit; &bookmark;</string>
+<string name="intent_attribute_name">&name;</string>
 <string name="intent_attribute_folder">&folder;</string>
 <string name="intent_attribute_flags">Flagok</string>
 <string name="intent_attribute_action">Művelet</string>
-<string name="intent_attribute_package_name">Csomag neve</string>
-<string name="intent_attribute_class_name">Osztály neve</string>
+<string name="intent_attribute_package_name">Csomag &name;</string>
+<string name="intent_attribute_class_name">Osztály &name;</string>
 <string name="intent_attribute_data_uri">Adatok URI</string>
 <string name="intent_attribute_data_type">Adatok (MIME) Típus</string>
 <string name="intent_attribute_categories">Kategóriák</string>
 <string name="intent_attribute_extras">Extras</string>
-<string name="dialog_update_intent_attribute_category_title">A kategória frissítése</string>
-<string name="dialog_update_intent_attribute_extra_title_add">Extra hozzáadása</string>
-<string name="dialog_update_intent_attribute_extra_title_edit">Extra frissítése</string>
+<string name="dialog_update_intent_attribute_category_title">&update; Kategória</string>
+<string name="dialog_update_intent_attribute_category_name">&name;</string>
+<string name="dialog_update_intent_attribute_extra_title_add">&add; Extra</string>
+<string name="dialog_update_intent_attribute_extra_title_edit">&update; Extra</string>
+<string name="dialog_update_intent_attribute_extra_name">&name;</string>
 <string name="dialog_update_intent_attribute_extra_value_type">Érték típusa</string>
 <string name="dialog_update_intent_attribute_extra_value">Érték</string>
-<string name="dialog_update_intent_attribute_extra_value_separator">Értéklista elválasztó hozzáadása</string>
+<string name="dialog_update_intent_attribute_extra_value_separator">&add; Értéklista elválasztó</string>
 <string name="messages_db_error_update">Adatbázis hiba a frissítés során</string>
 <string name="messages_no_permission">Nem elegendő engedély a kért művelet végrehajtásához</string>
 <string name="messages_activity_not_found">Nincs tevékenység Intent</string>
 <string name="spinner_items_category_label_common_values">-- Közös értékek --</string>
 <string name="spinner_items_category_label_more_values">-- Több érték --</string>
+<string name="activity_label_alarms">Ütemezett &alarms;</string>
+<string name="activity_label_save_alarm">&alarm; Ütemezés</string>
+<string name="layout_main_no_alarms">Nem &alarms; Talált.</string>
+<string name="menu_actionbar_cancel_all">&cancel; Mind</string>
+<string name="menu_context_alarm_edit">&edit;</string>
+<string name="menu_context_alarm_cancel">&cancel;</string>
+<string name="dialog_cancel_alarm_title">&cancel; &alarm;?</string>
+<string name="dialog_cancel_alarms_title">&cancel; &alarms;?</string>
+<string name="dialog_delete_confirm_alarms">All &lc_alarms;</string>
+<string name="alarm_attribute_intent">&bookmark;:</string>
+<string name="alarm_attribute_perform">Végrehajtás:</string>
+<string name="alarm_attribute_date">Dátum:</string>
+<string name="alarm_attribute_time">Idő:</string>
+<string name="alarm_attribute_interval">Ismételje meg:</string>
+<string name="alarm_attribute_flags">Beállítások:</string>
+<string name="flag_alarm_is_exact">Magas pontosság (kevésbé hatékony)</string>
+<string name="flag_alarm_run_when_idle">Riasztás végrehajtása tétlen</string>
+<string name="flag_alarm_wake_when_idle">ébresztő, ha tétlen</string>
+<string name="flag_alarm_run_when_missed">Végrehajtási riasztás reboot esetén, ha hiányzik</string>
+<string name="dialog_set">Beállítás</string>
+<string name="time_picker_dialog_reset">Visszaállás nullára</string>
+<string name="accessibility_time_picker_sign">"Pozitív/negatív jel"</string>
+<string name="accessibility_time_picker_day">"Nap"</string>
+<string name="accessibility_time_picker_hour">"Óra"</string>
+<string name="accessibility_time_picker_minute">"Minute"</string>
+<string name="accessibility_time_picker_second">"Második"</string>
+<string name="accessibility_time_picker_milli">"Ezredmásodperc"</string>
 </resources>

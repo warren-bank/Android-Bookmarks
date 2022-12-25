@@ -8,18 +8,31 @@
     <!ENTITY bookmarks     "Bokmärken">
     <!ENTITY lc_bookmark   "bokmärke">
     <!ENTITY lc_bookmarks  "bokmärken">
+    <!ENTITY alarm         "Alarm">
+    <!ENTITY alarms        "Alarm">
+    <!ENTITY lc_alarm      "alarm">
+    <!ENTITY lc_alarms     "larm">
+    <!ENTITY add           "Lägg till">
+    <!ENTITY cancel        "Avbryt">
+    <!ENTITY delete        "Radera">
+    <!ENTITY edit          "Redigera">
+    <!ENTITY move          "Flytta">
+    <!ENTITY name          "NamnName">
+    <!ENTITY update        "Uppdatera">
 ]>
 <resources>
 <string name="app_name_long">&bookmarks;</string>
+<string name="activity_label_save_bookmark">&add; &bookmark;</string>
 <string name="layout_main_no_intents_in_folder">Nej. &bookmarks; hittades.</string>
 <string name="layout_main_no_results_for_search">Inga sökresultat hittades.</string>
 <string name="layout_main_results_for_search_label">Resultat för:</string>
 <string name="menu_actionbar_intent_search">Sök</string>
-<string name="menu_actionbar_folder_add">Lägg till &folder;</string>
-<string name="menu_actionbar_intent_add">Lägg till &bookmark;</string>
-<string name="menu_actionbar_move_complete">Flytta till aktuell &folder;</string>
-<string name="menu_actionbar_move_cancel">Avbryt flyttning</string>
+<string name="menu_actionbar_folder_add">&add; &folder;</string>
+<string name="menu_actionbar_intent_add">&add; &bookmark;</string>
+<string name="menu_actionbar_move_complete">&move; till aktuell &folder;</string>
+<string name="menu_actionbar_move_cancel">&cancel; &move;</string>
 <string name="menu_actionbar_settings">Inställningar</string>
+<string name="menu_actionbar_scheduled">Planerad</string>
 <string name="menu_actionbar_db_backup">Backup-databas</string>
 <string name="menu_actionbar_db_restore">Återställ databas</string>
 <string name="menu_actionbar_db_export">Exportera &bookmarks;</string>
@@ -28,30 +41,33 @@
 <string name="menu_context_folder_hide">Dölj</string>
 <string name="menu_context_folder_unhide">Ta bort</string>
 <string name="menu_context_folder_rename">Byt namn</string>
-<string name="menu_context_folder_move">Flytta</string>
-<string name="menu_context_folder_delete">Radera</string>
+<string name="menu_context_folder_move">&move;</string>
+<string name="menu_context_folder_delete">&delete;</string>
 <string name="menu_context_intent_perform">Utför…</string>
-<string name="menu_context_intent_edit">Redigera</string>
+<string name="menu_context_intent_schedule">Schema…</string>
+<string name="menu_context_intent_edit">&edit;</string>
+<string name="menu_context_intent_move">&move;</string>
 <string name="menu_context_intent_copy">Kopiera</string>
+<string name="menu_context_intent_delete">&delete;</string>
 <string name="perform_send_broadcast">Sänd utsändning</string>
 <string name="perform_start_activity">Starta aktivitet</string>
 <string name="perform_start_foreground_service">Starta förgrundstjänst</string>
 <string name="perform_start_service">Starta tjänst</string>
 <string name="perform_stop_service">Stoppa tjänst</string>
-<string name="perform_add_shortcut">Lägg till genväg</string>
+<string name="perform_add_shortcut">&add; Genväg</string>
 <string name="settings_option_show_hidden">Visa dolda &lc_folders;</string>
 <string name="settings_option_auto_backup">Utför automatisk daglig säkerhetskopiering</string>
 <string name="settings_option_backup_versioning">Behåll de 3 senaste automatiska säkerhetskopiorna</string>
 <string name="settings_option_startup_folder">Initial &lc_folder; för att visa vid start:</string>
 <string name="settings_option_output_directory">Standardutdatakatalog för säkerhetskopior och export:</string>
 <string name="dialog_ok">OK</string>
-<string name="dialog_cancel">Avbryt</string>
-<string name="dialog_add">Lägg till</string>
-<string name="dialog_add_more">Lägg till…</string>
+<string name="dialog_cancel">&cancel;</string>
+<string name="dialog_add">&add;</string>
+<string name="dialog_add_more">&add;-…</string>
 <string name="dialog_change">Ändra…</string>
 <string name="dialog_choose">Välj…</string>
 <string name="dialog_save">Spara</string>
-<string name="dialog_delete">Radera</string>
+<string name="dialog_delete">&delete;</string>
 <string name="dialog_backup_preupdate_title">Databasuppdatering krävs</string>
 <string name="dialog_backup_preupdate_message">Du har installerat en nyare version av det här programmet. Versionen av databasen behöver också uppdateras. Spara en säkerhetskopia innan den här åtgärden rekommenderas. Alla fel kommer att korrumpera databasen. För att kunna göra det måste du först ge behörighet att spara säkerhetskopian till extern lagring. Vill du spara en säkerhetskopia innan den nödvändiga uppdateringen?</string>
 <string name="dialog_intent_search_option_query">Fråga:</string>
@@ -78,30 +94,61 @@
 <string name="dialog_import_done">Importen lyckades</string>
 <string name="dialog_import_failed">Importfel</string>
 <string name="dialog_import_notfound">Importfilen kunde inte läsas</string>
-<string name="dialog_delete_folder_title">Radera &folder;?</string>
-<string name="dialog_delete_intent_title">Radera &bookmark;?</string>
+<string name="dialog_delete_folder_title">&delete; &folder;?</string>
+<string name="dialog_delete_intent_title">&delete; &bookmark;?</string>
 <string name="dialog_delete_confirm">Är du säker på att du vill ta bort "%s"?</string>
 <string name="folder_rename_title">Byt namn &folder;</string>
-<string name="folder_attribute_name">NamnName</string>
-<string name="intent_edit_title">Redigera &bookmark;</string>
+<string name="folder_attribute_name">&name;</string>
+<string name="intent_add_title">&add; &bookmark;</string>
+<string name="intent_edit_title">&edit; &bookmark;</string>
+<string name="intent_attribute_name">&name;</string>
 <string name="intent_attribute_folder">&folder;</string>
 <string name="intent_attribute_flags">Flaggor</string>
 <string name="intent_attribute_action">Åtgärd</string>
-<string name="intent_attribute_package_name">Paketnamn</string>
-<string name="intent_attribute_class_name">Klassnamn</string>
+<string name="intent_attribute_package_name">Paket &name;</string>
+<string name="intent_attribute_class_name">Klass &name;</string>
 <string name="intent_attribute_data_uri">Data URI</string>
 <string name="intent_attribute_data_type">Data (MIME) Typ</string>
 <string name="intent_attribute_categories">Kategorier</string>
 <string name="intent_attribute_extras">Extras</string>
-<string name="dialog_update_intent_attribute_category_title">Uppdatera kategori</string>
-<string name="dialog_update_intent_attribute_extra_title_add">Lägg till extra</string>
-<string name="dialog_update_intent_attribute_extra_title_edit">Uppdatera extra</string>
+<string name="dialog_update_intent_attribute_category_title">&update; Kategori</string>
+<string name="dialog_update_intent_attribute_category_name">&name;</string>
+<string name="dialog_update_intent_attribute_extra_title_add">&add; Extra</string>
+<string name="dialog_update_intent_attribute_extra_title_edit">&update; Extra</string>
+<string name="dialog_update_intent_attribute_extra_name">&name;</string>
 <string name="dialog_update_intent_attribute_extra_value_type">Typ av värde</string>
 <string name="dialog_update_intent_attribute_extra_value">Värde</string>
-<string name="dialog_update_intent_attribute_extra_value_separator">Lägg till värdelista avgränsare</string>
+<string name="dialog_update_intent_attribute_extra_value_separator">&add; Avgränsare för värdelista</string>
 <string name="messages_db_error_update">Databasfel vid uppdatering</string>
 <string name="messages_no_permission">Otillräcklig behörighet för att utföra den begärda åtgärden</string>
 <string name="messages_activity_not_found">Ingen aktivitet matchar Intent</string>
 <string name="spinner_items_category_label_common_values">-- vanliga värden --</string>
 <string name="spinner_items_category_label_more_values">-- fler värden --</string>
+<string name="activity_label_alarms">Planerad &alarms;</string>
+<string name="activity_label_save_alarm">&alarm; Schemalägg</string>
+<string name="layout_main_no_alarms">Nej. &alarms; hittades.</string>
+<string name="menu_actionbar_cancel_all">&cancel; Alla</string>
+<string name="menu_context_alarm_edit">&edit;</string>
+<string name="menu_context_alarm_cancel">&cancel;</string>
+<string name="dialog_cancel_alarm_title">&cancel; &alarm;?</string>
+<string name="dialog_cancel_alarms_title">&cancel; &alarms;?</string>
+<string name="dialog_delete_confirm_alarms">alla &lc_alarms;</string>
+<string name="alarm_attribute_intent">&bookmark;:</string>
+<string name="alarm_attribute_perform">Utför:</string>
+<string name="alarm_attribute_date">Datum:</string>
+<string name="alarm_attribute_time">Tid:</string>
+<string name="alarm_attribute_interval">Upprepa var:</string>
+<string name="alarm_attribute_flags">Optioner:</string>
+<string name="flag_alarm_is_exact">hög precision (mindre effektiv)</string>
+<string name="flag_alarm_run_when_idle">kör alarm när idle</string>
+<string name="flag_alarm_wake_when_idle">vävakenhet när idle</string>
+<string name="flag_alarm_run_when_missed">starta alarm vid omstart när den saknas</string>
+<string name="dialog_set">Uppsättning</string>
+<string name="time_picker_dialog_reset">Återställ till noll</string>
+<string name="accessibility_time_picker_sign">"Positivt / negativt tecken"</string>
+<string name="accessibility_time_picker_day">"Dag"</string>
+<string name="accessibility_time_picker_hour">"Timmar"</string>
+<string name="accessibility_time_picker_minute">"Minut"</string>
+<string name="accessibility_time_picker_second">"Andra"</string>
+<string name="accessibility_time_picker_milli">"Millisekunder"</string>
 </resources>

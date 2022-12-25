@@ -8,18 +8,31 @@
     <!ENTITY bookmarks     "Žymelių">
     <!ENTITY lc_bookmark   "žymelių">
     <!ENTITY lc_bookmarks  "žymelių">
+    <!ENTITY alarm         "Signalizacija">
+    <!ENTITY alarms        "Signalizacija">
+    <!ENTITY lc_alarm      "signalizacija">
+    <!ENTITY lc_alarms     "Signalizacija">
+    <!ENTITY add           "Pridėti">
+    <!ENTITY cancel        "Atšaukti">
+    <!ENTITY delete        "Ištrinti">
+    <!ENTITY edit          "Redaguoti">
+    <!ENTITY move          "Perkelti">
+    <!ENTITY name          "Pavadinimas">
+    <!ENTITY update        "Atnaujinti">
 ]>
 <resources>
 <string name="app_name_long">&bookmarks;</string>
+<string name="activity_label_save_bookmark">&add; &bookmark;</string>
 <string name="layout_main_no_intents_in_folder">Nr. &bookmarks; Rasta.</string>
 <string name="layout_main_no_results_for_search">Nerasta paieškos rezultatų.</string>
 <string name="layout_main_results_for_search_label">Rezultatai:</string>
 <string name="menu_actionbar_intent_search">Ieškoti</string>
-<string name="menu_actionbar_folder_add">Pridėti &folder;</string>
-<string name="menu_actionbar_intent_add">Pridėti &bookmark;</string>
-<string name="menu_actionbar_move_complete">Perkelti į dabartinį &folder;</string>
-<string name="menu_actionbar_move_cancel">Nutraukti ėjimą</string>
+<string name="menu_actionbar_folder_add">&add; &folder;</string>
+<string name="menu_actionbar_intent_add">&add; &bookmark;</string>
+<string name="menu_actionbar_move_complete">&move; Dabartinis &folder;</string>
+<string name="menu_actionbar_move_cancel">&cancel; &move;</string>
 <string name="menu_actionbar_settings">Nustatymai</string>
+<string name="menu_actionbar_scheduled">Suplanuoti</string>
 <string name="menu_actionbar_db_backup">Atsarginės duomenų bazės</string>
 <string name="menu_actionbar_db_restore">Atstatyti duomenų bazę</string>
 <string name="menu_actionbar_db_export">Eksportas &bookmarks;</string>
@@ -28,30 +41,33 @@
 <string name="menu_context_folder_hide">Slėpti</string>
 <string name="menu_context_folder_unhide">Neslėpti</string>
 <string name="menu_context_folder_rename">Pervadinti</string>
-<string name="menu_context_folder_move">Perkelti</string>
-<string name="menu_context_folder_delete">Ištrinti</string>
+<string name="menu_context_folder_move">&move;</string>
+<string name="menu_context_folder_delete">&delete;</string>
 <string name="menu_context_intent_perform">Atlikti…</string>
-<string name="menu_context_intent_edit">Redaguoti</string>
+<string name="menu_context_intent_schedule">Tvarkaraštis…</string>
+<string name="menu_context_intent_edit">&edit;</string>
+<string name="menu_context_intent_move">&move;</string>
 <string name="menu_context_intent_copy">Kopijuoti</string>
+<string name="menu_context_intent_delete">&delete;</string>
 <string name="perform_send_broadcast">Siųsti transliaciją</string>
 <string name="perform_start_activity">Pradėti veiklą</string>
 <string name="perform_start_foreground_service">Naujų žinių pradžia</string>
 <string name="perform_start_service">Pradėti tarnybą</string>
 <string name="perform_stop_service">Stabdyti tarnybą</string>
-<string name="perform_add_shortcut">Pridėti sparčiųjų klavišų</string>
+<string name="perform_add_shortcut">&add; Trumpinti</string>
 <string name="settings_option_show_hidden">Rodyti paslėptą &lc_folders;</string>
 <string name="settings_option_auto_backup">Atlikti automatinį kasdienį pastiprinimą</string>
 <string name="settings_option_backup_versioning">Išlaikyti 3 labiausiai neseniai automatiškai kasdien atsargines kopijas</string>
 <string name="settings_option_startup_folder">Pradinis &lc_folder; rodyti paleidimo metu:</string>
 <string name="settings_option_output_directory">Numatytasis išvesties aplankas, skirtas atsargines kopijas ir eksportą:</string>
 <string name="dialog_ok">OK</string>
-<string name="dialog_cancel">Atšaukti</string>
-<string name="dialog_add">Pridėti</string>
-<string name="dialog_add_more">Pridėti…</string>
+<string name="dialog_cancel">&cancel;</string>
+<string name="dialog_add">&add;</string>
+<string name="dialog_add_more">&add;-…</string>
 <string name="dialog_change">Keisti…</string>
 <string name="dialog_choose">Pasirinkti…</string>
 <string name="dialog_save">Įrašyti</string>
-<string name="dialog_delete">Ištrinti</string>
+<string name="dialog_delete">&delete;</string>
 <string name="dialog_backup_preupdate_title">Būtina Atnaujinti Duomenų Bazę</string>
 <string name="dialog_backup_preupdate_message">Jūs esate įdiegę naujesnę versiją šios programos. Duomenų bazės versija taip pat turi būti atnaujinta. Išsaugoti atsarginę kopiją prieš šią operaciją rekomenduojama; bet kokia klaida sugadins duomenų bazę. Norėdami tai padaryti, pirmiausia turite duoti leidimą išsaugoti atsarginės kopijos išorės saugojimui. Ar norėtumėte išsaugoti atsarginę kopiją prieš reikiamą atnaujinimą?</string>
 <string name="dialog_intent_search_option_query">Užklausa:</string>
@@ -78,30 +94,61 @@
 <string name="dialog_import_done">Importo sėkmė</string>
 <string name="dialog_import_failed">Importo nesėkmė</string>
 <string name="dialog_import_notfound">Nepavyko perskaityti importo bylos</string>
-<string name="dialog_delete_folder_title">Ištrinti &folder;?</string>
-<string name="dialog_delete_intent_title">Ištrinti &bookmark;?</string>
+<string name="dialog_delete_folder_title">&delete; &folder;?</string>
+<string name="dialog_delete_intent_title">&delete; &bookmark;?</string>
 <string name="dialog_delete_confirm">Ar tikrai norite ištrinti "%s"?</string>
 <string name="folder_rename_title">Pervadinti &folder;</string>
-<string name="folder_attribute_name">Pavadinimas</string>
-<string name="intent_edit_title">Redaguoti &bookmark;</string>
+<string name="folder_attribute_name">&name;</string>
+<string name="intent_add_title">&add; &bookmark;</string>
+<string name="intent_edit_title">&edit; &bookmark;</string>
+<string name="intent_attribute_name">&name;</string>
 <string name="intent_attribute_folder">&folder;</string>
 <string name="intent_attribute_flags">Vėliavos</string>
 <string name="intent_attribute_action">Veiksmai</string>
-<string name="intent_attribute_package_name">Pakuotės pavadinimas</string>
-<string name="intent_attribute_class_name">Klasės pavadinimas</string>
+<string name="intent_attribute_package_name">Pakuotė &name;</string>
+<string name="intent_attribute_class_name">Klasė &name;</string>
 <string name="intent_attribute_data_uri">Duomenys URI</string>
 <string name="intent_attribute_data_type">Duomenys (MIME) Tipas:</string>
 <string name="intent_attribute_categories">Kategorijos</string>
 <string name="intent_attribute_extras">4.</string>
-<string name="dialog_update_intent_attribute_category_title">Atnaujinti kategoriją</string>
-<string name="dialog_update_intent_attribute_extra_title_add">Pridėti ekstra</string>
-<string name="dialog_update_intent_attribute_extra_title_edit">Atnaujinti ekstra</string>
+<string name="dialog_update_intent_attribute_category_title">&update; Kategorija</string>
+<string name="dialog_update_intent_attribute_category_name">&name;</string>
+<string name="dialog_update_intent_attribute_extra_title_add">&add; Papildoma</string>
+<string name="dialog_update_intent_attribute_extra_title_edit">&update; Papildoma</string>
+<string name="dialog_update_intent_attribute_extra_name">&name;</string>
 <string name="dialog_update_intent_attribute_extra_value_type">Vertės tipas</string>
 <string name="dialog_update_intent_attribute_extra_value">Vertė</string>
-<string name="dialog_update_intent_attribute_extra_value_separator">Pridėti vertės sąrašo skirtuką</string>
+<string name="dialog_update_intent_attribute_extra_value_separator">&add; Vertės sąrašo skirtukas</string>
 <string name="messages_db_error_update">Duomenų bazės klaida atnaujinant</string>
 <string name="messages_no_permission">Nepakankamas leidimas atlikti prašomą operaciją</string>
 <string name="messages_activity_not_found">Nėra veiklos atitikčių Intent</string>
 <string name="spinner_items_category_label_common_values">-- Bendrosios reikšmės --</string>
 <string name="spinner_items_category_label_more_values">-- daugiau vertės --</string>
+<string name="activity_label_alarms">Suplanuoti &alarms;</string>
+<string name="activity_label_save_alarm">&alarm; Aprašas</string>
+<string name="layout_main_no_alarms">Nr. &alarms; Rasta.</string>
+<string name="menu_actionbar_cancel_all">&cancel; Visi</string>
+<string name="menu_context_alarm_edit">&edit;</string>
+<string name="menu_context_alarm_cancel">&cancel;</string>
+<string name="dialog_cancel_alarm_title">&cancel; &alarm;?</string>
+<string name="dialog_cancel_alarms_title">&cancel; &alarms;?</string>
+<string name="dialog_delete_confirm_alarms">Visi &lc_alarms;</string>
+<string name="alarm_attribute_intent">&bookmark;:</string>
+<string name="alarm_attribute_perform">Atlikti:</string>
+<string name="alarm_attribute_date">Data::</string>
+<string name="alarm_attribute_time">Laikas:</string>
+<string name="alarm_attribute_interval">Kartoti kas:</string>
+<string name="alarm_attribute_flags">Parinktys:</string>
+<string name="flag_alarm_is_exact">Didelis tikslumas (mažiau efektyvus))</string>
+<string name="flag_alarm_run_when_idle">vykdyti aliarmą neveikiant</string>
+<string name="flag_alarm_wake_when_idle">tuščiosios eigos įtaisas</string>
+<string name="flag_alarm_run_when_missed">vykdyti pavojaus signalą, kai praleistoji</string>
+<string name="dialog_set">Nustatyti</string>
+<string name="time_picker_dialog_reset">Atstatyti iki nulio</string>
+<string name="accessibility_time_picker_sign">"Teigiamas/neigiamas ženklas"</string>
+<string name="accessibility_time_picker_day">"Diena"</string>
+<string name="accessibility_time_picker_hour">"1 valanda"</string>
+<string name="accessibility_time_picker_minute">"Minutės"</string>
+<string name="accessibility_time_picker_second">"Antra"</string>
+<string name="accessibility_time_picker_milli">"Milisekundė"</string>
 </resources>

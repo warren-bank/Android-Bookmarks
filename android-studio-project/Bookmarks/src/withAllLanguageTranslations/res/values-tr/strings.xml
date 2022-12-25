@@ -8,18 +8,31 @@
     <!ENTITY bookmarks     "Yer İşaretleri">
     <!ENTITY lc_bookmark   "yer imi">
     <!ENTITY lc_bookmarks  "yer işaretleri">
+    <!ENTITY alarm         "Uyarı">
+    <!ENTITY alarms        "Alarmlar">
+    <!ENTITY lc_alarm      "uyarı">
+    <!ENTITY lc_alarms     "uyarılar">
+    <!ENTITY add           "Ekle">
+    <!ENTITY cancel        "İptal">
+    <!ENTITY delete        "Sil">
+    <!ENTITY edit          "Düzenle">
+    <!ENTITY move          "Taşı">
+    <!ENTITY name          "Ad">
+    <!ENTITY update        "Güncelleştir">
 ]>
 <resources>
 <string name="app_name_long">&bookmarks;</string>
+<string name="activity_label_save_bookmark">&add; &bookmark;</string>
 <string name="layout_main_no_intents_in_folder">Hayır &bookmarks; bulunan.</string>
 <string name="layout_main_no_results_for_search">Arama sonucu bulunamadı.</string>
 <string name="layout_main_results_for_search_label">Sonuçlar::</string>
 <string name="menu_actionbar_intent_search">Ara</string>
-<string name="menu_actionbar_folder_add">Ekle &folder;</string>
-<string name="menu_actionbar_intent_add">Ekle &bookmark;</string>
-<string name="menu_actionbar_move_complete">Yürürlüktekine Taşı &folder;</string>
-<string name="menu_actionbar_move_cancel">Taşı İptal Et</string>
+<string name="menu_actionbar_folder_add">&add; &folder;</string>
+<string name="menu_actionbar_intent_add">&add; &bookmark;</string>
+<string name="menu_actionbar_move_complete">&move; Yürürlükteki &folder;</string>
+<string name="menu_actionbar_move_cancel">&cancel; &move;</string>
 <string name="menu_actionbar_settings">Ayarlar</string>
+<string name="menu_actionbar_scheduled">Zamanlandı</string>
 <string name="menu_actionbar_db_backup">Yedek Veritabanı</string>
 <string name="menu_actionbar_db_restore">Veritabanını Geri Yükle</string>
 <string name="menu_actionbar_db_export">Dışa Aktar &bookmarks;</string>
@@ -28,32 +41,35 @@
 <string name="menu_context_folder_hide">Gizle</string>
 <string name="menu_context_folder_unhide">Saklamayı Kaldır</string>
 <string name="menu_context_folder_rename">Yeniden Adlandır</string>
-<string name="menu_context_folder_move">Taşı</string>
-<string name="menu_context_folder_delete">Sil</string>
+<string name="menu_context_folder_move">&move;</string>
+<string name="menu_context_folder_delete">&delete;</string>
 <string name="menu_context_intent_perform">Gerçekleştir…</string>
-<string name="menu_context_intent_edit">Düzenle</string>
+<string name="menu_context_intent_schedule">Zamanla…</string>
+<string name="menu_context_intent_edit">&edit;</string>
+<string name="menu_context_intent_move">&move;</string>
 <string name="menu_context_intent_copy">Kopyala</string>
+<string name="menu_context_intent_delete">&delete;</string>
 <string name="perform_send_broadcast">Yayın Gönder</string>
 <string name="perform_start_activity">Etkinliği Başlat</string>
 <string name="perform_start_foreground_service">Ön Plan Hizmetini Başlat</string>
 <string name="perform_start_service">Hizmeti Başlat</string>
 <string name="perform_stop_service">Hizmeti Durdur</string>
-<string name="perform_add_shortcut">Kısayol Ekle</string>
+<string name="perform_add_shortcut">&add; Kısayol</string>
 <string name="settings_option_show_hidden">Gizlenmeyi göster &lc_folders;</string>
 <string name="settings_option_auto_backup">Otomatik günlük yedeklemeyi gerçekleştir</string>
 <string name="settings_option_backup_versioning">3 en son otomatik günlük yedeklemeleri alıkoy</string>
 <string name="settings_option_startup_folder">İlk &lc_folder; başlatma sırasında görüntülemek için:</string>
 <string name="settings_option_output_directory">Yedeklemeler ve dışa aktarmaya ilişkin varsayılan çıkış dizini:</string>
 <string name="dialog_ok">OK</string>
-<string name="dialog_cancel">İptal</string>
-<string name="dialog_add">Ekle</string>
-<string name="dialog_add_more">Ekle…</string>
+<string name="dialog_cancel">&cancel;</string>
+<string name="dialog_add">&add;</string>
+<string name="dialog_add_more">&add;-…</string>
 <string name="dialog_change">Değiştir…</string>
 <string name="dialog_choose">Seç…</string>
 <string name="dialog_save">Kaydet</string>
-<string name="dialog_delete">Sil</string>
+<string name="dialog_delete">&delete;</string>
 <string name="dialog_backup_preupdate_title">Veritabanı Güncellemesi Gerekiyor</string>
-<string name="dialog_backup_preupdate_message">Bu uygulamanın daha yeni bir sürümünü kurdun. Veritabanının sürümü de güncelleştirilmesi gerekiyor. Bu işlem önerilmeden önce bir yedeğin kaydedilmesi önerilir; herhangi bir hata veri tabanını bozacaktır. Bunu yapmak için, önce yedek dosyasını dış depolamaya kaydetmeniz için izin vermeniz gerekir. Gerekli güncelleştirmeden önce bir yedek kaydetmek istiyor musunuz\??</string>
+<string name="dialog_backup_preupdate_message">Bu uygulamanın daha yeni bir sürümünü kurdun. Veritabanının sürümü de güncelleştirilmesi gerekiyor. Bu işlem önerilmeden önce bir yedeğin kaydedilmesi önerilir; herhangi bir hata veri tabanını bozacaktır. Bunu yapmak için, önce yedek dosyasını dış depolamaya kaydetmeniz için izin vermeniz gerekir. Gerekli güncelleştirmeden önce bir yedek kaydetmek istiyor musunuz?</string>
 <string name="dialog_intent_search_option_query">Sorgu:</string>
 <string name="dialog_intent_search_option_only_current_folder">Yalnızca geçerli &lc_folder;</string>
 <string name="dialog_backup_done">Veritabanı yedekleme işlemi tamamlandı</string>
@@ -78,30 +94,61 @@
 <string name="dialog_import_done">İçe aktarma başarılı</string>
 <string name="dialog_import_failed">İçe aktarma hatası</string>
 <string name="dialog_import_notfound">İçe aktarma dosyası okunamadı</string>
-<string name="dialog_delete_folder_title">Sil &folder;?</string>
-<string name="dialog_delete_intent_title">Sil &bookmark;?</string>
-<string name="dialog_delete_confirm">Silmek istediğinizden emin misiniz\? "%s"?</string>
+<string name="dialog_delete_folder_title">&delete; &folder;?</string>
+<string name="dialog_delete_intent_title">&delete; &bookmark;?</string>
+<string name="dialog_delete_confirm">Silmek istediğinizden emin misiniz "%s"?</string>
 <string name="folder_rename_title">Yeniden Adlandır &folder;</string>
-<string name="folder_attribute_name">Ad</string>
-<string name="intent_edit_title">Düzenle &bookmark;</string>
+<string name="folder_attribute_name">&name;</string>
+<string name="intent_add_title">&add; &bookmark;</string>
+<string name="intent_edit_title">&edit; &bookmark;</string>
+<string name="intent_attribute_name">&name;</string>
 <string name="intent_attribute_folder">&folder;</string>
 <string name="intent_attribute_flags">İşaretler</string>
 <string name="intent_attribute_action">Eylem</string>
-<string name="intent_attribute_package_name">Paket Adı</string>
-<string name="intent_attribute_class_name">Sınıf Adı</string>
+<string name="intent_attribute_package_name">Paket &name;</string>
+<string name="intent_attribute_class_name">Sınıf &name;</string>
 <string name="intent_attribute_data_uri">Veri URI</string>
 <string name="intent_attribute_data_type">Veri (MIME) Tip</string>
 <string name="intent_attribute_categories">Kategoriler</string>
 <string name="intent_attribute_extras">Ekstralar</string>
-<string name="dialog_update_intent_attribute_category_title">Kategoriyi Güncelleştir</string>
-<string name="dialog_update_intent_attribute_extra_title_add">Fazladan Ekle</string>
-<string name="dialog_update_intent_attribute_extra_title_edit">Ek Güncelleme</string>
+<string name="dialog_update_intent_attribute_category_title">&update; Kategori</string>
+<string name="dialog_update_intent_attribute_category_name">&name;</string>
+<string name="dialog_update_intent_attribute_extra_title_add">&add; Ek</string>
+<string name="dialog_update_intent_attribute_extra_title_edit">&update; Ek</string>
+<string name="dialog_update_intent_attribute_extra_name">&name;</string>
 <string name="dialog_update_intent_attribute_extra_value_type">Değer Tipi</string>
 <string name="dialog_update_intent_attribute_extra_value">Değer</string>
-<string name="dialog_update_intent_attribute_extra_value_separator">Değer Listesi Ayırıcısı Ekle</string>
+<string name="dialog_update_intent_attribute_extra_value_separator">&add; Değer Listesi Ayırıcısı</string>
 <string name="messages_db_error_update">Güncelleme sırasında veritabanı hatası oluştu</string>
 <string name="messages_no_permission">İstenen işlemi gerçekleştirmek için izin yetersiz</string>
 <string name="messages_activity_not_found">Etkinlik hiçbir etkinlik ile eşleşmedi Intent</string>
 <string name="spinner_items_category_label_common_values">-- ortak değerler --</string>
 <string name="spinner_items_category_label_more_values">-- daha fazla değer --</string>
+<string name="activity_label_alarms">Zamanlandı &alarms;</string>
+<string name="activity_label_save_alarm">&alarm; Zamanla</string>
+<string name="layout_main_no_alarms">Hayır &alarms; bulunan.</string>
+<string name="menu_actionbar_cancel_all">&cancel; Tümü</string>
+<string name="menu_context_alarm_edit">&edit;</string>
+<string name="menu_context_alarm_cancel">&cancel;</string>
+<string name="dialog_cancel_alarm_title">&cancel; &alarm;?</string>
+<string name="dialog_cancel_alarms_title">&cancel; &alarms;?</string>
+<string name="dialog_delete_confirm_alarms">Tümü &lc_alarms;</string>
+<string name="alarm_attribute_intent">&bookmark;:</string>
+<string name="alarm_attribute_perform">Gerçekleştir:</string>
+<string name="alarm_attribute_date">Tarih:</string>
+<string name="alarm_attribute_time">Saat:</string>
+<string name="alarm_attribute_interval">Yinele-her:</string>
+<string name="alarm_attribute_flags">Seçenekler:</string>
+<string name="flag_alarm_is_exact">yüksek duyarlıklı (daha az verimli)</string>
+<string name="flag_alarm_run_when_idle">Boşta olduğunda uyarı yürütme uyarısı</string>
+<string name="flag_alarm_wake_when_idle">boşta olduğunda uyanma aygıtı</string>
+<string name="flag_alarm_run_when_missed">kaçırıldığında yeniden başlatma sırasında uyarı çalıştır</string>
+<string name="dialog_set">Ayarla</string>
+<string name="time_picker_dialog_reset">Sıfıra Ilk Durumuna Getir</string>
+<string name="accessibility_time_picker_sign">"Pozitif/Negatif İşareti"</string>
+<string name="accessibility_time_picker_day">"Gün"</string>
+<string name="accessibility_time_picker_hour">"Saat"</string>
+<string name="accessibility_time_picker_minute">"Dakika"</string>
+<string name="accessibility_time_picker_second">"Saniye"</string>
+<string name="accessibility_time_picker_milli">"Milisaniye"</string>
 </resources>

@@ -8,18 +8,31 @@
     <!ENTITY bookmarks     "Bogmærker">
     <!ENTITY lc_bookmark   "bogmærke">
     <!ENTITY lc_bookmarks  "bogmærker">
+    <!ENTITY alarm         "Alarm">
+    <!ENTITY alarms        "Alarmer">
+    <!ENTITY lc_alarm      "Alarm">
+    <!ENTITY lc_alarms     "alarmer">
+    <!ENTITY add           "Tilføj">
+    <!ENTITY cancel        "Annullér">
+    <!ENTITY delete        "Slet">
+    <!ENTITY edit          "Redigér">
+    <!ENTITY move          "Flyt">
+    <!ENTITY name          "Navn">
+    <!ENTITY update        "Opdatering">
 ]>
 <resources>
 <string name="app_name_long">&bookmarks;</string>
+<string name="activity_label_save_bookmark">&add; &bookmark;</string>
 <string name="layout_main_no_intents_in_folder">Nej. &bookmarks; fundet.</string>
 <string name="layout_main_no_results_for_search">Ingen søgeresultater fundet.</string>
 <string name="layout_main_results_for_search_label">Resultater for:</string>
 <string name="menu_actionbar_intent_search">Søg</string>
-<string name="menu_actionbar_folder_add">Tilføj &folder;</string>
-<string name="menu_actionbar_intent_add">Tilføj &bookmark;</string>
-<string name="menu_actionbar_move_complete">Flyt til aktuel &folder;</string>
-<string name="menu_actionbar_move_cancel">Annullér flytning</string>
+<string name="menu_actionbar_folder_add">&add; &folder;</string>
+<string name="menu_actionbar_intent_add">&add; &bookmark;</string>
+<string name="menu_actionbar_move_complete">&move; til aktuel &folder;</string>
+<string name="menu_actionbar_move_cancel">&cancel; &move;</string>
 <string name="menu_actionbar_settings">Indstillinger</string>
+<string name="menu_actionbar_scheduled">Planlagt</string>
 <string name="menu_actionbar_db_backup">Reservedatabase</string>
 <string name="menu_actionbar_db_restore">Gendan database</string>
 <string name="menu_actionbar_db_export">Eksport &bookmarks;</string>
@@ -28,30 +41,33 @@
 <string name="menu_context_folder_hide">Skjul</string>
 <string name="menu_context_folder_unhide">Vis</string>
 <string name="menu_context_folder_rename">Omdøb</string>
-<string name="menu_context_folder_move">Flyt</string>
-<string name="menu_context_folder_delete">Slet</string>
+<string name="menu_context_folder_move">&move;</string>
+<string name="menu_context_folder_delete">&delete;</string>
 <string name="menu_context_intent_perform">Udfør…</string>
-<string name="menu_context_intent_edit">Redigér</string>
+<string name="menu_context_intent_schedule">Tidsplan…</string>
+<string name="menu_context_intent_edit">&edit;</string>
+<string name="menu_context_intent_move">&move;</string>
 <string name="menu_context_intent_copy">Kopiér</string>
+<string name="menu_context_intent_delete">&delete;</string>
 <string name="perform_send_broadcast">Send rundsendelse</string>
 <string name="perform_start_activity">Start aktivitet</string>
 <string name="perform_start_foreground_service">Start forgrundsservice</string>
 <string name="perform_start_service">Start service</string>
 <string name="perform_stop_service">Stop service</string>
-<string name="perform_add_shortcut">Tilføj genvej</string>
+<string name="perform_add_shortcut">&add; Genvej</string>
 <string name="settings_option_show_hidden">Vis skjult &lc_folders;</string>
 <string name="settings_option_auto_backup">Udfør automatisk daglig sikkerhedskopiering</string>
 <string name="settings_option_backup_versioning">Behold de 3 seneste automatiske daglige backups</string>
 <string name="settings_option_startup_folder">Indledende &lc_folder; for at vise ved start:</string>
 <string name="settings_option_output_directory">Standardoutputbibliotek for backups og eksport:</string>
 <string name="dialog_ok">OK</string>
-<string name="dialog_cancel">Annullér</string>
-<string name="dialog_add">Tilføj</string>
-<string name="dialog_add_more">Tilføj…</string>
+<string name="dialog_cancel">&cancel;</string>
+<string name="dialog_add">&add;</string>
+<string name="dialog_add_more">&add;-DET ER</string>
 <string name="dialog_change">Ændre…</string>
 <string name="dialog_choose">Vælg…</string>
 <string name="dialog_save">Gem</string>
-<string name="dialog_delete">Slet</string>
+<string name="dialog_delete">&delete;</string>
 <string name="dialog_backup_preupdate_title">Databaseopdatering er påkrævet</string>
 <string name="dialog_backup_preupdate_message">Du har installeret en nyere version af denne applikation. Versionen af databasen skal også opdateres. Hvis du gemmer en sikkerhedskopi, før denne funktion anbefales, vil en fejl blive ødelagt af databasen. For at gøre det skal du først give tilladelse til at gemme sikkerhedskopifilen til eksternt lager. Vil du gemme en sikkerhedskopi før den nødvendige opdatering?</string>
 <string name="dialog_intent_search_option_query">Forespørgsel:</string>
@@ -78,30 +94,61 @@
 <string name="dialog_import_done">Importér succes</string>
 <string name="dialog_import_failed">Importér fejl</string>
 <string name="dialog_import_notfound">Import af fil kan ikke læses</string>
-<string name="dialog_delete_folder_title">Slet &folder;?</string>
-<string name="dialog_delete_intent_title">Slet &bookmark;?</string>
+<string name="dialog_delete_folder_title">&delete; &folder;?</string>
+<string name="dialog_delete_intent_title">&delete; &bookmark;?</string>
 <string name="dialog_delete_confirm">Er du sikker på, at du vil slette "%s"?</string>
 <string name="folder_rename_title">Omdøb &folder;</string>
-<string name="folder_attribute_name">Navn</string>
-<string name="intent_edit_title">Redigér &bookmark;</string>
+<string name="folder_attribute_name">&name;</string>
+<string name="intent_add_title">&add; &bookmark;</string>
+<string name="intent_edit_title">&edit; &bookmark;</string>
+<string name="intent_attribute_name">&name;</string>
 <string name="intent_attribute_folder">&folder;</string>
 <string name="intent_attribute_flags">Flag</string>
 <string name="intent_attribute_action">Handling</string>
-<string name="intent_attribute_package_name">Pakkenavn</string>
-<string name="intent_attribute_class_name">Klassenavn</string>
+<string name="intent_attribute_package_name">Pakke &name;</string>
+<string name="intent_attribute_class_name">Klasse &name;</string>
 <string name="intent_attribute_data_uri">Data URI</string>
 <string name="intent_attribute_data_type">Data (MIME) Type</string>
 <string name="intent_attribute_categories">Kategorier</string>
 <string name="intent_attribute_extras">Ekstras</string>
-<string name="dialog_update_intent_attribute_category_title">Opdatér kategori</string>
-<string name="dialog_update_intent_attribute_extra_title_add">Tilføj ekstra</string>
-<string name="dialog_update_intent_attribute_extra_title_edit">Opdatér ekstra</string>
+<string name="dialog_update_intent_attribute_category_title">&update; Kategori</string>
+<string name="dialog_update_intent_attribute_category_name">&name;</string>
+<string name="dialog_update_intent_attribute_extra_title_add">&add; Ekstra</string>
+<string name="dialog_update_intent_attribute_extra_title_edit">&update; Ekstra</string>
+<string name="dialog_update_intent_attribute_extra_name">&name;</string>
 <string name="dialog_update_intent_attribute_extra_value_type">Værdi af værdi</string>
 <string name="dialog_update_intent_attribute_extra_value">Værdi</string>
-<string name="dialog_update_intent_attribute_extra_value_separator">Tilføj værdilisteskilletegn</string>
+<string name="dialog_update_intent_attribute_extra_value_separator">&add; Skilletegn i værdiliste</string>
 <string name="messages_db_error_update">Databasefejl under opdatering</string>
 <string name="messages_no_permission">Utilstrækkelig tilladelse til at udføre den ønskede funktion</string>
 <string name="messages_activity_not_found">Ingen aktivitet svarer til Intent</string>
 <string name="spinner_items_category_label_common_values">-- fælles værdier --</string>
 <string name="spinner_items_category_label_more_values">-- flere værdier --</string>
+<string name="activity_label_alarms">Planlagt &alarms;</string>
+<string name="activity_label_save_alarm">&alarm; Tidsplan</string>
+<string name="layout_main_no_alarms">Nej. &alarms; fundet.</string>
+<string name="menu_actionbar_cancel_all">&cancel; Alle</string>
+<string name="menu_context_alarm_edit">&edit;</string>
+<string name="menu_context_alarm_cancel">&cancel;</string>
+<string name="dialog_cancel_alarm_title">&cancel; &alarm;?</string>
+<string name="dialog_cancel_alarms_title">&cancel; &alarms;?</string>
+<string name="dialog_delete_confirm_alarms">alle &lc_alarms;</string>
+<string name="alarm_attribute_intent">&bookmark;:</string>
+<string name="alarm_attribute_perform">Udfør:</string>
+<string name="alarm_attribute_date">Dato:</string>
+<string name="alarm_attribute_time">Klokkeslæt:</string>
+<string name="alarm_attribute_interval">Gentag hver:</string>
+<string name="alarm_attribute_flags">Optioner:</string>
+<string name="flag_alarm_is_exact">høj præcision (mindre effektiv)</string>
+<string name="flag_alarm_run_when_idle">Udgangalarm ved inaktiv</string>
+<string name="flag_alarm_wake_when_idle">vække enhed, når idle</string>
+<string name="flag_alarm_run_when_missed">Udføre alarm ved genstart, når der mangler</string>
+<string name="dialog_set">Sæt</string>
+<string name="time_picker_dialog_reset">Nulstil til nul</string>
+<string name="accessibility_time_picker_sign">"Positivt / Negativt logon"</string>
+<string name="accessibility_time_picker_day">"Dag"</string>
+<string name="accessibility_time_picker_hour">"time"</string>
+<string name="accessibility_time_picker_minute">"Minut"</string>
+<string name="accessibility_time_picker_second">"-Anden."</string>
+<string name="accessibility_time_picker_milli">"Millisekund"</string>
 </resources>

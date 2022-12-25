@@ -8,18 +8,31 @@
     <!ENTITY bookmarks     "બુકમાર્કો">
     <!ENTITY lc_bookmark   "બુકમાર્ક">
     <!ENTITY lc_bookmarks  "બુકમાર્કો">
+    <!ENTITY alarm         "એલાર્મ">
+    <!ENTITY alarms        "એલાર્મો">
+    <!ENTITY lc_alarm      "એલાર્મ">
+    <!ENTITY lc_alarms     "એલાર્મો">
+    <!ENTITY add           "ઉમેરો">
+    <!ENTITY cancel        "રદ કરો">
+    <!ENTITY delete        "કાઢી નાંખો">
+    <!ENTITY edit          "ફેરફાર કરો">
+    <!ENTITY move          "ખસેડો">
+    <!ENTITY name          "નામ">
+    <!ENTITY update        "સુધારો">
 ]>
 <resources>
 <string name="app_name_long">&bookmarks;</string>
+<string name="activity_label_save_bookmark">&add; &bookmark;</string>
 <string name="layout_main_no_intents_in_folder">ના &bookmarks; મળ્યુ.</string>
 <string name="layout_main_no_results_for_search">શોધ પરિણામો શોધાયુ નથી.</string>
 <string name="layout_main_results_for_search_label">માટે પરિણામો:</string>
 <string name="menu_actionbar_intent_search">શોધો</string>
-<string name="menu_actionbar_folder_add">ઉમેરો &folder;</string>
-<string name="menu_actionbar_intent_add">ઉમેરો &bookmark;</string>
-<string name="menu_actionbar_move_complete">હાલમાં ખસેડો &folder;</string>
-<string name="menu_actionbar_move_cancel">ખસેડવાનું રદ કરો</string>
+<string name="menu_actionbar_folder_add">&add; &folder;</string>
+<string name="menu_actionbar_intent_add">&add; &bookmark;</string>
+<string name="menu_actionbar_move_complete">&move; હાલનું &folder;</string>
+<string name="menu_actionbar_move_cancel">&cancel; &move;</string>
 <string name="menu_actionbar_settings">સુયોજનો</string>
+<string name="menu_actionbar_scheduled">સુનિશ્ચિત</string>
 <string name="menu_actionbar_db_backup">બેકઅપ ડેટાબેઝ</string>
 <string name="menu_actionbar_db_restore">ડેટાબેઝ પુનઃસંગ્રહો</string>
 <string name="menu_actionbar_db_export">નિકાસ કરો &bookmarks;</string>
@@ -28,30 +41,33 @@
 <string name="menu_context_folder_hide">છુપાવો</string>
 <string name="menu_context_folder_unhide">છુપાવો નહિં</string>
 <string name="menu_context_folder_rename">નામ બદલો</string>
-<string name="menu_context_folder_move">ખસેડો</string>
-<string name="menu_context_folder_delete">કાઢી નાંખો</string>
+<string name="menu_context_folder_move">&move;</string>
+<string name="menu_context_folder_delete">&delete;</string>
 <string name="menu_context_intent_perform">Perform…</string>
-<string name="menu_context_intent_edit">ફેરફાર કરો</string>
+<string name="menu_context_intent_schedule">અનુસૂચિત…</string>
+<string name="menu_context_intent_edit">&edit;</string>
+<string name="menu_context_intent_move">&move;</string>
 <string name="menu_context_intent_copy">નકલ કરો</string>
+<string name="menu_context_intent_delete">&delete;</string>
 <string name="perform_send_broadcast">બ્રોડકાસ્ટ મોકલો</string>
 <string name="perform_start_activity">ક્રિયા શરૂ કરો</string>
 <string name="perform_start_foreground_service">અગ્ર સેવા શરૂ કરો</string>
 <string name="perform_start_service">સેવા શરૂ કરો</string>
 <string name="perform_stop_service">સેવા બંધ કરો</string>
-<string name="perform_add_shortcut">ટુંકાણ ઉમેરો</string>
+<string name="perform_add_shortcut">&add; ટુંકાણ</string>
 <string name="settings_option_show_hidden">છુપાયેલ બતાવો &lc_folders;</string>
 <string name="settings_option_auto_backup">આપોઆપ દરરોજ બેકઅપ કરો</string>
 <string name="settings_option_backup_versioning">3 તાજેતરનાં આપોઆપ આપોઆપ આપોઆપ બેકઅપ રાખો</string>
 <string name="settings_option_startup_folder">પ્રારંભિક &lc_folder; શરૂઆતમાં દર્શાવવા માટે:</string>
 <string name="settings_option_output_directory">બેકઅપ અને નિકાસ માટે મૂળભૂત આઉટપુટ ડિરેક્ટરી:</string>
 <string name="dialog_ok">OK</string>
-<string name="dialog_cancel">રદ કરો</string>
-<string name="dialog_add">ઉમેરો</string>
-<string name="dialog_add_more">ઉમેરો…</string>
+<string name="dialog_cancel">&cancel;</string>
+<string name="dialog_add">&add;</string>
+<string name="dialog_add_more">&add;…</string>
 <string name="dialog_change">બદલો…</string>
 <string name="dialog_choose">પસંદ કરો…</string>
 <string name="dialog_save">સંગ્રહ કરો</string>
-<string name="dialog_delete">કાઢી નાંખો</string>
+<string name="dialog_delete">&delete;</string>
 <string name="dialog_backup_preupdate_title">ડેટાબેઝ સુધારો જરૂરી છે</string>
 <string name="dialog_backup_preupdate_message">તમે આ કાર્યક્રમની નવી આવૃત્તિ સ્થાપિત કરી છે. ડેટાબેઝની આવૃત્તિ પણ સુધારવા જરૂરી છે. આ ક્રિયાને સૂચિત કરતાં પહેલાં બેકઅપ સંગ્રહ કરો; કોઇપણ ભૂલ ડેટાબેઝને બચાવશે. આમ કરવા માટે, તમે બેકઅપ ફાઈલને બાહ્ય સંગ્રહસ્થાન સંગ્રહવા માટે પહેલા પરવાનગી આપવી જ પડશે. શું તમે જરૂરી સુધારા પહેલાં બેકઅપ સંગ્રહવા માંગો છો?</string>
 <string name="dialog_intent_search_option_query">ક્વેરી:</string>
@@ -78,30 +94,61 @@
 <string name="dialog_import_done">સફળતા આયાત કરો</string>
 <string name="dialog_import_failed">નિષ્ફળતા આયાત કરો</string>
 <string name="dialog_import_notfound">ફાઇલ આયાત કરી શકાતી નથી</string>
-<string name="dialog_delete_folder_title">કાઢી નાંખો &folder;?</string>
-<string name="dialog_delete_intent_title">કાઢી નાંખો &bookmark;?</string>
+<string name="dialog_delete_folder_title">&delete; &folder;?</string>
+<string name="dialog_delete_intent_title">&delete; &bookmark;?</string>
 <string name="dialog_delete_confirm">શું તમે ખરેખર કાઢી નાંખવા માંગો છો "%s"?</string>
 <string name="folder_rename_title">નામ બદલો &folder;</string>
-<string name="folder_attribute_name">નામ</string>
-<string name="intent_edit_title">ફેરફાર કરો &bookmark;</string>
+<string name="folder_attribute_name">&name;</string>
+<string name="intent_add_title">&add; &bookmark;</string>
+<string name="intent_edit_title">&edit; &bookmark;</string>
+<string name="intent_attribute_name">&name;</string>
 <string name="intent_attribute_folder">&folder;</string>
 <string name="intent_attribute_flags">ફ્લેગો</string>
 <string name="intent_attribute_action">ક્રિયા</string>
-<string name="intent_attribute_package_name">પેકેજ નામ</string>
-<string name="intent_attribute_class_name">વર્ગ નામ</string>
+<string name="intent_attribute_package_name">પેકેજ &name;</string>
+<string name="intent_attribute_class_name">વર્ગ &name;</string>
 <string name="intent_attribute_data_uri">માહિતી URI</string>
 <string name="intent_attribute_data_type">માહિતી (MIME) પ્રકાર</string>
 <string name="intent_attribute_categories">વર્ગો</string>
 <string name="intent_attribute_extras">એક્સટ્રો</string>
-<string name="dialog_update_intent_attribute_category_title">વર્ગ સુધારો</string>
-<string name="dialog_update_intent_attribute_extra_title_add">વધારાને ઉમેરો</string>
-<string name="dialog_update_intent_attribute_extra_title_edit">વધારાને સુધારો</string>
+<string name="dialog_update_intent_attribute_category_title">&update; વર્ગ</string>
+<string name="dialog_update_intent_attribute_category_name">&name;</string>
+<string name="dialog_update_intent_attribute_extra_title_add">&add; વધારાનું</string>
+<string name="dialog_update_intent_attribute_extra_title_edit">&update; વધારાનું</string>
+<string name="dialog_update_intent_attribute_extra_name">&name;</string>
 <string name="dialog_update_intent_attribute_extra_value_type">કિંમતનો પ્રકાર</string>
 <string name="dialog_update_intent_attribute_extra_value">કિંમત</string>
-<string name="dialog_update_intent_attribute_extra_value_separator">કિંમત યાદી વિભાજક ઉમેરો</string>
+<string name="dialog_update_intent_attribute_extra_value_separator">&add; કિંમત યાદી વિભાજક</string>
 <string name="messages_db_error_update">ડેટાબેઝ ભૂલ જ્યારે સુધારી રહ્યા હોય</string>
 <string name="messages_no_permission">સૂચિત પ્રક્રિયા કરવા માટે અપૂરતી પરવાનગી આપો</string>
 <string name="messages_activity_not_found">ક્રિયા બંધબેસતા નથી Intent</string>
 <string name="spinner_items_category_label_common_values">-- સામાન્ય કિંમતો --</string>
 <string name="spinner_items_category_label_more_values">-- વધુ કિંમતો --</string>
+<string name="activity_label_alarms">સુનિશ્ચિત &alarms;</string>
+<string name="activity_label_save_alarm">&alarm; અનુસૂચિત</string>
+<string name="layout_main_no_alarms">ના &alarms; મળ્યુ.</string>
+<string name="menu_actionbar_cancel_all">&cancel; બધું</string>
+<string name="menu_context_alarm_edit">&edit;</string>
+<string name="menu_context_alarm_cancel">&cancel;</string>
+<string name="dialog_cancel_alarm_title">&cancel; &alarm;?</string>
+<string name="dialog_cancel_alarms_title">&cancel; &alarms;?</string>
+<string name="dialog_delete_confirm_alarms">બધું &lc_alarms;</string>
+<string name="alarm_attribute_intent">&bookmark;:</string>
+<string name="alarm_attribute_perform">Perform:</string>
+<string name="alarm_attribute_date">તારીખ:</string>
+<string name="alarm_attribute_time">સમય:</string>
+<string name="alarm_attribute_interval">દરેક પુનરાવર્તન કરો:</string>
+<string name="alarm_attribute_flags">વિકલ્પો:</string>
+<string name="flag_alarm_is_exact">ઉચ્ચ ચોક્કસ (ઓછી કાર્યક્ષમ)</string>
+<string name="flag_alarm_run_when_idle">જ્યારે નિષ્ક્રિય હોય ત્યારે ચેતવણી ચલાવો</string>
+<string name="flag_alarm_wake_when_idle">નિષ્ક્રિય હોય ત્યારે ઉપકરણ જાવ</string>
+<string name="flag_alarm_run_when_missed">જ્યારે સ્વીકારો ત્યારે રીબુટ પર એલાર્મ ચલાવો</string>
+<string name="dialog_set">સુયોજિત કરો</string>
+<string name="time_picker_dialog_reset">Zero માં પુનઃસુયોજિત કરો</string>
+<string name="accessibility_time_picker_sign">"ધ્યાન/નકારાત્મક સહી"</string>
+<string name="accessibility_time_picker_day">"દિવસ"</string>
+<string name="accessibility_time_picker_hour">"કલાક"</string>
+<string name="accessibility_time_picker_minute">"મિનિટ"</string>
+<string name="accessibility_time_picker_second">"બીજો"</string>
+<string name="accessibility_time_picker_milli">"મિલિસેકંડ"</string>
 </resources>

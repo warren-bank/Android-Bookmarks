@@ -8,18 +8,31 @@
     <!ENTITY bookmarks     "Đánh dấu">
     <!ENTITY lc_bookmark   "Đánh dấu">
     <!ENTITY lc_bookmarks  "Đánh dấu">
+    <!ENTITY alarm         "Báo động">
+    <!ENTITY alarms        "Báo động">
+    <!ENTITY lc_alarm      "báo động">
+    <!ENTITY lc_alarms     "Báo động">
+    <!ENTITY add           "Thêm">
+    <!ENTITY cancel        "Hủy">
+    <!ENTITY delete        "&amp;amp; Xoá">
+    <!ENTITY edit          "Chỉnh sửa">
+    <!ENTITY move          "Di chuyển">
+    <!ENTITY name          "Tên">
+    <!ENTITY update        "Cập nhật">
 ]>
 <resources>
 <string name="app_name_long">&bookmarks;</string>
+<string name="activity_label_save_bookmark">&add; &bookmark;</string>
 <string name="layout_main_no_intents_in_folder">Không. &bookmarks; tìm thấy.</string>
 <string name="layout_main_no_results_for_search">Tìm thấy kết quả tìm kiếm.</string>
 <string name="layout_main_results_for_search_label">Kết quả cho:</string>
 <string name="menu_actionbar_intent_search">Tìm kiếm</string>
-<string name="menu_actionbar_folder_add">Thêm &folder;</string>
-<string name="menu_actionbar_intent_add">Thêm &bookmark;</string>
-<string name="menu_actionbar_move_complete">Chuyển sang hiện tại &folder;</string>
-<string name="menu_actionbar_move_cancel">Hủy di chuyển</string>
+<string name="menu_actionbar_folder_add">&add; &folder;</string>
+<string name="menu_actionbar_intent_add">&add; &bookmark;</string>
+<string name="menu_actionbar_move_complete">&move; Hiện tại &folder;</string>
+<string name="menu_actionbar_move_cancel">&cancel; &move;</string>
 <string name="menu_actionbar_settings">Thiết lập</string>
+<string name="menu_actionbar_scheduled">Theo lịch</string>
 <string name="menu_actionbar_db_backup">Cơ sở dữ</string>
 <string name="menu_actionbar_db_restore">Name</string>
 <string name="menu_actionbar_db_export">Xuất &bookmarks;</string>
@@ -28,30 +41,33 @@
 <string name="menu_context_folder_hide">Ẩn</string>
 <string name="menu_context_folder_unhide">Unhide</string>
 <string name="menu_context_folder_rename">Thay tên</string>
-<string name="menu_context_folder_move">Di chuyển</string>
-<string name="menu_context_folder_delete">&amp;amp; Xoá</string>
+<string name="menu_context_folder_move">&move;</string>
+<string name="menu_context_folder_delete">&delete;</string>
 <string name="menu_context_intent_perform">Biểu diễn…</string>
-<string name="menu_context_intent_edit">Chỉnh sửa</string>
+<string name="menu_context_intent_schedule">Lịch trình…</string>
+<string name="menu_context_intent_edit">&edit;</string>
+<string name="menu_context_intent_move">&move;</string>
 <string name="menu_context_intent_copy">Sao chép</string>
+<string name="menu_context_intent_delete">&delete;</string>
 <string name="perform_send_broadcast">Gửi Broadcast</string>
 <string name="perform_start_activity">Bắt đầu Tác</string>
 <string name="perform_start_foreground_service">Bắt đầu Dịch vụ Forest</string>
 <string name="perform_start_service">Bắt đầu dịch</string>
 <string name="perform_stop_service">Dừng dịch vụ</string>
-<string name="perform_add_shortcut">Phím tắt</string>
+<string name="perform_add_shortcut">&add; Phím tắt</string>
 <string name="settings_option_show_hidden">Hiện ẩn &lc_folders;</string>
 <string name="settings_option_auto_backup">Thực hiện sao lưu tự động</string>
 <string name="settings_option_backup_versioning">Giữ 3 cái lưng tự động gần đây nhất</string>
 <string name="settings_option_startup_folder">Ban đầu &lc_folder; để hiển thị khi khởi động:</string>
 <string name="settings_option_output_directory">Thư mục đầu ra mặc định cho xuất bản và xuất:</string>
 <string name="dialog_ok">OK</string>
-<string name="dialog_cancel">Hủy</string>
-<string name="dialog_add">Thêm</string>
-<string name="dialog_add_more">Thêm…</string>
+<string name="dialog_cancel">&cancel;</string>
+<string name="dialog_add">&add;</string>
+<string name="dialog_add_more">&add;-…</string>
 <string name="dialog_change">Thay đổi…</string>
 <string name="dialog_choose">Chọn…</string>
 <string name="dialog_save">Lưu</string>
-<string name="dialog_delete">&amp;amp; Xoá</string>
+<string name="dialog_delete">&delete;</string>
 <string name="dialog_backup_preupdate_title">Yêu Cầu Cập Nhật Cơ Sở</string>
 <string name="dialog_backup_preupdate_message">Bạn đã cài đặt phiên bản mới hơn của ứng dụng này. Phiên bản của cơ sở dữ liệu cũng cần được cập nhật. Lưu trư ̃ trước khi thao tác này được đê ̀ xuất; bất kỳ lỗi nào sẽ làm hỏng cơ sở dư ̃ Để làm được điều đó, đầu tiên bạn phải cấp phép để lưu tập tin sao lưu sang bộ lưu trữ bên ngoài. Bạn có muốn lưu bản sao trước khi cập nhật yêu cầu?</string>
 <string name="dialog_intent_search_option_query">Truy vấn:</string>
@@ -78,30 +94,61 @@
 <string name="dialog_import_done">Nhập thành công</string>
 <string name="dialog_import_failed">Nhập thất bại</string>
 <string name="dialog_import_notfound">Không thể đọc tập tin nhập</string>
-<string name="dialog_delete_folder_title">&amp;amp; Xoá &folder;?</string>
-<string name="dialog_delete_intent_title">&amp;amp; Xoá &bookmark;?</string>
+<string name="dialog_delete_folder_title">&delete; &folder;?</string>
+<string name="dialog_delete_intent_title">&delete; &bookmark;?</string>
 <string name="dialog_delete_confirm">Bạn có chắc là muốn xóa "%s"?</string>
 <string name="folder_rename_title">Thay tên &folder;</string>
-<string name="folder_attribute_name">Tên</string>
-<string name="intent_edit_title">Chỉnh sửa &bookmark;</string>
+<string name="folder_attribute_name">&name;</string>
+<string name="intent_add_title">&add; &bookmark;</string>
+<string name="intent_edit_title">&edit; &bookmark;</string>
+<string name="intent_attribute_name">&name;</string>
 <string name="intent_attribute_folder">&folder;</string>
 <string name="intent_attribute_flags">Cờ</string>
 <string name="intent_attribute_action">Thao tác</string>
-<string name="intent_attribute_package_name">Tên gói</string>
-<string name="intent_attribute_class_name">Tên lớp</string>
+<string name="intent_attribute_package_name">Gói &name;</string>
+<string name="intent_attribute_class_name">Lớp &name;</string>
 <string name="intent_attribute_data_uri">Dữ liệu URI</string>
 <string name="intent_attribute_data_type">Dữ liệu (MIME) Kiểu</string>
 <string name="intent_attribute_categories">Danh mục</string>
 <string name="intent_attribute_extras">Bổ sung</string>
-<string name="dialog_update_intent_attribute_category_title">Cập nhật loại</string>
-<string name="dialog_update_intent_attribute_extra_title_add">Thêm thêm</string>
-<string name="dialog_update_intent_attribute_extra_title_edit">Cập nhật thêm</string>
+<string name="dialog_update_intent_attribute_category_title">&update; Danh mục</string>
+<string name="dialog_update_intent_attribute_category_name">&name;</string>
+<string name="dialog_update_intent_attribute_extra_title_add">&add; Thêm</string>
+<string name="dialog_update_intent_attribute_extra_title_edit">&update; Thêm</string>
+<string name="dialog_update_intent_attribute_extra_name">&name;</string>
 <string name="dialog_update_intent_attribute_extra_value_type">Kiểu giá trị</string>
 <string name="dialog_update_intent_attribute_extra_value">Giá trị</string>
-<string name="dialog_update_intent_attribute_extra_value_separator">Thêm dấu tách danh sách giá trị</string>
+<string name="dialog_update_intent_attribute_extra_value_separator">&add; Phân cách danh sách giá trị</string>
 <string name="messages_db_error_update">Lỗi cơ sở dư ̃ liệu</string>
 <string name="messages_no_permission">Không đủ quyền để thực hiện thao tác yêu cầu</string>
 <string name="messages_activity_not_found">Không có hoạt động khớp với Intent</string>
 <string name="spinner_items_category_label_common_values">-- giá trị chung --</string>
 <string name="spinner_items_category_label_more_values">-- thêm giá trị --</string>
+<string name="activity_label_alarms">Theo lịch &alarms;</string>
+<string name="activity_label_save_alarm">&alarm; Lịch</string>
+<string name="layout_main_no_alarms">Không. &alarms; tìm thấy.</string>
+<string name="menu_actionbar_cancel_all">&cancel; Tất cả</string>
+<string name="menu_context_alarm_edit">&edit;</string>
+<string name="menu_context_alarm_cancel">&cancel;</string>
+<string name="dialog_cancel_alarm_title">&cancel; &alarm;?</string>
+<string name="dialog_cancel_alarms_title">&cancel; &alarms;?</string>
+<string name="dialog_delete_confirm_alarms">tất cả &lc_alarms;</string>
+<string name="alarm_attribute_intent">&bookmark;:</string>
+<string name="alarm_attribute_perform">Biểu diễn:</string>
+<string name="alarm_attribute_date">Ngày:</string>
+<string name="alarm_attribute_time">Thời gian:</string>
+<string name="alarm_attribute_interval">Lặp lại mỗi:</string>
+<string name="alarm_attribute_flags">Tùy chọn:</string>
+<string name="flag_alarm_is_exact">chính xác cao (kém hiệu quả)</string>
+<string name="flag_alarm_run_when_idle">báo động khi nhàn rỗi</string>
+<string name="flag_alarm_wake_when_idle">thiết bị thức dậy khi rảnh</string>
+<string name="flag_alarm_run_when_missed">Thực hiện báo động khi khởi động lại</string>
+<string name="dialog_set">Ðặt</string>
+<string name="time_picker_dialog_reset">Thiết lập lại thành Zero</string>
+<string name="accessibility_time_picker_sign">"Dấu tích âm/dương"</string>
+<string name="accessibility_time_picker_day">"Ngày"</string>
+<string name="accessibility_time_picker_hour">"Giờ"</string>
+<string name="accessibility_time_picker_minute">"Phút"</string>
+<string name="accessibility_time_picker_second">"Thứ hai"</string>
+<string name="accessibility_time_picker_milli">"Mili giây"</string>
 </resources>

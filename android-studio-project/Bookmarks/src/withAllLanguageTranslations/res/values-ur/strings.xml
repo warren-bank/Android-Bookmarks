@@ -8,18 +8,31 @@
     <!ENTITY bookmarks     "بک مارکس">
     <!ENTITY lc_bookmark   "بک مارک">
     <!ENTITY lc_bookmarks  "کتابيں">
+    <!ENTITY alarm         "الارم">
+    <!ENTITY alarms        "الارم">
+    <!ENTITY lc_alarm      "الارم">
+    <!ENTITY lc_alarms     "الارم">
+    <!ENTITY add           "شامل ہیں">
+    <!ENTITY cancel        "منسوخ">
+    <!ENTITY delete        "حذف">
+    <!ENTITY edit          "تصیح">
+    <!ENTITY move          "هیں">
+    <!ENTITY name          "نام">
+    <!ENTITY update        "اپ ڈیٹ">
 ]>
 <resources>
 <string name="app_name_long">&bookmarks;</string>
+<string name="activity_label_save_bookmark">&add; &bookmark;</string>
 <string name="layout_main_no_intents_in_folder">نہیں &bookmarks; پایا.</string>
 <string name="layout_main_no_results_for_search">کوئی سرچ نتائج نہیں ملا.</string>
 <string name="layout_main_results_for_search_label">نتائج کي نمائش:</string>
 <string name="menu_actionbar_intent_search">تلاش</string>
-<string name="menu_actionbar_folder_add">شامل ہیں &folder;</string>
-<string name="menu_actionbar_intent_add">شامل ہیں &bookmark;</string>
-<string name="menu_actionbar_move_complete">کرنٹ کو منتقل &folder;</string>
-<string name="menu_actionbar_move_cancel">منسوخ کر دیں</string>
+<string name="menu_actionbar_folder_add">&add; &folder;</string>
+<string name="menu_actionbar_intent_add">&add; &bookmark;</string>
+<string name="menu_actionbar_move_complete">&move; موجودہ &folder;</string>
+<string name="menu_actionbar_move_cancel">&cancel; &move;</string>
 <string name="menu_actionbar_settings">سیٹنگز</string>
+<string name="menu_actionbar_scheduled">تخسوچت</string>
 <string name="menu_actionbar_db_backup">بیک اپ ڈیٹا بیس</string>
 <string name="menu_actionbar_db_restore">بے چین ڈاٹا بیس</string>
 <string name="menu_actionbar_db_export">ایکسپورٹ &bookmarks;</string>
@@ -28,30 +41,33 @@
 <string name="menu_context_folder_hide">Hide)</string>
 <string name="menu_context_folder_unhide">بے پردہ</string>
 <string name="menu_context_folder_rename">نام تبدیل</string>
-<string name="menu_context_folder_move">هیں</string>
-<string name="menu_context_folder_delete">حذف</string>
+<string name="menu_context_folder_move">&move;</string>
+<string name="menu_context_folder_delete">&delete;</string>
 <string name="menu_context_intent_perform">پیفارم…</string>
-<string name="menu_context_intent_edit">تصیح</string>
+<string name="menu_context_intent_schedule">شیڈول…</string>
+<string name="menu_context_intent_edit">&edit;</string>
+<string name="menu_context_intent_move">&move;</string>
 <string name="menu_context_intent_copy">کاپی</string>
+<string name="menu_context_intent_delete">&delete;</string>
 <string name="perform_send_broadcast">براڈ بھیجیں</string>
 <string name="perform_start_activity">سرگرمی شروع کریں</string>
 <string name="perform_start_foreground_service">فورگراؤنڈ سروس شروع کریں</string>
 <string name="perform_start_service">سروس شروع کریں</string>
 <string name="perform_stop_service">سروس بند کرو</string>
-<string name="perform_add_shortcut">شارٹ کٹ شامل کریں</string>
+<string name="perform_add_shortcut">&add; شارٹ کٹ</string>
 <string name="settings_option_show_hidden">چھپا چھپا کر &lc_folders;</string>
 <string name="settings_option_auto_backup">خود کار طریقے سے روزانہ بیک اپ</string>
 <string name="settings_option_backup_versioning">3 سب سے حالیہ خودکار روزانہ بیک اپ رکھیں</string>
 <string name="settings_option_startup_folder">ابتدائی &lc_folder; ابتدائیہ میں نمائش کے لیے:</string>
 <string name="settings_option_output_directory">الٹا آؤٹ پٹ ڈائرکٹری برائے بیک اپ اور برآمدات:</string>
 <string name="dialog_ok">OK</string>
-<string name="dialog_cancel">منسوخ</string>
-<string name="dialog_add">شامل ہیں</string>
-<string name="dialog_add_more">شامل کریں…</string>
+<string name="dialog_cancel">&cancel;</string>
+<string name="dialog_add">&add;</string>
+<string name="dialog_add_more">&add;…</string>
 <string name="dialog_change">تبدیلی…</string>
 <string name="dialog_choose">انتخاب کریں…</string>
 <string name="dialog_save">بچائیں</string>
-<string name="dialog_delete">حذف</string>
+<string name="dialog_delete">&delete;</string>
 <string name="dialog_backup_preupdate_title">ڈیٹا بیس اپ ڈیٹ کیا جاتا ہے</string>
 <string name="dialog_backup_preupdate_message">آپ نے اس درخواست کا ایک نیا ورژن انسٹال کیا ہے. ڈیٹا بیس کا ورژن بھی اپ ڈیٹ کرنے کی ضرورت ہے. اس آپریشن سے پہلے ایک بیک اپ کو بچانے کی سفارش کی ہے. کسی بھی خرابی کو ڈیٹا بیس کرپٹ کرے گا. ایسا کرنے کے لئے, آپ کو سب سے پہلے بیرونی ذخیرہ کرنے کے لئے بیک اپ فائل کو بچانے کے لئے اجازت دینے ضروری ہے. مطلوبہ اپ ڈیٹ سے پہلے اپ ایک بیک اپ بچانا پسند کریں گے?</string>
 <string name="dialog_intent_search_option_query">کویری:</string>
@@ -78,30 +94,61 @@
 <string name="dialog_import_done">برآمد کی کامیابی</string>
 <string name="dialog_import_failed">درآمد کی ناکامی</string>
 <string name="dialog_import_notfound">امپورٹ فائل نہیں پڑھی جا سکی</string>
-<string name="dialog_delete_folder_title">حذف &folder;?</string>
-<string name="dialog_delete_intent_title">حذف &bookmark;?</string>
+<string name="dialog_delete_folder_title">&delete; &folder;?</string>
+<string name="dialog_delete_intent_title">&delete; &bookmark;?</string>
 <string name="dialog_delete_confirm">آپ کو خارج کرنا چاہتے ہیں یقین ہے "%s"?</string>
 <string name="folder_rename_title">نام تبدیل &folder;</string>
-<string name="folder_attribute_name">نام</string>
-<string name="intent_edit_title">تصیح &bookmark;</string>
+<string name="folder_attribute_name">&name;</string>
+<string name="intent_add_title">&add; &bookmark;</string>
+<string name="intent_edit_title">&edit; &bookmark;</string>
+<string name="intent_attribute_name">&name;</string>
 <string name="intent_attribute_folder">&folder;</string>
 <string name="intent_attribute_flags">شعلوں</string>
 <string name="intent_attribute_action">ایکشن</string>
-<string name="intent_attribute_package_name">پیکیج کا نام</string>
-<string name="intent_attribute_class_name">شرینی: نام</string>
+<string name="intent_attribute_package_name">پیکیج &name;</string>
+<string name="intent_attribute_class_name">شرینی: &name;</string>
 <string name="intent_attribute_data_uri">ڈیٹا URI</string>
 <string name="intent_attribute_data_type">ڈیٹا (MIME) قسم</string>
 <string name="intent_attribute_categories">زمرہ جات</string>
 <string name="intent_attribute_extras">ایکسٹراز</string>
-<string name="dialog_update_intent_attribute_category_title">اپ ڈیٹ زمرہ</string>
-<string name="dialog_update_intent_attribute_extra_title_add">اضافی اضافی</string>
-<string name="dialog_update_intent_attribute_extra_title_edit">اپ ڈیٹ اضافی</string>
+<string name="dialog_update_intent_attribute_category_title">&update; زمرہ:</string>
+<string name="dialog_update_intent_attribute_category_name">&name;</string>
+<string name="dialog_update_intent_attribute_extra_title_add">&add; فاضل</string>
+<string name="dialog_update_intent_attribute_extra_title_edit">&update; فاضل</string>
+<string name="dialog_update_intent_attribute_extra_name">&name;</string>
 <string name="dialog_update_intent_attribute_extra_value_type">ویلیو ایڈڈ</string>
 <string name="dialog_update_intent_attribute_extra_value">والو</string>
-<string name="dialog_update_intent_attribute_extra_value_separator">شامل کردہ ویلیو لسٹ علیحدگی</string>
+<string name="dialog_update_intent_attribute_extra_value_separator">&add; ویلیو لسٹ علیحدگی</string>
 <string name="messages_db_error_update">ڈیٹا بیس کی خرابی کو جبکہ اپ ڈیٹ</string>
 <string name="messages_no_permission">مطلوبہ کارروائی انجام دینے کی اجازت</string>
 <string name="messages_activity_not_found">کوئی سرگرمی میچ نہیں Intent</string>
 <string name="spinner_items_category_label_common_values">-- عام اقدار --</string>
 <string name="spinner_items_category_label_more_values">-- مزید اقدار --</string>
+<string name="activity_label_alarms">تخسوچت &alarms;</string>
+<string name="activity_label_save_alarm">&alarm; شیڈول</string>
+<string name="layout_main_no_alarms">نہیں &alarms; پایا.</string>
+<string name="menu_actionbar_cancel_all">&cancel; سب</string>
+<string name="menu_context_alarm_edit">&edit;</string>
+<string name="menu_context_alarm_cancel">&cancel;</string>
+<string name="dialog_cancel_alarm_title">&cancel; &alarm;?</string>
+<string name="dialog_cancel_alarms_title">&cancel; &alarms;?</string>
+<string name="dialog_delete_confirm_alarms">سبھی &lc_alarms;</string>
+<string name="alarm_attribute_intent">&bookmark;:</string>
+<string name="alarm_attribute_perform">پرفارم:</string>
+<string name="alarm_attribute_date">تاریخ:</string>
+<string name="alarm_attribute_time">وقت:</string>
+<string name="alarm_attribute_interval">ہر طرف دہرائیں:</string>
+<string name="alarm_attribute_flags">اختیارات:</string>
+<string name="flag_alarm_is_exact">اعلی صحت سے متعلق (کم موثر)</string>
+<string name="flag_alarm_run_when_idle">الارم پر عمل کریں جب بیکار</string>
+<string name="flag_alarm_wake_when_idle">بیکار آلہ جب بیکار</string>
+<string name="flag_alarm_run_when_missed">ری بوٹ پر الارم پر عمل کرتے وقت یاد</string>
+<string name="dialog_set">سیٹ</string>
+<string name="time_picker_dialog_reset">ریسیٹ زیرو</string>
+<string name="accessibility_time_picker_sign">"مثبت/منفی نشانی"</string>
+<string name="accessibility_time_picker_day">"دن"</string>
+<string name="accessibility_time_picker_hour">"قیامت"</string>
+<string name="accessibility_time_picker_minute">"منٹ"</string>
+<string name="accessibility_time_picker_second">"دوسرا"</string>
+<string name="accessibility_time_picker_milli">"مللدوئم"</string>
 </resources>

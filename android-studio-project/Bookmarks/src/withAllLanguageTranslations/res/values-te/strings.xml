@@ -8,18 +8,31 @@
     <!ENTITY bookmarks     "గుర్తులు">
     <!ENTITY lc_bookmark   "పుస్తకం">
     <!ENTITY lc_bookmarks  "పుస్తకం">
+    <!ENTITY alarm         "అలంకం">
+    <!ENTITY alarms        "అలంకారాలు">
+    <!ENTITY lc_alarm      "\@ label: button">
+    <!ENTITY lc_alarms     "అలంకారాలు">
+    <!ENTITY add           "\@ title: window">
+    <!ENTITY cancel        "రద్దు">
+    <!ENTITY delete        "తొలగించు">
+    <!ENTITY edit          "సరికూర్చు">
+    <!ENTITY move          "కదుపుము">
+    <!ENTITY name          "పేరు">
+    <!ENTITY update        "నవీకరణ">
 ]>
 <resources>
 <string name="app_name_long">&bookmarks;</string>
+<string name="activity_label_save_bookmark">&add; &bookmark;</string>
 <string name="layout_main_no_intents_in_folder">లేదు &bookmarks; కనుగొన్నారు.</string>
 <string name="layout_main_no_results_for_search">శోధన ఫలితాలు కనబడలేదు.</string>
 <string name="layout_main_results_for_search_label">ఫలితాలు:</string>
-<string name="menu_actionbar_intent_search">\@ info: status</string>
-<string name="menu_actionbar_folder_add">\@ title: window &folder;</string>
-<string name="menu_actionbar_intent_add">\@ title: window &bookmark;</string>
-<string name="menu_actionbar_move_complete">\@ action: button &folder;</string>
-<string name="menu_actionbar_move_cancel">కదుపును రద్దుచేయుము</string>
+<string name="menu_actionbar_intent_search">వెతకండి</string>
+<string name="menu_actionbar_folder_add">&add; &folder;</string>
+<string name="menu_actionbar_intent_add">&add; &bookmark;</string>
+<string name="menu_actionbar_move_complete">&move; ప్రస్తుతమునకు &folder;</string>
+<string name="menu_actionbar_move_cancel">&cancel; &move;</string>
 <string name="menu_actionbar_settings">అమరిక</string>
+<string name="menu_actionbar_scheduled">షెడ్యూల్డ్</string>
 <string name="menu_actionbar_db_backup">బ్యాక్అప్ డాటాబేస్Query</string>
 <string name="menu_actionbar_db_restore">డాటాబేస్ను పునఃప్రారంభించు</string>
 <string name="menu_actionbar_db_export">ఎగుమతి &bookmarks;</string>
@@ -28,33 +41,36 @@
 <string name="menu_context_folder_hide">మరుగుచేయి</string>
 <string name="menu_context_folder_unhide">ముంచివేయుము</string>
 <string name="menu_context_folder_rename">పునఃనామము</string>
-<string name="menu_context_folder_move">కదుపుము</string>
-<string name="menu_context_folder_delete">తొలగించు</string>
+<string name="menu_context_folder_move">&move;</string>
+<string name="menu_context_folder_delete">&delete;</string>
 <string name="menu_context_intent_perform">Perform…</string>
-<string name="menu_context_intent_edit">సరికూర్చు</string>
+<string name="menu_context_intent_schedule">షెడ్యూల్…</string>
+<string name="menu_context_intent_edit">&edit;</string>
+<string name="menu_context_intent_move">&move;</string>
 <string name="menu_context_intent_copy">నకలు</string>
+<string name="menu_context_intent_delete">&delete;</string>
 <string name="perform_send_broadcast">బ్రాడ్కాస్ట్ పంపించు</string>
 <string name="perform_start_activity">క్రియాశీలత ప్రారంభం</string>
 <string name="perform_start_foreground_service">ఫోర్గ్రౌండ్ సేవను ప్రారంభించుము</string>
 <string name="perform_start_service">సర్వీసు ప్రారంభించు</string>
 <string name="perform_stop_service">సేవను ఆపు</string>
-<string name="perform_add_shortcut">శీఘ్రమార్గమును జతచేయుము</string>
+<string name="perform_add_shortcut">&add; శీఘ్రమార్గము</string>
 <string name="settings_option_show_hidden">మరుగును చూపుము &lc_folders;</string>
 <string name="settings_option_auto_backup">స్వయంచాలక రోజువారీ బ్యాకప్</string>
 <string name="settings_option_backup_versioning">3 అత్యంత ఇటీవల స్వయంచాలక దినపత్రాలను ఉంచండి</string>
 <string name="settings_option_startup_folder">ప్రాచుర్యం &lc_folder; ప్రారంభంలో ప్రదర్శించుటకు:</string>
 <string name="settings_option_output_directory">బ్యాకప్ మరియు ఎగుమతులకు అప్రమేయ అవుట్పుట్ డైరెక్టరీ:</string>
 <string name="dialog_ok">OK</string>
-<string name="dialog_cancel">రద్దు</string>
-<string name="dialog_add">\@ title: window</string>
-<string name="dialog_add_more">\@ title: window</string>
+<string name="dialog_cancel">&cancel;</string>
+<string name="dialog_add">&add;</string>
+<string name="dialog_add_more">&add;…</string>
 <string name="dialog_change">మార్చు…</string>
 <string name="dialog_choose">ఎంచుకోండి…</string>
-<string name="dialog_save">\@ action: button</string>
-<string name="dialog_delete">తొలగించు</string>
+<string name="dialog_save">సేవ్ చేయండి</string>
+<string name="dialog_delete">&delete;</string>
 <string name="dialog_backup_preupdate_title">డేటాబేసు నవీకరణ అభ్యర్ధన</string>
 <string name="dialog_backup_preupdate_message">మీరు ఈ అనువర్తనానికి ఒక నూతనమైన వెర్షన్ను స్థాపించారు. డేటాబేస్ యొక్క వెర్షన్ కూడా నవీకరిస్తుంది. ఈ ఆపరేషన్ సిఫార్సు చేయకముందే బ్యాకప్ ను దాచుతుంది; ఏ దోషము డేటాబేస్ చెడిపోతుంది. అలా చేయడానికి ముందుగా బ్యాకర్ నిల్వకు బ్యాకప్ ఫైల్ ను రక్షించుటకు మీరు ముందుగా అనుమతి అనుమతించాలి. మీరు అవసరమైన నవీకరణకు ముందు ఒక బ్యాకప్ ను రక్షించాలని అనుకుంటున్నారా?</string>
-<string name="dialog_intent_search_option_query">(Q) Query:</string>
+<string name="dialog_intent_search_option_query">ప్రశ్న:</string>
 <string name="dialog_intent_search_option_only_current_folder">ప్రస్తుత మాత్రమే &lc_folder;</string>
 <string name="dialog_backup_done">డాటాబేస్ బ్యాకప్ పూర్తీ</string>
 <string name="dialog_backup_failed">బ్యాకప్ చేయలేకపొయాను!</string>
@@ -78,30 +94,61 @@
 <string name="dialog_import_done">విజయాన్ని దిగుమతిచేయి</string>
 <string name="dialog_import_failed">దిగుమతి దిగుమతి</string>
 <string name="dialog_import_notfound">దస్త్రం దిగుమతి చేయలేకపోయింది</string>
-<string name="dialog_delete_folder_title">తొలగించు &folder;?</string>
-<string name="dialog_delete_intent_title">తొలగించు &bookmark;?</string>
+<string name="dialog_delete_folder_title">&delete; &folder;?</string>
+<string name="dialog_delete_intent_title">&delete; &bookmark;?</string>
 <string name="dialog_delete_confirm">మీరు ఖచ్చితంగా తొలగించాలనుకుంటున్నారా "%s"?</string>
 <string name="folder_rename_title">పునఃనామము &folder;</string>
-<string name="folder_attribute_name">పేరు</string>
-<string name="intent_edit_title">సరికూర్చు &bookmark;</string>
+<string name="folder_attribute_name">&name;</string>
+<string name="intent_add_title">&add; &bookmark;</string>
+<string name="intent_edit_title">&edit; &bookmark;</string>
+<string name="intent_attribute_name">&name;</string>
 <string name="intent_attribute_folder">&folder;</string>
 <string name="intent_attribute_flags">ఫ్లాగాస్</string>
 <string name="intent_attribute_action">చర్య</string>
-<string name="intent_attribute_package_name">ప్యాకేజీ నామము</string>
-<string name="intent_attribute_class_name">క్లాస్ పేరు</string>
+<string name="intent_attribute_package_name">ప్యాకేజీ &name;</string>
+<string name="intent_attribute_class_name">క్లాస్ &name;</string>
 <string name="intent_attribute_data_uri">డాటా URI</string>
 <string name="intent_attribute_data_type">డాటా (MIME) రకం</string>
 <string name="intent_attribute_categories">వర్గములు</string>
 <string name="intent_attribute_extras">ఎక్టిట్రాస్</string>
-<string name="dialog_update_intent_attribute_category_title">వర్గము</string>
-<string name="dialog_update_intent_attribute_extra_title_add">ఎక్స్ర జతచేయి</string>
-<string name="dialog_update_intent_attribute_extra_title_edit">ఎక్స్ర నవీకరణ</string>
+<string name="dialog_update_intent_attribute_category_title">&update; వర్గం: వర్గము</string>
+<string name="dialog_update_intent_attribute_category_name">&name;</string>
+<string name="dialog_update_intent_attribute_extra_title_add">&add; ఎక్స్ర</string>
+<string name="dialog_update_intent_attribute_extra_title_edit">&update; ఎక్స్ర</string>
+<string name="dialog_update_intent_attribute_extra_name">&name;</string>
 <string name="dialog_update_intent_attribute_extra_value_type">విలువుని రకము</string>
 <string name="dialog_update_intent_attribute_extra_value">విలుణం</string>
-<string name="dialog_update_intent_attribute_extra_value_separator">విలువుని జాబితా ప్రత్యేక</string>
+<string name="dialog_update_intent_attribute_extra_value_separator">&add; విలువు జాబితా ప్రత్యేకత</string>
 <string name="messages_db_error_update">డేటాబేసు దోషం</string>
 <string name="messages_no_permission">అభ్యర్ధన ఆపరేషన్ నిర్వహించడానికి తగిన అనుమతి</string>
 <string name="messages_activity_not_found">ఏ క్రియాశీల మ్యాచ్ లేదు Intent</string>
 <string name="spinner_items_category_label_common_values">-- సాధారణ విలువలు --</string>
 <string name="spinner_items_category_label_more_values">-- ఎక్కువ విలువలు --</string>
+<string name="activity_label_alarms">షెడ్యూల్డ్ &alarms;</string>
+<string name="activity_label_save_alarm">&alarm; షెడ్యూల్లు</string>
+<string name="layout_main_no_alarms">లేదు &alarms; కనుగొన్నారు.</string>
+<string name="menu_actionbar_cancel_all">&cancel; అన్ని</string>
+<string name="menu_context_alarm_edit">&edit;</string>
+<string name="menu_context_alarm_cancel">&cancel;</string>
+<string name="dialog_cancel_alarm_title">&cancel; &alarm;?</string>
+<string name="dialog_cancel_alarms_title">&cancel; &alarms;?</string>
+<string name="dialog_delete_confirm_alarms">అన్ని &lc_alarms;</string>
+<string name="alarm_attribute_intent">&bookmark;:</string>
+<string name="alarm_attribute_perform">పెర్ఫాName:</string>
+<string name="alarm_attribute_date">తేది:</string>
+<string name="alarm_attribute_time">సమయం:</string>
+<string name="alarm_attribute_interval">ప్రతిబింబము ప్రతి:</string>
+<string name="alarm_attribute_flags">ఐచ్చికములు:</string>
+<string name="flag_alarm_is_exact">అధిక నిర్వచనం (తక్కువ ప్రత్యామ్నాయ.)</string>
+<string name="flag_alarm_run_when_idle">నిష్క్రియంగా ఉన్నప్పుడు అలారం అమలు చేయండి</string>
+<string name="flag_alarm_wake_when_idle">విడత పరికరము</string>
+<string name="flag_alarm_run_when_missed">తప్పిపోయినప్పుడు రీబూట్ వద్ద అలారం అమలు చేయండి</string>
+<string name="dialog_set">అమర్చు</string>
+<string name="time_picker_dialog_reset">జెరో కు రిసెట్</string>
+<string name="accessibility_time_picker_sign">"పోజిటివ్/నెగటివ్ సిన్"</string>
+<string name="accessibility_time_picker_day">"రోజులు"</string>
+<string name="accessibility_time_picker_hour">"గంటలు"</string>
+<string name="accessibility_time_picker_minute">"మినిట్"</string>
+<string name="accessibility_time_picker_second">"రెండవది"</string>
+<string name="accessibility_time_picker_milli">"మిలిసెకండ్"</string>
 </resources>

@@ -8,18 +8,31 @@
     <!ENTITY bookmarks     "書籤">
     <!ENTITY lc_bookmark   "書籤">
     <!ENTITY lc_bookmarks  "書籤">
+    <!ENTITY alarm         "阿拉姆">
+    <!ENTITY alarms        "警示">
+    <!ENTITY lc_alarm      "警報">
+    <!ENTITY lc_alarms     "警鐘">
+    <!ENTITY add           "新增">
+    <!ENTITY cancel        "取消">
+    <!ENTITY delete        "刪除">
+    <!ENTITY edit          "編輯">
+    <!ENTITY move          "走">
+    <!ENTITY name          "名字">
+    <!ENTITY update        "更新">
 ]>
 <resources>
 <string name="app_name_long">&bookmarks;</string>
+<string name="activity_label_save_bookmark">&add; &bookmark;</string>
 <string name="layout_main_no_intents_in_folder">沒有 &bookmarks; 發現.</string>
 <string name="layout_main_no_results_for_search">找不到搜尋結果.</string>
 <string name="layout_main_results_for_search_label">的結果:</string>
 <string name="menu_actionbar_intent_search">搜尋</string>
-<string name="menu_actionbar_folder_add">新增 &folder;</string>
-<string name="menu_actionbar_intent_add">新增 &bookmark;</string>
-<string name="menu_actionbar_move_complete">移至現行 &folder;</string>
-<string name="menu_actionbar_move_cancel">取消移動</string>
+<string name="menu_actionbar_folder_add">&add; &folder;</string>
+<string name="menu_actionbar_intent_add">&add; &bookmark;</string>
+<string name="menu_actionbar_move_complete">&move; 至現行 &folder;</string>
+<string name="menu_actionbar_move_cancel">&cancel; &move;</string>
 <string name="menu_actionbar_settings">設定</string>
+<string name="menu_actionbar_scheduled">預定</string>
 <string name="menu_actionbar_db_backup">備份資料庫</string>
 <string name="menu_actionbar_db_restore">還原資料庫</string>
 <string name="menu_actionbar_db_export">匯出 &bookmarks;</string>
@@ -28,30 +41,33 @@
 <string name="menu_context_folder_hide">藏</string>
 <string name="menu_context_folder_unhide">溫秀</string>
 <string name="menu_context_folder_rename">重新命名</string>
-<string name="menu_context_folder_move">走</string>
-<string name="menu_context_folder_delete">刪除</string>
+<string name="menu_context_folder_move">&move;</string>
+<string name="menu_context_folder_delete">&delete;</string>
 <string name="menu_context_intent_perform">執行…</string>
-<string name="menu_context_intent_edit">編輯</string>
+<string name="menu_context_intent_schedule">排程…</string>
+<string name="menu_context_intent_edit">&edit;</string>
+<string name="menu_context_intent_move">&move;</string>
 <string name="menu_context_intent_copy">收到</string>
+<string name="menu_context_intent_delete">&delete;</string>
 <string name="perform_send_broadcast">傳送播送</string>
 <string name="perform_start_activity">開始活動</string>
 <string name="perform_start_foreground_service">啟動前景服務</string>
 <string name="perform_start_service">啟動服務</string>
 <string name="perform_stop_service">停止服務</string>
-<string name="perform_add_shortcut">新增捷徑</string>
+<string name="perform_add_shortcut">&add; 捷徑</string>
 <string name="settings_option_show_hidden">顯示隱藏 &lc_folders;</string>
 <string name="settings_option_auto_backup">執行自動每日備份</string>
 <string name="settings_option_backup_versioning">保留 3 個最近的自動每日備份</string>
 <string name="settings_option_startup_folder">初次 &lc_folder; 於啟動時顯示:</string>
 <string name="settings_option_output_directory">備份及匯出的預設輸出目錄:</string>
 <string name="dialog_ok">OK</string>
-<string name="dialog_cancel">取消</string>
-<string name="dialog_add">新增</string>
-<string name="dialog_add_more">新增…</string>
+<string name="dialog_cancel">&cancel;</string>
+<string name="dialog_add">&add;</string>
+<string name="dialog_add_more">&add;。。。</string>
 <string name="dialog_change">換…</string>
 <string name="dialog_choose">選擇…</string>
 <string name="dialog_save">儲存</string>
-<string name="dialog_delete">刪除</string>
+<string name="dialog_delete">&delete;</string>
 <string name="dialog_backup_preupdate_title">需要更新資料庫</string>
 <string name="dialog_backup_preupdate_message">您已安裝此應用程式的新版本。 資料庫的版本也需要更新。 在建議此作業之前儲存備份；任何錯誤都會毀損資料庫。 如果要這樣做，您必須先授與許可權，才能將備份檔儲存至外部儲存體。 在必要更新之前，您要儲存備份嗎?</string>
 <string name="dialog_intent_search_option_query">Query:</string>
@@ -78,30 +94,61 @@
 <string name="dialog_import_done">匯入成功</string>
 <string name="dialog_import_failed">匯入失敗</string>
 <string name="dialog_import_notfound">無法讀取匯入檔</string>
-<string name="dialog_delete_folder_title">刪除 &folder;?</string>
-<string name="dialog_delete_intent_title">刪除 &bookmark;?</string>
+<string name="dialog_delete_folder_title">&delete; &folder;?</string>
+<string name="dialog_delete_intent_title">&delete; &bookmark;?</string>
 <string name="dialog_delete_confirm">您確定要刪除 "%s"?</string>
 <string name="folder_rename_title">重新命名 &folder;</string>
-<string name="folder_attribute_name">名字</string>
-<string name="intent_edit_title">編輯 &bookmark;</string>
+<string name="folder_attribute_name">&name;</string>
+<string name="intent_add_title">&add; &bookmark;</string>
+<string name="intent_edit_title">&edit; &bookmark;</string>
+<string name="intent_attribute_name">&name;</string>
 <string name="intent_attribute_folder">&folder;</string>
 <string name="intent_attribute_flags">弗拉格斯</string>
 <string name="intent_attribute_action">行動</string>
-<string name="intent_attribute_package_name">套件名稱</string>
-<string name="intent_attribute_class_name">類別名稱</string>
+<string name="intent_attribute_package_name">包 &name;</string>
+<string name="intent_attribute_class_name">Class &name;</string>
 <string name="intent_attribute_data_uri">資料 URI</string>
 <string name="intent_attribute_data_type">資料 (MIME) 類型</string>
 <string name="intent_attribute_categories">種類</string>
 <string name="intent_attribute_extras">埃克特拉</string>
-<string name="dialog_update_intent_attribute_category_title">更新種類</string>
-<string name="dialog_update_intent_attribute_extra_title_add">新增額外</string>
-<string name="dialog_update_intent_attribute_extra_title_edit">更新額外</string>
+<string name="dialog_update_intent_attribute_category_title">&update; 類別</string>
+<string name="dialog_update_intent_attribute_category_name">&name;</string>
+<string name="dialog_update_intent_attribute_extra_title_add">&add; 額外</string>
+<string name="dialog_update_intent_attribute_extra_title_edit">&update; 額外</string>
+<string name="dialog_update_intent_attribute_extra_name">&name;</string>
 <string name="dialog_update_intent_attribute_extra_value_type">值類型</string>
 <string name="dialog_update_intent_attribute_extra_value">價值</string>
-<string name="dialog_update_intent_attribute_extra_value_separator">新增值清單分隔字元</string>
+<string name="dialog_update_intent_attribute_extra_value_separator">&add; 值清單分隔字元</string>
 <string name="messages_db_error_update">更新時發生資料庫錯誤</string>
 <string name="messages_no_permission">權限不足，無法執行所要求的作業</string>
 <string name="messages_activity_not_found">沒有活動符合 Intent</string>
 <string name="spinner_items_category_label_common_values">-- 共同值 --</string>
 <string name="spinner_items_category_label_more_values">-- 更多值 --</string>
+<string name="activity_label_alarms">預定 &alarms;</string>
+<string name="activity_label_save_alarm">&alarm; 附表</string>
+<string name="layout_main_no_alarms">沒有 &alarms; 發現.</string>
+<string name="menu_actionbar_cancel_all">&cancel; 全部</string>
+<string name="menu_context_alarm_edit">&edit;</string>
+<string name="menu_context_alarm_cancel">&cancel;</string>
+<string name="dialog_cancel_alarm_title">&cancel; &alarm;?</string>
+<string name="dialog_cancel_alarms_title">&cancel; &alarms;?</string>
+<string name="dialog_delete_confirm_alarms">都 &lc_alarms;</string>
+<string name="alarm_attribute_intent">&bookmark;:</string>
+<string name="alarm_attribute_perform">執行:</string>
+<string name="alarm_attribute_date">日期:</string>
+<string name="alarm_attribute_time">時間:</string>
+<string name="alarm_attribute_interval">重複每一個:</string>
+<string name="alarm_attribute_flags">選項:</string>
+<string name="flag_alarm_is_exact">高精度（無效率)</string>
+<string name="flag_alarm_run_when_idle">在閒置時執行警示</string>
+<string name="flag_alarm_wake_when_idle">閒置時喚醒裝置</string>
+<string name="flag_alarm_run_when_missed">遺失時在重新開機時執行警示</string>
+<string name="dialog_set">設定</string>
+<string name="time_picker_dialog_reset">重設為零</string>
+<string name="accessibility_time_picker_sign">"正/負符號"</string>
+<string name="accessibility_time_picker_day">"戴"</string>
+<string name="accessibility_time_picker_hour">"小時"</string>
+<string name="accessibility_time_picker_minute">"分鐘"</string>
+<string name="accessibility_time_picker_second">"第二"</string>
+<string name="accessibility_time_picker_milli">"米爾毫秒"</string>
 </resources>

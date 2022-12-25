@@ -8,18 +8,31 @@
     <!ENTITY bookmarks     "Закладки">
     <!ENTITY lc_bookmark   "закладка">
     <!ENTITY lc_bookmarks  "закладки">
+    <!ENTITY alarm         "Тревога">
+    <!ENTITY alarms        "Оповещения">
+    <!ENTITY lc_alarm      "Тревога">
+    <!ENTITY lc_alarms     "напоминания">
+    <!ENTITY add           "Добавить">
+    <!ENTITY cancel        "Отмена">
+    <!ENTITY delete        "Удалить">
+    <!ENTITY edit          "Изменить">
+    <!ENTITY move          "Переместить">
+    <!ENTITY name          "Имя">
+    <!ENTITY update        "Обновить">
 ]>
 <resources>
 <string name="app_name_long">&bookmarks;</string>
+<string name="activity_label_save_bookmark">&add; &bookmark;</string>
 <string name="layout_main_no_intents_in_folder">Нет &bookmarks; найдено.</string>
 <string name="layout_main_no_results_for_search">Результаты поиска не найдены.</string>
 <string name="layout_main_results_for_search_label">Результаты для:</string>
 <string name="menu_actionbar_intent_search">Поиск</string>
-<string name="menu_actionbar_folder_add">Добавить &folder;</string>
-<string name="menu_actionbar_intent_add">Добавить &bookmark;</string>
-<string name="menu_actionbar_move_complete">Переместить в текущий &folder;</string>
-<string name="menu_actionbar_move_cancel">Отменить перемещение</string>
+<string name="menu_actionbar_folder_add">&add; &folder;</string>
+<string name="menu_actionbar_intent_add">&add; &bookmark;</string>
+<string name="menu_actionbar_move_complete">&move; на текущий &folder;</string>
+<string name="menu_actionbar_move_cancel">&cancel; &move;</string>
 <string name="menu_actionbar_settings">Параметры</string>
+<string name="menu_actionbar_scheduled">Запланировано</string>
 <string name="menu_actionbar_db_backup">Резервная база данных</string>
 <string name="menu_actionbar_db_restore">Восстановить базу данных</string>
 <string name="menu_actionbar_db_export">Экспорт &bookmarks;</string>
@@ -28,30 +41,33 @@
 <string name="menu_context_folder_hide">Скрыть</string>
 <string name="menu_context_folder_unhide">Отменить скрытие</string>
 <string name="menu_context_folder_rename">Переименовать</string>
-<string name="menu_context_folder_move">Переместить</string>
-<string name="menu_context_folder_delete">Удалить</string>
+<string name="menu_context_folder_move">&move;</string>
+<string name="menu_context_folder_delete">&delete;</string>
 <string name="menu_context_intent_perform">Выполнить…</string>
-<string name="menu_context_intent_edit">Изменить</string>
+<string name="menu_context_intent_schedule">Расписание…</string>
+<string name="menu_context_intent_edit">&edit;</string>
+<string name="menu_context_intent_move">&move;</string>
 <string name="menu_context_intent_copy">Копировать</string>
+<string name="menu_context_intent_delete">&delete;</string>
 <string name="perform_send_broadcast">Отправить широковещательные сообщения</string>
 <string name="perform_start_activity">Начать операцию</string>
 <string name="perform_start_foreground_service">Запустить службу переднего плана</string>
 <string name="perform_start_service">Запустить службу</string>
 <string name="perform_stop_service">Остановить службу</string>
-<string name="perform_add_shortcut">Добавить ярлык</string>
+<string name="perform_add_shortcut">&add; Ярлык</string>
 <string name="settings_option_show_hidden">Показать скрытые &lc_folders;</string>
 <string name="settings_option_auto_backup">Автоматическое ежедневное резервное копирование</string>
 <string name="settings_option_backup_versioning">Сохранить 3 самых последних автоматических ежедневных резервных копий</string>
 <string name="settings_option_startup_folder">Первоначальный &lc_folder; для отображения при запуске:</string>
 <string name="settings_option_output_directory">Каталог вывода по умолчанию для резервного копирования и экспорта:</string>
 <string name="dialog_ok">OK</string>
-<string name="dialog_cancel">Отмена</string>
-<string name="dialog_add">Добавить</string>
-<string name="dialog_add_more">Добавить…</string>
+<string name="dialog_cancel">&cancel;</string>
+<string name="dialog_add">&add;</string>
+<string name="dialog_add_more">&add;…</string>
 <string name="dialog_change">Изменить…</string>
 <string name="dialog_choose">Выбрать…</string>
 <string name="dialog_save">Сохранить</string>
-<string name="dialog_delete">Удалить</string>
+<string name="dialog_delete">&delete;</string>
 <string name="dialog_backup_preupdate_title">Требуется Обновление Базы Данных</string>
 <string name="dialog_backup_preupdate_message">Вы установили более новую версию этого приложения. Необходимо также обновить версию базы данных. Сохранение резервной копии перед этой операцией рекомендуется; любая ошибка приведет к повреждению базы данных. Для этого необходимо сначала предоставить разрешение на сохранение файла резервной копии во внешнюю память. Сохранить резервную копию перед обновлением?</string>
 <string name="dialog_intent_search_option_query">Запрос:</string>
@@ -78,30 +94,61 @@
 <string name="dialog_import_done">Импорт успешно</string>
 <string name="dialog_import_failed">Ошибка импорта</string>
 <string name="dialog_import_notfound">Не удалось прочитать файл импорта</string>
-<string name="dialog_delete_folder_title">Удалить &folder;?</string>
-<string name="dialog_delete_intent_title">Удалить &bookmark;?</string>
+<string name="dialog_delete_folder_title">&delete; &folder;?</string>
+<string name="dialog_delete_intent_title">&delete; &bookmark;?</string>
 <string name="dialog_delete_confirm">Вы действительно хотите удалить "%s"?</string>
 <string name="folder_rename_title">Переименовать &folder;</string>
-<string name="folder_attribute_name">Имя</string>
-<string name="intent_edit_title">Изменить &bookmark;</string>
+<string name="folder_attribute_name">&name;</string>
+<string name="intent_add_title">&add; &bookmark;</string>
+<string name="intent_edit_title">&edit; &bookmark;</string>
+<string name="intent_attribute_name">&name;</string>
 <string name="intent_attribute_folder">&folder;</string>
 <string name="intent_attribute_flags">Флаги</string>
 <string name="intent_attribute_action">Действие</string>
-<string name="intent_attribute_package_name">Имя пакета</string>
-<string name="intent_attribute_class_name">Имя класса</string>
+<string name="intent_attribute_package_name">Пакет &name;</string>
+<string name="intent_attribute_class_name">Класс &name;</string>
 <string name="intent_attribute_data_uri">Данные URI</string>
 <string name="intent_attribute_data_type">Данные (MIME) Тип</string>
 <string name="intent_attribute_categories">Категории</string>
 <string name="intent_attribute_extras">Экстрим</string>
-<string name="dialog_update_intent_attribute_category_title">Обновить категорию</string>
-<string name="dialog_update_intent_attribute_extra_title_add">Добавить дополнительные</string>
-<string name="dialog_update_intent_attribute_extra_title_edit">Обновить дополнительные</string>
+<string name="dialog_update_intent_attribute_category_title">&update; Категория</string>
+<string name="dialog_update_intent_attribute_category_name">&name;</string>
+<string name="dialog_update_intent_attribute_extra_title_add">&add; Дополнительные</string>
+<string name="dialog_update_intent_attribute_extra_title_edit">&update; Дополнительные</string>
+<string name="dialog_update_intent_attribute_extra_name">&name;</string>
 <string name="dialog_update_intent_attribute_extra_value_type">Тип значения</string>
 <string name="dialog_update_intent_attribute_extra_value">Значение</string>
-<string name="dialog_update_intent_attribute_extra_value_separator">Добавить разделитель списка значений</string>
+<string name="dialog_update_intent_attribute_extra_value_separator">&add; Разделитель списка значений</string>
 <string name="messages_db_error_update">Ошибка базы данных при обновлении</string>
 <string name="messages_no_permission">Недостаточно прав для выполнения запрошенной операции</string>
 <string name="messages_activity_not_found">Никакая операция не соответствует Intent</string>
 <string name="spinner_items_category_label_common_values">-- общие значения --</string>
 <string name="spinner_items_category_label_more_values">-- дополнительные значения --</string>
+<string name="activity_label_alarms">Запланировано &alarms;</string>
+<string name="activity_label_save_alarm">&alarm; Расписание</string>
+<string name="layout_main_no_alarms">Нет &alarms; найдено.</string>
+<string name="menu_actionbar_cancel_all">&cancel; Все</string>
+<string name="menu_context_alarm_edit">&edit;</string>
+<string name="menu_context_alarm_cancel">&cancel;</string>
+<string name="dialog_cancel_alarm_title">&cancel; &alarm;?</string>
+<string name="dialog_cancel_alarms_title">&cancel; &alarms;?</string>
+<string name="dialog_delete_confirm_alarms">Все &lc_alarms;</string>
+<string name="alarm_attribute_intent">&bookmark;:</string>
+<string name="alarm_attribute_perform">Выполнить:</string>
+<string name="alarm_attribute_date">Дата:</string>
+<string name="alarm_attribute_time">Время:</string>
+<string name="alarm_attribute_interval">Повторять каждые:</string>
+<string name="alarm_attribute_flags">Параметры:</string>
+<string name="flag_alarm_is_exact">высокая точность (менее эффективная)</string>
+<string name="flag_alarm_run_when_idle">выполнить напоминание при бездействии</string>
+<string name="flag_alarm_wake_when_idle">устройство wake при простое</string>
+<string name="flag_alarm_run_when_missed">выполнить предупреждение при перезагрузке при пропуском</string>
+<string name="dialog_set">Задать</string>
+<string name="time_picker_dialog_reset">Сбросить до нуля</string>
+<string name="accessibility_time_picker_sign">"Положительная/отрицательная подпись"</string>
+<string name="accessibility_time_picker_day">"День"</string>
+<string name="accessibility_time_picker_hour">"Час"</string>
+<string name="accessibility_time_picker_minute">"Минута"</string>
+<string name="accessibility_time_picker_second">"Вторая"</string>
+<string name="accessibility_time_picker_milli">"Миллисекунды"</string>
 </resources>

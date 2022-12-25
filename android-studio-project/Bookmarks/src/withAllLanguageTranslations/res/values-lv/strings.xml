@@ -8,18 +8,31 @@
     <!ENTITY bookmarks     "Grāmatzīmes">
     <!ENTITY lc_bookmark   "grāmatzīme">
     <!ENTITY lc_bookmarks  "grāmatzīmes">
+    <!ENTITY alarm         "Atgādinājums">
+    <!ENTITY alarms        "Atgādinājumi">
+    <!ENTITY lc_alarm      "signalizācija">
+    <!ENTITY lc_alarms     "signalizācija">
+    <!ENTITY add           "Pievienot">
+    <!ENTITY cancel        "Atcelt">
+    <!ENTITY delete        "Dzēst">
+    <!ENTITY edit          "Rediģēt">
+    <!ENTITY move          "Pārvietot">
+    <!ENTITY name          "Nosaukums">
+    <!ENTITY update        "Atjauninājums">
 ]>
 <resources>
 <string name="app_name_long">&bookmarks;</string>
+<string name="activity_label_save_bookmark">&add; &bookmark;</string>
 <string name="layout_main_no_intents_in_folder">Nav &bookmarks; Atrasti.</string>
 <string name="layout_main_no_results_for_search">Nav atrasts meklēšanas rezultāti.</string>
 <string name="layout_main_results_for_search_label">Rezultāti attiecībā uz:</string>
 <string name="menu_actionbar_intent_search">Meklēt</string>
-<string name="menu_actionbar_folder_add">Pievienot &folder;</string>
-<string name="menu_actionbar_intent_add">Pievienot &bookmark;</string>
-<string name="menu_actionbar_move_complete">Pārvietot uz pašreizējo &folder;</string>
-<string name="menu_actionbar_move_cancel">Atcelt gājienu</string>
+<string name="menu_actionbar_folder_add">&add; &folder;</string>
+<string name="menu_actionbar_intent_add">&add; &bookmark;</string>
+<string name="menu_actionbar_move_complete">&move; līdz pašreizēja &folder;</string>
+<string name="menu_actionbar_move_cancel">&cancel; &move;</string>
 <string name="menu_actionbar_settings">Iestatījumi</string>
+<string name="menu_actionbar_scheduled">Ieplānotais</string>
 <string name="menu_actionbar_db_backup">Rezerves datu bāze</string>
 <string name="menu_actionbar_db_restore">Atjaunot datubāzi</string>
 <string name="menu_actionbar_db_export">Eksports &bookmarks;</string>
@@ -28,30 +41,33 @@
 <string name="menu_context_folder_hide">Slēpt</string>
 <string name="menu_context_folder_unhide">Neslēpt</string>
 <string name="menu_context_folder_rename">Pārdēvēt</string>
-<string name="menu_context_folder_move">Pārvietot</string>
-<string name="menu_context_folder_delete">Dzēst</string>
+<string name="menu_context_folder_move">&move;</string>
+<string name="menu_context_folder_delete">&delete;</string>
 <string name="menu_context_intent_perform">Veikt…</string>
-<string name="menu_context_intent_edit">Rediģēt</string>
+<string name="menu_context_intent_schedule">Grafiks…</string>
+<string name="menu_context_intent_edit">&edit;</string>
+<string name="menu_context_intent_move">&move;</string>
 <string name="menu_context_intent_copy">Kopēt</string>
+<string name="menu_context_intent_delete">&delete;</string>
 <string name="perform_send_broadcast">Sūtīt pārraidi</string>
 <string name="perform_start_activity">Sākt darbību</string>
 <string name="perform_start_foreground_service">Sākuma priekšplāna pakalpojums</string>
 <string name="perform_start_service">Sākuma pakalpojums</string>
 <string name="perform_stop_service">Apturēt servisu</string>
-<string name="perform_add_shortcut">Pievienot īsceļu</string>
+<string name="perform_add_shortcut">&add; Īsceļš</string>
 <string name="settings_option_show_hidden">Rādīt slēpto &lc_folders;</string>
 <string name="settings_option_auto_backup">Veikt automātisko ikdienas rezerves kopēšanu</string>
 <string name="settings_option_backup_versioning">Saglabāt 3 jaunākās automātiskās ikdienas backups</string>
 <string name="settings_option_startup_folder">Sākotnējais &lc_folder; , lai attēlotu palaišanas:</string>
 <string name="settings_option_output_directory">Noklusētais izvades katalogs dublējumiem un eksportam:</string>
 <string name="dialog_ok">OK</string>
-<string name="dialog_cancel">Atcelt</string>
-<string name="dialog_add">Pievienot</string>
-<string name="dialog_add_more">Pievienot…</string>
+<string name="dialog_cancel">&cancel;</string>
+<string name="dialog_add">&add;</string>
+<string name="dialog_add_more">&add;…</string>
 <string name="dialog_change">Mainīt…</string>
 <string name="dialog_choose">Izvēlēties…</string>
 <string name="dialog_save">Saglabāt</string>
-<string name="dialog_delete">Dzēst</string>
+<string name="dialog_delete">&delete;</string>
 <string name="dialog_backup_preupdate_title">Datu Bāzes Atjaunināšana Ir Nepieciešama</string>
 <string name="dialog_backup_preupdate_message">Jums ir instalēta jaunāka versija šo pieteikumu. Datu bāzes versija arī ir jāatjaunina. Saglabā rezerves kopiju, pirms šī operācija ir ieteicama; jebkura kļūda būs korumpēts datu bāzi. Lai to izdarītu, jums ir vispirms piešķirt atļauju, lai saglabātu rezerves failu uz ārējo uzglabāšanu. Vai vēlaties saglabāt rezerves kopiju pirms nepieciešamās atjaunināšanas?</string>
 <string name="dialog_intent_search_option_query">Vaicājums:</string>
@@ -78,30 +94,61 @@
 <string name="dialog_import_done">Importa panākumi</string>
 <string name="dialog_import_failed">Importa neveiksme</string>
 <string name="dialog_import_notfound">Importēt failu nevar lasīt</string>
-<string name="dialog_delete_folder_title">Dzēst &folder;?</string>
-<string name="dialog_delete_intent_title">Dzēst &bookmark;?</string>
+<string name="dialog_delete_folder_title">&delete; &folder;?</string>
+<string name="dialog_delete_intent_title">&delete; &bookmark;?</string>
 <string name="dialog_delete_confirm">Vai esat pārliecināts, ka vēlaties dzēst "%s"?</string>
 <string name="folder_rename_title">Pārdēvēt &folder;</string>
-<string name="folder_attribute_name">Nosaukums</string>
-<string name="intent_edit_title">Rediģēt &bookmark;</string>
+<string name="folder_attribute_name">&name;</string>
+<string name="intent_add_title">&add; &bookmark;</string>
+<string name="intent_edit_title">&edit; &bookmark;</string>
+<string name="intent_attribute_name">&name;</string>
 <string name="intent_attribute_folder">&folder;</string>
 <string name="intent_attribute_flags">Karogi</string>
 <string name="intent_attribute_action">Rīcība</string>
-<string name="intent_attribute_package_name">Iepakojuma nosaukums</string>
-<string name="intent_attribute_class_name">Klases nosaukums</string>
+<string name="intent_attribute_package_name">Iepakojuma veids &name;</string>
+<string name="intent_attribute_class_name">Klase &name;</string>
 <string name="intent_attribute_data_uri">Dati URI</string>
 <string name="intent_attribute_data_type">Dati (MIME) Tips:</string>
 <string name="intent_attribute_categories">Kategorijas</string>
 <string name="intent_attribute_extras">Ekstras</string>
-<string name="dialog_update_intent_attribute_category_title">Atjaunināt kategoriju</string>
-<string name="dialog_update_intent_attribute_extra_title_add">Pievienot papildus</string>
-<string name="dialog_update_intent_attribute_extra_title_edit">Atjaunināt Extra</string>
+<string name="dialog_update_intent_attribute_category_title">&update; Kategorija</string>
+<string name="dialog_update_intent_attribute_category_name">&name;</string>
+<string name="dialog_update_intent_attribute_extra_title_add">&add; Ekstra</string>
+<string name="dialog_update_intent_attribute_extra_title_edit">&update; Ekstra</string>
+<string name="dialog_update_intent_attribute_extra_name">&name;</string>
 <string name="dialog_update_intent_attribute_extra_value_type">Vērtības veids</string>
 <string name="dialog_update_intent_attribute_extra_value">Vērtība</string>
-<string name="dialog_update_intent_attribute_extra_value_separator">Pievienot vērtību saraksta atdalītāju</string>
+<string name="dialog_update_intent_attribute_extra_value_separator">&add; Vērtību saraksta atdalītājs</string>
 <string name="messages_db_error_update">Datu bāzes kļūda atjauninot</string>
 <string name="messages_no_permission">Nepietiekama atļauja, lai veiktu pieprasīto darbību</string>
 <string name="messages_activity_not_found">Darbība neatbilst Intent</string>
 <string name="spinner_items_category_label_common_values">-- kopējās vērtības --</string>
 <string name="spinner_items_category_label_more_values">-- vairāk vērtības --</string>
+<string name="activity_label_alarms">Ieplānotais &alarms;</string>
+<string name="activity_label_save_alarm">&alarm; Grafiks</string>
+<string name="layout_main_no_alarms">Nav &alarms; Atrasti.</string>
+<string name="menu_actionbar_cancel_all">&cancel; Visi</string>
+<string name="menu_context_alarm_edit">&edit;</string>
+<string name="menu_context_alarm_cancel">&cancel;</string>
+<string name="dialog_cancel_alarm_title">&cancel; &alarm;?</string>
+<string name="dialog_cancel_alarms_title">&cancel; &alarms;?</string>
+<string name="dialog_delete_confirm_alarms">Visi &lc_alarms;</string>
+<string name="alarm_attribute_intent">&bookmark;:</string>
+<string name="alarm_attribute_perform">Veikt:</string>
+<string name="alarm_attribute_date">Datums:</string>
+<string name="alarm_attribute_time">Laiks:</string>
+<string name="alarm_attribute_interval">Atkārtot katru:</string>
+<string name="alarm_attribute_flags">Opcijas:</string>
+<string name="flag_alarm_is_exact">augstas precizitātes (mazāk efektīvas)</string>
+<string name="flag_alarm_run_when_idle">izpildiet atgādinājumu, kad</string>
+<string name="flag_alarm_wake_when_idle">pamošanās ierīce</string>
+<string name="flag_alarm_run_when_missed">izpildīt atgādinājumu atsāknēšanas laikā, kad</string>
+<string name="dialog_set">Iestata</string>
+<string name="time_picker_dialog_reset">Atiestatīšana uz nulli</string>
+<string name="accessibility_time_picker_sign">"Pozitīva/Negatīva Zīme"</string>
+<string name="accessibility_time_picker_day">"Diena"</string>
+<string name="accessibility_time_picker_hour">"Stunda"</string>
+<string name="accessibility_time_picker_minute">"Minūte"</string>
+<string name="accessibility_time_picker_second">"Otrais"</string>
+<string name="accessibility_time_picker_milli">"Milisekunde"</string>
 </resources>

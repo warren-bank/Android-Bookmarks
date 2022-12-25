@@ -8,18 +8,31 @@
     <!ENTITY bookmarks     "บุ๊กมาร์ก">
     <!ENTITY lc_bookmark   "บุ๊กมาร์ก">
     <!ENTITY lc_bookmarks  "บุ๊กมาร์ก">
+    <!ENTITY alarm         "สัญญาณปลุก">
+    <!ENTITY alarms        "การแจ้งเตือน">
+    <!ENTITY lc_alarm      "การเตือน">
+    <!ENTITY lc_alarms     "การเตือน">
+    <!ENTITY add           "เพิ่ม">
+    <!ENTITY cancel        "ยกเลิก">
+    <!ENTITY delete        "ลบ">
+    <!ENTITY edit          "แก้ไข">
+    <!ENTITY move          "ย้าย">
+    <!ENTITY name          "ชื่อ">
+    <!ENTITY update        "อัพเดต">
 ]>
 <resources>
 <string name="app_name_long">&bookmarks;</string>
+<string name="activity_label_save_bookmark">&add; &bookmark;</string>
 <string name="layout_main_no_intents_in_folder">ไม่ &bookmarks; ที่พบ.</string>
 <string name="layout_main_no_results_for_search">ไม่พบผลลัพธ์ของการค้นหา.</string>
 <string name="layout_main_results_for_search_label">ผลลัพธ์สำหรับ:</string>
 <string name="menu_actionbar_intent_search">การค้นหา</string>
-<string name="menu_actionbar_folder_add">เพิ่ม &folder;</string>
-<string name="menu_actionbar_intent_add">เพิ่ม &bookmark;</string>
-<string name="menu_actionbar_move_complete">เลื่อนไปยังปัจจุบัน &folder;</string>
-<string name="menu_actionbar_move_cancel">ยกเลิกการย้าย</string>
+<string name="menu_actionbar_folder_add">&add; &folder;</string>
+<string name="menu_actionbar_intent_add">&add; &bookmark;</string>
+<string name="menu_actionbar_move_complete">&move; ไปยังปัจจุบัน &folder;</string>
+<string name="menu_actionbar_move_cancel">&cancel; &move;</string>
 <string name="menu_actionbar_settings">การตั้งค่า</string>
+<string name="menu_actionbar_scheduled">กำหนดเวลา</string>
 <string name="menu_actionbar_db_backup">สำรองฐานข้อมูล</string>
 <string name="menu_actionbar_db_restore">เรียกคืนฐานข้อมูล</string>
 <string name="menu_actionbar_db_export">เอ็กซ์พอร์ต &bookmarks;</string>
@@ -28,30 +41,33 @@
 <string name="menu_context_folder_hide">ซ่อน</string>
 <string name="menu_context_folder_unhide">ยกเลิกการซ่อน</string>
 <string name="menu_context_folder_rename">เปลี่ยนชื่อ</string>
-<string name="menu_context_folder_move">ย้าย</string>
-<string name="menu_context_folder_delete">ลบ</string>
+<string name="menu_context_folder_move">&move;</string>
+<string name="menu_context_folder_delete">&delete;</string>
 <string name="menu_context_intent_perform">ดำเนินการ…</string>
-<string name="menu_context_intent_edit">แก้ไข</string>
+<string name="menu_context_intent_schedule">กำหนดเวลา…</string>
+<string name="menu_context_intent_edit">&edit;</string>
+<string name="menu_context_intent_move">&move;</string>
 <string name="menu_context_intent_copy">คัดลอก</string>
+<string name="menu_context_intent_delete">&delete;</string>
 <string name="perform_send_broadcast">ส่งการกระจาย</string>
 <string name="perform_start_activity">เริ่มต้นกิจกรรม</string>
 <string name="perform_start_foreground_service">เริ่มต้นเซอร์วิส Fore ground</string>
 <string name="perform_start_service">เริ่มต้นเซอร์วิส</string>
 <string name="perform_stop_service">หยุดบริการ</string>
-<string name="perform_add_shortcut">เพิ่มทางลัด</string>
+<string name="perform_add_shortcut">&add; ช็อตคัต</string>
 <string name="settings_option_show_hidden">แสดงที่ถูกซ่อน &lc_folders;</string>
 <string name="settings_option_auto_backup">ดำเนินการสำรองข้อมูลรายวันแบบอัตโนมัติ</string>
 <string name="settings_option_backup_versioning">รักษาสำเนาสำรองรายวันแบบอัตโนมัติ 3 รายการล่าสุด</string>
 <string name="settings_option_startup_folder">เริ่มต้น &lc_folder; เพื่อแสดงเมื่อเริ่มทำงาน:</string>
 <string name="settings_option_output_directory">ดีฟอลต์เอาต์พุตไดเร็กทอรีสำหรับข้อมูลสำรองและ:</string>
 <string name="dialog_ok">OK</string>
-<string name="dialog_cancel">ยกเลิก</string>
-<string name="dialog_add">เพิ่ม</string>
-<string name="dialog_add_more">เพิ่ม…</string>
+<string name="dialog_cancel">&cancel;</string>
+<string name="dialog_add">&add;</string>
+<string name="dialog_add_more">&add;…</string>
 <string name="dialog_change">เปลี่ยน…</string>
 <string name="dialog_choose">เลือก…</string>
 <string name="dialog_save">บันทึก</string>
-<string name="dialog_delete">ลบ</string>
+<string name="dialog_delete">&delete;</string>
 <string name="dialog_backup_preupdate_title">จำเป็นต้องอัพเดตฐานข้อมูล</string>
 <string name="dialog_backup_preupdate_message">คุณได้ติดตั้งเวอร์ชันใหม่กว่าของแอ็พพลิเคชันนี้ เวอร์ชันของฐานข้อมูลยังต้องถูกอัพเดตด้วย ขอแนะนำให้บันทึกข้อมูลสำรองก่อนปฏิบัติการนี้ข้อผิดพลาดใดๆจะทำให้ฐานข้อมูลเสียหาย เมื่อต้องการทำสิ่งนี้, คุณต้องกำหนดสิทธิ์เพื่อบันทึกไฟล์สำรองข้อมูลไปยังหน่วยเก็บข้อมูลภายนอกก่อน คุณต้องการบันทึกการสำรองข้อมูลก่อนอัพเดตที่จำเป็น?</string>
 <string name="dialog_intent_search_option_query">เคียวรี:</string>
@@ -78,30 +94,61 @@
 <string name="dialog_import_done">อิมพอร์ตสำเร็จ</string>
 <string name="dialog_import_failed">อิมพอร์ตล้มเหลว</string>
 <string name="dialog_import_notfound">อิมพอร์ตไฟล์ไม่สามารถอ่านได้</string>
-<string name="dialog_delete_folder_title">ลบ &folder;?</string>
-<string name="dialog_delete_intent_title">ลบ &bookmark;?</string>
+<string name="dialog_delete_folder_title">&delete; &folder;?</string>
+<string name="dialog_delete_intent_title">&delete; &bookmark;?</string>
 <string name="dialog_delete_confirm">คุณแน่ใจว่าต้องการลบ "%s"?</string>
 <string name="folder_rename_title">เปลี่ยนชื่อ &folder;</string>
-<string name="folder_attribute_name">ชื่อ</string>
-<string name="intent_edit_title">แก้ไข &bookmark;</string>
+<string name="folder_attribute_name">&name;</string>
+<string name="intent_add_title">&add; &bookmark;</string>
+<string name="intent_edit_title">&edit; &bookmark;</string>
+<string name="intent_attribute_name">&name;</string>
 <string name="intent_attribute_folder">&folder;</string>
 <string name="intent_attribute_flags">แฟล็ก</string>
 <string name="intent_attribute_action">การดำเนินการ</string>
-<string name="intent_attribute_package_name">ชื่อแพ็คเกจ</string>
-<string name="intent_attribute_class_name">ชื่อคลาส</string>
+<string name="intent_attribute_package_name">แพ็กเกจ &name;</string>
+<string name="intent_attribute_class_name">คลาส &name;</string>
 <string name="intent_attribute_data_uri">ข้อมูล URI</string>
 <string name="intent_attribute_data_type">ข้อมูล (MIME) ชนิด</string>
 <string name="intent_attribute_categories">ประเภท</string>
 <string name="intent_attribute_extras">เอ็กซ์ตร้า</string>
-<string name="dialog_update_intent_attribute_category_title">อัพเดตหมวดหมู่</string>
-<string name="dialog_update_intent_attribute_extra_title_add">เพิ่มพิเศษ</string>
-<string name="dialog_update_intent_attribute_extra_title_edit">อัพเดตพิเศษ</string>
+<string name="dialog_update_intent_attribute_category_title">&update; หมวดหมู่</string>
+<string name="dialog_update_intent_attribute_category_name">&name;</string>
+<string name="dialog_update_intent_attribute_extra_title_add">&add; พิเศษ</string>
+<string name="dialog_update_intent_attribute_extra_title_edit">&update; พิเศษ</string>
+<string name="dialog_update_intent_attribute_extra_name">&name;</string>
 <string name="dialog_update_intent_attribute_extra_value_type">ชนิดของค่า</string>
 <string name="dialog_update_intent_attribute_extra_value">ค่า</string>
-<string name="dialog_update_intent_attribute_extra_value_separator">เพิ่มตัวคั่นรายการค่า</string>
+<string name="dialog_update_intent_attribute_extra_value_separator">&add; ตัวคั่นรายการค่า</string>
 <string name="messages_db_error_update">ฐานข้อมูลมีข้อผิดพลาดขณะอัพเดต</string>
 <string name="messages_no_permission">สิทธิไม่เพียงพอในการดำเนินการที่ร้องขอ</string>
 <string name="messages_activity_not_found">ไม่มีกิจกรรมที่ตรงกับ Intent</string>
 <string name="spinner_items_category_label_common_values">-- ค่าทั่วไป --</string>
 <string name="spinner_items_category_label_more_values">-- ค่าอื่นๆ --</string>
+<string name="activity_label_alarms">กำหนดเวลา &alarms;</string>
+<string name="activity_label_save_alarm">&alarm; กำหนดเวลา</string>
+<string name="layout_main_no_alarms">ไม่ &alarms; ที่พบ.</string>
+<string name="menu_actionbar_cancel_all">&cancel; ทั้งหมด</string>
+<string name="menu_context_alarm_edit">&edit;</string>
+<string name="menu_context_alarm_cancel">&cancel;</string>
+<string name="dialog_cancel_alarm_title">&cancel; &alarm;?</string>
+<string name="dialog_cancel_alarms_title">&cancel; &alarms;?</string>
+<string name="dialog_delete_confirm_alarms">ทั้งหมด &lc_alarms;</string>
+<string name="alarm_attribute_intent">&bookmark;:</string>
+<string name="alarm_attribute_perform">ดำเนินการ:</string>
+<string name="alarm_attribute_date">วันที่:</string>
+<string name="alarm_attribute_time">เวลา:</string>
+<string name="alarm_attribute_interval">ทำซ้ำทุกๆ:</string>
+<string name="alarm_attribute_flags">อ็อพชัน:</string>
+<string name="flag_alarm_is_exact">ความแม่นยำสูง (มีประสิทธิภาพน้อย)</string>
+<string name="flag_alarm_run_when_idle">เรียกใช้งานการเตือนเมื่อไม่ได้ทำงาน</string>
+<string name="flag_alarm_wake_when_idle">อุปกรณ์ตื่นเมื่อไม่ได้ทำงาน</string>
+<string name="flag_alarm_run_when_missed">เรียกใช้งานการเตือนเมื่อบูตใหม่เมื่อพลาด</string>
+<string name="dialog_set">ตั้ง</string>
+<string name="time_picker_dialog_reset">รีเซ็ตเป็นศูนย์</string>
+<string name="accessibility_time_picker_sign">"เครื่องหมายบวก/ลบ"</string>
+<string name="accessibility_time_picker_day">"วัน"</string>
+<string name="accessibility_time_picker_hour">"ชั่วโมง"</string>
+<string name="accessibility_time_picker_minute">"นาที"</string>
+<string name="accessibility_time_picker_second">"ที่สอง"</string>
+<string name="accessibility_time_picker_milli">"มิลลิวินาที"</string>
 </resources>

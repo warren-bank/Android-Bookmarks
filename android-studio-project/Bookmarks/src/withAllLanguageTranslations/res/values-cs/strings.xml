@@ -8,18 +8,31 @@
     <!ENTITY bookmarks     "Záložky">
     <!ENTITY lc_bookmark   "záložka">
     <!ENTITY lc_bookmarks  "záložky">
+    <!ENTITY alarm         "Poplach">
+    <!ENTITY alarms        "Alarmy">
+    <!ENTITY lc_alarm      "alarm">
+    <!ENTITY lc_alarms     "alarmy">
+    <!ENTITY add           "Přidat">
+    <!ENTITY cancel        "Storno">
+    <!ENTITY delete        "Odstranit">
+    <!ENTITY edit          "Upravit">
+    <!ENTITY move          "Přemístit">
+    <!ENTITY name          "Název">
+    <!ENTITY update        "Aktualizovat">
 ]>
 <resources>
 <string name="app_name_long">&bookmarks;</string>
+<string name="activity_label_save_bookmark">&add; &bookmark;</string>
 <string name="layout_main_no_intents_in_folder">Ne. &bookmarks; nalezen.</string>
 <string name="layout_main_no_results_for_search">Nebyly nalezeny žádné výsledky hledání.</string>
 <string name="layout_main_results_for_search_label">Výsledky pro:</string>
 <string name="menu_actionbar_intent_search">Prohledat</string>
-<string name="menu_actionbar_folder_add">Přidat &folder;</string>
-<string name="menu_actionbar_intent_add">Přidat &bookmark;</string>
-<string name="menu_actionbar_move_complete">Přesunout na aktuální &folder;</string>
-<string name="menu_actionbar_move_cancel">Zrušit přesun</string>
+<string name="menu_actionbar_folder_add">&add; &folder;</string>
+<string name="menu_actionbar_intent_add">&add; &bookmark;</string>
+<string name="menu_actionbar_move_complete">&move; na aktuální &folder;</string>
+<string name="menu_actionbar_move_cancel">&cancel; &move;</string>
 <string name="menu_actionbar_settings">NastaveníComment</string>
+<string name="menu_actionbar_scheduled">Naplánováno</string>
 <string name="menu_actionbar_db_backup">Zálohovat databázi</string>
 <string name="menu_actionbar_db_restore">Obnovit databázi</string>
 <string name="menu_actionbar_db_export">Exportovat &bookmarks;</string>
@@ -28,30 +41,33 @@
 <string name="menu_context_folder_hide">Skrýt</string>
 <string name="menu_context_folder_unhide">Neskrývat</string>
 <string name="menu_context_folder_rename">Přejmenovat</string>
-<string name="menu_context_folder_move">Přemístit</string>
-<string name="menu_context_folder_delete">Odstranit</string>
+<string name="menu_context_folder_move">&move;</string>
+<string name="menu_context_folder_delete">&delete;</string>
 <string name="menu_context_intent_perform">Provést…</string>
-<string name="menu_context_intent_edit">Upravit</string>
+<string name="menu_context_intent_schedule">Plánovat…</string>
+<string name="menu_context_intent_edit">&edit;</string>
+<string name="menu_context_intent_move">&move;</string>
 <string name="menu_context_intent_copy">Kopírování</string>
+<string name="menu_context_intent_delete">&delete;</string>
 <string name="perform_send_broadcast">Odeslat vysílání</string>
 <string name="perform_start_activity">Spustit aktivitu</string>
 <string name="perform_start_foreground_service">Spustit službu na popředí</string>
 <string name="perform_start_service">Spustit službu</string>
 <string name="perform_stop_service">Zastavit službu</string>
-<string name="perform_add_shortcut">Přidat zástupce</string>
+<string name="perform_add_shortcut">&add; Zástupce</string>
 <string name="settings_option_show_hidden">Zobrazit skryté &lc_folders;</string>
 <string name="settings_option_auto_backup">Provést automatickou denní zálohu</string>
 <string name="settings_option_backup_versioning">Uchovat 3 nejnovější automatické denní zálohování</string>
 <string name="settings_option_startup_folder">Začátek &lc_folder; pro zobrazení při spuštění:</string>
 <string name="settings_option_output_directory">Výchozí výstupní adresář pro zálohy a exporty:</string>
 <string name="dialog_ok">OK</string>
-<string name="dialog_cancel">Storno</string>
-<string name="dialog_add">Přidat</string>
-<string name="dialog_add_more">Přidat…</string>
+<string name="dialog_cancel">&cancel;</string>
+<string name="dialog_add">&add;</string>
+<string name="dialog_add_more">&add;1.</string>
 <string name="dialog_change">Změnit…</string>
 <string name="dialog_choose">Vybrat…</string>
 <string name="dialog_save">Uložit</string>
-<string name="dialog_delete">Odstranit</string>
+<string name="dialog_delete">&delete;</string>
 <string name="dialog_backup_preupdate_title">Aktualizace databáze je povinná</string>
 <string name="dialog_backup_preupdate_message">Nainstalovali jste novější verzi této aplikace. Je třeba aktualizovat také verzi databáze. Uložení zálohy před touto operací se doporučuje; jakákoli chyba poškodí databázi. Chcete-li to provést, musíte nejprve udělit oprávnění k uložení záložního souboru do externího úložiště. Chtěli byste uložit zálohu před požadovanou aktualizací?</string>
 <string name="dialog_intent_search_option_query">dotázat se:</string>
@@ -78,30 +94,61 @@
 <string name="dialog_import_done">Import byl úspěšný</string>
 <string name="dialog_import_failed">Selhání importu</string>
 <string name="dialog_import_notfound">Soubor importu nelze přečíst</string>
-<string name="dialog_delete_folder_title">Odstranit &folder;?</string>
-<string name="dialog_delete_intent_title">Odstranit &bookmark;?</string>
+<string name="dialog_delete_folder_title">&delete; &folder;?</string>
+<string name="dialog_delete_intent_title">&delete; &bookmark;?</string>
 <string name="dialog_delete_confirm">Jste si jisti, že chcete odstranit "%s"?</string>
 <string name="folder_rename_title">Přejmenovat &folder;</string>
-<string name="folder_attribute_name">Název</string>
-<string name="intent_edit_title">Upravit &bookmark;</string>
+<string name="folder_attribute_name">&name;</string>
+<string name="intent_add_title">&add; &bookmark;</string>
+<string name="intent_edit_title">&edit; &bookmark;</string>
+<string name="intent_attribute_name">&name;</string>
 <string name="intent_attribute_folder">&folder;</string>
 <string name="intent_attribute_flags">Příznaky</string>
 <string name="intent_attribute_action">Akce</string>
-<string name="intent_attribute_package_name">Název balíku</string>
-<string name="intent_attribute_class_name">Název třídy</string>
+<string name="intent_attribute_package_name">Balík &name;</string>
+<string name="intent_attribute_class_name">Třída &name;</string>
 <string name="intent_attribute_data_uri">data URI</string>
 <string name="intent_attribute_data_type">data (MIME) Typ</string>
 <string name="intent_attribute_categories">Kategorie</string>
 <string name="intent_attribute_extras">Doplňky</string>
-<string name="dialog_update_intent_attribute_category_title">Aktualizovat kategorii</string>
-<string name="dialog_update_intent_attribute_extra_title_add">Přidat další</string>
-<string name="dialog_update_intent_attribute_extra_title_edit">Aktualizovat extra</string>
+<string name="dialog_update_intent_attribute_category_title">&update; Kategorie</string>
+<string name="dialog_update_intent_attribute_category_name">&name;</string>
+<string name="dialog_update_intent_attribute_extra_title_add">&add; Doplňky</string>
+<string name="dialog_update_intent_attribute_extra_title_edit">&update; Doplňky</string>
+<string name="dialog_update_intent_attribute_extra_name">&name;</string>
 <string name="dialog_update_intent_attribute_extra_value_type">Typ hodnoty</string>
 <string name="dialog_update_intent_attribute_extra_value">Hodnota</string>
-<string name="dialog_update_intent_attribute_extra_value_separator">Přidat oddělovač seznamu hodnot</string>
+<string name="dialog_update_intent_attribute_extra_value_separator">&add; Oddělovač seznamu hodnot</string>
 <string name="messages_db_error_update">Chyba databáze při aktualizaci</string>
 <string name="messages_no_permission">Nedostatečné oprávnění k provedení požadované operace.</string>
 <string name="messages_activity_not_found">Žádná aktivita neodpovídá Intent</string>
 <string name="spinner_items_category_label_common_values">-- společné hodnoty --</string>
 <string name="spinner_items_category_label_more_values">-- více hodnot --</string>
+<string name="activity_label_alarms">Naplánováno &alarms;</string>
+<string name="activity_label_save_alarm">&alarm; Plánovat</string>
+<string name="layout_main_no_alarms">Ne. &alarms; nalezen.</string>
+<string name="menu_actionbar_cancel_all">&cancel; Vše</string>
+<string name="menu_context_alarm_edit">&edit;</string>
+<string name="menu_context_alarm_cancel">&cancel;</string>
+<string name="dialog_cancel_alarm_title">&cancel; &alarm;?</string>
+<string name="dialog_cancel_alarms_title">&cancel; &alarms;?</string>
+<string name="dialog_delete_confirm_alarms">všechny &lc_alarms;</string>
+<string name="alarm_attribute_intent">&bookmark;:</string>
+<string name="alarm_attribute_perform">Provést:</string>
+<string name="alarm_attribute_date">Datum:</string>
+<string name="alarm_attribute_time">Čas:</string>
+<string name="alarm_attribute_interval">Opakovat každých:</string>
+<string name="alarm_attribute_flags">Možnosti:</string>
+<string name="flag_alarm_is_exact">vysoká přesnost (méně efektivní)</string>
+<string name="flag_alarm_run_when_idle">spustit upomínku při nečinnosti</string>
+<string name="flag_alarm_wake_when_idle">probuzení zařízení při nečinnosti</string>
+<string name="flag_alarm_run_when_missed">Provést alarm při restartu při vynechání</string>
+<string name="dialog_set">Nastavit</string>
+<string name="time_picker_dialog_reset">Resetovat na nulu</string>
+<string name="accessibility_time_picker_sign">"Kladný/Záporný podpis"</string>
+<string name="accessibility_time_picker_day">"Den"</string>
+<string name="accessibility_time_picker_hour">"Hodina"</string>
+<string name="accessibility_time_picker_minute">"Minut"</string>
+<string name="accessibility_time_picker_second">"Sekunda"</string>
+<string name="accessibility_time_picker_milli">"Milisekunda"</string>
 </resources>

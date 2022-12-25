@@ -8,18 +8,31 @@
     <!ENTITY bookmarks     "책갈피">
     <!ENTITY lc_bookmark   "책갈피">
     <!ENTITY lc_bookmarks  "책갈피">
+    <!ENTITY alarm         "알람">
+    <!ENTITY alarms        "알람">
+    <!ENTITY lc_alarm      "경보기">
+    <!ENTITY lc_alarms     "경보기">
+    <!ENTITY add           "추가">
+    <!ENTITY cancel        "취소">
+    <!ENTITY delete        "삭제">
+    <!ENTITY edit          "편집">
+    <!ENTITY move          "이동">
+    <!ENTITY name          "이름">
+    <!ENTITY update        "업데이트">
 ]>
 <resources>
 <string name="app_name_long">&bookmarks;</string>
+<string name="activity_label_save_bookmark">&add; &bookmark;</string>
 <string name="layout_main_no_intents_in_folder">아니오 &bookmarks; 발견된.</string>
 <string name="layout_main_no_results_for_search">검색 결과를 찾을 수 없음.</string>
 <string name="layout_main_results_for_search_label">결과:</string>
 <string name="menu_actionbar_intent_search">검색</string>
-<string name="menu_actionbar_folder_add">추가 &folder;</string>
-<string name="menu_actionbar_intent_add">추가 &bookmark;</string>
-<string name="menu_actionbar_move_complete">현재로 이동 &folder;</string>
-<string name="menu_actionbar_move_cancel">이동 취소</string>
+<string name="menu_actionbar_folder_add">&add; &folder;</string>
+<string name="menu_actionbar_intent_add">&add; &bookmark;</string>
+<string name="menu_actionbar_move_complete">&move; 현재까지 &folder;</string>
+<string name="menu_actionbar_move_cancel">&cancel; &move;</string>
 <string name="menu_actionbar_settings">설정</string>
+<string name="menu_actionbar_scheduled">예정된</string>
 <string name="menu_actionbar_db_backup">백업 데이터베이스</string>
 <string name="menu_actionbar_db_restore">데이터베이스 복원</string>
 <string name="menu_actionbar_db_export">내보내기 &bookmarks;</string>
@@ -28,32 +41,35 @@
 <string name="menu_context_folder_hide">숨기기</string>
 <string name="menu_context_folder_unhide">숨기기</string>
 <string name="menu_context_folder_rename">이름 바꾸기</string>
-<string name="menu_context_folder_move">이동</string>
-<string name="menu_context_folder_delete">삭제</string>
+<string name="menu_context_folder_move">&move;</string>
+<string name="menu_context_folder_delete">&delete;</string>
 <string name="menu_context_intent_perform">수행…</string>
-<string name="menu_context_intent_edit">편집</string>
+<string name="menu_context_intent_schedule">스케줄…</string>
+<string name="menu_context_intent_edit">&edit;</string>
+<string name="menu_context_intent_move">&move;</string>
 <string name="menu_context_intent_copy">복사</string>
+<string name="menu_context_intent_delete">&delete;</string>
 <string name="perform_send_broadcast">브로드캐스트 보내기</string>
 <string name="perform_start_activity">활동 시작</string>
 <string name="perform_start_foreground_service">포그라운드 서비스 시작</string>
 <string name="perform_start_service">서비스 시작</string>
 <string name="perform_stop_service">서비스 중지</string>
-<string name="perform_add_shortcut">바로 가기 추가</string>
+<string name="perform_add_shortcut">&add; 바로 가기</string>
 <string name="settings_option_show_hidden">숨겨진 항목 표시 &lc_folders;</string>
 <string name="settings_option_auto_backup">자동 일일 백업 수행</string>
 <string name="settings_option_backup_versioning">가장 최근의 자동 일일 백업 3개 유지</string>
 <string name="settings_option_startup_folder">초기 &lc_folder; 시작 시 표시하기:</string>
 <string name="settings_option_output_directory">백업 및 내보내기에 대한 기본 출력 디렉토리:</string>
 <string name="dialog_ok">OK</string>
-<string name="dialog_cancel">취소</string>
-<string name="dialog_add">추가</string>
-<string name="dialog_add_more">추가…</string>
+<string name="dialog_cancel">&cancel;</string>
+<string name="dialog_add">&add;</string>
+<string name="dialog_add_more">&add;…</string>
 <string name="dialog_change">변화…</string>
 <string name="dialog_choose">선택…</string>
 <string name="dialog_save">저장</string>
-<string name="dialog_delete">삭제</string>
+<string name="dialog_delete">&delete;</string>
 <string name="dialog_backup_preupdate_title">데이터베이스 업데이트 필요</string>
-<string name="dialog_backup_preupdate_message">이 애플리케이션의 새 버전을 설치했습니다. 데이터베이스 버전도 업데이트해야 합니다. 이 조작을 수행하기 전에 백업을 저장하는 것이 좋습니다. 오류가 발생하면 데이터베이스가 손상됩니다. 이를 수행하려면 먼저 백업 파일을 외부 스토리지에 저장할 수 있는 권한을 부여해야 합니다. 필요한 업데이트 전에 백업을 저장하시겠습니까\??</string>
+<string name="dialog_backup_preupdate_message">이 애플리케이션의 새 버전을 설치했습니다. 데이터베이스 버전도 업데이트해야 합니다. 이 조작을 수행하기 전에 백업을 저장하는 것이 좋습니다. 오류가 발생하면 데이터베이스가 손상됩니다. 이를 수행하려면 먼저 백업 파일을 외부 스토리지에 저장할 수 있는 권한을 부여해야 합니다. 필요한 업데이트 전에 백업을 저장하시겠습니까?</string>
 <string name="dialog_intent_search_option_query">쿼리:</string>
 <string name="dialog_intent_search_option_only_current_folder">현재의 &lc_folder;</string>
 <string name="dialog_backup_done">데이터베이스 백업 완료</string>
@@ -78,30 +94,61 @@
 <string name="dialog_import_done">가져오기 성공</string>
 <string name="dialog_import_failed">가져오기 실패</string>
 <string name="dialog_import_notfound">가져오기 파일을 읽을 수 없음</string>
-<string name="dialog_delete_folder_title">삭제 &folder;?</string>
-<string name="dialog_delete_intent_title">삭제 &bookmark;?</string>
-<string name="dialog_delete_confirm">삭제하시겠습니까\? "%s"?</string>
+<string name="dialog_delete_folder_title">&delete; &folder;?</string>
+<string name="dialog_delete_intent_title">&delete; &bookmark;?</string>
+<string name="dialog_delete_confirm">삭제하시겠습니까 "%s"?</string>
 <string name="folder_rename_title">이름 바꾸기 &folder;</string>
-<string name="folder_attribute_name">이름</string>
-<string name="intent_edit_title">편집 &bookmark;</string>
+<string name="folder_attribute_name">&name;</string>
+<string name="intent_add_title">&add; &bookmark;</string>
+<string name="intent_edit_title">&edit; &bookmark;</string>
+<string name="intent_attribute_name">&name;</string>
 <string name="intent_attribute_folder">&folder;</string>
 <string name="intent_attribute_flags">플래그</string>
 <string name="intent_attribute_action">행동</string>
-<string name="intent_attribute_package_name">패키지 이름</string>
-<string name="intent_attribute_class_name">클래스 이름</string>
+<string name="intent_attribute_package_name">패키지 &name;</string>
+<string name="intent_attribute_class_name">클래스 &name;</string>
 <string name="intent_attribute_data_uri">데이터 URI</string>
 <string name="intent_attribute_data_type">데이터 (MIME) 유형</string>
 <string name="intent_attribute_categories">카테고리</string>
 <string name="intent_attribute_extras">엑스트라</string>
-<string name="dialog_update_intent_attribute_category_title">업데이트 카테고리</string>
-<string name="dialog_update_intent_attribute_extra_title_add">Extra 추가</string>
-<string name="dialog_update_intent_attribute_extra_title_edit">업데이트 추가</string>
+<string name="dialog_update_intent_attribute_category_title">&update; 카테고리</string>
+<string name="dialog_update_intent_attribute_category_name">&name;</string>
+<string name="dialog_update_intent_attribute_extra_title_add">&add; 엑스트라</string>
+<string name="dialog_update_intent_attribute_extra_title_edit">&update; 엑스트라</string>
+<string name="dialog_update_intent_attribute_extra_name">&name;</string>
 <string name="dialog_update_intent_attribute_extra_value_type">값의 유형</string>
 <string name="dialog_update_intent_attribute_extra_value">가치</string>
-<string name="dialog_update_intent_attribute_extra_value_separator">값 목록 구분 기호 추가</string>
+<string name="dialog_update_intent_attribute_extra_value_separator">&add; 값 목록 분리자</string>
 <string name="messages_db_error_update">업데이트 중에 데이터베이스 오류 발생</string>
 <string name="messages_no_permission">요청된 조작을 수행할 수 있는 권한이 충분하지 않습니다.</string>
 <string name="messages_activity_not_found">활동이 없음 Intent</string>
 <string name="spinner_items_category_label_common_values">-- 공통 값 --</string>
 <string name="spinner_items_category_label_more_values">-- 더 많은 값 --</string>
+<string name="activity_label_alarms">예정된 &alarms;</string>
+<string name="activity_label_save_alarm">&alarm; 스케줄</string>
+<string name="layout_main_no_alarms">아니오 &alarms; 발견된.</string>
+<string name="menu_actionbar_cancel_all">&cancel; 모든</string>
+<string name="menu_context_alarm_edit">&edit;</string>
+<string name="menu_context_alarm_cancel">&cancel;</string>
+<string name="dialog_cancel_alarm_title">&cancel; &alarm;?</string>
+<string name="dialog_cancel_alarms_title">&cancel; &alarms;?</string>
+<string name="dialog_delete_confirm_alarms">모든 &lc_alarms;</string>
+<string name="alarm_attribute_intent">&bookmark;:</string>
+<string name="alarm_attribute_perform">수행하기:</string>
+<string name="alarm_attribute_date">날짜:</string>
+<string name="alarm_attribute_time">시간:</string>
+<string name="alarm_attribute_interval">반복하기:</string>
+<string name="alarm_attribute_flags">옵션:</string>
+<string name="flag_alarm_is_exact">높은 정밀도 (덜 효율적))</string>
+<string name="flag_alarm_run_when_idle">유휴 상태일 때 알람 실행하기</string>
+<string name="flag_alarm_wake_when_idle">유휴 상태일 때 장치</string>
+<string name="flag_alarm_run_when_missed">누락되었을 때 재부트 시 알람 실행</string>
+<string name="dialog_set">설정하기</string>
+<string name="time_picker_dialog_reset">0으로 재설정</string>
+<string name="accessibility_time_picker_sign">"긍정적/부정적 기호"</string>
+<string name="accessibility_time_picker_day">"일"</string>
+<string name="accessibility_time_picker_hour">"시간"</string>
+<string name="accessibility_time_picker_minute">"미닛"</string>
+<string name="accessibility_time_picker_second">"두 번째"</string>
+<string name="accessibility_time_picker_milli">"밀리초"</string>
 </resources>

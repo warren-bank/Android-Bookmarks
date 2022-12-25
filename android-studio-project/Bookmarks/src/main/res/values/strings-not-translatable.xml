@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<string name="app_name_short"                            translatable="false">@string/app_name_long</string>
-<string name="default_backups_directory_name"            translatable="false">Bookmarks</string>
-<string name="databases_directory_name"                  translatable="false">databases</string>
-<string name="database_file_name"                        translatable="false">@string/default_backups_directory_name</string>
-<string name="netscape_html_export_file_name"            translatable="false">@string/default_backups_directory_name</string>
-<string name="json_export_file_name"                     translatable="false">@string/default_backups_directory_name</string>
-<string name="folder_breadcrumbs_separator"              translatable="false">/</string>
+
+<!-- Boomarks and SaveBookmark ============================================= -->
+
+<string name="app_name_short"                               translatable="false">@string/app_name_long</string>
+<string name="default_backups_directory_name"               translatable="false">Bookmarks</string>
+<string name="databases_directory_name"                     translatable="false">databases</string>
+<string name="database_file_name"                           translatable="false">@string/default_backups_directory_name</string>
+<string name="netscape_html_export_file_name"               translatable="false">@string/default_backups_directory_name</string>
+<string name="json_export_file_name"                        translatable="false">@string/default_backups_directory_name</string>
+<string name="folder_breadcrumbs_separator"                 translatable="false">/</string>
 
 <string-array name="perform_options" translatable="false">
   <item>@string/perform_send_broadcast</item>
@@ -28,53 +31,53 @@
   ======================
   https://android.googlesource.com/platform/frameworks/base/+/master/core/java/android/content/Intent.java
 -->
-<string name="flag_grant_read_uri_permission"            translatable="false">FLAG_GRANT_READ_URI_PERMISSION</string>
-<string name="flag_grant_write_uri_permission"           translatable="false">FLAG_GRANT_WRITE_URI_PERMISSION</string>
-<string name="flag_from_background"                      translatable="false">FLAG_FROM_BACKGROUND</string>
-<string name="flag_debug_log_resolution"                 translatable="false">FLAG_DEBUG_LOG_RESOLUTION</string>
-<string name="flag_exclude_stopped_packages"             translatable="false">FLAG_EXCLUDE_STOPPED_PACKAGES</string>
-<string name="flag_include_stopped_packages"             translatable="false">FLAG_INCLUDE_STOPPED_PACKAGES</string>
-<string name="flag_grant_persistable_uri_permission"     translatable="false">FLAG_GRANT_PERSISTABLE_URI_PERMISSION</string>
-<string name="flag_grant_prefix_uri_permission"          translatable="false">FLAG_GRANT_PREFIX_URI_PERMISSION</string>
-<string name="flag_direct_boot_auto"                     translatable="false">FLAG_DIRECT_BOOT_AUTO</string>
-<string name="flag_debug_triaged_missing"                translatable="false">FLAG_DEBUG_TRIAGED_MISSING</string>
-<string name="flag_ignore_ephemeral"                     translatable="false">FLAG_IGNORE_EPHEMERAL</string>
+<string name="flag_grant_read_uri_permission"               translatable="false">FLAG_GRANT_READ_URI_PERMISSION</string>
+<string name="flag_grant_write_uri_permission"              translatable="false">FLAG_GRANT_WRITE_URI_PERMISSION</string>
+<string name="flag_from_background"                         translatable="false">FLAG_FROM_BACKGROUND</string>
+<string name="flag_debug_log_resolution"                    translatable="false">FLAG_DEBUG_LOG_RESOLUTION</string>
+<string name="flag_exclude_stopped_packages"                translatable="false">FLAG_EXCLUDE_STOPPED_PACKAGES</string>
+<string name="flag_include_stopped_packages"                translatable="false">FLAG_INCLUDE_STOPPED_PACKAGES</string>
+<string name="flag_grant_persistable_uri_permission"        translatable="false">FLAG_GRANT_PERSISTABLE_URI_PERMISSION</string>
+<string name="flag_grant_prefix_uri_permission"             translatable="false">FLAG_GRANT_PREFIX_URI_PERMISSION</string>
+<string name="flag_direct_boot_auto"                        translatable="false">FLAG_DIRECT_BOOT_AUTO</string>
+<string name="flag_debug_triaged_missing"                   translatable="false">FLAG_DEBUG_TRIAGED_MISSING</string>
+<string name="flag_ignore_ephemeral"                        translatable="false">FLAG_IGNORE_EPHEMERAL</string>
 
-<string name="flag_activity_require_default"             translatable="false">FLAG_ACTIVITY_REQUIRE_DEFAULT</string>
-<string name="flag_activity_require_non_browser"         translatable="false">FLAG_ACTIVITY_REQUIRE_NON_BROWSER</string>
-<string name="flag_activity_match_external"              translatable="false">FLAG_ACTIVITY_MATCH_EXTERNAL</string>
-<string name="flag_activity_launch_adjacent"             translatable="false">FLAG_ACTIVITY_LAUNCH_ADJACENT</string>
-<string name="flag_activity_retain_in_recents"           translatable="false">FLAG_ACTIVITY_RETAIN_IN_RECENTS</string>
-<string name="flag_activity_task_on_home"                translatable="false">FLAG_ACTIVITY_TASK_ON_HOME</string>
-<string name="flag_activity_clear_task"                  translatable="false">FLAG_ACTIVITY_CLEAR_TASK</string>
-<string name="flag_activity_no_animation"                translatable="false">FLAG_ACTIVITY_NO_ANIMATION</string>
-<string name="flag_activity_reorder_to_front"            translatable="false">FLAG_ACTIVITY_REORDER_TO_FRONT</string>
-<string name="flag_activity_no_user_action"              translatable="false">FLAG_ACTIVITY_NO_USER_ACTION</string>
-<string name="flag_activity_clear_when_task_reset"       translatable="false">FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET</string>
-<string name="flag_activity_new_document"                translatable="false">FLAG_ACTIVITY_NEW_DOCUMENT</string>
-<string name="flag_activity_launched_from_history"       translatable="false">FLAG_ACTIVITY_LAUNCHED_FROM_HISTORY</string>
-<string name="flag_activity_reset_task_if_needed"        translatable="false">FLAG_ACTIVITY_RESET_TASK_IF_NEEDED</string>
-<string name="flag_activity_brought_to_front"            translatable="false">FLAG_ACTIVITY_BROUGHT_TO_FRONT</string>
-<string name="flag_activity_exclude_from_recents"        translatable="false">FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS</string>
-<string name="flag_activity_previous_is_top"             translatable="false">FLAG_ACTIVITY_PREVIOUS_IS_TOP</string>
-<string name="flag_activity_forward_result"              translatable="false">FLAG_ACTIVITY_FORWARD_RESULT</string>
-<string name="flag_activity_clear_top"                   translatable="false">FLAG_ACTIVITY_CLEAR_TOP</string>
-<string name="flag_activity_multiple_task"               translatable="false">FLAG_ACTIVITY_MULTIPLE_TASK</string>
-<string name="flag_activity_new_task"                    translatable="false">FLAG_ACTIVITY_NEW_TASK</string>
-<string name="flag_activity_single_top"                  translatable="false">FLAG_ACTIVITY_SINGLE_TOP</string>
-<string name="flag_activity_no_history"                  translatable="false">FLAG_ACTIVITY_NO_HISTORY</string>
+<string name="flag_activity_require_default"                translatable="false">FLAG_ACTIVITY_REQUIRE_DEFAULT</string>
+<string name="flag_activity_require_non_browser"            translatable="false">FLAG_ACTIVITY_REQUIRE_NON_BROWSER</string>
+<string name="flag_activity_match_external"                 translatable="false">FLAG_ACTIVITY_MATCH_EXTERNAL</string>
+<string name="flag_activity_launch_adjacent"                translatable="false">FLAG_ACTIVITY_LAUNCH_ADJACENT</string>
+<string name="flag_activity_retain_in_recents"              translatable="false">FLAG_ACTIVITY_RETAIN_IN_RECENTS</string>
+<string name="flag_activity_task_on_home"                   translatable="false">FLAG_ACTIVITY_TASK_ON_HOME</string>
+<string name="flag_activity_clear_task"                     translatable="false">FLAG_ACTIVITY_CLEAR_TASK</string>
+<string name="flag_activity_no_animation"                   translatable="false">FLAG_ACTIVITY_NO_ANIMATION</string>
+<string name="flag_activity_reorder_to_front"               translatable="false">FLAG_ACTIVITY_REORDER_TO_FRONT</string>
+<string name="flag_activity_no_user_action"                 translatable="false">FLAG_ACTIVITY_NO_USER_ACTION</string>
+<string name="flag_activity_clear_when_task_reset"          translatable="false">FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET</string>
+<string name="flag_activity_new_document"                   translatable="false">FLAG_ACTIVITY_NEW_DOCUMENT</string>
+<string name="flag_activity_launched_from_history"          translatable="false">FLAG_ACTIVITY_LAUNCHED_FROM_HISTORY</string>
+<string name="flag_activity_reset_task_if_needed"           translatable="false">FLAG_ACTIVITY_RESET_TASK_IF_NEEDED</string>
+<string name="flag_activity_brought_to_front"               translatable="false">FLAG_ACTIVITY_BROUGHT_TO_FRONT</string>
+<string name="flag_activity_exclude_from_recents"           translatable="false">FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS</string>
+<string name="flag_activity_previous_is_top"                translatable="false">FLAG_ACTIVITY_PREVIOUS_IS_TOP</string>
+<string name="flag_activity_forward_result"                 translatable="false">FLAG_ACTIVITY_FORWARD_RESULT</string>
+<string name="flag_activity_clear_top"                      translatable="false">FLAG_ACTIVITY_CLEAR_TOP</string>
+<string name="flag_activity_multiple_task"                  translatable="false">FLAG_ACTIVITY_MULTIPLE_TASK</string>
+<string name="flag_activity_new_task"                       translatable="false">FLAG_ACTIVITY_NEW_TASK</string>
+<string name="flag_activity_single_top"                     translatable="false">FLAG_ACTIVITY_SINGLE_TOP</string>
+<string name="flag_activity_no_history"                     translatable="false">FLAG_ACTIVITY_NO_HISTORY</string>
 
-<string name="flag_receiver_visible_to_instant_apps"     translatable="false">FLAG_RECEIVER_VISIBLE_TO_INSTANT_APPS</string>
-<string name="flag_receiver_boot_upgrade"                translatable="false">FLAG_RECEIVER_BOOT_UPGRADE</string>
-<string name="flag_receiver_from_shell"                  translatable="false">FLAG_RECEIVER_FROM_SHELL</string>
-<string name="flag_receiver_exclude_background"          translatable="false">FLAG_RECEIVER_EXCLUDE_BACKGROUND</string>
-<string name="flag_receiver_include_background"          translatable="false">FLAG_RECEIVER_INCLUDE_BACKGROUND</string>
-<string name="flag_receiver_registered_only_before_boot" translatable="false">FLAG_RECEIVER_REGISTERED_ONLY_BEFORE_BOOT</string>
-<string name="flag_receiver_no_abort"                    translatable="false">FLAG_RECEIVER_NO_ABORT</string>
-<string name="flag_receiver_foreground"                  translatable="false">FLAG_RECEIVER_FOREGROUND</string>
-<string name="flag_receiver_replace_pending"             translatable="false">FLAG_RECEIVER_REPLACE_PENDING</string>
-<string name="flag_receiver_registered_only"             translatable="false">FLAG_RECEIVER_REGISTERED_ONLY</string>
-<string name="flag_receiver_offload"                     translatable="false">FLAG_RECEIVER_OFFLOAD</string>
+<string name="flag_receiver_visible_to_instant_apps"        translatable="false">FLAG_RECEIVER_VISIBLE_TO_INSTANT_APPS</string>
+<string name="flag_receiver_boot_upgrade"                   translatable="false">FLAG_RECEIVER_BOOT_UPGRADE</string>
+<string name="flag_receiver_from_shell"                     translatable="false">FLAG_RECEIVER_FROM_SHELL</string>
+<string name="flag_receiver_exclude_background"             translatable="false">FLAG_RECEIVER_EXCLUDE_BACKGROUND</string>
+<string name="flag_receiver_include_background"             translatable="false">FLAG_RECEIVER_INCLUDE_BACKGROUND</string>
+<string name="flag_receiver_registered_only_before_boot"    translatable="false">FLAG_RECEIVER_REGISTERED_ONLY_BEFORE_BOOT</string>
+<string name="flag_receiver_no_abort"                       translatable="false">FLAG_RECEIVER_NO_ABORT</string>
+<string name="flag_receiver_foreground"                     translatable="false">FLAG_RECEIVER_FOREGROUND</string>
+<string name="flag_receiver_replace_pending"                translatable="false">FLAG_RECEIVER_REPLACE_PENDING</string>
+<string name="flag_receiver_registered_only"                translatable="false">FLAG_RECEIVER_REGISTERED_ONLY</string>
+<string name="flag_receiver_offload"                        translatable="false">FLAG_RECEIVER_OFFLOAD</string>
 
 <!--
   ========================
@@ -1215,5 +1218,25 @@
   <item>voiceRoamingType</item>
   <item>web_search_pendingintent</item>
 </string-array>
+
+<!-- Alarms and SaveAlarm: TimeDurationPicker ============================== -->
+
+<string name="time_picker_dialog_am"                        translatable="false">"a.m."</string>
+<string name="time_picker_dialog_pm"                        translatable="false">"p.m."</string>
+
+<string name="accessibility_time_picker_ampm"               translatable="false">"AM/PM"</string>
+
+<string name="time_picker_dialog_day_label_units"           translatable="false">"day"</string>
+<string name="time_picker_dialog_hour_label_units"          translatable="false">"hr"</string>
+<string name="time_picker_dialog_minute_label_units"        translatable="false">"min"</string>
+<string name="time_picker_dialog_second_label_units"        translatable="false">"sec"</string>
+<string name="time_picker_dialog_milli_label_units"         translatable="false">"ms"</string>
+
+<string name="time_picker_dialog_sign_day_separator"        translatable="false">""</string>
+<string name="time_picker_dialog_day_hour_separator"        translatable="false">""</string>
+<string name="time_picker_dialog_hour_minute_separator"     translatable="false">":"</string>
+<string name="time_picker_dialog_minute_second_separator"   translatable="false">":"</string>
+<string name="time_picker_dialog_second_milli_separator"    translatable="false">"."</string>
+<string name="time_picker_dialog_milli_ampm_separator"      translatable="false">""</string>
 
 </resources>

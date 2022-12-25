@@ -8,18 +8,31 @@
     <!ENTITY bookmarks     "סימניות">
     <!ENTITY lc_bookmark   "סימנייה">
     <!ENTITY lc_bookmarks  "סימניות">
+    <!ENTITY alarm         "התרעה">
+    <!ENTITY alarms        "התראות">
+    <!ENTITY lc_alarm      "אזעקה">
+    <!ENTITY lc_alarms     "אזעקות">
+    <!ENTITY add           "הוספה">
+    <!ENTITY cancel        "ביטול">
+    <!ENTITY delete        "מחיקה">
+    <!ENTITY edit          "עריכה">
+    <!ENTITY move          "העברה">
+    <!ENTITY name          "שם">
+    <!ENTITY update        "עדכון">
 ]>
 <resources>
 <string name="app_name_long">&bookmarks;</string>
+<string name="activity_label_save_bookmark">&add; &bookmark;</string>
 <string name="layout_main_no_intents_in_folder">לא &bookmarks; נמצא.</string>
 <string name="layout_main_no_results_for_search">לא נמצאו תוצאות חיפוש.</string>
 <string name="layout_main_results_for_search_label">תוצאות עבור:</string>
 <string name="menu_actionbar_intent_search">חיפוש</string>
-<string name="menu_actionbar_folder_add">הוספה &folder;</string>
-<string name="menu_actionbar_intent_add">הוספה &bookmark;</string>
-<string name="menu_actionbar_move_complete">העברה אל נוכחי &folder;</string>
-<string name="menu_actionbar_move_cancel">ביטול העברה</string>
+<string name="menu_actionbar_folder_add">&add; &folder;</string>
+<string name="menu_actionbar_intent_add">&add; &bookmark;</string>
+<string name="menu_actionbar_move_complete">&move; ל-נוכחי &folder;</string>
+<string name="menu_actionbar_move_cancel">&cancel; &move;</string>
 <string name="menu_actionbar_settings">הגדרות</string>
+<string name="menu_actionbar_scheduled">מתוזמנות</string>
 <string name="menu_actionbar_db_backup">מסד נתונים לגיבוי</string>
 <string name="menu_actionbar_db_restore">שחזור בסיס הנתונים</string>
 <string name="menu_actionbar_db_export">יצוא &bookmarks;</string>
@@ -28,30 +41,33 @@
 <string name="menu_context_folder_hide">הסתרה</string>
 <string name="menu_context_folder_unhide">הסתר</string>
 <string name="menu_context_folder_rename">שינוי שם</string>
-<string name="menu_context_folder_move">העברה</string>
-<string name="menu_context_folder_delete">מחיקה</string>
+<string name="menu_context_folder_move">&move;</string>
+<string name="menu_context_folder_delete">&delete;</string>
 <string name="menu_context_intent_perform">ביצוע…</string>
-<string name="menu_context_intent_edit">עריכה</string>
+<string name="menu_context_intent_schedule">תזמון…</string>
+<string name="menu_context_intent_edit">&edit;</string>
+<string name="menu_context_intent_move">&move;</string>
 <string name="menu_context_intent_copy">העתקה</string>
+<string name="menu_context_intent_delete">&delete;</string>
 <string name="perform_send_broadcast">משלוח שידור</string>
 <string name="perform_start_activity">יצירת פעילות</string>
 <string name="perform_start_foreground_service">הפעלת שירות חזית</string>
 <string name="perform_start_service">הפעלת שירות</string>
 <string name="perform_stop_service">עצירת שירות</string>
-<string name="perform_add_shortcut">הוספת קיצור דרך</string>
+<string name="perform_add_shortcut">&add; קיצור דרך</string>
 <string name="settings_option_show_hidden">הצגת מוסתר &lc_folders;</string>
 <string name="settings_option_auto_backup">ביצוע גיבוי יומי אוטומטי</string>
 <string name="settings_option_backup_versioning">להשאיר את 3 גיבויי היומיום האוטומטיים האחרונים</string>
 <string name="settings_option_startup_folder">ראשונית &lc_folder; להצגה באתחול:</string>
 <string name="settings_option_output_directory">מדריך פלט המוגדר כברירת מחדל עבור גיבויים ויצוא:</string>
 <string name="dialog_ok">OK</string>
-<string name="dialog_cancel">ביטול</string>
-<string name="dialog_add">הוספה</string>
-<string name="dialog_add_more">הוספה…</string>
+<string name="dialog_cancel">&cancel;</string>
+<string name="dialog_add">&add;</string>
+<string name="dialog_add_more">&add;…</string>
 <string name="dialog_change">שינוי…</string>
 <string name="dialog_choose">בחירת…</string>
 <string name="dialog_save">שמירה</string>
-<string name="dialog_delete">מחיקה</string>
+<string name="dialog_delete">&delete;</string>
 <string name="dialog_backup_preupdate_title">נדרש עדכון מסד נתונים</string>
 <string name="dialog_backup_preupdate_message">התקנתם גרסה חדשה יותר של יישום זה. יש לעדכן גם את מהדורת בסיס הנתונים. שמירת גיבוי לפני פעולה זו מומלצת, כל שגיאה תשחית את מסד הנתונים. לשם כך, עליכם להעניק הרשאה ראשונה כדי לשמור את קובץ הגיבוי לאחסון חיצוני. האם ברצונכם לשמור גיבוי לפני העדכון הנדרש?</string>
 <string name="dialog_intent_search_option_query">שאילתה:</string>
@@ -78,30 +94,61 @@
 <string name="dialog_import_done">יבוא בהצלחה</string>
 <string name="dialog_import_failed">יבוא כשל</string>
 <string name="dialog_import_notfound">לא ניתן לקרוא קובץ יבוא.</string>
-<string name="dialog_delete_folder_title">מחיקה &folder;?</string>
-<string name="dialog_delete_intent_title">מחיקה &bookmark;?</string>
-<string name="dialog_delete_confirm">האם אתם בטוחים שברצונכם למחוק\? "%s"?</string>
+<string name="dialog_delete_folder_title">&delete; &folder;?</string>
+<string name="dialog_delete_intent_title">&delete; &bookmark;?</string>
+<string name="dialog_delete_confirm">האם אתם בטוחים שברצונכם למחוק "%s"?</string>
 <string name="folder_rename_title">שינוי שם &folder;</string>
-<string name="folder_attribute_name">שם</string>
-<string name="intent_edit_title">עריכה &bookmark;</string>
+<string name="folder_attribute_name">&name;</string>
+<string name="intent_add_title">&add; &bookmark;</string>
+<string name="intent_edit_title">&edit; &bookmark;</string>
+<string name="intent_attribute_name">&name;</string>
 <string name="intent_attribute_folder">&folder;</string>
 <string name="intent_attribute_flags">דגלים</string>
 <string name="intent_attribute_action">פעולה</string>
-<string name="intent_attribute_package_name">שם חבילה</string>
-<string name="intent_attribute_class_name">שם מחלקה</string>
+<string name="intent_attribute_package_name">חבילה &name;</string>
+<string name="intent_attribute_class_name">מחלקה &name;</string>
 <string name="intent_attribute_data_uri">נתונים URI</string>
 <string name="intent_attribute_data_type">נתונים (MIME) סוג</string>
 <string name="intent_attribute_categories">קטגוריות</string>
 <string name="intent_attribute_extras">הוצאות</string>
-<string name="dialog_update_intent_attribute_category_title">עדכון סיווג</string>
-<string name="dialog_update_intent_attribute_extra_title_add">הוספת אקסטרה</string>
-<string name="dialog_update_intent_attribute_extra_title_edit">עדכון נוסף</string>
+<string name="dialog_update_intent_attribute_category_title">&update; קטגוריה</string>
+<string name="dialog_update_intent_attribute_category_name">&name;</string>
+<string name="dialog_update_intent_attribute_extra_title_add">&add; במיוחד</string>
+<string name="dialog_update_intent_attribute_extra_title_edit">&update; במיוחד</string>
+<string name="dialog_update_intent_attribute_extra_name">&name;</string>
 <string name="dialog_update_intent_attribute_extra_value_type">סוג ערך</string>
 <string name="dialog_update_intent_attribute_extra_value">ערך</string>
-<string name="dialog_update_intent_attribute_extra_value_separator">הוספת מפריד רשימת ערכים</string>
+<string name="dialog_update_intent_attribute_extra_value_separator">&add; מפריד רשימת ערכים</string>
 <string name="messages_db_error_update">שגיאת מסד נתונים במהלך עדכון</string>
 <string name="messages_no_permission">אין הרשאות מספיקות לביצוע הפעולה המבוקשת</string>
 <string name="messages_activity_not_found">אין פעילות תואמת ל - Intent</string>
 <string name="spinner_items_category_label_common_values">-- ערכים משותפים --</string>
 <string name="spinner_items_category_label_more_values">-- יותר ערכים --</string>
+<string name="activity_label_alarms">מתוזמנות &alarms;</string>
+<string name="activity_label_save_alarm">&alarm; לוח זמנים</string>
+<string name="layout_main_no_alarms">לא &alarms; נמצא.</string>
+<string name="menu_actionbar_cancel_all">&cancel; הכל</string>
+<string name="menu_context_alarm_edit">&edit;</string>
+<string name="menu_context_alarm_cancel">&cancel;</string>
+<string name="dialog_cancel_alarm_title">&cancel; &alarm;?</string>
+<string name="dialog_cancel_alarms_title">&cancel; &alarms;?</string>
+<string name="dialog_delete_confirm_alarms">כל &lc_alarms;</string>
+<string name="alarm_attribute_intent">&bookmark;:</string>
+<string name="alarm_attribute_perform">ביצוע:</string>
+<string name="alarm_attribute_date">תאריך:</string>
+<string name="alarm_attribute_time">זמן:</string>
+<string name="alarm_attribute_interval">חזרה על כל:</string>
+<string name="alarm_attribute_flags">אופציות:</string>
+<string name="flag_alarm_is_exact">דיוק גבוה (פחות יעיל)</string>
+<string name="flag_alarm_run_when_idle">הפעלת התרעה כאשר לא פעיל</string>
+<string name="flag_alarm_wake_when_idle">להעיר את התקן כאשר לא פעיל</string>
+<string name="flag_alarm_run_when_missed">הפעלת התרעה באתחול מחדש כאשר החמצתי</string>
+<string name="dialog_set">סט</string>
+<string name="time_picker_dialog_reset">איפוס לאפס</string>
+<string name="accessibility_time_picker_sign">"חיובי/חתימה שלילית"</string>
+<string name="accessibility_time_picker_day">"יום"</string>
+<string name="accessibility_time_picker_hour">"שעה"</string>
+<string name="accessibility_time_picker_minute">"דקות"</string>
+<string name="accessibility_time_picker_second">"שנית"</string>
+<string name="accessibility_time_picker_milli">"מילישניות"</string>
 </resources>

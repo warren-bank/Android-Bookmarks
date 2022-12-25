@@ -8,18 +8,31 @@
     <!ENTITY bookmarks     "Markah">
     <!ENTITY lc_bookmark   "penanda taut">
     <!ENTITY lc_bookmarks  "Markah">
+    <!ENTITY alarm         "Alarm">
+    <!ENTITY alarms        "Alarm">
+    <!ENTITY lc_alarm      "Alarm">
+    <!ENTITY lc_alarms     "alarm">
+    <!ENTITY add           "Tambahkan">
+    <!ENTITY cancel        "Batalkan">
+    <!ENTITY delete        "Hapus">
+    <!ENTITY edit          "Sunting">
+    <!ENTITY move          "Pindahkan">
+    <!ENTITY name          "Nama">
+    <!ENTITY update        "Perbarui">
 ]>
 <resources>
 <string name="app_name_long">&bookmarks;</string>
+<string name="activity_label_save_bookmark">&add; &bookmark;</string>
 <string name="layout_main_no_intents_in_folder">Tidak ada &bookmarks; ditemukan.</string>
 <string name="layout_main_no_results_for_search">Tidak ada hasil pencarian yang ditemukan.</string>
 <string name="layout_main_results_for_search_label">Hasil untuk::</string>
 <string name="menu_actionbar_intent_search">Cari</string>
-<string name="menu_actionbar_folder_add">Tambahkan &folder;</string>
-<string name="menu_actionbar_intent_add">Tambahkan &bookmark;</string>
-<string name="menu_actionbar_move_complete">Pindah ke Arus &folder;</string>
-<string name="menu_actionbar_move_cancel">Batalkan Langkah</string>
+<string name="menu_actionbar_folder_add">&add; &folder;</string>
+<string name="menu_actionbar_intent_add">&add; &bookmark;</string>
+<string name="menu_actionbar_move_complete">&move; Ke Arus &folder;</string>
+<string name="menu_actionbar_move_cancel">&cancel; &move;</string>
 <string name="menu_actionbar_settings">Pengaturan</string>
+<string name="menu_actionbar_scheduled">Jadwal terjadwal</string>
 <string name="menu_actionbar_db_backup">Basis Data Cadangan</string>
 <string name="menu_actionbar_db_restore">Kembalikan Basis Data</string>
 <string name="menu_actionbar_db_export">Ekspor &bookmarks;</string>
@@ -28,30 +41,33 @@
 <string name="menu_context_folder_hide">Sembunyikan</string>
 <string name="menu_context_folder_unhide">Unhide</string>
 <string name="menu_context_folder_rename">Ganti Nama</string>
-<string name="menu_context_folder_move">Pindahkan</string>
-<string name="menu_context_folder_delete">Hapus</string>
+<string name="menu_context_folder_move">&move;</string>
+<string name="menu_context_folder_delete">&delete;</string>
 <string name="menu_context_intent_perform">Lakukan…</string>
-<string name="menu_context_intent_edit">Sunting</string>
+<string name="menu_context_intent_schedule">Jadwalnya…</string>
+<string name="menu_context_intent_edit">&edit;</string>
+<string name="menu_context_intent_move">&move;</string>
 <string name="menu_context_intent_copy">Salin</string>
+<string name="menu_context_intent_delete">&delete;</string>
 <string name="perform_send_broadcast">Kirim Siaran</string>
 <string name="perform_start_activity">Mulai Aktivitas</string>
 <string name="perform_start_foreground_service">Mulai Layanan Foreground</string>
 <string name="perform_start_service">Mulai Layanan</string>
 <string name="perform_stop_service">Hentikan Layanan</string>
-<string name="perform_add_shortcut">Tambahkan Jalan Pintas</string>
+<string name="perform_add_shortcut">&add; Jalan pintas</string>
 <string name="settings_option_show_hidden">Tampilkan tersembunyi &lc_folders;</string>
 <string name="settings_option_auto_backup">Lakukan backup harian otomatis</string>
 <string name="settings_option_backup_versioning">Simpan 3 cadangan harian otomatis terbaru</string>
 <string name="settings_option_startup_folder">Awal &lc_folder; untuk menampilkan saat startup:</string>
 <string name="settings_option_output_directory">Direktori keluaran baku untuk cadangan dan ekspor:</string>
 <string name="dialog_ok">OK</string>
-<string name="dialog_cancel">Batalkan</string>
-<string name="dialog_add">Tambahkan</string>
-<string name="dialog_add_more">Tambahkan…</string>
+<string name="dialog_cancel">&cancel;</string>
+<string name="dialog_add">&add;</string>
+<string name="dialog_add_more">&add;..,</string>
 <string name="dialog_change">Ganti…</string>
 <string name="dialog_choose">Pilih…</string>
 <string name="dialog_save">Simpan</string>
-<string name="dialog_delete">Hapus</string>
+<string name="dialog_delete">&delete;</string>
 <string name="dialog_backup_preupdate_title">Pembaruan Basis Data Diperlukan</string>
 <string name="dialog_backup_preupdate_message">Anda telah menginstal versi yang lebih baru dari aplikasi ini. Versi basis data juga perlu diperbarui. Menyimpan cadangan sebelum operasi ini direkomendasikan; setiap kesalahan akan merusak basis data. Untuk melakukan hal tersebut, Anda harus terlebih dahulu memberikan izin untuk menyimpan file cadangan ke penyimpanan eksternal. Apakah Anda ingin menyimpan cadangan sebelum pembaruan yang diperlukan?</string>
 <string name="dialog_intent_search_option_query">Kueri:</string>
@@ -78,30 +94,61 @@
 <string name="dialog_import_done">Impor sukses</string>
 <string name="dialog_import_failed">Impor gagal</string>
 <string name="dialog_import_notfound">Impor berkas tidak dapat dibaca</string>
-<string name="dialog_delete_folder_title">Hapus &folder;?</string>
-<string name="dialog_delete_intent_title">Hapus &bookmark;?</string>
-<string name="dialog_delete_confirm">Apakah Anda yakin ingin menghapus file ini\? "%s"?</string>
+<string name="dialog_delete_folder_title">&delete; &folder;?</string>
+<string name="dialog_delete_intent_title">&delete; &bookmark;?</string>
+<string name="dialog_delete_confirm">Apakah Anda yakin ingin menghapus file ini "%s"?</string>
 <string name="folder_rename_title">Ganti Nama &folder;</string>
-<string name="folder_attribute_name">Nama</string>
-<string name="intent_edit_title">Sunting &bookmark;</string>
+<string name="folder_attribute_name">&name;</string>
+<string name="intent_add_title">&add; &bookmark;</string>
+<string name="intent_edit_title">&edit; &bookmark;</string>
+<string name="intent_attribute_name">&name;</string>
 <string name="intent_attribute_folder">&folder;</string>
 <string name="intent_attribute_flags">Bendera</string>
 <string name="intent_attribute_action">Aksi</string>
-<string name="intent_attribute_package_name">Nama Paket</string>
-<string name="intent_attribute_class_name">Nama Kelas</string>
+<string name="intent_attribute_package_name">Paket &name;</string>
+<string name="intent_attribute_class_name">Kelas &name;</string>
 <string name="intent_attribute_data_uri">Data URI</string>
 <string name="intent_attribute_data_type">Data (MIME) Tipe</string>
 <string name="intent_attribute_categories">Kategori</string>
 <string name="intent_attribute_extras">Figuran</string>
-<string name="dialog_update_intent_attribute_category_title">Pemutakhiran Kategori</string>
-<string name="dialog_update_intent_attribute_extra_title_add">Tambah Ekstra</string>
-<string name="dialog_update_intent_attribute_extra_title_edit">Perbarui Tambahan</string>
+<string name="dialog_update_intent_attribute_category_title">&update; Kategori</string>
+<string name="dialog_update_intent_attribute_category_name">&name;</string>
+<string name="dialog_update_intent_attribute_extra_title_add">&add; Ekstra</string>
+<string name="dialog_update_intent_attribute_extra_title_edit">&update; Ekstra</string>
+<string name="dialog_update_intent_attribute_extra_name">&name;</string>
 <string name="dialog_update_intent_attribute_extra_value_type">Jenis Nilai</string>
 <string name="dialog_update_intent_attribute_extra_value">Nilai</string>
-<string name="dialog_update_intent_attribute_extra_value_separator">Tambahkan Pemisah Daftar Nilai</string>
+<string name="dialog_update_intent_attribute_extra_value_separator">&add; Pemisah Daftar Nilai</string>
 <string name="messages_db_error_update">Kesalahan basis data saat memperbarui</string>
 <string name="messages_no_permission">Tidak cukup izin untuk melakukan operasi yang diminta</string>
 <string name="messages_activity_not_found">Tidak ada aktivitas yang cocok Intent</string>
 <string name="spinner_items_category_label_common_values">-- nilai umum --</string>
 <string name="spinner_items_category_label_more_values">-- lebih banyak nilai --</string>
+<string name="activity_label_alarms">Jadwal terjadwal &alarms;</string>
+<string name="activity_label_save_alarm">&alarm; Jadwalnya</string>
+<string name="layout_main_no_alarms">Tidak ada &alarms; ditemukan.</string>
+<string name="menu_actionbar_cancel_all">&cancel; Semua</string>
+<string name="menu_context_alarm_edit">&edit;</string>
+<string name="menu_context_alarm_cancel">&cancel;</string>
+<string name="dialog_cancel_alarm_title">&cancel; &alarm;?</string>
+<string name="dialog_cancel_alarms_title">&cancel; &alarms;?</string>
+<string name="dialog_delete_confirm_alarms">Semua &lc_alarms;</string>
+<string name="alarm_attribute_intent">&bookmark;:</string>
+<string name="alarm_attribute_perform">Lakukan:</string>
+<string name="alarm_attribute_date">Tanggal:</string>
+<string name="alarm_attribute_time">Waktu:</string>
+<string name="alarm_attribute_interval">Ulangi setiap:</string>
+<string name="alarm_attribute_flags">Opsi:</string>
+<string name="flag_alarm_is_exact">presisi tinggi (kurang efisien)</string>
+<string name="flag_alarm_run_when_idle">jalankan alarm ketika diam</string>
+<string name="flag_alarm_wake_when_idle">bangun perangkat ketika menganggur</string>
+<string name="flag_alarm_run_when_missed">jalankan alarm di reboot ketika dirindukan</string>
+<string name="dialog_set">Atur</string>
+<string name="time_picker_dialog_reset">Reset ke Nol</string>
+<string name="accessibility_time_picker_sign">"Tanda Positif/Negatif"</string>
+<string name="accessibility_time_picker_day">"Hari"</string>
+<string name="accessibility_time_picker_hour">"Jam"</string>
+<string name="accessibility_time_picker_minute">"Menit"</string>
+<string name="accessibility_time_picker_second">"Kedua"</string>
+<string name="accessibility_time_picker_milli">"Milidetik"</string>
 </resources>

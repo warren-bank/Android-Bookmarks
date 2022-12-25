@@ -8,18 +8,31 @@
     <!ENTITY bookmarks     "පිටු සලකුණු">
     <!ENTITY lc_bookmark   "Bookmark">
     <!ENTITY lc_bookmarks  "පිටු සලකුණු">
+    <!ENTITY alarm         "Alarm">
+    <!ENTITY alarms        "Alarm">
+    <!ENTITY lc_alarm      "\@ label: listbox">
+    <!ENTITY lc_alarms     "Alarms">
+    <!ENTITY add           "එක් කරන්න">
+    <!ENTITY cancel        "අවලංගු කරන්න">
+    <!ENTITY delete        "මකන්න">
+    <!ENTITY edit          "සකසන්න">
+    <!ENTITY move          "ගෙනයන්න">
+    <!ENTITY name          "නම">
+    <!ENTITY update        "යාවත්කාලීන කිරීම">
 ]>
 <resources>
 <string name="app_name_long">&bookmarks;</string>
+<string name="activity_label_save_bookmark">&add; &bookmark;</string>
 <string name="layout_main_no_intents_in_folder">නෑ. &bookmarks; හමුවන්න.</string>
 <string name="layout_main_no_results_for_search">සෙවුම් ප්රථිපල හමු නොවුනි.</string>
 <string name="layout_main_results_for_search_label">සඳහා ප්රතිඵල:</string>
 <string name="menu_actionbar_intent_search">සොයන්න</string>
-<string name="menu_actionbar_folder_add">එක් කරන්න &folder;</string>
-<string name="menu_actionbar_intent_add">එක් කරන්න &bookmark;</string>
-<string name="menu_actionbar_move_complete">දැනට ඇති &folder;</string>
-<string name="menu_actionbar_move_cancel">ගෙනයන්න</string>
+<string name="menu_actionbar_folder_add">&add; &folder;</string>
+<string name="menu_actionbar_intent_add">&add; &bookmark;</string>
+<string name="menu_actionbar_move_complete">&move; දැනට ඇති &folder;</string>
+<string name="menu_actionbar_move_cancel">&cancel; &move;</string>
 <string name="menu_actionbar_settings">සැකසුම්</string>
+<string name="menu_actionbar_scheduled">සබැදි</string>
 <string name="menu_actionbar_db_backup">Backup Database</string>
 <string name="menu_actionbar_db_restore">දත්ත නැවත පිහිටුවන්න</string>
 <string name="menu_actionbar_db_export">නිර්යාත &bookmarks;</string>
@@ -27,31 +40,34 @@
 <string name="menu_actionbar_exit">Exit</string>
 <string name="menu_context_folder_hide">සඟවන්න</string>
 <string name="menu_context_folder_unhide">නොහැසිරවීම</string>
-<string name="menu_context_folder_rename">\@ action: button</string>
-<string name="menu_context_folder_move">ගෙනයන්න</string>
-<string name="menu_context_folder_delete">මකන්න</string>
-<string name="menu_context_intent_perform">Perform…</string>
-<string name="menu_context_intent_edit">සකසන්න</string>
+<string name="menu_context_folder_rename">නැවත නම් කරන්න</string>
+<string name="menu_context_folder_move">&move;</string>
+<string name="menu_context_folder_delete">&delete;</string>
+<string name="menu_context_intent_perform">ඉටු කරන්න…</string>
+<string name="menu_context_intent_schedule">කාර්යය සටහන්…</string>
+<string name="menu_context_intent_edit">&edit;</string>
+<string name="menu_context_intent_move">&move;</string>
 <string name="menu_context_intent_copy">පිටපත් කරන්න</string>
+<string name="menu_context_intent_delete">&delete;</string>
 <string name="perform_send_broadcast">බ්රෝඩ්කාස්ට් යවන්න</string>
 <string name="perform_start_activity">ක්රියාකාරිත්වය ආරම්භ කරන්න</string>
 <string name="perform_start_foreground_service">පෙරනිමි සේවාව ආරම්භ කරන්න</string>
 <string name="perform_start_service">සේවාව ආරම්භ කරන්න</string>
 <string name="perform_stop_service">සේවාව නවත්වන්න</string>
-<string name="perform_add_shortcut">කෙටිමං එක් කරන්න</string>
+<string name="perform_add_shortcut">&add; කෙටිමං</string>
 <string name="settings_option_show_hidden">සැඟවුනු පෙන්වන්න &lc_folders;</string>
 <string name="settings_option_auto_backup">ස්වයංක්රීය දෛනික උපස්ථ</string>
 <string name="settings_option_backup_versioning">3 වන ස්වයංක්රීය දෛනික පසුපසට තබා ගන්න</string>
 <string name="settings_option_startup_folder">ආරම්භක &lc_folder; ආරම්භයේදී පෙන්වන්න:</string>
 <string name="settings_option_output_directory">බැකප් සහ අපනයනය සඳහා පෙරනිමි ප්රතිදාන ඩිරෙක්ටරිය:</string>
 <string name="dialog_ok">OK</string>
-<string name="dialog_cancel">අවලංගු කරන්න</string>
-<string name="dialog_add">එක් කරන්න</string>
-<string name="dialog_add_more">එක් කරන්න…</string>
+<string name="dialog_cancel">&cancel;</string>
+<string name="dialog_add">&add;</string>
+<string name="dialog_add_more">&add;…</string>
 <string name="dialog_change">වෙනස් කරන්න…</string>
 <string name="dialog_choose">තෝරන්න…</string>
 <string name="dialog_save">සුරකින්න</string>
-<string name="dialog_delete">මකන්න</string>
+<string name="dialog_delete">&delete;</string>
 <string name="dialog_backup_preupdate_title">දත්ත ගබඩාව යාවත්කාලීන කිරීම</string>
 <string name="dialog_backup_preupdate_message">ඔබ විසින් මෙම යෙදුම නවතම සංස්කරණයක් ස්ථාපනය කර ඇත. දත්ත ගබඩාවේ සංස්කරණයත් යාවත්කාලීන කරන්න ඕන. මෙම මෙහෙයුමට පෙර උපස්ථ සෙවීම නිර්දේශය; ඕනෑම දෝෂයක් දත්ත ගබඩාව දූෂිත කරයි. එසේ කිරීමට ඔබ ප්රථමයෙන් අවසර ලබා දිය යුතු අතර උපස්ථ ගොනුව බාහිරව ගබඩා කිරීමට අවසර ලබාදිය යුතුය. අවශ්ය යාවත්කාලීන කිරීමට පෙර සහයක් සුරැකීමට කැමතිද?</string>
 <string name="dialog_intent_search_option_query">Query:</string>
@@ -74,34 +90,65 @@
 <string name="dialog_import_json">ආයාත කරන්න JSON</string>
 <string name="dialog_import_option_allow_existing_folders">එකතු කරන්න ඉඩ දෙන්න &lc_bookmarks; දැනට පවතින &lc_folders;</string>
 <string name="dialog_import_option_allow_duplicate_urls_global">පිටපත් කරන්න ඉඩ දෙන්න URLs ගෝලීය වශයෙන්</string>
-<string name="dialog_import_option_allow_duplicate_urls_folder">පිටපත් කරන්න ඉඩ දෙන්න URLs \@ option: check</string>
+<string name="dialog_import_option_allow_duplicate_urls_folder">ෆෝල්ඩරයකට අනුපිටපත් URL වලට ඉඩ දෙන්න</string>
 <string name="dialog_import_done">සාර්ථකත්වය ආයාත කරන්න</string>
 <string name="dialog_import_failed">ආයාත අසාර්ථකවීම</string>
 <string name="dialog_import_notfound">ගොනුව කියවිය නොහැක</string>
-<string name="dialog_delete_folder_title">මකන්න &folder;?</string>
-<string name="dialog_delete_intent_title">මකන්න &bookmark;?</string>
+<string name="dialog_delete_folder_title">&delete; &folder;?</string>
+<string name="dialog_delete_intent_title">&delete; &bookmark;?</string>
 <string name="dialog_delete_confirm">ඔබට මකා දැමීමට අවශ්යයද "%s"?</string>
-<string name="folder_rename_title">\@ action: button &folder;</string>
-<string name="folder_attribute_name">නම</string>
-<string name="intent_edit_title">සකසන්න &bookmark;</string>
+<string name="folder_rename_title">නැවත නම් කරන්න &folder;</string>
+<string name="folder_attribute_name">&name;</string>
+<string name="intent_add_title">&add; &bookmark;</string>
+<string name="intent_edit_title">&edit; &bookmark;</string>
+<string name="intent_attribute_name">&name;</string>
 <string name="intent_attribute_folder">&folder;</string>
 <string name="intent_attribute_flags">Flags</string>
 <string name="intent_attribute_action">ක්රියා</string>
-<string name="intent_attribute_package_name">පැකේජ් නාමය</string>
-<string name="intent_attribute_class_name">පන්ති නාමය</string>
+<string name="intent_attribute_package_name">පැකේජ් &name;</string>
+<string name="intent_attribute_class_name">කාණ්ඩය &name;</string>
 <string name="intent_attribute_data_uri">දත්ත URI</string>
 <string name="intent_attribute_data_type">දත්ත (MIME) ප්රවර්ගය:</string>
 <string name="intent_attribute_categories">ප්රභේද</string>
 <string name="intent_attribute_extras">Extras</string>
-<string name="dialog_update_intent_attribute_category_title">\@ title: window</string>
-<string name="dialog_update_intent_attribute_extra_title_add">Extra එක් කරන්න</string>
-<string name="dialog_update_intent_attribute_extra_title_edit">Extra යාවත්කාලීන කරන්න</string>
+<string name="dialog_update_intent_attribute_category_title">&update; Category</string>
+<string name="dialog_update_intent_attribute_category_name">&name;</string>
+<string name="dialog_update_intent_attribute_extra_title_add">&add; Extra</string>
+<string name="dialog_update_intent_attribute_extra_title_edit">&update; Extra</string>
+<string name="dialog_update_intent_attribute_extra_name">&name;</string>
 <string name="dialog_update_intent_attribute_extra_value_type">අගය වර්ග කරන්න</string>
 <string name="dialog_update_intent_attribute_extra_value">අගය</string>
-<string name="dialog_update_intent_attribute_extra_value_separator">අගය ලැයිස්තු වෙන්කිරීම එක් කරන්න</string>
+<string name="dialog_update_intent_attribute_extra_value_separator">&add; අගය ලැයිස්තු වෙන්කිරීම</string>
 <string name="messages_db_error_update">යාවත්කාලීන කරන අතර දත්ත ගබඩාව</string>
 <string name="messages_no_permission">ඉල්ලුම් කළ මෙහෙයුම සිදු කිරීමට ප්රමාණවත් අවසරයක්</string>
 <string name="messages_activity_not_found">ක්රියාදාමය ගැලපීමක් නොමැත Intent</string>
 <string name="spinner_items_category_label_common_values">-- පොදු අගයන් --</string>
 <string name="spinner_items_category_label_more_values">-- වැඩි අගයන් --</string>
+<string name="activity_label_alarms">සබැදි &alarms;</string>
+<string name="activity_label_save_alarm">&alarm; කාර්යය සටහන්</string>
+<string name="layout_main_no_alarms">නෑ. &alarms; හමුවන්න.</string>
+<string name="menu_actionbar_cancel_all">&cancel; All</string>
+<string name="menu_context_alarm_edit">&edit;</string>
+<string name="menu_context_alarm_cancel">&cancel;</string>
+<string name="dialog_cancel_alarm_title">&cancel; &alarm;?</string>
+<string name="dialog_cancel_alarms_title">&cancel; &alarms;?</string>
+<string name="dialog_delete_confirm_alarms">හැමෝම &lc_alarms;</string>
+<string name="alarm_attribute_intent">&bookmark;:</string>
+<string name="alarm_attribute_perform">Perform:</string>
+<string name="alarm_attribute_date">දිනය:</string>
+<string name="alarm_attribute_time">වේලාව:</string>
+<string name="alarm_attribute_interval">හැම එකක්ම නැවත කියනවා.:</string>
+<string name="alarm_attribute_flags">විකල්ප:</string>
+<string name="flag_alarm_is_exact">අධි සුක්ෂම (අඩු කාර්යක්ෂම)</string>
+<string name="flag_alarm_run_when_idle">අක්‍රිය විට අනතුරු ඇඟවීම ක්‍රියාත්මක කරන්න</string>
+<string name="flag_alarm_wake_when_idle">අක්‍රිය විට උපාංගය අවදි කරන්න</string>
+<string name="flag_alarm_run_when_missed">මඟ හැරුණු විට නැවත ඇරඹුමේදී එලාම් ක්රියාත්මක කරන්න</string>
+<string name="dialog_set">සකසන්න</string>
+<string name="time_picker_dialog_reset">සරෝට නැවත සකස්කරන්න</string>
+<string name="accessibility_time_picker_sign">"ධනුෂ්ක/ඍණ සළකුණ"</string>
+<string name="accessibility_time_picker_day">"දිනය"</string>
+<string name="accessibility_time_picker_hour">"පැය"</string>
+<string name="accessibility_time_picker_minute">"මිනිත්තුව"</string>
+<string name="accessibility_time_picker_second">"දෙවන"</string>
+<string name="accessibility_time_picker_milli">"මිලි තත්පර"</string>
 </resources>

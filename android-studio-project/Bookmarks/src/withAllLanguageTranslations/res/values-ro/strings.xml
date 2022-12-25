@@ -8,18 +8,31 @@
     <!ENTITY bookmarks     "Marcaje">
     <!ENTITY lc_bookmark   "Marcaj">
     <!ENTITY lc_bookmarks  "marcaje">
+    <!ENTITY alarm         "Alarmă">
+    <!ENTITY alarms        "Alarme">
+    <!ENTITY lc_alarm      "alarmă">
+    <!ENTITY lc_alarms     "alarme">
+    <!ENTITY add           "Adaugă">
+    <!ENTITY cancel        "Anulează">
+    <!ENTITY delete        "Șterge">
+    <!ENTITY edit          "Editează">
+    <!ENTITY move          "Mutare">
+    <!ENTITY name          "Nume">
+    <!ENTITY update        "Actualizare">
 ]>
 <resources>
 <string name="app_name_long">&bookmarks;</string>
+<string name="activity_label_save_bookmark">&add; &bookmark;</string>
 <string name="layout_main_no_intents_in_folder">Nr. &bookmarks; găsit.</string>
 <string name="layout_main_no_results_for_search">Nu există rezultate de căutare.</string>
 <string name="layout_main_results_for_search_label">Rezultate pentru:</string>
 <string name="menu_actionbar_intent_search">Căutare</string>
-<string name="menu_actionbar_folder_add">Adaugă &folder;</string>
-<string name="menu_actionbar_intent_add">Adaugă &bookmark;</string>
-<string name="menu_actionbar_move_complete">Mută la curent &folder;</string>
-<string name="menu_actionbar_move_cancel">Anulează Mutare</string>
+<string name="menu_actionbar_folder_add">&add; &folder;</string>
+<string name="menu_actionbar_intent_add">&add; &bookmark;</string>
+<string name="menu_actionbar_move_complete">&move; la curent &folder;</string>
+<string name="menu_actionbar_move_cancel">&cancel; &move;</string>
 <string name="menu_actionbar_settings">Setări</string>
+<string name="menu_actionbar_scheduled">Programată</string>
 <string name="menu_actionbar_db_backup">Baza de date de rezervă</string>
 <string name="menu_actionbar_db_restore">Restabilește baza de date</string>
 <string name="menu_actionbar_db_export">Export &bookmarks;</string>
@@ -28,30 +41,33 @@
 <string name="menu_context_folder_hide">Ascunde</string>
 <string name="menu_context_folder_unhide">Unhide</string>
 <string name="menu_context_folder_rename">Redenumire</string>
-<string name="menu_context_folder_move">Mutare</string>
-<string name="menu_context_folder_delete">Șterge</string>
+<string name="menu_context_folder_move">&move;</string>
+<string name="menu_context_folder_delete">&delete;</string>
 <string name="menu_context_intent_perform">Efectuați…</string>
-<string name="menu_context_intent_edit">Editează</string>
+<string name="menu_context_intent_schedule">Program…</string>
+<string name="menu_context_intent_edit">&edit;</string>
+<string name="menu_context_intent_move">&move;</string>
 <string name="menu_context_intent_copy">Copiere</string>
+<string name="menu_context_intent_delete">&delete;</string>
 <string name="perform_send_broadcast">Trimite un mesaj</string>
 <string name="perform_start_activity">Începe activitatea</string>
 <string name="perform_start_foreground_service">Începe serviciul de prim-plan</string>
 <string name="perform_start_service">Serviciu de pornire</string>
 <string name="perform_stop_service">Stop Service</string>
-<string name="perform_add_shortcut">Adaugă scurtătură</string>
+<string name="perform_add_shortcut">&add; Scurtătură</string>
 <string name="settings_option_show_hidden">Arată ascuns &lc_folders;</string>
 <string name="settings_option_auto_backup">Efectuați backup zilnic automat</string>
 <string name="settings_option_backup_versioning">Păstrați cele mai recente 3 backup-uri zilnice automate</string>
 <string name="settings_option_startup_folder">Inițială &lc_folder; pentru a afișa la pornire:</string>
 <string name="settings_option_output_directory">Director de ieșire implicit pentru backup-uri și exporturi:</string>
 <string name="dialog_ok">OK</string>
-<string name="dialog_cancel">Anulează</string>
-<string name="dialog_add">Adaugă</string>
-<string name="dialog_add_more">Adaugă…</string>
+<string name="dialog_cancel">&cancel;</string>
+<string name="dialog_add">&add;</string>
+<string name="dialog_add_more">&add;…</string>
 <string name="dialog_change">Schimbare…</string>
 <string name="dialog_choose">Alege…</string>
 <string name="dialog_save">Salvează</string>
-<string name="dialog_delete">Șterge</string>
+<string name="dialog_delete">&delete;</string>
 <string name="dialog_backup_preupdate_title">Actualizarea bazei de date este necesară</string>
 <string name="dialog_backup_preupdate_message">Ați instalat o versiune mai nouă a acestei aplicații. Versiunea bazei de date trebuie, de asemenea, să fie actualizată. Salvarea unui backup inainte de aceasta operatiune este recomandata; orice eroare va corupe baza de date. Pentru a face acest lucru, trebuie să acordați mai întâi permisiunea de a salva fișierul de rezervă la stocarea externă. Doriți să salvați o copie de rezervă înainte de actualizarea necesară?</string>
 <string name="dialog_intent_search_option_query">Query:</string>
@@ -78,30 +94,61 @@
 <string name="dialog_import_done">Succes la import</string>
 <string name="dialog_import_failed">Eșec la import</string>
 <string name="dialog_import_notfound">Fișierul de import nu a putut fi citit</string>
-<string name="dialog_delete_folder_title">Șterge &folder;?</string>
-<string name="dialog_delete_intent_title">Șterge &bookmark;?</string>
+<string name="dialog_delete_folder_title">&delete; &folder;?</string>
+<string name="dialog_delete_intent_title">&delete; &bookmark;?</string>
 <string name="dialog_delete_confirm">Eşti sigur că vrei să ştergi "%s"?</string>
 <string name="folder_rename_title">Redenumire &folder;</string>
-<string name="folder_attribute_name">Nume</string>
-<string name="intent_edit_title">Editează &bookmark;</string>
+<string name="folder_attribute_name">&name;</string>
+<string name="intent_add_title">&add; &bookmark;</string>
+<string name="intent_edit_title">&edit; &bookmark;</string>
+<string name="intent_attribute_name">&name;</string>
 <string name="intent_attribute_folder">&folder;</string>
 <string name="intent_attribute_flags">Steaguri</string>
 <string name="intent_attribute_action">Acțiune</string>
-<string name="intent_attribute_package_name">Nume pachet</string>
-<string name="intent_attribute_class_name">Nume de clasă</string>
+<string name="intent_attribute_package_name">Pachet &name;</string>
+<string name="intent_attribute_class_name">Clasă &name;</string>
 <string name="intent_attribute_data_uri">Date URI</string>
 <string name="intent_attribute_data_type">Date (MIME) Tip</string>
 <string name="intent_attribute_categories">Categorii</string>
 <string name="intent_attribute_extras">Extras</string>
-<string name="dialog_update_intent_attribute_category_title">Actualizare Categorie</string>
-<string name="dialog_update_intent_attribute_extra_title_add">Adaugă în plus</string>
-<string name="dialog_update_intent_attribute_extra_title_edit">Actualizare Extra</string>
+<string name="dialog_update_intent_attribute_category_title">&update; Categorie</string>
+<string name="dialog_update_intent_attribute_category_name">&name;</string>
+<string name="dialog_update_intent_attribute_extra_title_add">&add; Extra</string>
+<string name="dialog_update_intent_attribute_extra_title_edit">&update; Extra</string>
+<string name="dialog_update_intent_attribute_extra_name">&name;</string>
 <string name="dialog_update_intent_attribute_extra_value_type">Tipul de valoare</string>
 <string name="dialog_update_intent_attribute_extra_value">Valoare</string>
-<string name="dialog_update_intent_attribute_extra_value_separator">Separator de liste de valori</string>
+<string name="dialog_update_intent_attribute_extra_value_separator">&add; Separator de valori</string>
 <string name="messages_db_error_update">Eroare de baze de date</string>
 <string name="messages_no_permission">Permisiunea insuficientă de efectuare a operațiunii solicitate</string>
 <string name="messages_activity_not_found">Nicio activitate nu se potrivește cu Intent</string>
 <string name="spinner_items_category_label_common_values">-- valori comune --</string>
 <string name="spinner_items_category_label_more_values">-- mai multe valori --</string>
+<string name="activity_label_alarms">Programată &alarms;</string>
+<string name="activity_label_save_alarm">&alarm; Program</string>
+<string name="layout_main_no_alarms">Nr. &alarms; găsit.</string>
+<string name="menu_actionbar_cancel_all">&cancel; Toate.</string>
+<string name="menu_context_alarm_edit">&edit;</string>
+<string name="menu_context_alarm_cancel">&cancel;</string>
+<string name="dialog_cancel_alarm_title">&cancel; &alarm;?</string>
+<string name="dialog_cancel_alarms_title">&cancel; &alarms;?</string>
+<string name="dialog_delete_confirm_alarms">toate &lc_alarms;</string>
+<string name="alarm_attribute_intent">&bookmark;:</string>
+<string name="alarm_attribute_perform">Efectuați:</string>
+<string name="alarm_attribute_date">Data:</string>
+<string name="alarm_attribute_time">Timp:</string>
+<string name="alarm_attribute_interval">Repetă fiecare:</string>
+<string name="alarm_attribute_flags">Opțiuni:</string>
+<string name="flag_alarm_is_exact">precizie ridicată (mai puțin eficientă)</string>
+<string name="flag_alarm_run_when_idle">executa alarma la ralanti</string>
+<string name="flag_alarm_wake_when_idle">dispozitiv de trezire la ralanti</string>
+<string name="flag_alarm_run_when_missed">execută alarma la repornire atunci când este ratat</string>
+<string name="dialog_set">Set</string>
+<string name="time_picker_dialog_reset">Resetează la zero</string>
+<string name="accessibility_time_picker_sign">"Semn pozitiv/negativ"</string>
+<string name="accessibility_time_picker_day">"Ziua"</string>
+<string name="accessibility_time_picker_hour">"Ora"</string>
+<string name="accessibility_time_picker_minute">"Minute"</string>
+<string name="accessibility_time_picker_second">"Al doilea"</string>
+<string name="accessibility_time_picker_milli">"Millisecond"</string>
 </resources>

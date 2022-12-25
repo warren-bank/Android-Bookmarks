@@ -2,24 +2,37 @@
 <!DOCTYPE resources [
     <!ENTITY folder        "Folder">
     <!ENTITY folders       "Folderi">
-    <!ENTITY lc_folder     "">
+    <!ENTITY lc_folder     "folder">
     <!ENTITY lc_folders    "direktoriji">
     <!ENTITY bookmark      "Knjiška oznaka">
     <!ENTITY bookmarks     "Knjiške oznake">
     <!ENTITY lc_bookmark   "Zabilješka">
     <!ENTITY lc_bookmarks  "knjiške oznake">
+    <!ENTITY alarm         "Alarm">
+    <!ENTITY alarms        "Alarmi">
+    <!ENTITY lc_alarm      "Alarm">
+    <!ENTITY lc_alarms     "alarmi">
+    <!ENTITY add           "Dodaj">
+    <!ENTITY cancel        "Otkaži">
+    <!ENTITY delete        "Brisanje">
+    <!ENTITY edit          "Uredi">
+    <!ENTITY move          "Pomakni se">
+    <!ENTITY name          "Ime">
+    <!ENTITY update        "Ažuriranje">
 ]>
 <resources>
 <string name="app_name_long">&bookmarks;</string>
+<string name="activity_label_save_bookmark">&add; &bookmark;</string>
 <string name="layout_main_no_intents_in_folder">Ne. &bookmarks; Pronađeno je.</string>
 <string name="layout_main_no_results_for_search">Nema nađenih rezultata pretraživanja.</string>
 <string name="layout_main_results_for_search_label">Rezultati za:</string>
 <string name="menu_actionbar_intent_search">Traži</string>
-<string name="menu_actionbar_folder_add">Dodaj &folder;</string>
-<string name="menu_actionbar_intent_add">Dodaj &bookmark;</string>
-<string name="menu_actionbar_move_complete">Preseli se u struju. &folder;</string>
-<string name="menu_actionbar_move_cancel">Otkaži premještaj.</string>
+<string name="menu_actionbar_folder_add">&add; &folder;</string>
+<string name="menu_actionbar_intent_add">&add; &bookmark;</string>
+<string name="menu_actionbar_move_complete">&move; Prema sadašnjem &folder;</string>
+<string name="menu_actionbar_move_cancel">&cancel; &move;</string>
 <string name="menu_actionbar_settings">Postavke</string>
+<string name="menu_actionbar_scheduled">Raspoređeno.</string>
 <string name="menu_actionbar_db_backup">Baza podataka.</string>
 <string name="menu_actionbar_db_restore">Vraćanje baze podataka</string>
 <string name="menu_actionbar_db_export">Izvozi &bookmarks;</string>
@@ -28,32 +41,35 @@
 <string name="menu_context_folder_hide">Sakrij se.</string>
 <string name="menu_context_folder_unhide">Sakrij se.</string>
 <string name="menu_context_folder_rename">Preimenuj</string>
-<string name="menu_context_folder_move">Pomakni se.</string>
-<string name="menu_context_folder_delete">Brisanje</string>
+<string name="menu_context_folder_move">&move;</string>
+<string name="menu_context_folder_delete">&delete;</string>
 <string name="menu_context_intent_perform">Izvodite…</string>
-<string name="menu_context_intent_edit">Uredi</string>
+<string name="menu_context_intent_schedule">Raspored…</string>
+<string name="menu_context_intent_edit">&edit;</string>
+<string name="menu_context_intent_move">&move;</string>
 <string name="menu_context_intent_copy">Kopir.</string>
+<string name="menu_context_intent_delete">&delete;</string>
 <string name="perform_send_broadcast">Prevod i adaptacija:</string>
 <string name="perform_start_activity">Započnite aktivnost</string>
 <string name="perform_start_foreground_service">Počni sa prednjim službom.</string>
 <string name="perform_start_service">Početak službe.</string>
 <string name="perform_stop_service">Zaustavi Službu.</string>
-<string name="perform_add_shortcut">Dodaj prečicu</string>
+<string name="perform_add_shortcut">&add; Prečac</string>
 <string name="settings_option_show_hidden">Sakrij se. &lc_folders;</string>
 <string name="settings_option_auto_backup">Prevod i adaptacija:</string>
 <string name="settings_option_backup_versioning">Držite tri najskorije automatskog dnevnog kopiranja.</string>
 <string name="settings_option_startup_folder">Inicijali. &lc_folder; Da se prikaže pri pokretanju:</string>
 <string name="settings_option_output_directory">Zadani izlazni direktorij za kopije i izvoz.:</string>
 <string name="dialog_ok">OK</string>
-<string name="dialog_cancel">Otkaži.</string>
-<string name="dialog_add">Dodaj</string>
-<string name="dialog_add_more">Dodaj…</string>
+<string name="dialog_cancel">&cancel;</string>
+<string name="dialog_add">&add;</string>
+<string name="dialog_add_more">&add;…</string>
 <string name="dialog_change">Promjena…</string>
 <string name="dialog_choose">Izaberi…</string>
 <string name="dialog_save">Sačuvaj</string>
-<string name="dialog_delete">Brisanje</string>
+<string name="dialog_delete">&delete;</string>
 <string name="dialog_backup_preupdate_title">Potrebna je promjena baze podataka.</string>
-<string name="dialog_backup_preupdate_message">Instalirao si noviju verziju ove aplikacije. I verzija baze podataka treba da se ažurira. Spremanje sigurnosne kopije prije nego što se ova operacija preporučuje; svaka greška će oštetiti bazu podataka. Da biste to učinili, morate prvo odobriti dozvolu da spremite datoteku sigurnosne kopije u vanjsku pohranu. Želite li da sačuvate sigurnosnu kopiju prije obaveznog ažuriranja\??</string>
+<string name="dialog_backup_preupdate_message">Instalirao si noviju verziju ove aplikacije. I verzija baze podataka treba da se ažurira. Spremanje sigurnosne kopije prije nego što se ova operacija preporučuje; svaka greška će oštetiti bazu podataka. Da biste to učinili, morate prvo odobriti dozvolu da spremite datoteku sigurnosne kopije u vanjsku pohranu. Želite li da sačuvate sigurnosnu kopiju prije obaveznog ažuriranja?</string>
 <string name="dialog_intent_search_option_query">Upit:</string>
 <string name="dialog_intent_search_option_only_current_folder">Samo struja. &lc_folder;</string>
 <string name="dialog_backup_done">Baza podataka je završena.</string>
@@ -78,30 +94,61 @@
 <string name="dialog_import_done">Uvezi uspjeh.</string>
 <string name="dialog_import_failed">Greška u uvozu</string>
 <string name="dialog_import_notfound">Datoteka za uvoz nije mogla da bude pročitana.</string>
-<string name="dialog_delete_folder_title">Brisanje &folder;?</string>
-<string name="dialog_delete_intent_title">Brisanje &bookmark;?</string>
+<string name="dialog_delete_folder_title">&delete; &folder;?</string>
+<string name="dialog_delete_intent_title">&delete; &bookmark;?</string>
 <string name="dialog_delete_confirm">Da li ste sigurni da želite da obrišete "%s"?</string>
 <string name="folder_rename_title">Preimenuj &folder;</string>
-<string name="folder_attribute_name">Ime</string>
-<string name="intent_edit_title">Uredi &bookmark;</string>
+<string name="folder_attribute_name">&name;</string>
+<string name="intent_add_title">&add; &bookmark;</string>
+<string name="intent_edit_title">&edit; &bookmark;</string>
+<string name="intent_attribute_name">&name;</string>
 <string name="intent_attribute_folder">&folder;</string>
 <string name="intent_attribute_flags">Zastave</string>
 <string name="intent_attribute_action">Akcija.</string>
-<string name="intent_attribute_package_name">Ime paketa</string>
-<string name="intent_attribute_class_name">Ime klase</string>
+<string name="intent_attribute_package_name">Paket &name;</string>
+<string name="intent_attribute_class_name">Klasa. &name;</string>
 <string name="intent_attribute_data_uri">Podaci. URI</string>
 <string name="intent_attribute_data_type">Podaci. (MIME) Tip</string>
 <string name="intent_attribute_categories">Kategorije.</string>
 <string name="intent_attribute_extras">Statisti</string>
-<string name="dialog_update_intent_attribute_category_title">G.</string>
-<string name="dialog_update_intent_attribute_extra_title_add">Dodaj dodatno</string>
-<string name="dialog_update_intent_attribute_extra_title_edit">Ažuriranje dodatnih</string>
+<string name="dialog_update_intent_attribute_category_title">&update; Kategorija</string>
+<string name="dialog_update_intent_attribute_category_name">&name;</string>
+<string name="dialog_update_intent_attribute_extra_title_add">&add; Dodatno.</string>
+<string name="dialog_update_intent_attribute_extra_title_edit">&update; Dodatno.</string>
+<string name="dialog_update_intent_attribute_extra_name">&name;</string>
 <string name="dialog_update_intent_attribute_extra_value_type">Tip vrijednosti</string>
 <string name="dialog_update_intent_attribute_extra_value">Vrijednost</string>
-<string name="dialog_update_intent_attribute_extra_value_separator">Dodaj odjelitelj liste vrijednosti</string>
+<string name="dialog_update_intent_attribute_extra_value_separator">&add; Odjelitelj liste vrijednosti</string>
 <string name="messages_db_error_update">Greška u bazi podataka kod ažuriranja</string>
 <string name="messages_no_permission">Nema dovoljno dozvole za obavljanje tražene operacije.</string>
 <string name="messages_activity_not_found">Nijedna aktivnost ne odgovara Intent</string>
 <string name="spinner_items_category_label_common_values">-- Zajedničke vrijednosti. --</string>
 <string name="spinner_items_category_label_more_values">-- Više vrijednosti. --</string>
+<string name="activity_label_alarms">Raspoređeno. &alarms;</string>
+<string name="activity_label_save_alarm">&alarm; Raspored.</string>
+<string name="layout_main_no_alarms">Ne. &alarms; Pronađeno je.</string>
+<string name="menu_actionbar_cancel_all">&cancel; Sve.</string>
+<string name="menu_context_alarm_edit">&edit;</string>
+<string name="menu_context_alarm_cancel">&cancel;</string>
+<string name="dialog_cancel_alarm_title">&cancel; &alarm;?</string>
+<string name="dialog_cancel_alarms_title">&cancel; &alarms;?</string>
+<string name="dialog_delete_confirm_alarms">Sve. &lc_alarms;</string>
+<string name="alarm_attribute_intent">&bookmark;:</string>
+<string name="alarm_attribute_perform">Izvedi:</string>
+<string name="alarm_attribute_date">Datum:</string>
+<string name="alarm_attribute_time">Vrijeme.:</string>
+<string name="alarm_attribute_interval">Ponovite sve.:</string>
+<string name="alarm_attribute_flags">Opcije:</string>
+<string name="flag_alarm_is_exact">preciznosti (manje efikasnije)</string>
+<string name="flag_alarm_run_when_idle">Alarm će se oglasiti.</string>
+<string name="flag_alarm_wake_when_idle">Uređaj za buđenje, kada je</string>
+<string name="flag_alarm_run_when_missed">Uključi alarm kod ponovnog podizanja sistema kada promaša</string>
+<string name="dialog_set">Postavi</string>
+<string name="time_picker_dialog_reset">Vrati se na nulu.</string>
+<string name="accessibility_time_picker_sign">"Pozitivan/negativan znak"</string>
+<string name="accessibility_time_picker_day">"Dan."</string>
+<string name="accessibility_time_picker_hour">"Sat vremena"</string>
+<string name="accessibility_time_picker_minute">"Minuta."</string>
+<string name="accessibility_time_picker_second">"Drugo."</string>
+<string name="accessibility_time_picker_milli">"-Milisekunda."</string>
 </resources>

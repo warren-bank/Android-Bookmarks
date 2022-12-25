@@ -8,18 +8,31 @@
     <!ENTITY bookmarks     "Bookmarks">
     <!ENTITY lc_bookmark   "Marka">
     <!ENTITY lc_bookmarks  "Marki tal-kotba">
+    <!ENTITY alarm         "Allarm">
+    <!ENTITY alarms        "Allarmi">
+    <!ENTITY lc_alarm      "allarm">
+    <!ENTITY lc_alarms     "allarmi">
+    <!ENTITY add           "Żid">
+    <!ENTITY cancel        "Tħassir">
+    <!ENTITY delete        "Ħassar">
+    <!ENTITY edit          "Editja">
+    <!ENTITY move          "Nimxu">
+    <!ENTITY name          "Isem">
+    <!ENTITY update        "Aġġornament">
 ]>
 <resources>
 <string name="app_name_long">&bookmarks;</string>
+<string name="activity_label_save_bookmark">&add; &bookmark;</string>
 <string name="layout_main_no_intents_in_folder">Le &bookmarks; misjuba.</string>
 <string name="layout_main_no_results_for_search">Ebda riżultati ta \' tfittxija misjuba.</string>
 <string name="layout_main_results_for_search_label">Riżultati għall:</string>
 <string name="menu_actionbar_intent_search">Fittex</string>
-<string name="menu_actionbar_folder_add">Żid &folder;</string>
-<string name="menu_actionbar_intent_add">Żid &bookmark;</string>
-<string name="menu_actionbar_move_complete">Nimxu lejn Kurrenti &folder;</string>
-<string name="menu_actionbar_move_cancel">Ikkanċella Nimxu</string>
+<string name="menu_actionbar_folder_add">&add; &folder;</string>
+<string name="menu_actionbar_intent_add">&add; &bookmark;</string>
+<string name="menu_actionbar_move_complete">&move; sa Attwali &folder;</string>
+<string name="menu_actionbar_move_cancel">&cancel; &move;</string>
 <string name="menu_actionbar_settings">Settings</string>
+<string name="menu_actionbar_scheduled">Skedat</string>
 <string name="menu_actionbar_db_backup">Backup Database</string>
 <string name="menu_actionbar_db_restore">Restawrata Database</string>
 <string name="menu_actionbar_db_export">Esportazzjoni &bookmarks;</string>
@@ -28,30 +41,33 @@
 <string name="menu_context_folder_hide">Jaħbu</string>
 <string name="menu_context_folder_unhide">Mhux jinħbew</string>
 <string name="menu_context_folder_rename">Rename</string>
-<string name="menu_context_folder_move">Nimxu</string>
-<string name="menu_context_folder_delete">Ħassar</string>
+<string name="menu_context_folder_move">&move;</string>
+<string name="menu_context_folder_delete">&delete;</string>
 <string name="menu_context_intent_perform">Wettaq…</string>
-<string name="menu_context_intent_edit">Editja</string>
+<string name="menu_context_intent_schedule">Skeda…</string>
+<string name="menu_context_intent_edit">&edit;</string>
+<string name="menu_context_intent_move">&move;</string>
 <string name="menu_context_intent_copy">Kopja</string>
+<string name="menu_context_intent_delete">&delete;</string>
 <string name="perform_send_broadcast">Ibgħat Broadcast</string>
 <string name="perform_start_activity">Bidu Attività</string>
 <string name="perform_start_foreground_service">Startjar Servizz Miksub</string>
 <string name="perform_start_service">Servizz tal-bidu</string>
 <string name="perform_stop_service">Servizz ta \'</string>
-<string name="perform_add_shortcut">Żid Shortcut</string>
+<string name="perform_add_shortcut">&add; Shortcut</string>
 <string name="settings_option_show_hidden">Uri moħbija &lc_folders;</string>
 <string name="settings_option_auto_backup">Twettiq backup awtomatiku kuljum</string>
 <string name="settings_option_backup_versioning">Żomm it-3 backups ta \' kuljum awtomatiċi l-aktar riċenti</string>
 <string name="settings_option_startup_folder">Inizjali &lc_folder; biex jintwerew fuq l-istartjar:</string>
 <string name="settings_option_output_directory">Direttorju output default għall backups u l-esportazzjonijiet:</string>
 <string name="dialog_ok">OK</string>
-<string name="dialog_cancel">Tħassir</string>
-<string name="dialog_add">Żid</string>
-<string name="dialog_add_more">Żid…</string>
+<string name="dialog_cancel">&cancel;</string>
+<string name="dialog_add">&add;</string>
+<string name="dialog_add_more">&add;…</string>
 <string name="dialog_change">Bidla…</string>
 <string name="dialog_choose">Agħżel…</string>
 <string name="dialog_save">Save</string>
-<string name="dialog_delete">Ħassar</string>
+<string name="dialog_delete">&delete;</string>
 <string name="dialog_backup_preupdate_title">Aġġornament Database Hija Meħtieġa</string>
 <string name="dialog_backup_preupdate_message">Inti installat verżjoni aktar ġdida ta \' din l-applikazzjoni. Il-verżjoni tad-database teħtieġ ukoll li tiġi aġġornata. Iffrankar ta \' backup qabel din l-operazzjoni huwa rakkomandat; kwalunkwe żball se korrotti l-bażi tad-data. Biex tagħmel dan, inti trid l-ewwel għotja permess biex isalva l-fajl backup għall-ħażna esterna. Tixtieq tiffranka backup qabel l-aġġornament meħtieġ?</string>
 <string name="dialog_intent_search_option_query">Mistoqsija:</string>
@@ -78,30 +94,61 @@
 <string name="dialog_import_done">Suċċess tal-importazzjoni</string>
 <string name="dialog_import_failed">Falliment tal-importazzjoni</string>
 <string name="dialog_import_notfound">Il-fajl tal-importazzjoni ma setax jinqara</string>
-<string name="dialog_delete_folder_title">Ħassar &folder;?</string>
-<string name="dialog_delete_intent_title">Ħassar &bookmark;?</string>
+<string name="dialog_delete_folder_title">&delete; &folder;?</string>
+<string name="dialog_delete_intent_title">&delete; &bookmark;?</string>
 <string name="dialog_delete_confirm">Inti żgur li inti tixtieq li tħassar "%s"?</string>
 <string name="folder_rename_title">Rename &folder;</string>
-<string name="folder_attribute_name">Isem</string>
-<string name="intent_edit_title">Editja &bookmark;</string>
+<string name="folder_attribute_name">&name;</string>
+<string name="intent_add_title">&add; &bookmark;</string>
+<string name="intent_edit_title">&edit; &bookmark;</string>
+<string name="intent_attribute_name">&name;</string>
 <string name="intent_attribute_folder">&folder;</string>
 <string name="intent_attribute_flags">Bnadar</string>
 <string name="intent_attribute_action">Azzjoni</string>
-<string name="intent_attribute_package_name">Isem tal-pakkett</string>
-<string name="intent_attribute_class_name">Isem tal-klassi</string>
+<string name="intent_attribute_package_name">Pakkett &name;</string>
+<string name="intent_attribute_class_name">Klassi &name;</string>
 <string name="intent_attribute_data_uri">Data URI</string>
 <string name="intent_attribute_data_type">Data (MIME) Tip</string>
 <string name="intent_attribute_categories">Kategoriji</string>
 <string name="intent_attribute_extras">Estras</string>
-<string name="dialog_update_intent_attribute_category_title">Aġġornament Kategorija</string>
-<string name="dialog_update_intent_attribute_extra_title_add">Żid Extra</string>
-<string name="dialog_update_intent_attribute_extra_title_edit">Aġġornament Extra</string>
+<string name="dialog_update_intent_attribute_category_title">&update; Kategorija</string>
+<string name="dialog_update_intent_attribute_category_name">&name;</string>
+<string name="dialog_update_intent_attribute_extra_title_add">&add; Extra</string>
+<string name="dialog_update_intent_attribute_extra_title_edit">&update; Extra</string>
+<string name="dialog_update_intent_attribute_extra_name">&name;</string>
 <string name="dialog_update_intent_attribute_extra_value_type">Tip ta \' Valur</string>
 <string name="dialog_update_intent_attribute_extra_value">Valur</string>
-<string name="dialog_update_intent_attribute_extra_value_separator">Żid is-separatur tal-lista tal-valur</string>
+<string name="dialog_update_intent_attribute_extra_value_separator">&add; Separatur tal-lista ta \' valur</string>
 <string name="messages_db_error_update">Żball database waqt l-aġġornament</string>
 <string name="messages_no_permission">Permess insuffiċjenti biex titwettaq l-operazzjoni mitluba</string>
 <string name="messages_activity_not_found">L-ebda Attività taqbel mal- Intent</string>
 <string name="spinner_items_category_label_common_values">-- valuri komuni --</string>
 <string name="spinner_items_category_label_more_values">-- aktar valuri --</string>
+<string name="activity_label_alarms">Skedat &alarms;</string>
+<string name="activity_label_save_alarm">&alarm; Skeda</string>
+<string name="layout_main_no_alarms">Le &alarms; misjuba.</string>
+<string name="menu_actionbar_cancel_all">&cancel; Kollha</string>
+<string name="menu_context_alarm_edit">&edit;</string>
+<string name="menu_context_alarm_cancel">&cancel;</string>
+<string name="dialog_cancel_alarm_title">&cancel; &alarm;?</string>
+<string name="dialog_cancel_alarms_title">&cancel; &alarms;?</string>
+<string name="dialog_delete_confirm_alarms">kollha &lc_alarms;</string>
+<string name="alarm_attribute_intent">&bookmark;:</string>
+<string name="alarm_attribute_perform">Twettiq:</string>
+<string name="alarm_attribute_date">Data:</string>
+<string name="alarm_attribute_time">Ħin:</string>
+<string name="alarm_attribute_interval">Irrepeti kull:</string>
+<string name="alarm_attribute_flags">Għażliet:</string>
+<string name="flag_alarm_is_exact">preċiżjoni għolja (inqas effiċjenti)</string>
+<string name="flag_alarm_run_when_idle">iwettaq allarm meta jkun idle</string>
+<string name="flag_alarm_wake_when_idle">Apparat ta \' wara meta</string>
+<string name="flag_alarm_run_when_missed">twettaq allarm fir-reboot meta tintilef</string>
+<string name="dialog_set">Sett</string>
+<string name="time_picker_dialog_reset">Reset lejn Zero</string>
+<string name="accessibility_time_picker_sign">"Sinjal Pożittiv/Negattiv"</string>
+<string name="accessibility_time_picker_day">"Jum"</string>
+<string name="accessibility_time_picker_hour">"Siegħa"</string>
+<string name="accessibility_time_picker_minute">"Minuta"</string>
+<string name="accessibility_time_picker_second">"It"</string>
+<string name="accessibility_time_picker_milli">"Millisekonda"</string>
 </resources>

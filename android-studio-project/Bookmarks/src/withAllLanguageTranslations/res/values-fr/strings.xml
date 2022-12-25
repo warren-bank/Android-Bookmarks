@@ -8,18 +8,31 @@
     <!ENTITY bookmarks     "Signets">
     <!ENTITY lc_bookmark   "Signet">
     <!ENTITY lc_bookmarks  "Signets">
+    <!ENTITY alarm         "Alarme">
+    <!ENTITY alarms        "Alarmes">
+    <!ENTITY lc_alarm      "Alarme">
+    <!ENTITY lc_alarms     "Alarmes">
+    <!ENTITY add           "Ajouter">
+    <!ENTITY cancel        "Annuler">
+    <!ENTITY delete        "Supprimer">
+    <!ENTITY edit          "Editer">
+    <!ENTITY move          "Déplacer">
+    <!ENTITY name          "Nom">
+    <!ENTITY update        "Mise à jour">
 ]>
 <resources>
 <string name="app_name_long">&bookmarks;</string>
+<string name="activity_label_save_bookmark">&add; &bookmark;</string>
 <string name="layout_main_no_intents_in_folder">Non &bookmarks; Trouvé.</string>
 <string name="layout_main_no_results_for_search">Aucun résultat de recherche trouvé.</string>
 <string name="layout_main_results_for_search_label">Résultats pour:</string>
 <string name="menu_actionbar_intent_search">Rechercher</string>
-<string name="menu_actionbar_folder_add">Ajouter &folder;</string>
-<string name="menu_actionbar_intent_add">Ajouter &bookmark;</string>
-<string name="menu_actionbar_move_complete">Déplacer vers le courant &folder;</string>
-<string name="menu_actionbar_move_cancel">Annuler le déplacement</string>
+<string name="menu_actionbar_folder_add">&add; &folder;</string>
+<string name="menu_actionbar_intent_add">&add; &bookmark;</string>
+<string name="menu_actionbar_move_complete">&move; Vers Courant &folder;</string>
+<string name="menu_actionbar_move_cancel">&cancel; &move;</string>
 <string name="menu_actionbar_settings">Paramètres</string>
+<string name="menu_actionbar_scheduled">Planifié</string>
 <string name="menu_actionbar_db_backup">Sauvegarde base de données</string>
 <string name="menu_actionbar_db_restore">Restaurer la base</string>
 <string name="menu_actionbar_db_export">Exportation &bookmarks;</string>
@@ -28,30 +41,33 @@
 <string name="menu_context_folder_hide">Masquer</string>
 <string name="menu_context_folder_unhide">Masquer</string>
 <string name="menu_context_folder_rename">Renommer</string>
-<string name="menu_context_folder_move">Déplacer</string>
-<string name="menu_context_folder_delete">Supprimer</string>
+<string name="menu_context_folder_move">&move;</string>
+<string name="menu_context_folder_delete">&delete;</string>
 <string name="menu_context_intent_perform">Exécuter…</string>
-<string name="menu_context_intent_edit">Editer</string>
+<string name="menu_context_intent_schedule">Planification…</string>
+<string name="menu_context_intent_edit">&edit;</string>
+<string name="menu_context_intent_move">&move;</string>
 <string name="menu_context_intent_copy">Copier</string>
+<string name="menu_context_intent_delete">&delete;</string>
 <string name="perform_send_broadcast">Envoi de diffusion</string>
 <string name="perform_start_activity">Activité de démarrage</string>
 <string name="perform_start_foreground_service">Démarrer le service de premier plan</string>
 <string name="perform_start_service">Démarrer le service</string>
 <string name="perform_stop_service">Arrêter le service</string>
-<string name="perform_add_shortcut">Ajouter un raccourci</string>
+<string name="perform_add_shortcut">&add; Raccourcle</string>
 <string name="settings_option_show_hidden">Afficher masqué &lc_folders;</string>
 <string name="settings_option_auto_backup">Effectuer une sauvegarde quotidienne automatique</string>
 <string name="settings_option_backup_versioning">Conservez les 3 sauvegardes quotidiennes automatiques les plus récentes</string>
 <string name="settings_option_startup_folder">Initiale &lc_folder; à afficher au démarrage:</string>
 <string name="settings_option_output_directory">Répertoire de sortie par défaut pour les sauvegardes et les exportations:</string>
 <string name="dialog_ok">OK</string>
-<string name="dialog_cancel">Annuler</string>
-<string name="dialog_add">Ajouter</string>
-<string name="dialog_add_more">Ajouter…</string>
+<string name="dialog_cancel">&cancel;</string>
+<string name="dialog_add">&add;</string>
+<string name="dialog_add_more">&add;…</string>
 <string name="dialog_change">Modifier…</string>
 <string name="dialog_choose">Choisir…</string>
 <string name="dialog_save">Sauvegarder</string>
-<string name="dialog_delete">Supprimer</string>
+<string name="dialog_delete">&delete;</string>
 <string name="dialog_backup_preupdate_title">Mise à jour de base de données requise</string>
 <string name="dialog_backup_preupdate_message">Vous avez installé une version plus récente de cette application. La version de la base de données doit également être mise à jour. L\'enregistrement d\'une sauvegarde avant cette opération est recommandé ; toute erreur va endommager la base de données. Pour ce faire, vous devez d\'abord accorder la permission de sauvegarder le fichier de sauvegarde dans un espace de stockage externe. Souhaitez-vous enregistrer une sauvegarde avant la mise à jour requise?</string>
 <string name="dialog_intent_search_option_query">Requête:</string>
@@ -78,30 +94,61 @@
 <string name="dialog_import_done">Succès de l\'importation</string>
 <string name="dialog_import_failed">Echec de l\'importation</string>
 <string name="dialog_import_notfound">Impossible de lire le fichier d\'importation</string>
-<string name="dialog_delete_folder_title">Supprimer &folder;?</string>
-<string name="dialog_delete_intent_title">Supprimer &bookmark;?</string>
+<string name="dialog_delete_folder_title">&delete; &folder;?</string>
+<string name="dialog_delete_intent_title">&delete; &bookmark;?</string>
 <string name="dialog_delete_confirm">Etes-vous sûr de vouloir supprimer "%s"?</string>
 <string name="folder_rename_title">Renommer &folder;</string>
-<string name="folder_attribute_name">Nom</string>
-<string name="intent_edit_title">Editer &bookmark;</string>
+<string name="folder_attribute_name">&name;</string>
+<string name="intent_add_title">&add; &bookmark;</string>
+<string name="intent_edit_title">&edit; &bookmark;</string>
+<string name="intent_attribute_name">&name;</string>
 <string name="intent_attribute_folder">&folder;</string>
 <string name="intent_attribute_flags">Indicateurs</string>
 <string name="intent_attribute_action">Action</string>
-<string name="intent_attribute_package_name">Nom du package</string>
-<string name="intent_attribute_class_name">Nom de classe</string>
+<string name="intent_attribute_package_name">Module &name;</string>
+<string name="intent_attribute_class_name">Classe &name;</string>
 <string name="intent_attribute_data_uri">Données URI</string>
 <string name="intent_attribute_data_type">Données (MIME) Type</string>
 <string name="intent_attribute_categories">Catégories</string>
 <string name="intent_attribute_extras">Extras</string>
-<string name="dialog_update_intent_attribute_category_title">Mettre à jour catégorie</string>
-<string name="dialog_update_intent_attribute_extra_title_add">Ajouter un extra</string>
-<string name="dialog_update_intent_attribute_extra_title_edit">Mise à jour supplémentaire</string>
+<string name="dialog_update_intent_attribute_category_title">&update; Catégorie</string>
+<string name="dialog_update_intent_attribute_category_name">&name;</string>
+<string name="dialog_update_intent_attribute_extra_title_add">&add; Extra</string>
+<string name="dialog_update_intent_attribute_extra_title_edit">&update; Extra</string>
+<string name="dialog_update_intent_attribute_extra_name">&name;</string>
 <string name="dialog_update_intent_attribute_extra_value_type">Type de valeur</string>
 <string name="dialog_update_intent_attribute_extra_value">Valeur</string>
-<string name="dialog_update_intent_attribute_extra_value_separator">Ajouter un séparateur de liste de valeurs</string>
+<string name="dialog_update_intent_attribute_extra_value_separator">&add; Séparateur de liste de valeurs</string>
 <string name="messages_db_error_update">Erreur lors de la mise à jour</string>
 <string name="messages_no_permission">Droits insuffisants pour effectuer l\'opération demandée</string>
 <string name="messages_activity_not_found">Aucune activité ne correspond Intent</string>
 <string name="spinner_items_category_label_common_values">-- Valeurs communes --</string>
 <string name="spinner_items_category_label_more_values">-- Plus de valeurs --</string>
+<string name="activity_label_alarms">Planifié &alarms;</string>
+<string name="activity_label_save_alarm">&alarm; Planification</string>
+<string name="layout_main_no_alarms">Non &alarms; Trouvé.</string>
+<string name="menu_actionbar_cancel_all">&cancel; Tous</string>
+<string name="menu_context_alarm_edit">&edit;</string>
+<string name="menu_context_alarm_cancel">&cancel;</string>
+<string name="dialog_cancel_alarm_title">&cancel; &alarm;?</string>
+<string name="dialog_cancel_alarms_title">&cancel; &alarms;?</string>
+<string name="dialog_delete_confirm_alarms">Tous &lc_alarms;</string>
+<string name="alarm_attribute_intent">&bookmark;:</string>
+<string name="alarm_attribute_perform">Exécuter:</string>
+<string name="alarm_attribute_date">Date:</string>
+<string name="alarm_attribute_time">Heure:</string>
+<string name="alarm_attribute_interval">Répéter chaque:</string>
+<string name="alarm_attribute_flags">Options:</string>
+<string name="flag_alarm_is_exact">Haute précision (moins efficace)</string>
+<string name="flag_alarm_run_when_idle">Exécuter l\'alarme lorsqu\'il est inactif</string>
+<string name="flag_alarm_wake_when_idle">Unité de réveil lors de l\'inactivité</string>
+<string name="flag_alarm_run_when_missed">Exécuter l\'alarme lors du réamorçage en cas d\'absence</string>
+<string name="dialog_set">Définir</string>
+<string name="time_picker_dialog_reset">Réinitialiser à zéro</string>
+<string name="accessibility_time_picker_sign">"Signe positif / négatif"</string>
+<string name="accessibility_time_picker_day">"Jour"</string>
+<string name="accessibility_time_picker_hour">"Heure"</string>
+<string name="accessibility_time_picker_minute">"Minute"</string>
+<string name="accessibility_time_picker_second">"Deuxième"</string>
+<string name="accessibility_time_picker_milli">"Milliseconde"</string>
 </resources>

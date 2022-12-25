@@ -8,18 +8,31 @@
     <!ENTITY bookmarks     "ഓര്മ്മക്കുറിപ്പുകള്">
     <!ENTITY lc_bookmark   "പുസ്തക അടയാളം">
     <!ENTITY lc_bookmarks  "ഓര്മ്മക്കുറിപ്പുകള്">
+    <!ENTITY alarm         "അല്പം">
+    <!ENTITY alarms        "അക്ഷരങ്ങള്">
+    <!ENTITY lc_alarm      "അലാറം">
+    <!ENTITY lc_alarms     "അക്ഷരങ്ങള്">
+    <!ENTITY add           "ചേര്ക്കുക">
+    <!ENTITY cancel        "റദ്ദാക്കുക">
+    <!ENTITY delete        "നീക്കം ചെയ്യുക">
+    <!ENTITY edit          "ചിട്ടപ്പെടുത്തുക">
+    <!ENTITY move          "നീക്കുക">
+    <!ENTITY name          "പേരു്">
+    <!ENTITY update        "പുതുക്കുക">
 ]>
 <resources>
 <string name="app_name_long">&bookmarks;</string>
+<string name="activity_label_save_bookmark">&add; &bookmark;</string>
 <string name="layout_main_no_intents_in_folder">ഇല്ല &bookmarks; കണ്ടെത്തിയിരിക്കുന്നു.</string>
 <string name="layout_main_no_results_for_search">തെരച്ചില് ഫലങ്ങള് ലഭ്യമല്ല.</string>
 <string name="layout_main_results_for_search_label">ഫലങ്ങള്:</string>
 <string name="menu_actionbar_intent_search">തെരയുക</string>
-<string name="menu_actionbar_folder_add">ചേര്ക്കുക &folder;</string>
-<string name="menu_actionbar_intent_add">ചേര്ക്കുക &bookmark;</string>
-<string name="menu_actionbar_move_complete">നിലവിലേക്ക് നീക്കുക &folder;</string>
-<string name="menu_actionbar_move_cancel">നീക്കുക റദ്ദാക്കുക</string>
+<string name="menu_actionbar_folder_add">&add; &folder;</string>
+<string name="menu_actionbar_intent_add">&add; &bookmark;</string>
+<string name="menu_actionbar_move_complete">&move; നിലവിലുളള &folder;</string>
+<string name="menu_actionbar_move_cancel">&cancel; &move;</string>
 <string name="menu_actionbar_settings">സജ്ജീകരണങ്ങള്</string>
+<string name="menu_actionbar_scheduled">സങ്കീര്ണത</string>
 <string name="menu_actionbar_db_backup">ബാക്കപ്പ് ഡാറ്റാബേസ്</string>
 <string name="menu_actionbar_db_restore">ഡാറ്റാബേസ് വീണ്ടെടുക്കുക</string>
 <string name="menu_actionbar_db_export">പുറത്തുവയ്ക്കുക &bookmarks;</string>
@@ -28,32 +41,35 @@
 <string name="menu_context_folder_hide">അദൃശ്യമാക്കുക</string>
 <string name="menu_context_folder_unhide">മറയ്ക്കുക</string>
 <string name="menu_context_folder_rename">പേരു് മാറ്റുക</string>
-<string name="menu_context_folder_move">നീക്കുക</string>
-<string name="menu_context_folder_delete">നീക്കം ചെയ്യുക</string>
+<string name="menu_context_folder_move">&move;</string>
+<string name="menu_context_folder_delete">&delete;</string>
 <string name="menu_context_intent_perform">പെര്ഫോം…</string>
-<string name="menu_context_intent_edit">ചിട്ടപ്പെടുത്തുക</string>
+<string name="menu_context_intent_schedule">ഷെഡ്യൂൾ…</string>
+<string name="menu_context_intent_edit">&edit;</string>
+<string name="menu_context_intent_move">&move;</string>
 <string name="menu_context_intent_copy">പകര്ത്തുക</string>
+<string name="menu_context_intent_delete">&delete;</string>
 <string name="perform_send_broadcast">ബ്രോഡ്കാസ്റ്റ് അയയ്ക്കുക</string>
 <string name="perform_start_activity">പ്രവൃത്തി തുടങ്ങുക</string>
 <string name="perform_start_foreground_service">ഫോര്ഗ്രൗണ്ട് സര്വീസ് ആരംഭിക്കുക</string>
 <string name="perform_start_service">സേവനം ആരംഭിക്കുക</string>
 <string name="perform_stop_service">സേവനം നിര്ത്തുക</string>
-<string name="perform_add_shortcut">കുറുക്കുവഴി ചേര്ക്കുക</string>
+<string name="perform_add_shortcut">&add; കുറുക്കുവഴി</string>
 <string name="settings_option_show_hidden">ഒളിപ്പിച്ച കാണിയ്ക്കുക &lc_folders;</string>
 <string name="settings_option_auto_backup">ഓട്ടോമാറ്റിക് ദിനപത്രം പിന്തുണയ്ക്കുക</string>
 <string name="settings_option_backup_versioning">3 ഏറ്റവും അടുത്തുള്ള ഓട്ടോമാറ്റിക് ദിനപത്രം സൂക്ഷിക്കുക</string>
 <string name="settings_option_startup_folder">തുടക്കംComment &lc_folder; തുടക്കത്തില് പ്രദര്ശിപ്പിക്കാന്:</string>
 <string name="settings_option_output_directory">ബാക്ക്പ്, എക്സ്പോര്ട്ടിനുള്ള സഹജമായ ഔട്ട്പുട്ട് തട്ട്:</string>
 <string name="dialog_ok">OK</string>
-<string name="dialog_cancel">റദ്ദാക്കുക</string>
-<string name="dialog_add">ചേര്ക്കുക</string>
-<string name="dialog_add_more">ചേര്ക്കുക…</string>
+<string name="dialog_cancel">&cancel;</string>
+<string name="dialog_add">&add;</string>
+<string name="dialog_add_more">&add;…</string>
 <string name="dialog_change">മാറ്റം…</string>
 <string name="dialog_choose">തെരഞ്ഞെടുക്കുക…</string>
 <string name="dialog_save">സൂക്ഷിക്കുക</string>
-<string name="dialog_delete">നീക്കം ചെയ്യുക</string>
+<string name="dialog_delete">&delete;</string>
 <string name="dialog_backup_preupdate_title">ഡാറ്റാബേസ് പരിഷ്കരണം ആവശ്യമാണ്</string>
-<string name="dialog_backup_preupdate_message">നിങ്ങള് ഈ പ്രയോഗത്തിന്റെ ഒരു പുതിയ പതിപ്പ് ഇന്സ്റ്റോള് ചെയ്തിരിക്കുന്നു. ഡാറ്റാബേസിന്റെ പതിപ്പും പരിഷ്കരിക്കേണ്ടതുണ്ട്. ഈ ഓപ്പറേഷന് ശുപാർശ ചെയ്യുന്നതിനുമുമ്പ് ഒരു ബാക്കപ്പ് സൂക്ഷിക്കുക; ഏതെങ്കിലും പിശകു് ഡാറ്റാബേസ് ദുഷിപ്പിക്കും. അങ്ങനെ ചെയ്യാന്, ബാക്കപ്പ് ഫയല് സൂക്ഷിക്കുന്നതിനായി ആദ്യം അനുമതി നല്കേണ്ടതുണ്ട്. ആവശ്യമായ പുതുക്കുന്നതിന് മുന്പ് ഒരു ബാക്കപ്പ് സൂക്ഷിക്കണമോ\??</string>
+<string name="dialog_backup_preupdate_message">നിങ്ങള് ഈ പ്രയോഗത്തിന്റെ ഒരു പുതിയ പതിപ്പ് ഇന്സ്റ്റോള് ചെയ്തിരിക്കുന്നു. ഡാറ്റാബേസിന്റെ പതിപ്പും പരിഷ്കരിക്കേണ്ടതുണ്ട്. ഈ ഓപ്പറേഷന് ശുപാർശ ചെയ്യുന്നതിനുമുമ്പ് ഒരു ബാക്കപ്പ് സൂക്ഷിക്കുക; ഏതെങ്കിലും പിശകു് ഡാറ്റാബേസ് ദുഷിപ്പിക്കും. അങ്ങനെ ചെയ്യാന്, ബാക്കപ്പ് ഫയല് സൂക്ഷിക്കുന്നതിനായി ആദ്യം അനുമതി നല്കേണ്ടതുണ്ട്. ആവശ്യമായ പുതുക്കുന്നതിന് മുന്പ് ഒരു ബാക്കപ്പ് സൂക്ഷിക്കണമോ?</string>
 <string name="dialog_intent_search_option_query">ചോദ്യം:</string>
 <string name="dialog_intent_search_option_only_current_folder">ഇപ്പോഴത്തെ മാത്രം &lc_folder;</string>
 <string name="dialog_backup_done">ഡാറ്റാബേസ് പിന്തുണയുള്ള</string>
@@ -78,30 +94,61 @@
 <string name="dialog_import_done">വിജയം അകത്തെടുക്കുക</string>
 <string name="dialog_import_failed">ഇറക്കുമതി പരാജയം</string>
 <string name="dialog_import_notfound">ഫയല് ഇറക്കുമതി ചെയ്യുവാന് കഴിഞ്ഞില്ല</string>
-<string name="dialog_delete_folder_title">നീക്കം ചെയ്യുക &folder;?</string>
-<string name="dialog_delete_intent_title">നീക്കം ചെയ്യുക &bookmark;?</string>
-<string name="dialog_delete_confirm">നിങ്ങള്ക്ക് നീക്കം ചെയ്യണമെന്ന് ഉറപ്പാണോ\? "%s"?</string>
+<string name="dialog_delete_folder_title">&delete; &folder;?</string>
+<string name="dialog_delete_intent_title">&delete; &bookmark;?</string>
+<string name="dialog_delete_confirm">നിങ്ങള്ക്ക് നീക്കം ചെയ്യണമെന്ന് ഉറപ്പാണോ "%s"?</string>
 <string name="folder_rename_title">പേരു് മാറ്റുക &folder;</string>
-<string name="folder_attribute_name">പേരു്</string>
-<string name="intent_edit_title">ചിട്ടപ്പെടുത്തുക &bookmark;</string>
+<string name="folder_attribute_name">&name;</string>
+<string name="intent_add_title">&add; &bookmark;</string>
+<string name="intent_edit_title">&edit; &bookmark;</string>
+<string name="intent_attribute_name">&name;</string>
 <string name="intent_attribute_folder">&folder;</string>
 <string name="intent_attribute_flags">ഫ്ലാഗുകള്</string>
 <string name="intent_attribute_action">നടപടി</string>
-<string name="intent_attribute_package_name">പാക്കേജ് പേരു്</string>
-<string name="intent_attribute_class_name">ക്ലാസ് നാമം</string>
+<string name="intent_attribute_package_name">പാക്കേജ് &name;</string>
+<string name="intent_attribute_class_name">ക്ലാസ് &name;</string>
 <string name="intent_attribute_data_uri">ഡേറ്റാ URI</string>
 <string name="intent_attribute_data_type">ഡേറ്റാ (MIME) തരം</string>
 <string name="intent_attribute_categories">വിഭാഗങ്ങള്</string>
 <string name="intent_attribute_extras">എക്സ്ട്രസ്</string>
-<string name="dialog_update_intent_attribute_category_title">വിഭാഗം പുതുക്കുക</string>
-<string name="dialog_update_intent_attribute_extra_title_add">എക്സ്ട്രാ ചേര്ക്കുക</string>
-<string name="dialog_update_intent_attribute_extra_title_edit">എക്സ്ട്രാ പുതുക്കുക</string>
+<string name="dialog_update_intent_attribute_category_title">&update; വിഭാഗം</string>
+<string name="dialog_update_intent_attribute_category_name">&name;</string>
+<string name="dialog_update_intent_attribute_extra_title_add">&add; എക്സ്ട്രാ</string>
+<string name="dialog_update_intent_attribute_extra_title_edit">&update; എക്സ്ട്രാ</string>
+<string name="dialog_update_intent_attribute_extra_name">&name;</string>
 <string name="dialog_update_intent_attribute_extra_value_type">മൂല്യത്തിന്റെ തരം</string>
 <string name="dialog_update_intent_attribute_extra_value">മൂല്യം</string>
-<string name="dialog_update_intent_attribute_extra_value_separator">മൂല്യങ്ങളുടെ പട്ടിക വേര്തിരിക്കുക</string>
+<string name="dialog_update_intent_attribute_extra_value_separator">&add; മൂല്യങ്ങളുടെ പട്ടിക വേര്തിരിക്കുക</string>
 <string name="messages_db_error_update">ഡാറ്റാബേസ് പിശക്</string>
 <string name="messages_no_permission">ആവശ്യപ്പെട്ട പ്രക്രിയ പ്രവര്ത്തിപ്പിക്കാന് ആവശ്യമായ അനുവാദം</string>
 <string name="messages_activity_not_found">പ്രവൃത്തികള് ലഭ്യമല്ല Intent</string>
 <string name="spinner_items_category_label_common_values">-- സാധാരണ മൂല്യങ്ങള് --</string>
 <string name="spinner_items_category_label_more_values">-- കൂടുതല് വിലകള് --</string>
+<string name="activity_label_alarms">സങ്കീര്ണത &alarms;</string>
+<string name="activity_label_save_alarm">&alarm; ഷെഡ്യൂള്</string>
+<string name="layout_main_no_alarms">ഇല്ല &alarms; കണ്ടെത്തിയിരിക്കുന്നു.</string>
+<string name="menu_actionbar_cancel_all">&cancel; എല്ലാം</string>
+<string name="menu_context_alarm_edit">&edit;</string>
+<string name="menu_context_alarm_cancel">&cancel;</string>
+<string name="dialog_cancel_alarm_title">&cancel; &alarm;?</string>
+<string name="dialog_cancel_alarms_title">&cancel; &alarms;?</string>
+<string name="dialog_delete_confirm_alarms">എല്ലാം &lc_alarms;</string>
+<string name="alarm_attribute_intent">&bookmark;:</string>
+<string name="alarm_attribute_perform">പെര്ഫോം:</string>
+<string name="alarm_attribute_date">തീയതി:</string>
+<string name="alarm_attribute_time">സമയം:</string>
+<string name="alarm_attribute_interval">ഓരോരുത്തെയും പകര്ത്തുക:</string>
+<string name="alarm_attribute_flags">ഐച്ഛികങ്ങള്:</string>
+<string name="flag_alarm_is_exact">ഉയർന്ന കൃത്യത (കുറഞ്ഞ കഴിവ്)</string>
+<string name="flag_alarm_run_when_idle">നിഷ്‌ക്രിയമായിരിക്കുമ്പോൾ അലാറം പ്രവർത്തിപ്പിക്കുക</string>
+<string name="flag_alarm_wake_when_idle">ഉണങ്ങിയാല് ഉപകരണം</string>
+<string name="flag_alarm_run_when_missed">മിസ്സ് ചെയ്യുമ്പോള് റിബൂട്ടില് അലാറം പ്രവര്ത്തിപ്പിക്കുക</string>
+<string name="dialog_set">സജ്ജീകരിക്കുക</string>
+<string name="time_picker_dialog_reset">സീറോ റീസെറ്റ്</string>
+<string name="accessibility_time_picker_sign">"ധാന്യം/നെഗറ്റീവ് ഒപ്പ്"</string>
+<string name="accessibility_time_picker_day">"ദിനം"</string>
+<string name="accessibility_time_picker_hour">"മണിക്കൂര്"</string>
+<string name="accessibility_time_picker_minute">"മിനുട്ട്"</string>
+<string name="accessibility_time_picker_second">"രണ്ടാമത്തെ"</string>
+<string name="accessibility_time_picker_milli">"മില്ലിസെക്കന്ഡ്"</string>
 </resources>

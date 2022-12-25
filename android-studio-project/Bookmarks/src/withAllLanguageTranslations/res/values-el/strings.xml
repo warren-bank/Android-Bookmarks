@@ -3,55 +3,71 @@
     <!ENTITY folder        "Φάκελος">
     <!ENTITY folders       "Φάκελοι">
     <!ENTITY lc_folder     "\' φάκελος">
-    <!ENTITY lc_folders    "φακέλων:">
-    <!ENTITY bookmark      "Ορισμός σελιδοδείκτη.">
+    <!ENTITY lc_folders    "φακέλων">
+    <!ENTITY bookmark      "Ορισμός σελιδοδείκτη">
     <!ENTITY bookmarks     "Οι σελιδοδείκτες">
     <!ENTITY lc_bookmark   "\' σελιδοδείκτης">
     <!ENTITY lc_bookmarks  "σελιδοδείκτες,">
+    <!ENTITY alarm         "Ειδοποίηση">
+    <!ENTITY alarms        "Alarms">
+    <!ENTITY lc_alarm      "συναγερμού">
+    <!ENTITY lc_alarms     "-">
+    <!ENTITY add           "Προσθήκη">
+    <!ENTITY cancel        "Ακύρωση">
+    <!ENTITY delete        "Διαγραφή">
+    <!ENTITY edit          "Τροποποίηση">
+    <!ENTITY move          "Κίνηση">
+    <!ENTITY name          "\' Ονομα">
+    <!ENTITY update        "Ενημέρωση">
 ]>
 <resources>
 <string name="app_name_long">&bookmarks;</string>
-<string name="layout_main_no_intents_in_folder">Όχι. &bookmarks; \'..</string>
+<string name="activity_label_save_bookmark">&add; &bookmark;</string>
+<string name="layout_main_no_intents_in_folder">Οχι &bookmarks; βρέθηκαν.</string>
 <string name="layout_main_no_results_for_search">Δεν βρέθηκαν αποτελέσματα αναζήτησης.</string>
 <string name="layout_main_results_for_search_label">Αποτελέσματα για::</string>
 <string name="menu_actionbar_intent_search">Αναζήτηση.</string>
-<string name="menu_actionbar_folder_add">Προσθήκη &folder;</string>
-<string name="menu_actionbar_intent_add">Προσθήκη &bookmark;</string>
-<string name="menu_actionbar_move_complete">Μετακίνηση στο τρέχον &folder;</string>
-<string name="menu_actionbar_move_cancel">Ακύρωση μετακίνησης.</string>
+<string name="menu_actionbar_folder_add">&add; &folder;</string>
+<string name="menu_actionbar_intent_add">&add; &bookmark;</string>
+<string name="menu_actionbar_move_complete">&move; προς Τρέχουσα. &folder;</string>
+<string name="menu_actionbar_move_cancel">&cancel; &move;</string>
 <string name="menu_actionbar_settings">Ρυθμίσεις:</string>
+<string name="menu_actionbar_scheduled">Προγραμματισμένος</string>
 <string name="menu_actionbar_db_backup">Βάση δεδομένων εφεδρικής αποθήκευσης</string>
 <string name="menu_actionbar_db_restore">Επαναφορά βάσης δεδομένων</string>
-<string name="menu_actionbar_db_export">\' Εξαγωγή &bookmarks;</string>
-<string name="menu_actionbar_db_import">Εισαγωγή: &bookmarks;</string>
+<string name="menu_actionbar_db_export">Εξαγωγή &bookmarks;</string>
+<string name="menu_actionbar_db_import">Εισαγωγή &bookmarks;</string>
 <string name="menu_actionbar_exit">Έξοδος:</string>
 <string name="menu_context_folder_hide">Κρύψου</string>
-<string name="menu_context_folder_unhide">-Όχι.</string>
-<string name="menu_context_folder_rename">Μετονομασία:</string>
-<string name="menu_context_folder_move">Κίνηση!</string>
-<string name="menu_context_folder_delete">Διαγραφή:</string>
+<string name="menu_context_folder_unhide">Απόκρυψη</string>
+<string name="menu_context_folder_rename">Μετονομάζω</string>
+<string name="menu_context_folder_move">&move;</string>
+<string name="menu_context_folder_delete">&delete;</string>
 <string name="menu_context_intent_perform">Εκτέλεση…</string>
-<string name="menu_context_intent_edit">Τροποποίηση:</string>
-<string name="menu_context_intent_copy">\' Αντιγραφή</string>
+<string name="menu_context_intent_schedule">Πρόγραμμα…</string>
+<string name="menu_context_intent_edit">&edit;</string>
+<string name="menu_context_intent_move">&move;</string>
+<string name="menu_context_intent_copy">Αντιγραφή</string>
+<string name="menu_context_intent_delete">&delete;</string>
 <string name="perform_send_broadcast">Αποστολή μετάδοσης:</string>
 <string name="perform_start_activity">Έναρξη δραστηριότητας:</string>
 <string name="perform_start_foreground_service">Έναρξη της υπηρεσίας Foreground</string>
 <string name="perform_start_service">Αρχική σελίδα:</string>
 <string name="perform_stop_service">Υπηρεσία διακοπής:</string>
-<string name="perform_add_shortcut">Προσθήκη συντόμχας</string>
+<string name="perform_add_shortcut">&add; Συντομεύσεις:</string>
 <string name="settings_option_show_hidden">Εμφάνιση κρυφού &lc_folders;</string>
 <string name="settings_option_auto_backup">Εκτέλεση αυτόματης ημερήσιας εφεδρικής αποθήκευσης</string>
 <string name="settings_option_backup_versioning">Κρατήστε τα 3 πιο πρόσφατα αυτόματα ημερήσια αντίγραφα ασφαλείας</string>
 <string name="settings_option_startup_folder">Αρχική \" &lc_folder; για εμφάνιση κατά την εκκίνηση:</string>
 <string name="settings_option_output_directory">Προεπιλεγόταν κατάλογος εξόδου για εφεδρικά αντίγραφα και εξαγωγές:</string>
 <string name="dialog_ok">OK</string>
-<string name="dialog_cancel">Ακύρωση.</string>
-<string name="dialog_add">Προσθήκη</string>
-<string name="dialog_add_more">Προσθήκη…</string>
+<string name="dialog_cancel">&cancel;</string>
+<string name="dialog_add">&add;</string>
+<string name="dialog_add_more">&add;-…</string>
 <string name="dialog_change">Αλλαγή…</string>
 <string name="dialog_choose">Επιλέξτε…</string>
 <string name="dialog_save">Αποθήκευση:</string>
-<string name="dialog_delete">Διαγραφή:</string>
+<string name="dialog_delete">&delete;</string>
 <string name="dialog_backup_preupdate_title">Απαιτείται Ενημέρωση Βάσης Δεδομένων</string>
 <string name="dialog_backup_preupdate_message">Έχετε εγκαταστήσει μια νεότερη έκδοση της εφαρμογής. Η έκδοση της βάσης δεδομένων πρέπει επίσης να ενημερωθεί. Η αποθήκευση ενός εφεδρικού αντιγράφου πριν από αυτή τη λειτουργία συνιστάται. Κάθε σφάλμα θα αλλοιώσει τη βάση δεδομένων. Για να το κάνετε αυτό, πρέπει πρώτα να εκχωρήσετε το δικαίωμα αποθήκευσης του εφεδρικού αντιγράφου σε εξωτερική αποθήκευση. Θέλετε να αποθηκεύσετε ένα εφεδρικό αντίγραφο πριν από την απαιτούμενη ενημέρωση?</string>
 <string name="dialog_intent_search_option_query">Ερώτημα::</string>
@@ -68,7 +84,7 @@
 <string name="dialog_export_json">Εξαγωγή σε: JSON</string>
 <string name="dialog_export_option_only_current_folder">Μόνο τρέχον εξαγωγή: &lc_folder; και τους απογόνους του.</string>
 <string name="dialog_export_option_include_hidden">Εμφάνιση κρυφής &lc_folders;</string>
-<string name="dialog_export_done">\' Επιτυχία</string>
+<string name="dialog_export_done">Επιτυχία</string>
 <string name="dialog_export_failed">Σφάλμα εξαγωγής:</string>
 <string name="dialog_import_html">Εισαγωγή από: HTML</string>
 <string name="dialog_import_json">Εισαγωγή από: JSON</string>
@@ -78,30 +94,61 @@
 <string name="dialog_import_done">Επιτυχία εισαγωγής</string>
 <string name="dialog_import_failed">Σφάλμα εισαγωγής:</string>
 <string name="dialog_import_notfound">Δεν ήταν δυνατή η ανάγνωση του αρχείου εισαγωγής</string>
-<string name="dialog_delete_folder_title">Διαγραφή: &folder;?</string>
-<string name="dialog_delete_intent_title">Διαγραφή: &bookmark;?</string>
+<string name="dialog_delete_folder_title">&delete; &folder;?</string>
+<string name="dialog_delete_intent_title">&delete; &bookmark;?</string>
 <string name="dialog_delete_confirm">Είστε βέβαιοι ότι θέλετε να διαγράψετε "%s"?</string>
 <string name="folder_rename_title">Μετονομασία: &folder;</string>
-<string name="folder_attribute_name">\' Ονομα</string>
-<string name="intent_edit_title">Τροποποίηση: &bookmark;</string>
+<string name="folder_attribute_name">&name;</string>
+<string name="intent_add_title">&add; &bookmark;</string>
+<string name="intent_edit_title">&edit; &bookmark;</string>
+<string name="intent_attribute_name">&name;</string>
 <string name="intent_attribute_folder">&folder;</string>
 <string name="intent_attribute_flags">Σημαίες:</string>
-<string name="intent_attribute_action">\' Ενέργεια</string>
-<string name="intent_attribute_package_name">Όνομα πακέτου:</string>
-<string name="intent_attribute_class_name">Όνομα κλάσης</string>
+<string name="intent_attribute_action">Ενέργεια</string>
+<string name="intent_attribute_package_name">Πακέτο &name;</string>
+<string name="intent_attribute_class_name">Κλάση: &name;</string>
 <string name="intent_attribute_data_uri">Δεδομένα: URI</string>
 <string name="intent_attribute_data_type">Δεδομένα: (MIME) Είδος:</string>
 <string name="intent_attribute_categories">Κατηγορίες:</string>
 <string name="intent_attribute_extras">Extras</string>
-<string name="dialog_update_intent_attribute_category_title">Ενημέρωση κατηγορίας.</string>
-<string name="dialog_update_intent_attribute_extra_title_add">Προσθήκη επιπλέον</string>
-<string name="dialog_update_intent_attribute_extra_title_edit">Ενημέρωση επιπλέον</string>
+<string name="dialog_update_intent_attribute_category_title">&update; Κατηγορία:</string>
+<string name="dialog_update_intent_attribute_category_name">&name;</string>
+<string name="dialog_update_intent_attribute_extra_title_add">&add; Επιπλέον</string>
+<string name="dialog_update_intent_attribute_extra_title_edit">&update; Επιπλέον</string>
+<string name="dialog_update_intent_attribute_extra_name">&name;</string>
 <string name="dialog_update_intent_attribute_extra_value_type">Είδος τιμής:</string>
-<string name="dialog_update_intent_attribute_extra_value">\' Τιμή</string>
-<string name="dialog_update_intent_attribute_extra_value_separator">Προσθήκη διαχωριστικού λίστας τιμών</string>
+<string name="dialog_update_intent_attribute_extra_value">Τιμή</string>
+<string name="dialog_update_intent_attribute_extra_value_separator">&add; Διαχωριστικό λίστας τιμών</string>
 <string name="messages_db_error_update">Σφάλμα βάσης δεδομένων κατά την ενημέρωση</string>
 <string name="messages_no_permission">Ανεπαρκής άδεια εκτέλεσης της ζητούμενης λειτουργίας.</string>
 <string name="messages_activity_not_found">Καμία δραστηριότητα δεν συμφωνεί με Intent</string>
 <string name="spinner_items_category_label_common_values">-- κοινές τιμές: --</string>
 <string name="spinner_items_category_label_more_values">-- περισσότερες τιμές: --</string>
+<string name="activity_label_alarms">-Προγραμματισμένη &alarms;</string>
+<string name="activity_label_save_alarm">&alarm; Πρόγραμμα</string>
+<string name="layout_main_no_alarms">Οχι &alarms; βρέθηκαν.</string>
+<string name="menu_actionbar_cancel_all">&cancel; Όλα!</string>
+<string name="menu_context_alarm_edit">&edit;</string>
+<string name="menu_context_alarm_cancel">&cancel;</string>
+<string name="dialog_cancel_alarm_title">&cancel; &alarm;?</string>
+<string name="dialog_cancel_alarms_title">&cancel; &alarms;?</string>
+<string name="dialog_delete_confirm_alarms">όλα! &lc_alarms;</string>
+<string name="alarm_attribute_intent">&bookmark;:</string>
+<string name="alarm_attribute_perform">Εκτέλεση::</string>
+<string name="alarm_attribute_date">\'.:</string>
+<string name="alarm_attribute_time">Ωρα:</string>
+<string name="alarm_attribute_interval">Επανάληψη.:</string>
+<string name="alarm_attribute_flags">Επιλογές:</string>
+<string name="flag_alarm_is_exact">υψηλή ακρίβεια (λιγότερο αποτελεσματική)</string>
+<string name="flag_alarm_run_when_idle">εκτέλεση συναγερμού σε αδράνεια.</string>
+<string name="flag_alarm_wake_when_idle">διάταξη απόηχο, όταν</string>
+<string name="flag_alarm_run_when_missed">εκτέλεση συναγερμού κατά την επανεκκίνηση όταν αστοχείτε</string>
+<string name="dialog_set">Σύνολο:</string>
+<string name="time_picker_dialog_reset">Επαναφορά στο μηδέν</string>
+<string name="accessibility_time_picker_sign">"Θετικό/Αρνητικό"</string>
+<string name="accessibility_time_picker_day">"\' Μέρα"</string>
+<string name="accessibility_time_picker_hour">"-Ώρα."</string>
+<string name="accessibility_time_picker_minute">"Μ."</string>
+<string name="accessibility_time_picker_second">"2."</string>
+<string name="accessibility_time_picker_milli">"Χιλιοστά του δευτερολέπτου"</string>
 </resources>

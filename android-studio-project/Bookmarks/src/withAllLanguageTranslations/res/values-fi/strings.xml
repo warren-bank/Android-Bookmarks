@@ -8,18 +8,31 @@
     <!ENTITY bookmarks     "Kirjanmerkit">
     <!ENTITY lc_bookmark   "Kirjanmerkki">
     <!ENTITY lc_bookmarks  "Kirjanmerkit">
+    <!ENTITY alarm         "Hälytys">
+    <!ENTITY alarms        "Hälytykset">
+    <!ENTITY lc_alarm      "Hälytys">
+    <!ENTITY lc_alarms     "Hälyttimet">
+    <!ENTITY add           "Lisää">
+    <!ENTITY cancel        "Peruuta">
+    <!ENTITY delete        "Poista">
+    <!ENTITY edit          "Muokkaa">
+    <!ENTITY move          "Siirrä">
+    <!ENTITY name          "Nimi">
+    <!ENTITY update        "Päivitä">
 ]>
 <resources>
 <string name="app_name_long">&bookmarks;</string>
+<string name="activity_label_save_bookmark">&add; &bookmark;</string>
 <string name="layout_main_no_intents_in_folder">Ei &bookmarks; Löydetty.</string>
 <string name="layout_main_no_results_for_search">Hakutuloksia ei löytynyt.</string>
 <string name="layout_main_results_for_search_label">Tulokset:</string>
 <string name="menu_actionbar_intent_search">Hae</string>
-<string name="menu_actionbar_folder_add">Lisää &folder;</string>
-<string name="menu_actionbar_intent_add">Lisää &bookmark;</string>
-<string name="menu_actionbar_move_complete">Siirry nykyiseen &folder;</string>
-<string name="menu_actionbar_move_cancel">Peruuta siirto</string>
+<string name="menu_actionbar_folder_add">&add; &folder;</string>
+<string name="menu_actionbar_intent_add">&add; &bookmark;</string>
+<string name="menu_actionbar_move_complete">&move; Nykyiseen &folder;</string>
+<string name="menu_actionbar_move_cancel">&cancel; &move;</string>
 <string name="menu_actionbar_settings">Asetukset</string>
+<string name="menu_actionbar_scheduled">Ajoitettu</string>
 <string name="menu_actionbar_db_backup">Taustatietokanta</string>
 <string name="menu_actionbar_db_restore">Palautustietokanta</string>
 <string name="menu_actionbar_db_export">Vie &bookmarks;</string>
@@ -28,32 +41,35 @@
 <string name="menu_context_folder_hide">Piilota</string>
 <string name="menu_context_folder_unhide">Unhide</string>
 <string name="menu_context_folder_rename">Nimeä</string>
-<string name="menu_context_folder_move">Siirrä</string>
-<string name="menu_context_folder_delete">Poista</string>
+<string name="menu_context_folder_move">&move;</string>
+<string name="menu_context_folder_delete">&delete;</string>
 <string name="menu_context_intent_perform">Lomake…</string>
-<string name="menu_context_intent_edit">Muokkaa</string>
+<string name="menu_context_intent_schedule">Aikataulun…</string>
+<string name="menu_context_intent_edit">&edit;</string>
+<string name="menu_context_intent_move">&move;</string>
 <string name="menu_context_intent_copy">Kopioi</string>
+<string name="menu_context_intent_delete">&delete;</string>
 <string name="perform_send_broadcast">Lähetä Broadcast</string>
 <string name="perform_start_activity">Aloita aktiviteetti</string>
 <string name="perform_start_foreground_service">Lopetuspalvelun aloitus</string>
 <string name="perform_start_service">Käynnistä palvelu</string>
 <string name="perform_stop_service">Lopeta palvelu</string>
-<string name="perform_add_shortcut">Lisää Shortcut</string>
+<string name="perform_add_shortcut">&add; Shortcut</string>
 <string name="settings_option_show_hidden">Näytä piilo &lc_folders;</string>
 <string name="settings_option_auto_backup">Muodosta automaattinen päivittäinen varmistuskopio</string>
 <string name="settings_option_backup_versioning">Säilytä 3 tuoreinta automaattista varmuuskopioita</string>
 <string name="settings_option_startup_folder">Alkuperäinen &lc_folder; Näyttö aloituksen yhteydessä:</string>
 <string name="settings_option_output_directory">Taustatietojen ja viennin oletustulostushakemisto:</string>
 <string name="dialog_ok">OK</string>
-<string name="dialog_cancel">Peruuta</string>
-<string name="dialog_add">Lisää</string>
-<string name="dialog_add_more">Lisää…</string>
+<string name="dialog_cancel">&cancel;</string>
+<string name="dialog_add">&add;</string>
+<string name="dialog_add_more">&add;…</string>
 <string name="dialog_change">Muutos…</string>
 <string name="dialog_choose">Valitse…</string>
 <string name="dialog_save">Tallenna</string>
-<string name="dialog_delete">Poista</string>
+<string name="dialog_delete">&delete;</string>
 <string name="dialog_backup_preupdate_title">Tietokannan päivitys on pakollinen</string>
-<string name="dialog_backup_preupdate_message">Olet asentanut tämän sovelluksen uudemman version. Myös tietokannan versio on päivitettävä. Varmistuskopiointi on suositeltavaa, ennen kuin tämä toiminto on käytössä. Jos haluat tehdä niin, sinun on ensin myönnettävä käyttöoikeudet varmistuskopion tallentamiseen ulkoiseen varastoon. Haluatko tallentaa varmistuskopion ennen päivitystä\??</string>
+<string name="dialog_backup_preupdate_message">Olet asentanut tämän sovelluksen uudemman version. Myös tietokannan versio on päivitettävä. Varmistuskopiointi on suositeltavaa, ennen kuin tämä toiminto on käytössä. Jos haluat tehdä niin, sinun on ensin myönnettävä käyttöoikeudet varmistuskopion tallentamiseen ulkoiseen varastoon. Haluatko tallentaa varmistuskopion ennen päivitystä?</string>
 <string name="dialog_intent_search_option_query">Kysely:</string>
 <string name="dialog_intent_search_option_only_current_folder">Vain nykyinen &lc_folder;</string>
 <string name="dialog_backup_done">Tietokannan varmistuskopiointi</string>
@@ -78,30 +94,61 @@
 <string name="dialog_import_done">Tuontimenestys</string>
 <string name="dialog_import_failed">Tuontivirhe</string>
 <string name="dialog_import_notfound">Tuontitiedoston luku ei onnistunut</string>
-<string name="dialog_delete_folder_title">Poista &folder;?</string>
-<string name="dialog_delete_intent_title">Poista &bookmark;?</string>
+<string name="dialog_delete_folder_title">&delete; &folder;?</string>
+<string name="dialog_delete_intent_title">&delete; &bookmark;?</string>
 <string name="dialog_delete_confirm">Haluatko varmasti poistaa "%s"?</string>
 <string name="folder_rename_title">Nimeä &folder;</string>
-<string name="folder_attribute_name">Nimi</string>
-<string name="intent_edit_title">Muokkaa &bookmark;</string>
+<string name="folder_attribute_name">&name;</string>
+<string name="intent_add_title">&add; &bookmark;</string>
+<string name="intent_edit_title">&edit; &bookmark;</string>
+<string name="intent_attribute_name">&name;</string>
 <string name="intent_attribute_folder">&folder;</string>
 <string name="intent_attribute_flags">Lippuja</string>
 <string name="intent_attribute_action">Toimi</string>
-<string name="intent_attribute_package_name">Paketin nimi</string>
-<string name="intent_attribute_class_name">Luokan nimi</string>
+<string name="intent_attribute_package_name">Paketti &name;</string>
+<string name="intent_attribute_class_name">Luokka &name;</string>
 <string name="intent_attribute_data_uri">Data URI</string>
 <string name="intent_attribute_data_type">Data (MIME) Tyyppi</string>
 <string name="intent_attribute_categories">Luokat</string>
 <string name="intent_attribute_extras">Ekstras</string>
-<string name="dialog_update_intent_attribute_category_title">Päivitä luokka</string>
-<string name="dialog_update_intent_attribute_extra_title_add">Lisää ylimääräisiä</string>
-<string name="dialog_update_intent_attribute_extra_title_edit">Päivitä Extra</string>
+<string name="dialog_update_intent_attribute_category_title">&update; Luokka</string>
+<string name="dialog_update_intent_attribute_category_name">&name;</string>
+<string name="dialog_update_intent_attribute_extra_title_add">&add; Extra</string>
+<string name="dialog_update_intent_attribute_extra_title_edit">&update; Extra</string>
+<string name="dialog_update_intent_attribute_extra_name">&name;</string>
 <string name="dialog_update_intent_attribute_extra_value_type">Arvon tyyppi</string>
 <string name="dialog_update_intent_attribute_extra_value">Arvo</string>
-<string name="dialog_update_intent_attribute_extra_value_separator">Lisää arvoluettelon erotin</string>
+<string name="dialog_update_intent_attribute_extra_value_separator">&add; Arvoluettelon erotin</string>
 <string name="messages_db_error_update">Tietokantavirhe päivitettäessä</string>
 <string name="messages_no_permission">Pyydetyn toiminnon toteutus ei riitä</string>
 <string name="messages_activity_not_found">Aktiviteetti ei vastaa Intent</string>
 <string name="spinner_items_category_label_common_values">-- Yhteiset arvot --</string>
 <string name="spinner_items_category_label_more_values">-- Lisää arvoja --</string>
+<string name="activity_label_alarms">Ajoitettu &alarms;</string>
+<string name="activity_label_save_alarm">&alarm; Aikataulu</string>
+<string name="layout_main_no_alarms">Ei &alarms; Löydetty.</string>
+<string name="menu_actionbar_cancel_all">&cancel; Kaikki</string>
+<string name="menu_context_alarm_edit">&edit;</string>
+<string name="menu_context_alarm_cancel">&cancel;</string>
+<string name="dialog_cancel_alarm_title">&cancel; &alarm;?</string>
+<string name="dialog_cancel_alarms_title">&cancel; &alarms;?</string>
+<string name="dialog_delete_confirm_alarms">Kaikki &lc_alarms;</string>
+<string name="alarm_attribute_intent">&bookmark;:</string>
+<string name="alarm_attribute_perform">Performi:</string>
+<string name="alarm_attribute_date">Päivämäärä:</string>
+<string name="alarm_attribute_time">Aika:</string>
+<string name="alarm_attribute_interval">Toista kaikki:</string>
+<string name="alarm_attribute_flags">Valinnat:</string>
+<string name="flag_alarm_is_exact">Korkea tarkkuus (vähemmän tehokas)</string>
+<string name="flag_alarm_run_when_idle">Toteuta hälytys, kun tyhjä</string>
+<string name="flag_alarm_wake_when_idle">Herätyslaite, kun tyhjä</string>
+<string name="flag_alarm_run_when_missed">Käynnistä hälytys uudelleen, kun sitä ei ole</string>
+<string name="dialog_set">Aseta</string>
+<string name="time_picker_dialog_reset">Asettakaa nolla.</string>
+<string name="accessibility_time_picker_sign">"Positiivinen/negatiivinen merkki"</string>
+<string name="accessibility_time_picker_day">"Päivä"</string>
+<string name="accessibility_time_picker_hour">"Hour"</string>
+<string name="accessibility_time_picker_minute">"Minute"</string>
+<string name="accessibility_time_picker_second">"Toinen"</string>
+<string name="accessibility_time_picker_milli">"Millisekuntia"</string>
 </resources>

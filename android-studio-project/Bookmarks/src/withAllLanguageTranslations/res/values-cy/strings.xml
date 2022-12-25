@@ -8,18 +8,31 @@
     <!ENTITY bookmarks     "Nodau Tudalen">
     <!ENTITY lc_bookmark   "nod tudalen">
     <!ENTITY lc_bookmarks  "nôdau tudalen">
+    <!ENTITY alarm         "Larwm">
+    <!ENTITY alarms        "Larymau">
+    <!ENTITY lc_alarm      "larwm">
+    <!ENTITY lc_alarms     "larymau">
+    <!ENTITY add           "Ychwanegu">
+    <!ENTITY cancel        "Diddymu">
+    <!ENTITY delete        "Dileu">
+    <!ENTITY edit          "Golygu">
+    <!ENTITY move          "Symud">
+    <!ENTITY name          "Enw">
+    <!ENTITY update        "Diweddaru">
 ]>
 <resources>
 <string name="app_name_long">&bookmarks;</string>
+<string name="activity_label_save_bookmark">&add; &bookmark;</string>
 <string name="layout_main_no_intents_in_folder">Dim &bookmarks; canfod.</string>
 <string name="layout_main_no_results_for_search">Heb ganfod canlyniadau chwilio.</string>
 <string name="layout_main_results_for_search_label">Canlyniadau ar gyfer:</string>
 <string name="menu_actionbar_intent_search">Chwilio</string>
-<string name="menu_actionbar_folder_add">Ychwanegu &folder;</string>
-<string name="menu_actionbar_intent_add">Ychwanegu &bookmark;</string>
-<string name="menu_actionbar_move_complete">Symud i \' r Cyfredol &folder;</string>
-<string name="menu_actionbar_move_cancel">Diddymu Symudiad</string>
+<string name="menu_actionbar_folder_add">&add; &folder;</string>
+<string name="menu_actionbar_intent_add">&add; &bookmark;</string>
+<string name="menu_actionbar_move_complete">&move; i\'r presennol &folder;</string>
+<string name="menu_actionbar_move_cancel">&cancel; &move;</string>
 <string name="menu_actionbar_settings">Gosodiadau</string>
+<string name="menu_actionbar_scheduled">Amserlennwyd</string>
 <string name="menu_actionbar_db_backup">Cronfa Ddata</string>
 <string name="menu_actionbar_db_restore">Adfer Cronfa Ddata</string>
 <string name="menu_actionbar_db_export">Allforio &bookmarks;</string>
@@ -28,30 +41,33 @@
 <string name="menu_context_folder_hide">Cuddio</string>
 <string name="menu_context_folder_unhide">Dad-guddio</string>
 <string name="menu_context_folder_rename">Ailenwi</string>
-<string name="menu_context_folder_move">Symud</string>
-<string name="menu_context_folder_delete">Dileu</string>
+<string name="menu_context_folder_move">&move;</string>
+<string name="menu_context_folder_delete">&delete;</string>
 <string name="menu_context_intent_perform">Perfformio…</string>
-<string name="menu_context_intent_edit">Golygu</string>
+<string name="menu_context_intent_schedule">Atodlen…</string>
+<string name="menu_context_intent_edit">&edit;</string>
+<string name="menu_context_intent_move">&move;</string>
 <string name="menu_context_intent_copy">Copïo</string>
+<string name="menu_context_intent_delete">&delete;</string>
 <string name="perform_send_broadcast">Anfon Darlledu</string>
 <string name="perform_start_activity">Gweithgarwch Dechrau</string>
 <string name="perform_start_foreground_service">Cychwyn y Gwasanaeth Blaendir</string>
 <string name="perform_start_service">Cychwyn y Gwasanaeth</string>
 <string name="perform_stop_service">Atal y Gwasanaeth</string>
-<string name="perform_add_shortcut">Ychwanegu Byrlwybr</string>
+<string name="perform_add_shortcut">&add; Byrlwybr</string>
 <string name="settings_option_show_hidden">Dangos cudd &lc_folders;</string>
 <string name="settings_option_auto_backup">Cyflawni wrth gefn dyddiol awtomatig</string>
 <string name="settings_option_backup_versioning">Cadwch y 3 ôl-gefn awtomatig mwyaf diweddar</string>
 <string name="settings_option_startup_folder">Cychwynnol &lc_folder; i\'w ddangos wrth gychwyn:</string>
 <string name="settings_option_output_directory">Cyfeiriadur allbwn rhagosodedig ar gyfer atal ac allforio:</string>
 <string name="dialog_ok">OK</string>
-<string name="dialog_cancel">Diddymu</string>
-<string name="dialog_add">Ychwanegu</string>
-<string name="dialog_add_more">Ychwanegu…</string>
+<string name="dialog_cancel">&cancel;</string>
+<string name="dialog_add">&add;</string>
+<string name="dialog_add_more">&add;…</string>
 <string name="dialog_change">Newid…</string>
 <string name="dialog_choose">Dewis…</string>
 <string name="dialog_save">Cadw</string>
-<string name="dialog_delete">Dileu</string>
+<string name="dialog_delete">&delete;</string>
 <string name="dialog_backup_preupdate_title">Mae Angen Diweddaru Cronfa Ddata</string>
 <string name="dialog_backup_preupdate_message">Rydych wedi gosod fersiwn mwy newydd o\'r rhaglen hon. Mae angen diweddaru\'r fersiwn o\'r gronfa ddata hefyd. Arbed copi wrth gefn cyn i\'r weithred hon gael ei argymell; bydd unrhyw wall yn llygru \' r gronfa ddata. I wneud hynny, rhaid i chi roi caniatâd grant cyntaf i gadw\'r ffeil wrth gefn i storio allanol. Hoffech chi gadw copi wrth gefn cyn y diweddariad gofynnol?</string>
 <string name="dialog_intent_search_option_query">Ymholiad:</string>
@@ -78,30 +94,61 @@
 <string name="dialog_import_done">Mewnforio llwyddiant</string>
 <string name="dialog_import_failed">Methiant mewnforio</string>
 <string name="dialog_import_notfound">Methu darllen ffeil mewnforio</string>
-<string name="dialog_delete_folder_title">Dileu &folder;?</string>
-<string name="dialog_delete_intent_title">Dileu &bookmark;?</string>
+<string name="dialog_delete_folder_title">&delete; &folder;?</string>
+<string name="dialog_delete_intent_title">&delete; &bookmark;?</string>
 <string name="dialog_delete_confirm">Ydych chi\'n siŵr eich bod am ddileu "%s"?</string>
 <string name="folder_rename_title">Ailenwi &folder;</string>
-<string name="folder_attribute_name">Enw</string>
-<string name="intent_edit_title">Golygu &bookmark;</string>
+<string name="folder_attribute_name">&name;</string>
+<string name="intent_add_title">&add; &bookmark;</string>
+<string name="intent_edit_title">&edit; &bookmark;</string>
+<string name="intent_attribute_name">&name;</string>
 <string name="intent_attribute_folder">&folder;</string>
 <string name="intent_attribute_flags">Baneri</string>
 <string name="intent_attribute_action">Gweithred</string>
-<string name="intent_attribute_package_name">Enw Pecyn</string>
-<string name="intent_attribute_class_name">Enw Dosbarth</string>
+<string name="intent_attribute_package_name">Pecyn &name;</string>
+<string name="intent_attribute_class_name">Dosbarth &name;</string>
 <string name="intent_attribute_data_uri">Data URI</string>
 <string name="intent_attribute_data_type">Data (MIME) Math</string>
 <string name="intent_attribute_categories">Categorïau</string>
 <string name="intent_attribute_extras">&amp; #</string>
-<string name="dialog_update_intent_attribute_category_title">Diweddaru\'r Categori</string>
-<string name="dialog_update_intent_attribute_extra_title_add">Ychwanegu Ychwanegol</string>
-<string name="dialog_update_intent_attribute_extra_title_edit">Diweddaru Ychwanegol</string>
+<string name="dialog_update_intent_attribute_category_title">&update; Categori</string>
+<string name="dialog_update_intent_attribute_category_name">&name;</string>
+<string name="dialog_update_intent_attribute_extra_title_add">&add; Ychwanegol</string>
+<string name="dialog_update_intent_attribute_extra_title_edit">&update; Ychwanegol</string>
+<string name="dialog_update_intent_attribute_extra_name">&name;</string>
 <string name="dialog_update_intent_attribute_extra_value_type">Math o Werth</string>
 <string name="dialog_update_intent_attribute_extra_value">Gwerth</string>
-<string name="dialog_update_intent_attribute_extra_value_separator">Ychwanegu Gwahanydd Rhestr Gwerth</string>
+<string name="dialog_update_intent_attribute_extra_value_separator">&add; Ymwahanydd Rhestr Gwerth</string>
 <string name="messages_db_error_update">Gwall cronfa ddata wrth ddiweddaru</string>
 <string name="messages_no_permission">Caniatâd annigonol i gyflawni\'r gweithrediad a ofynwyd amdano</string>
 <string name="messages_activity_not_found">Dim gweithgaredd yn cydweddu Intent</string>
 <string name="spinner_items_category_label_common_values">-- gwerthoedd cyffredin --</string>
 <string name="spinner_items_category_label_more_values">-- mwy o werthoedd --</string>
+<string name="activity_label_alarms">Amserlennwyd &alarms;</string>
+<string name="activity_label_save_alarm">&alarm; Atodlen</string>
+<string name="layout_main_no_alarms">Dim &alarms; canfod.</string>
+<string name="menu_actionbar_cancel_all">&cancel; I gyd</string>
+<string name="menu_context_alarm_edit">&edit;</string>
+<string name="menu_context_alarm_cancel">&cancel;</string>
+<string name="dialog_cancel_alarm_title">&cancel; &alarm;?</string>
+<string name="dialog_cancel_alarms_title">&cancel; &alarms;?</string>
+<string name="dialog_delete_confirm_alarms">pob un &lc_alarms;</string>
+<string name="alarm_attribute_intent">&bookmark;:</string>
+<string name="alarm_attribute_perform">Perfformio:</string>
+<string name="alarm_attribute_date">Dyddiad:</string>
+<string name="alarm_attribute_time">Amser:</string>
+<string name="alarm_attribute_interval">Ailadroddwch bob:</string>
+<string name="alarm_attribute_flags">Dewisiadau:</string>
+<string name="flag_alarm_is_exact">trachywiredd uchel (llai effeithlon)</string>
+<string name="flag_alarm_run_when_idle">gweithredu larwm pan yn segur</string>
+<string name="flag_alarm_wake_when_idle">dyfais ôl pan yn segur</string>
+<string name="flag_alarm_run_when_missed">gweithredu larwm wrth ailgychwyn pan na gollwyd</string>
+<string name="dialog_set">Gosod</string>
+<string name="time_picker_dialog_reset">Ail-osod i sero</string>
+<string name="accessibility_time_picker_sign">"Mewnlofnodi cadarnhaol/negyddol"</string>
+<string name="accessibility_time_picker_day">"Diwrnod"</string>
+<string name="accessibility_time_picker_hour">"Awr"</string>
+<string name="accessibility_time_picker_minute">"Munud"</string>
+<string name="accessibility_time_picker_second">"Ail"</string>
+<string name="accessibility_time_picker_milli">"Miller d"</string>
 </resources>
