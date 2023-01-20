@@ -1106,12 +1106,9 @@ public class SaveBookmark extends Activity implements RuntimePermissionUtils.Run
 
     if (usesFilePath) {
       // check whether permission has already been granted
-      String[] allRequestedPermissions = new String[]{"android.permission.WRITE_EXTERNAL_STORAGE"};
-
-      if (!RuntimePermissionUtils.hasAllPermissions(SaveBookmark.this, allRequestedPermissions)) {
-        // not yet granted; need to request permission
+      if (!RuntimePermissionUtils.hasFilePermissions(SaveBookmark.this)) {
         int requestCode = Constants.PERMISSION_CHECK_REQUEST_CODE_INTENT_EXTRA_WITH_FILE_SCHEME_URI;
-        RuntimePermissionUtils.requestPermissions(SaveBookmark.this, SaveBookmark.this, allRequestedPermissions, requestCode);
+        RuntimePermissionUtils.requestFilePermissions(SaveBookmark.this, SaveBookmark.this, requestCode, /* passthrough */ null);
         return false;
       }
     }
@@ -1124,10 +1121,9 @@ public class SaveBookmark extends Activity implements RuntimePermissionUtils.Run
   // ---------------------------------------------------------------------------
 
   public void openFilePickerForDataUri(View v) {
-    String[] allRequestedPermissions = new String[]{"android.permission.WRITE_EXTERNAL_STORAGE"};
     int requestCode = Constants.PERMISSION_CHECK_REQUEST_CODE_INTENT_OPEN_DATA_URI_FILEPICKER;
 
-    RuntimePermissionUtils.requestPermissions(SaveBookmark.this, SaveBookmark.this, allRequestedPermissions, requestCode);
+    RuntimePermissionUtils.requestFilePermissions(SaveBookmark.this, SaveBookmark.this, requestCode, /* passthrough */ null);
   }
 
   private void openFilePickerForDataUri() {
@@ -1154,7 +1150,16 @@ public class SaveBookmark extends Activity implements RuntimePermissionUtils.Run
 
   @Override
   public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
-    RuntimePermissionUtils.onRequestPermissionsResult(SaveBookmark.this, SaveBookmark.this, requestCode, permissions, grantResults);
+    super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+
+    RuntimePermissionUtils.onRequestPermissionsResult(SaveBookmark.this, requestCode, permissions, grantResults);
+  }
+
+  @Override
+  protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+    super.onActivityResult(requestCode, resultCode, data);
+
+    RuntimePermissionUtils.onActivityResult(SaveBookmark.this, requestCode, resultCode, data);
   }
 
   @Override // RuntimePermissionUtils.RuntimePermissionListener

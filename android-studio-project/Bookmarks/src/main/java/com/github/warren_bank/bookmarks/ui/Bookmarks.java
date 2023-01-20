@@ -1043,13 +1043,9 @@ public class Bookmarks extends ListActivity implements RuntimePermissionUtils.Ru
         );
         break;
       case R.id.change_output_directory:
-        String[] allRequestedPermissions = new String[]{"android.permission.WRITE_EXTERNAL_STORAGE"};
-        boolean hasAllPermissions = RuntimePermissionUtils.hasAllPermissions(Bookmarks.this, allRequestedPermissions);
-
-        if (!hasAllPermissions) {
+        if (!RuntimePermissionUtils.hasFilePermissions(Bookmarks.this)) {
           int requestCode = Constants.PERMISSION_CHECK_REQUEST_CODE_CHANGE_DEFAULT_OUTPUT_DIRECTORY_FILEPICKER;
-          RuntimePermissionUtils.requestPermissions(Bookmarks.this, Bookmarks.this, allRequestedPermissions, requestCode, /* passthrough */ null);
-          RuntimePermissionUtils.checkFilePermissions(Bookmarks.this);
+          RuntimePermissionUtils.requestFilePermissions(Bookmarks.this, Bookmarks.this, requestCode, /* passthrough */ null);
           break;
         }
 
@@ -1154,11 +1150,8 @@ public class Bookmarks extends ListActivity implements RuntimePermissionUtils.Ru
   }
 
   private void filePickerPermissionCheck(final String dirPath, final int requestCode) {
-    String[] allRequestedPermissions = new String[]{"android.permission.WRITE_EXTERNAL_STORAGE"};
     Object passthrough = (Object) dirPath;
-
-    RuntimePermissionUtils.requestPermissions(Bookmarks.this, Bookmarks.this, allRequestedPermissions, requestCode, passthrough);
-    RuntimePermissionUtils.checkFilePermissions(Bookmarks.this);
+    RuntimePermissionUtils.requestFilePermissions(Bookmarks.this, Bookmarks.this, requestCode, passthrough);
   }
 
   private class PassthroughBackup {
@@ -1182,16 +1175,13 @@ public class Bookmarks extends ListActivity implements RuntimePermissionUtils.Ru
   private void backupPermissionCheck(boolean auto, String outputDirectoryPath, String backupFileName, boolean isPreUpdate) {
     if (auto && !autoBackup) return;
 
-    String[] allRequestedPermissions = new String[]{"android.permission.WRITE_EXTERNAL_STORAGE"};
-
     int requestCode = isPreUpdate
       ? Constants.PERMISSION_CHECK_REQUEST_CODE_BACKUP_DATABASE_PREUPDATE
       : Constants.PERMISSION_CHECK_REQUEST_CODE_BACKUP_DATABASE;
 
     Object passthrough = (Object) new PassthroughBackup(auto, outputDirectoryPath, backupFileName);
 
-    RuntimePermissionUtils.requestPermissions(Bookmarks.this, Bookmarks.this, allRequestedPermissions, requestCode, passthrough);
-    RuntimePermissionUtils.checkFilePermissions(Bookmarks.this);
+    RuntimePermissionUtils.requestFilePermissions(Bookmarks.this, Bookmarks.this, requestCode, passthrough);
   }
 
   private void alarmPermissionCheck(FolderContentItem selectedItem) {
@@ -1210,7 +1200,16 @@ public class Bookmarks extends ListActivity implements RuntimePermissionUtils.Ru
 
   @Override
   public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
-    RuntimePermissionUtils.onRequestPermissionsResult(Bookmarks.this, Bookmarks.this, requestCode, permissions, grantResults);
+    super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+
+    RuntimePermissionUtils.onRequestPermissionsResult(Bookmarks.this, requestCode, permissions, grantResults);
+  }
+
+  @Override
+  protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+    super.onActivityResult(requestCode, resultCode, data);
+
+    RuntimePermissionUtils.onActivityResult(Bookmarks.this, requestCode, resultCode, data);
   }
 
   @Override // RuntimePermissionUtils.RuntimePermissionListener
