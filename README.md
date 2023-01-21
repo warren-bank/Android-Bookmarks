@@ -2,6 +2,12 @@
 
 Android app to save Intents as an organized collection of bookmarks.
 
+[<img src="https://gitlab.com/IzzyOnDroid/repo/-/raw/master/assets/IzzyOnDroid.png"
+     alt="Get it on IzzyOnDroid"
+     height="80">](https://apt.izzysoft.de/fdroid/index/apk/com.github.warren_bank.bookmarks)
+
+Or get the latest APK from the [Releases section](https://github.com/warren-bank/Android-Bookmarks/releases/latest).
+
 #### Summary
 
 * an Intent in Android can be used to open any Activity in any installed application, and pass to it any type or quantity of data
