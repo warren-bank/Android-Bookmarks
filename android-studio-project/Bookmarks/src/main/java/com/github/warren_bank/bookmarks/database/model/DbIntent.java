@@ -651,7 +651,7 @@ public class DbIntent {
   private void addExtra(Context context, Intent intent, Extra extra) {
     switch(extra.value_type) {
       case "boolean" : {
-          boolean value = Boolean.getBoolean(extra.value);
+          boolean value = Boolean.parseBoolean(extra.value);
 
           intent.putExtra(extra.name, value);
         }
@@ -664,7 +664,7 @@ public class DbIntent {
             boolean   value;
 
             for (int i=0; i < parts.length; i++) {
-              value     = Boolean.getBoolean(parts[i]);
+              value     = Boolean.parseBoolean(parts[i]);
               values[i] = value;
             }
 
