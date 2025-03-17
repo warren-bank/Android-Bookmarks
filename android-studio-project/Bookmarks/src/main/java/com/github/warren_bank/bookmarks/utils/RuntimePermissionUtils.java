@@ -165,6 +165,18 @@ public final class RuntimePermissionUtils {
             allRequestedPermissions.add("android.permission.CALL_PHONE");
         }
         break;
+
+      case "android.intent.action.INSTALL_PACKAGE": {
+          if (BuildConfig.ALLOW_RUNTIME_PERMISSIONS_USER && (Build.VERSION.SDK_INT >= 26) && !activity.getPackageManager().canRequestPackageInstalls()) {
+            activity.startActivity(
+              new Intent(
+                Settings.ACTION_MANAGE_UNKNOWN_APP_SOURCES,
+                Uri.parse("package:" + activity.getPackageName())
+              )
+            );
+          }
+        }
+        break;
     }
 
     if (allRequestedPermissions.isEmpty())

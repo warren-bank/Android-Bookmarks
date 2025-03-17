@@ -15,4 +15,7 @@
   <!-- android:protectionLevel="dangerous" -->
   <uses-permission android:name="android.permission.CALL_PHONE"/>
 
+  <!-- android:protectionLevel="signature|appop" -->
+  <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
 </manifest>
