@@ -2,6 +2,8 @@ apply from: '../constants.gradle'
 apply plugin: 'com.android.application'
 
 android {
+  namespace project.ext.applicationId
+
   compileSdkVersion project.ext.compileSdkVersion
   buildToolsVersion project.ext.buildToolsVersion
 
@@ -14,26 +16,11 @@ android {
     minSdkVersion project.ext.minSdkVersion
     targetSdkVersion project.ext.targetSdkVersion
 
-    applicationId "com.github.warren_bank.bookmarks"
-    versionName project.ext.releaseVersion
-    versionCode project.ext.releaseVersionCode
+    applicationId project.ext.applicationId
+    versionName   project.ext.releaseVersion
+    versionCode   project.ext.releaseVersionCode
 
     archivesBaseName += "-$versionName"
-  }
-
-  buildTypes {
-    release {
-      shrinkResources true
-      minifyEnabled   true
-      proguardFiles = [
-        "proguard-rules.txt",
-        getDefaultProguardFile('proguard-android.txt')
-      ]
-    }
-    debug {
-      debuggable  true
-      jniDebuggable true
-    }
   }
 
   flavorDimensions "runtimePermissions", "languageResources"
@@ -60,6 +47,29 @@ android {
       buildConfigField "boolean", "ALLOW_RUNTIME_PERMISSIONS_USER",   "true"
       buildConfigField "boolean", "ALLOW_RUNTIME_PERMISSIONS_SYSTEM", "true"
     }
+  }
+
+  buildTypes {
+    release {
+      debuggable      false
+      jniDebuggable   false
+      shrinkResources true
+      minifyEnabled   true
+      proguardFiles = [
+        "proguard-rules.txt",
+        getDefaultProguardFile('proguard-android.txt')
+      ]
+    }
+    debug {
+      debuggable      true
+      jniDebuggable   true
+      shrinkResources false
+      minifyEnabled   false
+    }
+  }
+
+  buildFeatures {
+    buildConfig true
   }
 
   dependenciesInfo {

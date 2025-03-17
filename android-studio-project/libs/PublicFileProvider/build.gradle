@@ -2,6 +2,8 @@ apply from: '../../constants.gradle'
 apply plugin: 'com.android.library'
 
 android {
+  namespace "de.cketti.fileprovider"
+
   compileSdkVersion project.ext.compileSdkVersion
   buildToolsVersion project.ext.buildToolsVersion
 
@@ -15,18 +17,8 @@ android {
     targetSdkVersion project.ext.targetSdkVersion
   }
 
-  buildTypes {
-    release {
-      minifyEnabled   true
-      proguardFiles = [
-        "proguard-rules.txt",
-        getDefaultProguardFile('proguard-android.txt')
-      ]
-    }
-    debug {
-      debuggable    true
-      jniDebuggable true
-    }
+  buildFeatures {
+    buildConfig true
   }
 
   lintOptions {
