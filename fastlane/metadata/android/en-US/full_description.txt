@@ -1,0 +1,1 @@
+<p><i>Bookmarks</i> is an Android app to save Intents as an organized collection of bookmarks. Not only can you store and organize intents hierarchically into folders and have them perform operations like sending broadcasts or starting activities – you can also schedule this or add bookmarks to your home screen.</p>
