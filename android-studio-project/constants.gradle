@@ -6,7 +6,7 @@ project.ext {
     minSdkVersion       = 9
     targetSdkVersion    = 35
     compileSdkVersion   = 35
-    buildToolsVersion   = '34.0.0'
+    buildToolsVersion   = '35.0.0'
 
     libVersionGson      = '2.9.0'
 }
